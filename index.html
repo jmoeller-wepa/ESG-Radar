@@ -4,173 +4,282 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Data & Tech Radar</title>
+<link rel="icon" id="favicon" href="data:,">
 <style>
   :root {
     --blue-900: #0b2a5b;
     --blue-700: #0f4c9c;
     --blue-500: #1f6fd1;
-    --blue-100: #e6effb;
-    --blue-50:  #f3f7fd;
-    --ink: #1b2533;
-    --ink-muted: #5b6676;
-    --line: #dde3ec;
-    --bg: #ffffff;
-    --panel: #f7f9fc;
-    --high: #c2410c;
-    --high-bg: #fff1e8;
-    --medium: #0f4c9c;
-    --medium-bg: #e6effb;
-    --low: #5b6676;
-    --low-bg: #eef1f5;
-    --new: #047857;
-    --new-bg: #e6f6ef;
+    --blue-100: #e6eef9;
+    --blue-50:  #f3f7fc;
+    --red: #FF667E;          /* WEPA red: dots, accents */
+    --red-text: #e0354f;     /* same hue, darker for small text legibility */
+    --ink: #111827;
+    --ink-2: #4b5563;
+    --ink-3: #8a94a3;
+    --line: #ebedf1;
+    --line-2: #f0f1f4;
+    --bg: #fafafb;
     --t-regulation: #0f4c9c;
-    --t-tool: #0e8a9a;
-    --t-practice: #7a5af5;
-    --radius: 10px;
+    --t-tool: #2aa0c8;
+    --t-practice: #7b8fd6;
     --font: Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
   a { color: var(--blue-700); }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  button { font: inherit; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .num { font-variant-numeric: tabular-nums; }
 
-  header.top { background: var(--blue-900); color: #fff; padding: 28px 0 24px; }
-  header.top h1 { margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -.01em; }
-  header.top p { margin: 4px 0 0; color: #c9d7ee; }
-  .meta { margin-top: 12px; font-size: 13px; color: #9fb4d8; display: flex; flex-wrap: wrap; gap: 4px 18px; }
+  /* Top bar */
+  header { background: #fff; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-top: 16px; padding-bottom: 16px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 34px; height: 34px; flex: none; filter: drop-shadow(0 2px 4px rgba(11, 42, 91, .18)); }
+  .brand h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
+  .meta { font-size: 13px; color: var(--ink-3); }
 
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: -18px 0 24px; }
-  .kpi { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; box-shadow: 0 2px 8px rgba(11,42,91,.06); cursor: pointer; text-align: left; font: inherit; color: inherit; }
-  .kpi:hover { border-color: var(--blue-500); }
-  .kpi .v { font-size: 28px; font-weight: 600; color: var(--blue-900); line-height: 1.1; }
-  .kpi .l { font-size: 13px; color: var(--ink-muted); }
+  main.wrap { padding-top: 28px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 28px; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+  .cap { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6b7280; }
 
-  h2 { font-size: 17px; font-weight: 600; margin: 0 0 10px; color: var(--blue-900); }
-  section { margin-bottom: 28px; }
+  /* Deadlines panel */
+  .dl-panel { padding: 18px 20px 20px; }
+  .dl-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .seg { display: inline-flex; flex-wrap: wrap; gap: 2px; background: #f0f2f5; border-radius: 9px; padding: 3px; }
+  .seg button { border: 0; background: none; cursor: pointer; font-size: 13.5px; color: var(--ink-2); padding: 6px 12px; border-radius: 7px; display: inline-flex; align-items: center; gap: 6px; }
+  .seg button .count { font-size: 12px; color: #9aa2ae; }
+  .seg button[aria-pressed="true"] { background: #fff; color: var(--blue-900); font-weight: 600; box-shadow: 0 1px 2px rgba(16, 24, 40, .08); }
+  .seg.small button { font-size: 12.5px; padding: 4px 10px; }
 
-  .deadlines { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
-  .dl { border: 1px solid var(--line); border-left: 4px solid var(--blue-500); border-radius: 8px; padding: 10px 12px; background: var(--panel); }
-  .dl.soon { border-left-color: var(--high); }
-  .dl .d { font-weight: 600; font-size: 14px; }
-  .dl .in { font-size: 12px; color: var(--ink-muted); }
-  .dl .lbl { font-size: 13.5px; margin-top: 2px; }
-  .dl a { font-size: 12.5px; text-decoration: none; }
+  .nx { display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch; }
+  .feat { flex: 0 1 360px; min-width: 260px; border-radius: 10px; background: var(--blue-50); padding: 20px; display: flex; flex-direction: column; gap: 4px; }
+  .feat .big { display: flex; align-items: baseline; gap: 8px; margin-top: 6px; }
+  .feat .big b { font-size: 44px; font-weight: 600; line-height: 1; color: var(--blue-900); }
+  .feat .big span { font-size: 16px; font-weight: 600; color: var(--blue-900); }
+  .feat.soon .big b, .feat.soon .big span { color: var(--red); }
+  .feat .t { margin: 8px 0 0; font-size: 17px; font-weight: 600; color: var(--ink); line-height: 1.35; }
+  .feat .s { margin: 0; font-size: 13px; color: var(--ink-2); }
+  .feat a { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; text-decoration: none; }
 
-  .controls { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.96); backdrop-filter: blur(4px); padding: 10px 0; border-bottom: 1px solid var(--line); margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-  .tabs { display: flex; flex-wrap: wrap; gap: 4px; background: var(--blue-50); padding: 3px; border-radius: 8px; }
-  .tabs button, .chips button { font: inherit; font-size: 13.5px; border: 0; background: transparent; padding: 6px 12px; border-radius: 6px; cursor: pointer; color: var(--ink-muted); }
-  .tabs button[aria-pressed="true"] { background: #fff; color: var(--blue-900); font-weight: 600; box-shadow: 0 1px 3px rgba(11,42,91,.12); }
-  .tabs .count { font-size: 11.5px; color: var(--ink-muted); margin-left: 4px; font-weight: 400; }
-  .chips { display: flex; gap: 4px; }
-  .chips button { border: 1px solid var(--line); background: #fff; }
-  .chips button[aria-pressed="true"] { border-color: var(--blue-500); color: var(--blue-700); background: var(--blue-100); }
-  .search { flex: 1 1 200px; min-width: 160px; }
-  .search input { width: 100%; font: inherit; font-size: 14px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; }
-  .search input:focus, select:focus { outline: 2px solid var(--blue-100); border-color: var(--blue-500); }
-  select { font: inherit; font-size: 13.5px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  .agenda { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; }
+  .ar { display: flex; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line-2); text-decoration: none; color: inherit; }
+  .ar:hover .at { color: var(--blue-700); }
+  .ad { width: 44px; flex: none; display: flex; flex-direction: column; align-items: center; line-height: 1; }
+  .ad b { font-size: 19px; font-weight: 600; color: var(--ink); }
+  .ad span { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: #6b7280; margin-top: 3px; }
+  .at { flex: 1; min-width: 0; font-size: 14px; color: var(--ink); }
+  .at small { display: block; font-size: 12px; color: #6b7280; }
+  .ac { font-size: 13px; color: #6b7280; white-space: nowrap; }
+  .ac.soon { color: var(--red-text); font-weight: 600; }
+  .more-btn { align-self: flex-start; margin-top: 8px; border: 0; background: none; padding: 4px 0; color: var(--blue-700); font-weight: 600; font-size: 13px; cursor: pointer; }
 
-  .list { display: grid; gap: 10px; }
-  .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px 14px 18px; position: relative; background: #fff; }
-  .card::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 4px; border-radius: 0 4px 4px 0; background: var(--tc, var(--blue-500)); }
+  /* Timeline */
+  .tl { position: relative; margin: 4px 8px 0; }
+  .tl-axis { position: absolute; left: 0; right: 0; height: 1px; background: #d7dbe2; }
+  .tl-today { position: absolute; left: 0; width: 2px; height: 26px; background: var(--blue-900); }
+  .tl-tick { position: absolute; font-size: 11px; color: #9aa2ae; transform: translateX(-50%); white-space: nowrap; }
+  .tl-dot { position: absolute; width: 9px; height: 9px; margin-left: -4.5px; border-radius: 50%; background: var(--blue-900); box-shadow: 0 0 0 3px #fff; }
+  .tl-dot.soon { background: var(--red); }
+  .tl-stem { position: absolute; width: 1px; background: #e3e6eb; }
+  .tl-item { position: absolute; z-index: 1; background: #fff; padding: 0 4px; width: 160px; font-size: 12.5px; line-height: 1.35; color: #374151; text-decoration: none; }
+  .tl-item:hover { color: var(--blue-700); }
+  .tl-item b { display: block; color: var(--ink); font-weight: 600; }
+  .tl-item.soon b { color: var(--red-text); }
+  .tl-item.right { text-align: right; }
+  .tl-later { margin: 10px 8px 0; font-size: 12px; color: var(--ink-3); }
+  .vtl { position: relative; margin: 0; padding: 0 0 0 22px; list-style: none; }
+  .vtl::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 1px; background: #d7dbe2; }
+  .vtl li { position: relative; padding: 0 0 14px; }
+  .vtl li::before { content: ""; position: absolute; left: -20px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--blue-900); box-shadow: 0 0 0 3px #fff; }
+  .vtl li.soon::before { background: var(--red); }
+  .vtl a { text-decoration: none; color: #374151; font-size: 13.5px; }
+  .vtl b { display: block; color: var(--ink); font-size: 13px; }
+  .vtl li.soon b { color: var(--red-text); }
+
+  /* Toolbar */
+  .toolbar { position: sticky; top: 0; z-index: 5; background: rgba(250, 250, 251, .94); backdrop-filter: blur(6px); display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; padding: 10px 0; margin: -10px 0; }
+  .spacer { flex: 1; }
+  .rels { display: flex; gap: 4px; }
+  .ib { width: 38px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; cursor: pointer; padding: 0; }
+  .ib[aria-pressed="true"] { border-color: var(--blue-500); background: var(--blue-50); }
+  .search { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; flex: 0 1 240px; min-width: 160px; }
+  .search input { border: 0; outline: none; font: inherit; font-size: 14px; width: 100%; background: transparent; color: var(--ink); }
+  .search:focus-within { border-color: var(--blue-500); box-shadow: 0 0 0 3px var(--blue-100); }
+  select { font: inherit; font-size: 13.5px; height: 34px; padding: 0 8px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; color: var(--ink); }
+  button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
+
+  /* Relevance dots */
+  .rel { display: inline-block; width: 20px; height: 6px; flex: none; }
+
+  /* Cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; align-items: start; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; min-height: 190px; transition: border-color .15s, box-shadow .15s; }
+  .card:hover { border-color: #d9e1ec; box-shadow: 0 4px 16px rgba(11, 42, 91, .06); }
+  .card.flash { border-color: var(--red); box-shadow: 0 0 0 3px #fff0f2; }
+  .ct { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6b7280; }
+  .ty { display: inline-flex; align-items: center; gap: 6px; color: #374151; font-weight: 600; }
+  .ty::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--tc); }
   .card[data-type="regulation"] { --tc: var(--t-regulation); }
   .card[data-type="tool"] { --tc: var(--t-tool); }
   .card[data-type="practice"] { --tc: var(--t-practice); }
-  .row1 { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 12.5px; color: var(--ink-muted); }
-  .type { font-weight: 600; color: var(--tc); text-transform: uppercase; letter-spacing: .04em; font-size: 11.5px; }
-  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; }
-  .rel-high { background: var(--high-bg); color: var(--high); }
-  .rel-medium { background: var(--medium-bg); color: var(--medium); }
-  .rel-low { background: var(--low-bg); color: var(--low); }
-  .auto { background: var(--new-bg); color: var(--new); }
-  .card.monthly { background: linear-gradient(90deg, var(--blue-50), #fff 60%); border-color: #c7d8f2; }
-  .status { border: 1px solid var(--line); color: var(--ink); font-weight: 500; }
-  .card h3 { margin: 6px 0 4px; font-size: 16px; font-weight: 600; line-height: 1.35; }
-  .card h3 a { color: var(--ink); text-decoration: none; }
-  .card h3 a:hover { color: var(--blue-700); text-decoration: underline; }
-  .card p { margin: 0; color: #364152; font-size: 14px; }
-  .why { margin-top: 8px; background: var(--blue-50); border-radius: 6px; padding: 7px 10px; font-size: 13.5px; }
-  .why b { color: var(--blue-900); }
-  .foot { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12.5px; color: var(--ink-muted); }
-  .tag { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; font-size: 12px; color: var(--ink-muted); }
-  .next { color: var(--high); font-weight: 600; }
-  .empty, .error { padding: 30px; text-align: center; color: var(--ink-muted); border: 1px dashed var(--line); border-radius: var(--radius); }
+  .chip { font-size: 11px; font-weight: 600; color: var(--blue-700); background: #eaf1fb; border-radius: 4px; padding: 1px 6px; }
+  .auto { font-size: 11px; color: var(--ink-3); }
+  .ct .rel { margin-left: auto; }
+  .card h3 { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--ink); }
+  .card p { margin: 0; font-size: 13.5px; line-height: 1.5; color: #5b6472; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .why { display: none; font-size: 13px; line-height: 1.5; color: var(--blue-900); background: var(--blue-50); border-radius: 8px; padding: 8px 10px; }
+  .card.open p { -webkit-line-clamp: unset; display: block; }
+  .card.open .why { display: block; }
+  .cf { margin-top: auto; padding-top: 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 12px; color: var(--ink-3); }
+  .cf .due { color: var(--red-text); font-weight: 600; }
+  .cf .st { color: var(--ink-2); }
+  .det { border: 0; background: none; padding: 0; color: var(--blue-700); font-size: 12px; font-weight: 600; cursor: pointer; }
+  .cf a { margin-left: auto; font-weight: 600; text-decoration: none; white-space: nowrap; }
+  .cf a:hover { text-decoration: underline; }
+  .empty, .error { grid-column: 1 / -1; padding: 32px; text-align: center; color: var(--ink-3); border: 1px dashed var(--line); border-radius: 12px; background: #fff; }
   .error { text-align: left; color: var(--ink); }
-  .error code { background: var(--panel); padding: 1px 5px; border-radius: 4px; }
-  footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 30px; color: var(--ink-muted); font-size: 13px; }
-  .legend { display: flex; gap: 14px; flex-wrap: wrap; }
-  .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
+  .error code { background: var(--blue-50); padding: 1px 5px; border-radius: 4px; }
 
-  @media (max-width: 760px) {
-    .kpis { grid-template-columns: repeat(2, 1fr); }
-    header.top h1 { font-size: 22px; }
-    .controls { position: static; }
+  footer { border-top: 1px solid var(--line); padding: 16px 0 28px; font-size: 12.5px; color: var(--ink-3); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: center; }
+  .key { display: inline-flex; align-items: center; gap: 6px; }
+  .key .d { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 16px; }
+    .toolbar { position: static; margin: 0; }
+    .spacer { display: none; }
+    .search { flex: 1 1 100%; }
+    .feat { flex-basis: 100%; }
   }
 </style>
 </head>
 <body>
-<header class="top">
+<header>
   <div class="wrap">
-    <h1>ESG Data &amp; Tech Radar</h1>
-    <p>Regulation, Fabric &amp; AI tools and best practices for ESG Controlling &amp; Digitization</p>
-    <div class="meta"><span id="m-curated">Curated update: —</span><span id="m-feeds">Feeds collected: —</span><span id="m-total">— entries</span></div>
+    <div class="brand">
+      <svg id="logo" viewBox="0 0 64 64" role="img" aria-label="ESG Radar logo">
+        <defs>
+          <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4f9bf5"/>
+            <stop offset=".55" stop-color="#1a5fc0"/>
+            <stop offset="1" stop-color="#0b3a85"/>
+          </linearGradient>
+          <linearGradient id="lg-gloss" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="lg-arc" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#d6e6ff"/>
+          </linearGradient>
+          <linearGradient id="lg-sweep" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-40 .5 .5)">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="1" stop-color="#fff" stop-opacity=".55"/>
+          </linearGradient>
+          <radialGradient id="lg-glow" cx=".25" cy=".8" r=".7">
+            <stop offset="0" stop-color="#8ec5ff" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#8ec5ff" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="lg-shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-color="#06275e" flood-opacity=".35"/>
+          </filter>
+        </defs>
+        <rect width="64" height="64" rx="14.5" fill="url(#lg-bg)"/>
+        <rect width="64" height="64" rx="14.5" fill="url(#lg-glow)"/>
+        <path d="M14 50V14a36 36 0 0 1 36 36Z" fill="#fff" fill-opacity=".12"/>
+        <path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="url(#lg-sweep)"/>
+        <g fill="none" stroke-linecap="round" filter="url(#lg-shadow)">
+          <path d="M14 50V13M14 50h37" stroke="#fff" stroke-opacity=".55" stroke-width="2.2"/>
+          <path d="M14 38a12 12 0 0 1 12 12" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".9"/>
+          <path d="M14 26a24 24 0 0 1 24 24" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".75"/>
+          <path d="M14 14a36 36 0 0 1 36 36" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".6"/>
+          <path d="M14 50L32 18.8" stroke="#fff" stroke-width="2.6"/>
+          <circle cx="14" cy="50" r="3.6" fill="#fff" stroke="none"/>
+        </g>
+        <path d="M14.5 0h35A14.5 14.5 0 0 1 64 14.5V24C44 30 22 30 0 25V14.5A14.5 14.5 0 0 1 14.5 0Z" fill="url(#lg-gloss)"/>
+        <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"/>
+      </svg>
+      <h1>ESG Data &amp; Tech Radar</h1>
+    </div>
+    <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="kpis">
-    <button class="kpi" data-jump="recent"><div class="v" id="k-recent">—</div><div class="l">New in the last 30 days</div></button>
-    <button class="kpi" data-jump="high"><div class="v" id="k-high">—</div><div class="l">High relevance</div></button>
-    <button class="kpi" data-jump="deadlines"><div class="v" id="k-deadlines">—</div><div class="l">Deadlines in the next 12 months</div></button>
-    <button class="kpi" data-jump="monthly"><div class="v" id="k-monthly">—</div><div class="l">Latest monthly feature update</div></button>
+  <section class="panel dl-panel" aria-labelledby="dl-title">
+    <div class="dl-head">
+      <h2 class="cap" id="dl-title">Upcoming deadlines</h2>
+      <div class="seg small" role="group" aria-label="Deadline view">
+        <button type="button" data-view="list" aria-pressed="true">List</button>
+        <button type="button" data-view="timeline" aria-pressed="false">Timeline</button>
+      </div>
+    </div>
+    <div id="dl-body"></div>
+  </section>
+
+  <div class="toolbar">
+    <div class="seg" id="tabs" role="group" aria-label="Category"></div>
+    <div class="spacer"></div>
+    <div class="rels" id="rels" role="group" aria-label="Filter by relevance"></div>
+    <label class="search">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#8a94a3" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+      <input id="q" type="search" placeholder="Search" aria-label="Search">
+    </label>
+    <select id="sort" aria-label="Sort">
+      <option value="date">Newest</option>
+      <option value="relevance">Most relevant</option>
+    </select>
   </div>
 
-  <section id="deadlines-section">
-    <h2>Upcoming deadlines</h2>
-    <div class="deadlines" id="deadlines"></div>
-  </section>
-
-  <section>
-    <div class="controls">
-      <div class="tabs" id="tabs" role="group" aria-label="Category"></div>
-      <div class="chips" id="chips" role="group" aria-label="Relevance"></div>
-      <div class="search"><input id="q" type="search" placeholder="Search title, summary, tags…" aria-label="Search"></div>
-      <select id="sort" aria-label="Sort">
-        <option value="date">Newest first</option>
-        <option value="relevance">Relevance first</option>
-      </select>
-    </div>
-    <div class="list" id="list"></div>
-  </section>
+  <div class="grid" id="grid"></div>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="legend">
-      <span style="--c: var(--t-regulation)">Regulation &amp; standards</span>
-      <span style="--c: var(--t-tool)">Data &amp; AI tools</span>
-      <span style="--c: var(--t-practice)">Best practice</span>
-    </div>
-    <p>Entries marked <b>Auto</b> are collected and rated automatically on the 1st of each month from the Power BI, Fabric, Foundry and ESG news feeds. Curated entries (with "Why it matters for us") are added with the update prompt in <code>prompts/</code>. Summaries are aids, not legal advice: always check the linked source.</p>
+    <span class="key"><span class="d" style="background:var(--t-regulation)"></span>Regulation</span>
+    <span class="key"><span class="d" style="background:var(--t-tool)"></span>Data &amp; AI</span>
+    <span class="key"><span class="d" style="background:var(--t-practice)"></span>Best practice</span>
+    <span class="key" id="key-rel"></span>
+    <span>Auto = collected monthly from news feeds. Summaries are aids, not legal advice.</span>
   </div>
 </footer>
 
 <script>
 (function () {
-  const TYPES = { all: "All", regulation: "Regulation & standards", tool: "Data & AI tools", practice: "Best practice", monthly: "Monthly feature updates" };
-  const TYPE_SHORT = { regulation: "Regulation", tool: "Tool", practice: "Best practice" };
+  const TABS = { all: "All", regulation: "Regulation", tool: "Data & AI", practice: "Best practice", monthly: "Monthly updates" };
+  const TYPE_LABEL = { regulation: "Regulation", tool: "Data & AI", practice: "Best practice" };
   const RELS = ["high", "medium", "low"];
-  const REL_RANK = { high: 0, medium: 1, low: 2, unrated: 3 };
-  const state = { tab: "all", rels: new Set(), q: "", sort: "date", recentOnly: false };
+  const REL_LABEL = { high: "High relevance", medium: "Medium relevance", low: "Low relevance" };
+  const REL_RANK = { high: 0, medium: 1, low: 2 };
+  const SOON_DAYS = 90;
+  const state = { tab: "all", rels: new Set(), q: "", sort: "date", dlView: "list", dlAll: false };
   let entries = [];
 
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  const svgEl = (tag, attrs) => { const n = document.createElementNS("http://www.w3.org/2000/svg", tag); for (const k in attrs) n.setAttribute(k, attrs[k]); return n; };
+  const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
   const today = new Date(); today.setHours(0, 0, 0, 0);
-  const parse = (s) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+  const parse = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d); };
   const fmt = (s) => parse(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
   const fmtMonth = (s) => parse(s).toLocaleDateString("en-GB", { month: "short", year: "numeric" });
   const daysFrom = (s) => Math.round((parse(s) - today) / 86400000);
+  const relOf = (e) => (REL_RANK[e.relevance] != null ? e.relevance : "medium");
+  const countdown = (d) => d === 0 ? "today" : d === 1 ? "1 day" : d < 60 ? d + " days" : Math.round(d / 30.4) + " months";
+
+  // Favicon from the header logo
+  try { $("favicon").href = "data:image/svg+xml," + encodeURIComponent(new XMLSerializer().serializeToString($("logo"))); } catch (e) {}
+
+  function relIcon(level) {
+    const fills = { high: ["var(--red)", "var(--red)", "var(--red)"], medium: ["#0b2a5b", "#0b2a5b", "#dfe3ea"], low: ["#0b2a5b", "#dfe3ea", "#dfe3ea"] }[level];
+    const s = svgEl("svg", { viewBox: "0 0 20 6", class: "rel", role: "img", "aria-label": REL_LABEL[level] });
+    const t = svgEl("title", {}); t.textContent = REL_LABEL[level]; s.appendChild(t);
+    [3, 10, 17].forEach((cx, i) => s.appendChild(svgEl("circle", { cx, cy: 3, r: 2.6, fill: fills[i] })));
+    return s;
+  }
 
   function load() {
     if (window.RADAR_DATA) return Promise.resolve(window.RADAR_DATA);
@@ -180,95 +289,215 @@
   load().then((data) => {
     entries = (data.entries || []).filter((e) => e && e.title && e.url);
     const m = data.meta || {};
-    $("m-curated").textContent = "Curated update: " + (m.lastCuratedUpdate ? fmt(m.lastCuratedUpdate) : "—");
-    $("m-feeds").textContent = "Feeds collected: " + (m.lastFeedRun ? fmt(m.lastFeedRun.slice(0, 10)) : "not yet");
-    $("m-total").textContent = entries.length + " entries";
+    const last = [m.lastCuratedUpdate, m.lastFeedRun && m.lastFeedRun.slice(0, 10)].filter(Boolean).sort().pop();
+    $("meta").textContent = (last ? "Updated " + fmt(last) + " · " : "") + entries.length + " entries";
+    state.dlView = store.get("radar.dlView") === "timeline" ? "timeline" : "list";
     buildControls();
-    renderKpis();
     renderDeadlines();
     render();
   }).catch(() => {
+    $("meta").textContent = "";
     const box = el("div", "error");
-    box.innerHTML = "<b>The data file could not be loaded.</b><br>If you opened this page directly from your disk, browsers block reading <code>data/radar.json</code>. Open it through GitHub Pages instead, or run <code>python -m http.server</code> in this folder and go to <code>http://localhost:8000</code>.";
-    $("list").replaceChildren(box);
+    box.innerHTML = "<b>The data file could not be loaded.</b><br>If you opened this page directly from your disk, browsers block reading <code>data/radar.json</code>. Open it through GitHub Pages, or run <code>python -m http.server</code> in this folder and go to <code>http://localhost:8000</code>.";
+    $("grid").replaceChildren(box);
   });
 
   function inTab(e, tab) { return tab === "all" || (tab === "monthly" ? !!e.monthlySummary : e.type === tab); }
-  function isRecent(e) { return (!e.dateIsAdded && daysFrom(e.date) >= -30) || (e.origin === "feed" && daysFrom(e.added) >= -30); }
 
   function buildControls() {
-    const tabs = $("tabs");
-    Object.entries(TYPES).forEach(([key, label]) => {
+    Object.entries(TABS).forEach(([key, label]) => {
       const b = el("button", null, label);
-      const n = entries.filter((e) => inTab(e, key)).length;
-      b.appendChild(el("span", "count", String(n)));
+      b.type = "button";
+      b.appendChild(el("span", "count", String(entries.filter((e) => inTab(e, key)).length)));
       b.dataset.tab = key;
-      b.setAttribute("aria-pressed", String(key === state.tab));
-      b.addEventListener("click", () => { state.tab = key; state.recentOnly = false; syncTabs(); render(); });
-      tabs.appendChild(b);
+      b.addEventListener("click", () => { state.tab = key; sync(); render(); });
+      $("tabs").appendChild(b);
     });
-    const chips = $("chips");
     RELS.forEach((r) => {
-      const b = el("button", null, r[0].toUpperCase() + r.slice(1));
+      const b = el("button", "ib");
+      b.type = "button";
+      b.appendChild(relIcon(r));
       b.dataset.rel = r;
-      b.setAttribute("aria-pressed", "false");
-      b.addEventListener("click", () => { state.rels.has(r) ? state.rels.delete(r) : state.rels.add(r); syncChips(); render(); });
-      chips.appendChild(b);
+      b.setAttribute("aria-label", "Show " + REL_LABEL[r].toLowerCase());
+      b.title = REL_LABEL[r];
+      b.addEventListener("click", () => { state.rels.has(r) ? state.rels.delete(r) : state.rels.add(r); sync(); render(); });
+      $("rels").appendChild(b);
     });
+    const key = $("key-rel");
+    RELS.forEach((r) => { key.appendChild(relIcon(r)); key.appendChild(el("span", null, r[0].toUpperCase() + r.slice(1))); });
+    document.querySelectorAll("[data-view]").forEach((b) => b.addEventListener("click", () => {
+      state.dlView = b.dataset.view; store.set("radar.dlView", state.dlView); sync(); renderDeadlines();
+    }));
     $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); });
     $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
-    document.querySelectorAll(".kpi").forEach((k) => k.addEventListener("click", () => {
-      const j = k.dataset.jump;
-      state.recentOnly = false; state.rels.clear(); state.tab = "all";
-      if (j === "deadlines") { $("deadlines-section").scrollIntoView({ behavior: "smooth" }); return; }
-      if (j === "monthly") state.tab = "monthly";
-      if (j === "high") state.rels.add("high");
-      if (j === "recent") state.recentOnly = true;
-      syncTabs(); syncChips(); render();
-      $("tabs").scrollIntoView({ behavior: "smooth", block: "start" });
-    }));
+    window.addEventListener("resize", () => { if (state.dlView === "timeline") renderDeadlines(); });
+    sync();
   }
-  function syncTabs() { document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === state.tab))); }
-  function syncChips() { document.querySelectorAll("#chips button").forEach((b) => b.setAttribute("aria-pressed", String(state.rels.has(b.dataset.rel)))); }
+  function sync() {
+    document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === state.tab)));
+    document.querySelectorAll("#rels button").forEach((b) => b.setAttribute("aria-pressed", String(state.rels.has(b.dataset.rel))));
+    document.querySelectorAll("[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === state.dlView)));
+  }
 
   function upcoming() {
     return entries.filter((e) => e.nextDate && daysFrom(e.nextDate) >= 0).sort((a, b) => a.nextDate.localeCompare(b.nextDate));
   }
 
-  function renderKpis() {
-    $("k-recent").textContent = entries.filter(isRecent).length;
-    $("k-high").textContent = entries.filter((e) => e.relevance === "high").length;
-    $("k-deadlines").textContent = upcoming().filter((e) => daysFrom(e.nextDate) <= 365).length;
-    const latest = entries.filter((e) => e.monthlySummary).sort((a, b) => b.date.localeCompare(a.date))[0];
-    $("k-monthly").textContent = latest ? fmtMonth(latest.date) : "—";
+  function jumpTo(id) {
+    state.tab = "all"; state.rels.clear(); state.q = ""; $("q").value = ""; sync(); render();
+    const c = document.getElementById(id);
+    if (!c) return;
+    c.classList.add("open", "flash");
+    c.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(() => c.classList.remove("flash"), 1600);
   }
+  function jumpLink(node, e) {
+    node.href = "#" + e.id;
+    node.addEventListener("click", (ev) => { ev.preventDefault(); jumpTo(e.id); });
+    return node;
+  }
+  function subLabel(e) { return [TYPE_LABEL[e.type] || "", (e.tags || [])[0]].filter(Boolean).join(" · "); }
 
   function renderDeadlines() {
-    const box = $("deadlines");
-    const list = upcoming().slice(0, 8);
-    if (!list.length) { box.replaceChildren(el("div", "empty", "No upcoming deadlines recorded.")); return; }
-    box.replaceChildren(...list.map((e) => {
-      const d = daysFrom(e.nextDate);
-      const c = el("div", "dl" + (d <= 90 ? " soon" : ""));
-      c.appendChild(el("div", "d", fmt(e.nextDate)));
-      c.appendChild(el("div", "in", d === 0 ? "today" : d < 60 ? "in " + d + " days" : "in ~" + Math.round(d / 30.4) + " months"));
-      c.appendChild(el("div", "lbl", e.nextDateLabel || e.title));
-      const a = el("a", null, (e.tags && e.tags[0] ? e.tags[0] + " · " : "") + "details ↓");
-      a.href = "#" + e.id;
-      a.addEventListener("click", () => { state.tab = "all"; state.rels.clear(); state.q = ""; state.recentOnly = false; $("q").value = ""; syncTabs(); syncChips(); render(); });
-      c.appendChild(a);
-      return c;
-    }));
+    const list = upcoming();
+    const body = $("dl-body");
+    if (!list.length) { body.replaceChildren(el("p", "s", "No upcoming deadlines recorded.")); return; }
+    body.replaceChildren(state.dlView === "timeline" ? timeline(list) : listView(list));
+  }
+
+  function listView(list) {
+    const wrap = el("div", "nx");
+    const first = list[0], d0 = daysFrom(first.nextDate);
+    const feat = el("div", "feat" + (d0 <= SOON_DAYS ? " soon" : ""));
+    feat.appendChild(el("p", "cap", "Next deadline"));
+    const big = el("div", "big num");
+    const parts = countdown(d0).split(" ");
+    big.append(el("b", null, parts[0]), el("span", null, parts.slice(1).join(" ")));
+    feat.appendChild(big);
+    feat.appendChild(el("p", "t", first.nextDateLabel || first.title));
+    feat.appendChild(el("p", "s", fmt(first.nextDate) + " · " + subLabel(first)));
+    feat.appendChild(jumpLink(el("a", null, "Details →"), first));
+    wrap.appendChild(feat);
+
+    const ag = el("div", "agenda");
+    ag.appendChild(el("p", "cap", "Then"));
+    const rest = list.slice(1);
+    const shown = state.dlAll ? rest : rest.slice(0, 4);
+    shown.forEach((e) => {
+      const d = daysFrom(e.nextDate), dt = parse(e.nextDate);
+      const row = jumpLink(el("a", "ar"), e);
+      const ad = el("div", "ad num");
+      const mon = dt.toLocaleDateString("en-GB", { month: "short" }) + (dt.getFullYear() !== today.getFullYear() && dt.getFullYear() !== today.getFullYear() + 1 ? " " + String(dt.getFullYear()).slice(2) : "");
+      ad.append(el("b", null, String(dt.getDate())), el("span", null, mon));
+      const at = el("div", "at", e.nextDateLabel || e.title);
+      at.appendChild(el("small", null, fmt(e.nextDate) + " · " + subLabel(e)));
+      row.append(ad, at, el("div", "ac num" + (d <= SOON_DAYS ? " soon" : ""), countdown(d)));
+      ag.appendChild(row);
+    });
+    if (rest.length > 4) {
+      const b = el("button", "more-btn", state.dlAll ? "Show fewer" : "Show all " + list.length + " deadlines");
+      b.type = "button";
+      b.addEventListener("click", () => { state.dlAll = !state.dlAll; renderDeadlines(); });
+      ag.appendChild(b);
+    }
+    wrap.appendChild(ag);
+    return wrap;
+  }
+
+  function timeline(list) {
+    if (($("dl-body").clientWidth || 900) < 640) return verticalTimeline(list);
+    const frag = el("div");
+    const tl = el("div", "tl");
+    frag.appendChild(tl);
+    const width = Math.max(280, ($("dl-body").clientWidth || 900) - 16);
+    const horizon = 456; // ~15 months
+    const inRange = list.filter((e) => daysFrom(e.nextDate) <= horizon);
+    const later = list.length - inRange.length;
+    const span = Math.max(120, Math.min(horizon, inRange.length ? daysFrom(inRange[inRange.length - 1].nextDate) + 20 : horizon));
+    const x = (d) => Math.round((d / span) * width);
+    const LABEL_W = 160, GAP = 10, TIER_H = 40;
+
+    // Place labels on tiers: 0,1 above the axis; 2,3 below. Alternate, avoid overlaps.
+    const tierEnd = [-1e9, -1e9, -1e9, -1e9];
+    const order = [0, 2, 1, 3];
+    const placed = inRange.map((e, i) => {
+      const px = x(daysFrom(e.nextDate));
+      const right = px + LABEL_W > width;
+      const start = right ? px - LABEL_W : px - 4;
+      const pref = i % 2 === 0 ? [0, 2, 1, 3] : [2, 0, 3, 1];
+      let tier = pref.find((t) => tierEnd[t] + GAP <= start);
+      if (tier == null) tier = order.reduce((best, t) => (tierEnd[t] < tierEnd[best] ? t : best), 0);
+      tierEnd[tier] = start + LABEL_W;
+      return { e, px, right, tier };
+    });
+    const usedAbove = placed.some((p) => p.tier === 1) ? 2 : placed.some((p) => p.tier === 0) ? 1 : 0;
+    const usedBelow = placed.some((p) => p.tier === 3) ? 2 : placed.some((p) => p.tier === 2) ? 1 : 0;
+    const axisY = usedAbove * TIER_H + 18;
+    tl.style.height = (axisY + 26 + usedBelow * TIER_H + 6) + "px";
+
+    const axis = el("div", "tl-axis"); axis.style.top = axisY + "px"; tl.appendChild(axis);
+    const tdy = el("div", "tl-today"); tdy.style.top = (axisY - 13) + "px"; tl.appendChild(tdy);
+
+    // Month ticks
+    const first = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+    const step = span > 300 ? 3 : 1;
+    for (let dt = new Date(first); ; dt.setMonth(dt.getMonth() + step)) {
+      const d = Math.round((dt - today) / 86400000);
+      if (d > span) break;
+      if (d < 18) continue;
+      const t = el("div", "tl-tick", dt.toLocaleDateString("en-GB", { month: "short" }) + " " + String(dt.getFullYear()).slice(2));
+      t.style.left = x(d) + "px"; t.style.top = (axisY + 6) + "px";
+      tl.appendChild(t);
+    }
+    const tt = el("div", "tl-tick", "Today"); tt.style.left = "0"; tt.style.transform = "none"; tt.style.top = (axisY + 6) + "px"; tt.style.fontWeight = "600"; tt.style.color = "#0b2a5b"; tl.appendChild(tt);
+
+    placed.forEach(({ e, px, right, tier }) => {
+      const d = daysFrom(e.nextDate), soon = d <= SOON_DAYS;
+      const above = tier < 2;
+      const level = above ? (usedAbove - 1 - tier) : (tier - 2);
+      const top = above ? level * TIER_H : axisY + 26 + level * TIER_H;
+      const stem = el("div", "tl-stem");
+      stem.style.left = px + "px";
+      if (above) { stem.style.top = (top + 32) + "px"; stem.style.height = Math.max(0, axisY - top - 32) + "px"; }
+      else { stem.style.top = axisY + "px"; stem.style.height = Math.max(0, top - axisY) + "px"; }
+      tl.appendChild(stem);
+      const dot = el("div", "tl-dot" + (soon ? " soon" : "")); dot.style.left = px + "px"; dot.style.top = (axisY - 4) + "px"; tl.appendChild(dot);
+      const lab = jumpLink(el("a", "tl-item" + (soon ? " soon" : "") + (right ? " right" : "")), e);
+      lab.style.left = (right ? px - LABEL_W + 4 : px - 4) + "px";
+      lab.style.top = top + "px";
+      lab.title = e.title;
+      lab.appendChild(el("b", "num", parse(e.nextDate).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) + (soon ? " · " + countdown(d) : "")));
+      lab.appendChild(document.createTextNode(e.nextDateLabel || e.title));
+      tl.appendChild(lab);
+    });
+    if (later) {
+      const rest = list.slice(inRange.length);
+      frag.appendChild(el("p", "tl-later", "+" + later + " later: " + rest.map((e) => (e.nextDateLabel || e.title) + " (" + fmt(e.nextDate) + ")").join(", ")));
+    }
+    return frag;
+  }
+
+  function verticalTimeline(list) {
+    const ul = el("ul", "vtl");
+    list.forEach((e) => {
+      const d = daysFrom(e.nextDate), soon = d <= SOON_DAYS;
+      const li = el("li", soon ? "soon" : "");
+      const a = jumpLink(el("a"), e);
+      a.appendChild(el("b", "num", fmt(e.nextDate) + " · " + countdown(d)));
+      a.appendChild(document.createTextNode(e.nextDateLabel || e.title));
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    return ul;
   }
 
   function filtered() {
     let list = entries.filter((e) => inTab(e, state.tab));
-    if (state.recentOnly) list = entries.filter(isRecent);
-    if (state.rels.size) list = list.filter((e) => state.rels.has(e.relevance));
+    if (state.rels.size) list = list.filter((e) => state.rels.has(relOf(e)));
     if (state.q) list = list.filter((e) => [e.title, e.summary, e.whyItMatters, e.source, (e.tags || []).join(" ")].join(" ").toLowerCase().includes(state.q));
     const key = (e) => (e.dateIsAdded ? "" : e.date || ""); // undated references go last
     const byDate = (a, b) => key(b).localeCompare(key(a));
-    list.sort(state.sort === "relevance" ? (a, b) => (REL_RANK[a.relevance] ?? 3) - (REL_RANK[b.relevance] ?? 3) || byDate(a, b) : byDate);
+    list.sort(state.sort === "relevance" ? (a, b) => REL_RANK[relOf(a)] - REL_RANK[relOf(b)] || byDate(a, b) : byDate);
     return list;
   }
 
@@ -276,29 +505,46 @@
     const c = el("article", "card");
     c.id = e.id;
     c.dataset.type = e.type;
-    const r1 = el("div", "row1");
-    r1.appendChild(el("span", "type", TYPE_SHORT[e.type] || e.type));
-    r1.appendChild(el("span", null, e.dateIsAdded ? "Added " + fmtMonth(e.added || e.date) : fmt(e.date)));
-    if (e.status) r1.appendChild(el("span", "pill status", e.status));
-    const rel = REL_RANK[e.relevance] != null && e.relevance !== "unrated" ? e.relevance : "medium";
-    r1.appendChild(el("span", "pill rel-" + rel, rel[0].toUpperCase() + rel.slice(1) + " relevance"));
-    if (e.origin === "feed") r1.appendChild(el("span", "pill auto", "Auto"));
-    if (e.monthlySummary) c.classList.add("monthly");
-    c.appendChild(r1);
-    const h = el("h3"); const a = el("a", null, e.title); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; h.appendChild(a); c.appendChild(h);
+
+    const top = el("div", "ct");
+    top.appendChild(el("span", "ty", TYPE_LABEL[e.type] || e.type));
+    top.appendChild(el("span", "num", e.dateIsAdded ? fmtMonth(e.added || e.date) : fmt(e.date)));
+    if (e.monthlySummary) top.appendChild(el("span", "chip", "Monthly"));
+    else if (e.origin === "feed") top.appendChild(el("span", "auto", "Auto"));
+    top.appendChild(relIcon(relOf(e)));
+    c.appendChild(top);
+
+    c.appendChild(el("h3", null, e.title));
     if (e.summary) c.appendChild(el("p", null, e.summary));
-    if (e.whyItMatters) { const w = el("div", "why"); w.appendChild(el("b", null, "Why it matters for us: ")); w.appendChild(document.createTextNode(e.whyItMatters)); c.appendChild(w); }
-    const f = el("div", "foot");
-    (e.tags || []).forEach((t) => f.appendChild(el("span", "tag", t)));
-    if (e.nextDate && daysFrom(e.nextDate) >= 0) f.appendChild(el("span", "next", "Next: " + (e.nextDateLabel || "") + " – " + fmt(e.nextDate)));
-    f.appendChild(el("span", null, "Source: " + (e.source || new URL(e.url).hostname)));
+    if (e.whyItMatters) {
+      const w = el("div", "why");
+      w.appendChild(el("b", null, "Why it matters: "));
+      w.appendChild(document.createTextNode(e.whyItMatters));
+      c.appendChild(w);
+    }
+
+    const f = el("div", "cf");
+    if (e.whyItMatters || (e.summary && e.summary.length > 160)) {
+      const b = el("button", "det", "Details");
+      b.type = "button";
+      b.setAttribute("aria-expanded", "false");
+      b.addEventListener("click", () => { const open = c.classList.toggle("open"); b.textContent = open ? "Less" : "Details"; b.setAttribute("aria-expanded", String(open)); });
+      f.appendChild(b);
+    }
+    if (e.nextDate && daysFrom(e.nextDate) >= 0) f.appendChild(el("span", "due num", "Due " + fmt(e.nextDate)));
+    else if (e.status && e.origin !== "feed") f.appendChild(el("span", "st", e.status));
+    f.appendChild(el("span", null, e.source || ""));
+    const a = el("a", null, "Open ↗");
+    a.href = e.url; a.target = "_blank"; a.rel = "noopener";
+    f.appendChild(a);
     c.appendChild(f);
     return c;
   }
 
   function render() {
     const list = filtered();
-    $("list").replaceChildren(...(list.length ? list.map(card) : [el("div", "empty", state.tab === "monthly" ? "No monthly feature summaries collected yet – they arrive with the next feed run." : "No entries match these filters.")]));
+    $("grid").replaceChildren(...(list.length ? list.map(card)
+      : [el("div", "empty", state.tab === "monthly" ? "No monthly feature summaries yet – they arrive with the next feed run." : "No entries match these filters.")]));
   }
 })();
 </script>
