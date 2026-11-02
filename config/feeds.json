@@ -1,0 +1,71 @@
+{
+  "_comment": "Feeds the monthly GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. 'type' must be regulation, tool or practice.",
+  "lookbackDaysFirstRun": 60,
+  "archiveFeedItemsAfterDays": 365,
+  "monthlySummaryPattern": "feature summary",
+  "feeds": [
+    {
+      "name": "Power BI Blog",
+      "url": "https://powerbi.microsoft.com/en-us/blog/feed/",
+      "type": "tool",
+      "maxItems": 25,
+      "defaultRelevance": "medium",
+      "keywords": ["feature summary", "copilot", "semantic model", "data agent", "fabric", "translytical", "visual calculation", "paginated", "deployment pipeline", "git", "pbip", "tmdl", "ai"],
+      "highKeywords": ["feature summary", "copilot", "data agent", "semantic model"]
+    },
+    {
+      "name": "Microsoft Fabric Blog",
+      "url": "https://blog.fabric.microsoft.com/en-US/blog/feed/",
+      "type": "tool",
+      "maxItems": 40,
+      "defaultRelevance": "medium",
+      "keywords": ["feature summary", "data agent", "copilot", "fabric iq", "ontology", "semantic model", "fabric apps", "power bi", "onelake", "mcp", "ai functions", "deployment pipeline", "git", "governance", "purview", "sustainability", "generally available"],
+      "highKeywords": ["feature summary", "data agent", "fabric iq", "fabric apps", "semantic model", "sustainability"]
+    },
+    {
+      "name": "Microsoft Foundry Blog",
+      "url": "https://devblogs.microsoft.com/foundry/feed/",
+      "type": "tool",
+      "maxItems": 15,
+      "defaultRelevance": "low",
+      "keywords": ["fabric", "agent service", "foundry iq", "what's new", "toolbox", "mcp", "teams", "copilot", "routine", "generally available", "ga"],
+      "highKeywords": ["fabric", "what's new"]
+    },
+    {
+      "name": "SQLBI",
+      "url": "https://www.sqlbi.com/feed/",
+      "type": "practice",
+      "maxItems": 10,
+      "defaultRelevance": "low",
+      "keywords": ["copilot", "ai", "semantic model", "agent", "calculation group", "visual calculation"],
+      "highKeywords": ["copilot", "agent"]
+    },
+    {
+      "name": "ESG Today",
+      "url": "https://www.esgtoday.com/feed/",
+      "type": "regulation",
+      "maxItems": 15,
+      "defaultRelevance": "low",
+      "keywords": ["csrd", "esrs", "omnibus", "taxonomy", "efrag", "issb", "eudr", "deforestation", "ppwr", "packaging", "cbam", "emissions trading", "ets", "sbti", "ghg protocol", "scope 3", "scope 2", "green claims", "pulp", "paper", "tissue"],
+      "highKeywords": ["csrd", "esrs", "omnibus", "eudr", "deforestation", "ppwr", "emissions trading", "pulp", "paper", "tissue"]
+    },
+    {
+      "name": "ESG Dive",
+      "url": "https://www.esgdive.com/feeds/news/",
+      "type": "regulation",
+      "maxItems": 15,
+      "defaultRelevance": "low",
+      "keywords": ["csrd", "esrs", "omnibus", "taxonomy", "efrag", "issb", "eudr", "deforestation", "packaging", "cbam", "sbti", "ghg protocol", "scope 3", "scope 2", "green claims", "pulp", "paper"],
+      "highKeywords": ["csrd", "esrs", "omnibus", "eudr", "deforestation", "pulp", "paper"]
+    },
+    {
+      "name": "Harvard Law Forum on Corporate Governance",
+      "url": "https://corpgov.law.harvard.edu/feed/",
+      "type": "practice",
+      "maxItems": 10,
+      "defaultRelevance": "low",
+      "keywords": ["csrd", "esrs", "sustainability reporting", "omnibus", "issb", "double materiality"],
+      "highKeywords": ["csrd", "esrs", "omnibus"]
+    }
+  ]
+}

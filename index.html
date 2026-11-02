@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESG Data & Tech Radar</title>
+<style>
+  :root {
+    --blue-900: #0b2a5b;
+    --blue-700: #0f4c9c;
+    --blue-500: #1f6fd1;
+    --blue-100: #e6effb;
+    --blue-50:  #f3f7fd;
+    --ink: #1b2533;
+    --ink-muted: #5b6676;
+    --line: #dde3ec;
+    --bg: #ffffff;
+    --panel: #f7f9fc;
+    --high: #c2410c;
+    --high-bg: #fff1e8;
+    --medium: #0f4c9c;
+    --medium-bg: #e6effb;
+    --low: #5b6676;
+    --low-bg: #eef1f5;
+    --new: #047857;
+    --new-bg: #e6f6ef;
+    --t-regulation: #0f4c9c;
+    --t-tool: #0e8a9a;
+    --t-practice: #7a5af5;
+    --radius: 10px;
+    --font: Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; }
+  a { color: var(--blue-700); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+  header.top { background: var(--blue-900); color: #fff; padding: 28px 0 24px; }
+  header.top h1 { margin: 0; font-size: 26px; font-weight: 600; letter-spacing: -.01em; }
+  header.top p { margin: 4px 0 0; color: #c9d7ee; }
+  .meta { margin-top: 12px; font-size: 13px; color: #9fb4d8; display: flex; flex-wrap: wrap; gap: 4px 18px; }
+
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: -18px 0 24px; }
+  .kpi { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; box-shadow: 0 2px 8px rgba(11,42,91,.06); cursor: pointer; text-align: left; font: inherit; color: inherit; }
+  .kpi:hover { border-color: var(--blue-500); }
+  .kpi .v { font-size: 28px; font-weight: 600; color: var(--blue-900); line-height: 1.1; }
+  .kpi .l { font-size: 13px; color: var(--ink-muted); }
+
+  h2 { font-size: 17px; font-weight: 600; margin: 0 0 10px; color: var(--blue-900); }
+  section { margin-bottom: 28px; }
+
+  .deadlines { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+  .dl { border: 1px solid var(--line); border-left: 4px solid var(--blue-500); border-radius: 8px; padding: 10px 12px; background: var(--panel); }
+  .dl.soon { border-left-color: var(--high); }
+  .dl .d { font-weight: 600; font-size: 14px; }
+  .dl .in { font-size: 12px; color: var(--ink-muted); }
+  .dl .lbl { font-size: 13.5px; margin-top: 2px; }
+  .dl a { font-size: 12.5px; text-decoration: none; }
+
+  .controls { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.96); backdrop-filter: blur(4px); padding: 10px 0; border-bottom: 1px solid var(--line); margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 4px; background: var(--blue-50); padding: 3px; border-radius: 8px; }
+  .tabs button, .chips button { font: inherit; font-size: 13.5px; border: 0; background: transparent; padding: 6px 12px; border-radius: 6px; cursor: pointer; color: var(--ink-muted); }
+  .tabs button[aria-pressed="true"] { background: #fff; color: var(--blue-900); font-weight: 600; box-shadow: 0 1px 3px rgba(11,42,91,.12); }
+  .tabs .count { font-size: 11.5px; color: var(--ink-muted); margin-left: 4px; font-weight: 400; }
+  .chips { display: flex; gap: 4px; }
+  .chips button { border: 1px solid var(--line); background: #fff; }
+  .chips button[aria-pressed="true"] { border-color: var(--blue-500); color: var(--blue-700); background: var(--blue-100); }
+  .search { flex: 1 1 200px; min-width: 160px; }
+  .search input { width: 100%; font: inherit; font-size: 14px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; }
+  .search input:focus, select:focus { outline: 2px solid var(--blue-100); border-color: var(--blue-500); }
+  select { font: inherit; font-size: 13.5px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+
+  .list { display: grid; gap: 10px; }
+  .card { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px 14px 18px; position: relative; background: #fff; }
+  .card::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 4px; border-radius: 0 4px 4px 0; background: var(--tc, var(--blue-500)); }
+  .card[data-type="regulation"] { --tc: var(--t-regulation); }
+  .card[data-type="tool"] { --tc: var(--t-tool); }
+  .card[data-type="practice"] { --tc: var(--t-practice); }
+  .row1 { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 12.5px; color: var(--ink-muted); }
+  .type { font-weight: 600; color: var(--tc); text-transform: uppercase; letter-spacing: .04em; font-size: 11.5px; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; }
+  .rel-high { background: var(--high-bg); color: var(--high); }
+  .rel-medium { background: var(--medium-bg); color: var(--medium); }
+  .rel-low { background: var(--low-bg); color: var(--low); }
+  .auto { background: var(--new-bg); color: var(--new); }
+  .card.monthly { background: linear-gradient(90deg, var(--blue-50), #fff 60%); border-color: #c7d8f2; }
+  .status { border: 1px solid var(--line); color: var(--ink); font-weight: 500; }
+  .card h3 { margin: 6px 0 4px; font-size: 16px; font-weight: 600; line-height: 1.35; }
+  .card h3 a { color: var(--ink); text-decoration: none; }
+  .card h3 a:hover { color: var(--blue-700); text-decoration: underline; }
+  .card p { margin: 0; color: #364152; font-size: 14px; }
+  .why { margin-top: 8px; background: var(--blue-50); border-radius: 6px; padding: 7px 10px; font-size: 13.5px; }
+  .why b { color: var(--blue-900); }
+  .foot { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12.5px; color: var(--ink-muted); }
+  .tag { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 0 6px; font-size: 12px; color: var(--ink-muted); }
+  .next { color: var(--high); font-weight: 600; }
+  .empty, .error { padding: 30px; text-align: center; color: var(--ink-muted); border: 1px dashed var(--line); border-radius: var(--radius); }
+  .error { text-align: left; color: var(--ink); }
+  .error code { background: var(--panel); padding: 1px 5px; border-radius: 4px; }
+  footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 18px 0 30px; color: var(--ink-muted); font-size: 13px; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; }
+  .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
+
+  @media (max-width: 760px) {
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    header.top h1 { font-size: 22px; }
+    .controls { position: static; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>ESG Data &amp; Tech Radar</h1>
+    <p>Regulation, Fabric &amp; AI tools and best practices for ESG Controlling &amp; Digitization</p>
+    <div class="meta"><span id="m-curated">Curated update: —</span><span id="m-feeds">Feeds collected: —</span><span id="m-total">— entries</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="kpis">
+    <button class="kpi" data-jump="recent"><div class="v" id="k-recent">—</div><div class="l">New in the last 30 days</div></button>
+    <button class="kpi" data-jump="high"><div class="v" id="k-high">—</div><div class="l">High relevance</div></button>
+    <button class="kpi" data-jump="deadlines"><div class="v" id="k-deadlines">—</div><div class="l">Deadlines in the next 12 months</div></button>
+    <button class="kpi" data-jump="monthly"><div class="v" id="k-monthly">—</div><div class="l">Latest monthly feature update</div></button>
+  </div>
+
+  <section id="deadlines-section">
+    <h2>Upcoming deadlines</h2>
+    <div class="deadlines" id="deadlines"></div>
+  </section>
+
+  <section>
+    <div class="controls">
+      <div class="tabs" id="tabs" role="group" aria-label="Category"></div>
+      <div class="chips" id="chips" role="group" aria-label="Relevance"></div>
+      <div class="search"><input id="q" type="search" placeholder="Search title, summary, tags…" aria-label="Search"></div>
+      <select id="sort" aria-label="Sort">
+        <option value="date">Newest first</option>
+        <option value="relevance">Relevance first</option>
+      </select>
+    </div>
+    <div class="list" id="list"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="legend">
+      <span style="--c: var(--t-regulation)">Regulation &amp; standards</span>
+      <span style="--c: var(--t-tool)">Data &amp; AI tools</span>
+      <span style="--c: var(--t-practice)">Best practice</span>
+    </div>
+    <p>Entries marked <b>Auto</b> are collected and rated automatically on the 1st of each month from the Power BI, Fabric, Foundry and ESG news feeds. Curated entries (with "Why it matters for us") are added with the update prompt in <code>prompts/</code>. Summaries are aids, not legal advice: always check the linked source.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const TYPES = { all: "All", regulation: "Regulation & standards", tool: "Data & AI tools", practice: "Best practice", monthly: "Monthly feature updates" };
+  const TYPE_SHORT = { regulation: "Regulation", tool: "Tool", practice: "Best practice" };
+  const RELS = ["high", "medium", "low"];
+  const REL_RANK = { high: 0, medium: 1, low: 2, unrated: 3 };
+  const state = { tab: "all", rels: new Set(), q: "", sort: "date", recentOnly: false };
+  let entries = [];
+
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const parse = (s) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+  const fmt = (s) => parse(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  const fmtMonth = (s) => parse(s).toLocaleDateString("en-GB", { month: "short", year: "numeric" });
+  const daysFrom = (s) => Math.round((parse(s) - today) / 86400000);
+
+  function load() {
+    if (window.RADAR_DATA) return Promise.resolve(window.RADAR_DATA);
+    return fetch("data/radar.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+
+  load().then((data) => {
+    entries = (data.entries || []).filter((e) => e && e.title && e.url);
+    const m = data.meta || {};
+    $("m-curated").textContent = "Curated update: " + (m.lastCuratedUpdate ? fmt(m.lastCuratedUpdate) : "—");
+    $("m-feeds").textContent = "Feeds collected: " + (m.lastFeedRun ? fmt(m.lastFeedRun.slice(0, 10)) : "not yet");
+    $("m-total").textContent = entries.length + " entries";
+    buildControls();
+    renderKpis();
+    renderDeadlines();
+    render();
+  }).catch(() => {
+    const box = el("div", "error");
+    box.innerHTML = "<b>The data file could not be loaded.</b><br>If you opened this page directly from your disk, browsers block reading <code>data/radar.json</code>. Open it through GitHub Pages instead, or run <code>python -m http.server</code> in this folder and go to <code>http://localhost:8000</code>.";
+    $("list").replaceChildren(box);
+  });
+
+  function inTab(e, tab) { return tab === "all" || (tab === "monthly" ? !!e.monthlySummary : e.type === tab); }
+  function isRecent(e) { return (!e.dateIsAdded && daysFrom(e.date) >= -30) || (e.origin === "feed" && daysFrom(e.added) >= -30); }
+
+  function buildControls() {
+    const tabs = $("tabs");
+    Object.entries(TYPES).forEach(([key, label]) => {
+      const b = el("button", null, label);
+      const n = entries.filter((e) => inTab(e, key)).length;
+      b.appendChild(el("span", "count", String(n)));
+      b.dataset.tab = key;
+      b.setAttribute("aria-pressed", String(key === state.tab));
+      b.addEventListener("click", () => { state.tab = key; state.recentOnly = false; syncTabs(); render(); });
+      tabs.appendChild(b);
+    });
+    const chips = $("chips");
+    RELS.forEach((r) => {
+      const b = el("button", null, r[0].toUpperCase() + r.slice(1));
+      b.dataset.rel = r;
+      b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", () => { state.rels.has(r) ? state.rels.delete(r) : state.rels.add(r); syncChips(); render(); });
+      chips.appendChild(b);
+    });
+    $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); });
+    $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
+    document.querySelectorAll(".kpi").forEach((k) => k.addEventListener("click", () => {
+      const j = k.dataset.jump;
+      state.recentOnly = false; state.rels.clear(); state.tab = "all";
+      if (j === "deadlines") { $("deadlines-section").scrollIntoView({ behavior: "smooth" }); return; }
+      if (j === "monthly") state.tab = "monthly";
+      if (j === "high") state.rels.add("high");
+      if (j === "recent") state.recentOnly = true;
+      syncTabs(); syncChips(); render();
+      $("tabs").scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
+  }
+  function syncTabs() { document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === state.tab))); }
+  function syncChips() { document.querySelectorAll("#chips button").forEach((b) => b.setAttribute("aria-pressed", String(state.rels.has(b.dataset.rel)))); }
+
+  function upcoming() {
+    return entries.filter((e) => e.nextDate && daysFrom(e.nextDate) >= 0).sort((a, b) => a.nextDate.localeCompare(b.nextDate));
+  }
+
+  function renderKpis() {
+    $("k-recent").textContent = entries.filter(isRecent).length;
+    $("k-high").textContent = entries.filter((e) => e.relevance === "high").length;
+    $("k-deadlines").textContent = upcoming().filter((e) => daysFrom(e.nextDate) <= 365).length;
+    const latest = entries.filter((e) => e.monthlySummary).sort((a, b) => b.date.localeCompare(a.date))[0];
+    $("k-monthly").textContent = latest ? fmtMonth(latest.date) : "—";
+  }
+
+  function renderDeadlines() {
+    const box = $("deadlines");
+    const list = upcoming().slice(0, 8);
+    if (!list.length) { box.replaceChildren(el("div", "empty", "No upcoming deadlines recorded.")); return; }
+    box.replaceChildren(...list.map((e) => {
+      const d = daysFrom(e.nextDate);
+      const c = el("div", "dl" + (d <= 90 ? " soon" : ""));
+      c.appendChild(el("div", "d", fmt(e.nextDate)));
+      c.appendChild(el("div", "in", d === 0 ? "today" : d < 60 ? "in " + d + " days" : "in ~" + Math.round(d / 30.4) + " months"));
+      c.appendChild(el("div", "lbl", e.nextDateLabel || e.title));
+      const a = el("a", null, (e.tags && e.tags[0] ? e.tags[0] + " · " : "") + "details ↓");
+      a.href = "#" + e.id;
+      a.addEventListener("click", () => { state.tab = "all"; state.rels.clear(); state.q = ""; state.recentOnly = false; $("q").value = ""; syncTabs(); syncChips(); render(); });
+      c.appendChild(a);
+      return c;
+    }));
+  }
+
+  function filtered() {
+    let list = entries.filter((e) => inTab(e, state.tab));
+    if (state.recentOnly) list = entries.filter(isRecent);
+    if (state.rels.size) list = list.filter((e) => state.rels.has(e.relevance));
+    if (state.q) list = list.filter((e) => [e.title, e.summary, e.whyItMatters, e.source, (e.tags || []).join(" ")].join(" ").toLowerCase().includes(state.q));
+    const key = (e) => (e.dateIsAdded ? "" : e.date || ""); // undated references go last
+    const byDate = (a, b) => key(b).localeCompare(key(a));
+    list.sort(state.sort === "relevance" ? (a, b) => (REL_RANK[a.relevance] ?? 3) - (REL_RANK[b.relevance] ?? 3) || byDate(a, b) : byDate);
+    return list;
+  }
+
+  function card(e) {
+    const c = el("article", "card");
+    c.id = e.id;
+    c.dataset.type = e.type;
+    const r1 = el("div", "row1");
+    r1.appendChild(el("span", "type", TYPE_SHORT[e.type] || e.type));
+    r1.appendChild(el("span", null, e.dateIsAdded ? "Added " + fmtMonth(e.added || e.date) : fmt(e.date)));
+    if (e.status) r1.appendChild(el("span", "pill status", e.status));
+    const rel = REL_RANK[e.relevance] != null && e.relevance !== "unrated" ? e.relevance : "medium";
+    r1.appendChild(el("span", "pill rel-" + rel, rel[0].toUpperCase() + rel.slice(1) + " relevance"));
+    if (e.origin === "feed") r1.appendChild(el("span", "pill auto", "Auto"));
+    if (e.monthlySummary) c.classList.add("monthly");
+    c.appendChild(r1);
+    const h = el("h3"); const a = el("a", null, e.title); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; h.appendChild(a); c.appendChild(h);
+    if (e.summary) c.appendChild(el("p", null, e.summary));
+    if (e.whyItMatters) { const w = el("div", "why"); w.appendChild(el("b", null, "Why it matters for us: ")); w.appendChild(document.createTextNode(e.whyItMatters)); c.appendChild(w); }
+    const f = el("div", "foot");
+    (e.tags || []).forEach((t) => f.appendChild(el("span", "tag", t)));
+    if (e.nextDate && daysFrom(e.nextDate) >= 0) f.appendChild(el("span", "next", "Next: " + (e.nextDateLabel || "") + " – " + fmt(e.nextDate)));
+    f.appendChild(el("span", null, "Source: " + (e.source || new URL(e.url).hostname)));
+    c.appendChild(f);
+    return c;
+  }
+
+  function render() {
+    const list = filtered();
+    $("list").replaceChildren(...(list.length ? list.map(card) : [el("div", "empty", state.tab === "monthly" ? "No monthly feature summaries collected yet – they arrive with the next feed run." : "No entries match these filters.")]));
+  }
+})();
+</script>
+</body>
+</html>
