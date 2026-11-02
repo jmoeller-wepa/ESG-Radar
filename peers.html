@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Peer Benchmark – ESG Radar</title>
+<title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
 <style>
   :root {
-    --blue-900: #0b2a5b;
+    --blue-900: #002d55;
     --blue-700: #0f4c9c;
     --blue-500: #1f6fd1;
     --blue-100: #e6eef9;
     --blue-50:  #f3f7fc;
-    --wepa: #335777;
+    --wepa: #002d55;
     --red: #FF667E;
     --red-text: #c42840;
     --green: #66C3B4;
@@ -37,12 +37,12 @@
   header { background: #fff; border-bottom: 1px solid var(--line); }
   header .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; padding-top: 16px; padding-bottom: 16px; }
   .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .brand svg { width: 34px; height: 34px; flex: none; filter: drop-shadow(0 2px 4px rgba(11, 42, 91, .18)); }
+  .brand svg { width: 34px; height: 34px; flex: none; filter: drop-shadow(0 2px 4px rgba(0, 45, 85, .14)); }
   .brand h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
   .nav { display: flex; gap: 4px; }
   .nav a { font-size: 14px; color: var(--ink-2); text-decoration: none; padding: 6px 12px; border-radius: 8px; }
-  .nav a:hover { background: var(--blue-50); }
-  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: var(--blue-50); }
+  .nav a:hover { background: #f3f4f6; }
+  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: #eceef1; }
   .meta { margin-left: auto; font-size: 13px; color: var(--ink-3); }
 
   main.wrap { padding-top: 28px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 24px; }
@@ -75,18 +75,22 @@
   td.co small { display: block; font-size: 12px; color: var(--ink-3); }
   tr.us td { background: #f5f8fb; }
   tr.us td.co { box-shadow: inset 3px 0 0 var(--wepa); }
-  .v { display: inline-flex; align-items: center; border-radius: 6px; padding: 3px 9px; text-decoration: none; color: inherit; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  /* Option C: dot markers */
+  .v { display: inline-flex; align-items: center; gap: 7px; padding: 3px 0; text-decoration: none; color: #111827; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .v::before { content: ""; width: 8px; height: 8px; border-radius: 50%; flex: none; background: #e1e4e8; }
   a.v:hover { text-decoration: underline; }
-  .v.best { background: var(--green); color: var(--green-ink); font-weight: 600; }
-  .v.good { background: var(--green-50); color: var(--green-text); }
-  .v.mid { background: #f3f4f6; color: #374151; }
-  .v.weak { background: #fff0f2; color: var(--red-text); }
+  .v.best { font-weight: 700; color: var(--wepa); }
+  .v.best::before { background: #66C3B4; box-shadow: 0 0 0 2px #dcf2ed; }
+  .v.good::before { background: #99D7CD; }
+  .v.weak::before { background: #FF667E; }
   .v.plain { padding: 3px 0; color: #374151; white-space: normal; max-width: 320px; display: inline-block; }
-  .yr { display: block; font-size: 11px; color: #9aa2ae; margin-top: 2px; padding-left: 9px; }
+  .v.plain::before { display: none; }
+  .yr { display: block; font-size: 11px; color: #9aa2ae; margin-top: 1px; padding-left: 15px; }
   .v.plain + .yr { padding-left: 0; }
   .na { color: #c4c9d2; }
+  .na-text { font-size: 12.5px; color: var(--ink-3); white-space: nowrap; }
   .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding: 14px 16px; border-top: 1px solid var(--line-2); font-size: 12px; color: #6b7280; }
-  .legend .v { font-size: 12px; padding: 2px 8px; }
+  .legend .v { font-size: 12px; }
   .legend .note { margin-left: auto; max-width: 620px; }
 
   .profiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: start; }
@@ -97,7 +101,7 @@
   .ph b { font-size: 16px; }
   .ph span { font-size: 12px; color: var(--ink-3); text-align: right; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chips .v { font-size: 12.5px; white-space: normal; }
+  .chips .v { font-size: 12.5px; white-space: normal; background: #f5f6f8; border-radius: 6px; padding: 3px 9px; }
   .chips .v i { font-style: normal; opacity: .75; margin-right: 4px; }
   .pcard ul { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; font-size: 13px; color: #374151; }
   .pcard ul li { padding-left: 12px; position: relative; }
@@ -119,29 +123,28 @@
     <a class="brand" href="./">
       <svg id="logo" viewBox="0 0 64 64" role="img" aria-label="ESG Radar logo">
         <defs>
-          <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f9bf5"/><stop offset=".55" stop-color="#1a5fc0"/><stop offset="1" stop-color="#0b3a85"/></linearGradient>
-          <linearGradient id="lg-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-          <linearGradient id="lg-arc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d6e6ff"/></linearGradient>
-          <linearGradient id="lg-sweep" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-40 .5 .5)"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".55"/></linearGradient>
-          <radialGradient id="lg-glow" cx=".25" cy=".8" r=".7"><stop offset="0" stop-color="#8ec5ff" stop-opacity=".55"/><stop offset="1" stop-color="#8ec5ff" stop-opacity="0"/></radialGradient>
-          <filter id="lg-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-color="#06275e" flood-opacity=".35"/></filter>
+          <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d3f0eb"/><stop offset=".5" stop-color="#99D7CD"/><stop offset="1" stop-color="#6fbcaf"/></linearGradient>
+          <linearGradient id="lg-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <linearGradient id="lg-sweep" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-40 .5 .5)"><stop offset="0" stop-color="#002d55" stop-opacity="0"/><stop offset="1" stop-color="#002d55" stop-opacity=".28"/></linearGradient>
+          <radialGradient id="lg-glow" cx=".25" cy=".8" r=".7"><stop offset="0" stop-color="#ffffff" stop-opacity=".45"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+          <filter id="lg-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#ffffff" flood-opacity=".6"/></filter>
         </defs>
         <rect width="64" height="64" rx="14.5" fill="url(#lg-bg)"/>
         <rect width="64" height="64" rx="14.5" fill="url(#lg-glow)"/>
-        <path d="M14 50V14a36 36 0 0 1 36 36Z" fill="#fff" fill-opacity=".12"/>
+        <path d="M14 50V14a36 36 0 0 1 36 36Z" fill="#fff" fill-opacity=".22"/>
         <path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="url(#lg-sweep)"/>
         <g fill="none" stroke-linecap="round" filter="url(#lg-shadow)">
-          <path d="M14 50V13M14 50h37" stroke="#fff" stroke-opacity=".55" stroke-width="2.2"/>
-          <path d="M14 38a12 12 0 0 1 12 12" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".9"/>
-          <path d="M14 26a24 24 0 0 1 24 24" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".75"/>
-          <path d="M14 14a36 36 0 0 1 36 36" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".6"/>
-          <path d="M14 50L32 18.8" stroke="#fff" stroke-width="2.6"/>
-          <circle cx="14" cy="50" r="3.6" fill="#fff" stroke="none"/>
+          <path d="M14 50V13M14 50h37" stroke="#002d55" stroke-opacity=".35" stroke-width="2.2"/>
+          <path d="M14 38a12 12 0 0 1 12 12" stroke="#002d55" stroke-width="3.2" stroke-opacity=".9"/>
+          <path d="M14 26a24 24 0 0 1 24 24" stroke="#002d55" stroke-width="3.2" stroke-opacity=".7"/>
+          <path d="M14 14a36 36 0 0 1 36 36" stroke="#002d55" stroke-width="3.2" stroke-opacity=".5"/>
+          <path d="M14 50L32 18.8" stroke="#002d55" stroke-width="2.6"/>
+          <circle cx="14" cy="50" r="3.6" fill="#002d55" stroke="none"/>
         </g>
         <path d="M14.5 0h35A14.5 14.5 0 0 1 64 14.5V24C44 30 22 30 0 25V14.5A14.5 14.5 0 0 1 14.5 0Z" fill="url(#lg-gloss)"/>
-        <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"/>
+        <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
       </svg>
-      <h1>ESG Data &amp; Tech Radar</h1>
+      <h1>ESG Radar</h1>
     </a>
     <nav class="nav" aria-label="Pages"><a href="./">Radar</a><a href="peers.html" aria-current="page">Peers</a></nav>
     <span class="meta" id="meta">Loading…</span>
@@ -201,7 +204,7 @@
   ]).then(([peers, radar]) => {
     P = peers;
     news = (radar.entries || []).filter((e) => e && e.title && e.url);
-    $("meta").textContent = "KPIs collected " + fmtDate(P.meta.updated) + " · " + P.companies.length + " companies";
+    $("meta").textContent = "Updated " + fmtDate(P.meta.updated) + " · " + P.companies.length + " companies";
     $("note").textContent = P.meta.note || "";
     readHash();
     build();
@@ -264,12 +267,14 @@
   function valueNode(key, cell, rating, withYear) {
     const def = P.kpis[key];
     const frag = document.createDocumentFragment();
+    if (cell && cell.v == null && cell.d) { frag.appendChild(el("span", "na-text", cell.d)); return frag; }
     if (!cell || cell.v == null) { frag.appendChild(el("span", "na", "–")); return frag; }
     let text = display(key, cell);
     if (!cell.d && typeof cell.v === "number" && /target/i.test(def.label)) text = "−" + cell.v + "%";
     const cls = def.kind === "text" ? "v plain" : "v " + (rating || "mid");
     const node = cell.src ? el("a", cls, text) : el("span", cls, text);
     if (cell.src) { node.href = cell.src; node.target = "_blank"; node.rel = "noopener"; node.title = "Source" + (cell.y ? " · " + cell.y : "") + " – opens in a new tab"; }
+    else if (cell.note) node.title = cell.note;
     frag.appendChild(node);
     if (withYear && cell.y) frag.appendChild(el("span", "yr", cell.y));
     return frag;

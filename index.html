@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ESG Data & Tech Radar</title>
+<title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
 <style>
   :root {
-    --blue-900: #0b2a5b;
+    --blue-900: #002d55;
     --blue-700: #0f4c9c;
     --blue-500: #1f6fd1;
     --blue-100: #e6eef9;
@@ -38,11 +38,11 @@
   header .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; padding-top: 16px; padding-bottom: 16px; }
   .nav { display: flex; gap: 4px; }
   .nav a { font-size: 14px; color: var(--ink-2); text-decoration: none; padding: 6px 12px; border-radius: 8px; }
-  .nav a:hover { background: var(--blue-50); }
-  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: var(--blue-50); }
+  .nav a:hover { background: #f3f4f6; }
+  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: #eceef1; }
   header .meta { margin-left: auto; }
   .brand { display: flex; align-items: center; gap: 12px; }
-  .brand svg { width: 34px; height: 34px; flex: none; filter: drop-shadow(0 2px 4px rgba(11, 42, 91, .18)); }
+  .brand svg { width: 34px; height: 34px; flex: none; filter: drop-shadow(0 2px 4px rgba(0, 45, 85, .14)); }
   .brand h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
   .meta { font-size: 13px; color: var(--ink-3); }
 
@@ -126,8 +126,14 @@
   .area:hover { border-color: #cfdbec; }
   .area svg { flex: none; }
   .area .count { font-size: 12px; color: #9aa2ae; }
-  .area[aria-pressed="true"] { background: #335777; border-color: #335777; color: #fff; }
-  .area[aria-pressed="true"] .count { color: #c5d3e0; }
+  .area[aria-pressed="true"] { background: #002d55; border-color: #002d55; color: #fff; }
+  .area[aria-pressed="true"] .count { color: #b7c7d8; }
+  .tools { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: -14px 0 -8px; }
+  .tools[hidden] { display: none; }
+  .tools .lbl { font-size: 12.5px; color: var(--ink-3); margin-right: 2px; }
+  .tool { height: 30px; padding: 0 12px; border: 1px solid #e5e7eb; border-radius: 999px; background: #fff; font-size: 13px; color: #374151; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .tool .count { font-size: 11.5px; color: #9aa2ae; }
+  .tool[aria-pressed="true"] { background: #e8edf3; border-color: #c5d0dc; color: #002d55; font-weight: 600; }
   .nb { min-width: 18px; height: 18px; border-radius: 9px; background: var(--blue-700); color: #fff; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
   .seg button[aria-pressed="true"] .nb { background: var(--blue-700); }
 
@@ -196,47 +202,28 @@
     <div class="brand">
       <svg id="logo" viewBox="0 0 64 64" role="img" aria-label="ESG Radar logo">
         <defs>
-          <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#4f9bf5"/>
-            <stop offset=".55" stop-color="#1a5fc0"/>
-            <stop offset="1" stop-color="#0b3a85"/>
-          </linearGradient>
-          <linearGradient id="lg-gloss" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
-            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-          </linearGradient>
-          <linearGradient id="lg-arc" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#fff"/>
-            <stop offset="1" stop-color="#d6e6ff"/>
-          </linearGradient>
-          <linearGradient id="lg-sweep" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-40 .5 .5)">
-            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-            <stop offset="1" stop-color="#fff" stop-opacity=".55"/>
-          </linearGradient>
-          <radialGradient id="lg-glow" cx=".25" cy=".8" r=".7">
-            <stop offset="0" stop-color="#8ec5ff" stop-opacity=".55"/>
-            <stop offset="1" stop-color="#8ec5ff" stop-opacity="0"/>
-          </radialGradient>
-          <filter id="lg-shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-color="#06275e" flood-opacity=".35"/>
-          </filter>
+          <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d3f0eb"/><stop offset=".5" stop-color="#99D7CD"/><stop offset="1" stop-color="#6fbcaf"/></linearGradient>
+          <linearGradient id="lg-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <linearGradient id="lg-sweep" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-40 .5 .5)"><stop offset="0" stop-color="#002d55" stop-opacity="0"/><stop offset="1" stop-color="#002d55" stop-opacity=".28"/></linearGradient>
+          <radialGradient id="lg-glow" cx=".25" cy=".8" r=".7"><stop offset="0" stop-color="#ffffff" stop-opacity=".45"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+          <filter id="lg-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#ffffff" flood-opacity=".6"/></filter>
         </defs>
         <rect width="64" height="64" rx="14.5" fill="url(#lg-bg)"/>
         <rect width="64" height="64" rx="14.5" fill="url(#lg-glow)"/>
-        <path d="M14 50V14a36 36 0 0 1 36 36Z" fill="#fff" fill-opacity=".12"/>
+        <path d="M14 50V14a36 36 0 0 1 36 36Z" fill="#fff" fill-opacity=".22"/>
         <path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="url(#lg-sweep)"/>
         <g fill="none" stroke-linecap="round" filter="url(#lg-shadow)">
-          <path d="M14 50V13M14 50h37" stroke="#fff" stroke-opacity=".55" stroke-width="2.2"/>
-          <path d="M14 38a12 12 0 0 1 12 12" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".9"/>
-          <path d="M14 26a24 24 0 0 1 24 24" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".75"/>
-          <path d="M14 14a36 36 0 0 1 36 36" stroke="url(#lg-arc)" stroke-width="3.2" stroke-opacity=".6"/>
-          <path d="M14 50L32 18.8" stroke="#fff" stroke-width="2.6"/>
-          <circle cx="14" cy="50" r="3.6" fill="#fff" stroke="none"/>
+          <path d="M14 50V13M14 50h37" stroke="#002d55" stroke-opacity=".35" stroke-width="2.2"/>
+          <path d="M14 38a12 12 0 0 1 12 12" stroke="#002d55" stroke-width="3.2" stroke-opacity=".9"/>
+          <path d="M14 26a24 24 0 0 1 24 24" stroke="#002d55" stroke-width="3.2" stroke-opacity=".7"/>
+          <path d="M14 14a36 36 0 0 1 36 36" stroke="#002d55" stroke-width="3.2" stroke-opacity=".5"/>
+          <path d="M14 50L32 18.8" stroke="#002d55" stroke-width="2.6"/>
+          <circle cx="14" cy="50" r="3.6" fill="#002d55" stroke="none"/>
         </g>
         <path d="M14.5 0h35A14.5 14.5 0 0 1 64 14.5V24C44 30 22 30 0 25V14.5A14.5 14.5 0 0 1 14.5 0Z" fill="url(#lg-gloss)"/>
-        <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.5"/>
+        <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
       </svg>
-      <h1>ESG Data &amp; Tech Radar</h1>
+      <h1>ESG Radar</h1>
     </div>
     <nav class="nav" aria-label="Pages"><a href="./" aria-current="page">Radar</a><a href="peers.html">Peers</a></nav>
     <span class="meta" id="meta">Loading…</span>
@@ -256,6 +243,7 @@
   </section>
 
   <nav class="areas" id="areas" aria-label="ESG area"></nav>
+  <div class="tools" id="tools" role="group" aria-label="Microsoft tool" hidden></div>
 
   <div class="toolbar">
     <div class="seg" id="tabs" role="group" aria-label="Category"></div>
@@ -304,7 +292,7 @@
   const REL_LABEL = { high: "High relevance", medium: "Medium relevance", low: "Low relevance" };
   const REL_RANK = { high: 0, medium: 1, low: 2 };
   const SOON_DAYS = 90;
-  const state = { tab: "all", area: "all", rels: new Set(), q: "", sort: "date", dlView: "list", dlAll: false, savedOnly: false };
+  const state = { tab: "all", area: "all", tool: "all", rels: new Set(), q: "", sort: "date", dlView: "list", dlAll: false, savedOnly: false };
   let entries = [], archived = [];
   let saved = new Set();
   let newSince = null; // ISO date: entries added after this are "new"
@@ -325,7 +313,7 @@
   try { $("favicon").href = "data:image/svg+xml," + encodeURIComponent(new XMLSerializer().serializeToString($("logo"))); } catch (e) {}
 
   function relIcon(level) {
-    const fills = { high: ["var(--red)", "var(--red)", "var(--red)"], medium: ["#0b2a5b", "#0b2a5b", "#dfe3ea"], low: ["#0b2a5b", "#dfe3ea", "#dfe3ea"] }[level];
+    const fills = { high: ["#002d55", "#002d55", "#002d55"], medium: ["#002d55", "#002d55", "#dfe3ea"], low: ["#002d55", "#dfe3ea", "#dfe3ea"] }[level];
     const s = svgEl("svg", { viewBox: "0 0 20 6", class: "rel", role: "img", "aria-label": REL_LABEL[level] });
     const t = svgEl("title", {}); t.textContent = REL_LABEL[level]; s.appendChild(t);
     [3, 10, 17].forEach((cx, i) => s.appendChild(svgEl("circle", { cx, cy: 3, r: 2.6, fill: fills[i] })));
@@ -343,7 +331,20 @@
   const isNew = (e) => newSince != null && (e.added || e.date || "") > newSince;
   const isSaved = (e) => saved.has(e.id);
   const pool = () => entries.concat(archived.filter(isSaved));
-  const inArea = (e) => state.area === "all" || areasOf(e).includes(state.area);
+  const TOOLS = {
+    fabric: { label: "Fabric", re: /\bfabric\b|onelake|data agent/i },
+    powerbi: { label: "Power BI", re: /power ?bi|semantic model|\bdax\b/i },
+    copilot: { label: "Copilot", re: /copilot/i },
+    other: { label: "Other" }
+  };
+  const toolsOf = (e) => {
+    if (e._tools) return e._tools;
+    const t = [e.title, e.summary, e.source, (e.tags || []).join(" ")].join(" ");
+    const found = Object.keys(TOOLS).filter((k) => TOOLS[k].re && TOOLS[k].re.test(t));
+    return (e._tools = found.length ? found : ["other"]);
+  };
+  const inArea = (e) => (state.area === "all" || areasOf(e).includes(state.area)) &&
+    (state.area !== "data" || state.tool === "all" || toolsOf(e).includes(state.tool));
 
   // "New since your last visit": the previous visit date stays fixed for the whole browser session
   function initVisit() {
@@ -363,10 +364,12 @@
     const p = new URLSearchParams(location.hash.slice(1));
     if (p.get("area") && AREAS[p.get("area")]) state.area = p.get("area");
     if (p.get("tab") && TABS[p.get("tab")]) state.tab = p.get("tab");
+    if (p.get("tool") && TOOLS[p.get("tool")]) state.tool = p.get("tool");
   }
   function writeHash() {
     const p = new URLSearchParams();
     if (state.area !== "all") p.set("area", state.area);
+    if (state.area === "data" && state.tool !== "all") p.set("tool", state.tool);
     if (state.tab !== "all") p.set("tab", state.tab);
     const h = p.toString();
     try { history.replaceState(null, "", h ? "#" + h : location.pathname + location.search); } catch (e) {}
@@ -422,8 +425,18 @@
     $("areas").addEventListener("click", (ev) => {
       const b = ev.target.closest("[data-area]");
       if (!b) return;
-      state.area = b.dataset.area; state.dlAll = false;
+      state.area = b.dataset.area; state.tool = "all"; state.dlAll = false;
       sync(); renderDeadlines(); render();
+    });
+    // Microsoft tool filter (only inside Data & AI)
+    const tl = $("tools");
+    tl.appendChild(el("span", "lbl", "Tool:"));
+    [["all", "All"]].concat(Object.entries(TOOLS).map(([k, t]) => [k, t.label])).forEach(([k, label]) => {
+      const b = el("button", "tool", label);
+      b.type = "button"; b.dataset.tool = k;
+      if (k !== "all") b.appendChild(el("span", "count", String(entries.filter((e) => areasOf(e).includes("data") && toolsOf(e).includes(k)).length)));
+      b.addEventListener("click", () => { state.tool = k; sync(); renderDeadlines(); render(); });
+      tl.appendChild(b);
     });
     // Tabs
     Object.entries(TABS).forEach(([key, label]) => {
@@ -460,6 +473,8 @@
   function sync() {
     document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === state.tab)));
     document.querySelectorAll("#areas button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.area === state.area)));
+    $("tools").hidden = state.area !== "data";
+    document.querySelectorAll("#tools button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tool === state.tool)));
     document.querySelectorAll("#rels button").forEach((b) => b.setAttribute("aria-pressed", String(state.rels.has(b.dataset.rel))));
     document.querySelectorAll("[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === state.dlView)));
     $("saved").setAttribute("aria-pressed", String(state.savedOnly));
@@ -472,7 +487,7 @@
       c.textContent = String(n);
       if (b.dataset.tab === "new") c.style.display = n ? "" : "none";
     });
-    $("dl-title").textContent = "Upcoming deadlines" + (state.area !== "all" ? " · " + AREAS[state.area].label : "");
+    $("dl-title").textContent = "Upcoming deadlines" + (state.area !== "all" ? " · " + AREAS[state.area].label : "") + (state.area === "data" && state.tool !== "all" ? " · " + TOOLS[state.tool].label : "");
     writeHash();
   }
 
