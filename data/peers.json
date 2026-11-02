@@ -1,0 +1,825 @@
+{
+  "meta": {
+    "updated": "2026-11-02",
+    "note": "Values collected from public company reports, press releases and rating announcements. Each value links to its source. Targets differ in base year and scope (absolute vs. intensity), so compare with care. Empty cells = not found in public sources at the time of collection."
+  },
+  "groups": {
+    "europe": "Tissue Europe",
+    "global": "Global tissue",
+    "all": "All"
+  },
+  "kpis": {
+    "sbti": {
+      "label": "SBTi",
+      "kind": "ord",
+      "scale": [
+        "None",
+        "Committed",
+        "Validated",
+        "Net-zero validated"
+      ]
+    },
+    "netZeroYear": {
+      "label": "Net zero",
+      "kind": "num",
+      "better": "low"
+    },
+    "scope12Target": {
+      "label": "Scope 1+2 target",
+      "kind": "num",
+      "better": "high",
+      "hint": "Reduction target in %. Base years and absolute vs. intensity differ."
+    },
+    "scope3Target": {
+      "label": "Scope 3 target",
+      "kind": "num",
+      "better": "high",
+      "hint": "Reduction target in %."
+    },
+    "renewableElectricity": {
+      "label": "Renewable electricity",
+      "kind": "num",
+      "better": "high",
+      "unit": "%"
+    },
+    "cdpClimate": {
+      "label": "CDP Climate",
+      "kind": "ord",
+      "scale": [
+        "D-",
+        "D",
+        "C-",
+        "C",
+        "B-",
+        "B",
+        "A-",
+        "A"
+      ]
+    },
+    "cdpForests": {
+      "label": "CDP Forests",
+      "kind": "ord",
+      "scale": [
+        "D-",
+        "D",
+        "C-",
+        "C",
+        "B-",
+        "B",
+        "A-",
+        "A"
+      ]
+    },
+    "cdpWater": {
+      "label": "CDP Water",
+      "kind": "ord",
+      "scale": [
+        "D-",
+        "D",
+        "C-",
+        "C",
+        "B-",
+        "B",
+        "A-",
+        "A"
+      ]
+    },
+    "ecovadis": {
+      "label": "EcoVadis",
+      "kind": "ord",
+      "scale": [
+        "Bronze",
+        "Silver",
+        "Gold",
+        "Platinum"
+      ]
+    },
+    "msci": {
+      "label": "MSCI ESG",
+      "kind": "ord",
+      "scale": [
+        "CCC",
+        "B",
+        "BB",
+        "BBB",
+        "A",
+        "AA",
+        "AAA"
+      ]
+    },
+    "recycledFibre": {
+      "label": "Recycled fibre",
+      "kind": "num",
+      "better": "high",
+      "unit": "%"
+    },
+    "certifiedFibre": {
+      "label": "Certified fibre",
+      "kind": "num",
+      "better": "high",
+      "unit": "%"
+    },
+    "recyclablePackaging": {
+      "label": "Recyclable packaging",
+      "kind": "num",
+      "better": "high",
+      "unit": "%"
+    },
+    "plasticTarget": {
+      "label": "Plastic reduction target",
+      "kind": "num",
+      "better": "high",
+      "hint": "Reduction target in %."
+    },
+    "waterTarget": {
+      "label": "Water target",
+      "kind": "text"
+    },
+    "womenTotal": {
+      "label": "Women in workforce",
+      "kind": "num",
+      "better": "high",
+      "unit": "%"
+    },
+    "womenManagement": {
+      "label": "Women in management",
+      "kind": "num",
+      "better": "high",
+      "unit": "%"
+    },
+    "safety": {
+      "label": "Safety (incident rate)",
+      "kind": "text",
+      "hint": "Companies use different metrics (TRIR, TIR, LTIFR), so not rated."
+    }
+  },
+  "kpiSets": {
+    "overview": {
+      "label": "Overview",
+      "kpis": [
+        "sbti",
+        "netZeroYear",
+        "scope12Target",
+        "cdpClimate",
+        "ecovadis",
+        "recycledFibre",
+        "renewableElectricity"
+      ]
+    },
+    "climate": {
+      "label": "Climate & Energy",
+      "kpis": [
+        "sbti",
+        "netZeroYear",
+        "scope12Target",
+        "scope3Target",
+        "renewableElectricity",
+        "cdpClimate"
+      ]
+    },
+    "forests": {
+      "label": "Forests & Fibre",
+      "kpis": [
+        "certifiedFibre",
+        "recycledFibre",
+        "cdpForests"
+      ]
+    },
+    "circularity": {
+      "label": "Circularity & Packaging",
+      "kpis": [
+        "recyclablePackaging",
+        "plasticTarget",
+        "recycledFibre"
+      ]
+    },
+    "water": {
+      "label": "Water",
+      "kpis": [
+        "cdpWater",
+        "waterTarget"
+      ]
+    },
+    "people": {
+      "label": "People",
+      "kpis": [
+        "womenTotal",
+        "womenManagement",
+        "safety"
+      ]
+    },
+    "ratings": {
+      "label": "Ratings",
+      "kpis": [
+        "ecovadis",
+        "msci",
+        "cdpClimate",
+        "cdpForests",
+        "cdpWater"
+      ]
+    }
+  },
+  "companies": [
+    {
+      "id": "wepa",
+      "name": "WEPA",
+      "country": "Germany",
+      "groups": [
+        "europe"
+      ],
+      "isUs": true,
+      "aliases": [
+        "WEPA"
+      ],
+      "report": {
+        "label": "Sustainability",
+        "url": "https://www.wepa.eu/en/sustainability/ecological-performance-of-our-production"
+      },
+      "kpis": {
+        "sbti": {
+          "v": "Validated",
+          "src": "https://www.wepa.eu/en/blog/detail/wepa-group-reduces-emissions-by-525-until-2030"
+        },
+        "netZeroYear": {
+          "v": 2040,
+          "d": "2040 (climate neutral)",
+          "src": "https://www.wepa.eu/en/blog/detail/wepa-group-reduces-emissions-by-525-until-2030"
+        },
+        "scope12Target": {
+          "v": 52.5,
+          "d": "−52.5%/t by 2030 (2019, S1–3)",
+          "src": "https://www.wepa.eu/en/blog/detail/wepa-group-reduces-emissions-by-525-until-2030"
+        },
+        "certifiedFibre": {
+          "v": 100,
+          "d": "100% of virgin wood fibre",
+          "src": "https://www.wepa.eu/en/sustainability/future-fibres"
+        }
+      },
+      "targets": [
+        "−52.5% Scope 1–3 emissions per tonne by 2030 vs. 2019 (SBTi-validated)",
+        "≥60% recycled and alternative fibres in sales products by 2030",
+        "Lower average water risk from 'mean' to 'low' by 2030",
+        "100% of production waste recycled (material or energy); 74% materially recycled"
+      ]
+    },
+    {
+      "id": "essity",
+      "name": "Essity",
+      "country": "Sweden",
+      "groups": [
+        "europe",
+        "global"
+      ],
+      "aliases": [
+        "Essity"
+      ],
+      "report": {
+        "label": "Targets & outcomes",
+        "url": "https://www.essity.com/investors/targets-and-outcomes/"
+      },
+      "kpis": {
+        "sbti": {
+          "v": "Net-zero validated",
+          "y": "2024",
+          "src": "https://www.tissueworldmagazine.com/world-news/sbti-validates-essitys-net-zero-greenhouse-gas-emissions-targets/"
+        },
+        "netZeroYear": {
+          "v": 2050,
+          "src": "https://www.tissueworldmagazine.com/world-news/sbti-validates-essitys-net-zero-greenhouse-gas-emissions-targets/"
+        },
+        "scope12Target": {
+          "v": 35,
+          "d": "−35% by 2030 (2016) · −27% achieved",
+          "y": "2025",
+          "src": "https://www.essity.com/investors/targets-and-outcomes/"
+        },
+        "scope3Target": {
+          "v": 35,
+          "d": "−35% by 2030 (2016) · −15% achieved",
+          "y": "2025",
+          "src": "https://www.essity.com/investors/targets-and-outcomes/"
+        },
+        "cdpClimate": {
+          "v": "A-",
+          "y": "2025",
+          "src": "https://www.essity.com/media/press-release/essity-recognized-on-cdp-s-prestigious-lists-for-forest-and-climate/2ef6d2d54f0ef1bb/"
+        },
+        "cdpForests": {
+          "v": "A",
+          "y": "2025",
+          "src": "https://www.essity.com/media/press-release/essity-recognized-on-cdp-s-prestigious-lists-for-forest-and-climate/2ef6d2d54f0ef1bb/"
+        },
+        "ecovadis": {
+          "v": "Platinum",
+          "y": "2025",
+          "src": "https://www.essity.com/media/press-release/essity-awarded-ecovadis-platinum-medal-for-outstanding-sustainability-leadership-in-2025/2e8529d7a5132ce7/"
+        },
+        "certifiedFibre": {
+          "v": 99.7,
+          "d": "99.7% of fresh fibre",
+          "y": "2025",
+          "src": "https://www.essity.com/investors/targets-and-outcomes/"
+        },
+        "waterTarget": {
+          "v": "−25% freshwater intake at 8 water-stressed tissue sites by 2032 (2022) · −12% achieved",
+          "y": "2025",
+          "src": "https://www.essity.com/investors/targets-and-outcomes/"
+        },
+        "womenManagement": {
+          "v": 36,
+          "y": "2025",
+          "src": "https://www.essity.com/investors/targets-and-outcomes/"
+        },
+        "safety": {
+          "v": "Recordable incident rate −66% vs. 2019 (target −75%)",
+          "y": "2025",
+          "src": "https://www.essity.com/investors/targets-and-outcomes/"
+        }
+      },
+      "targets": [
+        "Net zero by 2050 (SBTi-validated); −35% Scope 1+2 and Scope 3 by 2030 vs. 2016",
+        "81% of packaging renewable and/or recycled (target 85% by 2025); 100% recyclable packaging goal",
+        "100% of production waste recovered by 2030 (72% in 2025)"
+      ]
+    },
+    {
+      "id": "sofidel",
+      "name": "Sofidel",
+      "country": "Italy",
+      "groups": [
+        "europe",
+        "global"
+      ],
+      "aliases": [
+        "Sofidel"
+      ],
+      "report": {
+        "label": "Goals & results",
+        "url": "https://www.sofidel.com/en/?p=56573"
+      },
+      "kpis": {
+        "sbti": {
+          "v": "Validated",
+          "d": "Validated · net zero committed",
+          "src": "https://www.sofidel.com/en/?p=56573"
+        },
+        "netZeroYear": {
+          "v": 2050,
+          "src": "https://www.sofidel.com/en/press-releases/sofidels-environmental-commitment-recognized-in-the-2025-cdp-climate-and-forests-rating/"
+        },
+        "cdpClimate": {
+          "v": "A-",
+          "y": "2025",
+          "src": "https://www.sofidel.com/en/press-releases/sofidels-environmental-commitment-recognized-in-the-2025-cdp-climate-and-forests-rating/"
+        },
+        "cdpForests": {
+          "v": "A-",
+          "y": "2025",
+          "src": "https://www.sofidel.com/en/press-releases/sofidels-environmental-commitment-recognized-in-the-2025-cdp-climate-and-forests-rating/"
+        },
+        "ecovadis": {
+          "v": "Platinum",
+          "y": "2025",
+          "src": "https://www.sofidel.com/en/press-releases/sofidel-awarded-the-ecovadis-esg-rating-platinum-medal-for-its-commitment-to-sustainability/"
+        },
+        "certifiedFibre": {
+          "v": 100,
+          "d": "100% of pulp",
+          "src": "https://www.sofidel.com/en/?p=56573"
+        },
+        "plasticTarget": {
+          "v": 50,
+          "d": "−50% conventional plastic by 2030 (2013) · −45% achieved",
+          "y": "2024",
+          "src": "https://www.sofidel.com/en/?p=56573"
+        },
+        "waterTarget": {
+          "v": "9.2 l water per kg paper (sector-leading level)",
+          "y": "2023",
+          "src": "https://www.sofidel.com/en/?p=56573"
+        }
+      },
+      "targets": [
+        "Net zero by 2050 committed with SBTi; 2030 targets SBTi-endorsed",
+        "Direct CO₂ intensity −19.5% vs. 2018 (2024)",
+        "−50% conventional plastic by 2030 vs. 2013"
+      ]
+    },
+    {
+      "id": "metsa-tissue",
+      "name": "Metsä Tissue",
+      "country": "Finland",
+      "groups": [
+        "europe"
+      ],
+      "aliases": [
+        "Metsä Tissue",
+        "Metsa Tissue",
+        "Metsä Group"
+      ],
+      "report": {
+        "label": "Sustainability",
+        "url": "https://www.metsagroup.com/metsatissue/sustainability/principles/approach/"
+      },
+      "kpis": {
+        "ecovadis": {
+          "v": "Platinum",
+          "d": "Platinum · 91/100",
+          "y": "2026",
+          "src": "https://www.metsagroup.com/metsatissue/news-and-publications/news/2026/metsa-tissue-scores-91100-in-ecovadis-its-highest-rating-in-seven-consecutive-platinum-years/"
+        }
+      },
+      "targets": [
+        "Fossil-free mills by end of 2030 (Metsä Group target)",
+        "EcoVadis Platinum for the seventh consecutive year (2026)"
+      ]
+    },
+    {
+      "id": "lucart",
+      "name": "Lucart",
+      "country": "Italy",
+      "groups": [
+        "europe"
+      ],
+      "aliases": [
+        "Lucart"
+      ],
+      "report": {
+        "label": "Sustainability report",
+        "url": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+      },
+      "kpis": {
+        "sbti": {
+          "v": "Committed",
+          "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+        },
+        "ecovadis": {
+          "v": "Platinum",
+          "src": "https://www.paper-world.com/en/newsdetail/lucart-has-received-platinum-rating-from-ecovadis"
+        },
+        "recycledFibre": {
+          "v": 54,
+          "y": "2024",
+          "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+        },
+        "recyclablePackaging": {
+          "v": 100,
+          "d": "100% recyclable or compostable",
+          "y": "2024",
+          "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+        },
+        "waterTarget": {
+          "v": "9.43 m³/t (−26.8% vs. 2013); 2025 target 9.40 m³/t",
+          "y": "2024",
+          "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+        }
+      },
+      "targets": [
+        "60% recycled fibre by 2030 (54% in 2024)",
+        "Scope 1–3 targets submitted to SBTi (end of 2025)",
+        "387.5 kg CO₂e per tonne of paper (2024, −3.4% vs. 2023)"
+      ]
+    },
+    {
+      "id": "kimberly-clark",
+      "name": "Kimberly-Clark",
+      "country": "USA",
+      "groups": [
+        "global"
+      ],
+      "aliases": [
+        "Kimberly-Clark",
+        "Kimberly Clark"
+      ],
+      "report": {
+        "label": "2025 report",
+        "url": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+      },
+      "kpis": {
+        "sbti": {
+          "v": "Validated",
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "scope12Target": {
+          "v": 50,
+          "d": "−50% by 2030 (2015) · −46% achieved",
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "scope3Target": {
+          "v": 20,
+          "d": "−20% by 2030 (2015) · −16% achieved",
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "renewableElectricity": {
+          "v": 46,
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "certifiedFibre": {
+          "v": 95,
+          "d": "95% recycled or certified (tissue)",
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "plasticTarget": {
+          "v": 50,
+          "d": "−50% plastic footprint by 2030 (2019) · −16% achieved",
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "waterTarget": {
+          "v": "−50% water use at water-stressed sites by 2030 (2015) · −45% achieved",
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "safety": {
+          "v": "TRIR 0.65 (employees)",
+          "y": "2025",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        }
+      },
+      "targets": [
+        "−50% Scope 1+2 by 2030 vs. 2015 (−46% in 2025)",
+        "Natural-forest-free fibre beyond 2030; −50% natural forest fibre achieved",
+        "18% recycled plastic in packaging (target 20%)"
+      ]
+    },
+    {
+      "id": "pg",
+      "name": "Procter & Gamble",
+      "country": "USA",
+      "groups": [
+        "global"
+      ],
+      "aliases": [
+        "Procter & Gamble",
+        "P&G",
+        "Charmin"
+      ],
+      "report": {
+        "label": "Citizenship report",
+        "url": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+      },
+      "kpis": {
+        "sbti": {
+          "v": "Validated",
+          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+        },
+        "netZeroYear": {
+          "v": 2040,
+          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+        },
+        "scope12Target": {
+          "v": 65,
+          "d": "−65% by 2030 (2010) · −58% achieved",
+          "y": "2023",
+          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+        },
+        "renewableElectricity": {
+          "v": 99,
+          "d": ">99%",
+          "y": "2023",
+          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+        },
+        "recyclablePackaging": {
+          "v": 78,
+          "d": "78% recyclable or reusable",
+          "y": "2023",
+          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+        },
+        "waterTarget": {
+          "v": "+35% water efficiency per unit by 2030 (2010) · +24% achieved",
+          "y": "2023",
+          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+        }
+      },
+      "targets": [
+        "Net zero across operations and supply chain by 2040",
+        "100% renewable electricity by 2030 (>99% reached)",
+        "100% recyclable or reusable consumer packaging by 2030"
+      ]
+    },
+    {
+      "id": "georgia-pacific",
+      "name": "Georgia-Pacific",
+      "country": "USA",
+      "groups": [
+        "global"
+      ],
+      "aliases": [
+        "Georgia-Pacific",
+        "Georgia Pacific"
+      ],
+      "report": {
+        "label": "Forest stewardship",
+        "url": "https://www.gp.com/governance/"
+      },
+      "kpis": {},
+      "targets": [
+        "Privately held (Koch); publishes few comparable sustainability KPIs"
+      ]
+    },
+    {
+      "id": "app",
+      "name": "APP / Sinar Mas",
+      "country": "Indonesia",
+      "groups": [
+        "global"
+      ],
+      "aliases": [
+        "Asia Pulp & Paper",
+        "Asia Pulp and Paper",
+        "APP Sinar Mas",
+        "Sinar Mas"
+      ],
+      "report": {
+        "label": "SBTi approval",
+        "url": "https://www.eco-business.com/zh-hans/news/asia-pulp-paper-net-zero-goals-approved-by-sbti-as-indonesian-corporates-affirm-climate-pledges/"
+      },
+      "kpis": {
+        "sbti": {
+          "v": "Validated",
+          "y": "2025",
+          "src": "https://www.eco-business.com/zh-hans/news/asia-pulp-paper-net-zero-goals-approved-by-sbti-as-indonesian-corporates-affirm-climate-pledges/"
+        },
+        "netZeroYear": {
+          "v": 2060,
+          "src": "https://www.eco-business.com/zh-hans/news/asia-pulp-paper-net-zero-goals-approved-by-sbti-as-indonesian-corporates-affirm-climate-pledges/"
+        },
+        "scope12Target": {
+          "v": 54.6,
+          "d": "−54.6% by 2033 (2023)",
+          "src": "https://www.eco-business.com/zh-hans/news/asia-pulp-paper-net-zero-goals-approved-by-sbti-as-indonesian-corporates-affirm-climate-pledges/"
+        },
+        "scope3Target": {
+          "v": 32.5,
+          "d": "−32.5% by 2033 (2023, excl. FLAG)",
+          "src": "https://www.eco-business.com/zh-hans/news/asia-pulp-paper-net-zero-goals-approved-by-sbti-as-indonesian-corporates-affirm-climate-pledges/"
+        },
+        "cdpClimate": {
+          "v": "B",
+          "y": "2022",
+          "src": "https://app.co.id/-/asia-pulp-paper-app-sinar-mas-maintains-climate-change-b-score-from-cdp"
+        },
+        "cdpForests": {
+          "v": "B",
+          "y": "2022",
+          "src": "https://app.co.id/-/asia-pulp-paper-app-sinar-mas-maintains-climate-change-b-score-from-cdp"
+        },
+        "cdpWater": {
+          "v": "B-",
+          "y": "2022",
+          "src": "https://app.co.id/-/asia-pulp-paper-app-sinar-mas-maintains-climate-change-b-score-from-cdp"
+        }
+      },
+      "targets": [
+        "SBTi-approved near-term targets (Jan 2025); net zero 2060, aiming closer to 2050",
+        "EcoVadis score 74/100, 97th percentile in pulp & paper (2023)"
+      ]
+    },
+    {
+      "id": "hengan",
+      "name": "Hengan",
+      "country": "China",
+      "groups": [
+        "global"
+      ],
+      "aliases": [
+        "Hengan"
+      ],
+      "report": {
+        "label": "ESG ratings 2025",
+        "url": "https://vir.com.vn/hengan-msci-esg-a-rating-2025-hygiene-giant-goes-greener-136725.html"
+      },
+      "kpis": {
+        "msci": {
+          "v": "A",
+          "y": "2025",
+          "src": "https://vir.com.vn/hengan-msci-esg-a-rating-2025-hygiene-giant-goes-greener-136725.html"
+        }
+      },
+      "targets": [
+        "MSCI ESG upgraded from BBB to A (2025)",
+        "S&P Global CSA score 62 (2025), up from 56"
+      ]
+    },
+    {
+      "id": "softys",
+      "name": "CMPC Softys",
+      "country": "Chile",
+      "groups": [
+        "global"
+      ],
+      "aliases": [
+        "Softys",
+        "CMPC"
+      ],
+      "report": {
+        "label": "2025 report coverage",
+        "url": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
+      },
+      "kpis": {
+        "scope12Target": {
+          "v": 50,
+          "d": "−50% by 2030",
+          "src": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
+        },
+        "waterTarget": {
+          "v": "−50% water use vs. 2018 achieved",
+          "y": "2025",
+          "src": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
+        },
+        "womenTotal": {
+          "v": 29.1,
+          "y": "2025",
+          "src": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
+        },
+        "womenManagement": {
+          "v": 36.4,
+          "d": "36.4% (leadership roles)",
+          "y": "2025",
+          "src": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
+        }
+      },
+      "targets": [
+        "Zero waste to landfill in all regional operations",
+        "−50% water use vs. 2018 reached in 2025"
+      ]
+    },
+    {
+      "id": "kruger",
+      "name": "Kruger Products",
+      "country": "Canada",
+      "groups": [
+        "global"
+      ],
+      "aliases": [
+        "Kruger"
+      ],
+      "report": {
+        "label": "2025 report",
+        "url": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+      },
+      "kpis": {
+        "scope12Target": {
+          "v": 35,
+          "d": "−35% intensity by 2030 (2015) · −31% achieved",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "cdpForests": {
+          "v": "B",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "cdpWater": {
+          "v": "B",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "ecovadis": {
+          "v": "Gold",
+          "d": "Gold (parent Kruger Inc.)",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "certifiedFibre": {
+          "v": 100,
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "recycledFibre": {
+          "v": 16.8,
+          "d": "16.8% (FSC Recycled)",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "plasticTarget": {
+          "v": 25,
+          "d": "−25% virgin plastic packaging by 2030 (2020) · −6.2% achieved",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "waterTarget": {
+          "v": "−45% effluent intensity by 2030 (2015) · −40% achieved",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "safety": {
+          "v": "TIR 0.77 (target 0.82)",
+          "y": "2025",
+          "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        }
+      },
+      "targets": [
+        "Reimagine 2030: −35% Scope 1+2 intensity vs. 2015",
+        "Virgin plastic packaging target lowered from −50% to −25% by 2030",
+        "Women in senior leadership target 25%"
+      ]
+    }
+  ]
+}

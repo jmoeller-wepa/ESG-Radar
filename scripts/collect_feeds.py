@@ -27,6 +27,16 @@ ARCHIVE = ROOT / "data" / "archive.json"
 CONFIG = ROOT / "config" / "feeds.json"
 USER_AGENT = "Mozilla/5.0 (compatible; ESG-Radar/1.0)"
 
+# Areas for the starter entries (used once, to backfill entries created before areas existed)
+STARTER_AREAS = {
+    "reg-omnibus-csrd": ["reporting"], "reg-omnibus-csddd": ["people"], "reg-esrs-2026": ["reporting"],
+    "reg-voluntary-standard": ["reporting", "people"], "reg-esrs-xbrl": ["reporting", "data"],
+    "reg-taxonomy-simplification": ["reporting"], "reg-eudr": ["forests"], "reg-ppwr": ["circularity"],
+    "reg-ecgt": ["reporting", "circularity"], "reg-ets-review": ["climate"], "reg-ets2-delay": ["climate"],
+    "reg-cbam": ["climate"], "std-sbti-cnzs-v2": ["climate"], "std-ghgp-scope2": ["climate"],
+    "bp-stolt-nielsen-csrd": ["reporting"],
+}
+
 
 def load(path, default):
     if path.exists():
@@ -79,6 +89,25 @@ def main():
         else now - timedelta(days=config.get("lookbackDaysFirstRun", 45))
     )
 
+    area_matchers = {a: matcher(kws) for a, kws in config.get("areaKeywords", {}).items()}
+
+    def areas_for(feed, text):
+        default = feed.get("defaultArea", "reporting")
+        if feed.get("onlyDefaultArea"):
+            return [default]
+        found = [a for a, m in area_matchers.items() if m and m(text)]
+        return found[:3] or [default]
+
+    # Backfill: give older entries (from before areas existed) their areas
+    feeds_by_name = {f["name"]: f for f in config.get("feeds", [])}
+    for e in radar["entries"]:
+        if not e.get("areas") and e.get("id") in STARTER_AREAS:
+            e["areas"] = STARTER_AREAS[e["id"]]
+        elif not e.get("areas"):
+            text = " ".join(filter(None, [e.get("title"), e.get("summary")]))
+            feed = feeds_by_name.get(e.get("source")) or {"defaultArea": "data" if e.get("type") == "tool" else "reporting"}
+            e["areas"] = areas_for(feed, text)
+
     known = {e.get("url") for e in radar["entries"]} | {e.get("url") for e in archive}
     report, added = [], []
 
@@ -123,6 +152,7 @@ def main():
                 "id": "feed-" + hashlib.sha1(link.encode()).hexdigest()[:10],
                 "date": (published or now).date().isoformat(),
                 "type": feed.get("type", "tool"),
+                "areas": areas_for(feed, text),
                 "tags": tags,
                 "title": title,
                 "summary": summary,
@@ -158,6 +188,8 @@ def main():
     save(RADAR, radar)
     if archive or ARCHIVE.exists():
         save(ARCHIVE, archive)
+    # What this run added (read by scripts/post_teams.py)
+    save(ROOT / "data" / "last_run.json", {"date": today, "added": [a["id"] for a in added]})
 
     lines = [
         f"## ESG Radar feed run – {today}",

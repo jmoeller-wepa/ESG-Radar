@@ -29,12 +29,18 @@
   html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
   a { color: var(--blue-700); }
   button { font: inherit; }
-  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .wrap { max-width: 1760px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 48px); }
+  mark { background: #ffe38a; color: inherit; border-radius: 3px; padding: 0 1px; }
   .num { font-variant-numeric: tabular-nums; }
 
   /* Top bar */
   header { background: #fff; border-bottom: 1px solid var(--line); }
-  header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-top: 16px; padding-bottom: 16px; }
+  header .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; padding-top: 16px; padding-bottom: 16px; }
+  .nav { display: flex; gap: 4px; }
+  .nav a { font-size: 14px; color: var(--ink-2); text-decoration: none; padding: 6px 12px; border-radius: 8px; }
+  .nav a:hover { background: var(--blue-50); }
+  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: var(--blue-50); }
+  header .meta { margin-left: auto; }
   .brand { display: flex; align-items: center; gap: 12px; }
   .brand svg { width: 34px; height: 34px; flex: none; filter: drop-shadow(0 2px 4px rgba(11, 42, 91, .18)); }
   .brand h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
@@ -64,6 +70,7 @@
   .feat a { margin-top: auto; padding-top: 10px; font-size: 13px; font-weight: 600; text-decoration: none; }
 
   .agenda { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; }
+  .rows { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr)); column-gap: 40px; }
   .ar { display: flex; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line-2); text-decoration: none; color: inherit; }
   .ar:hover .at { color: var(--blue-700); }
   .ad { width: 44px; flex: none; display: flex; flex-direction: column; align-items: center; line-height: 1; }
@@ -107,8 +114,32 @@
   .search { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; flex: 0 1 240px; min-width: 160px; }
   .search input { border: 0; outline: none; font: inherit; font-size: 14px; width: 100%; background: transparent; color: var(--ink); }
   .search:focus-within { border-color: var(--blue-500); box-shadow: 0 0 0 3px var(--blue-100); }
-  select { font: inherit; font-size: 13.5px; height: 34px; padding: 0 8px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; color: var(--ink); }
+  .find { display: flex; gap: 8px; align-items: center; flex: 0 1 380px; min-width: 0; margin-left: auto; }
+  .find .search { flex: 1 1 auto; }
+  select { -webkit-appearance: none; appearance: none; font: inherit; font-size: 13.5px; height: 34px; padding: 0 30px 0 10px; border: 1px solid #e5e7eb; border-radius: 8px; color: var(--ink); cursor: pointer; flex: none;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a94a3' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 11px center; }
   button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
+
+  /* Area bar */
+  .areas { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: -8px; }
+  .area { display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 13px; border: 1px solid #e5e7eb; border-radius: 999px; background: #fff; font-size: 13.5px; color: #374151; cursor: pointer; }
+  .area:hover { border-color: #cfdbec; }
+  .area svg { flex: none; }
+  .area .count { font-size: 12px; color: #9aa2ae; }
+  .area[aria-pressed="true"] { background: #335777; border-color: #335777; color: #fff; }
+  .area[aria-pressed="true"] .count { color: #c5d3e0; }
+  .nb { min-width: 18px; height: 18px; border-radius: 9px; background: var(--blue-700); color: #fff; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
+  .seg button[aria-pressed="true"] .nb { background: var(--blue-700); }
+
+  /* Saved + new */
+  .saved-btn { display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; font-size: 13.5px; color: #374151; cursor: pointer; }
+  .saved-btn[aria-pressed="true"] { border-color: var(--blue-500); background: var(--blue-50); color: var(--blue-900); font-weight: 600; }
+  .new { font-size: 11px; font-weight: 600; color: #fff; background: var(--blue-700); border-radius: 4px; padding: 1px 6px; }
+  .star { width: 28px; height: 28px; margin: -6px -2px -6px auto; border: 0; background: none; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; color: #b4bac4; }
+  .star:hover { background: var(--blue-50); color: #8a94a3; }
+  .star[aria-pressed="true"] { color: #f5b400; }
+  .star svg { width: 16px; height: 16px; }
+  .ct .star + .rel { margin-left: 4px; }
 
   /* Relevance dots */
   .rel { display: inline-block; width: 20px; height: 6px; flex: none; }
@@ -149,9 +180,12 @@
 
   @media (max-width: 720px) {
     .wrap { padding: 0 16px; }
+    header .meta { margin-left: 0; width: 100%; }
     .toolbar { position: static; margin: 0; }
     .spacer { display: none; }
-    .search { flex: 1 1 100%; }
+    .find { flex: 1 1 100%; }
+    .areas { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px -8px; padding: 0 16px 4px; scrollbar-width: none; }
+    .area { flex: none; }
     .feat { flex-basis: 100%; }
   }
 </style>
@@ -204,6 +238,7 @@
       </svg>
       <h1>ESG Data &amp; Tech Radar</h1>
     </div>
+    <nav class="nav" aria-label="Pages"><a href="./" aria-current="page">Radar</a><a href="peers.html">Peers</a></nav>
     <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
@@ -220,18 +255,23 @@
     <div id="dl-body"></div>
   </section>
 
+  <nav class="areas" id="areas" aria-label="ESG area"></nav>
+
   <div class="toolbar">
     <div class="seg" id="tabs" role="group" aria-label="Category"></div>
     <div class="spacer"></div>
+    <button type="button" class="saved-btn" id="saved" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6Z"/></svg>Saved <span class="count" id="saved-n">0</span></button>
     <div class="rels" id="rels" role="group" aria-label="Filter by relevance"></div>
-    <label class="search">
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#8a94a3" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
-      <input id="q" type="search" placeholder="Search" aria-label="Search">
-    </label>
-    <select id="sort" aria-label="Sort">
-      <option value="date">Newest</option>
-      <option value="relevance">Most relevant</option>
-    </select>
+    <div class="find">
+      <label class="search">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#8a94a3" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+        <input id="q" type="search" placeholder="Search" aria-label="Search">
+      </label>
+      <select id="sort" aria-label="Sort">
+        <option value="date">Newest</option>
+        <option value="relevance">Most relevant</option>
+      </select>
+    </div>
   </div>
 
   <div class="grid" id="grid"></div>
@@ -240,23 +280,34 @@
 <footer>
   <div class="wrap">
     <span class="key"><span class="d" style="background:var(--t-regulation)"></span>Regulation</span>
-    <span class="key"><span class="d" style="background:var(--t-tool)"></span>Data &amp; AI</span>
+    <span class="key"><span class="d" style="background:var(--t-tool)"></span>Tools &amp; updates</span>
     <span class="key"><span class="d" style="background:var(--t-practice)"></span>Best practice</span>
     <span class="key" id="key-rel"></span>
-    <span>Auto = collected monthly from news feeds. Summaries are aids, not legal advice.</span>
+    <span>News is collected automatically every month. Summaries are aids, not legal advice.</span>
   </div>
 </footer>
 
 <script>
 (function () {
-  const TABS = { all: "All", regulation: "Regulation", tool: "Data & AI", practice: "Best practice", monthly: "Monthly updates" };
-  const TYPE_LABEL = { regulation: "Regulation", tool: "Data & AI", practice: "Best practice" };
+  const TABS = { all: "All", new: "New", regulation: "Regulation", tool: "Tools & updates", practice: "Best practice", monthly: "Monthly updates" };
+  const TYPE_LABEL = { regulation: "Regulation", tool: "Tools & updates", practice: "Best practice" };
+  const AREAS = {
+    climate: { label: "Climate & Energy", icon: '<path d="M10 9.5V3.5a2 2 0 1 0-4 0v6a3 3 0 1 0 4 0Z"/><path d="M8 6v5"/>' },
+    forests: { label: "Forests & Biodiversity", icon: '<path d="M8 1.5L3.5 8h2L3 11.5h10L10.5 8h2Z"/><path d="M8 11.5V15"/>' },
+    circularity: { label: "Circularity & Packaging", icon: '<path d="M13 8a5 5 0 0 1-8.5 3.5"/><path d="M3 8a5 5 0 0 1 8.5-3.5"/><path d="M11.8 1.8v2.9H8.9"/><path d="M4.2 14.2v-2.9h2.9"/>' },
+    water: { label: "Water & Pollution", icon: '<path d="M8 1.8S3.5 7 3.5 10a4.5 4.5 0 0 0 9 0C12.5 7 8 1.8 8 1.8Z"/>' },
+    people: { label: "People & Supply chain", icon: '<circle cx="6" cy="5.5" r="2.3"/><path d="M1.8 13.5c.5-2.4 2.2-3.7 4.2-3.7s3.7 1.3 4.2 3.7"/><circle cx="11.3" cy="6" r="1.8"/><path d="M11 9.6c1.7.1 2.9 1.3 3.2 3.4"/>' },
+    reporting: { label: "Reporting & Governance", icon: '<path d="M4 1.8h5.5L12.5 5v9.2H4Z"/><path d="M9.5 1.8V5h3"/><path d="M6 8.5h4.5M6 11h4.5"/>' },
+    data: { label: "Data & AI", icon: '<ellipse cx="8" cy="4" rx="5" ry="2"/><path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4"/><path d="M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>' }
+  };
   const RELS = ["high", "medium", "low"];
   const REL_LABEL = { high: "High relevance", medium: "Medium relevance", low: "Low relevance" };
   const REL_RANK = { high: 0, medium: 1, low: 2 };
   const SOON_DAYS = 90;
-  const state = { tab: "all", rels: new Set(), q: "", sort: "date", dlView: "list", dlAll: false };
-  let entries = [];
+  const state = { tab: "all", area: "all", rels: new Set(), q: "", sort: "date", dlView: "list", dlAll: false, savedOnly: false };
+  let entries = [], archived = [];
+  let saved = new Set();
+  let newSince = null; // ISO date: entries added after this are "new"
 
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
@@ -286,12 +337,53 @@
     return fetch("data/radar.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
   }
 
-  load().then((data) => {
+  const sess = { get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} } };
+  const isoDay = (d) => d.toISOString().slice(0, 10);
+  const areasOf = (e) => (e.areas && e.areas.length ? e.areas : e.area ? [e.area] : []);
+  const isNew = (e) => newSince != null && (e.added || e.date || "") > newSince;
+  const isSaved = (e) => saved.has(e.id);
+  const pool = () => entries.concat(archived.filter(isSaved));
+  const inArea = (e) => state.area === "all" || areasOf(e).includes(state.area);
+
+  // "New since your last visit": the previous visit date stays fixed for the whole browser session
+  function initVisit() {
+    let base = sess.get("radar.base");
+    if (base == null) {
+      base = store.get("radar.lastVisit") || isoDay(new Date()); // first visit: nothing is "new"
+      sess.set("radar.base", base);
+      store.set("radar.lastVisit", isoDay(new Date()));
+    }
+    newSince = base;
+    try { saved = new Set(JSON.parse(store.get("radar.saved") || "[]")); } catch (e) { saved = new Set(); }
+  }
+  const persistSaved = () => store.set("radar.saved", JSON.stringify([...saved]));
+
+  // Shareable view: #area=packaging&tab=monthly
+  function readHash() {
+    const p = new URLSearchParams(location.hash.slice(1));
+    if (p.get("area") && AREAS[p.get("area")]) state.area = p.get("area");
+    if (p.get("tab") && TABS[p.get("tab")]) state.tab = p.get("tab");
+  }
+  function writeHash() {
+    const p = new URLSearchParams();
+    if (state.area !== "all") p.set("area", state.area);
+    if (state.tab !== "all") p.set("tab", state.tab);
+    const h = p.toString();
+    try { history.replaceState(null, "", h ? "#" + h : location.pathname + location.search); } catch (e) {}
+  }
+
+  const loadArchive = () => window.RADAR_DATA ? Promise.resolve([]) :
+    fetch("data/archive.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).catch(() => []);
+
+  Promise.all([load(), loadArchive()]).then(([data, arch]) => {
     entries = (data.entries || []).filter((e) => e && e.title && e.url);
+    archived = (Array.isArray(arch) ? arch : []).filter((e) => e && e.title && e.url);
     const m = data.meta || {};
     const last = [m.lastCuratedUpdate, m.lastFeedRun && m.lastFeedRun.slice(0, 10)].filter(Boolean).sort().pop();
     $("meta").textContent = (last ? "Updated " + fmt(last) + " · " : "") + entries.length + " entries";
     state.dlView = store.get("radar.dlView") === "timeline" ? "timeline" : "list";
+    initVisit();
+    readHash();
     buildControls();
     renderDeadlines();
     render();
@@ -302,17 +394,48 @@
     $("grid").replaceChildren(box);
   });
 
-  function inTab(e, tab) { return tab === "all" || (tab === "monthly" ? !!e.monthlySummary : e.type === tab); }
+  function inTab(e, tab) {
+    if (tab === "all") return true;
+    if (tab === "new") return isNew(e);
+    if (tab === "monthly") return !!e.monthlySummary;
+    return e.type === tab;
+  }
+
+  function areaIcon(key, size) {
+    const s = svgEl("svg", { width: size || 15, height: size || 15, viewBox: "0 0 16 16", fill: "none", stroke: "currentColor", "stroke-width": "1.5", "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true" });
+    s.innerHTML = AREAS[key].icon; // static markup defined above, never data
+    return s;
+  }
 
   function buildControls() {
+    // Areas
+    const all = el("button", "area", "All areas");
+    all.type = "button"; all.dataset.area = "all";
+    all.appendChild(el("span", "count", String(entries.length)));
+    $("areas").appendChild(all);
+    Object.entries(AREAS).forEach(([key, a]) => {
+      const b = el("button", "area");
+      b.type = "button"; b.dataset.area = key;
+      b.append(areaIcon(key), document.createTextNode(a.label), el("span", "count", String(entries.filter((e) => areasOf(e).includes(key)).length)));
+      $("areas").appendChild(b);
+    });
+    $("areas").addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-area]");
+      if (!b) return;
+      state.area = b.dataset.area; state.dlAll = false;
+      sync(); renderDeadlines(); render();
+    });
+    // Tabs
     Object.entries(TABS).forEach(([key, label]) => {
       const b = el("button", null, label);
       b.type = "button";
-      b.appendChild(el("span", "count", String(entries.filter((e) => inTab(e, key)).length)));
+      b.appendChild(el("span", key === "new" ? "nb" : "count", "0"));
       b.dataset.tab = key;
       b.addEventListener("click", () => { state.tab = key; sync(); render(); });
       $("tabs").appendChild(b);
     });
+    // Saved
+    $("saved").addEventListener("click", () => { state.savedOnly = !state.savedOnly; sync(); render(); });
     RELS.forEach((r) => {
       const b = el("button", "ib");
       b.type = "button";
@@ -331,20 +454,34 @@
     $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); });
     $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
     window.addEventListener("resize", () => { if (state.dlView === "timeline") renderDeadlines(); });
+    window.addEventListener("hashchange", () => { readHash(); sync(); renderDeadlines(); render(); });
     sync();
   }
   function sync() {
     document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === state.tab)));
+    document.querySelectorAll("#areas button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.area === state.area)));
     document.querySelectorAll("#rels button").forEach((b) => b.setAttribute("aria-pressed", String(state.rels.has(b.dataset.rel))));
     document.querySelectorAll("[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === state.dlView)));
+    $("saved").setAttribute("aria-pressed", String(state.savedOnly));
+    $("saved-n").textContent = String(pool().filter(isSaved).length);
+    // Tab counts follow the selected area
+    const base = pool().filter(inArea);
+    document.querySelectorAll("#tabs button").forEach((b) => {
+      const n = base.filter((e) => inTab(e, b.dataset.tab)).length;
+      const c = b.querySelector(".count, .nb");
+      c.textContent = String(n);
+      if (b.dataset.tab === "new") c.style.display = n ? "" : "none";
+    });
+    $("dl-title").textContent = "Upcoming deadlines" + (state.area !== "all" ? " · " + AREAS[state.area].label : "");
+    writeHash();
   }
 
   function upcoming() {
-    return entries.filter((e) => e.nextDate && daysFrom(e.nextDate) >= 0).sort((a, b) => a.nextDate.localeCompare(b.nextDate));
+    return entries.filter((e) => e.nextDate && daysFrom(e.nextDate) >= 0 && inArea(e)).sort((a, b) => a.nextDate.localeCompare(b.nextDate));
   }
 
   function jumpTo(id) {
-    state.tab = "all"; state.rels.clear(); state.q = ""; $("q").value = ""; sync(); render();
+    state.tab = "all"; state.rels.clear(); state.q = ""; state.savedOnly = false; $("q").value = ""; sync(); render();
     const c = document.getElementById(id);
     if (!c) return;
     c.classList.add("open", "flash");
@@ -361,7 +498,7 @@
   function renderDeadlines() {
     const list = upcoming();
     const body = $("dl-body");
-    if (!list.length) { body.replaceChildren(el("p", "s", "No upcoming deadlines recorded.")); return; }
+    if (!list.length) { body.replaceChildren(el("p", "s", state.area === "all" ? "No upcoming deadlines recorded." : "No upcoming deadlines in this area.")); return; }
     body.replaceChildren(state.dlView === "timeline" ? timeline(list) : listView(list));
   }
 
@@ -383,6 +520,9 @@
     ag.appendChild(el("p", "cap", "Then"));
     const rest = list.slice(1);
     const shown = state.dlAll ? rest : rest.slice(0, 4);
+    const rows = el("div", "rows");
+    ag.appendChild(rows);
+    if (!rest.length) rows.appendChild(el("p", "ac", "No further deadlines" + (state.area !== "all" ? " in this area." : ".")));
     shown.forEach((e) => {
       const d = daysFrom(e.nextDate), dt = parse(e.nextDate);
       const row = jumpLink(el("a", "ar"), e);
@@ -392,7 +532,7 @@
       const at = el("div", "at", e.nextDateLabel || e.title);
       at.appendChild(el("small", null, fmt(e.nextDate) + " · " + subLabel(e)));
       row.append(ad, at, el("div", "ac num" + (d <= SOON_DAYS ? " soon" : ""), countdown(d)));
-      ag.appendChild(row);
+      rows.appendChild(row);
     });
     if (rest.length > 4) {
       const b = el("button", "more-btn", state.dlAll ? "Show fewer" : "Show all " + list.length + " deadlines");
@@ -492,13 +632,29 @@
   }
 
   function filtered() {
-    let list = entries.filter((e) => inTab(e, state.tab));
+    let list = pool().filter((e) => inArea(e) && inTab(e, state.tab));
+    if (state.savedOnly) list = list.filter(isSaved);
     if (state.rels.size) list = list.filter((e) => state.rels.has(relOf(e)));
     if (state.q) list = list.filter((e) => [e.title, e.summary, e.whyItMatters, e.source, (e.tags || []).join(" ")].join(" ").toLowerCase().includes(state.q));
     const key = (e) => (e.dateIsAdded ? "" : e.date || ""); // undated references go last
     const byDate = (a, b) => key(b).localeCompare(key(a));
     list.sort(state.sort === "relevance" ? (a, b) => REL_RANK[relOf(a)] - REL_RANK[relOf(b)] || byDate(a, b) : byDate);
     return list;
+  }
+
+  // Append text to node, wrapping search matches in <mark> (safe: text nodes only)
+  function hl(node, text) {
+    text = text || "";
+    if (!state.q) { node.appendChild(document.createTextNode(text)); return node; }
+    const low = text.toLowerCase();
+    let i = 0, j;
+    while ((j = low.indexOf(state.q, i)) !== -1) {
+      if (j > i) node.appendChild(document.createTextNode(text.slice(i, j)));
+      node.appendChild(el("mark", null, text.slice(j, j + state.q.length)));
+      i = j + state.q.length;
+    }
+    if (i < text.length) node.appendChild(document.createTextNode(text.slice(i)));
+    return node;
   }
 
   function card(e) {
@@ -509,19 +665,41 @@
     const top = el("div", "ct");
     top.appendChild(el("span", "ty", TYPE_LABEL[e.type] || e.type));
     top.appendChild(el("span", "num", e.dateIsAdded ? fmtMonth(e.added || e.date) : fmt(e.date)));
+    if (isNew(e)) top.appendChild(el("span", "new", "New"));
     if (e.monthlySummary) top.appendChild(el("span", "chip", "Monthly"));
-    else if (e.origin === "feed") top.appendChild(el("span", "auto", "Auto"));
+    const star = el("button", "star");
+    star.type = "button";
+    star.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>';
+    const setStar = () => {
+      const on = isSaved(e);
+      star.setAttribute("aria-pressed", String(on));
+      star.setAttribute("aria-label", on ? "Remove from saved" : "Save");
+      star.title = on ? "Saved – click to remove" : "Save for later";
+      star.querySelector("path").setAttribute("fill", on ? "currentColor" : "none");
+    };
+    setStar();
+    star.addEventListener("click", () => {
+      isSaved(e) ? saved.delete(e.id) : saved.add(e.id);
+      persistSaved(); setStar();
+      $("saved-n").textContent = String(pool().filter(isSaved).length);
+      if (state.savedOnly) render();
+    });
+    top.appendChild(star);
     top.appendChild(relIcon(relOf(e)));
     c.appendChild(top);
 
-    c.appendChild(el("h3", null, e.title));
-    if (e.summary) c.appendChild(el("p", null, e.summary));
+    c.appendChild(hl(el("h3"), e.title));
+    if (e.summary) c.appendChild(hl(el("p"), e.summary));
     if (e.whyItMatters) {
       const w = el("div", "why");
       w.appendChild(el("b", null, "Why it matters: "));
-      w.appendChild(document.createTextNode(e.whyItMatters));
+      hl(w, e.whyItMatters);
       c.appendChild(w);
     }
+    // While searching, open cards whose match is in the hidden part
+    const hiddenHit = state.q && !e.title.toLowerCase().includes(state.q) &&
+      ((e.whyItMatters || "").toLowerCase().includes(state.q) || ((e.summary || "").length > 160 && (e.summary || "").toLowerCase().includes(state.q)));
+    if (hiddenHit) c.classList.add("open");
 
     const f = el("div", "cf");
     if (e.whyItMatters || (e.summary && e.summary.length > 160)) {
@@ -544,7 +722,10 @@
   function render() {
     const list = filtered();
     $("grid").replaceChildren(...(list.length ? list.map(card)
-      : [el("div", "empty", state.tab === "monthly" ? "No monthly feature summaries yet – they arrive with the next feed run." : "No entries match these filters.")]));
+      : [el("div", "empty", state.savedOnly && !pool().some(isSaved) ? "Nothing saved yet – click the star on a card to keep it here."
+        : state.tab === "new" ? "Nothing new since your last visit."
+        : state.tab === "monthly" ? "No monthly feature summaries yet – they arrive with the next feed run."
+        : "No entries match these filters.")]));
   }
 })();
 </script>

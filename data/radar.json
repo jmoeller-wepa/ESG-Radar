@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-02T11:11:45"
+    "lastFeedRun": null
   },
   "entries": [
     {
@@ -23,7 +23,10 @@
       "source": "Latham & Watkins",
       "url": "https://www.lw.com/en/insights/EU-Sustainability-Omnibus-Published-in-the-Official-Journal",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "reporting"
+      ]
     },
     {
       "id": "reg-omnibus-csddd",
@@ -43,7 +46,10 @@
       "source": "Latham & Watkins",
       "url": "https://www.lw.com/en/insights/EU-Sustainability-Omnibus-Published-in-the-Official-Journal",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "people"
+      ]
     },
     {
       "id": "reg-esrs-2026",
@@ -63,7 +69,10 @@
       "source": "PwC Germany",
       "url": "https://blogs.pwc.de/de/accounting-and-reporting/article/256932/esrs-2026-und-voluntary-standard-im-eu-amtsblatt-xbrl-taxonomie-in-der-konsultation/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "reporting"
+      ]
     },
     {
       "id": "reg-voluntary-standard",
@@ -83,7 +92,11 @@
       "source": "PwC Germany",
       "url": "https://blogs.pwc.de/de/accounting-and-reporting/article/256932/esrs-2026-und-voluntary-standard-im-eu-amtsblatt-xbrl-taxonomie-in-der-konsultation/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "reporting",
+        "people"
+      ]
     },
     {
       "id": "reg-esrs-xbrl",
@@ -104,7 +117,11 @@
       "source": "PwC Germany",
       "url": "https://blogs.pwc.de/de/accounting-and-reporting/article/256932/esrs-2026-und-voluntary-standard-im-eu-amtsblatt-xbrl-taxonomie-in-der-konsultation/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "reporting",
+        "data"
+      ]
     },
     {
       "id": "reg-taxonomy-simplification",
@@ -123,7 +140,10 @@
       "source": "Herbert Smith Freehills Kramer",
       "url": "https://www.hsfkramer.com/notes/esg/2026-posts/omnibus-update-eu-taxonomy-delegated-act-enters-into-force",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "reporting"
+      ]
     },
     {
       "id": "reg-eudr",
@@ -144,7 +164,10 @@
       "source": "Hogan Lovells",
       "url": "https://www.hlc.com/en/publications/eu-deforestation-regulation-commission-publishes-simplification-package-ahead-of-december-2026",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "forests"
+      ]
     },
     {
       "id": "reg-ppwr",
@@ -165,7 +188,10 @@
       "source": "Latham & Watkins (Global ELR)",
       "url": "https://www.globalelr.com/2026/08/eu-packaging-and-packaging-waste-regulation-begins-application/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "circularity"
+      ]
     },
     {
       "id": "reg-ecgt",
@@ -185,7 +211,11 @@
       "source": "Latham & Watkins",
       "url": "https://www.lw.com/en/insights/eu-empowering-consumers-directive-new-rules-on-green-claims-apply-from-27-september-2026",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "reporting",
+        "circularity"
+      ]
     },
     {
       "id": "reg-ets-review",
@@ -205,7 +235,10 @@
       "source": "Herbert Smith Freehills Kramer",
       "url": "https://www.hsfkramer.com/insights/2026-08/eu-ets-review-key-proposed-changes-to-the-eus-carbon-market",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "climate"
+      ]
     },
     {
       "id": "reg-ets2-delay",
@@ -226,7 +259,10 @@
       "source": "Euronews",
       "url": "https://www.euronews.com/2025/12/10/carbon-tax-on-buildings-and-transport-delayed-to-2028-under-eu-climate-deal",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "climate"
+      ]
     },
     {
       "id": "reg-cbam",
@@ -245,7 +281,10 @@
       "source": "Reed Smith",
       "url": "https://www.reedsmith.com/our-insights/blogs/viewpoints/102lr9t/what-you-need-to-know-as-cbam-simplification-comes-into-effect/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "climate"
+      ]
     },
     {
       "id": "std-sbti-cnzs-v2",
@@ -266,7 +305,10 @@
       "source": "Rödl & Partner",
       "url": "https://www.roedl.com/en/insights/science-based-targets-the-new-corporate-net-zero-standard-version-2-0-is-here-our-action-recommendations/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "climate"
+      ]
     },
     {
       "id": "std-ghgp-scope2",
@@ -287,7 +329,10 @@
       "source": "Normative",
       "url": "https://normative.io/insight/what-the-ghg-protocol-scope-2-review-means-for-corporate-renewable-energy-strategy/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "climate"
+      ]
     },
     {
       "id": "tool-fabric-data-agents-ga",
@@ -308,7 +353,10 @@
       "source": "Kanerika (verify on Microsoft Learn)",
       "url": "https://kanerika.com/blogs/fabcon-2026-microsoft-fabric-updates/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "tool-fabric-iq",
@@ -329,7 +377,10 @@
       "source": "Kanerika (verify on Microsoft Learn)",
       "url": "https://kanerika.com/blogs/fabcon-europe-2026-announcements/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "tool-fabric-apps",
@@ -349,7 +400,10 @@
       "source": "element61",
       "url": "https://element61.be/en/resource/fabric-just-became-application-platform-what-fabric-apps-mean-you",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "tool-pbi-agentic-apps",
@@ -369,7 +423,10 @@
       "source": "Kanerika (verify on Microsoft Learn)",
       "url": "https://kanerika.com/blogs/fabcon-europe-2026-announcements/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "tool-foundry-iq",
@@ -390,7 +447,10 @@
       "source": "Microsoft Foundry Blog",
       "url": "https://devblogs.microsoft.com/foundry/agent-service-build2026/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "tool-foundry-routines",
@@ -411,7 +471,10 @@
       "source": "Microsoft Foundry Blog",
       "url": "https://devblogs.microsoft.com/foundry/agent-service-build2026/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "tool-msm-2026w1",
@@ -431,7 +494,10 @@
       "source": "Microsoft Learn",
       "url": "https://learn.microsoft.com/dynamics365/release-plan/2026wave1/enterprise-resource-planning/sustainability-manager/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "bp-data-agent-semantic-model",
@@ -452,7 +518,10 @@
       "source": "Microsoft Learn",
       "url": "https://learn.microsoft.com/fabric/data-science/data-agent-semantic-model",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "bp-prep-for-ai-vs-instructions",
@@ -473,7 +542,10 @@
       "source": "SQLServerCentral",
       "url": "https://www.sqlservercentral.com/blogs/prep-data-for-ai-vs-fabric-data-agent-instructions-what-goes-where",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "bp-ai-instructions-tabular-editor",
@@ -494,7 +566,10 @@
       "source": "Tabular Editor",
       "url": "https://tabulareditor.com/blog/how-to-write-good-ai-instructions-for-a-semantic-model",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "bp-data-agent-deployment",
@@ -515,7 +590,10 @@
       "source": "Lantern Studios",
       "url": "https://lanternstudios.com/insights/blog/5-best-practices-for-deploying-microsoft-fabric-data-agents/",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "bp-data-agent-foundry",
@@ -536,7 +614,10 @@
       "source": "Microsoft Learn",
       "url": "https://learn.microsoft.com/fabric/data-science/data-agent-foundry",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     },
     {
       "id": "bp-stolt-nielsen-csrd",
@@ -557,7 +638,10 @@
       "source": "KPMG",
       "url": "https://kpmg.com/xx/en/client-stories/stolt-nielsen-turns-csrd-compliance-into-sustainability-insights.html",
       "origin": "curated",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "reporting"
+      ]
     },
     {
       "id": "bp-esg-light-data-model",
@@ -578,582 +662,10 @@
       "source": "Microsoft",
       "url": "https://info.microsoft.com/CE-SUSTN-VDEO-FY25-02Feb-06-On-Demand-ESG-light-data-model-in-MS-Fabric-SRGCM13752_LP01-Registration---Form-in-Body.html",
       "origin": "curated",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-55dcf16978",
-      "date": "2026-10-15",
-      "type": "tool",
-      "tags": [
-        "Monthly update",
-        "AI",
-        "Copilot",
-        "Fabric"
-      ],
-      "title": "Power BI October 2026 Feature Summary",
-      "summary": "Last month, we shared a packed September update alongside the European Microsoft Fabric + SQL Community Conference. Even so, the Power BI team has continued delivering new capabilities, and we didn't want to wait another month to share them. This update includes enhancements across Copilot and AI, reporting, and semantic models, helping users create richer reports, streamline workflows, and get more value from…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "high",
-      "monthlySummary": true,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Power BI Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-October-2026-Feature-Summary/ba-p/5374650",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-c3d989d7d5",
-      "date": "2026-10-15",
-      "type": "tool",
-      "tags": [
-        "Fabric",
-        "Paginated"
-      ],
-      "title": "Databricks ADBC connector for Power BI and Microsoft Fabric (Generally Available)",
-      "summary": "This release is part of the broader ODBC-to-ADBC transition for Power Query connectors described in the Transition from ODBC to ADBC drivers in Power BI and Microsoft Fabric documentation. What’s new Existing connections in your semantic models, dataflows, and paginated reports continue to work unchanged — the migration path is currently opt-in per connection, per workspace, or per tenant. Highlights: Improved…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "medium",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Power BI Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Databricks-ADBC-connector-for-Power-BI-and-Microsoft-Fabric/ba-p/5369591",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-d8725372cb",
-      "date": "2026-10-26",
-      "type": "tool",
-      "tags": [
-        "AI",
-        "Copilot",
-        "Fabric"
-      ],
-      "title": "Microsoft & Snowflake’s Commitment to Apache Ossie",
-      "summary": "If you haven't already, check out FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and Agents for a complete look at all of our FabCon Europe announcements across Fabric and Microsoft Databases. Advancing an open, interoperable semantic foundation for AI-powered analytics Today, Microsoft is pleased to affirm our commitment to Apache Ossie (incubating) , a community-led effort…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "high",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Power BI Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Microsoft-Snowflake-s-Commitment-to-Apache-Ossie/ba-p/5369534",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-52701d7d8b",
-      "date": "2026-09-29",
-      "type": "tool",
-      "tags": [
-        "Copilot",
-        "Fabric"
-      ],
-      "title": "Power BI’s next chapter: The evolution of business intelligence",
-      "summary": "If you haven't already, check out FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and Agents for a complete look at all of our FabCon Europe announcements across Fabric and Microsoft Databases. More than a decade ago, I watched Power BI change the way users work, analyze and take action on their data. Since then, I have had the privilege of seeing it grow alongside our…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "high",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Power BI Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-s-next-chapter-The-evolution-of-business-intelligence/ba-p/5369131",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-8ee1a94ef0",
-      "date": "2026-10-15",
-      "type": "tool",
-      "tags": [
-        "Monthly update",
-        "AI",
-        "Copilot",
-        "Fabric"
-      ],
-      "title": "Power BI September 2026 Feature Summary",
-      "summary": "As the Power BI, Microsoft Fabric, data, and analytics community gathers in Barcelona for the European Microsoft Fabric + SQL Community Conference, this month is packed with news. From new Copilot and AI experiences to reporting, modeling, data connectivity, developer enhancements, and mobile updates, we're sharing the latest innovations designed to help you build, analyze, and act on your data more effectively.…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "high",
-      "monthlySummary": true,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Power BI Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-September-2026-Feature-Summary/ba-p/5325831",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-604150cc8b",
-      "date": "2026-09-17",
-      "type": "tool",
-      "tags": [
-        "Semantic Model"
-      ],
-      "title": "Manage semantic model settings in context with the default settings pane (Preview)",
-      "summary": "The semantic model settings pane is becoming the default way to configure semantic models in the Power BI service. The pane opens alongside your workspace, so you can review and change settings without leaving the current page. It provides the same settings as the full semantic model settings page while keeping the surrounding context visible. The classic settings page remains available during this transition, but…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "high",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Power BI Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Manage-semantic-model-settings-in-context-with-the-default/ba-p/5366792",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-112abbbf7d",
-      "date": "2026-09-10",
-      "type": "tool",
-      "tags": [
-        "Copilot"
-      ],
-      "title": "Power BI Q&A retirement reminder: February 2027 timeline update",
-      "summary": "In December, we announced the retirement of Power BI Q&A , our legacy natural-language querying experience, with retirement planned for December 2026. To give current Q&A user's additional time to assess their dependencies and transition to newer Copilot-powered solutions, we’re extending the retirement date to February 2027. This post recaps the affected experiences and provides updates on Copilot capacity…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "high",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Power BI Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-Q-A-retirement-reminder-February-2027-timeline-update/ba-p/5365841",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-8490db033e",
-      "date": "2026-10-29",
-      "type": "tool",
-      "tags": [
-        "Onelake"
-      ],
-      "title": "Bringing Rust-native Spark compatibility to Microsoft OneLake with Sail and LakeSail",
-      "summary": "Coauthor: Shehab Amin Microsoft OneLake gives every Microsoft Fabric tenant a single, unified data lake built on open formats. One copy of data, many engines: that is the promise, and it is what makes OneLake such a strong foundation for analytics and AI alike. This post looks at how Sail , the open-source distributed compute framework, and LakeSail Cloud , the managed platform for running Sail in production,…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "medium",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Fabric Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Bringing-Rust-native-Spark-compatibility-to-Microsoft-OneLake/ba-p/5377595",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-42961f224d",
-      "date": "2026-10-29",
-      "type": "tool",
-      "tags": [
-        "Onelake"
-      ],
-      "title": "Access versioned lakeFS data from Microsoft Fabric with Microsoft OneLake shortcuts",
-      "summary": "Coauthor: Iddo Avneri (Treeverse) Use a live branch for up-to-date analytics or pin a shortcut to an immutable commit when reproducibility matters. Data teams often need two seemingly conflicting things: immediate access to the latest data and the ability to return to the exact data behind an earlier analysis, report, or experiment. Maintaining both typically means creating snapshots, copying datasets, or building…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "medium",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Fabric Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Access-versioned-lakeFS-data-from-Microsoft-Fabric-with/ba-p/5377386",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-d8ab32c2d8",
-      "date": "2026-10-28",
-      "type": "tool",
-      "tags": [
-        "Generally Available",
-        "Governance",
-        "Onelake"
-      ],
-      "title": "Govern your Microsoft Fabric data estate from one place with the OneLake catalog and Govern Skills (Generally Available)",
-      "summary": "The Govern experience in the OneLake catalog is now generally available, providing centralized governance capabilities for tenants, domains, capacities, workspaces, tags, and policies in Microsoft Fabric. Govern Skills are also now available in the Skills for Fabric collection, giving AI agents the knowledge they need to help admins and data owners audit, investigate, and remediate governance issues at scale. Both…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "medium",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Fabric Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Govern-your-Microsoft-Fabric-data-estate-from-one-place-with-the/ba-p/5377369",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-e000e5cddc",
-      "date": "2026-10-27",
-      "type": "tool",
-      "tags": [
-        "Generally Available"
-      ],
-      "title": "Build clearer, more expressive Real-Time Dashboards with new design and KPI capabilities (Generally Available)",
-      "summary": "The new, generally available authoring capabilities in Microsoft Fabric Real-Time Dashboards help authors create dashboards that are easier to scan and act on. Design Tiles add structure and context, multi-KPI groups related measures from one query, and KPI styling makes status, scale, and targets easier to interpret. Together, these capabilities give viewers a clear path from context to metrics to investigation…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "medium",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Fabric Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Build-clearer-more-expressive-Real-Time-Dashboards-with-new/ba-p/5377578",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-6b5e54eaac",
-      "date": "2026-10-22",
-      "type": "tool",
-      "tags": [
-        "Copilot"
-      ],
-      "title": "Create purpose-built custom visuals in Real-Time Dashboards with Copilot (Preview)",
-      "summary": "Real-Time Dashboards include built-in visuals for common monitoring and analysis scenarios. However, operational decisions do not always fit a standard chart. You may need to combine several signals, use a domain-specific layout, or present information differently for a particular workflow or audience. Custom visuals with Copilot, now in preview, help you create a dashboard experience around the operational…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "medium",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Fabric Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Create-purpose-built-custom-visuals-in-Real-Time-Dashboards-with/ba-p/5376359",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-322ec16268",
-      "date": "2026-10-26",
-      "type": "tool",
-      "tags": [
-        "Copilot"
-      ],
-      "title": "Connect coding agents to Fabric notebooks with FNTK (Preview)",
-      "summary": "The Fabric Notebook Toolkit (Preview) helps developers shorten the feedback loop between writing code and validating it with live notebook results. It connects coding agents to Microsoft Fabric notebooks through a command-line interface (CLI) that runs in the terminal alongside tools such as Claude Code, GitHub Copilot CLI, and Codex. An agent can inspect the current code, run one cell, review its output, make a…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "medium",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Fabric Blog",
-      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Connect-coding-agents-to-Fabric-notebooks-with-FNTK-Preview/ba-p/5375986",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-3238a6c24e",
-      "date": "2026-10-28",
-      "type": "tool",
-      "tags": [
-        "Agent Service",
-        "Copilot"
-      ],
-      "title": "Introducing the Microsoft Copilot harness in Foundry Agent Service",
-      "summary": "A model can reason about a task. Completing that task takes more: the right context, tools, execution environment, and controls, and an agent loop that brings them together. Microsoft’s unified harness strategy brings a shared execution foundation across our agent experiences while preserving customer choice. In Microsoft Foundry, that means you can choose a supported […] The post Introducing the Microsoft Copilot…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Foundry Blog",
-      "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-7172ddb1ac",
-      "date": "2026-10-19",
-      "type": "tool",
-      "tags": [
-        "GA",
-        "Toolbox"
-      ],
-      "title": "Browser automation tool in Microsoft Foundry is now GA",
-      "summary": "Build agents that automate tasks across public and private websites with managed browsers, native toolbox integration, Live View, and human control. The post Browser automation tool in Microsoft Foundry is now GA appeared first on Microsoft Foundry Blog .",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Foundry Blog",
-      "url": "https://devblogs.microsoft.com/foundry/browser-automation-tool-ga/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-6abe458e60",
-      "date": "2026-10-14",
-      "type": "tool",
-      "tags": [
-        "Teams"
-      ],
-      "title": "From extraction to action: Using grounding and confidence to build reliable document workflows",
-      "summary": "Learn how Azure Content Understanding grounding, field-level confidence, and calibration help teams prioritize human review and build reliable document workflows. The post From extraction to action: Using grounding and confidence to build reliable document workflows appeared first on Microsoft Foundry Blog .",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Foundry Blog",
-      "url": "https://devblogs.microsoft.com/foundry/content-understanding-confidence-grounding-hitl/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-c9c981db75",
-      "date": "2026-09-24",
-      "type": "tool",
-      "tags": [
-        "Agent Service"
-      ],
-      "title": "Control where your hosted agent connects with network egress in Foundry Agent Service",
-      "summary": "Define and attach an outbound policy to a hosted agent in Microsoft Foundry, observe calls in Audit, and verify allowed and denied destinations under Enforced mode. The post Control where your hosted agent connects with network egress in Foundry Agent Service appeared first on Microsoft Foundry Blog .",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Foundry Blog",
-      "url": "https://devblogs.microsoft.com/foundry/egress-controls-hosted-agent/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-6a861780c1",
-      "date": "2026-09-24",
-      "type": "tool",
-      "tags": [
-        "Generally Available",
-        "Teams"
-      ],
-      "title": "From Chatbots to Automated Agents: Routines in Microsoft Foundry Are Now Generally Available",
-      "summary": "Agents are rapidly evolving beyond chat. The first generation of agents waited for a person to send a message. Today, organizations want agents that can monitor work, respond to business events, and continue tasks over time. An agent might triage a newly opened GitHub issue, respond when a message appears in a Microsoft Teams channel, […] The post From Chatbots to Automated Agents: Routines in Microsoft Foundry Are…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "Microsoft Foundry Blog",
-      "url": "https://devblogs.microsoft.com/foundry/from-chatbots-to-automated-assistants-routines-in-microsoft-foundry-are-now-generally-available/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-03954bbd58",
-      "date": "2026-10-22",
-      "type": "practice",
-      "tags": [
-        "AI"
-      ],
-      "title": "Install DAX libraries into Power BI Desktop by asking your AI assistant",
-      "summary": "At the end of 2025, we launched DAX Lib, a public repository of DAX user-defined functions. So far, importing a DAX library has required a few manual steps, like clicking Add to Power BI on daxlib.org and then copying and…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "SQLBI",
-      "url": "https://www.sqlbi.com/blog/marco/2026/10/22/install-dax-libraries-into-power-bi-desktop-by-asking-your-ai-assistant/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-e4b469e972",
-      "date": "2026-10-06",
-      "type": "practice",
-      "tags": [
-        "AI"
-      ],
-      "title": "Understanding DAX contracts when using AI",
-      "summary": "Defining the right contract is a key activity for a DAX developer using AI. Here we introduce the concept of a contract through simple examples.",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "SQLBI",
-      "url": "https://www.sqlbi.com/tv/understanding-dax-contracts-when-using-ai/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-b3f03a1d6c",
-      "date": "2026-10-05",
-      "type": "practice",
-      "tags": [
-        "AI"
-      ],
-      "title": "Understanding DAX contracts when using AI",
-      "summary": "Defining the right contract is a key activity for a DAX developer using AI. In this article, we introduce the concept of a contract through simple examples. Contract. As a DAX developer, you will use this term frequently; indeed, when…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "SQLBI",
-      "url": "https://www.sqlbi.com/articles/understanding-dax-contracts-when-using-ai/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-de5a14652e",
-      "date": "2026-09-23",
-      "type": "practice",
-      "tags": [
-        "AI"
-      ],
-      "title": "Start using DAX with AI",
-      "summary": "The time has come: in 2026, using AI to write DAX has started to be effective. Latest news and the new courses are at https://www.sqlbi.com/ai/ We also created three new video courses that should not become obsolete in two weeks!…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "SQLBI",
-      "url": "https://www.sqlbi.com/tv/start-using-dax-with-ai/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-196c90e841",
-      "date": "2026-09-22",
-      "type": "practice",
-      "tags": [
-        "AI"
-      ],
-      "title": "The hidden complexity of a daily average in DAX",
-      "summary": "A simple daily average can hide complexities and return different values. We explore several edge-case scenarios to build the desired calculation using AI to accelerate the development.",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "SQLBI",
-      "url": "https://www.sqlbi.com/tv/the-hidden-complexity-of-a-daily-average-in-dax/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-be7478f941",
-      "date": "2026-09-22",
-      "type": "practice",
-      "tags": [
-        "AI"
-      ],
-      "title": "Where we stand on AI and DAX in 2026",
-      "summary": "The time has come: in 2026, using AI to write DAX has started to be effective. Let me recap what has changed between 2023 and 2026, and what we are doing with our three new courses to best assist you…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "SQLBI",
-      "url": "https://www.sqlbi.com/blog/marco/2026/09/22/where-we-stand-on-ai-and-dax-in-2026/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-855574f6d8",
-      "date": "2026-09-21",
-      "type": "practice",
-      "tags": [
-        "AI"
-      ],
-      "title": "The hidden complexity of a daily average in DAX",
-      "summary": "A simple daily average masks a level of complexity that may not be immediately apparent. In this article, we use AI to create a daily average, and then to analyze several edge-case scenarios to build a sound calculation. Computing an…",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "SQLBI",
-      "url": "https://www.sqlbi.com/articles/the-hidden-complexity-of-a-daily-average-in-dax/",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-dd7ab03e31",
-      "date": "2026-11-01",
-      "type": "regulation",
-      "tags": [
-        "ISSB"
-      ],
-      "title": "ESG Today: Week in Review",
-      "summary": "This week in ESG news: EU Commission launches climate resilience framework; investors urge ISSB to […]",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "ESG Today",
-      "url": "https://www.esgtoday.com/esg-today-week-in-review-281/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-281",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-76745b30c4",
-      "date": "2026-10-29",
-      "type": "regulation",
-      "tags": [
-        "SBTI"
-      ],
-      "title": "DuPont Unveils SBTi-Validated Net Zero Targets",
-      "summary": "Multinational chemicals company DuPont announced a series of new emissions reduction targets, including goals to […]",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "ESG Today",
-      "url": "https://www.esgtoday.com/dupont-unveils-sbti-validated-net-zero-targets/?utm_source=rss&utm_medium=rss&utm_campaign=dupont-unveils-sbti-validated-net-zero-targets",
-      "origin": "feed",
-      "added": "2026-11-02"
-    },
-    {
-      "id": "feed-e1efddf9c0",
-      "date": "2026-10-26",
-      "type": "regulation",
-      "tags": [
-        "ISSB"
-      ],
-      "title": "ISSB seeks feedback nature-related disclosure proposal",
-      "summary": "The standard-setting body released an exposure draft of a nonmandatory disclosure for biodiversity risks and related disclosures. Some institutions are calling for firm requirements.",
-      "whyItMatters": null,
-      "status": null,
-      "relevance": "low",
-      "monthlySummary": false,
-      "nextDate": null,
-      "nextDateLabel": null,
-      "source": "ESG Dive",
-      "url": "https://www.esgdive.com/news/issb-seeks-feedback-nature-related-disclosure-proposal/872766/",
-      "origin": "feed",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "areas": [
+        "data"
+      ]
     }
   ]
 }

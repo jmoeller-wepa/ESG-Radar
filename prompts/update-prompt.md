@@ -16,9 +16,14 @@ tissue paper manufacturer (paper mills under EU ETS, packaging, pulp & recovered
 CSRD reporting, Microsoft Fabric / Power BI data platform, Fabric data agents, Microsoft Foundry).
 
 Search the web for developments published AFTER {{LAST_UPDATE}} on:
-A) EU regulation & standards: CSRD/ESRS (incl. XBRL taxonomy, Voluntary Standard), Omnibus
-   follow-ups, EU Taxonomy, CSDDD, EUDR, PPWR, Empowering Consumers / green claims, EU ETS
-   and ETS2, CBAM, GHG Protocol (Scope 2/3 revisions), SBTi, ISSB, German transposition of CSRD.
+A) EU regulation & standards across all ESG areas:
+   - Climate & Energy: EU ETS and ETS2, CBAM, GHG Protocol (Scope 2/3 revisions), SBTi, energy efficiency
+   - Forests & Biodiversity: EUDR, TNFD, nature restoration, forest certification
+   - Circularity & Packaging: PPWR, ESPR/ecodesign, EPR, plastics, waste
+   - Water & Pollution: Industrial Emissions Directive, water reuse, PFAS/chemicals in paper and packaging
+   - People & Supply chain: CSDDD, German LkSG, forced labour regulation, health & safety
+   - Reporting & Governance: CSRD/ESRS (incl. XBRL taxonomy, Voluntary Standard), Omnibus follow-ups,
+     EU Taxonomy, ISSB, assurance, Empowering Consumers / green claims, German transposition of CSRD
 B) Best practice: published examples of companies or consultancies using data platforms or AI
    (especially Microsoft Fabric, Power BI, Copilot, data agents) for sustainability reporting
    or ESG controlling; useful guides on semantic models / data agents.
@@ -35,6 +40,7 @@ Return a JSON array in a code block (no commentary inside it) of objects in exac
   "id": "short-kebab-case-unique-id",
   "date": "YYYY-MM-DD (publication or decision date)",
   "type": "regulation" | "practice",
+  "areas": ["1–2 of: climate, forests, circularity, water, people, reporting, data"],
   "tags": ["max 3 short tags"],
   "title": "One-line headline, max 110 characters",
   "summary": "2–3 factual sentences: what happened, key numbers, dates.",
