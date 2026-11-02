@@ -47,7 +47,7 @@
 
   main.wrap { padding-top: 28px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 24px; }
   .intro h2 { margin: 0; font-size: 22px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
-  .intro p { margin: 4px 0 0; font-size: 13.5px; color: var(--ink-2); max-width: 900px; }
+  .intro p { margin: 4px 0 0; font-size: 13.5px; color: var(--ink-2); }
   .cap { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6b7280; }
 
   .controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
@@ -93,7 +93,8 @@
   .legend .v { font-size: 12px; }
   .legend .note { margin-left: auto; max-width: 620px; }
 
-  .profiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: start; }
+  .profiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: stretch; grid-auto-rows: 1fr; }
+  .pcard .news { margin-top: auto; padding-top: 4px; }
   main.wrap > * { min-width: 0; }
   .pcard { min-width: 0; overflow-wrap: anywhere; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
   .pcard.us { border-color: #cbd8e4; box-shadow: inset 3px 0 0 var(--wepa); }
@@ -102,6 +103,8 @@
   .ph span { font-size: 12px; color: var(--ink-3); text-align: right; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
   .chips .v { font-size: 12.5px; white-space: normal; background: #f5f6f8; border-radius: 6px; padding: 3px 9px; }
+  .chips .v { display: inline-block; }
+  .chips .v::before { display: inline-block; vertical-align: 1px; margin-right: 6px; }
   .chips .v i { font-style: normal; opacity: .75; margin-right: 4px; }
   .pcard ul { margin: 4px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; font-size: 13px; color: #374151; }
   .pcard ul li { padding-left: 12px; position: relative; }
@@ -154,7 +157,7 @@
 <main class="wrap">
   <div class="intro">
     <h2>Peer benchmark</h2>
-    <p>Public sustainability KPIs of tissue peers. Colours compare each value with the selected peer group. Click a value to open its source; click a column header to sort.</p>
+    <p>Colours compare each value with the selected peer group. Click a value to open its source; click a column header to sort.</p>
   </div>
 
   <div class="controls">
@@ -168,7 +171,6 @@
     <div class="tbl-wrap"><table id="tbl"></table></div>
     <div class="legend">
       <span class="v best">Best</span><span class="v good">Better than median</span><span class="v mid">Around median</span><span class="v weak">Below median</span><span class="na">– not found</span>
-      <span class="note" id="note"></span>
     </div>
   </section>
 
@@ -178,7 +180,7 @@
   </section>
 </main>
 
-<footer><div class="wrap">Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; news comes from the monthly radar feeds.</div></footer>
+<footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; news comes from the monthly radar feeds.</div></footer>
 
 <script>
 (function () {
@@ -205,7 +207,7 @@
     P = peers;
     news = (radar.entries || []).filter((e) => e && e.title && e.url);
     $("meta").textContent = "Updated " + fmtDate(P.meta.updated) + " · " + P.companies.length + " companies";
-    $("note").textContent = P.meta.note || "";
+    $("note").textContent = (P.meta.note || "") + " ";
     readHash();
     build();
     render();

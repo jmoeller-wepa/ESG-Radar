@@ -40,7 +40,8 @@
   .nav a { font-size: 14px; color: var(--ink-2); text-decoration: none; padding: 6px 12px; border-radius: 8px; }
   .nav a:hover { background: #f3f4f6; }
   .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: #eceef1; }
-  header .meta { margin-left: auto; }
+  header .meta { margin-left: 0; }
+  .hsearch { margin-left: auto; flex: 0 1 380px; min-width: 200px; }
   .brand { display: flex; align-items: center; gap: 12px; }
   .brand svg { width: 34px; height: 34px; flex: none; filter: drop-shadow(0 2px 4px rgba(0, 45, 85, .14)); }
   .brand h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
@@ -121,19 +122,23 @@
   button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
 
   /* Area bar */
-  .areas { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: -8px; }
-  .area { display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 13px; border: 1px solid #e5e7eb; border-radius: 999px; background: #fff; font-size: 13.5px; color: #374151; cursor: pointer; }
-  .area:hover { border-color: #cfdbec; }
-  .area svg { flex: none; }
-  .area .count { font-size: 12px; color: #9aa2ae; }
-  .area[aria-pressed="true"] { background: #002d55; border-color: #002d55; color: #fff; }
-  .area[aria-pressed="true"] .count { color: #b7c7d8; }
-  .tools { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: -14px 0 -8px; }
-  .tools[hidden] { display: none; }
-  .tools .lbl { font-size: 12.5px; color: var(--ink-3); margin-right: 2px; }
-  .tool { height: 30px; padding: 0 12px; border: 1px solid #e5e7eb; border-radius: 999px; background: #fff; font-size: 13px; color: #374151; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-  .tool .count { font-size: 11.5px; color: #9aa2ae; }
-  .tool[aria-pressed="true"] { background: #e8edf3; border-color: #c5d0dc; color: #002d55; font-weight: 600; }
+  /* Layout: sidebar (views + areas) | content */
+  main.layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 28px; align-items: start; }
+  .content { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+  .side { position: sticky; top: 16px; display: flex; flex-direction: column; gap: 4px; }
+  .side-toggle { display: none; }
+  .side-body { display: flex; flex-direction: column; gap: 22px; }
+  .side-group .cap { margin: 0 0 6px 10px; }
+  .sitem { width: 100%; display: flex; align-items: center; gap: 9px; padding: 7px 10px; border: 0; border-radius: 8px; background: none; font-size: 14px; color: #374151; cursor: pointer; text-align: left; }
+  .sitem:hover { background: #f0f2f5; }
+  .sitem svg { flex: none; color: #6b7280; }
+  .sitem .lbl { flex: 1; min-width: 0; }
+  .sitem .count { font-size: 12px; color: #9aa2ae; }
+  .sitem[aria-pressed="true"] { background: #e8edf3; color: #002d55; font-weight: 600; }
+  .sitem[aria-pressed="true"] svg { color: #002d55; }
+  .sitem.sub { padding: 5px 10px 5px 34px; font-size: 13.5px; }
+  .subs[hidden] { display: none; }
+  .count-txt { font-size: 13px; color: var(--ink-3); }
   .nb { min-width: 18px; height: 18px; border-radius: 9px; background: var(--blue-700); color: #fff; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
   .seg button[aria-pressed="true"] .nb { background: var(--blue-700); }
 
@@ -184,14 +189,20 @@
   .key { display: inline-flex; align-items: center; gap: 6px; }
   .key .d { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
 
+  @media (max-width: 960px) {
+    main.layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .side { position: static; }
+    .side-toggle { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; height: 40px; padding: 0 14px; border: 1px solid #e5e7eb; border-radius: 10px; background: #fff; font-size: 14px; font-weight: 600; color: #002d55; cursor: pointer; }
+    .side-toggle span { font-weight: 400; color: var(--ink-3); font-size: 13px; }
+    .side-body { display: none; margin-top: 8px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 6px; }
+    .side.open .side-body { display: flex; }
+  }
   @media (max-width: 720px) {
     .wrap { padding: 0 16px; }
     header .meta { margin-left: 0; width: 100%; }
     .toolbar { position: static; margin: 0; }
     .spacer { display: none; }
-    .find { flex: 1 1 100%; }
-    .areas { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px -8px; padding: 0 16px 4px; scrollbar-width: none; }
-    .area { flex: none; }
+    .hsearch { margin-left: 0; flex: 1 1 100%; order: 5; }
     .feat { flex-basis: 100%; }
   }
 </style>
@@ -226,43 +237,57 @@
       <h1>ESG Radar</h1>
     </div>
     <nav class="nav" aria-label="Pages"><a href="./" aria-current="page">Radar</a><a href="peers.html">Peers</a></nav>
+    <label class="search hsearch">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#8a94a3" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+      <input id="q" type="search" placeholder="Search the radar" aria-label="Search the radar">
+    </label>
     <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
 
-<main class="wrap">
-  <section class="panel dl-panel" aria-labelledby="dl-title">
-    <div class="dl-head">
-      <h2 class="cap" id="dl-title">Upcoming deadlines</h2>
-      <div class="seg small" role="group" aria-label="Deadline view">
-        <button type="button" data-view="list" aria-pressed="true">List</button>
-        <button type="button" data-view="timeline" aria-pressed="false">Timeline</button>
-      </div>
+<main class="wrap layout">
+  <aside class="side" id="side" aria-label="Views and areas">
+    <button type="button" class="side-toggle" id="side-toggle" aria-expanded="false" aria-controls="side-body">View &amp; area <span id="side-sum"></span></button>
+    <div class="side-body" id="side-body">
+      <div class="side-group" role="group" aria-labelledby="v-cap"><p class="cap" id="v-cap">View</p><div id="views"></div></div>
+      <div class="side-group" role="group" aria-labelledby="a-cap"><p class="cap" id="a-cap">Area</p><div id="areas"></div></div>
     </div>
-    <div id="dl-body"></div>
-  </section>
+  </aside>
 
-  <nav class="areas" id="areas" aria-label="ESG area"></nav>
-  <div class="tools" id="tools" role="group" aria-label="Microsoft tool" hidden></div>
+  <div class="content">
+    <section class="panel dl-panel" aria-labelledby="dl-title">
+      <div class="dl-head">
+        <h2 class="cap" id="dl-title">Upcoming deadlines</h2>
+        <div class="seg small" role="group" aria-label="Deadline view">
+          <button type="button" data-view="list" aria-pressed="true">List</button>
+          <button type="button" data-view="timeline" aria-pressed="false">Timeline</button>
+        </div>
+      </div>
+      <div id="dl-body"></div>
+    </section>
 
-  <div class="toolbar">
-    <div class="seg" id="tabs" role="group" aria-label="Category"></div>
-    <div class="spacer"></div>
-    <button type="button" class="saved-btn" id="saved" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6Z"/></svg>Saved <span class="count" id="saved-n">0</span></button>
-    <div class="rels" id="rels" role="group" aria-label="Filter by relevance"></div>
-    <div class="find">
-      <label class="search">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#8a94a3" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
-        <input id="q" type="search" placeholder="Search" aria-label="Search">
-      </label>
+    <div class="toolbar">
+      <span class="count-txt" id="count"></span>
+      <div class="spacer"></div>
+      <select id="type" aria-label="Type">
+        <option value="all">All types</option>
+        <option value="regulation">Regulation</option>
+        <option value="tool">Tools &amp; updates</option>
+        <option value="practice">Best practice</option>
+      </select>
+      <select id="rel" aria-label="Relevance">
+        <option value="all">All relevance</option>
+        <option value="high">High only</option>
+        <option value="medium">High &amp; medium</option>
+      </select>
       <select id="sort" aria-label="Sort">
         <option value="date">Newest</option>
         <option value="relevance">Most relevant</option>
       </select>
     </div>
-  </div>
 
-  <div class="grid" id="grid"></div>
+    <div class="grid" id="grid"></div>
+  </div>
 </main>
 
 <footer>
@@ -277,7 +302,13 @@
 
 <script>
 (function () {
-  const TABS = { all: "All", new: "New", regulation: "Regulation", tool: "Tools & updates", practice: "Best practice", monthly: "Monthly updates" };
+  const VIEWS = { all: "All entries", new: "New since last visit", saved: "Saved", monthly: "Monthly updates" };
+  const VIEW_ICONS = {
+    all: '<rect x="2.5" y="2.5" width="4.5" height="4.5" rx="1"/><rect x="9" y="2.5" width="4.5" height="4.5" rx="1"/><rect x="2.5" y="9" width="4.5" height="4.5" rx="1"/><rect x="9" y="9" width="4.5" height="4.5" rx="1"/>',
+    new: '<circle cx="8" cy="8" r="5.5"/><path d="M8 5v3l2 1.5"/>',
+    saved: '<path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6Z"/>',
+    monthly: '<rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/>'
+  };
   const TYPE_LABEL = { regulation: "Regulation", tool: "Tools & updates", practice: "Best practice" };
   const AREAS = {
     climate: { label: "Climate & Energy", icon: '<path d="M10 9.5V3.5a2 2 0 1 0-4 0v6a3 3 0 1 0 4 0Z"/><path d="M8 6v5"/>' },
@@ -292,7 +323,7 @@
   const REL_LABEL = { high: "High relevance", medium: "Medium relevance", low: "Low relevance" };
   const REL_RANK = { high: 0, medium: 1, low: 2 };
   const SOON_DAYS = 90;
-  const state = { tab: "all", area: "all", tool: "all", rels: new Set(), q: "", sort: "date", dlView: "list", dlAll: false, savedOnly: false };
+  const state = { view: "all", type: "all", rel: "all", area: "all", tool: "all", q: "", sort: "date", dlView: "list", dlAll: false };
   let entries = [], archived = [];
   let saved = new Set();
   let newSince = null; // ISO date: entries added after this are "new"
@@ -359,18 +390,20 @@
   }
   const persistSaved = () => store.set("radar.saved", JSON.stringify([...saved]));
 
-  // Shareable view: #area=packaging&tab=monthly
+  // Shareable view: #area=circularity&view=monthly (old links with #tab=… still work)
   function readHash() {
     const p = new URLSearchParams(location.hash.slice(1));
     if (p.get("area") && AREAS[p.get("area")]) state.area = p.get("area");
-    if (p.get("tab") && TABS[p.get("tab")]) state.tab = p.get("tab");
     if (p.get("tool") && TOOLS[p.get("tool")]) state.tool = p.get("tool");
+    const v = p.get("view") || p.get("tab");
+    if (v && VIEWS[v]) state.view = v;
+    if (v && TYPE_LABEL[v]) state.type = v;
   }
   function writeHash() {
     const p = new URLSearchParams();
     if (state.area !== "all") p.set("area", state.area);
     if (state.area === "data" && state.tool !== "all") p.set("tool", state.tool);
-    if (state.tab !== "all") p.set("tab", state.tab);
+    if (state.view !== "all") p.set("view", state.view);
     const h = p.toString();
     try { history.replaceState(null, "", h ? "#" + h : location.pathname + location.search); } catch (e) {}
   }
@@ -397,11 +430,11 @@
     $("grid").replaceChildren(box);
   });
 
-  function inTab(e, tab) {
-    if (tab === "all") return true;
-    if (tab === "new") return isNew(e);
-    if (tab === "monthly") return !!e.monthlySummary;
-    return e.type === tab;
+  function inView(e, v) {
+    if (v === "new") return isNew(e);
+    if (v === "saved") return isSaved(e);
+    if (v === "monthly") return !!e.monthlySummary;
+    return true;
   }
 
   function areaIcon(key, size) {
@@ -410,84 +443,111 @@
     return s;
   }
 
+  function iconSvg(markup) {
+    const s = svgEl("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", stroke: "currentColor", "stroke-width": "1.5", "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true" });
+    s.innerHTML = markup; // static markup defined above, never data
+    return s;
+  }
+  function sideItem(cls, icon, label) {
+    const b = el("button", "sitem" + (cls ? " " + cls : ""));
+    b.type = "button";
+    if (icon) b.appendChild(icon);
+    b.appendChild(el("span", "lbl", label));
+    b.appendChild(el("span", "count", ""));
+    return b;
+  }
+  function refresh() { sync(); renderDeadlines(); render(); }
+
   function buildControls() {
-    // Areas
-    const all = el("button", "area", "All areas");
-    all.type = "button"; all.dataset.area = "all";
-    all.appendChild(el("span", "count", String(entries.length)));
+    // Views
+    Object.entries(VIEWS).forEach(([k, label]) => {
+      const b = sideItem("", iconSvg(VIEW_ICONS[k]), label);
+      b.dataset.view = k;
+      if (k === "new") b.querySelector(".count").className = "nb";
+      b.addEventListener("click", () => { state.view = k; closeSide(); refresh(); });
+      $("views").appendChild(b);
+    });
+    // Areas (+ Microsoft tools under Data & AI)
+    const all = sideItem("", iconSvg('<circle cx="8" cy="8" r="5.5"/><path d="M2.5 8h11M8 2.5c1.8 1.7 1.8 9.3 0 11M8 2.5c-1.8 1.7-1.8 9.3 0 11"/>'), "All areas");
+    all.dataset.area = "all";
     $("areas").appendChild(all);
     Object.entries(AREAS).forEach(([key, a]) => {
-      const b = el("button", "area");
-      b.type = "button"; b.dataset.area = key;
-      b.append(areaIcon(key), document.createTextNode(a.label), el("span", "count", String(entries.filter((e) => areasOf(e).includes(key)).length)));
+      const b = sideItem("", areaIcon(key, 16), a.label);
+      b.dataset.area = key;
       $("areas").appendChild(b);
+      if (key === "data") {
+        const subs = el("div", "subs"); subs.id = "tools";
+        [["all", "All tools"]].concat(Object.entries(TOOLS).map(([k, t]) => [k, t.label])).forEach(([k, label]) => {
+          const t = sideItem("sub", null, label);
+          t.dataset.tool = k;
+          t.addEventListener("click", () => { state.tool = k; closeSide(); refresh(); });
+          subs.appendChild(t);
+        });
+        $("areas").appendChild(subs);
+      }
     });
     $("areas").addEventListener("click", (ev) => {
       const b = ev.target.closest("[data-area]");
       if (!b) return;
       state.area = b.dataset.area; state.tool = "all"; state.dlAll = false;
-      sync(); renderDeadlines(); render();
+      if (state.area !== "data") closeSide();
+      refresh();
     });
-    // Microsoft tool filter (only inside Data & AI)
-    const tl = $("tools");
-    tl.appendChild(el("span", "lbl", "Tool:"));
-    [["all", "All"]].concat(Object.entries(TOOLS).map(([k, t]) => [k, t.label])).forEach(([k, label]) => {
-      const b = el("button", "tool", label);
-      b.type = "button"; b.dataset.tool = k;
-      if (k !== "all") b.appendChild(el("span", "count", String(entries.filter((e) => areasOf(e).includes("data") && toolsOf(e).includes(k)).length)));
-      b.addEventListener("click", () => { state.tool = k; sync(); renderDeadlines(); render(); });
-      tl.appendChild(b);
-    });
-    // Tabs
-    Object.entries(TABS).forEach(([key, label]) => {
-      const b = el("button", null, label);
-      b.type = "button";
-      b.appendChild(el("span", key === "new" ? "nb" : "count", "0"));
-      b.dataset.tab = key;
-      b.addEventListener("click", () => { state.tab = key; sync(); render(); });
-      $("tabs").appendChild(b);
-    });
-    // Saved
-    $("saved").addEventListener("click", () => { state.savedOnly = !state.savedOnly; sync(); render(); });
-    RELS.forEach((r) => {
-      const b = el("button", "ib");
-      b.type = "button";
-      b.appendChild(relIcon(r));
-      b.dataset.rel = r;
-      b.setAttribute("aria-label", "Show " + REL_LABEL[r].toLowerCase());
-      b.title = REL_LABEL[r];
-      b.addEventListener("click", () => { state.rels.has(r) ? state.rels.delete(r) : state.rels.add(r); sync(); render(); });
-      $("rels").appendChild(b);
-    });
+    // Filters above the cards
+    $("type").addEventListener("change", (ev) => { state.type = ev.target.value; render(); syncCount(); });
+    $("rel").addEventListener("change", (ev) => { state.rel = ev.target.value; render(); syncCount(); });
+    $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
+    $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); syncCount(); });
+    // Footer legend
     const key = $("key-rel");
     RELS.forEach((r) => { key.appendChild(relIcon(r)); key.appendChild(el("span", null, r[0].toUpperCase() + r.slice(1))); });
-    document.querySelectorAll("[data-view]").forEach((b) => b.addEventListener("click", () => {
-      state.dlView = b.dataset.view; store.set("radar.dlView", state.dlView); sync(); renderDeadlines();
-    }));
-    $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); });
-    $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
+    // Deadline view
+    document.querySelectorAll("[data-view]").forEach((b) => {
+      if (!b.closest(".dl-panel")) return;
+      b.addEventListener("click", () => { state.dlView = b.dataset.view; store.set("radar.dlView", state.dlView); sync(); renderDeadlines(); });
+    });
+    // Sidebar on small screens
+    $("side-toggle").addEventListener("click", () => {
+      const open = $("side").classList.toggle("open");
+      $("side-toggle").setAttribute("aria-expanded", String(open));
+    });
     window.addEventListener("resize", () => { if (state.dlView === "timeline") renderDeadlines(); });
-    window.addEventListener("hashchange", () => { readHash(); sync(); renderDeadlines(); render(); });
+    window.addEventListener("hashchange", () => { readHash(); refresh(); });
     sync();
   }
+  function closeSide() { $("side").classList.remove("open"); $("side-toggle").setAttribute("aria-expanded", "false"); }
+
+  function syncCount() {
+    const n = filtered().length;
+    $("count").textContent = n + (n === 1 ? " entry" : " entries");
+  }
   function sync() {
-    document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tab === state.tab)));
-    document.querySelectorAll("#areas button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.area === state.area)));
-    $("tools").hidden = state.area !== "data";
-    document.querySelectorAll("#tools button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.tool === state.tool)));
-    document.querySelectorAll("#rels button").forEach((b) => b.setAttribute("aria-pressed", String(state.rels.has(b.dataset.rel))));
-    document.querySelectorAll("[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === state.dlView)));
-    $("saved").setAttribute("aria-pressed", String(state.savedOnly));
-    $("saved-n").textContent = String(pool().filter(isSaved).length);
-    // Tab counts follow the selected area
+    // View counts follow the selected area
     const base = pool().filter(inArea);
-    document.querySelectorAll("#tabs button").forEach((b) => {
-      const n = base.filter((e) => inTab(e, b.dataset.tab)).length;
+    document.querySelectorAll("#views [data-view]").forEach((b) => {
+      b.setAttribute("aria-pressed", String(b.dataset.view === state.view));
+      const n = base.filter((e) => inView(e, b.dataset.view)).length;
       const c = b.querySelector(".count, .nb");
       c.textContent = String(n);
-      if (b.dataset.tab === "new") c.style.display = n ? "" : "none";
+      if (b.dataset.view === "new") c.style.display = n ? "" : "none";
     });
-    $("dl-title").textContent = "Upcoming deadlines" + (state.area !== "all" ? " · " + AREAS[state.area].label : "") + (state.area === "data" && state.tool !== "all" ? " · " + TOOLS[state.tool].label : "");
+    document.querySelectorAll("#areas [data-area]").forEach((b) => {
+      b.setAttribute("aria-pressed", String(b.dataset.area === state.area));
+      const k = b.dataset.area;
+      b.querySelector(".count").textContent = String(k === "all" ? pool().length : pool().filter((e) => areasOf(e).includes(k)).length);
+    });
+    $("tools").hidden = state.area !== "data";
+    document.querySelectorAll("#tools [data-tool]").forEach((b) => {
+      b.setAttribute("aria-pressed", String(b.dataset.tool === state.tool));
+      const k = b.dataset.tool;
+      b.querySelector(".count").textContent = k === "all" ? "" : String(pool().filter((e) => areasOf(e).includes("data") && toolsOf(e).includes(k)).length);
+    });
+    document.querySelectorAll(".dl-panel [data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === state.dlView)));
+    $("type").value = state.type; $("rel").value = state.rel;
+    const areaLabel = state.area === "all" ? "All areas" : AREAS[state.area].label + (state.area === "data" && state.tool !== "all" ? " · " + TOOLS[state.tool].label : "");
+    $("side-sum").textContent = VIEWS[state.view] + " · " + areaLabel;
+    $("dl-title").textContent = "Upcoming deadlines" + (state.area !== "all" ? " · " + areaLabel : "");
+    syncCount();
     writeHash();
   }
 
@@ -496,7 +556,7 @@
   }
 
   function jumpTo(id) {
-    state.tab = "all"; state.rels.clear(); state.q = ""; state.savedOnly = false; $("q").value = ""; sync(); render();
+    state.view = "all"; state.type = "all"; state.rel = "all"; state.q = ""; $("q").value = ""; sync(); render();
     const c = document.getElementById(id);
     if (!c) return;
     c.classList.add("open", "flash");
@@ -647,9 +707,10 @@
   }
 
   function filtered() {
-    let list = pool().filter((e) => inArea(e) && inTab(e, state.tab));
-    if (state.savedOnly) list = list.filter(isSaved);
-    if (state.rels.size) list = list.filter((e) => state.rels.has(relOf(e)));
+    let list = pool().filter((e) => inArea(e) && inView(e, state.view));
+    if (state.type !== "all") list = list.filter((e) => e.type === state.type);
+    if (state.rel === "high") list = list.filter((e) => relOf(e) === "high");
+    if (state.rel === "medium") list = list.filter((e) => relOf(e) !== "low");
     if (state.q) list = list.filter((e) => [e.title, e.summary, e.whyItMatters, e.source, (e.tags || []).join(" ")].join(" ").toLowerCase().includes(state.q));
     const key = (e) => (e.dateIsAdded ? "" : e.date || ""); // undated references go last
     const byDate = (a, b) => key(b).localeCompare(key(a));
@@ -696,8 +757,8 @@
     star.addEventListener("click", () => {
       isSaved(e) ? saved.delete(e.id) : saved.add(e.id);
       persistSaved(); setStar();
-      $("saved-n").textContent = String(pool().filter(isSaved).length);
-      if (state.savedOnly) render();
+      sync();
+      if (state.view === "saved") render();
     });
     top.appendChild(star);
     top.appendChild(relIcon(relOf(e)));
@@ -737,9 +798,9 @@
   function render() {
     const list = filtered();
     $("grid").replaceChildren(...(list.length ? list.map(card)
-      : [el("div", "empty", state.savedOnly && !pool().some(isSaved) ? "Nothing saved yet – click the star on a card to keep it here."
-        : state.tab === "new" ? "Nothing new since your last visit."
-        : state.tab === "monthly" ? "No monthly feature summaries yet – they arrive with the next feed run."
+      : [el("div", "empty", state.view === "saved" && !pool().some(isSaved) ? "Nothing saved yet – click the star on a card to keep it here."
+        : state.view === "new" ? "Nothing new since your last visit."
+        : state.view === "monthly" ? "No monthly feature summaries yet – they arrive with the next feed run."
         : "No entries match these filters.")]));
   }
 })();
