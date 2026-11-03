@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261103c">
+<link rel="stylesheet" href="assets/side.css?v=20261103d">
 <style>
   :root {
     --blue-900: #002d55;
@@ -97,7 +97,7 @@
   .peers-legend .v { font-size: 12.5px; }
   .peers-legend > span { display: flex; align-items: center; gap: 4px; }
 
-  .profiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: stretch; grid-auto-rows: 1fr; }
+  .profiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; align-items: stretch; }
   .pcard .news { margin-top: auto; padding-top: 4px; }
   main.wrap > * { min-width: 0; }
   .pcard { min-width: 0; overflow-wrap: anywhere; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
@@ -140,6 +140,24 @@
   .ln { width: 22px; height: 2px; background: #d7dbe2; margin: 0 8px 14px 0; }
   .dlg .grp { margin: 6px 0 2px; }
   @media (max-width: 600px) { .hrow { grid-template-columns: 1fr; gap: 4px; } }
+  .dlg-head { padding-bottom: 0 !important; display: block !important; }
+  .dlg-ht { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .dlg-hl #dlg-tabs { margin: 12px -8px 0; border-bottom: 0; }
+  .dlg-body { min-height: 260px; }
+  .tgt { display: grid; grid-template-columns: minmax(150px, 230px) minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line-2); font-size: 13px; }
+  .tgt .pb { height: 8px; background: #eef1f4; border-radius: 4px; overflow: hidden; }
+  .tgt .pb i { display: block; height: 100%; background: var(--wepa-green-soft, #33b09c); border-radius: 0 4px 4px 0; }
+  .tgt b { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .nlist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .nlist li { padding: 9px 0; border-bottom: 1px solid var(--line-2); font-size: 13.5px; display: flex; flex-direction: column; gap: 1px; }
+  .nlist li a { color: var(--ink); text-decoration: none; }
+  .nlist li a:hover { color: var(--blue-700); }
+  .nlist li small { color: var(--ink-3); font-size: 12px; }
+  /* C2 cards: name, three status chips, news count */
+  .pcard { gap: 10px; padding: 14px 16px; }
+  .pcard .nw { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink-3); border-top: 1px solid var(--line-2); padding-top: 9px; margin-top: auto; }
+  .pcard .badge { font-size: 11.5px; font-weight: 700; background: #e8f7f4; color: #1d7f6c; border-radius: 10px; padding: 1px 8px; }
+  .pcard .more { margin-left: auto; }
   .error { padding: 28px; border: 1px dashed var(--line); border-radius: 12px; background: #fff; }
 
   .ets { padding: 18px 20px 14px; display: flex; flex-direction: column; gap: 10px; }
@@ -178,8 +196,8 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
-<script src="assets/status.js?v=20261103c" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261103c">
+<script src="assets/status.js?v=20261103d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261103d">
 </head>
 <body>
 <header>
@@ -220,10 +238,16 @@
   <aside class="side" id="side" aria-label="Peer group and area"></aside>
   <div class="content">
   <div class="intro">
-    <h2 id="title">Peer benchmark</h2>
-    <p>Colours compare each value with the selected peer group. Click a value to open its source; click a column header to sort.</p>
+    <h2 id="title">Peers</h2>
+    <p>How WEPA compares with other tissue makers – public data only.</p>
+  </div>
+  <div class="ptabs" role="tablist" id="tabs" aria-label="Peers sections">
+    <button type="button" role="tab" data-tab="bench" aria-controls="tab-bench">Benchmark</button>
+    <button type="button" role="tab" data-tab="ets" aria-controls="tab-ets">Emissions · EU ETS</button>
   </div>
 
+  <div class="tabp" id="tab-bench" role="tabpanel">
+  <p class="tab-lead" id="bench-lead">Colours compare each value with the selected peer group. Click a value to open its source; click a column header to sort.</p>
   <section class="panel" aria-label="Comparison table">
     <div class="tbl-wrap"><table id="tbl"></table></div>
     <div class="legend">
@@ -231,33 +255,37 @@
     </div>
   </section>
 
-  <section class="panel ets" id="ets" aria-labelledby="ets-title" hidden>
+  <section aria-labelledby="pr-title" style="display:flex;flex-direction:column;gap:10px">
+    <h2 class="cap" id="pr-title">Peer profiles</h2>
+    <p class="muted" style="margin:-4px 0 0">Click a profile for all KPIs, targets, news and EU ETS sites.</p>
+    <div class="profiles" id="profiles"></div>
+  </section>
+  </div>
+
+  <div class="tabp" id="tab-ets" role="tabpanel" hidden>
+  <p class="tab-lead">Scope 1 CO₂ of each company's EU sites, from the EU emissions registry. Click a company to see its sites.</p>
+  <section class="panel ets" id="ets" aria-labelledby="ets-title">
     <div class="ets-head"><h3 id="ets-title">EU ETS verified emissions</h3><span id="ets-sub"></span></div>
     <div class="tbl-wrap"><table id="ets-tbl"></table></div>
     <p class="foot" id="ets-foot"></p>
   </section>
-
-  <section aria-labelledby="pr-title" style="display:flex;flex-direction:column;gap:12px">
-    <h2 class="cap" id="pr-title">Peer profiles</h2>
-    <p class="muted" style="margin:-4px 0 0">Click a profile for all KPIs and their history.</p>
-    <div class="profiles" id="profiles"></div>
-  </section>
+  </div>
   </div>
 </main>
 
 <dialog class="dlg" id="dlg" aria-labelledby="dlg-title">
-  <div class="dlg-head"><div><h3 id="dlg-title"></h3><p id="dlg-sub"></p></div><button type="button" class="dlg-x" id="dlg-x" aria-label="Close">×</button></div>
+  <div class="dlg-head"><div class="dlg-hl"><div class="dlg-ht"><div><h3 id="dlg-title"></h3><p id="dlg-sub"></p></div><button type="button" class="dlg-x" id="dlg-x" aria-label="Close">×</button></div><div class="ptabs sm" role="tablist" id="dlg-tabs"></div></div></div>
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261103c"></script>
+<script src="assets/side.js?v=20261103d"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
 (function () {
   // Area (sidebar) → KPI set. Data & AI has no peer KPIs.
   const AREA_SET = { all: "overview", climate: "climate", forests: "forests", circularity: "circularity", water: "water", people: "people", reporting: "ratings" };
-  const state = { group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1, hidden: new Set() };
+  const state = { tab: "bench", group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1, hidden: new Set() };
   if (!AREA_SET[state.area]) state.area = "all";
   const setKey = () => AREA_SET[state.area] || "overview";
   let P = null, E = null, PN = {}, news = [], side = null;
@@ -270,10 +298,11 @@
     const p = new URLSearchParams(location.hash.slice(1));
     if (p.get("group") && P.groups[p.get("group")]) state.group = p.get("group");
     const a = p.get("area"); if (a && AREA_SET[a]) state.area = a;
+    state.tab = p.get("tab") === "ets" ? "ets" : "bench";
     if (p.get("hide") != null) state.hidden = new Set(p.get("hide").split(",").filter((id) => P.companies.some((c) => c.id === id && !c.isUs)));
   }
   function writeHash() {
-    try { history.replaceState(null, "", "#group=" + state.group + (state.area !== "all" ? "&area=" + state.area : "") + (state.hidden.size ? "&hide=" + [...state.hidden].join(",") : "")); } catch (e) {}
+    try { history.replaceState(null, "", "#group=" + state.group + (state.tab !== "bench" ? "&tab=" + state.tab : "") + (state.area !== "all" ? "&area=" + state.area : "") + (state.hidden.size ? "&hide=" + [...state.hidden].join(",") : "")); } catch (e) {}
     RadarSide.setArea(state.area);
   }
 
@@ -302,13 +331,14 @@
     lg.className = "side-legend peers-legend";
     side = RadarSide.build($("side"), {
       toggleLabel: "Peers & area",
-      extra: [{ id: "companies", title: "Companies", node: companyNode }, { id: "legend", title: "Legend", node: lg }],
+      extra: [{ id: "companies", title: "Companies", node: companyNode }, { id: "legend", title: "Legend", node: lg, show: () => state.tab === "bench" }],
       onChange: (gid, key) => {
         if (gid === "group") state.group = key;
         else { state.area = key; state.sortKey = null; }
         render();
       }
     });
+    document.querySelectorAll("#tabs button").forEach((b) => b.addEventListener("click", () => { state.tab = b.dataset.tab; render(); }));
     $("dlg-x").addEventListener("click", () => $("dlg").close());
     $("dlg").addEventListener("click", (ev) => { if (ev.target === $("dlg")) $("dlg").close(); });
     window.addEventListener("hashchange", () => { readHash(); render(); });
@@ -394,13 +424,40 @@
     return frag;
   }
 
-  // ---- Pop-up: all KPIs of one company with their history ----
-  function openProfile(c) {
+  // ---- Full profile pop-up with tabs: Overview · Targets & facts · News · EU ETS ----
+  const CARD_KPIS = ["sbti", "netZeroYear", "ecovadis"];
+  const fmtShort = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-GB", { day: "numeric", month: "short" }); };
+  // headlines from the weekly peer news search, plus matching items from the ESG feeds (newest first, no duplicates)
+  function newsOf(c) {
+    const pats = (c.aliases || [c.name]).map((a) => a.toLowerCase());
+    const fromRadar = news.filter((e) => { const t = (e.title + " " + (e.summary || "")).toLowerCase(); return pats.some((p) => t.includes(p)); });
+    const seen = new Set();
+    return [...(PN[c.id] || []), ...fromRadar].filter((e) => e.title && e.url && !seen.has(e.url) && seen.add(e.url))
+      .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  }
+  function openProfile(c, tab) {
+    const etsData = E && E.companies ? E.companies[c.id] : null;
+    const hits = newsOf(c);
+    const nT = (c.targets || []).length + (c.targets2030 ? c.targets2030.items.length : 0);
+    const tabs = [["overview", "Overview"], ["targets", "Targets & facts", nT || null], ["news", "News", hits.length || null], ["ets", "EU ETS", etsData ? etsData.installations.length + " sites" : null]];
     $("dlg-title").textContent = c.name;
-    $("dlg-sub").textContent = c.country + (c.report ? " · " + c.report.label : "");
-    const body = $("dlg-body");
-    body.replaceChildren();
-    if (c.report) { const a = el("a", null, "Open report ↗"); a.href = c.report.url; a.target = "_blank"; a.rel = "noopener"; a.style.fontSize = "13px"; a.style.fontWeight = "600"; body.appendChild(a); }
+    $("dlg-sub").textContent = c.country + (c.isUs ? " · public data" : "");
+    if (c.report) { $("dlg-sub").append(" · "); const a = el("a", null, c.report.label + " ↗"); a.href = c.report.url; a.target = "_blank"; a.rel = "noopener"; $("dlg-sub").appendChild(a); }
+    const bar = $("dlg-tabs");
+    const show = (t) => {
+      bar.replaceChildren(...tabs.map(([k, label, n]) => {
+        const b = el("button", null, label); b.type = "button"; b.setAttribute("role", "tab"); b.setAttribute("aria-selected", String(k === t));
+        if (n != null) b.appendChild(el("small", null, String(n)));
+        b.addEventListener("click", () => show(k));
+        return b;
+      }));
+      const body = $("dlg-body"); body.replaceChildren(); body.scrollTop = 0; $("dlg").scrollTop = 0;
+      ({ overview: tabOverview, targets: tabTargets, news: tabNews, ets: tabEts })[t](c, body, { hits, etsData });
+    };
+    show(tab || "overview");
+    if (!$("dlg").open) $("dlg").showModal();
+  }
+  function tabOverview(c, body) {
     const seen = new Set();
     Object.entries(P.kpiSets).forEach(([sk, set]) => {
       const keys = set.kpis.filter((k) => !seen.has(k) && c.kpis[k] && (c.kpis[k].v != null || c.kpis[k].d));
@@ -427,13 +484,74 @@
       body.appendChild(sec);
     });
     if (!seen.size) body.appendChild(el("p", "muted", "No KPIs found in public sources yet."));
+    else body.appendChild(el("p", "muted", "History builds up with each yearly update: the previous value is kept when a KPI changes. Click a value to open its source."));
+  }
+  function tabTargets(c, body) {
+    const t = c.targets2030;
+    if (t && t.items && t.items.length) {
+      const sec = el("div"); sec.appendChild(el("p", "cap grp", "Progress towards 2030 · " + t.year + (t.base ? " vs. " + t.base : "")));
+      t.items.forEach((it) => {
+        const row = el("div", "tgt");
+        const pb = el("div", "pb"); const i = el("i"); i.style.width = Math.max(2, Math.min(100, (100 * it.current) / it.target)) + "%"; pb.appendChild(i);
+        row.append(el("span", null, it.label), pb, el("b", null, (it.fmt || "{c} of {t}").replace("{c}", it.current).replace("{t}", it.target)));
+        sec.appendChild(row);
+      });
+      if (t.src) { const p = el("p", "muted"); const a = el("a", null, "Source ↗"); a.href = t.src; a.target = "_blank"; a.rel = "noopener"; p.appendChild(a); sec.appendChild(p); }
+      body.appendChild(sec);
+    }
     if (c.targets && c.targets.length) {
       const d = el("div"); d.appendChild(el("p", "cap grp", "Key targets & facts"));
-      const ul = el("ul"); ul.style.cssText = "margin:6px 0 0;padding-left:18px;font-size:13px;color:#374151;display:flex;flex-direction:column;gap:4px";
-      c.targets.forEach((t) => ul.appendChild(el("li", null, t))); d.appendChild(ul); body.appendChild(d);
+      const ul = el("ul"); ul.style.cssText = "margin:6px 0 0;padding-left:18px;font-size:13.5px;color:#374151;display:flex;flex-direction:column;gap:6px";
+      c.targets.forEach((x) => ul.appendChild(el("li", null, x))); d.appendChild(ul); body.appendChild(d);
     }
-    body.appendChild(el("p", "muted", "History builds up with each yearly update: the previous value is kept when a KPI changes."));
-    $("dlg").showModal();
+    const rep = c.reported || {};
+    const facts = [["scope12", "Scope 1+2 emissions"], ["scope3", "Scope 3 emissions"]].filter(([k]) => rep[k] && rep[k].v);
+    if (facts.length) {
+      const d = el("div"); d.appendChild(el("p", "cap grp", "Reported emissions"));
+      facts.forEach(([k, label]) => { const r = rep[k]; const row = el("div", "hrow"); row.append(el("span", null, label)); const v = el(r.src ? "a" : "span", null, tco2(r.v) + " t CO₂e · " + r.y); if (r.src) { v.href = r.src; v.target = "_blank"; v.rel = "noopener"; } row.appendChild(v); d.appendChild(row); });
+      body.appendChild(d);
+    }
+    if (!body.children.length) body.appendChild(el("p", "muted", "No targets found in public sources yet."));
+  }
+  function tabNews(c, body, { hits }) {
+    if (!hits.length) { body.appendChild(el("p", "muted", "No recent news found. News comes from the weekly peer news search and the ESG feeds.")); return; }
+    const ul = el("ul", "nlist");
+    hits.slice(0, 20).forEach((e) => { const li = el("li"); const a = el("a", null, e.title); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; li.append(a, el("small", null, [e.date ? fmtDate(e.date) : "", e.source].filter(Boolean).join(" · "))); ul.appendChild(li); });
+    body.appendChild(ul);
+    body.appendChild(el("p", "muted", "Headlines from the weekly peer news search (Google News) and the ESG feeds; links open the original article."));
+  }
+  function tabEts(c, body, { etsData: d }) {
+    if (!E || !E.companies) { body.appendChild(el("p", "muted", "EU ETS data arrives with the next run of the GitHub Action.")); return; }
+    if (!d || !d.installations.length) { body.appendChild(el("p", "muted", "No EU ETS sites matched for " + c.name + ". Add them in config/peer_installations.json.")); return; }
+    const years = E.years;
+    body.appendChild(el("p", "muted", `${d.installations.length} site(s) · verified emissions in t CO₂e · ${E.source.attribution}`));
+    const wrap = el("div", "tbl-wrap"); const t = el("table", "sites");
+    const hr = el("tr"); hr.appendChild(el("th", null, "Site")); years.forEach((y) => hr.appendChild(el("th", null, y)));
+    const thead = el("thead"); thead.appendChild(hr); t.appendChild(thead);
+    const tb = el("tbody");
+    d.installations.forEach((i) => {
+      const tr = el("tr"); const td = el("td"); td.append(document.createTextNode(i.name), el("small", null, [i.key, i.city, i.activity].filter(Boolean).join(" · ")));
+      tr.appendChild(td);
+      years.forEach((y) => tr.appendChild(el("td", null, i.emissions[y] != null ? tco2(i.emissions[y]) : "–")));
+      tb.appendChild(tr);
+    });
+    const tot = el("tr", "tot"); tot.appendChild(el("td", null, "Total"));
+    years.forEach((y) => tot.appendChild(el("td", null, d.total[y] != null ? tco2(d.total[y]) + (d.reporting && (d.reporting[y] || 0) < d.installations.length ? " *" : "") : "–")));
+    tb.appendChild(tot); t.appendChild(tb); wrap.appendChild(t); body.appendChild(wrap);
+    const rep = c.reported && c.reported.scope12;
+    if (rep && rep.v) {
+      const ets = d.total[rep.y];
+      const cmp = el("p", "muted");
+      cmp.append(document.createTextNode(`For comparison: ${c.name} reports ${tco2(rep.v)} t CO₂e Scope 1+2 for ${rep.y} (${rep.d || "all sites"})` +
+        (ets ? ` – the EU ETS sites above cover ${tco2(ets)} t, about ${Math.round((100 * ets) / rep.v)}%.` : ".") + " "));
+      const a = el("a", null, "Report ↗"); a.href = rep.src; a.target = "_blank"; a.rel = "noopener"; cmp.appendChild(a);
+      body.appendChild(cmp);
+    }
+    const note = el("p", "muted");
+    note.textContent = "Sites are assigned automatically by name. Wrong or missing site? Add its code (e.g. DE-1234) to \"exclude\" or \"include\" for this company in config/peer_installations.json – the next weekly run updates the numbers.";
+    const src = el("a", null, "Union Registry ↗"); src.href = E.source.page; src.target = "_blank"; src.rel = "noopener";
+    note.append(" Source: ", src);
+    body.appendChild(note);
   }
 
   function sortList(list) {
@@ -450,15 +568,20 @@
 
   function render() {
     const gCount = (g) => P.companies.filter((c) => c.isUs || g === "all" || c.groups.includes(g)).length;
-    side.refresh([
+    const groups = [
       { id: "group", title: "Peer group", selected: state.group,
-        items: Object.entries(P.groups).map(([k, label]) => ({ key: k, label: k === "all" ? "All peers" : label, count: gCount(k) })) },
-      { id: "area", title: "Area", selected: state.area,
-        items: RadarSide.areaItems(Object.keys(AREA_SET).filter((k) => k !== "all")) }
-    ]);
+        items: Object.entries(P.groups).map(([k, label]) => ({ key: k, label: k === "all" ? "All peers" : label, count: gCount(k) })) }
+    ];
+    // The area only changes the benchmark KPIs, so it is shown on that tab only
+    if (state.tab === "bench") groups.push({ id: "area", title: "Area", selected: state.area, items: RadarSide.areaItems(Object.keys(AREA_SET).filter((k) => k !== "all")) });
+    side.refresh(groups);
     writeHash();
+    document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
+    $("tab-bench").hidden = state.tab !== "bench";
+    $("tab-ets").hidden = state.tab !== "ets";
     const set = P.kpiSets[setKey()];
-    $("title").textContent = "Peer benchmark · " + set.label;
+    $("pr-title").textContent = "Peer profiles";
+    document.querySelector('#tabs [data-tab="bench"]').replaceChildren(document.createTextNode("Benchmark"), el("small", null, set.label));
     const keys = set.kpis;
     const list = sortList(companies());
     const rate = {}; keys.forEach((k) => { rate[k] = ratings(k, list); });
@@ -493,51 +616,39 @@
     $("tbl").replaceChildren(thead, tbody);
 
     // Profiles
-    const overview = P.kpiSets.overview.kpis.filter((k) => P.kpis[k].kind !== "text");
-    const oRate = {}; overview.forEach((k) => { oRate[k] = ratings(k, list); });
+    const oRate = {}; CARD_KPIS.forEach((k) => { oRate[k] = ratings(k, list); });
     $("profiles").replaceChildren(...list.map((c) => {
       const card = el("article", "pcard" + (c.isUs ? " us" : ""));
       card.tabIndex = 0;
-      card.setAttribute("aria-label", c.name + " – open KPIs and history");
+      card.setAttribute("aria-label", c.name + " – open the full profile");
       card.addEventListener("click", (ev) => { if (!ev.target.closest("a")) openProfile(c); });
       card.addEventListener("keydown", (ev) => { if (ev.key === "Enter") openProfile(c); });
       const ph = el("div", "ph");
-      const right = el("span", null, c.country + (c.report ? " · " : ""));
-      if (c.report) { const a = el("a", null, c.report.label + " ↗"); a.href = c.report.url; a.target = "_blank"; a.rel = "noopener"; right.appendChild(a); }
-      ph.append(el("b", null, c.name), right);
+      ph.append(el("b", null, c.name), el("span", null, c.country));
       card.appendChild(ph);
 
+      // Three status chips – the same for every company, so cards line up
       const chips = el("div", "chips");
-      overview.forEach((k) => {
+      CARD_KPIS.forEach((k) => {
         const cell = c.kpis[k];
         if (!cell || cell.v == null) return;
-        const chip = valueNode(k, cell, oRate[k][c.id], false).firstChild;
+        // short value only (e.g. "Validated", "2040", "Gold"); details and sources are in the full profile
+        const r = (oRate[k] && oRate[k][c.id]) || "mid";
+        const chip = el("span", "v " + r, k === "sbti" ? String(cell.v).replace(/ validated$/i, "") : String(cell.v));
         chip.prepend(el("i", null, P.kpis[k].label));
+        chip.title = display(k, cell) + (cell.y ? " · " + cell.y : "");
         chips.appendChild(chip);
       });
       if (chips.children.length) card.appendChild(chips);
       else card.appendChild(el("p", "muted", "No comparable KPIs found in public sources."));
 
-      if (c.targets && c.targets.length) {
-        const d = el("div"); d.appendChild(el("p", "cap", "Key targets & facts"));
-        const ul = el("ul"); c.targets.forEach((t) => ul.appendChild(el("li", null, t))); d.appendChild(ul);
-        card.appendChild(d);
-      }
-
-      const d2 = el("div", "news"); d2.appendChild(el("p", "cap", "Latest news"));
-      const pats = (c.aliases || [c.name]).map((a) => a.toLowerCase());
-      // headlines from the weekly peer news search, plus matching items from the ESG feeds
-      const fromRadar = news.filter((e) => { const t = (e.title + " " + (e.summary || "")).toLowerCase(); return pats.some((p) => t.includes(p)); });
-      const hits = [...(PN[c.id] || []), ...fromRadar].filter((e) => e.title && e.url)
-        .sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, 3);
-      if (hits.length) {
-        const ul = el("ul");
-        hits.forEach((e) => { const li = el("li"); const a = el("a", null, e.title); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; li.append(a, el("small", null, " · " + [e.date ? fmtDate(e.date) : "", e.source].filter(Boolean).join(" · "))); ul.appendChild(li); });
-        d2.appendChild(ul);
-      } else d2.appendChild(el("p", "muted", "No recent news found."));
-      card.appendChild(d2);
-      const more = el("button", "more", "All KPIs & history →"); more.type = "button";
-      card.appendChild(more);
+      const hits = newsOf(c);
+      const nw = el("div", "nw");
+      if (hits.length) nw.append(el("span", "badge", hits.length + (hits.length === 1 ? " news" : " news")), el("span", null, "latest " + (hits[0].date ? fmtShort(hits[0].date) : "")));
+      else nw.appendChild(el("span", null, "No recent news"));
+      const more = el("button", "more", "Full profile →"); more.type = "button";
+      nw.appendChild(more);
+      card.appendChild(nw);
       return card;
     }));
     renderEts(list);
@@ -547,9 +658,6 @@
   const kt = (t) => (t / 1000).toLocaleString("en-GB", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const tco2 = (t) => Math.round(t).toLocaleString("en-GB");
   function renderEts(list) {
-    const box = $("ets");
-    box.hidden = !(state.area === "all" || state.area === "climate");
-    if (box.hidden) return;
     const tbl = $("ets-tbl");
     const mapped = E && E.companies ? list.filter((c) => E.companies[c.id]) : [];
     const others = list.filter((c) => !mapped.includes(c));
@@ -571,7 +679,7 @@
     rows.forEach(({ c, d }) => {
       const tr = el("tr", c.isUs ? "us" : "");
       tr.tabIndex = 0; tr.title = "Show the sites";
-      const open = () => openSites(c, d);
+      const open = () => openProfile(c, "ets");
       tr.addEventListener("click", open); tr.addEventListener("keydown", (ev) => { if (ev.key === "Enter") open(); });
       const td0 = el("td", "co"); td0.append(el("b", null, c.name), el("small", null, c.country)); tr.appendChild(td0);
       tr.appendChild(el("td", "num", String(d.installations.length)));
@@ -616,41 +724,6 @@
     dot.setAttribute("cx", x(lp[0])); dot.setAttribute("cy", y(lp[1])); dot.setAttribute("r", "2.8"); dot.setAttribute("fill", "#002d55");
     svg.appendChild(dot);
     return svg;
-  }
-  function openSites(c, d) {
-    const years = E.years;
-    $("dlg-title").textContent = c.name + " · EU ETS sites";
-    $("dlg-sub").textContent = `${d.installations.length} site(s) · verified emissions in t CO₂e · ${E.source.attribution}`;
-    const body = $("dlg-body"); body.replaceChildren();
-    if (!d.installations.length) { body.appendChild(el("p", "muted", "No installations matched. Add them in config/peer_installations.json.")); $("dlg").showModal(); return; }
-    const wrap = el("div", "tbl-wrap"); const t = el("table", "sites");
-    const hr = el("tr"); hr.appendChild(el("th", null, "Site")); years.forEach((y) => hr.appendChild(el("th", null, y)));
-    const thead = el("thead"); thead.appendChild(hr); t.appendChild(thead);
-    const tb = el("tbody");
-    d.installations.forEach((i) => {
-      const tr = el("tr"); const td = el("td"); td.append(document.createTextNode(i.name), el("small", null, [i.key, i.city, i.activity].filter(Boolean).join(" · ")));
-      tr.appendChild(td);
-      years.forEach((y) => tr.appendChild(el("td", null, i.emissions[y] != null ? tco2(i.emissions[y]) : "–")));
-      tb.appendChild(tr);
-    });
-    const tot = el("tr", "tot"); tot.appendChild(el("td", null, "Total"));
-    years.forEach((y) => tot.appendChild(el("td", null, d.total[y] != null ? tco2(d.total[y]) + (d.reporting && (d.reporting[y] || 0) < d.installations.length ? " *" : "") : "–")));
-    tb.appendChild(tot); t.appendChild(tb); wrap.appendChild(t); body.appendChild(wrap);
-    const rep = c.reported && c.reported.scope12;
-    if (rep && rep.v) {
-      const ets = d.total[rep.y];
-      const cmp = el("p", "muted");
-      cmp.append(document.createTextNode(`For comparison: ${c.name} reports ${tco2(rep.v)} t CO₂e Scope 1+2 for ${rep.y} (${rep.d || "all sites"})` +
-        (ets ? ` – the EU ETS sites above cover ${tco2(ets)} t, about ${Math.round((100 * ets) / rep.v)}%.` : ".") + " "));
-      const a = el("a", null, "Report ↗"); a.href = rep.src; a.target = "_blank"; a.rel = "noopener"; cmp.appendChild(a);
-      body.appendChild(cmp);
-    }
-    const note = el("p", "muted");
-    note.textContent = "Sites are assigned automatically by name. Wrong or missing site? Add its code (e.g. DE-1234) to \"exclude\" or \"include\" for this company in config/peer_installations.json – the next weekly run updates the numbers.";
-    const src = el("a", null, "Union Registry ↗"); src.href = E.source.page; src.target = "_blank"; src.rel = "noopener";
-    note.append(" Source: ", src);
-    body.appendChild(note);
-    $("dlg").showModal();
   }
 })();
 </script>
