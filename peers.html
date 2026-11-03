@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
+<link rel="stylesheet" href="assets/side.css">
 <style>
   :root {
     --blue-900: #002d55;
@@ -113,12 +114,59 @@
   .pcard .news a:hover { color: var(--blue-700); }
   .pcard .news small { color: var(--ink-3); }
   .muted { color: var(--ink-3); font-size: 13px; }
+  /* Trends */
+  .tr { font-size: 11.5px; font-weight: 700; margin-left: 5px; }
+  .tr.up { color: #1d7a6b; } .tr.dn { color: #c42840; } .tr.eq { color: #9aa2ae; font-weight: 600; }
+  /* Profile → history pop-up */
+  .pcard { cursor: pointer; transition: border-color .15s, box-shadow .15s; }
+  .pcard:hover { border-color: #cfd8e3; box-shadow: 0 4px 16px rgba(0, 45, 85, .06); }
+  .pcard .more { align-self: flex-start; border: 0; background: none; padding: 0; color: var(--blue-700); font-size: 13px; font-weight: 600; cursor: pointer; }
+  dialog.dlg { width: min(860px, calc(100vw - 32px)); max-height: calc(100vh - 48px); border: 0; border-radius: 16px; padding: 0; box-shadow: 0 24px 64px rgba(0, 20, 50, .25); color: var(--ink); }
+  dialog.dlg::backdrop { background: rgba(0, 20, 45, .35); }
+  .dlg-head { position: sticky; top: 0; z-index: 1; background: #fff; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 20px 24px 14px; border-bottom: 1px solid var(--line-2); }
+  .dlg-head h3 { margin: 0; font-size: 20px; color: var(--blue-900); }
+  .dlg-head p { margin: 2px 0 0; font-size: 13px; color: var(--ink-3); }
+  .dlg-x { border: 0; background: #f0f2f5; width: 32px; height: 32px; border-radius: 8px; font-size: 18px; cursor: pointer; color: #4b5563; flex: none; }
+  .dlg-body { padding: 16px 24px 24px; display: flex; flex-direction: column; gap: 18px; }
+  .hrow { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line-2); font-size: 13px; }
+  .hrow > span:first-child { color: #4b5563; }
+  .steps { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 0; }
+  .st { display: flex; flex-direction: column; align-items: flex-start; font-size: 13px; color: #111827; padding-right: 6px; text-decoration: none; }
+  .st small { font-size: 11px; color: #9aa2ae; font-weight: 400; }
+  .st.cur { font-weight: 600; color: var(--blue-900); }
+  .ln { width: 22px; height: 2px; background: #d7dbe2; margin: 0 8px 14px 0; }
+  .dlg .grp { margin: 6px 0 2px; }
+  @media (max-width: 600px) { .hrow { grid-template-columns: 1fr; gap: 4px; } }
   .error { padding: 28px; border: 1px dashed var(--line); border-radius: 12px; background: #fff; }
 
+  .ets { padding: 18px 20px 14px; display: flex; flex-direction: column; gap: 10px; }
+  .ets-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+  .ets-head h3 { margin: 0; font-size: 15px; font-weight: 600; color: var(--blue-900); }
+  .ets-head span { font-size: 12.5px; color: var(--ink-3); }
+  .ets table td { padding: 8px 12px; }
+  .ets th span { display: inline-block; padding: 11px 12px; }
+  .ets .bar { display: flex; align-items: center; gap: 10px; min-width: 190px; }
+  .ets .bar i { height: 10px; border-radius: 0 4px 4px 0; background: #6b8aa8; display: block; }
+  .ets tr.us .bar i { background: var(--wepa); }
+  .ets .bar b { font-weight: 600; font-variant-numeric: tabular-nums; min-width: 52px; }
+  .ets .chg { font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink-2); }
+  .ets .chg .a { font-size: 10px; margin-right: 3px; }
+  .ets svg.sp { width: 120px; height: 28px; display: block; }
+  .ets .go { border: 0; background: none; color: var(--blue-700); cursor: pointer; font-size: 13px; white-space: nowrap; padding: 4px 0; }
+  .ets tbody tr { cursor: pointer; }
+  .ets tbody tr:hover td { background: #f7f9fb; }
+  .ets .foot { font-size: 12px; color: var(--ink-3); margin: 0; }
+  .ets .star { color: #b07d00; cursor: help; }
+  .sites { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .sites th, .sites td { padding: 7px 10px; border-bottom: 1px solid var(--line-2); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .sites th:first-child, .sites td:first-child { text-align: left; white-space: normal; min-width: 220px; }
+  .sites td small { display: block; color: var(--ink-3); font-size: 11.5px; }
+  .sites tr.tot td { font-weight: 600; border-top: 1px solid var(--line); background: #fafbfc; }
   footer { border-top: 1px solid var(--line); padding: 16px 0 28px; font-size: 12.5px; color: var(--ink-3); }
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
+<script src="assets/status.js" defer></script>
 </head>
 <body>
 <header>
@@ -149,43 +197,56 @@
       </svg>
       <h1>ESG Radar</h1>
     </a>
-    <nav class="nav" aria-label="Pages"><a href="./">Radar</a><a href="peers.html" aria-current="page">Peers</a></nav>
+    <nav class="nav" aria-label="Pages"><a href="./" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" aria-current="page" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
     <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap layout">
+  <aside class="side" id="side" aria-label="Peer group and area"></aside>
+  <div class="content">
   <div class="intro">
-    <h2>Peer benchmark</h2>
+    <h2 id="title">Peer benchmark</h2>
     <p>Colours compare each value with the selected peer group. Click a value to open its source; click a column header to sort.</p>
-  </div>
-
-  <div class="controls">
-    <label id="g-lbl">Peers</label>
-    <div class="seg" id="groups" role="group" aria-labelledby="g-lbl"></div>
-    <label id="k-lbl" style="margin-left:8px">KPIs</label>
-    <div class="seg" id="sets" role="group" aria-labelledby="k-lbl"></div>
   </div>
 
   <section class="panel" aria-label="Comparison table">
     <div class="tbl-wrap"><table id="tbl"></table></div>
     <div class="legend">
-      <span class="v best">Best</span><span class="v good">Better than median</span><span class="v mid">Around median</span><span class="v weak">Below median</span><span class="na">– not found</span>
+      <span class="v best">Best</span><span class="v good">Better than median</span><span class="v mid">Around median</span><span class="v weak">Below median</span><span class="na">– not found</span><span><b class="tr up" style="margin:0">↑</b> <b class="tr dn" style="margin:0">↓</b> change vs. previous year (hover for old value)</span>
     </div>
+  </section>
+
+  <section class="panel ets" id="ets" aria-labelledby="ets-title" hidden>
+    <div class="ets-head"><h3 id="ets-title">EU ETS verified emissions</h3><span id="ets-sub"></span></div>
+    <div class="tbl-wrap"><table id="ets-tbl"></table></div>
+    <p class="foot" id="ets-foot"></p>
   </section>
 
   <section aria-labelledby="pr-title" style="display:flex;flex-direction:column;gap:12px">
     <h2 class="cap" id="pr-title">Peer profiles</h2>
+    <p class="muted" style="margin:-4px 0 0">Click a profile for all KPIs and their history.</p>
     <div class="profiles" id="profiles"></div>
   </section>
+  </div>
 </main>
 
-<footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; news comes from the monthly radar feeds.</div></footer>
+<dialog class="dlg" id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg-head"><div><h3 id="dlg-title"></h3><p id="dlg-sub"></p></div><button type="button" class="dlg-x" id="dlg-x" aria-label="Close">×</button></div>
+  <div class="dlg-body" id="dlg-body"></div>
+</dialog>
+
+<script src="assets/side.js"></script>
+<footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
 (function () {
-  const state = { group: "europe", set: "overview", sortKey: null, sortDir: -1 };
-  let P = null, news = [];
+  // Area (sidebar) → KPI set. Data & AI has no peer KPIs.
+  const AREA_SET = { all: "overview", climate: "climate", forests: "forests", circularity: "circularity", water: "water", people: "people", reporting: "ratings" };
+  const state = { group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1 };
+  if (!AREA_SET[state.area]) state.area = "all";
+  const setKey = () => AREA_SET[state.area] || "overview";
+  let P = null, E = null, news = [], side = null;
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const fmtDate = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); };
@@ -194,17 +255,19 @@
   function readHash() {
     const p = new URLSearchParams(location.hash.slice(1));
     if (p.get("group") && P.groups[p.get("group")]) state.group = p.get("group");
-    if (p.get("set") && P.kpiSets[p.get("set")]) state.set = p.get("set");
+    const a = p.get("area"); if (a && AREA_SET[a]) state.area = a;
   }
   function writeHash() {
-    try { history.replaceState(null, "", "#group=" + state.group + "&set=" + state.set); } catch (e) {}
+    try { history.replaceState(null, "", "#group=" + state.group + (state.area !== "all" ? "&area=" + state.area : "")); } catch (e) {}
+    RadarSide.setArea(state.area);
   }
 
   Promise.all([
     fetch("data/peers.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
-    fetch("data/radar.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : { entries: [] })).catch(() => ({ entries: [] }))
-  ]).then(([peers, radar]) => {
-    P = peers;
+    fetch("data/radar.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : { entries: [] })).catch(() => ({ entries: [] })),
+    fetch("data/peer_emissions.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+  ]).then(([peers, radar, ets]) => {
+    P = peers; E = ets;
     news = (radar.entries || []).filter((e) => e && e.title && e.url);
     $("meta").textContent = "Updated " + fmtDate(P.meta.updated) + " · " + P.companies.length + " companies";
     $("note").textContent = (P.meta.note || "") + " ";
@@ -219,16 +282,16 @@
   });
 
   function build() {
-    Object.entries(P.groups).forEach(([k, label]) => {
-      const b = el("button", null, label); b.type = "button"; b.dataset.k = k;
-      b.addEventListener("click", () => { state.group = k; render(); });
-      $("groups").appendChild(b);
+    side = RadarSide.build($("side"), {
+      toggleLabel: "Peers & area",
+      onChange: (gid, key) => {
+        if (gid === "group") state.group = key;
+        else { state.area = key; state.sortKey = null; }
+        render();
+      }
     });
-    Object.entries(P.kpiSets).forEach(([k, s]) => {
-      const b = el("button", null, s.label); b.type = "button"; b.dataset.k = k;
-      b.addEventListener("click", () => { state.set = k; state.sortKey = null; render(); });
-      $("sets").appendChild(b);
-    });
+    $("dlg-x").addEventListener("click", () => $("dlg").close());
+    $("dlg").addEventListener("click", (ev) => { if (ev.target === $("dlg")) $("dlg").close(); });
     window.addEventListener("hashchange", () => { readHash(); render(); });
   }
 
@@ -278,8 +341,60 @@
     if (cell.src) { node.href = cell.src; node.target = "_blank"; node.rel = "noopener"; node.title = "Source" + (cell.y ? " · " + cell.y : "") + " – opens in a new tab"; }
     else if (cell.note) node.title = cell.note;
     frag.appendChild(node);
-    if (withYear && cell.y) frag.appendChild(el("span", "yr", cell.y));
+    // Trend vs. previous value (history is filled by the yearly update)
+    const prev = cell.history && cell.history.length ? cell.history[cell.history.length - 1] : null;
+    if (prev && def.kind !== "text") {
+      const a = score(key, cell), b = score(key, prev);
+      if (a != null && b != null) {
+        const t = el("span", "tr " + (a > b ? "up" : a < b ? "dn" : "eq"), a > b ? "↑" : a < b ? "↓" : "=");
+        t.title = "Previous" + (prev.y ? " (" + prev.y + ")" : "") + ": " + display(key, prev);
+        node.appendChild(t);
+      }
+    }
+    if (withYear && cell.y) frag.appendChild(el("span", "yr", cell.y + (prev && prev.y ? " · prev. " + prev.y + ": " + display(key, prev) : "")));
     return frag;
+  }
+
+  // ---- Pop-up: all KPIs of one company with their history ----
+  function openProfile(c) {
+    $("dlg-title").textContent = c.name;
+    $("dlg-sub").textContent = c.country + (c.report ? " · " + c.report.label : "");
+    const body = $("dlg-body");
+    body.replaceChildren();
+    if (c.report) { const a = el("a", null, "Open report ↗"); a.href = c.report.url; a.target = "_blank"; a.rel = "noopener"; a.style.fontSize = "13px"; a.style.fontWeight = "600"; body.appendChild(a); }
+    const seen = new Set();
+    Object.entries(P.kpiSets).forEach(([sk, set]) => {
+      const keys = set.kpis.filter((k) => !seen.has(k) && c.kpis[k] && (c.kpis[k].v != null || c.kpis[k].d));
+      if (!keys.length) return;
+      keys.forEach((k) => seen.add(k));
+      const sec = el("div");
+      sec.appendChild(el("p", "cap grp", set.label));
+      keys.forEach((k) => {
+        const cell = c.kpis[k];
+        const row = el("div", "hrow");
+        row.appendChild(el("span", null, P.kpis[k].label));
+        const steps = el("div", "steps");
+        (cell.history || []).forEach((h) => {
+          const st = el("span", "st", display(k, h)); st.appendChild(el("small", null, h.y || ""));
+          steps.append(st, el("span", "ln"));
+        });
+        const cur = el(cell.src ? "a" : "span", "st cur", cell.v == null ? cell.d : display(k, cell));
+        if (cell.src) { cur.href = cell.src; cur.target = "_blank"; cur.rel = "noopener"; cur.title = "Source – opens in a new tab"; }
+        cur.appendChild(el("small", null, (cell.y || "") + (cell.history && cell.history.length ? "" : (cell.y ? " · " : "") + "no history yet")));
+        steps.appendChild(cur);
+        row.appendChild(steps);
+        sec.appendChild(row);
+      });
+      body.appendChild(sec);
+    });
+    if (!seen.size) body.appendChild(el("p", "muted", "No KPIs found in public sources yet."));
+    if (c.targets && c.targets.length) {
+      const d = el("div"); d.appendChild(el("p", "cap grp", "Key targets & facts"));
+      const ul = el("ul"); ul.style.cssText = "margin:6px 0 0;padding-left:18px;font-size:13px;color:#374151;display:flex;flex-direction:column;gap:4px";
+      c.targets.forEach((t) => ul.appendChild(el("li", null, t))); d.appendChild(ul); body.appendChild(d);
+    }
+    body.appendChild(el("p", "muted", "History builds up with each yearly update: the previous value is kept when a KPI changes."));
+    $("dlg").showModal();
   }
 
   function sortList(list) {
@@ -295,10 +410,17 @@
   }
 
   function render() {
-    document.querySelectorAll("#groups button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.k === state.group)));
-    document.querySelectorAll("#sets button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.k === state.set)));
+    const gCount = (g) => P.companies.filter((c) => g === "all" || c.groups.includes(g)).length;
+    side.refresh([
+      { id: "group", title: "Peer group", selected: state.group,
+        items: Object.entries(P.groups).map(([k, label]) => ({ key: k, label: k === "all" ? "All peers" : label, count: gCount(k) })) },
+      { id: "area", title: "Area", selected: state.area,
+        items: RadarSide.areaItems(Object.keys(AREA_SET).filter((k) => k !== "all")) }
+    ]);
     writeHash();
-    const keys = P.kpiSets[state.set].kpis;
+    const set = P.kpiSets[setKey()];
+    $("title").textContent = "Peer benchmark · " + set.label;
+    const keys = set.kpis;
     const list = sortList(companies());
     const rate = {}; keys.forEach((k) => { rate[k] = ratings(k, list); });
 
@@ -336,6 +458,10 @@
     const oRate = {}; overview.forEach((k) => { oRate[k] = ratings(k, list); });
     $("profiles").replaceChildren(...list.map((c) => {
       const card = el("article", "pcard" + (c.isUs ? " us" : ""));
+      card.tabIndex = 0;
+      card.setAttribute("aria-label", c.name + " – open KPIs and history");
+      card.addEventListener("click", (ev) => { if (!ev.target.closest("a")) openProfile(c); });
+      card.addEventListener("keydown", (ev) => { if (ev.key === "Enter") openProfile(c); });
       const ph = el("div", "ph");
       const right = el("span", null, c.country + (c.report ? " · " : ""));
       if (c.report) { const a = el("a", null, c.report.label + " ↗"); a.href = c.report.url; a.target = "_blank"; a.rel = "noopener"; right.appendChild(a); }
@@ -369,8 +495,112 @@
         d2.appendChild(ul);
       } else d2.appendChild(el("p", "muted", "No news on the radar yet."));
       card.appendChild(d2);
+      const more = el("button", "more", "All KPIs & history →"); more.type = "button";
+      card.appendChild(more);
       return card;
     }));
+    renderEts(list);
+  }
+
+  // ---------- EU ETS verified emissions (Union Registry) ----------
+  const kt = (t) => (t / 1000).toLocaleString("en-GB", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const tco2 = (t) => Math.round(t).toLocaleString("en-GB");
+  function renderEts(list) {
+    const box = $("ets");
+    box.hidden = !(state.area === "all" || state.area === "climate");
+    if (box.hidden) return;
+    const tbl = $("ets-tbl");
+    const mapped = E && E.companies ? list.filter((c) => E.companies[c.id]) : [];
+    const others = list.filter((c) => !mapped.includes(c));
+    if (!E || !E.companies) {
+      $("ets-sub").textContent = "Scope 1 CO₂ of EU sites, from the EU emissions registry";
+      tbl.replaceChildren(Object.assign(el("caption", null, "Data arrives with the next run of the GitHub Action."), { style: "caption-side:top;text-align:left;padding:18px 0;color:#8a94a3;font-size:13.5px" }));
+      $("ets-foot").textContent = "";
+      return;
+    }
+    const years = E.years || [];
+    const last = years[years.length - 1], prev = years[years.length - 2], first = years[0];
+    $("ets-sub").textContent = `Scope 1 CO₂ of EU sites · kt CO₂e · ${last} · ${E.source.attribution}`;
+    const rows = mapped.map((c) => ({ c, d: E.companies[c.id] })).sort((a, b) => (b.d.total[last] || 0) - (a.d.total[last] || 0));
+    const maxV = Math.max(1, ...rows.map((r) => r.d.total[last] || 0));
+    const thead = el("thead"), hr = el("tr");
+    ["Company", "Sites", `${last} · kt CO₂e`, `vs. ${prev || "–"}`, `Trend ${first}–${last}`, ""].forEach((h) => { const th = el("th"); th.appendChild(el("span", null, h)); hr.appendChild(th); });
+    thead.appendChild(hr);
+    const tbody = el("tbody");
+    rows.forEach(({ c, d }) => {
+      const tr = el("tr", c.isUs ? "us" : "");
+      tr.tabIndex = 0; tr.title = "Show the sites";
+      const open = () => openSites(c, d);
+      tr.addEventListener("click", open); tr.addEventListener("keydown", (ev) => { if (ev.key === "Enter") open(); });
+      const td0 = el("td", "co"); td0.append(el("b", null, c.name), el("small", null, c.country)); tr.appendChild(td0);
+      tr.appendChild(el("td", "num", String(d.installations.length)));
+      const n = d.installations.length;
+      const incomplete = (y) => d.reporting && d.total[y] != null && (d.reporting[y] || 0) < n;
+      const v = d.total[last];
+      const tdB = el("td"); const bar = el("div", "bar");
+      if (v != null) {
+        const i = el("i"); i.style.width = Math.max(2, (v / maxV) * 140) + "px";
+        const b = el("b", null, kt(v));
+        bar.append(b, i);
+        if (incomplete(last)) { const st = el("span", "star", "*"); st.title = `Only ${d.reporting[last]} of ${n} sites reported for ${last}`; b.appendChild(st); }
+      } else bar.appendChild(el("span", "muted", n ? "no value for " + last : "no sites found"));
+      tdB.appendChild(bar); tr.appendChild(tdB);
+      const tdC = el("td", "chg");
+      if (v != null && d.total[prev]) {
+        const pct = (100 * (v - d.total[prev])) / d.total[prev];
+        tdC.append(el("span", "a", pct > 0.05 ? "▲" : pct < -0.05 ? "▼" : "▬"), document.createTextNode(`${pct > 0 ? "+" : ""}${pct.toFixed(1)} %`));
+        if (incomplete(prev) || incomplete(last)) { const st = el("span", "star", " *"); st.title = "Not all sites reported in both years – the change is distorted"; tdC.appendChild(st); }
+      } else tdC.textContent = "–";
+      tr.appendChild(tdC);
+      const tdS = el("td"); tdS.appendChild(sparkSvg(years.map((y) => d.total[y]))); tr.appendChild(tdS);
+      const tdG = el("td"); const g = el("button", "go", "Sites →"); g.type = "button"; tdG.appendChild(g); tr.appendChild(tdG);
+      tbody.appendChild(tr);
+    });
+    tbl.replaceChildren(thead, tbody);
+    $("ets-foot").textContent = "Covers only sites in the EU ETS (EU, Norway, Iceland, Liechtenstein) – not the UK, Switzerland or other countries. Absolute values reflect size and energy setup (e.g. own power plants), not efficiency. * = not all sites reported that year." +
+      (others.length ? " No EU ETS mapping for: " + others.map((c) => c.name).join(", ") + "." : "") + " Source: " + E.source.attribution + ", file " + E.source.year + ".";
+  }
+  function sparkSvg(vals) {
+    const NS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(NS, "svg"); svg.setAttribute("class", "sp"); svg.setAttribute("viewBox", "0 0 120 28"); svg.setAttribute("aria-hidden", "true");
+    const pts = vals.map((v, i) => [i, v]).filter((p) => p[1] != null);
+    if (pts.length < 2) return svg;
+    const vs = pts.map((p) => p[1]), lo = Math.min(...vs), hi = Math.max(...vs);
+    const x = (i) => 4 + (i / Math.max(1, vals.length - 1)) * 112, y = (v) => 24 - ((v - lo) / (hi - lo || 1)) * 20;
+    const path = document.createElementNS(NS, "path");
+    path.setAttribute("d", pts.map((p, k) => (k ? "L" : "M") + x(p[0]).toFixed(1) + " " + y(p[1]).toFixed(1)).join(""));
+    path.setAttribute("fill", "none"); path.setAttribute("stroke", "#002d55"); path.setAttribute("stroke-width", "2"); path.setAttribute("stroke-linejoin", "round");
+    svg.appendChild(path);
+    const lp = pts[pts.length - 1]; const dot = document.createElementNS(NS, "circle");
+    dot.setAttribute("cx", x(lp[0])); dot.setAttribute("cy", y(lp[1])); dot.setAttribute("r", "2.8"); dot.setAttribute("fill", "#002d55");
+    svg.appendChild(dot);
+    return svg;
+  }
+  function openSites(c, d) {
+    const years = E.years;
+    $("dlg-title").textContent = c.name + " · EU ETS sites";
+    $("dlg-sub").textContent = `${d.installations.length} site(s) · verified emissions in t CO₂e · ${E.source.attribution}`;
+    const body = $("dlg-body"); body.replaceChildren();
+    if (!d.installations.length) { body.appendChild(el("p", "muted", "No installations matched. Add them in config/peer_installations.json.")); $("dlg").showModal(); return; }
+    const wrap = el("div", "tbl-wrap"); const t = el("table", "sites");
+    const hr = el("tr"); hr.appendChild(el("th", null, "Site")); years.forEach((y) => hr.appendChild(el("th", null, y)));
+    const thead = el("thead"); thead.appendChild(hr); t.appendChild(thead);
+    const tb = el("tbody");
+    d.installations.forEach((i) => {
+      const tr = el("tr"); const td = el("td"); td.append(document.createTextNode(i.name), el("small", null, [i.key, i.city, i.activity].filter(Boolean).join(" · ")));
+      tr.appendChild(td);
+      years.forEach((y) => tr.appendChild(el("td", null, i.emissions[y] != null ? tco2(i.emissions[y]) : "–")));
+      tb.appendChild(tr);
+    });
+    const tot = el("tr", "tot"); tot.appendChild(el("td", null, "Total"));
+    years.forEach((y) => tot.appendChild(el("td", null, d.total[y] != null ? tco2(d.total[y]) + (d.reporting && (d.reporting[y] || 0) < d.installations.length ? " *" : "") : "–")));
+    tb.appendChild(tot); t.appendChild(tb); wrap.appendChild(t); body.appendChild(wrap);
+    const note = el("p", "muted");
+    note.textContent = "Sites are assigned automatically by name. Wrong or missing site? Add its code (e.g. DE-1234) to \"exclude\" or \"include\" for this company in config/peer_installations.json – the next weekly run updates the numbers.";
+    const src = el("a", null, "Union Registry ↗"); src.href = E.source.page; src.target = "_blank"; src.rel = "noopener";
+    note.append(" Source: ", src);
+    body.appendChild(note);
+    $("dlg").showModal();
   }
 })();
 </script>
