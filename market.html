@@ -223,8 +223,11 @@
 <script src="assets/side.js"></script>
 <script>
 (function () {
-  // WEPA-based series colours (Grün, Mittelblau, coral from WEPA Pink, cyan from Hellblau), checked for colour-blind safety in this order
-  const SLOTS = ["#009b82", "#0064aa", "#d9785e", "#3fa9c0"]; // fixed order; a series keeps its colour while selected
+  // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
+  // This order keeps neighbouring colours distinguishable for colour-blind readers; light colours get labels at the line end.
+  const SLOTS = ["#33b09c", "#0064aa", "#f4b49f", "#335777", "#96d2dc"]; // fixed order; a series keeps its colour while selected
+  const MAX_LINES = 4;
+  const LIGHT = new Set(["#f4b49f", "#96d2dc"]); // light colours: dark tick mark instead of white
   const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
   const EARLIEST = "2019-01";
   const DEFAULT_CMP = ["ppi_tissue", "ppi_pulp", "us_recovered_paper", "gas_ttf", "us_wood_pulp", "elec_de"];
@@ -474,7 +477,7 @@
     if (pts.length < 2) return svg;
     const vs = pts.map((p) => p[1]); const lo = Math.min(...vs), hi = Math.max(...vs) || 1;
     const d = pts.map((p, k) => (k ? "L" : "M") + ((k / (pts.length - 1)) * 198 + 1).toFixed(1) + " " + (31 - ((p[1] - lo) / (hi - lo || 1)) * 28).toFixed(1)).join("");
-    svg.appendChild(svgEl("path", { d, fill: "none", stroke: color || "#002d55", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
+    svg.appendChild(svgEl("path", { d, fill: "none", stroke: color || "#335777", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
     return svg;
   }
   function tile(ind) {
@@ -484,7 +487,7 @@
     if (can) { t.type = "button"; t.setAttribute("aria-pressed", String(sel)); t.title = sel ? "Remove from chart" : "Add to chart"; t.addEventListener("click", (e) => { if (!e.target.closest("a")) toggle(ind.id); }); }
     if (sel) t.style.setProperty("--sel", colorOf[ind.id]);
     t.appendChild(el("div", "lbl", ind.label));
-    if (can) { const p = el("span", "pin", sel ? "✓" : ""); p.setAttribute("aria-hidden", "true"); t.appendChild(p); }
+    if (can) { const p = el("span", "pin", sel ? "✓" : ""); p.setAttribute("aria-hidden", "true"); if (sel && LIGHT.has(colorOf[ind.id])) p.style.color = "#002d55"; t.appendChild(p); }
     if (!hasData(ind)) {
       t.appendChild(el("div", "na", "No data yet – arrives with the next weekly run."));
     } else {
@@ -511,7 +514,7 @@
   }
   function toggle(id) {
     if (state.cmp.includes(id)) state.cmp = state.cmp.filter((c) => c !== id);
-    else { if (state.cmp.length >= SLOTS.length) state.cmp.shift(); state.cmp.push(id); }
+    else { if (state.cmp.length >= MAX_LINES) state.cmp.shift(); state.cmp.push(id); }
     renderAll();
   }
   // Grid carbon intensity: one ranked table (12-month averages smooth out the seasons), tiles below
@@ -560,7 +563,7 @@
     const svg = svgEl("svg", { class: "gsp", viewBox: "0 0 110 24", "aria-hidden": "true" });
     if (vals.length < 2) return svg;
     const lo = Math.min(...vals), hi = Math.max(...vals);
-    svg.appendChild(svgEl("path", { d: vals.map((v, k) => (k ? "L" : "M") + (2 + (k / (vals.length - 1)) * 106).toFixed(1) + " " + (21 - ((v - lo) / (hi - lo || 1)) * 18).toFixed(1)).join(""), fill: "none", stroke: "#002d55", "stroke-width": 2, "stroke-linejoin": "round" }));
+    svg.appendChild(svgEl("path", { d: vals.map((v, k) => (k ? "L" : "M") + (2 + (k / (vals.length - 1)) * 106).toFixed(1) + " " + (21 - ((v - lo) / (hi - lo || 1)) * 18).toFixed(1)).join(""), fill: "none", stroke: "#335777", "stroke-width": 2, "stroke-linejoin": "round" }));
     return svg;
   }
 
@@ -629,14 +632,14 @@
     const box = el("div", "ind-list");
     const vis = visible().filter(chartable);
     if (!vis.length) { box.appendChild(el("p", "ps-empty", "No chartable data yet.")); return box; }
-    const full = state.cmp.length >= SLOTS.length;
+    const full = state.cmp.length >= MAX_LINES;
     Object.entries(M.groups).forEach(([g, label]) => {
       const items = vis.filter((i) => i.group === g); if (!items.length) return;
       box.appendChild(el("p", "ind-grp", label));
       items.forEach((i) => {
         const on = state.cmp.includes(i.id);
         const b = el("button", "ind"); b.type = "button"; b.setAttribute("role", "checkbox"); b.setAttribute("aria-checked", String(on));
-        const c = cbox(on); if (on) c.style.background = colorOf[i.id];
+        const c = cbox(on); if (on) { c.style.background = colorOf[i.id]; if (LIGHT.has(colorOf[i.id])) c.style.color = "#002d55"; }
         b.append(c, el("span", null, shortName(i)));
         b.title = i.label;
         if (!on && full) { b.disabled = true; b.title = "Up to 4 lines – untick one first"; }
@@ -672,7 +675,7 @@
     document.addEventListener("click", (e) => { if (ui.open && !e.target.closest(".ps")) { ui.open = false; side.refresh(sideGroups()); } });
     const avail = new Set(M.indicators.flatMap((i) => i.areas || []));
     if (state.area !== "all" && !avail.has(state.area)) state.area = "all";
-    state.cmp = state.cmp.filter((id) => M.indicators.some((i) => i.id === id && chartable(i))).slice(0, SLOTS.length);
+    state.cmp = state.cmp.filter((id) => M.indicators.some((i) => i.id === id && chartable(i))).slice(0, MAX_LINES);
     if (!new URLSearchParams(location.hash.slice(1)).has("cmp")) state.cmp = defaultCmp();
     renderAll();
   }).catch(() => {

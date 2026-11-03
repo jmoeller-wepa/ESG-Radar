@@ -38,8 +38,8 @@ EP_API = "https://data.europarl.europa.eu/api/v2/procedures/{pid}"
 OEIL = "https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference={ref}"
 
 
-def get_json(url, ua=UA, timeout=60):
-    req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": "application/json, application/ld+json;q=0.9"})
+def get_json(url, ua=UA, timeout=60, accept="application/json, text/plain, */*"):
+    req = urllib.request.Request(url, headers={"User-Agent": ua, "Accept": accept, "Accept-Language": "en"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
@@ -137,7 +137,11 @@ def collect_consultations(cfg, area_matchers, topic_words):
         for page in range(cfg.get("maxPages", 6)):
             q = {**variant, "page": page, "size": 50}
             url = HYS_API + "?" + urllib.parse.urlencode(q)
-            data = get_json(url)
+            try:
+                data = get_json(url)
+            except Exception as exc:  # noqa: BLE001 - note it and try the next variant
+                debug["attempts"].append({"url": url, "error": str(exc)[:200]})
+                break
             items = initiatives_from(data)
             pages += 1
             if page == 0:
@@ -168,8 +172,9 @@ def collect_consultations(cfg, area_matchers, topic_words):
                 found.append(c)
             if len(items) < 50:
                 break
-        debug["attempts"][-1]["openFound"] = len(seen)
-        debug["attempts"][-1]["read"] = total
+        if debug["attempts"]:
+            debug["attempts"][-1]["openFound"] = len(seen)
+            debug["attempts"][-1]["read"] = total
         if seen:
             break
     # Saved so the format can be checked from GitHub if the portal changes (small file, overwritten each run)
@@ -200,7 +205,7 @@ def procedure_info(ref):
     fmt = "?" + urllib.parse.urlencode({"format": "application/ld+json"})
     title = ""
     try:
-        proc = get_json(base + fmt, ua=EP_UA)
+        proc = get_json(base + fmt, ua=EP_UA, accept="application/ld+json, application/json;q=0.9")
         for d in walk(proc):
             t = text_of(d.get("process_title") or d.get("title") or d.get("label"))
             if t and len(t) > 15:
@@ -208,7 +213,7 @@ def procedure_info(ref):
                 break
     except Exception:  # noqa: BLE001 - the events are what matters
         pass
-    events_raw = get_json(base + "/events" + fmt, ua=EP_UA)
+    events_raw = get_json(base + "/events" + fmt, ua=EP_UA, accept="application/ld+json, application/json;q=0.9")
     events = {}
     for d in walk(events_raw):
         when = None

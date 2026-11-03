@@ -221,7 +221,6 @@
       "dataset": "nrg_pc_205",
       "params": {
         "geo": "DE",
-        "product": "6000",
         "nrg_cons": "MWH2000-19999",
         "unit": "KWH",
         "tax": "X_VAT",
@@ -263,7 +262,6 @@
       "dataset": "nrg_pc_203",
       "params": {
         "geo": "DE",
-        "product": "4100",
         "nrg_cons": "GJ10000-99999",
         "unit": "KWH",
         "tax": "X_VAT",

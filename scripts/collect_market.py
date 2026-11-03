@@ -201,19 +201,31 @@ EMBER_URL = "https://files.ember-energy.org/public-downloads/monthly_full_releas
 _ember_cache = {}
 
 
-def ember_table():
+def _ember_follow(url):
+    return ember_table(url)
+
+
+def ember_table(url=None):
     """{area key -> {YYYY-MM: gCO2/kWh}} for every country in the monthly file (downloaded once per run)."""
     if "t" in _ember_cache:
         return _ember_cache["t"]
-    req = urllib.request.Request(EMBER_URL, headers={"User-Agent": UA})
+    url = url or EMBER_URL
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
     table, seen_vars, header = {}, {}, None
     with urllib.request.urlopen(req, timeout=300) as resp:
         raw = resp
-        if EMBER_URL.endswith(".gz") or (getattr(resp, "headers", None) or {}).get("Content-Encoding") == "gzip":
+        if url.split("?")[0].endswith(".gz") or (getattr(resp, "headers", None) or {}).get("Content-Encoding") == "gzip":
             import gzip
             raw = gzip.GzipFile(fileobj=resp)
         reader = csv.DictReader(io.TextIOWrapper(raw, encoding="utf-8-sig", newline=""))
         header = reader.fieldnames
+        if header and "new_url" in [h.strip().lower() for h in header]:
+            # Ember moved the file: the old address now returns a one-line notice with the new address
+            row = next(reader, {}) or {}
+            new_url = next((v for k, v in row.items() if k and k.strip().lower() == "new_url"), "")
+            if new_url and new_url.startswith("http") and not _ember_cache.get("moved"):
+                _ember_cache["moved"] = new_url
+                return _ember_follow(new_url)
         norm = {k: re.sub(r"[^a-z0-9]", "", (k or "").lower()) for k in (header or [])}
         find = lambda *names: next((k for k, n in norm.items() if n in names), None)
         c_area, c_iso, c_date = find("area", "country", "entity"), find("iso3code", "iso3", "countrycode"), find("date", "month")

@@ -267,8 +267,9 @@
     </div>
     <nav class="nav" aria-label="Pages"><a href="./" aria-current="page" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
     <label class="search hsearch">
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#8a94a3" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
-      <input id="q" type="search" placeholder="Search the radar" aria-label="Search the radar">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+      <input id="q" type="search" placeholder="Search news, regulation, tools …" aria-label="Search all entries">
+      <span class="kbd" title="Press / to search">/</span>
     </label>
     <span class="meta" id="meta">Loading…</span>
   </div>
@@ -568,6 +569,7 @@
     $("rel").addEventListener("change", (ev) => { state.rel = ev.target.value; render(); syncCount(); });
     $("impact").addEventListener("change", (ev) => { state.impact = ev.target.value; sync(); render(); });
     $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
+    document.addEventListener("keydown", (ev) => { if (ev.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { ev.preventDefault(); $("q").focus(); } });
     $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); syncCount(); });
     // Footer legend
     const key = $("key-rel");

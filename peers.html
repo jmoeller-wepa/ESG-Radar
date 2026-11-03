@@ -165,6 +165,15 @@
   .sites th:first-child, .sites td:first-child { text-align: left; white-space: normal; min-width: 220px; }
   .sites td small { display: block; color: var(--ink-3); font-size: 11.5px; }
   .sites tr.tot td { font-weight: 600; border-top: 1px solid var(--line); background: #fafbfc; }
+  .co-list { display: flex; flex-direction: column; gap: 1px; padding: 0 2px; }
+  .co-item { display: flex; align-items: center; gap: 9px; border: 0; background: none; padding: 5px 8px; border-radius: 7px; font: inherit; font-size: 13px; color: #374151; cursor: pointer; text-align: left; }
+  .co-item:hover:not(:disabled) { background: #f5f7f9; }
+  .co-item:disabled { cursor: default; color: var(--blue-900); font-weight: 600; }
+  .co-item small { margin-left: auto; font-size: 11px; font-weight: 400; color: #9aa2ae; }
+  .cbx { width: 15px; height: 15px; border-radius: 4px; border: 1.5px solid #c4ccd6; flex: none; display: grid; place-items: center; font-size: 10px; line-height: 1; color: #fff; box-sizing: border-box; }
+  .cbx.on { border: 0; background: var(--wepa-mid, #0064aa); }
+  .co-foot { display: flex; justify-content: space-between; align-items: center; margin: 6px 8px 2px; font-size: 11.5px; color: #9aa2ae; }
+  .co-foot button { border: 0; background: none; color: #0064aa; font: inherit; font-size: 12px; cursor: pointer; padding: 0; }
   footer { border-top: 1px solid var(--line); padding: 16px 0 28px; font-size: 12.5px; color: var(--ink-3); }
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
@@ -248,7 +257,7 @@
 (function () {
   // Area (sidebar) → KPI set. Data & AI has no peer KPIs.
   const AREA_SET = { all: "overview", climate: "climate", forests: "forests", circularity: "circularity", water: "water", people: "people", reporting: "ratings" };
-  const state = { group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1 };
+  const state = { group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1, hidden: new Set() };
   if (!AREA_SET[state.area]) state.area = "all";
   const setKey = () => AREA_SET[state.area] || "overview";
   let P = null, E = null, news = [], side = null;
@@ -261,9 +270,10 @@
     const p = new URLSearchParams(location.hash.slice(1));
     if (p.get("group") && P.groups[p.get("group")]) state.group = p.get("group");
     const a = p.get("area"); if (a && AREA_SET[a]) state.area = a;
+    if (p.get("hide") != null) state.hidden = new Set(p.get("hide").split(",").filter((id) => P.companies.some((c) => c.id === id && !c.isUs)));
   }
   function writeHash() {
-    try { history.replaceState(null, "", "#group=" + state.group + (state.area !== "all" ? "&area=" + state.area : "")); } catch (e) {}
+    try { history.replaceState(null, "", "#group=" + state.group + (state.area !== "all" ? "&area=" + state.area : "") + (state.hidden.size ? "&hide=" + [...state.hidden].join(",") : "")); } catch (e) {}
     RadarSide.setArea(state.area);
   }
 
@@ -291,7 +301,7 @@
     lg.className = "side-legend peers-legend";
     side = RadarSide.build($("side"), {
       toggleLabel: "Peers & area",
-      extra: [{ id: "legend", title: "Legend", node: lg }],
+      extra: [{ id: "companies", title: "Companies", node: companyNode }, { id: "legend", title: "Legend", node: lg }],
       onChange: (gid, key) => {
         if (gid === "group") state.group = key;
         else { state.area = key; state.sortKey = null; }
@@ -303,7 +313,27 @@
     window.addEventListener("hashchange", () => { readHash(); render(); });
   }
 
-  const companies = () => P.companies.filter((c) => state.group === "all" || c.groups.includes(state.group));
+  // WEPA (isUs) is always part of every peer group as the reference; unticked companies are hidden
+  const inGroup = (c) => c.isUs || state.group === "all" || c.groups.includes(state.group);
+  const companies = () => P.companies.filter((c) => inGroup(c) && !state.hidden.has(c.id));
+  function companyNode() {
+    const box = el("div", "co-list");
+    const list = P.companies.filter(inGroup);
+    list.forEach((c) => {
+      const on = !state.hidden.has(c.id);
+      const b = el("button", "co-item"); b.type = "button"; b.setAttribute("role", "checkbox"); b.setAttribute("aria-checked", String(on));
+      const cb = el("span", "cbx" + (on ? " on" : ""), on ? "✓" : ""); b.append(cb, el("span", null, c.name));
+      if (c.isUs) { b.disabled = true; b.title = "Always shown as the reference"; b.appendChild(el("small", null, "always")); }
+      else b.addEventListener("click", () => { on ? state.hidden.add(c.id) : state.hidden.delete(c.id); render(); });
+      box.appendChild(b);
+    });
+    const shown = list.filter((c) => !state.hidden.has(c.id)).length;
+    const foot = el("div", "co-foot");
+    foot.appendChild(el("span", null, shown + " of " + list.length + " shown"));
+    if (state.hidden.size) { const r = el("button", null, "Show all"); r.type = "button"; r.addEventListener("click", () => { state.hidden.clear(); render(); }); foot.appendChild(r); }
+    box.appendChild(foot);
+    return box;
+  }
 
   // Comparable score for a value (higher = better), or null
   function score(key, cell) {
@@ -418,7 +448,7 @@
   }
 
   function render() {
-    const gCount = (g) => P.companies.filter((c) => g === "all" || c.groups.includes(g)).length;
+    const gCount = (g) => P.companies.filter((c) => c.isUs || g === "all" || c.groups.includes(g)).length;
     side.refresh([
       { id: "group", title: "Peer group", selected: state.group,
         items: Object.entries(P.groups).map(([k, label]) => ({ key: k, label: k === "all" ? "All peers" : label, count: gCount(k) })) },
