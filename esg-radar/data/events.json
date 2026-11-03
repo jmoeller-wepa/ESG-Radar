@@ -1,0 +1,21 @@
+{
+  "_comment": "Events shown in the 'What's ahead' panel (Events tab). Add events with the update prompt or by hand. area: one of climate, forests, circularity, water, people, reporting, data.",
+  "events": [
+    {
+      "id": "fabcon-2027",
+      "date": "2027-03-08", "end": "2027-03-12",
+      "title": "FabCon & SQLCon 2027 (Microsoft Fabric Community Conference)",
+      "location": "USA – venue to be announced",
+      "area": "data", "kind": "Conference",
+      "url": "https://senturus.com/events/microsoft-fabric-community-conference-fabcon-2027/"
+    },
+    {
+      "id": "fabcon-europe-2027",
+      "date": "2027-10-25", "end": "2027-10-28",
+      "title": "FabCon Europe 2027",
+      "location": "RAI Amsterdam, Netherlands",
+      "area": "data", "kind": "Conference",
+      "url": "https://espc.tech/conference/fabcon-europe-2027/"
+    }
+  ]
+}

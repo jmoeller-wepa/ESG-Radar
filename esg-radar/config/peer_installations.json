@@ -1,0 +1,16 @@
+{
+  "_comment": "Which EU ETS installations belong to which peer. scripts/collect_ets.py matches the installation name (and the account holder, if the file has it) against 'patterns' (case-insensitive regular expressions). Check the matches in the pop-up on the Peers page after the first run: add wrong ones to 'exclude' and missing ones to 'include' as \"<country code>-<installation id>\", e.g. \"DE-1234\". Only sites in the EU, Norway, Iceland and Liechtenstein are covered (not the UK or Switzerland).",
+  "source": {
+    "page": "https://climate.ec.europa.eu/areas-action/carbon-markets/eu-emissions-trading-system-eu-ets/union-registry_en",
+    "fallback": "https://climate.ec.europa.eu/document/download/53018483-62b3-499e-9ab9-b4a831cc44f4_en?filename=verified_emissions_2025_en.xlsx",
+    "attribution": "European Commission, Union Registry – verified emissions (CC BY 4.0)"
+  },
+  "companies": {
+    "wepa":         { "patterns": ["\\bWEPA\\b", "Krengel"], "include": [], "exclude": [] },
+    "essity":       { "patterns": ["\\bEssity\\b", "SCA Hygiene", "SCA Tissue"], "include": [], "exclude": [] },
+    "sofidel":      { "patterns": ["\\bSofidel\\b", "\\bSoffass\\b", "Werra Papier", "Delitissue"], "include": [], "exclude": [] },
+    "metsa-tissue": { "patterns": ["Mets[äa] Tissue"], "include": [], "exclude": [] },
+    "lucart":       { "patterns": ["\\bLucart\\b"], "include": [], "exclude": [] }
+  },
+  "_notGlobal": "The global peers (Kimberly-Clark, P&G, Georgia-Pacific, APP, Hengan, CMPC Softys, Kruger) have no or almost no tissue mills in the EU, so their EU ETS numbers would not be representative. Add them here only if that changes."
+}
