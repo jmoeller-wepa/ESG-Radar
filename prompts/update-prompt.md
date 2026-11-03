@@ -41,6 +41,9 @@ Return a JSON array in a code block (no commentary inside it) of objects in exac
   "date": "YYYY-MM-DD (publication or decision date)",
   "type": "regulation" | "practice",
   "areas": ["1–2 of: climate, forests, circularity, water, people, reporting, data"],
+  "impacts": ["1–2 of: reporting (changes what/how we report), datamodel (new data points or calculation logic),
+              suppliers (supplier data or due diligence), products (product, packaging or claims), costs (direct cost effect),
+              watch (no action yet)"],
   "tags": ["max 3 short tags"],
   "title": "One-line headline, max 110 characters",
   "summary": "2–3 factual sentences: what happened, key numbers, dates.",
@@ -57,4 +60,15 @@ Return a JSON array in a code block (no commentary inside it) of objects in exac
 
 After the JSON array, list any existing topics whose status changed (e.g. a proposal adopted),
 so I can update those entries by hand.
+
+Then, in a second JSON code block, list up to 5 upcoming EVENTS (next 18 months) that matter for this
+team: Microsoft Fabric / Power BI conferences, EFRAG/ESRS webinars, CSRD or ESG reporting conferences
+in Europe. Only events with a confirmed date on an official page. Format:
+{ "id": "kebab-id", "date": "YYYY-MM-DD (first day)", "end": "YYYY-MM-DD (last day)", "title": "…",
+  "location": "City, venue or Online", "area": "one of: climate, forests, circularity, water, people, reporting, data",
+  "kind": "Conference | Webinar | Deadline event", "url": "https://… (official page)" }
 ```
+
+**Events:** paste the objects from the second code block into `data/events.json` (inside the `events` list) and delete events that are over. They appear in the **Events** tab of the "What's ahead" panel on the News page.
+
+**Roadmap (Regulation page):** when a topic changes phase (e.g. a proposal is adopted, an application date moves), adjust the matching row in `data/roadmap.json` (phases with `from`, `to`, `status`: proposal | adopted | applies). New official steps from the European Parliament are added automatically; if a new topic gets an EU procedure, add its number in `config/regulation.json`.

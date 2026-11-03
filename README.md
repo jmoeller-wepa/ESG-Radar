@@ -1,85 +1,136 @@
-# ESG Data & Tech Radar
+# ESG Radar
 
-A lightweight web page for the sustainability team. It tracks regulation, tool updates and best practice across seven ESG areas:
+A lightweight website for the sustainability team, with four pages that share the same header, status dot and sidebar (the seven ESG areas):
 
 Climate & Energy · Forests & Biodiversity · Circularity & Packaging · Water & Pollution · People & Supply chain · Reporting & Governance · Data & AI
 
-**Features**
-- Area bar to switch areas; the deadlines panel and the cards follow the selected area. Views can be shared as links, e.g. `…/#area=circularity` or `…/#tab=monthly`.
-- **New** tab: entries added since your last visit (remembered per browser).
-- **Star** on each card to save it; the **Saved** button shows your saved cards (also per browser, no login).
-- Optional monthly **Teams post** with the new high-relevance items (see below).
-
-It only uses public information. There are no licenses, no servers and no internal data.
-
-## How it works
-
-| Part | What it does |
+| Page | What it shows |
 |---|---|
-| `index.html` | The radar page. It reads `data/radar.json` and shows deadlines, filters and cards. |
-| `peers.html` | The peer benchmark page. It reads `data/peers.json` (KPIs) and `data/radar.json` (news). |
-| `data/peers.json` | Peer KPIs with sources. Updated yearly with `prompts/peers-update-prompt.md`. |
-| `data/radar.json` | All entries. The feed run adds to it automatically. |
-| `config/feeds.json` | RSS feeds, keywords and automatic relevance rules. |
-| `.github/workflows/collect-feeds.yml` | Runs on the 1st of every month, adds and rates new feed items, and publishes. |
-| `scripts/collect_feeds.py` | The collector the workflow runs. It also assigns areas by keyword (`areaKeywords` in `config/feeds.json`). |
-| `scripts/post_teams.py` | Sends the monthly Teams post (only if a Teams webhook is set up). |
-| `data/last_run.json` | Created automatically: what the last feed run added (used for the Teams post). |
-| `prompts/update-prompt.md` | Optional prompt for curated regulation and best-practice entries (e.g. in M365 Copilot). |
-| `data/archive.json` | Created automatically: feed items older than 365 days move here. |
+| **News** (`index.html`) | News, regulation, tool updates and best practice as cards. Above them is the **What's ahead** panel: **Deadlines** · **Timeline** · **Events**, plus **Coming next** (planned Fabric / Power BI features by quarter) when Data & AI is selected. |
+| **Regulation** (`regulation.html`) | Open EU consultations that match our topics ("Give feedback" links), and a **tracker** with one row per law or standard: stage, latest official step, next date. Switch to **Roadmap** for the 2024–2030 phase view. Click a topic for all steps, upcoming dates and related news. |
+| **Peers** (`peers.html`) | Public sustainability KPIs of 12 tissue companies, with colour-coded comparison, trend arrows and a history pop-up per company. For *All areas* and *Climate & Energy* it also shows the **EU ETS verified emissions** of the European peers, per company and per site. |
+| **Market** (`market.html`) | Free official statistics behind tissue costs: producer prices for tissue, pulp and paper, energy prices, renewable share, carbon price and EUR/USD. Shows a compare chart (index = 100) and one tile per indicator. |
 
-**Fully automatic monthly rhythm, no review needed**
-- On the 1st, the workflow reads the feeds and keeps items that match the keywords. It rates them automatically:
-  - The monthly **Power BI / Fabric feature summaries** are always rated *high* and appear in the "Monthly feature updates" tab.
-  - Items matching a feed's `highKeywords` are rated *high*, and everything else gets the feed's `defaultRelevance`.
-- Items older than a year are archived automatically.
-- *Optional, e.g. quarterly:* run `prompts/update-prompt.md` in M365 Copilot to add curated regulation entries with deadlines and a "Why it matters for us" line.
+It only uses public information. There are no licences, no servers and no internal data.
 
-## Setup (about 15 minutes, once)
+## Features
 
-1. **Create a repository** on GitHub, e.g. `esg-radar`, and upload all files in this folder, keeping the folder structure (including the hidden `.github` folder; see the tip below).
-2. **Allow the workflow to save changes:** Settings → Actions → General → *Workflow permissions* → **Read and write permissions** → Save.
-3. **Turn on the website:** Settings → Pages → *Build and deployment* → Source: **Deploy from a branch**, Branch: `main`, folder `/ (root)` → Save. After a minute the page is live at `https://<org-or-user>.github.io/esg-radar/`.
-4. **Run the first feed collection:** Actions tab → *Collect feeds (monthly)* → **Run workflow**. The run summary lists which feeds worked and what was added.
-5. Share the Pages link with the team, e.g. as a tab in your Teams channel (＋ → Website).
+- **Sidebar on every page.** The selected area carries over between pages: on the Peers page it selects the matching KPI set, and on the Market page it filters the tiles.
+- **Views** (News): *All entries*, *New since last visit* and *Saved* (★ on a card). Both "new" and "saved" are remembered per browser, so no login is needed.
+- **Filters above the cards**: impact (*Reporting*, *Data model*, *Suppliers*, *Products & claims*, *Costs*, *Watch*), type, relevance and sort. For Data & AI there are also a tool filter (Fabric, Power BI, Copilot …) and a *Monthly updates* type.
+- **Status dot** (top right on every page): green = the last weekly run worked, amber = a source failed (old values are kept), red = no update for 14+ days. Click it for details and what to do.
+- **Regulation pop-up → "Show on the News page"** shows only the cards for that topic (`index.html#topic=ppwr`).
+- **Shareable links**: for example `index.html#area=climate&impact=costs` or `market.html#area=forests&period=5y`.
+- Optional weekly **Teams post** with new high-relevance items (see below).
 
-**Tip for uploading:** Folders starting with a dot are hidden on Windows and macOS and sometimes skipped when dragging files into GitHub. If the Actions tab shows no workflow after uploading, create it directly on GitHub: *Add file → Create new file*, name it `.github/workflows/collect-feeds.yml`, and paste the file's content.
+## How it updates
 
-**Visibility:** On GitHub Free, Pages sites are published from public repositories and are visible to anyone with the link. That's fine for public content, but check your internal policy. With GitHub Enterprise Cloud you can make the repository and the Pages site private, limited to members of your organisation.
+A GitHub Action (`.github/workflows/collect-feeds.yml`) runs **every Monday** and can also be started by hand from the Actions tab. No review is needed.
 
-## Peer benchmark page (`peers.html`)
+1. `scripts/collect_feeds.py` reads the RSS feeds in `config/feeds.json`. It keeps matching items, rates their relevance, and assigns areas and impacts by keyword. Items older than a year move to `data/archive.json`.
+2. `scripts/collect_market.py` fetches the market indicators listed in `config/market.json` and writes them to `data/market.json`.
+   - Each indicator is fetched on its own. If a source is down, the previous values stay and the tile shows a note.
+   - Nothing is ever estimated.
+3. `scripts/collect_ets.py` checks the EU Union Registry page for the newest yearly "verified emissions" file (published every April). It adds up the emissions of each peer's sites and writes `data/peer_emissions.json`. If nothing changed, it skips the download.
+4. `scripts/collect_regulation.py` reads open consultations from the Commission's "Have your say" portal and the latest official steps of the procedures in `config/regulation.json` from the European Parliament. A new official step also becomes a "Status update" card on the News page.
+5. `scripts/collect_sbti.py` updates the SBTi column of the Peers page from the SBTi Target Dashboard download (old value → history).
+6. `scripts/collect_fabric.py` collects planned Fabric / Power BI features for "Coming next".
+7. Every script reports how it went to `data/status.json` (the status dot). The changes are committed, and GitHub Pages publishes them within about a minute.
+8. Optionally, the run posts to Teams.
 
-Reached via **Radar | Peers** in the top bar. It compares public sustainability KPIs of 12 tissue companies in two peer groups (Tissue Europe, Global tissue), with a KPI filter per area (Overview, Climate & Energy, Forests & Fibre, Circularity & Packaging, Water, People, Ratings).
+These parts are updated by hand, with the prompts in `prompts/` (they work in M365 Copilot with web grounding):
 
-- **Colours:** each value is compared within the selected peer group. Green = best, light green = better than the median, grey = around the median, red = below the median. Columns with fewer than 3 values stay grey.
-- **Every value links to its source**, with the year underneath. Empty cells = not found in public sources.
-- **Peer profiles** below the table show key KPIs and targets, plus the latest news about that company from the radar feeds. The news updates automatically each month.
-- **KPI values** are in `data/peers.json` and don't come from feeds. Refresh them once a year with `prompts/peers-update-prompt.md` (one company per run, e.g. in M365 Copilot).
-- Shareable views: `peers.html#group=global&set=climate`.
+| What | How often | Prompt / file |
+|---|---|---|
+| Curated regulation entries, events, roadmap changes | quarterly | `prompts/update-prompt.md` → `data/radar.json`, `data/events.json`, `data/roadmap.json` |
+| Peer KPIs (old values move into `history`, which feeds the trend arrows) | yearly, after annual reports | `prompts/peers-update-prompt.md` → `data/peers.json` |
+| EU carbon price (EUA) | quarterly or when needed | `config/market.json` → indicator `eua` → add `{date, value, note, url}` to `values` |
 
-## Monthly Teams post (optional)
+## Files
 
-After each feed run, the new high-relevance items and the next three deadlines can be posted to a Teams channel. If there's nothing new and important, nothing is posted.
+| File | Purpose |
+|---|---|
+| `index.html`, `regulation.html`, `peers.html`, `market.html` | The four pages |
+| `assets/side.css`, `assets/side.js` | Shared sidebar used by Regulation, Peers and Market |
+| `assets/status.js` | Status dot in the header (reads `data/status.json`) |
+| `config/regulation.json`, `config/sbti.json` | Procedure numbers & consultation keywords; SBTi name patterns |
+| `data/regulation.json`, `data/fabric_roadmap.json`, `data/status.json` | Created by the weekly run (do not edit by hand) |
+| `data/radar.json` | All radar entries (curated + feed) |
+| `data/roadmap.json` | Rows and phases of the regulation roadmap |
+| `data/events.json` | Events tab |
+| `data/peers.json` | Peer companies, KPI definitions and values with sources |
+| `data/market.json` | Created by the market collector (do not edit by hand) |
+| `data/last_run.json`, `data/archive.json` | Created automatically by the feed run |
+| `config/feeds.json` | Feeds, keywords, area and impact rules |
+| `config/market.json` | Market indicators, sources, areas and the manual EUA values |
+| `config/peer_installations.json` | Which EU ETS sites belong to which peer |
+| `data/peer_emissions.json` | Created by the ETS collector (do not edit by hand) |
+| `scripts/*.py` | Collectors and the Teams post |
 
-1. In Teams, open the channel → **⋯** → **Workflows** → template **"Post to a channel when a webhook request is received"** → follow the steps and copy the URL it shows at the end.
-2. In GitHub: **Settings → Secrets and variables → Actions → New repository secret**. Name: `TEAMS_WEBHOOK_URL`, value: the copied URL → **Add secret**.
-3. Test: Actions → *Collect feeds (monthly)* → **Run workflow**. It posts only if this run found new high-relevance items.
+## EU ETS peer emissions
 
-To switch it off, delete the secret. The webhook URL is like a password: keep it only in the GitHub secret.
+- **Source:** European Commission, Union Registry, "verified emissions" file (CC BY 4.0). It has one row per installation, with verified CO₂e per year.
+- **Assigning sites to companies:** `config/peer_installations.json` matches installation names against patterns such as `WEPA`, `Krengel`, `Essity`, `SCA Hygiene`, `Sofidel` and `Soffass`.
+- **After the first run, check the sites:** on the Peers page, click a company in the emissions table to see its sites. To fix the list, add the site code (e.g. `DE-1234`) to `exclude` or `include` for that company. The next run picks up the change.
+- **Limits:**
+  - Only sites in the EU, Norway, Iceland and Liechtenstein are covered, so the UK, Switzerland and non-European mills are missing.
+  - The values are absolute Scope 1 emissions. They depend on size and energy setup (e.g. own CHP plants), so they don't measure efficiency.
+  - A `*` marks years in which not all sites reported, so the total is not comparable for that year.
+  - The global peers are not mapped, because they have no or almost no tissue mills in the EU.
 
-## Adapting the page
+## Regulation page: sources and settings
 
-The page is one file, `index.html`, and can be changed anytime:
-- **Small changes** (texts, colours, labels): open `index.html` on GitHub → ✏️ Edit → Commit. The live page updates within about a minute.
-- **Bigger changes** (new sections, charts, filters): give `index.html` (and, if useful, `data/radar.json`) to M365 Copilot or another AI assistant, describe the change, and paste the result back into the file on GitHub.
-- **Before committing a bigger change**, you can preview it locally: run `python -m http.server` in the folder and open `http://localhost:8000`. Double-clicking `index.html` doesn't work, because browsers block reading the JSON file from disk.
+| Part | Source | Note |
+|---|---|---|
+| Open consultations | European Commission, "Have your say" portal | No official API – the script reads the data the website loads. If the Commission changes the site, the status dot turns amber and the last list stays. Keywords in `config/regulation.json` → `consultations.keywords`. |
+| Latest official step | European Parliament Open Data (Legislative Observatory), CC BY 4.0 | Each roadmap row needs its procedure number in `config/regulation.json` → `procedures` (e.g. `"ppwr": "2022/0396(COD)"`). Rows without one (standards, delegated acts) show the curated roadmap phase instead, marked "from the roadmap". **Please check the pre-filled numbers once** on the Legislative Observatory – the run summary prints the title the Parliament has for each number. |
+| Phases, milestones | `data/roadmap.json` (curated, quarterly prompt) | |
 
-## Changing feeds and rules
+## Other automatic sources
 
-- **Add a feed:** copy a block in `config/feeds.json` and change `name`, `url`, `type` (`regulation` / `tool` / `practice`) and the keywords. An empty `keywords` list takes every item from that feed.
-- **Less noise:** remove broad keywords or lower `maxItems`. **More coverage:** add keywords.
-- **Edit a curated entry:** change it directly in `data/radar.json`. Deadline tiles come from `nextDate` + `nextDateLabel`; the area pills come from `areas` (`climate`, `forests`, `circularity`, `water`, `people`, `reporting`, `data`).
-- **Areas for feed items:** an item gets every area whose keywords (`areaKeywords` in `config/feeds.json`) match, otherwise the feed's `defaultArea`. Tool feeds (`onlyDefaultArea: true`) always go to Data & AI.
-- If a feed URL stops working, the run reports it and skips it. Nothing else breaks.
+| What | Source | Note |
+|---|---|---|
+| SBTi status (Peers) | Science Based Targets initiative – Target Dashboard download | Company names are matched with `config/sbti.json`. SBTi asks for credit and a link, which the Peers page shows. Check their terms before making the site public. |
+| Coming next (News, Data & AI) | Fabric GPS (fabric-gps.com) – a free community mirror of Microsoft's official Fabric roadmap | Not run by Microsoft. If it disappears, only this tab stays on its last list; the official roadmap is aka.ms/FabricRoadmap. |
+| Grid carbon intensity (Market) | Ember, monthly electricity data (CC BY 4.0) | Countries in `config/market.json` (group `grid`). Shown as a ranked table (12-month averages) plus one tile per country. |
 
-Summaries are aids, not legal advice. Always check the linked source. Some Fabric/Power BI feature statuses in the starter entries cite third-party blogs; verify them on Microsoft Learn before planning.
+## Market data: sources and licences
+
+| Indicator | Source | Frequency | Licence / note |
+|---|---|---|---|
+| Producer prices for tissue (C17.22), pulp (C17.11) and paper (C17.12); production volume of the paper industry (C17), all EU | Eurostat (`sts_inppd_m`, `sts_inpr_m`) | monthly | Free reuse with attribution |
+| Industrial electricity and gas prices, Germany | Eurostat (`nrg_pc_205`, `nrg_pc_203`) | half-yearly | Free reuse with attribution |
+| TTF natural gas | IMF via FRED (`PNGASEUUSDM`) | monthly | Public |
+| Recovered paper and wood pulp producer price indices (US) | US BLS via FRED (`WPU0912`, `WPU0911`) | monthly | Public domain. Used only as a trend proxy for fibre prices |
+| EUR/USD | Federal Reserve via FRED (`EXUSEU`) | monthly | Public |
+| Renewable share of German power generation | Bundesnetzagentur \| SMARD.de | monthly | CC BY 4.0 |
+| EU carbon price (EUA) | Press / exchange reports | manual | Exchange prices are licensed, so this value is entered by hand with its source |
+
+**Not included:** Pulp prices (NBSK/BHKP) and European recovered paper prices from FOEX, Fastmarkets or EUWID are paid data. Daily power exchange prices are licensed as well.
+
+**Changing indicators:** edit `config/market.json`. For Eurostat, `params` filter the query. If a code doesn't exist, the collector tries `alts` and finally only geo, NACE and product, choosing the remaining codes from `prefer`. The run summary in the Actions tab shows which parameters were actually used.
+
+## Setup (once)
+
+1. Upload all files to the repository, keeping the folder structure (including the hidden `.github` folder).
+2. Allow the workflow to save changes: **Settings → Actions → General → Workflow permissions → Read and write permissions**.
+3. Turn on Pages: **Settings → Pages → Deploy from a branch → `main` / root**.
+4. Start the first run: **Actions → Weekly data update → Run workflow**. Until then, the Market page shows "No data yet".
+5. Share the Pages link, for example as a website tab in your Teams channel.
+
+**Visibility:** On GitHub Free, Pages sites come from public repositories and are visible to anyone with the link. With GitHub Enterprise Cloud, the site can be limited to your organisation.
+
+## Teams post (optional)
+
+1. In Teams, open the channel and go to **⋯ → Workflows → "Post to a channel when a webhook request is received"**. Copy the URL it gives you.
+2. In GitHub, go to **Settings → Secrets and variables → Actions → New repository secret**. Name it `TEAMS_WEBHOOK_URL` and paste the URL as the value.
+3. The next run posts only if it found new high-relevance items. To switch the post off, delete the secret.
+
+## Adapting
+
+- **Small changes:** open the file on GitHub → ✏️ Edit → Commit.
+- **Bigger changes:** give the page file to M365 Copilot, describe the change, and paste the result back.
+- **Preview locally:** run `python -m http.server` and open `http://localhost:8000`. Double-clicking the HTML doesn't work, because browsers block reading JSON from disk.
+- **Feeds:** add or change them in `config/feeds.json`. A feed that fails is reported in the run summary and skipped.
+
+Summaries are aids, not legal advice. Market indices are for trend orientation only. Always check the linked source.

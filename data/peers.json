@@ -254,6 +254,23 @@
           "v": 100,
           "d": "100% of virgin wood fibre",
           "src": "https://www.wepa.eu/en/sustainability/future-fibres"
+        },
+        "ecovadis": {
+          "v": "Gold",
+          "d": "Gold",
+          "note": "Confirmed by WEPA ESG team"
+        },
+        "cdpClimate": {
+          "v": null,
+          "d": "Not participating"
+        },
+        "cdpForests": {
+          "v": null,
+          "d": "Not participating"
+        },
+        "cdpWater": {
+          "v": null,
+          "d": "Not participating"
         }
       },
       "targets": [
@@ -398,6 +415,16 @@
           "v": "9.2 l water per kg paper (sector-leading level)",
           "y": "2023",
           "src": "https://www.sofidel.com/en/?p=56573"
+        },
+        "scope12Target": {
+          "v": 40,
+          "d": "−40%/t by 2030 (2018)",
+          "src": "https://www.sofidel.com/en/?p=4270"
+        },
+        "scope3Target": {
+          "v": 24,
+          "d": "−24%/t by 2030 (2018)",
+          "src": "https://www.sofidel.com/en/?p=4270"
         }
       },
       "targets": [
@@ -427,11 +454,20 @@
           "v": "Platinum",
           "d": "Platinum · 91/100",
           "y": "2026",
-          "src": "https://www.metsagroup.com/metsatissue/news-and-publications/news/2026/metsa-tissue-scores-91100-in-ecovadis-its-highest-rating-in-seven-consecutive-platinum-years/"
+          "src": "https://www.metsagroup.com/metsatissue/news-and-publications/news/2026/metsa-tissue-scores-91100-in-ecovadis-its-highest-rating-in-seven-consecutive-platinum-years/",
+          "history": [
+            {
+              "v": "Platinum",
+              "d": "Platinum · 83/100",
+              "y": "2025",
+              "src": "https://www.metsagroup.com/metsatissue/news-and-publications/news/2026/metsa-tissue-scores-91100-in-ecovadis-its-highest-rating-in-seven-consecutive-platinum-years/"
+            }
+          ]
         }
       },
       "targets": [
         "Fossil-free mills by end of 2030 (Metsä Group target)",
+        "Metsä Group 2030 targets: 100% certified wood, −35% process water per tonne vs. 2018, 35% women in leadership, zero accidents (TRIF 0)",
         "EcoVadis Platinum for the seventh consecutive year (2026)"
       ]
     },
@@ -575,26 +611,36 @@
         },
         "scope12Target": {
           "v": 65,
-          "d": "−65% by 2030 (2010) · −58% achieved",
-          "y": "2023",
-          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+          "d": "−65% by 2030 (2010) · −60% achieved",
+          "y": "2024",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/"
         },
         "renewableElectricity": {
           "v": 99,
           "d": ">99%",
-          "y": "2023",
-          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+          "y": "2024",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/"
         },
         "recyclablePackaging": {
-          "v": 78,
-          "d": "78% recyclable or reusable",
-          "y": "2023",
-          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+          "v": 80,
+          "d": "80% recyclable or reusable",
+          "y": "2024",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/"
         },
         "waterTarget": {
           "v": "+35% water efficiency per unit by 2030 (2010) · +24% achieved",
           "y": "2023",
           "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+        },
+        "womenManagement": {
+          "v": 51,
+          "y": "2024",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/"
+        },
+        "womenTotal": {
+          "v": 42,
+          "y": "2024",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/"
         }
       },
       "targets": [
@@ -692,19 +738,36 @@
         "Hengan"
       ],
       "report": {
-        "label": "ESG ratings 2025",
-        "url": "https://vir.com.vn/hengan-msci-esg-a-rating-2025-hygiene-giant-goes-greener-136725.html"
+        "label": "ESG report 2024",
+        "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0414/2025041401468.pdf"
       },
       "kpis": {
         "msci": {
           "v": "A",
           "y": "2025",
           "src": "https://vir.com.vn/hengan-msci-esg-a-rating-2025-hygiene-giant-goes-greener-136725.html"
+        },
+        "womenTotal": {
+          "v": 54,
+          "y": "2024",
+          "src": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0414/2025041401468.pdf"
+        },
+        "womenManagement": {
+          "v": 26,
+          "d": "26% (revenue-generating units)",
+          "y": "2024",
+          "src": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0414/2025041401468.pdf"
+        },
+        "waterTarget": {
+          "v": "6.8 t water per t paper (51% below national limit)",
+          "y": "2024",
+          "src": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0414/2025041401468.pdf"
         }
       },
       "targets": [
         "MSCI ESG upgraded from BBB to A (2025)",
-        "S&P Global CSA score 62 (2025), up from 56"
+        "S&P Global CSA score 62 (2025), up from 56",
+        "Papermaking: 1.01 t CO₂e per t of paper (2024)"
       ]
     },
     {
@@ -724,9 +787,10 @@
       },
       "kpis": {
         "scope12Target": {
-          "v": 50,
-          "d": "−50% by 2030",
-          "src": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
+          "v": 50.4,
+          "d": "−50.4% by 2030 (2018, CMPC) · −41% achieved",
+          "y": "2025",
+          "src": "https://www.cmpc.com/en/sustainability/environment/decarbonization-and-greenhouse-gas-emissions/"
         },
         "waterTarget": {
           "v": "−50% water use vs. 2018 achieved",
@@ -743,11 +807,29 @@
           "d": "36.4% (leadership roles)",
           "y": "2025",
           "src": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
+        },
+        "sbti": {
+          "v": "Validated",
+          "d": "Validated (CMPC group)",
+          "y": "2022",
+          "src": "https://www.cmpc.com/en/sustainability/environment/decarbonization-and-greenhouse-gas-emissions/"
+        },
+        "netZeroYear": {
+          "v": 2040,
+          "d": "2040 (CMPC group)",
+          "src": "https://www.cmpc.com/en/sustainability/environment/decarbonization-and-greenhouse-gas-emissions/"
+        },
+        "scope3Target": {
+          "v": 37.5,
+          "d": "−37.5% by 2035 (2020, CMPC) · currently +9%",
+          "y": "2025",
+          "src": "https://www.cmpc.com/en/sustainability/environment/decarbonization-and-greenhouse-gas-emissions/"
         }
       },
       "targets": [
-        "Zero waste to landfill in all regional operations",
-        "−50% water use vs. 2018 reached in 2025"
+        "CMPC group: net zero 2040, SBTi-validated Scope 1–3 targets (2022)",
+        "Softys: −50% water use vs. 2018 reached in 2025",
+        "Zero waste to landfill in all regional operations"
       ]
     },
     {

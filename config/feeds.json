@@ -1,5 +1,5 @@
 {
-  "_comment": "Feeds the monthly GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page.",
+  "_comment": "Feeds the monthly GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only).",
   "lookbackDaysFirstRun": 60,
   "archiveFeedItemsAfterDays": 365,
   "monthlySummaryPattern": "feature summary",
@@ -364,5 +364,60 @@
         "omnibus"
       ]
     }
-  ]
+  ],
+  "impactKeywords": {
+    "reporting": [
+      "csrd",
+      "esrs",
+      "taxonomy",
+      "issb",
+      "assurance",
+      "double materiality",
+      "omnibus",
+      "sustainability reporting",
+      "vsme",
+      "sbti"
+    ],
+    "datamodel": [
+      "fabric",
+      "power bi",
+      "semantic model",
+      "data agent",
+      "copilot",
+      "xbrl",
+      "onelake",
+      "dax",
+      "data model"
+    ],
+    "suppliers": [
+      "eudr",
+      "deforestation",
+      "csddd",
+      "supply chain",
+      "due diligence",
+      "human rights",
+      "sourcing",
+      "lksg",
+      "forced labour",
+      "forced labor"
+    ],
+    "products": [
+      "packaging",
+      "ppwr",
+      "green claims",
+      "plastic",
+      "ecodesign",
+      "espr",
+      "label",
+      "recyclable"
+    ],
+    "costs": [
+      "ets",
+      "emissions trading",
+      "carbon price",
+      "cbam",
+      "energy price",
+      "free allocation"
+    ]
+  }
 }

@@ -21,6 +21,8 @@ from pathlib import Path
 
 import feedparser
 
+from status_util import report as report_status
+
 ROOT = Path(__file__).resolve().parent.parent
 RADAR = ROOT / "data" / "radar.json"
 ARCHIVE = ROOT / "data" / "archive.json"
@@ -35,6 +37,15 @@ STARTER_AREAS = {
     "reg-ecgt": ["reporting", "circularity"], "reg-ets-review": ["climate"], "reg-ets2-delay": ["climate"],
     "reg-cbam": ["climate"], "std-sbti-cnzs-v2": ["climate"], "std-ghgp-scope2": ["climate"],
     "bp-stolt-nielsen-csrd": ["reporting"],
+}
+
+# Impact categories for the starter entries (backfill); everything else is assigned by keyword
+STARTER_IMPACTS = {
+    "reg-omnibus-csrd": ["reporting", "datamodel"], "reg-omnibus-csddd": ["suppliers"], "reg-esrs-2026": ["reporting", "datamodel"],
+    "reg-voluntary-standard": ["suppliers", "reporting"], "reg-esrs-xbrl": ["datamodel"], "reg-taxonomy-simplification": ["reporting"],
+    "reg-eudr": ["suppliers", "datamodel"], "reg-ppwr": ["products"], "reg-ecgt": ["products"], "reg-ets-review": ["costs"],
+    "reg-ets2-delay": ["costs"], "reg-cbam": ["watch"], "std-sbti-cnzs-v2": ["reporting"], "std-ghgp-scope2": ["datamodel", "reporting"],
+    "tool-msm-2026w1": ["watch"], "bp-stolt-nielsen-csrd": ["reporting"],
 }
 
 
@@ -98,7 +109,16 @@ def main():
         found = [a for a, m in area_matchers.items() if m and m(text)]
         return found[:3] or [default]
 
-    # Backfill: give older entries (from before areas existed) their areas
+    impact_matchers = {k: matcher(v) for k, v in config.get("impactKeywords", {}).items()}
+
+    def impacts_for(text):
+        found = [k for k, m in impact_matchers.items() if m and m(text)]
+        return found[:2] or ["watch"]
+
+    # Backfill: give older entries (from before areas/impacts existed) their areas and impacts
+    for e in radar["entries"]:
+        if not e.get("impacts"):
+            e["impacts"] = STARTER_IMPACTS.get(e.get("id")) or impacts_for(" ".join(filter(None, [e.get("title"), e.get("summary")])))
     feeds_by_name = {f["name"]: f for f in config.get("feeds", [])}
     for e in radar["entries"]:
         if not e.get("areas") and e.get("id") in STARTER_AREAS:
@@ -153,6 +173,7 @@ def main():
                 "date": (published or now).date().isoformat(),
                 "type": feed.get("type", "tool"),
                 "areas": areas_for(feed, text),
+                "impacts": impacts_for(text),
                 "tags": tags,
                 "title": title,
                 "summary": summary,
@@ -203,6 +224,10 @@ def main():
         lines += ["", "### New items"] + [
             f"- [{a['relevance']}] [{a['title']}]({a['url']}) — {a['source']}" for a in added
         ]
+    failed = sum(1 for r in report if "failed" in r)
+    total = len(config.get("feeds", []))
+    report_status("feeds", "News feeds", "error" if total and failed == total else "warn" if failed else "ok",
+                  f"{total - failed} of {total} feeds · {len(added)} new" + (f" · {failed} failed" if failed else ""), order=10)
     text = "\n".join(lines)
     print(text)
     step_summary = os.environ.get("GITHUB_STEP_SUMMARY")

@@ -4,7 +4,7 @@ Run this **once a year** (best in spring, after the annual reports are out) or w
 
 1. Open `data/peers.json` on GitHub and copy its `companies` block for **one company** (e.g. Essity).
 2. Copy the prompt below, paste the company block where it says so, and run it.
-3. Check the answer: every changed value must have a `src` link you can open. Then replace that company's block in `data/peers.json` (GitHub → ✏️ Edit) and set `meta.updated` to today.
+3. Check the answer: every changed value must have a `src` link you can open, and old values must have moved into `history`. Then replace that company's block in `data/peers.json` (GitHub → ✏️ Edit) and set `meta.updated` to today.
 4. Repeat for the other companies. Doing one company per run gives the most reliable results.
 
 To add a company, copy an existing block, change `id`, `name`, `country`, `groups` (`europe` and/or `global`) and `aliases` (names used in news headlines), empty the `kpis` and `targets`, and run the prompt for it.
@@ -37,6 +37,12 @@ KPIs (keys in "kpis"):
 
 Each KPI is an object: { "v": value, "d": optional display text, "y": "year of the data",
 "src": "URL of the page or report you used" }.
+
+Trend history (shown as arrows in the table and in the company pop-up):
+- If you find a NEWER value for a KPI, move the old value into that KPI's "history" list before
+  replacing it: "history": [ { "v": old v, "d": old d, "y": old y }, … ] (oldest first, keep max 5).
+- If the value is unchanged but the year is newer, only update "y" and "src".
+- Never delete existing "history" entries.
 
 Rules:
 - Only use values you found on a page you actually opened. Never estimate or invent.
