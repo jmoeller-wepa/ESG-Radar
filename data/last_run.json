@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "added": [
     "feed-55dcf16978",
     "feed-c3d989d7d5",
@@ -8,6 +8,9 @@
     "feed-8ee1a94ef0",
     "feed-604150cc8b",
     "feed-112abbbf7d",
+    "feed-4ccf04047c",
+    "feed-5f209baed0",
+    "feed-6d9c0429ba",
     "feed-8490db033e",
     "feed-42961f224d",
     "feed-d8ab32c2d8",
@@ -19,6 +22,7 @@
     "feed-6abe458e60",
     "feed-c9c981db75",
     "feed-6a861780c1",
+    "feed-d2783cf958",
     "feed-03954bbd58",
     "feed-e4b469e972",
     "feed-b3f03a1d6c",
@@ -27,9 +31,6 @@
     "feed-be7478f941",
     "feed-855574f6d8",
     "feed-3618651247",
-    "feed-dd7ab03e31",
-    "feed-76745b30c4",
-    "feed-e1efddf9c0",
-    "feed-31a36022a9"
+    "feed-dd7ab03e31"
   ]
 }
