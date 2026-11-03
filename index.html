@@ -77,6 +77,7 @@
   .seg button { border: 0; background: none; cursor: pointer; font-size: 13.5px; color: var(--ink-2); padding: 6px 12px; border-radius: 7px; display: inline-flex; align-items: center; gap: 6px; }
   .seg button .count { font-size: 12px; color: #9aa2ae; }
   .seg button[aria-pressed="true"] { background: #fff; color: var(--blue-900); font-weight: 600; box-shadow: 0 1px 2px rgba(16, 24, 40, .08); }
+  .seg button[hidden] { display: none; }
   .seg.small button { font-size: 12.5px; padding: 4px 10px; }
 
   .nx { display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch; }
@@ -232,6 +233,7 @@
   }
 </style>
 <script src="assets/status.js" defer></script>
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <header>
@@ -260,6 +262,7 @@
         <path d="M14.5 0h35A14.5 14.5 0 0 1 64 14.5V24C44 30 22 30 0 25V14.5A14.5 14.5 0 0 1 14.5 0Z" fill="url(#lg-gloss)"/>
         <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
       </svg>
+      <svg class="logo-w" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-linecap="round"><path d="M14 50V13M14 50h37" stroke-opacity=".45" stroke-width="2.4"/><path d="M14 38a12 12 0 0 1 12 12" stroke-width="3.6"/><path d="M14 26a24 24 0 0 1 24 24" stroke-width="3.6" stroke-opacity=".8"/><path d="M14 14a36 36 0 0 1 36 36" stroke-width="3.6" stroke-opacity=".6"/><path d="M14 50L32 18.8" stroke-width="3"/></g><path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="#96d2dc" fill-opacity=".35"/><circle cx="14" cy="50" r="4" fill="#fff"/></svg>
       <h1>ESG Radar</h1>
     </div>
     <nav class="nav" aria-label="Pages"><a href="./" aria-current="page" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
@@ -277,6 +280,14 @@
     <div class="side-body" id="side-body">
       <div class="side-group" role="group" aria-labelledby="v-cap"><p class="cap" id="v-cap">View</p><div id="views"></div></div>
       <div class="side-group" role="group" aria-labelledby="a-cap"><p class="cap" id="a-cap">Area</p><div id="areas"></div></div>
+      <div class="side-group" role="group" aria-labelledby="l-cap"><p class="cap" id="l-cap">Legend</p>
+        <div class="side-legend">
+          <div class="row"><span class="d" style="background:var(--t-regulation)"></span>Regulation</div>
+          <div class="row"><span class="d" style="background:var(--t-tool)"></span>Tools &amp; updates</div>
+          <div class="row"><span class="d" style="background:var(--t-practice)"></span>Best practice</div>
+          <div class="row rel-key" id="key-rel"></div>
+        </div>
+      </div>
     </div>
   </aside>
 
@@ -338,11 +349,7 @@
 
 <footer>
   <div class="wrap">
-    <span class="key"><span class="d" style="background:var(--t-regulation)"></span>Regulation</span>
-    <span class="key"><span class="d" style="background:var(--t-tool)"></span>Tools &amp; updates</span>
-    <span class="key"><span class="d" style="background:var(--t-practice)"></span>Best practice</span>
-    <span class="key" id="key-rel"></span>
-    <span>News is collected automatically every month. Summaries are aids, not legal advice.</span>
+    <span>News is collected automatically every week. Summaries are aids, not legal advice.</span>
   </div>
 </footer>
 
@@ -564,7 +571,7 @@
     $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); syncCount(); });
     // Footer legend
     const key = $("key-rel");
-    RELS.forEach((r) => { key.appendChild(relIcon(r)); key.appendChild(el("span", null, r[0].toUpperCase() + r.slice(1))); });
+    RELS.forEach((r) => { const row = el("div", "row"); row.append(relIcon(r), el("span", null, r[0].toUpperCase() + r.slice(1) + " relevance")); key.appendChild(row); });
     // Deadline view
     document.querySelectorAll("[data-view]").forEach((b) => {
       if (!b.closest(".dl-panel")) return;

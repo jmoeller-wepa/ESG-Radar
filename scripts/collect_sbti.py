@@ -21,6 +21,7 @@ from status_util import report as report_status
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "sbti.json"
 PEERS = ROOT / "data" / "peers.json"
+DEBUG = ROOT / "data" / "debug" / "sbti.json"
 UA = "Mozilla/5.0 (compatible; ESG-Radar/1.0)"
 RANK = ["None", "Committed", "Validated", "Net-zero validated"]
 
@@ -53,19 +54,38 @@ def col(row, *must):
     return None
 
 
+def classify(value):
+    v = str(value or "").strip().lower()
+    if not v or v in ("none", "n/a", "-"):
+        return None
+    if "remov" in v or "expir" in v or "withdr" in v:
+        return "removed"
+    if "commit" in v:
+        return "committed"
+    if "set" in v or "valid" in v or "approv" in v or "target" in v:
+        return "set"
+    return None
+
+
 def status_of(row):
-    """Map one SBTi company row to the page's scale."""
-    near = str(col(row, "near", "status") or col(row, "near_term", "status") or "").lower()
-    nz = str(col(row, "net_zero", "status") or col(row, "long", "status") or "").lower()
-    overall = str(col(row, "target", "status") or col(row, "status") or "").lower()
-    if "targets set" in nz or "target set" in nz:
+    """Map one SBTi company row to the page's scale, reading the near-term and net-zero columns separately."""
+    near = nz = None
+    for k, v in row.items():
+        if not k or "status" not in k:
+            continue
+        c = classify(v)
+        if "near" in k or "short" in k:
+            near = near or c
+        elif "net_zero" in k or "netzero" in k or "long" in k:
+            nz = nz or c
+    if nz == "set":
         return "Net-zero validated"
-    if "targets set" in near or "target set" in near or "targets set" in overall:
+    if near == "set":
         return "Validated"
-    if "commit" in near or "commit" in nz or "commit" in overall:
-        if "removed" in near or "removed" in overall or "expired" in near:
-            return "None"
+    if near == "committed" or nz == "committed":
         return "Committed"
+    if near == "removed":
+        return "None"
     return None
 
 
@@ -84,7 +104,7 @@ def main():
         return 0
 
     today = date.today().isoformat()
-    changes, found = [], 0
+    changes, found, flagged, debug = [], 0, [], {}
     for c in peers["companies"]:
         pat = cfg["companies"].get(c["id"])
         if not pat:
@@ -96,9 +116,14 @@ def main():
             continue
         found += 1
         best = max(statuses, key=RANK.index)
-        name = str(col(matches[0], "company", "name") or "")
+        name = str(col(matches[0], "company", "name") or matches[0].get("company") or "")
         cell = c["kpis"].get("sbti") or {}
+        debug[c["id"]] = {"result": best, "rows": [{k: (str(v)[:80] if v is not None else None) for k, v in r.items() if k and ("status" in k or "company" in k or "year" in k or "classification" in k)} for r in matches[:3]]}
         if cell.get("v") == best:
+            continue
+        if cell.get("v") in RANK and RANK.index(best) < RANK.index(cell["v"]):
+            # Never downgrade automatically – SBTi data or our name match may be wrong. Flag it for a manual check instead.
+            flagged.append(f"{c['name']}: page says {cell['v']}, SBTi dashboard says {best}")
             continue
         if cell.get("v") is not None:
             hist = cell.get("history", [])
@@ -110,8 +135,13 @@ def main():
 
     if changes:
         PEERS.write_text(json.dumps(peers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    report_status("sbti", "SBTi targets", "ok", f"{found} peers found · " + (", ".join(changes) if changes else "no changes"), order=45)
-    print("SBTi:", found, "peers found;", changes or "no changes")
+    DEBUG.parent.mkdir(exist_ok=True)
+    DEBUG.write_text(json.dumps({"date": today, "columns": [k for k in (rows[0] if rows else {}) if k], "peers": debug}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    detail = f"{found} peers found · " + (", ".join(changes) if changes else "no changes")
+    if flagged:
+        detail += " · check: " + "; ".join(flagged)
+    report_status("sbti", "SBTi targets", "warn" if flagged else "ok", detail, order=45)
+    print("SBTi:", found, "peers found;", changes or "no changes", "; flagged:", flagged)
     return 0
 
 

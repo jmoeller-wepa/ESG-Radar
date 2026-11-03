@@ -15,9 +15,11 @@ and the run continues. Nothing is ever invented — no data means an empty tile.
 import csv
 import io
 import json
+import re
 import os
 import sys
 import urllib.parse
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -54,7 +56,8 @@ def norm_period(p):
 
 
 # ---------- Eurostat ----------
-def pick_series(data, prefer):
+def pick_series(data, prefer, required=None):
+    required = required or {}
     """Decode a JSON-stat 2.0 answer into one time series.
     If a dimension still has several codes, take the first preferred code that exists (else the first one)."""
     dims, sizes = data["id"], data["size"]
@@ -69,7 +72,9 @@ def pick_series(data, prefer):
             continue
         index = data["dimension"][dim]["category"]["index"]
         codes = sorted(index, key=index.get) if isinstance(index, dict) else list(index)
-        code = next((c for c in prefer.get(dim, []) if c in codes), codes[0])
+        if dim in required and required[dim] not in codes:
+            raise RuntimeError(f"{dim}={required[dim]} not in the answer")
+        code = required.get(dim) or next((c for c in prefer.get(dim, []) if c in codes), codes[0])
         chosen[dim] = code
         offset += (index[code] if isinstance(index, dict) else codes.index(code)) * stride
     t_stride = strides[dims.index("time")]
@@ -89,22 +94,53 @@ def eurostat(ind):
         attempts.append({**attempts[-1], **alt})
     # last resort: only the essential filters; everything else is chosen via 'prefer'
     attempts.append({k: v for k, v in ind["params"].items() if k in ind.get("essential", ["geo", "nace_r2", "product"])})
+    attempts.append({"geo": ind["params"]["geo"]})
     last_err = "no data"
+    best = None
     for params in attempts:
-        query = {"format": "JSON", "lang": "EN", "sinceTimePeriod": START, **params}
+        query = {"format": "JSON", "lang": "EN", **params}
+        if ind.get("freq") == "monthly":
+            query["sinceTimePeriod"] = START   # half-yearly data uses another period format (2019-S1); filtered below instead
         url = base + "?" + urllib.parse.urlencode(query)
         try:
             data = json.loads(get(url, timeout=90))
             if "time" not in data.get("id", []):
                 raise RuntimeError("no time dimension in answer")
-            series, chosen = pick_series(data, ind.get("prefer", {}))
+            # identity dimensions (which product, which country) must never fall back to another code
+            required = {k: v for k, v in ind["params"].items() if k in ("geo", "nace_r2", "product", "siec")}
+            missing = [k for k in required if k not in params and k not in data.get("id", [])]
+            if missing:
+                raise RuntimeError("answer does not identify " + ", ".join(missing))
+            series, chosen = pick_series(data, ind.get("prefer", {}), required)
+        except urllib.error.HTTPError as exc:
+            try:
+                detail = json.loads(exc.read().decode("utf-8")).get("error", [{}])
+                detail = detail[0].get("label") if isinstance(detail, list) and detail else str(detail)
+            except Exception:  # noqa: BLE001
+                detail = ""
+            last_err = f"HTTP {exc.code} {detail or ''}".strip()[:200] + " · tried: " + ", ".join(f"{k}={v}" for k, v in params.items())
+            continue
         except Exception as exc:  # noqa: BLE001 - try the next parameter set
             last_err = str(exc)[:160]
             continue
         if series:
-            return series, {**params, **chosen}
+            # keep the most recent series (an old index base, e.g. 2015=100, can stop years ago)
+            if best is None or series[-1][0] > best[0][-1][0]:
+                best = (series, {**params, **chosen})
+            fresh = datetime.now(timezone.utc).strftime("%Y-%m")
+            if ind.get("freq") == "monthly" and series[-1][0] >= monthsback_str(fresh, 6):
+                break
+            continue
         last_err = "no recent data"
+    if best:
+        return best
     raise RuntimeError(last_err)
+
+
+def monthsback_str(ym, n):
+    y, m = map(int, ym.split("-"))
+    t = y * 12 + (m - 1) - n
+    return f"{t // 12}-{t % 12 + 1:02d}"
 
 
 # ---------- FRED ----------
@@ -170,33 +206,46 @@ def ember_table():
     if "t" in _ember_cache:
         return _ember_cache["t"]
     req = urllib.request.Request(EMBER_URL, headers={"User-Agent": UA})
-    table = {}
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        reader = csv.DictReader(io.TextIOWrapper(resp, encoding="utf-8-sig", newline=""))
+    table, seen_vars, header = {}, {}, None
+    with urllib.request.urlopen(req, timeout=300) as resp:
+        raw = resp
+        if EMBER_URL.endswith(".gz") or (getattr(resp, "headers", None) or {}).get("Content-Encoding") == "gzip":
+            import gzip
+            raw = gzip.GzipFile(fileobj=resp)
+        reader = csv.DictReader(io.TextIOWrapper(raw, encoding="utf-8-sig", newline=""))
+        header = reader.fieldnames
+        norm = {k: re.sub(r"[^a-z0-9]", "", (k or "").lower()) for k in (header or [])}
+        find = lambda *names: next((k for k, n in norm.items() if n in names), None)
+        c_area, c_iso, c_date = find("area", "country", "entity"), find("iso3code", "iso3", "countrycode"), find("date", "month")
+        c_var, c_sub, c_cat = find("variable"), find("subcategory"), find("category")
+        c_unit, c_val = find("unit"), find("value")
         for row in reader:
-            var = (row.get("Variable") or "").strip().lower()
-            unit = (row.get("Unit") or "").strip().lower()
-            if var != "co2 intensity" or "gco2" not in unit.replace(" ", ""):
+            text = " ".join((row.get(c) or "") for c in (c_cat, c_sub, c_var) if c).lower()
+            unit = (row.get(c_unit) or "").lower().replace(" ", "")
+            if len(seen_vars) < 40:
+                seen_vars[(row.get(c_var) or "") + " [" + (row.get(c_unit) or "") + "]"] = 1
+            if "intensity" not in text or "co2" not in unit:
                 continue
-            date = (row.get("Date") or "")[:7]
+            date = (row.get(c_date) or "")[:7]
             if date < START:
                 continue
             try:
-                value = round(float(row.get("Value")), 1)
+                value = round(float(row.get(c_val)), 1)
             except (TypeError, ValueError):
                 continue
-            for key in {(row.get("ISO 3 code") or "").strip(), (row.get("Area") or "").strip()}:
+            for key in {(row.get(c_iso) or "").strip() if c_iso else "", (row.get(c_area) or "").strip() if c_area else ""}:
                 if key:
                     table.setdefault(key, {})[date] = value
     if not table:
-        raise RuntimeError("no CO2 intensity rows in the Ember file (format changed?)")
+        raise RuntimeError("no CO2 intensity rows in the Ember file. Columns: " + ", ".join(header or [])[:200]
+                           + " · variables seen: " + "; ".join(list(seen_vars)[:12])[:300])
     _ember_cache["t"] = table
     return table
 
 
 def ember(ind):
     table = ember_table()
-    data = table.get(ind["area"])
+    data = table.get(ind["area"]) or next((table[k] for k in ind.get("alias", []) if k in table), None)
     if not data:
         raise RuntimeError(f"area {ind['area']} not in the Ember file")
     return [[m, v] for m, v in sorted(data.items())], None

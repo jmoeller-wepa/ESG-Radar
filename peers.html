@@ -93,6 +93,9 @@
   .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding: 14px 16px; border-top: 1px solid var(--line-2); font-size: 12px; color: #6b7280; }
   .legend .v { font-size: 12px; }
   .legend .note { margin-left: auto; max-width: 620px; }
+  .peers-legend { align-items: flex-start; }
+  .peers-legend .v { font-size: 12.5px; }
+  .peers-legend > span { display: flex; align-items: center; gap: 4px; }
 
   .profiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: stretch; grid-auto-rows: 1fr; }
   .pcard .news { margin-top: auto; padding-top: 4px; }
@@ -167,6 +170,7 @@
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
 <script src="assets/status.js" defer></script>
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <header>
@@ -195,6 +199,7 @@
         <path d="M14.5 0h35A14.5 14.5 0 0 1 64 14.5V24C44 30 22 30 0 25V14.5A14.5 14.5 0 0 1 14.5 0Z" fill="url(#lg-gloss)"/>
         <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
       </svg>
+      <svg class="logo-w" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-linecap="round"><path d="M14 50V13M14 50h37" stroke-opacity=".45" stroke-width="2.4"/><path d="M14 38a12 12 0 0 1 12 12" stroke-width="3.6"/><path d="M14 26a24 24 0 0 1 24 24" stroke-width="3.6" stroke-opacity=".8"/><path d="M14 14a36 36 0 0 1 36 36" stroke-width="3.6" stroke-opacity=".6"/><path d="M14 50L32 18.8" stroke-width="3"/></g><path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="#96d2dc" fill-opacity=".35"/><circle cx="14" cy="50" r="4" fill="#fff"/></svg>
       <h1>ESG Radar</h1>
     </a>
     <nav class="nav" aria-label="Pages"><a href="./" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" aria-current="page" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
@@ -282,8 +287,11 @@
   });
 
   function build() {
+    const lg = document.querySelector(".legend");
+    lg.className = "side-legend peers-legend";
     side = RadarSide.build($("side"), {
       toggleLabel: "Peers & area",
+      extra: [{ id: "legend", title: "Legend", node: lg }],
       onChange: (gid, key) => {
         if (gid === "group") state.group = key;
         else { state.area = key; state.sortKey = null; }
@@ -595,6 +603,15 @@
     const tot = el("tr", "tot"); tot.appendChild(el("td", null, "Total"));
     years.forEach((y) => tot.appendChild(el("td", null, d.total[y] != null ? tco2(d.total[y]) + (d.reporting && (d.reporting[y] || 0) < d.installations.length ? " *" : "") : "–")));
     tb.appendChild(tot); t.appendChild(tb); wrap.appendChild(t); body.appendChild(wrap);
+    const rep = c.reported && c.reported.scope12;
+    if (rep && rep.v) {
+      const ets = d.total[rep.y];
+      const cmp = el("p", "muted");
+      cmp.append(document.createTextNode(`For comparison: ${c.name} reports ${tco2(rep.v)} t CO₂e Scope 1+2 for ${rep.y} (${rep.d || "all sites"})` +
+        (ets ? ` – the EU ETS sites above cover ${tco2(ets)} t, about ${Math.round((100 * ets) / rep.v)}%.` : ".") + " "));
+      const a = el("a", null, "Report ↗"); a.href = rep.src; a.target = "_blank"; a.rel = "noopener"; cmp.appendChild(a);
+      body.appendChild(cmp);
+    }
     const note = el("p", "muted");
     note.textContent = "Sites are assigned automatically by name. Wrong or missing site? Add its code (e.g. DE-1234) to \"exclude\" or \"include\" for this company in config/peer_installations.json – the next weekly run updates the numbers.";
     const src = el("a", null, "Union Registry ↗"); src.href = E.source.page; src.target = "_blank"; src.rel = "noopener";

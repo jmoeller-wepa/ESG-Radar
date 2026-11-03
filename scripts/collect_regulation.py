@@ -29,6 +29,7 @@ FEEDS = ROOT / "config" / "feeds.json"
 ROADMAP = ROOT / "data" / "roadmap.json"
 RADAR = ROOT / "data" / "radar.json"
 OUT = ROOT / "data" / "regulation.json"
+DEBUG = ROOT / "data" / "debug" / "consultations.json"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ESG-Radar/1.0"
 EP_UA = "ESG-Radar-prd-1.0"
 HYS_API = "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives"
@@ -123,31 +124,59 @@ def collect_consultations(cfg, area_matchers, topic_words):
             return rx_low.findall(t) + (rx_caps.findall(t) if rx_caps else [])
     pattern = _P()
     today = date.today().isoformat()
-    found, seen, pages = [], set(), 0
-    for page in range(cfg.get("maxPages", 6)):
-        q = {"feedbackOpen": "true", "language": "EN", "page": page, "size": 50}
-        data = get_json(HYS_API + "?" + urllib.parse.urlencode(q))
-        items = initiatives_from(data)
-        pages += 1
-        if not items:
+    # The portal's parameters are undocumented: try a few known variants until one yields open consultations
+    variants = cfg.get("queryVariants") or [
+        {"feedbackOpen": "true", "language": "EN"},
+        {"receivingFeedbackStatus": "OPEN", "language": "EN"},
+        {"language": "EN", "sort": "feedbackEndDate,desc"},
+    ]
+    debug = {"fetched": datetime.now(timezone.utc).isoformat(timespec="seconds"), "attempts": []}
+    found, seen = [], set()
+    for variant in variants:
+        found, seen, pages, total = [], set(), 0, 0
+        for page in range(cfg.get("maxPages", 6)):
+            q = {**variant, "page": page, "size": 50}
+            url = HYS_API + "?" + urllib.parse.urlencode(q)
+            data = get_json(url)
+            items = initiatives_from(data)
+            pages += 1
+            if page == 0:
+                first = items[0] if items else None
+                debug["attempts"].append({
+                    "url": url,
+                    "topLevelKeys": list(data)[:20] if isinstance(data, dict) else type(data).__name__,
+                    "embeddedKeys": list(data.get("_embedded", {}))[:10] if isinstance(data, dict) and isinstance(data.get("_embedded"), dict) else None,
+                    "page": data.get("page") if isinstance(data, dict) else None,
+                    "items": len(items),
+                    "firstItem": json.loads(json.dumps(first, default=str)[:6000] if first and len(json.dumps(first, default=str)) <= 6000 else json.dumps({k: (str(v)[:300]) for k, v in (first or {}).items()})),
+                })
+            if not items:
+                break
+            for it in items:
+                total += 1
+                c = consultation_fields(it)
+                if not c or c["id"] in seen or not c["end"] or c["end"] < today:
+                    continue
+                seen.add(c["id"])
+                text = c["title"] + " " + c["summary"]
+                hits = sorted({m.lower() for m in pattern.findall(text)})
+                if not hits:
+                    continue
+                c["areas"] = [a for a, m in area_matchers.items() if m(text)][:2] or ["reporting"]
+                c["topics"] = [t for t, words in topic_words.items() if isinstance(words, list) and any(w.lower() in text.lower() for w in words)]
+                c["keywords"] = hits[:4]
+                found.append(c)
+            if len(items) < 50:
+                break
+        debug["attempts"][-1]["openFound"] = len(seen)
+        debug["attempts"][-1]["read"] = total
+        if seen:
             break
-        for it in items:
-            c = consultation_fields(it)
-            if not c or c["id"] in seen or not c["end"] or c["end"] < today:
-                continue
-            seen.add(c["id"])
-            text = c["title"] + " " + c["summary"]
-            hits = sorted({m.lower() for m in pattern.findall(text)})
-            if not hits:
-                continue
-            c["areas"] = [a for a, m in area_matchers.items() if m(text)][:2] or ["reporting"]
-            c["topics"] = [t for t, words in topic_words.items() if isinstance(words, list) and any(w.lower() in text.lower() for w in words)]
-            c["keywords"] = hits[:4]
-            found.append(c)
-        if len(items) < 50:
-            break
-    if pages and not seen:
-        raise RuntimeError("the portal answered, but no open consultations could be read (format changed?)")
+    # Saved so the format can be checked from GitHub if the portal changes (small file, overwritten each run)
+    DEBUG.parent.mkdir(exist_ok=True)
+    DEBUG.write_text(json.dumps(debug, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    if not seen:
+        raise RuntimeError("the portal answered, but no open consultations could be read (details in data/debug/consultations.json)")
     return sorted(found, key=lambda c: c["end"])
 
 

@@ -340,7 +340,13 @@
       "area": "EU",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "alias": [
+        "EU27",
+        "EU-27",
+        "European Union",
+        "EU27_2020"
+      ]
     },
     {
       "id": "grid_de",

@@ -54,6 +54,13 @@
         });
         body.appendChild(wrap);
       });
+      // Extra cards below the groups (e.g. the legend or the Market period slicer); nodes are reused between refreshes
+      (opts.extra || []).forEach((x) => {
+        const wrap = el("div", "side-group" + (x.cls ? " " + x.cls : "")); wrap.setAttribute("role", "group");
+        if (x.title) { const cap = el("p", "cap", x.title); cap.id = "sg-" + x.id; wrap.setAttribute("aria-labelledby", cap.id); wrap.appendChild(cap); }
+        wrap.appendChild(typeof x.node === "function" ? x.node() : x.node);
+        if (x.before) body.insertBefore(wrap, body.firstChild); else body.appendChild(wrap);
+      });
       sum.textContent = sums.join(" · ");
     }
     return api;

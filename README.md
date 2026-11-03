@@ -9,11 +9,14 @@ Climate & Energy · Forests & Biodiversity · Circularity & Packaging · Water &
 | **News** (`index.html`) | News, regulation, tool updates and best practice as cards. Above them is the **What's ahead** panel: **Deadlines** · **Timeline** · **Events**, plus **Coming next** (planned Fabric / Power BI features by quarter) when Data & AI is selected. |
 | **Regulation** (`regulation.html`) | Open EU consultations that match our topics ("Give feedback" links), and a **tracker** with one row per law or standard: stage, latest official step, next date. Switch to **Roadmap** for the 2024–2030 phase view. Click a topic for all steps, upcoming dates and related news. |
 | **Peers** (`peers.html`) | Public sustainability KPIs of 12 tissue companies, with colour-coded comparison, trend arrows and a history pop-up per company. For *All areas* and *Climate & Energy* it also shows the **EU ETS verified emissions** of the European peers, per company and per site. |
-| **Market** (`market.html`) | Free official statistics behind tissue costs: producer prices for tissue, pulp and paper, energy prices, renewable share, carbon price and EUR/USD. Shows a compare chart (index = 100) and one tile per indicator. |
+| **Market** (`market.html`) | Free official statistics behind tissue costs (producer prices for tissue, pulp and paper, energy prices, grid carbon intensity, carbon price, EUR/USD). In the side panel: a **period slicer** (years → months, like a Power BI hierarchy slicer; quick buttons for 12 months / 3 / 5 years / all) and an **indicator checklist** (up to 4 lines in the compare chart; clicking tiles works too). |
 
 It only uses public information. There are no licences, no servers and no internal data.
 
 ## Features
+
+- **Look:** WEPA colours throughout – Dunkelblau header, Mittelblau/Grün accents; chart lines use WEPA Grün, Mittelblau, a coral from WEPA Pink and a cyan from Hellblau (checked for colour-blind safety). Shared styles are in `assets/theme.css`.
+- **Legend** is in the side panel on News and Peers, so it is always visible.
 
 - **Sidebar on every page.** The selected area carries over between pages: on the Peers page it selects the matching KPI set, and on the Market page it filters the tiles.
 - **Views** (News): *All entries*, *New since last visit* and *Saved* (★ on a card). Both "new" and "saved" are remembered per browser, so no login is needed.

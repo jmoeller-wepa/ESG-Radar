@@ -99,6 +99,36 @@
   .gbar i { display: block; height: 10px; border-radius: 0 4px 4px 0; background: #6b8aa8; }
   .gtt tr.ref .gbar i { background: #c4c9d2; }
   .gsp { width: 110px; height: 24px; display: block; }
+  /* Side panel: period slicer + indicator checklist */
+  .ps { position: relative; padding: 0 2px 2px; }
+  .ps-dd { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; padding: 6px 12px; border: 1px solid #e1e5eb; border-radius: 10px; background: #fff; font: inherit; font-size: 13px; color: var(--ink); cursor: pointer; text-align: left; }
+  .ps-dd:hover { border-color: #c9d0d9; }
+  .chev { width: 8px; height: 8px; border-right: 1.6px solid #8a94a3; border-bottom: 1.6px solid #8a94a3; transform: rotate(45deg) translateY(-2px); flex: none; }
+  .chev.up { transform: rotate(225deg) translateY(-2px); }
+  .ps-tree { margin-top: 6px; border: 1px solid #e9ecf1; border-radius: 12px; padding: 6px; background: #fff; max-height: 420px; overflow-y: auto; }
+  .ps-row { display: flex; align-items: center; gap: 2px; }
+  .ps-tw { width: 22px; height: 26px; border: 0; background: none; color: #8a94a3; cursor: pointer; font-size: 11px; flex: none; }
+  .ps-year { flex: 1; display: flex; align-items: center; gap: 8px; border: 0; background: none; padding: 5px 6px; border-radius: 7px; font: inherit; font-size: 13px; color: var(--ink-2); cursor: pointer; text-align: left; }
+  .ps-year:hover, .ind:hover:not(:disabled) { background: #f5f7f9; }
+  .ps-year b { font-weight: 600; color: var(--ink); }
+  .ps-year small { margin-left: auto; font-size: 11.5px; color: #9aa2ae; }
+  .cbx { width: 15px; height: 15px; border-radius: 4px; border: 1.5px solid #c4ccd6; flex: none; display: grid; place-items: center; font-size: 10px; line-height: 1; color: #fff; box-sizing: border-box; }
+  .cbx.on, .cbx.part { border: 0; background: #0064aa; }
+  .cbx.part::after { content: ""; width: 7px; height: 2px; background: #fff; border-radius: 1px; }
+  .ps-months { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 2px 4px 8px 30px; }
+  .ps-m { border: 0; border-radius: 6px; padding: 4px 0; font: inherit; font-size: 11.5px; background: #f0f3f6; color: #4b5563; cursor: pointer; }
+  .ps-m.on { background: #0064aa; color: #fff; }
+  .ps-m:disabled { opacity: .4; cursor: default; }
+  .ps-qs { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 4px 2px; border-top: 1px solid #f0f2f5; margin-top: 4px; }
+  .ps-qs button { border: 1px solid #cfe3f1; background: #fff; color: #0064aa; border-radius: 12px; padding: 1px 9px; font: inherit; font-size: 11.5px; cursor: pointer; }
+  .ps-qs button:hover { background: #eef5fb; }
+  .ps-empty { margin: 4px 8px; font-size: 12.5px; color: var(--ink-3); }
+  .ind-list { display: flex; flex-direction: column; gap: 1px; padding: 0 2px; }
+  .ind-grp { margin: 8px 8px 2px; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9aa2ae; }
+  .ind-grp:first-child { margin-top: 0; }
+  .ind { display: flex; align-items: center; gap: 9px; border: 0; background: none; padding: 5px 8px; border-radius: 7px; font: inherit; font-size: 13px; color: #374151; cursor: pointer; text-align: left; }
+  .ind:disabled { opacity: .45; cursor: default; }
+  .ind-note { margin: 6px 8px 2px; font-size: 11.5px; color: #9aa2ae; }
   /* Tiles */
   .group h3 { margin: 0 0 10px; }
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
@@ -129,6 +159,7 @@
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
 <script src="assets/status.js" defer></script>
+<link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
 <header>
@@ -157,6 +188,7 @@
         <path d="M14.5 0h35A14.5 14.5 0 0 1 64 14.5V24C44 30 22 30 0 25V14.5A14.5 14.5 0 0 1 14.5 0Z" fill="url(#lg-gloss)"/>
         <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
       </svg>
+      <svg class="logo-w" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-linecap="round"><path d="M14 50V13M14 50h37" stroke-opacity=".45" stroke-width="2.4"/><path d="M14 38a12 12 0 0 1 12 12" stroke-width="3.6"/><path d="M14 26a24 24 0 0 1 24 24" stroke-width="3.6" stroke-opacity=".8"/><path d="M14 14a36 36 0 0 1 36 36" stroke-width="3.6" stroke-opacity=".6"/><path d="M14 50L32 18.8" stroke-width="3"/></g><path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="#96d2dc" fill-opacity=".35"/><circle cx="14" cy="50" r="4" fill="#fff"/></svg>
       <h1>ESG Radar</h1>
     </a>
     <nav class="nav" aria-label="Pages"><a href="./" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="market.html" aria-current="page" data-page="market">Market</a></nav>
@@ -168,7 +200,7 @@
   <div class="content">
     <div class="intro">
       <h2 id="title">Market indicators</h2>
-      <p>Public price and energy statistics behind tissue costs. Click tiles to compare them in the chart.</p>
+      <p>Public price and energy statistics behind tissue costs. Tick indicators in the side panel – or click tiles – to compare them in the chart.</p>
     </div>
     <section class="panel cmp" aria-labelledby="cmp-title">
       <div class="cmp-head">
@@ -191,10 +223,13 @@
 <script src="assets/side.js"></script>
 <script>
 (function () {
-  const SLOTS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100"]; // fixed order; a series keeps its colour while selected
-  const PERIODS = { "1y": 12, "3y": 36, "5y": 60 };
+  // WEPA-based series colours (Grün, Mittelblau, coral from WEPA Pink, cyan from Hellblau), checked for colour-blind safety in this order
+  const SLOTS = ["#009b82", "#0064aa", "#d9785e", "#3fa9c0"]; // fixed order; a series keeps its colour while selected
+  const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
+  const EARLIEST = "2019-01";
   const DEFAULT_CMP = ["ppi_tissue", "ppi_pulp", "us_recovered_paper", "gas_ttf", "us_wood_pulp", "elec_de"];
-  const state = { area: RadarSide.area(), period: "3y", cmp: [] };
+  const state = { area: RadarSide.area(), sel: new Set(), cmp: [] };
+  const ui = { open: false, exp: new Set() };
   const colorOf = {};
   let M = null, side = null;
   const $ = (id) => document.getElementById(id);
@@ -218,16 +253,49 @@
   const unitLabel = (u) => (u === "index" ? "index" : u);
   const monthsBack = (ym, n) => { const [y, m] = ym.split("-").map(Number); const t = y * 12 + (m - 1) - n; return Math.floor(t / 12) + "-" + String((t % 12) + 1).padStart(2, "0"); };
 
+  // ---------- period selection (set of months, like a Power BI hierarchy slicer) ----------
+  const toN = (d) => { const [y, mo] = d.slice(0, 7).split("-").map(Number); return y * 12 + mo - 1; };
+  const fromN = (n) => Math.floor(n / 12) + "-" + String((n % 12) + 1).padStart(2, "0");
+  let LATEST = null;
+  const latestMonth = () => LATEST || (LATEST = M.indicators.filter(chartable).map((i) => i.series[i.series.length - 1][0].slice(0, 7)).sort().pop() || null);
+  function monthRange(a, b) { const out = []; for (let n = toN(a); n <= toN(b); n++) out.push(fromN(n)); return out; }
+  function preset(key) {
+    const last = latestMonth(); if (!last) return new Set();
+    return new Set(monthRange(key === "all" ? EARLIEST : monthsBack(last, Number(key) - 1), last));
+  }
+  const selSorted = () => [...state.sel].sort();
+  const periodStart = () => selSorted()[0] || null;
+  const periodEnd = () => { const s = selSorted(); return s[s.length - 1] || null; };
+  const inSel = (d) => state.sel.has(d.slice(0, 7));
+  const isContiguous = () => { const s = selSorted(); return s.length > 0 && toN(s[s.length - 1]) - toN(s[0]) + 1 === s.length; };
+  function encodeSel() {
+    const s = selSorted(), parts = []; let a = null, prev = null;
+    s.forEach((m) => { if (a && toN(m) === toN(prev) + 1) { prev = m; return; } if (a) parts.push(a === prev ? a : a + ".." + prev); a = prev = m; });
+    if (a) parts.push(a === prev ? a : a + ".." + prev);
+    return parts.join(",");
+  }
+  function decodeSel(str) {
+    const out = new Set();
+    (str || "").split(",").forEach((part) => { const [a, b] = part.split(".."); if (/^\d{4}-\d{2}$/.test(a)) monthRange(a, /^\d{4}-\d{2}$/.test(b || "") ? b : a).forEach((m) => out.add(m)); });
+    return out;
+  }
+  function periodLabel() {
+    const s = selSorted(); if (!s.length) return "No months selected";
+    const span = fmtMonth(s[0]) + (s.length > 1 ? " – " + fmtMonth(s[s.length - 1]) : "");
+    return isContiguous() ? span + " · " + s.length + (s.length === 1 ? " month" : " months") : s.length + " months selected · " + span;
+  }
+
   // ---------- state & links ----------
   function readHash() {
     const p = new URLSearchParams(location.hash.slice(1));
-    if (PERIODS[p.get("period")]) state.period = p.get("period");
+    if (p.get("months")) state.sel = decodeSel(p.get("months"));
     if (p.get("cmp") != null) state.cmp = p.get("cmp").split(",").filter(Boolean);
   }
   function writeHash() {
     const p = new URLSearchParams();
     if (state.area !== "all") p.set("area", state.area);
-    if (state.period !== "3y") p.set("period", state.period);
+    const def = preset("36"); const same = def.size === state.sel.size && [...def].every((m) => state.sel.has(m));
+    if (!same) p.set("months", encodeSel());
     p.set("cmp", state.cmp.join(","));
     history.replaceState(null, "", "#" + p.toString());
     RadarSide.setArea(state.area);
@@ -246,7 +314,7 @@
     });
   }
   function defaultCmp() {
-    const ps = periodStart(); const vis = visible().filter((i) => chartable(i) && (!ps || indexed(i, ps).length)).map((i) => i.id);
+    const vis = visible().filter((i) => chartable(i) && indexed(i).length).map((i) => i.id);
     const pref = DEFAULT_CMP.filter((id) => vis.includes(id));
     return [...pref, ...vis.filter((id) => !pref.includes(id))].slice(0, 3);
   }
@@ -257,24 +325,17 @@
     const avail = [];
     M.indicators.forEach((i) => (i.areas || []).forEach((a) => { counts[a] = (counts[a] || 0) + 1; if (!avail.includes(a)) avail.push(a); }));
     return [
-      { id: "period", title: "Period", selected: state.period, items: [
-        { key: "1y", label: "Last 12 months" }, { key: "3y", label: "Last 3 years" }, { key: "5y", label: "Last 5 years" } ] },
       { id: "area", title: "Area", selected: state.area, items: RadarSide.areaItems(avail, counts) },
     ];
   }
   function onSide(group, key) {
-    if (group === "period") state.period = key;
     if (group === "area") { state.area = key; state.cmp = defaultCmp(); }
     renderAll();
   }
 
   // ---------- compare chart ----------
-  function periodStart() {
-    const latest = M.indicators.filter(chartable).map((i) => i.series[i.series.length - 1][0].slice(0, 7)).sort().pop();
-    return latest ? monthsBack(latest, PERIODS[state.period]) : null;
-  }
-  function indexed(ind, start) {
-    const pts = ind.series.filter((p) => p[0] >= start);
+  function indexed(ind) {
+    const pts = ind.series.filter((p) => inSel(p[0]));
     if (pts.length < 2) return [];
     const base = pts[0][1];
     return base ? pts.map((p) => ({ d: p[0], v: (100 * p[1]) / base, raw: p[1] })) : [];
@@ -285,7 +346,7 @@
     const legend = $("legend"); legend.replaceChildren();
     const start = periodStart();
     const byId = Object.fromEntries(M.indicators.map((i) => [i.id, i]));
-    const sel = state.cmp.map((id) => byId[id]).filter((i) => i && chartable(i)).map((i) => ({ ind: i, pts: start ? indexed(i, start) : [], color: colorOf[i.id] }));
+    const sel = state.cmp.map((id) => byId[id]).filter((i) => i && chartable(i)).map((i) => ({ ind: i, pts: start ? indexed(i) : [], color: colorOf[i.id] }));
     const lines = sel.filter((l) => l.pts.length);
     const gaps = sel.filter((l) => !l.pts.length);
     renderTable(lines);
@@ -297,7 +358,7 @@
       legend.appendChild(b);
     });
     if (!start || !lines.length) {
-      box.appendChild(el("div", "empty", !M.indicators.some(chartable) ? "Market data arrives with the next weekly run of the GitHub Action." : gaps.length ? "The selected indicators have too few values in this period – choose a longer period." : "Select up to four tiles below to compare them here."));
+      box.appendChild(el("div", "empty", !M.indicators.some(chartable) ? "Market data arrives with the next weekly run of the GitHub Action." : gaps.length ? "The selected indicators have too few values in this period – choose a longer period." : "Tick up to four indicators in the side panel (or click tiles) to compare them here."));
       return;
     }
     lines.slice().reverse().forEach((l) => legend.prepend(legendChip(l)));
@@ -312,9 +373,8 @@
     const W = Math.max(320, box.clientWidth || 800), H = box.clientWidth < 600 ? 240 : 300;
     const m = { t: 12, r: Math.min(150, W * 0.22), b: 26, l: 40 };
     const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Indexed comparison chart" });
-    const months = []; for (let k = 0; k <= PERIODS[state.period]; k++) months.push(monthsBack(start, -k));
+    const months = monthRange(start, periodEnd());
     const t0 = start, t1 = months[months.length - 1];
-    const toN = (d) => { const [y, mo] = d.slice(0, 7).split("-").map(Number); return y * 12 + mo - 1; };
     const x = (d) => m.l + ((toN(d) - toN(t0)) / Math.max(1, toN(t1) - toN(t0))) * (W - m.l - m.r);
     const all = lines.flatMap((l) => l.pts.map((p) => p.v)).concat([100]);
     let lo = Math.min(...all), hi = Math.max(...all); const pad = (hi - lo) * 0.08 || 5; lo -= pad; hi += pad;
@@ -332,15 +392,22 @@
     const xl = svgEl("g");
     months.forEach((d) => {
       const mo = d.slice(5, 7);
-      const show = state.period === "1y" ? ["01", "04", "07", "10"].includes(mo) : mo === "01";
+      const short = months.length <= 18, long = months.length > 72;
+      const show = short ? ["01", "04", "07", "10"].includes(mo) : mo === "01" && (!long || Number(d.slice(0, 4)) % 2 === 0);
       if (!show || x(d) > W - m.r) return;
-      const t = svgEl("text", { x: x(d), y: H - 6, "text-anchor": "middle" }); t.textContent = state.period === "1y" ? fmtMonth(d) : d.slice(0, 4); xl.appendChild(t);
+      const t = svgEl("text", { x: x(d), y: H - 6, "text-anchor": "middle" }); t.textContent = months.length <= 18 ? fmtMonth(d) : d.slice(0, 4); xl.appendChild(t);
     });
     svg.appendChild(xl);
     // lines + end labels (de-overlapped)
     const ends = [];
     lines.forEach((l) => {
-      svg.appendChild(svgEl("path", { class: "line", stroke: l.color, d: l.pts.map((p, k) => (k ? "L" : "M") + x(p.d).toFixed(1) + " " + y(p.v).toFixed(1)).join("") }));
+      // a gap in the selected months breaks the line instead of bridging it
+      const d = l.pts.map((p, k) => {
+        const prev = l.pts[k - 1];
+        const broken = !prev || monthRange(fromN(toN(prev.d) + 1), fromN(Math.max(toN(prev.d) + 1, toN(p.d) - 1))).some((m) => toN(m) < toN(p.d) && !state.sel.has(m));
+        return (broken ? "M" : "L") + x(p.d).toFixed(1) + " " + y(p.v).toFixed(1);
+      }).join("");
+      svg.appendChild(svgEl("path", { class: "line", stroke: l.color, d }));
       const last = l.pts[l.pts.length - 1];
       svg.appendChild(svgEl("circle", { cx: x(last.d), cy: y(last.v), r: 3.5, fill: l.color, stroke: "#fff", "stroke-width": 2 }));
       ends.push({ y: y(last.v), x: x(last.d), text: Math.round(last.v) + " " + shortName(l.ind) });
@@ -401,8 +468,7 @@
     return prev && prev[1] ? { pct: (100 * (last[1] - prev[1])) / prev[1], pp: last[1] - prev[1] } : null;
   }
   function spark(ind, color) {
-    const start = periodStart();
-    let pts = ind.series.filter((p) => !start || p[0] >= start);
+    let pts = ind.series.filter((p) => inSel(p[0]));
     if (pts.length < 3) pts = ind.series.slice(-6); // half-yearly data: show the last three years
     const svg = svgEl("svg", { class: "spark", viewBox: "0 0 200 34", preserveAspectRatio: "none", "aria-hidden": "true" });
     if (pts.length < 2) return svg;
@@ -446,7 +512,7 @@
   function toggle(id) {
     if (state.cmp.includes(id)) state.cmp = state.cmp.filter((c) => c !== id);
     else { if (state.cmp.length >= SLOTS.length) state.cmp.shift(); state.cmp.push(id); }
-    renderAll(false);
+    renderAll();
   }
   // Grid carbon intensity: one ranked table (12-month averages smooth out the seasons), tiles below
   function avg12(ind, offset) {
@@ -511,9 +577,80 @@
     host.style.display = "flex"; host.style.flexDirection = "column"; host.style.gap = "24px";
   }
 
-  function renderAll(withSide = true) {
+  // ---------- side panel: period slicer (years → months) and indicator checklist ----------
+  function cbox(stateVal) {
+    const c = el("span", "cbx" + (stateVal === true ? " on" : stateVal === "mixed" ? " part" : ""));
+    if (stateVal === true) c.textContent = "✓";
+    return c;
+  }
+  function periodNode() {
+    const wrap = el("div", "ps");
+    const dd = el("button", "ps-dd"); dd.type = "button"; dd.setAttribute("aria-expanded", String(ui.open));
+    dd.append(el("span", null, periodLabel()), el("span", "chev" + (ui.open ? " up" : "")));
+    dd.addEventListener("click", () => { ui.open = !ui.open; side.refresh(sideGroups()); });
+    wrap.appendChild(dd);
+    if (!ui.open) return wrap;
+    const last = latestMonth();
+    const tree = el("div", "ps-tree");
+    if (!last) { tree.appendChild(el("p", "ps-empty", "No data yet.")); wrap.appendChild(tree); return wrap; }
+    for (let yr = Number(last.slice(0, 4)); yr >= Number(EARLIEST.slice(0, 4)); yr--) {
+      const months = monthRange(yr + "-01", yr + "-12").filter((m) => m >= EARLIEST && m <= last);
+      const n = months.filter((m) => state.sel.has(m)).length;
+      const st = n === 0 ? false : n === months.length ? true : "mixed";
+      const row = el("div", "ps-row");
+      const tw = el("button", "ps-tw", ui.exp.has(String(yr)) ? "▾" : "▸"); tw.type = "button"; tw.setAttribute("aria-label", (ui.exp.has(String(yr)) ? "Hide" : "Show") + " months of " + yr);
+      tw.addEventListener("click", () => { ui.exp.has(String(yr)) ? ui.exp.delete(String(yr)) : ui.exp.add(String(yr)); side.refresh(sideGroups()); });
+      const yb = el("button", "ps-year"); yb.type = "button"; yb.setAttribute("role", "checkbox"); yb.setAttribute("aria-checked", String(st));
+      yb.append(cbox(st), el("b", null, String(yr)));
+      const first = months.filter((m) => state.sel.has(m));
+      yb.appendChild(el("small", null, st === true ? (months.length === 12 ? "all" : MON[+months[0].slice(5) - 1] + " – " + MON[+months[months.length - 1].slice(5) - 1]) : st === "mixed" ? n + " of " + months.length : ""));
+      yb.addEventListener("click", () => { months.forEach((m) => (st === true ? state.sel.delete(m) : state.sel.add(m))); renderAll(); });
+      row.append(tw, yb); tree.appendChild(row);
+      if (ui.exp.has(String(yr))) {
+        const g = el("div", "ps-months");
+        MON.forEach((name, k) => {
+          const m = yr + "-" + String(k + 1).padStart(2, "0");
+          const b = el("button", "ps-m" + (state.sel.has(m) ? " on" : ""), name); b.type = "button";
+          b.setAttribute("aria-pressed", String(state.sel.has(m)));
+          if (m < EARLIEST || m > last) { b.disabled = true; b.title = "No data yet"; }
+          b.addEventListener("click", () => { state.sel.has(m) ? state.sel.delete(m) : state.sel.add(m); renderAll(); });
+          g.appendChild(b);
+        });
+        tree.appendChild(g);
+      }
+    }
+    const qs = el("div", "ps-qs");
+    PRESETS.forEach(([k, label]) => { const b = el("button", null, label); b.type = "button"; b.addEventListener("click", () => { state.sel = preset(k); renderAll(); }); qs.appendChild(b); });
+    tree.appendChild(qs);
+    wrap.appendChild(tree);
+    return wrap;
+  }
+  function indicatorNode() {
+    const box = el("div", "ind-list");
+    const vis = visible().filter(chartable);
+    if (!vis.length) { box.appendChild(el("p", "ps-empty", "No chartable data yet.")); return box; }
+    const full = state.cmp.length >= SLOTS.length;
+    Object.entries(M.groups).forEach(([g, label]) => {
+      const items = vis.filter((i) => i.group === g); if (!items.length) return;
+      box.appendChild(el("p", "ind-grp", label));
+      items.forEach((i) => {
+        const on = state.cmp.includes(i.id);
+        const b = el("button", "ind"); b.type = "button"; b.setAttribute("role", "checkbox"); b.setAttribute("aria-checked", String(on));
+        const c = cbox(on); if (on) c.style.background = colorOf[i.id];
+        b.append(c, el("span", null, shortName(i)));
+        b.title = i.label;
+        if (!on && full) { b.disabled = true; b.title = "Up to 4 lines – untick one first"; }
+        b.addEventListener("click", () => toggle(i.id));
+        box.appendChild(b);
+      });
+    });
+    box.appendChild(el("p", "ind-note", state.cmp.length + " of 4 selected"));
+    return box;
+  }
+
+  function renderAll() {
     assignColors();
-    if (withSide !== false) side.refresh(sideGroups());
+    side.refresh(sideGroups());
     const a = RadarSide.AREAS[state.area];
     $("title").textContent = "Market indicators" + (a ? " · " + a.label : "");
     renderChart(); renderTiles(); writeHash();
@@ -525,8 +662,14 @@
   fetch("data/market.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((data) => {
     M = data;
     $("meta").textContent = data.updated ? "Updated " + fmtDay(data.updated) : "Not collected yet";
-    side = RadarSide.build($("side"), { toggleLabel: "Period & area", onChange: onSide });
+    side = RadarSide.build($("side"), {
+      toggleLabel: "Period, area & indicators", onChange: onSide,
+      extra: [{ id: "period", title: "Period", node: periodNode, before: true }, { id: "ind", title: "Indicators in chart", node: indicatorNode }],
+    });
+    state.sel = preset("36");
+    if (latestMonth()) ui.exp.add(latestMonth().slice(0, 4));
     readHash();
+    document.addEventListener("click", (e) => { if (ui.open && !e.target.closest(".ps")) { ui.open = false; side.refresh(sideGroups()); } });
     const avail = new Set(M.indicators.flatMap((i) => i.areas || []));
     if (state.area !== "all" && !avail.has(state.area)) state.area = "all";
     state.cmp = state.cmp.filter((id) => M.indicators.some((i) => i.id === id && chartable(i))).slice(0, SLOTS.length);

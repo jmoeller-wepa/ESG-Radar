@@ -29,7 +29,8 @@ UA = "Mozilla/5.0 (compatible; ESG-Radar/1.0)"
 
 # Activity codes used in the Union Registry (Phase III/IV), for display only
 ACTIVITY = {
-    "20": "Combustion of fuels", "35": "Pulp production", "36": "Paper or cardboard production",
+    "20": "Combustion of fuels", "21": "Refining of mineral oil", "29": "Cement clinker", "30": "Lime", "31": "Glass",
+    "32": "Ceramics", "35": "Pulp production", "36": "Paper or cardboard production",
     "9": "Pulp, paper and board",
 }
 
@@ -117,7 +118,7 @@ def main():
         year, url = (int(m.group(1)) if m else 0), src["fallback"]
         log.append(f"Page not readable ({str(exc)[:100]}); using the fallback link ({year})")
 
-    config_stamp = json.dumps(config["companies"], sort_keys=True)
+    config_stamp = json.dumps([config["companies"], config.get("fromYear"), config.get("excludeRegistries")], sort_keys=True)
     if old.get("source", {}).get("url") == url and old.get("configStamp") == config_stamp and old.get("companies"):
         log.append("Already processed this file with the same mapping – nothing to do.")
         return finish(log)
@@ -132,12 +133,14 @@ def main():
     for key in rows[0] if rows else {}:
         m = re.fullmatch(r"VERIFIED_EMISSIONS_?(\d{4})", key)
         if m:
-            year_cols[key] = m.group(1)
+            if int(m.group(1)) >= config.get("fromYear", 0):
+                year_cols[key] = m.group(1)
     if not year_cols:
         log.append("⚠️ No VERIFIED_EMISSIONS_<year> columns found – previous data kept. Columns: " + ", ".join(list(rows[0])[:25]))
         return finish(log)
     holder_cols = [k for k in (rows[0] if rows else {}) if "ACCOUNT_HOLDER" in k and "NAME" in k]
 
+    skip_registries = set(config.get("excludeRegistries", []))
     companies = {}
     for cid, rule in config["companies"].items():
         pats = [re.compile(p, re.IGNORECASE) for p in rule.get("patterns", [])]
@@ -149,6 +152,8 @@ def main():
             if isinstance(inst, float) and inst.is_integer():
                 inst = int(inst)
             key = f"{country}-{inst}"
+            if country in skip_registries and key not in include:
+                continue
             name = str(r.get("INSTALLATION_NAME") or "").strip()
             holder = " ".join(str(r.get(h) or "") for h in holder_cols).strip()
             text = f"{name} {holder}"
