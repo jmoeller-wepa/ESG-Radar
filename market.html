@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261103d">
+<link rel="stylesheet" href="assets/side.css?v=20261103e">
 <style>
   :root {
     --blue-900: #002d55;
@@ -167,8 +167,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261103d" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261103d">
+<script src="assets/status.js?v=20261103e" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261103e">
+<script src="assets/colresize.js?v=20261103e" defer></script>
 </head>
 <body>
 <header>
@@ -213,7 +214,7 @@
     </div>
     <div class="ptabs" role="tablist" id="tabs" aria-label="Market sections"></div>
     <div class="tabp" id="tab-cmp" role="tabpanel">
-    <p class="tab-lead">Compare up to 4 indicators as an index. Tick them in the side panel, or click a tile on the other tabs.</p>
+    <p class="tab-lead">Compare up to 4 indicators as an index. Tick them in the side panel, or click the tiles below the chart.</p>
     <section class="panel cmp" aria-labelledby="cmp-title">
       <div class="cmp-head">
         <h3 id="cmp-title">Compare</h3>
@@ -224,6 +225,7 @@
       <button class="table-toggle" id="tbl-btn" type="button" aria-expanded="false">Show as table</button>
       <div class="dtable" id="dtable" hidden></div>
     </section>
+    <div id="cmp-tiles" style="display:flex;flex-direction:column;gap:22px"></div>
     </div>
     <div class="tabp" id="groups" role="tabpanel" hidden></div>
   </div>
@@ -233,8 +235,8 @@
   <p>Updated weekly by the GitHub Action; Eurostat and FRED publish monthly, energy prices half-yearly. Indices are for trend orientation only. Pulp and recovered-paper market prices (FOEX, Fastmarkets) are paid data and therefore not shown.</p>
 </div></footer>
 
-<script src="assets/side.js?v=20261103d"></script>
-<script src="assets/carbon.js?v=20261103d"></script>
+<script src="assets/side.js?v=20261103e"></script>
+<script src="assets/carbon.js?v=20261103e"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -247,10 +249,10 @@
   const DEFAULT_CMP = ["ppi_tissue", "ppi_pulp", "us_recovered_paper", "gas_ttf", "us_wood_pulp", "elec_de"];
   const state = { tab: "cmp", area: RadarSide.area(), sel: new Set(), cmp: [] };
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
+  // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
-    { id: "fibre", label: "Fibre & products", groups: ["fibre"], lead: "Producer prices for tissue, pulp and paper, plus US recovered paper and wood pulp as trend proxies." },
-    { id: "energy", label: "Energy & grid", groups: ["energy", "grid"], lead: "Gas and electricity prices, renewable share and the CO₂ intensity of national power grids." },
-    { id: "carbon", label: "Carbon & currency", groups: ["carbon"], lead: "What WEPA's EU ETS emissions cost at today's carbon price, plus the EUA price and EUR/USD." },
+    { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a row to add the country to the Compare chart." },
+    { id: "carbon", label: "Carbon cost", groups: ["carbon"], lead: "What WEPA's EU ETS emissions cost at a given carbon price – move the slider or pick another year." },
   ];
   let TABS = [];
   const ui = { open: false, exp: new Set() };
@@ -592,56 +594,57 @@
   }
 
   function buildTabs() {
-    const known = new Set(TAB_DEF.flatMap((t) => t.groups));
     TABS = [{ id: "cmp", label: "Compare", groups: [] }, ...TAB_DEF.filter((t) => t.groups.some((g) => M.groups[g]))];
-    Object.entries(M.groups).forEach(([g, label]) => { if (!known.has(g)) TABS.push({ id: g, label, groups: [g], lead: "" }); });
   }
   function renderTabs() {
-    const vis = visible();
     $("tabs").replaceChildren(...TABS.map((t) => {
       const b = el("button", null, t.label); b.type = "button"; b.setAttribute("role", "tab"); b.setAttribute("aria-selected", String(t.id === state.tab));
       if (t.id === "cmp") b.appendChild(el("small", null, state.cmp.length + " of 4"));
-      else { const n = vis.filter((i) => t.groups.includes(i.group)).length; b.appendChild(el("small", null, String(n))); }
       b.addEventListener("click", () => { state.tab = t.id; renderAll(); window.scrollTo({ top: 0 }); });
       return b;
     }));
     $("tab-cmp").hidden = state.tab !== "cmp";
     $("groups").hidden = state.tab === "cmp";
   }
-  // Strip at the top of the topic tabs: what is in the Compare chart right now
+  // Strip on the Grid tab: what is in the Compare chart right now
   function cmpStrip() {
     const box = el("div", "cmp-strip");
-    box.appendChild(el("span", null, state.cmp.length ? "In the Compare chart:" : "Click a tile to add it to the Compare chart."));
+    box.appendChild(el("span", null, state.cmp.length ? "In the Compare chart:" : "Nothing in the Compare chart yet."));
     state.cmp.forEach((id) => { const i = M.indicators.find((x) => x.id === id); if (!i) return; const c = el("span", "cs-chip"); const d = el("i"); d.style.background = colorOf[id]; c.append(d, document.createTextNode(shortName(i))); box.appendChild(c); });
     if (state.cmp.length) { const go = el("button", "cs-go", "Open Compare →"); go.type = "button"; go.addEventListener("click", () => { state.tab = "cmp"; renderAll(); window.scrollTo({ top: 0 }); }); box.appendChild(go); }
     return box;
+  }
+  // Compare tab: indicator tiles by topic below the chart (grid countries live on their own tab)
+  function renderCmpTiles() {
+    const host = $("cmp-tiles"); host.replaceChildren();
+    if (state.tab !== "cmp") return;
+    const vis = visible();
+    Object.entries(M.groups).forEach(([g, label]) => {
+      if (g === "grid") return;
+      const items = vis.filter((i) => i.group === g); if (!items.length) return;
+      const sec = el("section", "group"); sec.appendChild(el("h3", "cap", label));
+      const grid = el("div", "tiles"); items.forEach((i) => grid.appendChild(tile(i)));
+      sec.appendChild(grid); host.appendChild(sec);
+    });
   }
   function renderTiles() {
     const host = $("groups"); host.replaceChildren();
     const tab = TABS.find((t) => t.id === state.tab);
     if (!tab || tab.id === "cmp") return;
     if (tab.lead) host.appendChild(el("p", "tab-lead", tab.lead));
-    host.appendChild(cmpStrip());
-    const vis = visible();
-    let any = false;
-    tab.groups.forEach((g) => {
-      const label = M.groups[g]; if (!label) return;
-      const items = vis.filter((i) => i.group === g); if (!items.length) return;
-      any = true;
-      const sec = el("section", "group");
-      if (tab.groups.length > 1) sec.appendChild(el("h3", "cap", label));
-      if (g === "grid") { const t = gridTable(items); if (t) sec.appendChild(t); }
-      if (g === "carbon" && ETS) {
-        const panel = el("div", "panel cc-panel"); panel.id = "carbon";
-        const hd = el("div", "cc-head"); hd.append(el("h4", null, "Carbon cost exposure · WEPA EU ETS sites"), el("span", null, "verified emissions × EUA price"));
-        const body = el("div"); panel.append(hd, body); CarbonCost.render(body, ETS, M, { history: true });
-        sec.appendChild(panel);
-        sec.appendChild(el("h3", "cap", "Indicators"));
-      }
-      const grid = el("div", "tiles"); items.forEach((i) => grid.appendChild(tile(i)));
-      sec.appendChild(grid); host.appendChild(sec);
-    });
-    if (!any) host.appendChild(el("div", "empty", "No indicators for this area on this tab. Choose “All areas” in the side panel."));
+    if (tab.id === "grid") {
+      host.appendChild(cmpStrip());
+      const items = visible().filter((i) => i.group === "grid");
+      const t = items.length ? gridTable(items) : null;
+      host.appendChild(t || el("div", "empty", items.length ? "Grid data arrives with the next weekly run (Ember)." : "No grid data for this area. Choose “All areas” in the side panel."));
+    }
+    if (tab.id === "carbon") {
+      const panel = el("div", "panel cc-panel"); panel.id = "carbon";
+      const hd = el("div", "cc-head"); hd.append(el("h4", null, "Carbon cost exposure · WEPA EU ETS sites"), el("span", null, "verified emissions × EUA price"));
+      const body = el("div"); panel.append(hd, body);
+      if (ETS) CarbonCost.render(body, ETS, M, { history: true }); else body.appendChild(el("p", "cc-note", "EU ETS data arrives with the next weekly run."));
+      host.appendChild(panel);
+    }
   }
 
   // ---------- side panel: period slicer (years → months) and indicator checklist ----------
@@ -720,7 +723,7 @@
     side.refresh(sideGroups());
     const a = RadarSide.AREAS[state.area];
     $("title").textContent = "Market" + (a ? " · " + a.label : "");
-    renderTabs(); if (state.tab === "cmp") renderChart(); renderTiles(); writeHash();
+    renderTabs(); if (state.tab === "cmp") renderChart(); renderCmpTiles(); renderTiles(); writeHash();
   }
 
   $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });

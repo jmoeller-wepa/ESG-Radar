@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261103d">
+<link rel="stylesheet" href="assets/side.css?v=20261103e">
 <style>
   :root {
     --blue-900: #002d55;
@@ -143,7 +143,10 @@
   .dlg-head { padding-bottom: 0 !important; display: block !important; }
   .dlg-ht { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
   .dlg-hl #dlg-tabs { margin: 12px -8px 0; border-bottom: 0; }
-  .dlg-body { min-height: 260px; }
+  /* fixed size: switching tabs in the full profile does not resize the pop-up; the body scrolls */
+  #dlg[open] { display: flex; flex-direction: column; height: min(760px, calc(100vh - 48px)); overflow: hidden; }
+  #dlg .dlg-head { flex: none; }
+  #dlg .dlg-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
   .tgt { display: grid; grid-template-columns: minmax(150px, 230px) minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line-2); font-size: 13px; }
   .tgt .pb { height: 8px; background: #eef1f4; border-radius: 4px; overflow: hidden; }
   .tgt .pb i { display: block; height: 100%; background: var(--wepa-green-soft, #33b09c); border-radius: 0 4px 4px 0; }
@@ -196,8 +199,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
-<script src="assets/status.js?v=20261103d" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261103d">
+<script src="assets/status.js?v=20261103e" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261103e">
+<script src="assets/colresize.js?v=20261103e" defer></script>
 </head>
 <body>
 <header>
@@ -278,7 +282,7 @@
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261103d"></script>
+<script src="assets/side.js?v=20261103e"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
