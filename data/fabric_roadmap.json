@@ -1,0 +1,1120 @@
+{
+ "updated": "2026-11-03T11:25:12",
+ "source": {
+  "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
+  "url": "https://www.fabric-gps.com",
+  "official": "https://aka.ms/FabricRoadmap"
+ },
+ "items": [
+  {
+   "id": "2aaf1457-96b0-f111-aaab-70a8a59cbbb7",
+   "name": "Fabric Chargeback app",
+   "product": "Administration, Governance and Security",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "**Fabric Chargeback app - Tags Support **Chargeback app tagging will enable organizations to attribute and analyze capacity consumption across customer-defined business dimensions such as project, function, workspace, cost center, or depart",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Providing-more-insights-amp-tools-Capacity-health-timepoint/ba-p/5176753"
+  },
+  {
+   "id": "6754378c-e14a-f111-bec7-6045bd0a8ec1",
+   "name": "Find Fabric items and tables from Copilot CLI with OneLake Catalog",
+   "product": "Administration, Governance and Security",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "As part of Skills for Fabric, AI coding assistants like GitHub Copilot can discover Fabric items and tables. Developers can find existing, governed data before writing code, enabling a &quot;find before you build&quot; workflow that bridges",
+   "url": "https://blog.fabric.microsoft.com/en-US/blog/discover-fabric-items-across-workspaces-with-the-onelake-catalog-search-api-mcp-and-cli-tools-preview"
+  },
+  {
+   "id": "9bfc47ce-094d-f111-bec7-6045bd0a8ec1",
+   "name": "OneLake catalog Search API expansion to OneLake and Semantic model tables",
+   "product": "Administration, Governance and Security",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "The OneLake Catalog Search API (POST /v1/catalog/search) -- previously limited to Fabric items -- now also returns OneLake tables (e.g. Lakehouse, Mirrored) and Semantic Model tables as first-class search results. Items and tables are ranke",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Discover-items-across-workspaces-with-the-OneLake-Catalog-Search/ba-p/5176768"
+  },
+  {
+   "id": "bd066fe5-adac-f111-aaab-7ced8d70ff57",
+   "name": "Advanced NL2SQL Agent (General Availability)",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Advanced NL2SQL delivers more accurate and reliable query generation for SQL data sources by combining stronger data exploration, schema understanding, and example-driven reasoning. The agent is better at learning from example queries and a",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Advanced-NL2SQL-and-advanced-DAX-generation-in-Fabric-data/ba-p/5374654"
+  },
+  {
+   "id": "df9398eb-fb68-f111-a826-6045bd0066ad",
+   "name": "Build Agent with AI Mode: Support Semantic Models",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Build Agent with AI mode is expanding support for Semantic Models in Data Agent, helping users generate semantic-model specific instructions and example queries more easily. The feature can explore Semantic Model tables, measures, columns, ",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Build-agent-with-AI-for-Data-Agent-Preview/ba-p/5351116"
+  },
+  {
+   "id": "51ca432f-f39f-f111-b8db-000d3a5c7513",
+   "name": "Data Agent A365 Identity and Observability",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Fabric data agents empower customers to unlock insights from their enterprise data that lives in Fabric OneLake across different consumption channels.Microsoft Agent 365 (A365) is the enterprise control plane that IT and security teams use ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/whats-new-for-fabric-data-agents-at-ignite-2025-unlocking-deeper-data-reasoning-/5172488"
+  },
+  {
+   "id": "5db8bce1-2b43-f111-88b5-6045bd00fc61",
+   "name": "Data Agent monitoring - Consumer to Creator feedback loop",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "The primary goal is to enable creators to understand how consumers interact with their data agents and bridge the gap between the data agent creators and the consumers. This comprehensive monitoring system will enable creators to have acces",
+   "url": "https://www.fabric-gps.com/release/5db8bce1-2b43-f111-88b5-6045bd00fc61"
+  },
+  {
+   "id": "bd904fac-c7b2-f111-aaab-70a8a59cb78c",
+   "name": "Microsoft Copilot in Power BI - Fabric",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "# Microsoft Copilot Integrated into Power BI and Microsoft FabricCopilot experiences have emerged across the applications people use every day, bringing AI closer to the work happening in each product. But this can also feel fragmented, wit",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/extracting-deeper-insights-with-fabric-data-agents-in-copilot-in-power-bi/5172750"
+  },
+  {
+   "id": "04b9f8e4-acac-f111-aaab-7ced8d70ff57",
+   "name": "Parameterized Example Queries",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Query Templates are parameterized example queries for SQL databases and Semantic Models that teach Data Agents how to answer common business questions. By providing trusted query patterns with reusable parameters, Query Templates help agent",
+   "url": "https://www.fabric-gps.com/release/04b9f8e4-acac-f111-aaab-7ced8d70ff57"
+  },
+  {
+   "id": "f0f360ab-3350-f111-bec7-6045bd00fc61",
+   "name": "Spark Workspace Monitoring v1",
+   "product": "Data Engineering",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "This feature delivers a comprehensive Spark Workspace Monitoring experience, enabling administrators and data engineers to gain full visibility into workspace-level Spark activity. Users can view and analyze live and historical job executio",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/announcing-preview-of-workspace-monitoring/5173019"
+  },
+  {
+   "id": "cdc7d144-f9d6-ee11-9079-000d3a310f67",
+   "name": "Connections - Enabling customers to parameterize their connections",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Data engineers encounter challenges when constructing metadata-driven workflows due to the need to establish multiple connections for diverse data source endpoints. Currently, existing connections lack the capability for dynamic referencing",
+   "url": "https://www.fabric-gps.com/release/cdc7d144-f9d6-ee11-9079-000d3a310f67"
+  },
+  {
+   "id": "f3579085-8c20-f011-998a-0022480939f0",
+   "name": "Connections - Enhanced Connection Collaboration Model",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "To enhance security, we aim to prevent the sharing of Microsoft account credentials across collaborators. The new connection-sharing model will encourage each collaborator to sign in with their own Microsoft account.",
+   "url": "https://www.fabric-gps.com/release/f3579085-8c20-f011-998a-0022480939f0"
+  },
+  {
+   "id": "98a73759-e13c-f111-88b5-6045bd00fc61",
+   "name": "Dataflows - Dataflow Gen1 - Gen2 Migration Wizard",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "The Dataflow Gen1 - Gen2 Migration Wizard will become Generally Available and production-ready, providing a guided, end-to-end experience to help customers confidently upgrade existing Power BI Dataflows (Gen1) to Dataflow Gen2 in Microsoft",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/unlocking-the-next-generation-of-data-transformations-with-dataflow-gen2---fabco/5172569"
+  },
+  {
+   "id": "1f2fe2c0-3535-f111-88b3-000d3a376c0f",
+   "name": "Dataflows - New Data Destination: AWS S3",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "We are introducing Amazon S3 as a new data destination for Dataflow Gen2 in Preview, enabling customers to publish transformed data from Microsoft Fabric directly into Amazon S3 using Dataflow Gen2's low-code Power Query experience.This pre",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/new-dataflow-gen2-data-destinations-and-experience-improvements/5172568"
+  },
+  {
+   "id": "8ea01c69-98a1-f111-b8db-0022480b837b",
+   "name": "Dataflows - New Destination: Google BigQuery",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "We are introducing Google BigQuery as a new data destination for Dataflow Gen2 in Preview, enabling customers to publish transformed data from Microsoft Fabric directly into BigQuery tables using Dataflow Gen2's low-code Power Query experie",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/a-wave-of-new-dataflow-gen2-capabilities-at-fabcon-atlanta-2026/5172175"
+  },
+  {
+   "id": "9cc12116-6ec2-f111-aaad-70a8a5b194d8",
+   "name": "Dataflows - New Destination: HTML Document",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "We plan to introduce HTML Document as a new data destination for Dataflow Gen2, enabling customers to turn data prepared in Microsoft Fabric into shareable, browser-friendly documents using the low-code Power Query experience. Designed for ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/a-wave-of-new-dataflow-gen2-capabilities-at-fabcon-atlanta-2026/5172175"
+  },
+  {
+   "id": "7a722b30-6dc2-f111-aaad-70a8a5b194d8",
+   "name": "Dataflows - New Destination: PostgreSQL",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "The PostgreSQL data destination in Dataflow Gen2 will become generally available, enabling customers to prepare and transform data in Microsoft Fabric and publish the results directly into PostgreSQL tables using the low-code Power Query ex",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/new-dataflow-gen2-data-destinations-and-experience-improvements/5172568"
+  },
+  {
+   "id": "2650603c-6fc2-f111-aaad-70a8a5b194d8",
+   "name": "Dataflows - Send Email with HTML Formatting",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "We are enhancing the previously released Send Email action in Dataflow Gen2 with rich HTML formatting, enabling customers to create more readable, data-driven emails with query results--such as tables--embedded directly in the message body.",
+   "url": "https://www.fabric-gps.com/release/2650603c-6fc2-f111-aaad-70a8a5b194d8"
+  },
+  {
+   "id": "2f052713-3235-f111-88b4-6045bd006301",
+   "name": "Dataflows - Support for Mapping Data Flow transformations in Dataflow Gen2",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Mapping Data Flows transformations will become generally available in Dataflow Gen2, bringing the proven, low-code, Spark-based transformation capabilities of Azure Data Factory and Azure Synapse directly into Microsoft Fabric.With this rel",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Dataflow-Gen2-and-Power-Query-innovations-at-Microsoft-Build-Low/ba-p/5189028"
+  },
+  {
+   "id": "9f3c0884-71c2-f111-aaad-70a8a5b194d8",
+   "name": "Power Query - Browse SharePoint in Modern Get Data",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "We are enhancing Power Query's Modern Get Data experience with SharePoint browsing, enabling customers to discover and select files and folders directly from their SharePoint sites instead of manually finding and copying URLs.This improveme",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/sharepoint-site-picker-for-easily-connecting-sharepoint-data-in-microsoft-fabric/5172133"
+  },
+  {
+   "id": "11c809b6-6563-f111-a826-6045bd0a8ec1",
+   "name": "dbt job - Support for dbt Fusion runtime in dbt job",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "We are adding support **dbt Fusion runtime** in dbt job in Microsoft Fabric as an execution environment, in addition to the existing dbt Core-based runtime.Customers can select the Fusion runtime when creating or configuring a dbt job to ru",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/dbt-job-in-microsoft-fabric-ship-trustworthy-sql-models-faster-preview/5172453"
+  },
+  {
+   "id": "dfb17dba-0d22-f011-998a-0022480939f0",
+   "name": "Configurable Retention between 1-120 days",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Ability to configure the data warehouse retention between 1 to 120 days;",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211"
+  },
+  {
+   "id": "512eea0a-39bf-f011-bbd3-00224808fcf0",
+   "name": "Connection Behavior When Connecting to Fabric Warehouse",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "We are updating the TDS (Tabular Data Stream) connection behavior in Fabric Warehouse to ensure consistent and predictable connections based on the specified Initial Catalog value.Previously, connections with an empty or invalid database na",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Connection-string-changes-in-Fabric-Warehouse-What-to-expect-for/ba-p/5185022"
+  },
+  {
+   "id": "5cd4b9a0-1322-f011-998a-0022480939f0",
+   "name": "Data Clustering",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Data Clustering enables faster read performance by allowing users to specify columns for co-locating data on ingestion and perform file skipping on read.",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/announcing-data-clustering-in-fabric-data-warehouse-preview/5172452"
+  },
+  {
+   "id": "b5227d15-874d-f111-bec7-002248085b3f",
+   "name": "Deployment Configurations Support - Fabric Warehouse & SQL Analytics Endpoint",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "* *support of deployment configurations -- giving teams granular control over what gets deployed, what gets skipped, and how data is handled at deployment time. Configurations are stored in Git alongside your warehouse schema, making them v",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/cicd-with-warehouses-in-microsoft-fabric/5173132"
+  },
+  {
+   "id": "b7e155c6-94bf-f011-bbd3-000d3a5b0efa",
+   "name": "File-Level write-write conflict detection (Generally Available)",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "This feature is part of the concurrency control strategy for Fabric DW. File-level write-write conflict detection is a mechanism designed to prevent two concurrent transactions from modifying the same physical file in a data warehouse at th",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/resolving-write-conflicts-in-microsoft-fabric-data-warehouse/5172544"
+  },
+  {
+   "id": "f151890c-74ed-f011-8544-000d3a33bffb",
+   "name": "Get Warehouse Schema Rest API",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "The REST API allows users to export the full warehouse definition, including schemas, tables, views, functions, and stored procedures, with filtering options to support exporting a subset of the warehouse definition.",
+   "url": "https://www.fabric-gps.com/release/f151890c-74ed-f011-8544-000d3a33bffb"
+  },
+  {
+   "id": "c5a0b4cb-322e-f111-88b4-000d3a376137",
+   "name": "Git & Deployment Pipelines Support for SQL Analytics Endpoint",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "SQL Analytics Endpoint supports Git integration and deployment pipelines in Fabric. Teams can version control endpoint changes and promote them across environments as part of their existing CI/CD workflows.**Git Integration for SQL Analytic",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/data-factory-adds-cicd-to-fabric-data-pipelines/5173239"
+  },
+  {
+   "id": "bfd72f56-e13c-f111-88b5-6045bd0a886d",
+   "name": "Optimized Truncate or DELETE all data in a table",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "This feature will improve the performance of deleting all data from Fabric Data Warehouse tables through TRUNCATE or DELETE.Feature is awaiting WW deployment.",
+   "url": "https://www.fabric-gps.com/release/bfd72f56-e13c-f111-88b5-6045bd0a886d"
+  },
+  {
+   "id": "a037d13b-a84d-f111-bec6-000d3a376c0f",
+   "name": "Reliable Warehouse Connectivity via TDS Redirect",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "TDS Redirect introduces an opt-in connectivity mode for Fabric Data Warehouse that improves connection reliability by allowing supported SQL clients to establish a direct connection to the Warehouse after the initial handshake. By reducing ",
+   "url": "https://www.fabric-gps.com/release/a037d13b-a84d-f111-bec6-000d3a376c0f"
+  },
+  {
+   "id": "edb33b5b-7f5d-f011-bec2-0022480939f0",
+   "name": "Scalar User-defined functions (UDFs)",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "We're expanding scalar user-defined functions with new capabilities, including INLINE = AUTO, improved error messaging, support for special built-in functions, and CONTINUE/BREAK statements in **computation**-based UDFs.",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/inline-scalar-user-defined-functions-udfs-in-microsoft-fabric-warehouse-preview/5172706"
+  },
+  {
+   "id": "9185ea8e-342e-f111-88b4-000d3a376137",
+   "name": "Transaction Support for Git Integration & Deployment Pipelines",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Fabric Warehouse deployments via Git integration and deployment pipelines execute under a transaction. If any step in a deployment fails, all changes are automatically rolled back -- leaving your warehouse in its exact pre-deployment state ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/cicd-with-warehouses-in-microsoft-fabric/5173132"
+  },
+  {
+   "id": "49ca9d78-7cd1-f111-a059-0022480a4051",
+   "name": "Vnode utilization in Query Insights SQL pool insights",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "See how much compute your SQL pools use, directly in T-SQL. The queryinsights.sql_pool_insights view now includes vnode utilization for all pools: vnodes_used shows how many vnodes a pool used, max_vnodes_available shows the most it can use",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/introducing%C2%A0sql-pool-insights-in-microsoft-fabric-data-warehouse-%E2%80%AF%C2%A0/5172285"
+  },
+  {
+   "id": "be34d186-0cb9-f011-bbd3-6045bd05dd14",
+   "name": "Workspace-Friendly Connections",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Fabric workspace connection strings often contain complex, encoded server names that make it difficult for developers to identify or manage connections easily.With Friendly workspace server name, developers can configure a friendly server n",
+   "url": "https://www.fabric-gps.com/release/be34d186-0cb9-f011-bbd3-6045bd05dd14"
+  },
+  {
+   "id": "74c64750-0a4f-f111-bec7-000d3a376137",
+   "name": "Associate an identity with Fabric items and schedules",
+   "product": "Fabric Developer Experiences",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Microsoft Fabric items and their schedules today implicitly execute under user identities (owner or creator), which makes production workloads fragile: pipelines, schedules, copy jobs, and shortcuts break when owners leave the organization ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/associated-identities-for-items-preview/5172039"
+  },
+  {
+   "id": "894a1ab7-bbcf-f111-a059-0022480a4ef9",
+   "name": "Catalog Federation - AWS Glue",
+   "product": "OneLake",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Easily connect your Delta Lake and Apache Iceberg tables managed in AWS Glue Data Catalog and Amazon S3 with OneLake.",
+   "url": "https://www.fabric-gps.com/release/894a1ab7-bbcf-f111-a059-0022480a4ef9"
+  },
+  {
+   "id": "7d974ea6-c7c3-f111-aaaf-70a8a5b194a9",
+   "name": "Databricks - Onelake as native storage - GA / Production-ready",
+   "product": "OneLake",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Production-ready support for Azure Databricks to store data in OneLake with OneLake Security enabled",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/zero-copy-access-to-onelake-data-in-azure-databricks-preview/5172291"
+  },
+  {
+   "id": "b99f2796-064f-f111-bec7-000d3a36696c",
+   "name": "OneLake malware scanning",
+   "product": "OneLake",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "OneLake malware protection helps secure your data by automatically scanning files for malicious content when they're uploaded. It surfaces alerts and scan results for further action, providing built-in protection for enterprise data without",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/onelake-security-preview/5172529"
+  },
+  {
+   "id": "e326538e-d31f-f111-8341-6045bd0a8ec1",
+   "name": "Add to preset for Power BI visuals",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Take the formatting on an individual visual and add it to the custom report theme for re-use on other visuals in the same report or a new report.",
+   "url": "https://www.fabric-gps.com/release/e326538e-d31f-f111-8341-6045bd0a8ec1"
+  },
+  {
+   "id": "df66c8a5-d46f-f111-ab0d-000d3a376137",
+   "name": "Card Visual - Trend Chart",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Display a built-in trend chart (line or column) inside Card visuals to show how values change over time. No SVGs or extra visuals needed.",
+   "url": "https://www.fabric-gps.com/release/df66c8a5-d46f-f111-ab0d-000d3a376137"
+  },
+  {
+   "id": "e1ba1ef1-03a0-f111-b8db-000d3a3ad6b6",
+   "name": "Explore",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Explore data in a focused experience without creating a report. Quickly investigate and customize your analysis using matrices and visuals, then save the exploration to a workspace or as a report.",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/microsoft-fabric-november-2023-update/5172115"
+  },
+  {
+   "id": "4ffd1a22-b7bb-f111-aaad-000d3a373559",
+   "name": "Filter action button to show filter options on the visual",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Bringing the filter pane to your visual with a new top level action buttons in your visual title.",
+   "url": "https://www.fabric-gps.com/release/4ffd1a22-b7bb-f111-aaad-000d3a373559"
+  },
+  {
+   "id": "ba851f2d-d21f-f111-8341-6045bd0a8ec1",
+   "name": "List slicer with dropdown mode",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "List slicer with drop down mode and advanced search options.",
+   "url": "https://www.fabric-gps.com/release/ba851f2d-d21f-f111-8341-6045bd0a8ec1"
+  },
+  {
+   "id": "6cda5cd3-d31f-f111-8341-6045bd0a8ec1",
+   "name": "Organizational themes for Power BI reports",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Organizational themes (preview) allow Power BI administrators to centrally manage and distribute custom report themes across the organization. Maintaining a consistent visual identity across Power BI reports is now simpler and more scalable",
+   "url": "https://www.fabric-gps.com/release/6cda5cd3-d31f-f111-8341-6045bd0a8ec1"
+  },
+  {
+   "id": "b0dea050-a0af-f111-aaab-70a8a59cb884",
+   "name": "Report Ribbon in the web",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "The new Report Ribbon on the web brings the familiar Power BI Desktop ribbon experience to the browser, providing a more intuitive, organized, and consistent way to access report actions and authoring capabilities.",
+   "url": "https://www.fabric-gps.com/release/b0dea050-a0af-f111-aaab-70a8a59cb884"
+  },
+  {
+   "id": "58e4e1b5-83c5-f011-bbd3-00224808fcf0",
+   "name": "TMDL View in the Web",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "We are bringing TMDL View in the web",
+   "url": "https://www.fabric-gps.com/release/58e4e1b5-83c5-f011-bbd3-00224808fcf0"
+  },
+  {
+   "id": "c6846700-9e3e-f111-88b5-6045bd0066ad",
+   "name": "Azure blob storage events enablement with Tenant Private Links",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Azure blob storage events enablement with Tenant Private Links",
+   "url": "https://www.fabric-gps.com/release/c6846700-9e3e-f111-88b5-6045bd0066ad"
+  },
+  {
+   "id": "ee5af75d-3f4a-f111-bec7-002248085b3f",
+   "name": "Bring your own Eventhub to Fabric Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "You can now shortcut an existing Azure Event Hub as a fully featured Eventstream, bringing your own hub into Fabric without rebuilding pipelines. The shortcut stream behaves like a native Eventstream, including processing and routing.With t",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/stream-azure-iot-hub-data-into-fabric-eventstream-for-email-alerting/5172174"
+  },
+  {
+   "id": "766d62fa-d63d-f111-88b5-6045bd0a8ec1",
+   "name": "Business events selector when publishing events from Notebook",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "**Business Events Selection from Notebook to Create Dynamic Publishing Code****Overview**Enable users to select Business Events directly from within Notebooks and automatically generate publishing code--bridging schema discovery with code-f",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Publishing-Business-Events-from-Fabric-workloads/ba-p/5359124"
+  },
+  {
+   "id": "409987af-d649-f111-bec7-6045bd00f506",
+   "name": "Lakehouse Delta table change feed connector for Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Eventstream now reads change records directly from change-enabled Delta tables in a Lakehouse and streams them in real time. This lets teams act on data changes as they happen.With this capability, you can:- Stream inserts, updates, and del",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/eventhouse-onelake-availability-is-generally-available/5173170"
+  },
+  {
+   "id": "a9abe16a-7faf-f011-bbd3-000d3a3740cc",
+   "name": "Lakehouse Streaming Tables in the Real Time hub",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Lakehouse Streaming Tables bring real-time data processing and analytics to the Fabric Real Time hub, making it easier for data engineers and data scientists to discover, explore, and act on streaming data - all in one central location. Wit",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/5172526"
+  },
+  {
+   "id": "aa858b30-d73d-f111-88b5-6045bd0a8ec1",
+   "name": "Notebook as a Business Events Publisher from Real-Time Hub",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "**Notebook as a Business Events Publisher from Real-Time Hub****Overview**Enable users to generate and publish Business Events directly from Notebooks using guided experiences in Real-Time hub--combining data exploration, custom logic, and ",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Fabric-Eventstream-can-now-publish-Business-Events-Preview/ba-p/5180050"
+  },
+  {
+   "id": "61963fc1-c6f0-f011-8407-000d3a3ac4a5",
+   "name": "Secure Fabric Eventstreams with customer-managed keys",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Apply Fabric workspace customer managed keys to Eventstreams to add an extra layer of encryption for data at rest. When CMK is enabled for a workspace, Eventstreams automatically use the workspace key configuration via Azure Key Vault, incl",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/customer-managed-keys-for-fabric-workspaces-generally-available%C2%A0/5172531"
+  },
+  {
+   "id": "b3544bc9-afb7-f111-aaab-7ced8d70b853",
+   "name": "Unified GetData Full Page Experience",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Unified GetData Full Page Experience is a unified, full-screen workflow for completing a data-ingestion job from entry points such as Real-Time Hub, Eventhouse, and Eventstream. It guides users through source discovery, connector configurat",
+   "url": "https://www.fabric-gps.com/release/b3544bc9-afb7-f111-aaab-7ced8d70b853"
+  },
+  {
+   "id": "cde82016-24a6-f011-bbd3-000d3a5b0efa",
+   "name": "Workspace Private Link for Eventstream's Select Sources & Destinations",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Private Link enables secure, private connectivity between your virtual network and Microsoft Fabric, eliminating exposure to the public internet. With Eventstream's integration with Workspace Private Link, you gain granular access control a",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Strengthening-data-security-with-workspace-level-private/ba-p/5377347"
+  },
+  {
+   "id": "afcd2c3d-5bb2-f111-aaab-70a8a5afd4dd",
+   "name": "Fuzzy string match is available across Microsoft SQL offerings",
+   "product": "SQL database",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Fuzzy string match is now generally available across Microsoft SQL offerings, including Azure SQL Database, Azure SQL Managed Instanced, SQL database in Microsoft Fabric, and SQL Server 2025. You can compare strings based on how similar or ",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/New-string-functions-and-operators-in-Fabric-Data-Warehouse/ba-p/5195232"
+  },
+  {
+   "id": "0ba89ee5-81b3-f111-aaab-70a8a59cbac4",
+   "name": "Point-in-time restore from dropped databases",
+   "product": "SQL database",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Today users can restore a database into any point-in-time from live databases in Microsoft Fabric. Point-in-time restore (PITR) feature should have enhanced capability to help their users recover from accidental database deletion and ensure",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/extending-point-in-time-retention-in-fabric-sql-db-from-7-to-35-days/5172554"
+  },
+  {
+   "id": "009295f2-84b6-f111-aaab-7ced8d70bb60",
+   "name": "Smaller max vCore options and resizing",
+   "product": "SQL database",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Customer can reduce the max vcore to control the CU consumption",
+   "url": "https://www.fabric-gps.com/release/009295f2-84b6-f111-aaab-7ced8d70bb60"
+  },
+  {
+   "id": "54678565-fb68-f111-a826-6045bd0066ad",
+   "name": "Build Agent with AI Mode Supports Files as Context",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Build Agent with AI Mode file support lets users upload existing text-based business context such as documentation, glossaries, process guides, and data dictionaries, so Creator Agent can use it to generate more complete and accurate Data A",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Build-agent-with-AI-for-Data-Agent-Preview/ba-p/5351116"
+  },
+  {
+   "id": "34631b0a-c065-f111-a826-6045bd00fc61",
+   "name": "Relationship Context for SQL Sources",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Data Agent automatically follows the foreign key relationships in your SQL source to query the right tables -- including ones you didn't explicitly select. When you scope an agent to a schema or just a couple of base tables, the agent expan",
+   "url": "https://www.fabric-gps.com/release/34631b0a-c065-f111-a826-6045bd00fc61"
+  },
+  {
+   "id": "10dd8c0b-afb0-f111-aaab-70a8a59cbb0e",
+   "name": "Support SPN + RLS",
+   "product": "Conversational Analytics",
+   "tool": "copilot",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Fabric Data Agent supports service principal (SPN) authentication, enabling agent-to-agent scenarios such as Microsoft Foundry calling a Data Agent using an SPN. However, SPN-based access is not currently supported with Row-Level Security (",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634"
+  },
+  {
+   "id": "a3c892bc-d7b2-f111-aaab-70a8a59cbac4",
+   "name": "Preview - Runtime 2.1 (Spark 4.2 and Delta 4.4)",
+   "product": "Data Engineering",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Microsoft Fabric Runtime 2.1 updates the Apache Spark foundation to Spark 4.2 and Delta Lake 4.4, with Python 3.14, Scala 2.13, and Java 21. For supported workloads, the Native Execution Engine is enabled by default to provide acceleration ",
+   "url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-preview"
+  },
+  {
+   "id": "71469140-3550-f111-bec7-6045bd00fc61",
+   "name": "Track and Manage Notebook Run Dependencies & Linage View",
+   "product": "Data Engineering",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "This feature delivers a comprehensive Notebook Run Lineage experience for Spark applications, enabling data engineers to monitor and analyze complex notebook workflows with ease. It provides an at-a-glance view of all notebook run statuses,",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/enhanced-monitoring-for-spark-high-concurrency-workloads-in-microsoft-fabric/5172618"
+  },
+  {
+   "id": "add43c89-3350-f111-bec7-6045bd00fc61",
+   "name": "[GA] Job Insights Library",
+   "product": "Data Engineering",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "The general availability of the Job Insights Library provides comprehensive visibility into Spark execution by surfacing logs and metrics across queries, jobs, stages, and tasks. Users can not only analyze execution behavior directly within",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/gain-deeper-insights-into-spark-jobs-with-jobinsight-in-microsoft-fabric/5172615"
+  },
+  {
+   "id": "fe489766-3350-f111-bec7-6045bd00fc61",
+   "name": "[Monitoring] Integrate and Expose Spark Application CPU/Memory Usage",
+   "product": "Data Engineering",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "This feature is designed to visualize real-time metrics for Spark applications through a dashboard that allows users to monitor CPU and memory utilization at the application level for both executors and drivers, across running and completed",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-spark-monitoring-apis-generally-available/5172588"
+  },
+  {
+   "id": "fbf626c8-726a-f111-a826-000d3a36696c",
+   "name": "Connectors - Modernized Exchange connector for Power Query",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Microsoft Fabric will introduce a modernized replacement for the existing Exchange connector, improving the foundation for connecting to Exchange data through Power Query-based experiences.",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Securing-the-Power-Query-connector-ecosystem-in-Fabric/ba-p/5195164"
+  },
+  {
+   "id": "37499ba5-5b21-f011-9989-000d3a5b0147",
+   "name": "Copy job - AI-powered Error Assistant and Insight for Copy Job",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Copilot helps to troubleshoot Copy job error messages by providing clearer summary and actionable recommendations.",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/ai-powered-troubleshooting-for-fabric-pipeline-error-messages/5172442"
+  },
+  {
+   "id": "7f75427b-473d-f111-88b5-002248085b3f",
+   "name": "Copy job - CDC based replication from MySQL",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "With the MySQL CDC connector in Copy job, you can capture inserts, updates, and deletes from MySQL and copy them to any supported destination.",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/simplifying-data-ingestion-with-copy-job---introducing-change-data-capture-cdc-s/5172747"
+  },
+  {
+   "id": "895d2725-473d-f111-88b5-002248085b3f",
+   "name": "Copy job - CDC based replication from PostgreSQL",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "With the PostgreSQL CDC connector in Copy job, you can capture inserts, updates, and deletes from PostgreSQL and copy them to any supported destination.",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/simplifying-data-ingestion-with-copy-job---introducing-change-data-capture-cdc-s/5172747"
+  },
+  {
+   "id": "46b875fc-433d-f111-88b5-002248085b3f",
+   "name": "Copy job - CDC based replication from Salesforce",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Copy job provides a Salesforce CDC connector, allowing you to capture row-level inserts, updates, and deletes from Salesforce and replicate them to any supported destination.",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Simplify-your-data-movement-with-Copy-job-CDC-with-SQL-estate/ba-p/5184211"
+  },
+  {
+   "id": "385260b0-5b07-ef11-9f89-000d3a34b75c",
+   "name": "Dataflows - Dataflows Gen2 Partitioned Compute",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Partitioned Compute is a capability of Dataflow Gen2 that enables parts of a dataflow to run in parallel, reducing the time to finish its evaluations.Partitioned compute targets scenarios where the Dataflow engine can efficiently fold opera",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Benchmarking-Dataflow-Gen2-Faster-data-transformation-at-lower/ba-p/5189072"
+  },
+  {
+   "id": "45a4fc04-9ab3-f011-bbd3-000d3a30273e",
+   "name": "Dataflows - New Destination: Google Cloud Storage",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "We are introducing Google Cloud Storage (GCS) as a new data destination for Dataflow Gen2 in Preview, enabling customers to land transformed data from Microsoft Fabric directly into Google Cloud Storage using Dataflow Gen2's low-code Power ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/new-dataflow-gen2-data-destinations-and-experience-improvements/5172568"
+  },
+  {
+   "id": "d1fca7f4-6fc2-f111-aaad-70a8a5b194d8",
+   "name": "Dataflows - New Destination: PowerPoint Presentations (PPTX)",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "We plan to introduce PowerPoint Presentations (PPTX) as a new data destination for Dataflow Gen2, enabling customers to turn data prepared in Microsoft Fabric into presentation files using the low-code Power Query experience.Designed for ci",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Dataflow-Gen2-and-Power-Query-innovations-at-Microsoft-Build-Low/ba-p/5189028"
+  },
+  {
+   "id": "75004e12-2158-f111-bec7-6045bd00f798",
+   "name": "Feature Store",
+   "product": "Data Science",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Fabric feature store is a centralized system that manages the data inputs, called features, that power machine learning models. It bridges raw data and ML models, giving teams one place to define, store, serve, and discover features instead",
+   "url": "https://www.fabric-gps.com/release/75004e12-2158-f111-bec7-6045bd00f798"
+  },
+  {
+   "id": "c287226c-6ec2-f111-aaad-70a8a5b19412",
+   "name": "ALTER COLUMN (GA)",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "ALTER COLUMN to non-nullable lets customers enforce &quot;this column must always have a value&quot; directly, in place, no more full table rebuilds just to tighten a constraint. It saves time, avoids error-prone workarounds (CTAS, drop/ren",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Simplify-Schema-Changes-in-Fabric-Data-Warehouse-with-ALTER/ba-p/5177593"
+  },
+  {
+   "id": "bb7de14c-ebb8-f011-bbd3-6045bd05dd14",
+   "name": "Browse and Connectivity in VS Code for Fabric Warehouse",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "VS Code allows developers to explore Fabric Workspaces and connect directly to Fabric Warehouses, providing seamless access to data and objects. Key capabilities include:* Workspace exploration: Navigate Fabric Workspaces, including their w",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/microsoft-fabric-extension-for-vs-code-generally-available/5172598"
+  },
+  {
+   "id": "ce7f2f21-9421-f011-9989-000d3a302e4a",
+   "name": "Shortcuts in Fabric Data Warehouse",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Shortcuts in Fabric DW allow users to directly access and query data that is present in internal and external data sources, without loading them into Fabric DW. Users will have the capability to create Table Shortcuts via TSQL, UX and API",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/analyze-dataverse-tables-from-microsoft-fabric/5173251"
+  },
+  {
+   "id": "e240d768-fc21-f011-998a-0022480939f0",
+   "name": "Warehouse Clones",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Ability to clone warehouse across workspaces",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/time-travelling-through-data-the-magic-of-table-clones/5172142"
+  },
+  {
+   "id": "8718f950-76b0-f111-aaab-70a8a59cb855",
+   "name": "Enable/disable Fabric multitasking context carry across browser tabs",
+   "product": "Fabric Developer Experiences",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "We're improving Fabric's multitasking experience by giving users control over how context behaves when they open Fabric in another browser tab. Today, open items, tab order, pinned items, and tab groups automatically carry over to additiona",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/supercharge-your-workflow-new-multitasking-features-coming-to-fabric-preview/5172571"
+  },
+  {
+   "id": "dd026247-931f-f011-998a-0022480939f0",
+   "name": "OneLake security - dynamic and multi-table RLS",
+   "product": "OneLake",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "OneLake security is adding support for dynamic and multi-table row level security. With dynamic RLS, users can create roles in OneLake that secure data differently for each user that queries the data. In addition, multi-table RLS allows dat",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-security-Generally-Available/ba-p/5176756"
+  },
+  {
+   "id": "05972e72-b8bb-f111-aaad-000d3a373559",
+   "name": "Azure Maps geocoding auditor",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Show information about how Azure Maps converted your location to the map, called geocoding, when you are editing your Power BI report.",
+   "url": "https://www.fabric-gps.com/release/05972e72-b8bb-f111-aaad-000d3a373559"
+  },
+  {
+   "id": "a1de82b7-b8bb-f111-aaad-000d3a373559",
+   "name": "Azure Maps multiple data layers",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Add different data for each layer of your Power BI Azure Maps visual.",
+   "url": "https://www.fabric-gps.com/release/a1de82b7-b8bb-f111-aaad-000d3a373559"
+  },
+  {
+   "id": "22187e7b-a1af-f111-aaab-70a8a59cb884",
+   "name": "Developer mode (PBIP) external changes reload",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "External Changes Reload enables Power BI Desktop to automatically detect and apply changes made to PBIP project files by external tools such as Visual Studio Code, without requiring users to restart Power BI Desktop.",
+   "url": "https://www.fabric-gps.com/release/22187e7b-a1af-f111-aaab-70a8a59cb884"
+  },
+  {
+   "id": "0133b7a1-b6bb-f111-aaad-000d3a373559",
+   "name": "Power BI Markdown visual",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Display Markdown in your Power BI report from your data or entered manually.",
+   "url": "https://www.fabric-gps.com/release/0133b7a1-b6bb-f111-aaad-000d3a373559"
+  },
+  {
+   "id": "7c2e515a-b6bb-f111-aaad-000d3a373559",
+   "name": "Power BI Vega visual",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Customize the presentation of your data in a Power BI report with a Vega specification.",
+   "url": "https://www.fabric-gps.com/release/7c2e515a-b6bb-f111-aaad-000d3a373559"
+  },
+  {
+   "id": "8d8565f4-b5bb-f111-aaad-000d3a373559",
+   "name": "Power BI relative slicers week starts on option",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Specify when your week starts for relative date options for weeks.",
+   "url": "https://www.fabric-gps.com/release/8d8565f4-b5bb-f111-aaad-000d3a373559"
+  },
+  {
+   "id": "4121c862-f89f-f111-b8db-000d3a3adc9b",
+   "name": "Quick visual edits",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Previously known as On-object interaction, Quick visual edits makes it easier to build and format visuals directly from the report canvas. Add or remove data, manage visual elements, and update common settings such as titles, subtitles, leg",
+   "url": "https://www.fabric-gps.com/release/4121c862-f89f-f111-b8db-000d3a3adc9b"
+  },
+  {
+   "id": "e8617575-b7bb-f111-aaad-000d3a373559",
+   "name": "Sort action button to show filter options on the visual",
+   "product": "Power BI",
+   "tool": "powerbi",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Bringing the sort options to your visual with a new top level action buttons in your visual title.",
+   "url": "https://www.fabric-gps.com/release/e8617575-b7bb-f111-aaad-000d3a373559"
+  },
+  {
+   "id": "02b2d2a5-ecc0-f011-bbd3-6045bd05dd14",
+   "name": "Anomaly Detection Events in Real-Time Hub",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "**Anomaly Detection Events in Real-Time Hub****Overview**Enable Real-Time hub to surface anomaly detection signals as Business Events--allowing users to monitor, react, and automate responses to unusual patterns in real time.**Key Capabilit",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/ai%E2%80%93powered-real-time-intelligence-with-anomaly-detection-preview/5172589"
+  },
+  {
+   "id": "34fee3ee-8e3f-f111-88b5-6045bd00f798",
+   "name": "Azure Data Explorer source connector for Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "The Azure Data Explorer source connector for Eventstream extends ingestion limits and adds streaming from a custom query, so you can bring Azure Data Explorer data into Microsoft Fabric for further real-time processing.With this capability,",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/new-eventstream-sources-mqtt-solace-pubsub-azure-data-explorer-weather--azure-ev/5172843"
+  },
+  {
+   "id": "c300a8cf-863f-f111-88b5-6045bd00f798",
+   "name": "Continuous ingestion from Azure Blob Storage files",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream can now continuously ingest file content from Azure Blob Storage into Eventhouse, streaming new and updated files as they arrive. Teams can analyze file data in near real time.With this capability, you can:- Ingest files from Az",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/continuous-ingestion-from-azure-storage-to-eventhouse-preview/5172749"
+  },
+  {
+   "id": "76968352-9a41-f111-88b5-002248085b3f",
+   "name": "DeltaFlow: Analytics ready CDC feed processing in Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream now makes change data capture (CDC) feeds analytics ready by automatically turning raw change events into structured tables. Developers and analysts can work with change data as if it were regular tables, without interpreting co",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/building-real-time-event-driven-applications-with-database-cdc-feeds-and-fabric-/5172193"
+  },
+  {
+   "id": "294ed21d-9d41-f111-88b5-002248085b3f",
+   "name": "Easily use Spark Structured Streaming with Fabric Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream now integrates with Fabric Spark, letting data engineers and scientists consume and process stream data in notebooks and Spark jobs. This unifies real-time intelligence with Spark in a single end-to-end experience.With this capa",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/bringing-together-fabric-real-time-intelligence-notebook-and-spark-structured-st/5172339"
+  },
+  {
+   "id": "704213db-f23f-f111-88b5-6045bd00f798",
+   "name": "Enable CopyJob as source in Eventstream and Real-time Hub",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream can now use CopyJob sources, with discovery through Real-Time Hub, broadening a set of sources you can stream into Fabric. This connects CopyJob sources with real-time processing.With this capability, you can:- Use CopyJob conne",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/acquiring-real-time-data-from-new-sources-with-enhanced-eventstream/5173178"
+  },
+  {
+   "id": "a697c5aa-c99c-f111-b8db-6045bd02b37f",
+   "name": "Eventhouse onboarding Agent (copilot experience)",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Copilot based exprience that allows users to create and model eventhouse, connect it to Eventstream and OneLake shortuct data and manage it all via natural language.",
+   "url": "https://www.fabric-gps.com/release/a697c5aa-c99c-f111-b8db-6045bd02b37f"
+  },
+  {
+   "id": "714d2deb-263e-f111-88b5-6045bd0066ad",
+   "name": "Eventstream HTTP Connector GA",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "The Eventstream HTTP connector is generally available in Microsoft Fabric, enabling you to ingest data from external HTTP APIs into Eventstream for real-time processing and analytics.With this capability, you can:- Connect to supported exte",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Supercharge-your-real-time-data-ingestion-What-s-new-in-Fabric/ba-p/5260314"
+  },
+  {
+   "id": "6457e054-8d3f-f111-88b5-6045bd00f798",
+   "name": "JDBC source connector for Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream offers a JDBC source connector, letting you stream from databases that expose a JDBC interface.With this capability, you can:- Stream data from JDBC-compatible databases into Eventstream.- Customize the open-source connector for",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/introducing-the-http-and-mongodb-cdc-connectors-for-eventstream-%E2%80%94-inspired-by-yo/5172439"
+  },
+  {
+   "id": "eb22e174-8e3f-f111-88b5-6045bd00f798",
+   "name": "JMS Eventstream connector",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream now supports a Java Message Service source connector, extending coverage to another widely used message broker type. Teams running JMS brokers can stream those messages into Microsoft Fabric for real-time analytics.With this cap",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/new-eventstream-sources-mqtt-solace-pubsub-azure-data-explorer-weather--azure-ev/5172843"
+  },
+  {
+   "id": "8790f16d-f23f-f111-88b5-6045bd00f798",
+   "name": "Live delivery insights in Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream now shows live delivery insights, giving real-time visibility into how events flow from sources to destinations. Operators can confirm data is moving as expected and spot problems quickly without leaving the editor.With this cap",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/introducing-enhanced-capabilities-in-eventstream-derived-streams-edit-modes-and-/5173180"
+  },
+  {
+   "id": "f661c4f7-8d3f-f111-88b5-6045bd00f798",
+   "name": "Salesforce change data capture source connector",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream now provides a Salesforce change data capture source connector, streaming record changes from Salesforce into Microsoft Fabric. Teams can react to business changes as they happen.With this capability, you can:- Stream Salesforce",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/stream-sql-change-events-to-microsoft-fabric-eventstream-with-change-event-strea/5172004"
+  },
+  {
+   "id": "17ed2f32-8e3f-f111-88b5-6045bd00f798",
+   "name": "Salesforce platform events source connector",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Eventstream now provides a Salesforce platform events source connector, bringing real-time business events from Salesforce into Microsoft Fabric. This complements change data capture by streaming custom and standard platform events.With thi",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/new-eventstream-sources-mqtt-solace-pubsub-azure-data-explorer-weather--azure-ev/5172843"
+  },
+  {
+   "id": "5087315d-e93e-f111-88b5-6045bd00f798",
+   "name": "Unified GetEvents for Fabric RTI",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Building a unified GetEvents experience across Fabric Real-Time Intelligence (RTI), ensuring consistency across Eventstream, Real-Time Hub, KQL/Eventhouse, Activator, Notebook, and Lakehouse. No more jumping between different wizards or pie",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/announcing-rti-end-to-end-sample/5172921"
+  },
+  {
+   "id": "403b7b13-0ca4-f011-bbd3-000d3a5b0efa",
+   "name": "Unify batch & streaming data platforms with CopyJob & Real-Time Intelligence",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "The integration of Real-Time Intelligence with CopyJob in Microsoft Fabric empowers organizations to stream incremental updates from traditionally 'batch' data sources directly into Eventstreams. Simultaneously, users can ingest data from s",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/introducing-real-time-intelligence-in-microsoft-fabric/5173208"
+  },
+  {
+   "id": "7c18efd5-e4c0-f011-bbd3-000d3a5b0efa",
+   "name": "Workspace scope for Job Events",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Subscribe to Fabric Job Events at the workspace scope to monitor job activity across an entire workspace.",
+   "url": "https://www.fabric-gps.com/release/7c18efd5-e4c0-f011-bbd3-000d3a5b0efa"
+  },
+  {
+   "id": "61e4ab87-eeb1-f111-aaab-70a8a59cbac4",
+   "name": "Outbound Access Protection for Fabric SQL DB",
+   "product": "SQL database",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Microsoft Fabric's outbound access protection blocks all outbound connections from a workspace by default and only allows approved external connections through managed private endpoints or data connection rules. It applies across workloads ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/outbound-access-protection-for-data-factory-generally-available/5172006"
+  },
+  {
+   "id": "50f83e60-1f40-f111-88b5-000d3a376137",
+   "name": "Customer Managed Keys (CMK) for Ontology",
+   "product": "IQ",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q2 2027",
+   "desc": "Customer Managed Keys for Ontology gives organizations control over the encryption keys used to protect ontology data and metadata at rest. This is important for customers with strict compliance, security, or regulatory requirements that re",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/customer-managed-keys-cmk-for-eventhouse-preview/5172008"
+  },
+  {
+   "id": "8a059230-3855-f111-bec7-000d3a36696c",
+   "name": "Ontology Health",
+   "product": "IQ",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q2 2027",
+   "desc": "We are introducing Ontology Health in Microsoft Fabric to help modelers quickly assess whether an ontology is ready for real-world use. With this capability, ontology quality is continuously evaluated across three core areas--foundation, va",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-iq-the-semantic-foundation-for-enterprise-ai/5172473"
+  },
+  {
+   "id": "2a543dc3-74db-f011-8544-000d3a3740cc",
+   "name": "Ontology item GA",
+   "product": "IQ",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q2 2027",
+   "desc": "General availability of the Microsoft Fabric IQ Ontology item enables teams to maintain a shared model of business entities, properties, and relationships in Fabric. Modelers can connect those definitions to supported data sources and provi",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/whats-next-for-fabric-iq-ontology-the-operational-context-that-powers-your-ai-ag/5172145"
+  },
+  {
+   "id": "419cfd8b-face-f011-bbd3-000d3a30273e",
+   "name": "Public query API for Ontology",
+   "product": "IQ",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q2 2027",
+   "desc": "The public query API for Microsoft Fabric IQ Ontology gives developers programmatic access to supported ontology query capabilities. Applications and automation can query ontology-backed data using the supported query interface rather than ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/whats-next-for-fabric-iq-ontology-the-operational-context-that-powers-your-ai-ag/5172145"
+  },
+  {
+   "id": "3253d652-cf9c-f111-b8db-6045bd02b37f",
+   "name": "Eventhouse Onboarding AI Agent",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q2 2027",
+   "desc": "Copilot agentic experience that allows users to create and model an eventhouse, connect it to Eventstream or create OneLake shortcuts all in natural language interactive way.",
+   "url": "https://www.fabric-gps.com/release/3253d652-cf9c-f111-b8db-6045bd02b37f"
+  },
+  {
+   "id": "e15d3bcf-0db6-f111-aaab-7ced8d70bf41",
+   "name": "Workspace-Level Business Continuity and Disaster Recovery for Eventstream",
+   "product": "Real-Time Intelligence",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q3 2027",
+   "desc": "We are introducing workspace-level business continuity and disaster recovery for Eventstream in Microsoft Fabric Real-Time Intelligence, helping organizations maintain supported streaming operations when the primary Fabric region becomes un",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Monitor-your-Eventstreams-with-Workspace-Monitoring-Now-with-per/ba-p/5331185"
+  }
+ ]
+}

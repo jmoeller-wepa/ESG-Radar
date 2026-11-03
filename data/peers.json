@@ -237,8 +237,15 @@
       },
       "kpis": {
         "sbti": {
-          "v": "Validated",
-          "src": "https://www.wepa.eu/en/blog/detail/wepa-group-reduces-emissions-by-525-until-2030"
+          "v": "Committed",
+          "src": "https://sciencebasedtargets.org/target-dashboard",
+          "history": [
+            {
+              "v": "Validated"
+            }
+          ],
+          "d": "Committed · SBTi dashboard (WEPA Group)",
+          "y": "2026"
         },
         "netZeroYear": {
           "v": 2040,
@@ -377,9 +384,16 @@
       },
       "kpis": {
         "sbti": {
-          "v": "Validated",
-          "d": "Validated · net zero committed",
-          "src": "https://www.sofidel.com/en/?p=56573"
+          "v": "Committed",
+          "d": "Committed · SBTi dashboard (Sofidel S.p.A.)",
+          "src": "https://sciencebasedtargets.org/target-dashboard",
+          "history": [
+            {
+              "v": "Validated",
+              "d": "Validated · net zero committed"
+            }
+          ],
+          "y": "2026"
         },
         "netZeroYear": {
           "v": 2050,
@@ -602,8 +616,15 @@
       },
       "kpis": {
         "sbti": {
-          "v": "Validated",
-          "src": "https://us.pg.com/citizenship-report-2023/environmental-sustainability/"
+          "v": "Committed",
+          "src": "https://sciencebasedtargets.org/target-dashboard",
+          "history": [
+            {
+              "v": "Validated"
+            }
+          ],
+          "d": "Committed · SBTi dashboard (Procter & Gamble Company)",
+          "y": "2026"
         },
         "netZeroYear": {
           "v": 2040,
@@ -688,9 +709,16 @@
       },
       "kpis": {
         "sbti": {
-          "v": "Validated",
-          "y": "2025",
-          "src": "https://www.eco-business.com/zh-hans/news/asia-pulp-paper-net-zero-goals-approved-by-sbti-as-indonesian-corporates-affirm-climate-pledges/"
+          "v": "None",
+          "y": "2026",
+          "src": "https://sciencebasedtargets.org/target-dashboard",
+          "history": [
+            {
+              "v": "Validated",
+              "y": "2025"
+            }
+          ],
+          "d": "None · SBTi dashboard (APP Group)"
         },
         "netZeroYear": {
           "v": 2060,
@@ -809,10 +837,17 @@
           "src": "https://www.revistaeconomia.com/softys-presenta-su-reporte-de-sostenibilidad-2025-con-una-reduccion-historica-del-50-en-uso-de-agua/"
         },
         "sbti": {
-          "v": "Validated",
-          "d": "Validated (CMPC group)",
-          "y": "2022",
-          "src": "https://www.cmpc.com/en/sustainability/environment/decarbonization-and-greenhouse-gas-emissions/"
+          "v": "Committed",
+          "d": "Committed · SBTi dashboard (CMPC)",
+          "y": "2026",
+          "src": "https://sciencebasedtargets.org/target-dashboard",
+          "history": [
+            {
+              "v": "Validated",
+              "d": "Validated (CMPC group)",
+              "y": "2022"
+            }
+          ]
         },
         "netZeroYear": {
           "v": 2040,
@@ -895,6 +930,12 @@
           "v": "TIR 0.77 (target 0.82)",
           "y": "2025",
           "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "sbti": {
+          "v": "Committed",
+          "d": "Committed · SBTi dashboard (Kruger Packaging Holding L.P.)",
+          "y": "2026",
+          "src": "https://sciencebasedtargets.org/target-dashboard"
         }
       },
       "targets": [
