@@ -1,6 +1,254 @@
 {
- "updated": "2026-11-03T13:04:53",
- "consultations": [],
+ "updated": "2026-11-03T13:39:43",
+ "consultations": [
+  {
+   "id": "14549.0",
+   "title": "EU emissions trading system for maritime, aviation and stationary installations, and market stability reserve - review",
+   "summary": "",
+   "type": "Adoption workflow",
+   "dg": null,
+   "start": "2026-08-20",
+   "end": "2026-11-03",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14549.0_en",
+   "areas": [
+    "climate"
+   ],
+   "topics": [
+    "ets"
+   ],
+   "keywords": [
+    "emission"
+   ]
+  },
+  {
+   "id": "18833.0",
+   "title": "VAT and circular economy",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-09-09",
+   "end": "2026-11-04",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/18833.0_en",
+   "areas": [
+    "circularity"
+   ],
+   "topics": [],
+   "keywords": [
+    "circular"
+   ]
+  },
+  {
+   "id": "16912.0",
+   "title": "Omnibus on taxation",
+   "summary": "",
+   "type": "Adoption workflow",
+   "dg": null,
+   "start": "2026-09-10",
+   "end": "2026-11-05",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16912.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "omnibus"
+   ]
+  },
+  {
+   "id": "14450.0",
+   "title": "Implementing act on templates for reporting methane emissions",
+   "summary": "",
+   "type": "Isc workflow",
+   "dg": null,
+   "start": "2026-10-09",
+   "end": "2026-11-06",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14450.0_en",
+   "areas": [
+    "climate"
+   ],
+   "topics": [],
+   "keywords": [
+    "emission"
+   ]
+  },
+  {
+   "id": "19220.0",
+   "title": "Road transport smart enforcement and simplification",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-10-27",
+   "end": "2026-11-24",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19220.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "simplification"
+   ]
+  },
+  {
+   "id": "19495.0",
+   "title": "Introduction of over-the-air updates of tachograph software for smart enforcement and simplification purposes.",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-10-27",
+   "end": "2026-11-24",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19495.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "simplification"
+   ]
+  },
+  {
+   "id": "19496.0",
+   "title": "Simplification of reporting requirements under Regulation (EC) No 1370/2007 on public transport by rail and by road",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-10-27",
+   "end": "2026-11-24",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19496.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "simplification"
+   ]
+  },
+  {
+   "id": "19613.0",
+   "title": "Smart enforcement and simplification in road transport - omnibus (Regulation)",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-10-27",
+   "end": "2026-11-24",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19613.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "omnibus",
+    "simplification"
+   ]
+  },
+  {
+   "id": "19612.0",
+   "title": "Smart enforcement and simplification in road transport - omnibus (Directive)",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-10-27",
+   "end": "2026-11-24",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19612.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "omnibus",
+    "simplification"
+   ]
+  },
+  {
+   "id": "17632.0",
+   "title": "Classification, labelling and packaging of substances and mixtures (CLP Regulation)",
+   "summary": "",
+   "type": "Isc workflow",
+   "dg": null,
+   "start": "2026-10-27",
+   "end": "2026-11-24",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/17632.0_en",
+   "areas": [
+    "circularity"
+   ],
+   "topics": [
+    "ppwr"
+   ],
+   "keywords": [
+    "packaging"
+   ]
+  },
+  {
+   "id": "16240.0",
+   "title": "States considered to be applying CORSIA in 2026 for ETS purposes",
+   "summary": "",
+   "type": "Isc workflow",
+   "dg": null,
+   "start": "2026-10-30",
+   "end": "2026-11-27",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16240.0_en",
+   "areas": [
+    "climate"
+   ],
+   "topics": [],
+   "keywords": [
+    "ets"
+   ]
+  },
+  {
+   "id": "18352.0",
+   "title": "Amendment of the European maritime, fisheries and aquaculture fund for simplification and transposition of WTO agreement",
+   "summary": "",
+   "type": "Adoption workflow",
+   "dg": null,
+   "start": "2026-10-15",
+   "end": "2026-12-10",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/18352.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "simplification"
+   ]
+  },
+  {
+   "id": "19498.0",
+   "title": "EU rules on biobased feedstock in plastic packaging",
+   "summary": "",
+   "type": "Opc launched",
+   "dg": null,
+   "start": "2026-10-21",
+   "end": "2027-01-13",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19498.0_en",
+   "areas": [
+    "circularity"
+   ],
+   "topics": [
+    "ppwr"
+   ],
+   "keywords": [
+    "packaging",
+    "plastic"
+   ]
+  },
+  {
+   "id": "17873.0",
+   "title": "Ecodesign requirements on product repairability",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-11-03",
+   "end": "2027-02-09",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/17873.0_en",
+   "areas": [
+    "circularity"
+   ],
+   "topics": [],
+   "keywords": [
+    "ecodesign"
+   ]
+  }
+ ],
  "procedures": {
   "csrd": {
    "ref": "2025/0045(COD)",
@@ -510,5 +758,6 @@
    "url": "https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039%28COD%29",
    "changed": null
   }
- }
+ },
+ "consultationsFetched": "2026-11-03T13:39:43"
 }

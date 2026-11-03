@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-03T13:04:50"
+    "lastFeedRun": "2026-11-03T13:39:39"
   },
   "entries": [
     {
@@ -1602,6 +1602,54 @@
       "nextDateLabel": null,
       "source": "ESG Today",
       "url": "https://www.esgtoday.com/esg-today-week-in-review-281/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-281",
+      "origin": "feed",
+      "added": "2026-11-03"
+    },
+    {
+      "id": "feed-b7e2296290",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG Update Podcast of October: New Episodes Available - EFRAG",
+      "summary": "EFRAG Update Podcast of October: New Episodes Available EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZk9jYnhHejBETUlPTVFGLWwyQUR1Z2lJSGZ6bWRZUlZJbmZfbVBtcU9mM0tFVmk3OVhBTGJTSUUtRDd0bWZZbXVta29qUTQ3Ymh2VG9GOE5acVRNOTdTakVEanRsMVlkVW9ZX1FqT0dRSldKX0RTRTZPS0NBU255Z1FrZlIxVkRwWFpwcEZLZmY4NkZ2V2RrNHg1bThPVFJkWUNvdg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-03"
+    },
+    {
+      "id": "feed-a0675d807b",
+      "date": "2026-11-02",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG FR TEG & SR TEG Joint Online Meeting - 4 November 2026 - EFRAG",
+      "summary": "EFRAG FR TEG & SR TEG Joint Online Meeting - 4 November 2026 EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQUR4S1BlUEhzb3c5YWpUT3k5ZDNxZl9MeDlRb3NCUUl6RmxEV0FzV3R4ck1LejNjMWVQUzd6SWZDaUs0M3dxZkgyWWtsSktMWUpKNlBqRUI5Y2oyRWNVNUFxT2w5YVQwRlFDcThNRDRzX2pKTmZPT0lyX093ZzFKSkZ5TUFLUUFxLU1qWjRpX1F1Nm9ZbmJKZFlTXy1mdHRGd1d4N0d4bw?oc=5",
       "origin": "feed",
       "added": "2026-11-03"
     }

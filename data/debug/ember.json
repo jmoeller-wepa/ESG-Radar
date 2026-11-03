@@ -1,0 +1,95 @@
+{
+ "attempts": [
+  {
+   "url": "https://files.ember-energy.org/public-downloads/monthly_full_release_long_format.csv",
+   "movedTo": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_monthly_global.csv"
+  },
+  {
+   "url": "https://files.ember-energy.org/public-downloads/generation/outputs/release_generation_monthly_global.csv",
+   "columns": [
+    "Area",
+    "ISO 3 code",
+    "Date",
+    "Area type",
+    "Electricity source",
+    "Is aggregated source",
+    "Generation (TWh)",
+    "Generation YoY change (TWh)",
+    "Generation YoY change (%)",
+    "Share of generation (%)",
+    "Share of generation YoY change (% points)",
+    "Emissions (MtCO2e)",
+    "Emissions YoY change (MtCO2e)",
+    "Emissions YoY change (%)",
+    "Share of emissions (%)",
+    "Emissions intensity (gCO2e/kWh)",
+    "Continent",
+    "Ember region",
+    "EU member",
+    "OECD member",
+    "G20 member",
+    "G7 member",
+    "ASEAN member"
+   ],
+   "used": {
+    "intensity": "Emissions intensity (gCO2e/kWh)",
+    "emissions": "Emissions (MtCO2e)",
+    "generation": "Generation (TWh)",
+    "source": "Electricity source",
+    "variable": null
+   },
+   "sources": [],
+   "samples": [
+    {
+     "Area": "ASEAN",
+     "ISO 3 code": "",
+     "Date": "2019-01-01",
+     "Area type": "Region",
+     "Electricity source": "Solar",
+     "Is aggregated source": "False",
+     "Generation (TWh)": "0.58",
+     "Generation YoY change (TWh)": "",
+     "Generation YoY change (%)": "",
+     "Share of generation (%)": "0.594",
+     "Share of generation YoY change (% points)": "",
+     "Emissions (MtCO2e)": "0.028",
+     "Emissions YoY change (MtCO2e)": "",
+     "Emissions YoY change (%)": ""
+    },
+    {
+     "Area": "ASEAN",
+     "ISO 3 code": "",
+     "Date": "2019-01-01",
+     "Area type": "Region",
+     "Electricity source": "Wind",
+     "Is aggregated source": "False",
+     "Generation (TWh)": "1.189",
+     "Generation YoY change (TWh)": "",
+     "Generation YoY change (%)": "",
+     "Share of generation (%)": "1.217",
+     "Share of generation YoY change (% points)": "",
+     "Emissions (MtCO2e)": "0.017",
+     "Emissions YoY change (MtCO2e)": "",
+     "Emissions YoY change (%)": ""
+    },
+    {
+     "Area": "ASEAN",
+     "ISO 3 code": "",
+     "Date": "2019-01-01",
+     "Area type": "Region",
+     "Electricity source": "Hydro",
+     "Is aggregated source": "False",
+     "Generation (TWh)": "10.478",
+     "Generation YoY change (TWh)": "",
+     "Generation YoY change (%)": "",
+     "Share of generation (%)": "10.727",
+     "Share of generation YoY change (% points)": "",
+     "Emissions (MtCO2e)": "0.25",
+     "Emissions YoY change (MtCO2e)": "",
+     "Emissions YoY change (%)": ""
+    }
+   ],
+   "areas": 187
+  }
+ ]
+}
