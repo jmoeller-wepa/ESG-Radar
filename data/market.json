@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T11:23:40",
+ "updated": "2026-11-03T12:33:44",
  "groups": {
   "fibre": "Fibre & products",
   "energy": "Energy",
@@ -392,7 +392,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40",
+   "fetched": "2026-11-03T12:33:44",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -567,7 +567,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40",
+   "fetched": "2026-11-03T12:33:44",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -962,7 +962,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40",
+   "fetched": "2026-11-03T12:33:44",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -1355,7 +1355,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40",
+   "fetched": "2026-11-03T12:33:44",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRD",
@@ -1755,7 +1755,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40"
+   "fetched": "2026-11-03T12:33:44"
   },
   {
    "id": "us_wood_pulp",
@@ -2146,7 +2146,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40"
+   "fetched": "2026-11-03T12:33:44"
   },
   {
    "id": "gas_ttf",
@@ -2537,7 +2537,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40"
+   "fetched": "2026-11-03T12:33:44"
   },
   {
    "id": "elec_de",
@@ -2556,7 +2556,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "HTTP Error 400: Bad Request"
+   "error": "answer does not identify product"
   },
   {
    "id": "gas_de",
@@ -2575,7 +2575,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "HTTP Error 400: Bad Request"
+   "error": "answer does not identify product"
   },
   {
    "id": "res_share_de",
@@ -2970,7 +2970,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40"
+   "fetched": "2026-11-03T12:33:44"
   },
   {
    "id": "grid_eu",
@@ -2989,7 +2989,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "grid_de",
@@ -3008,7 +3008,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "grid_fr",
@@ -3027,7 +3027,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "grid_it",
@@ -3046,7 +3046,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "grid_pl",
@@ -3065,7 +3065,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "grid_nl",
@@ -3084,7 +3084,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "grid_be",
@@ -3103,7 +3103,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "grid_gb",
@@ -3122,7 +3122,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "no CO2 intensity rows in the Ember file (format changed?)"
+   "error": "no CO2 intensity rows in the Ember file. Columns: notice, new_url · variables seen:  []"
   },
   {
    "id": "eua",
@@ -3152,7 +3152,7 @@
     ]
    ],
    "status": "manual",
-   "fetched": "2026-11-03T11:23:40"
+   "fetched": "2026-11-03T12:33:44"
   },
   {
    "id": "eurusd",
@@ -3547,7 +3547,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-03T11:23:40"
+   "fetched": "2026-11-03T12:33:44"
   }
  ]
 }

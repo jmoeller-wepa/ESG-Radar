@@ -1,0 +1,195 @@
+{
+ "date": "2026-11-03",
+ "columns": [
+  "sbti_id",
+  "company_name",
+  "isin",
+  "lei",
+  "organization_type",
+  "location",
+  "region",
+  "sector",
+  "near_term_status",
+  "near_term_target_classification",
+  "near_term_target_year",
+  "long_term_status",
+  "long_term_target_classification",
+  "long_term_target_year",
+  "net_zero_status",
+  "net_zero_year",
+  "full_target_language",
+  "ba15_status",
+  "ba15_date",
+  "target_classification_long",
+  "status_reason",
+  "date_updated"
+ ],
+ "peers": {
+  "wepa": {
+   "result": "Validated",
+   "rows": [
+    {
+     "company_name": "WEPA Group",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "1.5°C",
+     "near_term_target_year": "2030.0",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "Commitment to Set Targets",
+     "net_zero_year": "",
+     "ba15_status": "",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": ""
+    }
+   ]
+  },
+  "essity": {
+   "result": "Net-zero validated",
+   "rows": [
+    {
+     "company_name": "Essity AB",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "1.5°C",
+     "near_term_target_year": "2030.0",
+     "long_term_status": "Validated Targets",
+     "long_term_target_classification": "1.5°C",
+     "long_term_target_year": "2050.0",
+     "net_zero_status": "Validated Targets",
+     "net_zero_year": "2050.0",
+     "ba15_status": "BA1.5 member",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": ""
+    }
+   ]
+  },
+  "sofidel": {
+   "result": "Validated",
+   "rows": [
+    {
+     "company_name": "Sofidel S.p.A.",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "Well-below 2°C",
+     "near_term_target_year": "2030.0",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "Commitment to Set Targets",
+     "net_zero_year": "",
+     "ba15_status": "",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": ""
+    }
+   ]
+  },
+  "lucart": {
+   "result": "Validated",
+   "rows": [
+    {
+     "company_name": "LUCART",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "1.5°C",
+     "near_term_target_year": "2035.0",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "",
+     "net_zero_year": "",
+     "ba15_status": "",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": ""
+    }
+   ]
+  },
+  "kimberly-clark": {
+   "result": "Validated",
+   "rows": [
+    {
+     "company_name": "Kimberly-Clark Corporation",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "Well-below 2°C",
+     "near_term_target_year": "2030.0",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "",
+     "net_zero_year": "",
+     "ba15_status": "",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": ""
+    }
+   ]
+  },
+  "pg": {
+   "result": "Validated",
+   "rows": [
+    {
+     "company_name": "Procter & Gamble Company",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "1.5°C",
+     "near_term_target_year": "FY2030",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "Commitment Removed",
+     "net_zero_year": "",
+     "ba15_status": "BA1.5 member",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": "Expired commitment"
+    }
+   ]
+  },
+  "app": {
+   "result": "Validated",
+   "rows": [
+    {
+     "company_name": "APP Group",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "1.5°C",
+     "near_term_target_year": "2033.0",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "",
+     "net_zero_year": "",
+     "ba15_status": "",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": ""
+    },
+    {
+     "company_name": "APP Sinar Mas",
+     "near_term_status": "Commitment Removed",
+     "near_term_target_classification": "",
+     "near_term_target_year": "",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "",
+     "net_zero_year": "",
+     "ba15_status": "",
+     "target_classification_long": "",
+     "status_reason": "Expired commitment"
+    }
+   ]
+  },
+  "softys": {
+   "result": "Validated",
+   "rows": [
+    {
+     "company_name": "CMPC",
+     "near_term_status": "Validated Targets",
+     "near_term_target_classification": "1.5°C",
+     "near_term_target_year": "2035.0",
+     "long_term_status": "",
+     "long_term_target_classification": "",
+     "long_term_target_year": "",
+     "net_zero_status": "Commitment Removed",
+     "net_zero_year": "",
+     "ba15_status": "BA1.5 member",
+     "target_classification_long": "The targets covering greenhouse gas emissions from company operations (scopes 1 ",
+     "status_reason": "Expired commitment"
+    }
+   ]
+  }
+ }
+}

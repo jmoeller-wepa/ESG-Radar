@@ -3,15 +3,15 @@
   "feeds": {
    "label": "News feeds",
    "status": "ok",
-   "detail": "7 of 7 feeds · 32 new",
-   "at": "2026-11-03T11:21:36",
+   "detail": "7 of 7 feeds · 0 new",
+   "at": "2026-11-03T12:32:28",
    "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "warn",
-   "detail": "failed: the portal answered, but no open consultations could be read (format changed?) – showing the last list",
-   "at": "2026-11-03T11:21:45",
+   "detail": "failed: HTTP Error 406:  – showing the last list",
+   "at": "2026-11-03T12:32:44",
    "order": 20,
    "failingSince": "2026-11-03T11:21:45"
   },
@@ -19,40 +19,40 @@
    "label": "Regulation status",
    "status": "ok",
    "detail": "5 of 5 procedures",
-   "at": "2026-11-03T11:23:40",
+   "at": "2026-11-03T12:33:44",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
    "status": "warn",
    "detail": "9 of 19 indicators · failed: elec_de, gas_de, grid_eu, grid_de",
-   "at": "2026-11-03T11:24:58",
+   "at": "2026-11-03T12:35:06",
    "order": 30,
    "failingSince": "2026-11-03T11:24:58"
   },
   "ets": {
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
-   "detail": "Written: 18 year(s), 54 installations",
-   "at": "2026-11-03T11:25:08",
+   "detail": "Written: 7 year(s), 40 installations",
+   "at": "2026-11-03T12:35:16",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
-   "detail": "6 peers found · WEPA: Committed, Sofidel: Committed, Procter & Gamble: Committed, APP / Sinar Mas: None, CMPC Softys: Committed, Kruger Products: Committed",
-   "at": "2026-11-03T11:25:11",
+   "detail": "8 peers found · Lucart: Validated",
+   "at": "2026-11-03T12:35:20",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
    "detail": "111 planned features",
-   "at": "2026-11-03T11:25:12",
+   "at": "2026-11-03T12:35:21",
    "order": 50
   }
  },
- "lastRun": "2026-11-03T11:25:12",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/41626849359",
+ "lastRun": "2026-11-03T12:35:21",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/41636548073",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }

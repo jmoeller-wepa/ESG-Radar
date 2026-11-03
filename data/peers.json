@@ -546,8 +546,15 @@
       },
       "kpis": {
         "sbti": {
-          "v": "Committed",
-          "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+          "v": "Validated",
+          "src": "https://sciencebasedtargets.org/target-dashboard",
+          "history": [
+            {
+              "v": "Committed"
+            }
+          ],
+          "d": "Validated · SBTi dashboard (LUCART)",
+          "y": "2026"
         },
         "ecovadis": {
           "v": "Platinum",
