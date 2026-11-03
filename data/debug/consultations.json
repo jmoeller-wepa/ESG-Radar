@@ -1,0 +1,37 @@
+{
+ "fetched": "2026-11-03T13:04:53+00:00",
+ "attempts": [
+  {
+   "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
+   "topLevelKeys": [
+    "exactMatch",
+    "initiativeResultDtoPage"
+   ],
+   "embeddedKeys": null,
+   "page": null,
+   "items": 0,
+   "firstItem": {},
+   "openFound": 0,
+   "read": 0
+  },
+  {
+   "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?receivingFeedbackStatus=OPEN&language=EN&page=0&size=50",
+   "topLevelKeys": [
+    "exactMatch",
+    "initiativeResultDtoPage"
+   ],
+   "embeddedKeys": null,
+   "page": null,
+   "items": 0,
+   "firstItem": {},
+   "openFound": 0,
+   "read": 0
+  },
+  {
+   "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?language=EN&sort=feedbackEndDate%2Cdesc&page=0&size=50",
+   "error": "HTTP Error 406: ",
+   "openFound": 0,
+   "read": 0
+  }
+ ]
+}
