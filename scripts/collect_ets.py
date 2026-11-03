@@ -118,7 +118,7 @@ def main():
         year, url = (int(m.group(1)) if m else 0), src["fallback"]
         log.append(f"Page not readable ({str(exc)[:100]}); using the fallback link ({year})")
 
-    config_stamp = json.dumps([config["companies"], config.get("fromYear"), config.get("excludeRegistries")], sort_keys=True)
+    config_stamp = json.dumps([config["companies"], config.get("fromYear"), config.get("excludeRegistries"), "v2-allocation"], sort_keys=True)
     if old.get("source", {}).get("url") == url and old.get("configStamp") == config_stamp and old.get("companies"):
         log.append("Already processed this file with the same mapping – nothing to do.")
         return finish(log)
@@ -129,12 +129,15 @@ def main():
         log.append(f"⚠️ Download or parsing failed: {str(exc)[:200]} – previous data kept.")
         return finish(log)
 
-    year_cols = {}
+    year_cols, alloc_cols = {}, {}
     for key in rows[0] if rows else {}:
         m = re.fullmatch(r"VERIFIED_EMISSIONS_?(\d{4})", key)
         if m:
             if int(m.group(1)) >= config.get("fromYear", 0):
                 year_cols[key] = m.group(1)
+        m2 = re.fullmatch(r"ALLOCATION_?(\d{4})", key)   # total free allocation of the year (not reserve/transitional columns)
+        if m2 and int(m2.group(1)) >= config.get("fromYear", 0):
+            alloc_cols[key] = m2.group(1)
     if not year_cols:
         log.append("⚠️ No VERIFIED_EMISSIONS_<year> columns found – previous data kept. Columns: " + ", ".join(list(rows[0])[:25]))
         return finish(log)
@@ -163,6 +166,8 @@ def main():
                 continue
             em = {y: num(r.get(col)) for col, y in year_cols.items()}
             em = {y: v for y, v in em.items() if v is not None}
+            al = {y: num(r.get(col)) for col, y in alloc_cols.items()}
+            al = {y: v for y, v in al.items() if v is not None}
             if not em:
                 continue
             act = str(pick(r, "MAIN_ACTIVITY_TYPE_CODE", "ACTIVITY_TYPE_CODE", "MAIN_ACTIVITY_TYPE", "ACTIVITY_TYPE") or "").strip()
@@ -172,15 +177,19 @@ def main():
                 "city": (str(r.get("CITY") or "").strip() or None),
                 "activity": ACTIVITY.get(act, act or None),
                 "emissions": dict(sorted(em.items())),
+                "allocation": dict(sorted(al.items())),
             })
         found.sort(key=lambda i: -max(i["emissions"].values()))
-        totals, reporting = {}, {}
+        totals, reporting, alloc = {}, {}, {}
         for i in found:
+            for y, v in i.get("allocation", {}).items():
+                alloc[y] = alloc.get(y, 0.0) + v
             for y, v in i["emissions"].items():
                 totals[y] = totals.get(y, 0.0) + v
                 reporting[y] = reporting.get(y, 0) + 1
         # reporting = how many of the matched installations have a value that year (gaps make totals jump)
-        companies[cid] = {"installations": found, "total": dict(sorted(totals.items())), "reporting": dict(sorted(reporting.items()))}
+        companies[cid] = {"installations": found, "total": dict(sorted(totals.items())), "reporting": dict(sorted(reporting.items())),
+                          "allocation": dict(sorted(alloc.items()))}
         log.append(f"{cid}: {len(found)} installation(s)")
 
     years = sorted({y for c in companies.values() for y in c["total"]})

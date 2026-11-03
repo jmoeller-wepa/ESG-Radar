@@ -1,0 +1,22 @@
+{
+  "_comment": "Latest news per peer for the Peers page and the Overview. scripts/collect_peernews.py runs one Google News search per entry (free RSS, no key). 'q' uses Google News search syntax: quotes for exact names, OR, -word to exclude. 'lang' = en or de. Up to 'maxPerCompany' newest headlines from the last 'days' days are kept.",
+  "maxPerCompany": 4,
+  "days": 60,
+  "companies": {
+    "wepa": [
+      { "q": "\"WEPA\" (Hygieneprodukte OR Hygienepapier OR Toilettenpapier OR Tissue OR Papierfabrik)", "lang": "de" },
+      { "q": "\"WEPA\" (tissue OR hygiene paper OR paper mill) -printing -print", "lang": "en" }
+    ],
+    "essity": [{ "q": "Essity", "lang": "en" }],
+    "sofidel": [{ "q": "Sofidel", "lang": "en" }],
+    "metsa-tissue": [{ "q": "\"Metsä Tissue\" OR \"Metsa Tissue\"", "lang": "en" }],
+    "lucart": [{ "q": "Lucart tissue OR paper", "lang": "en" }],
+    "kimberly-clark": [{ "q": "\"Kimberly-Clark\" (sustainability OR tissue OR emissions OR plant)", "lang": "en" }],
+    "pg": [{ "q": "\"Procter & Gamble\" (sustainability OR emissions OR Charmin OR forestry)", "lang": "en" }],
+    "georgia-pacific": [{ "q": "\"Georgia-Pacific\" (tissue OR mill OR sustainability)", "lang": "en" }],
+    "app": [{ "q": "\"Asia Pulp & Paper\" OR \"APP Group\" OR \"APP Sinar Mas\"", "lang": "en" }],
+    "hengan": [{ "q": "\"Hengan International\" OR \"Hengan\" tissue", "lang": "en" }],
+    "softys": [{ "q": "Softys OR \"Empresas CMPC\"", "lang": "en" }],
+    "kruger": [{ "q": "\"Kruger Products\"", "lang": "en" }]
+  }
+}

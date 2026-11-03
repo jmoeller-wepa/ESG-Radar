@@ -84,7 +84,7 @@
   }
   function setArea(a) {
     store.set("radar.area", a);
-    document.querySelectorAll(".nav [data-page]").forEach((link) => {
+    document.querySelectorAll(".nav [data-page]:not([data-page='overview'])").forEach((link) => {
       const base = link.getAttribute("href").split("#")[0];
       link.setAttribute("href", base + (a !== "all" ? "#area=" + a : ""));
     });

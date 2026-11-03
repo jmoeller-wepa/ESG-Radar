@@ -78,7 +78,7 @@ def build_card(radar, last_run):
     if url:
         card["actions"] = [
             {"type": "Action.OpenUrl", "title": "Open ESG Radar", "url": url},
-            {"type": "Action.OpenUrl", "title": "Monthly updates", "url": url + "#area=data&type=monthly"},
+            {"type": "Action.OpenUrl", "title": "Monthly updates", "url": url.rstrip("/") + "/news.html#area=data&type=monthly"},
         ]
     return {"type": "message", "attachments": [
         {"contentType": "application/vnd.microsoft.card.adaptive", "contentUrl": None, "content": card}

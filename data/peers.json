@@ -337,6 +337,48 @@
           "y": "2025",
           "src": "https://www.wepa.eu/fileadmin/content/docs/sustainability/WEPA_Sustainability_Report_2025.pdf"
         }
+      },
+      "targets2030": {
+        "year": "2025",
+        "base": "2019",
+        "src": "https://www.wepa.eu/fileadmin/content/docs/sustainability/WEPA_Sustainability_Report_2025.pdf",
+        "items": [
+          {
+            "label": "CO₂e per tonne · Scope 1+2",
+            "current": 37.6,
+            "target": 52.5,
+            "unit": "% reduction",
+            "fmt": "−{c}% of −{t}%"
+          },
+          {
+            "label": "CO₂e per tonne · Scope 3",
+            "current": 6.75,
+            "target": 52.5,
+            "unit": "% reduction",
+            "fmt": "−{c}% of −{t}%"
+          },
+          {
+            "label": "Renewable electricity",
+            "current": 79,
+            "target": 100,
+            "unit": "%",
+            "fmt": "{c}% of {t}%"
+          },
+          {
+            "label": "Recycled & alternative fibre",
+            "current": 31.8,
+            "target": 60,
+            "unit": "%",
+            "fmt": "{c}% of {t}%"
+          },
+          {
+            "label": "Production waste utilised",
+            "current": 98.2,
+            "target": 100,
+            "unit": "%",
+            "fmt": "{c}% of {t}% (2026)"
+          }
+        ]
       }
     },
     {

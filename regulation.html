@@ -167,7 +167,7 @@
       <svg class="logo-w" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-linecap="round"><path d="M14 50V13M14 50h37" stroke-opacity=".45" stroke-width="2.4"/><path d="M14 38a12 12 0 0 1 12 12" stroke-width="3.6"/><path d="M14 26a24 24 0 0 1 24 24" stroke-width="3.6" stroke-opacity=".8"/><path d="M14 14a36 36 0 0 1 36 36" stroke-width="3.6" stroke-opacity=".6"/><path d="M14 50L32 18.8" stroke-width="3"/></g><path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="#96d2dc" fill-opacity=".35"/><circle cx="14" cy="50" r="4" fill="#fff"/></svg>
       <h1>ESG Radar</h1>
     </a>
-    <nav class="nav" aria-label="Pages"><a href="./" data-page="radar">News</a><a href="regulation.html" aria-current="page" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
+    <nav class="nav" aria-label="Pages"><a href="./" data-page="overview">Overview</a><a href="news.html" data-page="radar">News</a><a href="regulation.html" aria-current="page" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
     <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
@@ -418,7 +418,7 @@
     else nw.appendChild(el("p", "muted", "No related news yet."));
     body.appendChild(nw);
     const links = el("div", "dlg-links");
-    const a1 = el("a", null, "Show on the News page →"); a1.href = "./#topic=" + encodeURIComponent(r.id); links.appendChild(a1);
+    const a1 = el("a", null, "Show on the News page →"); a1.href = "news.html#topic=" + encodeURIComponent(r.id); links.appendChild(a1);
     if (p && p.url) { const a2 = el("a", null, "Procedure file (Legislative Observatory) ↗"); a2.href = p.url; a2.target = "_blank"; a2.rel = "noopener"; links.appendChild(a2); }
     body.appendChild(links);
     if (!$("dlg").open) $("dlg").showModal();

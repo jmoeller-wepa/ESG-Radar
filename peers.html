@@ -211,7 +211,7 @@
       <svg class="logo-w" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-linecap="round"><path d="M14 50V13M14 50h37" stroke-opacity=".45" stroke-width="2.4"/><path d="M14 38a12 12 0 0 1 12 12" stroke-width="3.6"/><path d="M14 26a24 24 0 0 1 24 24" stroke-width="3.6" stroke-opacity=".8"/><path d="M14 14a36 36 0 0 1 36 36" stroke-width="3.6" stroke-opacity=".6"/><path d="M14 50L32 18.8" stroke-width="3"/></g><path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="#96d2dc" fill-opacity=".35"/><circle cx="14" cy="50" r="4" fill="#fff"/></svg>
       <h1>ESG Radar</h1>
     </a>
-    <nav class="nav" aria-label="Pages"><a href="./" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" aria-current="page" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
+    <nav class="nav" aria-label="Pages"><a href="./" data-page="overview">Overview</a><a href="news.html" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" aria-current="page" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
     <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
@@ -260,7 +260,7 @@
   const state = { group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1, hidden: new Set() };
   if (!AREA_SET[state.area]) state.area = "all";
   const setKey = () => AREA_SET[state.area] || "overview";
-  let P = null, E = null, news = [], side = null;
+  let P = null, E = null, PN = {}, news = [], side = null;
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const fmtDate = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); };
@@ -280,9 +280,10 @@
   Promise.all([
     fetch("data/peers.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
     fetch("data/radar.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : { entries: [] })).catch(() => ({ entries: [] })),
-    fetch("data/peer_emissions.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)
-  ]).then(([peers, radar, ets]) => {
-    P = peers; E = ets;
+    fetch("data/peer_emissions.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    fetch("data/peer_news.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+  ]).then(([peers, radar, ets, pnews]) => {
+    P = peers; E = ets; PN = (pnews && pnews.companies) || {};
     news = (radar.entries || []).filter((e) => e && e.title && e.url);
     $("meta").textContent = "Updated " + fmtDate(P.meta.updated) + " · " + P.companies.length + " companies";
     $("note").textContent = (P.meta.note || "") + " ";
@@ -523,15 +524,17 @@
         card.appendChild(d);
       }
 
-      const d2 = el("div", "news"); d2.appendChild(el("p", "cap", "Latest news on the radar"));
+      const d2 = el("div", "news"); d2.appendChild(el("p", "cap", "Latest news"));
       const pats = (c.aliases || [c.name]).map((a) => a.toLowerCase());
-      const hits = news.filter((e) => { const t = (e.title + " " + (e.summary || "")).toLowerCase(); return pats.some((p) => t.includes(p)); })
+      // headlines from the weekly peer news search, plus matching items from the ESG feeds
+      const fromRadar = news.filter((e) => { const t = (e.title + " " + (e.summary || "")).toLowerCase(); return pats.some((p) => t.includes(p)); });
+      const hits = [...(PN[c.id] || []), ...fromRadar].filter((e) => e.title && e.url)
         .sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, 3);
       if (hits.length) {
         const ul = el("ul");
-        hits.forEach((e) => { const li = el("li"); const a = el("a", null, e.title); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; li.append(a, el("small", null, " · " + fmtDate(e.date))); ul.appendChild(li); });
+        hits.forEach((e) => { const li = el("li"); const a = el("a", null, e.title); a.href = e.url; a.target = "_blank"; a.rel = "noopener"; li.append(a, el("small", null, " · " + [e.date ? fmtDate(e.date) : "", e.source].filter(Boolean).join(" · "))); ul.appendChild(li); });
         d2.appendChild(ul);
-      } else d2.appendChild(el("p", "muted", "No news on the radar yet."));
+      } else d2.appendChild(el("p", "muted", "No recent news found."));
       card.appendChild(d2);
       const more = el("button", "more", "All KPIs & history →"); more.type = "button";
       card.appendChild(more);

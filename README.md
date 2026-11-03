@@ -1,12 +1,13 @@
 # ESG Radar
 
-A lightweight website for the sustainability team, with four pages that share the same header, status dot and sidebar (the seven ESG areas):
+A lightweight website for the sustainability team, with five pages that share the same header, status dot and sidebar (the seven ESG areas):
 
 Climate & Energy · Forests & Biodiversity · Circularity & Packaging · Water & Pollution · People & Supply chain · Reporting & Governance · Data & AI
 
 | Page | What it shows |
 |---|---|
-| **News** (`index.html`) | News, regulation, tool updates and best practice as cards. Above them is the **What's ahead** panel: **Deadlines** · **Timeline** · **Events**, plus **Coming next** (planned Fabric / Power BI features by quarter) when Data & AI is selected. |
+| **Overview** (`index.html`, start page) | Personal dashboard: everyone picks and orders their own widgets (drag with the mouse in "Customize"; saved per browser). Widgets: carbon cost exposure, market alerts (threshold adjustable), our 2030 targets, next deadlines, new since last visit, peer news, consultations closing, regulation changes, saved items, market snapshot, WEPA vs. peers, data status. Old links like `…/#area=climate` are forwarded to the News page. |
+| **News** (`news.html`) | News, regulation, tool updates and best practice as cards. Above them is the **What's ahead** panel: **Deadlines** · **Timeline** · **Events**, plus **Coming next** (planned Fabric / Power BI features by quarter) when Data & AI is selected. |
 | **Regulation** (`regulation.html`) | Open EU consultations that match our topics ("Give feedback" links), and a **tracker** with one row per law or standard: stage, latest official step, next date. Switch to **Roadmap** for the 2024–2030 phase view. Click a topic for all steps, upcoming dates and related news. |
 | **Peers** (`peers.html`) | Public sustainability KPIs of 12 tissue companies, with colour-coded comparison, trend arrows and a history pop-up per company. For *All areas* and *Climate & Energy* it also shows the **EU ETS verified emissions** of the European peers, per company and per site. |
 | **Market** (`market.html`) | Free official statistics behind tissue costs (producer prices for tissue, pulp and paper, energy prices, grid carbon intensity, carbon price, EUR/USD). In the side panel: a **period slicer** (years → months, like a Power BI hierarchy slicer; quick buttons for 12 months / 3 / 5 years / all) and an **indicator checklist** (up to 4 lines in the compare chart; clicking tiles works too). |
@@ -53,7 +54,8 @@ These parts are updated by hand, with the prompts in `prompts/` (they work in M3
 
 | File | Purpose |
 |---|---|
-| `index.html`, `regulation.html`, `peers.html`, `market.html` | The four pages |
+| `index.html` (Overview), `news.html`, `regulation.html`, `peers.html`, `market.html` | The five pages |
+| `assets/carbon.js` | Carbon cost exposure (Overview widget and Market page) |
 | `assets/side.css`, `assets/side.js` | Shared sidebar used by Regulation, Peers and Market |
 | `assets/status.js` | Status dot in the header (reads `data/status.json`) |
 | `config/regulation.json`, `config/sbti.json` | Procedure numbers & consultation keywords; SBTi name patterns |
@@ -93,6 +95,10 @@ These parts are updated by hand, with the prompts in `prompts/` (they work in M3
 
 | What | Source | Note |
 |---|---|---|
+| Peer news (Peers page, Overview) | Google News search per company, set in `config/peer_news.json` | Free, not officially documented by Google. Headlines link to the original outlet. |
+| EUR-Lex | Public RSS "Acts of the Official Journal L", filtered by keywords in `config/feeds.json` | New EU acts on our topics appear on the News page. |
+| EFRAG | Google News search limited to efrag.org (`config/feeds.json`) | EFRAG has no RSS feed of its own. |
+| Free allocation (carbon cost) | Same Union Registry file as the verified emissions | Net cost = (emissions − free allocation) × EUA price. |
 | SBTi status (Peers) | Science Based Targets initiative – Target Dashboard download | Company names are matched with `config/sbti.json`. SBTi asks for credit and a link, which the Peers page shows. Check their terms before making the site public. |
 | Coming next (News, Data & AI) | Fabric GPS (fabric-gps.com) – a free community mirror of Microsoft's official Fabric roadmap | Not run by Microsoft. If it disappears, only this tab stays on its last list; the official roadmap is aka.ms/FabricRoadmap. |
 | Grid carbon intensity (Market) | Ember, monthly electricity data (CC BY 4.0) | Countries in `config/market.json` (group `grid`). Shown as a ranked table (12-month averages) plus one tile per country. |

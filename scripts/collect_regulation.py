@@ -71,18 +71,18 @@ def walk(obj):
 
 # ---------------- consultations ----------------
 def initiatives_from(data):
-    """Find the list of initiative objects in a Have your say answer, wherever it sits."""
-    emb = data.get("_embedded") if isinstance(data, dict) else None
-    if isinstance(emb, dict):
-        for v in emb.values():
-            if isinstance(v, list):
-                return v
-    for key in ("content", "items", "results", "initiatives"):
-        if isinstance(data, dict) and isinstance(data.get(key), list):
-            return data[key]
-    if isinstance(data, list):
-        return data
-    return []
+    """Find the list of initiative objects in a Have your say answer, wherever it sits
+    (e.g. data["initiativeResultDtoPage"]["content"] or data["_embedded"][...])."""
+    best = []
+    for d in walk(data):
+        for v in d.values():
+            if isinstance(v, list) and v and all(isinstance(x, dict) for x in v[:3]):
+                if any(("id" in x or "initiativeId" in x) and any(k in x for k in ("shortTitle", "title", "name")) for x in v[:3]):
+                    if len(v) > len(best):
+                        best = v
+    if not best and isinstance(data, list):
+        best = data
+    return best
 
 
 def consultation_fields(item):
@@ -128,7 +128,7 @@ def collect_consultations(cfg, area_matchers, topic_words):
     variants = cfg.get("queryVariants") or [
         {"feedbackOpen": "true", "language": "EN"},
         {"receivingFeedbackStatus": "OPEN", "language": "EN"},
-        {"language": "EN", "sort": "feedbackEndDate,desc"},
+        {"language": "EN"},
     ]
     debug = {"fetched": datetime.now(timezone.utc).isoformat(timespec="seconds"), "attempts": []}
     found, seen = [], set()
@@ -149,6 +149,7 @@ def collect_consultations(cfg, area_matchers, topic_words):
                 debug["attempts"].append({
                     "url": url,
                     "topLevelKeys": list(data)[:20] if isinstance(data, dict) else type(data).__name__,
+                    "nested": {k: (list(v)[:15] if isinstance(v, dict) else type(v).__name__) for k, v in (data.items() if isinstance(data, dict) else [])},
                     "embeddedKeys": list(data.get("_embedded", {}))[:10] if isinstance(data, dict) and isinstance(data.get("_embedded"), dict) else None,
                     "page": data.get("page") if isinstance(data, dict) else None,
                     "items": len(items),

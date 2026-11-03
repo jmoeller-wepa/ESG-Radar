@@ -69,7 +69,9 @@ header .stat-btn .stat-dot { box-shadow: 0 0 0 3px rgba(255, 255, 255, .12); }
 
 @media (max-width: 960px) {
   header .wrap { padding-top: 8px !important; padding-bottom: 8px !important; row-gap: 6px !important; }
-  header .nav a { height: 44px; }
+  header .nav a { height: 44px; padding: 0 10px; flex: none; }
+  header .nav { width: 100%; overflow-x: auto; scrollbar-width: none; }
+  header .nav::-webkit-scrollbar { display: none; }
   .side-body { background: transparent !important; border: 0 !important; padding: 0 !important; }
 }
 
@@ -79,3 +81,6 @@ header .stat-btn .stat-dot { box-shadow: 0 0 0 3px rgba(255, 255, 255, .12); }
 .gbar i { background: #96d2dc !important; }
 .gtt tr.ref .gbar i { background: #d5dbe3 !important; }
 .chart .line { stroke-width: 2.6 !important; }
+
+/* Use the full width of large screens */
+.wrap { max-width: none !important; padding-left: clamp(16px, 2.4vw, 56px) !important; padding-right: clamp(16px, 2.4vw, 56px) !important; }

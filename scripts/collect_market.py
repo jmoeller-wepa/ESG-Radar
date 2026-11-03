@@ -198,61 +198,117 @@ def smard(ind):
 
 # ---------- Ember (grid carbon intensity, CC BY 4.0) ----------
 EMBER_URL = "https://files.ember-energy.org/public-downloads/monthly_full_release_long_format.csv"
+EMBER_DEBUG = ROOT / "data" / "debug" / "ember.json"
 _ember_cache = {}
 
 
-def _ember_follow(url):
-    return ember_table(url)
-
-
-def ember_table(url=None):
-    """{area key -> {YYYY-MM: gCO2/kWh}} for every country in the monthly file (downloaded once per run)."""
-    if "t" in _ember_cache:
-        return _ember_cache["t"]
-    url = url or EMBER_URL
+def _open_csv(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    table, seen_vars, header = {}, {}, None
-    with urllib.request.urlopen(req, timeout=300) as resp:
-        raw = resp
-        if url.split("?")[0].endswith(".gz") or (getattr(resp, "headers", None) or {}).get("Content-Encoding") == "gzip":
-            import gzip
-            raw = gzip.GzipFile(fileobj=resp)
-        reader = csv.DictReader(io.TextIOWrapper(raw, encoding="utf-8-sig", newline=""))
-        header = reader.fieldnames
-        if header and "new_url" in [h.strip().lower() for h in header]:
-            # Ember moved the file: the old address now returns a one-line notice with the new address
-            row = next(reader, {}) or {}
-            new_url = next((v for k, v in row.items() if k and k.strip().lower() == "new_url"), "")
-            if new_url and new_url.startswith("http") and not _ember_cache.get("moved"):
-                _ember_cache["moved"] = new_url
-                return _ember_follow(new_url)
-        norm = {k: re.sub(r"[^a-z0-9]", "", (k or "").lower()) for k in (header or [])}
-        find = lambda *names: next((k for k, n in norm.items() if n in names), None)
-        c_area, c_iso, c_date = find("area", "country", "entity"), find("iso3code", "iso3", "countrycode"), find("date", "month")
-        c_var, c_sub, c_cat = find("variable"), find("subcategory"), find("category")
-        c_unit, c_val = find("unit"), find("value")
-        for row in reader:
+    resp = urllib.request.urlopen(req, timeout=300)
+    raw = resp
+    if url.split("?")[0].endswith(".gz") or (getattr(resp, "headers", None) or {}).get("Content-Encoding") == "gzip":
+        import gzip
+        raw = gzip.GzipFile(fileobj=resp)
+    return resp, csv.DictReader(io.TextIOWrapper(raw, encoding="utf-8-sig", newline=""))
+
+
+def _parse_ember(reader, dbg):
+    """Read CO2 intensity per area and month from an Ember CSV.
+    Works with the long format (Variable/Unit/Value rows) and the wide format (one column per measure):
+    an intensity column is used directly; otherwise intensity = emissions / generation of the total row."""
+    header = reader.fieldnames or []
+    norm = {k: re.sub(r"[^a-z0-9]", "", (k or "").lower()) for k in header}
+    find = lambda *names: next((k for k, n in norm.items() if n in names), None)
+    findp = lambda pred: next((k for k, n in norm.items() if pred(n)), None)
+    c_area, c_iso, c_date = find("area", "country", "entity"), find("iso3code", "iso3", "countrycode"), find("date", "month")
+    c_var, c_sub, c_cat, c_unit, c_val = find("variable"), find("subcategory"), find("category"), find("unit"), find("value")
+    c_src = findp(lambda n: n in ("electricitysource", "source", "fuel"))
+    c_int = findp(lambda n: "intensity" in n and "co2" in n and "change" not in n and "yoy" not in n)
+    c_em = findp(lambda n: n.startswith("emissions") and "mt" in n and "change" not in n and "yoy" not in n)
+    c_gen = findp(lambda n: n.startswith("generation") and "twh" in n and "change" not in n and "yoy" not in n)
+    dbg.update(columns=header, used={"intensity": c_int, "emissions": c_em, "generation": c_gen, "source": c_src, "variable": c_var})
+    table, sources, samples = {}, {}, []
+    for row in reader:
+        if len(samples) < 3:
+            samples.append({k: row.get(k) for k in header[:14]})
+        date = (row.get(c_date) or "")[:7] if c_date else ""
+        if date < START:
+            continue
+        value = None
+        if c_var and c_val:                                   # long format
             text = " ".join((row.get(c) or "") for c in (c_cat, c_sub, c_var) if c).lower()
             unit = (row.get(c_unit) or "").lower().replace(" ", "")
-            if len(seen_vars) < 40:
-                seen_vars[(row.get(c_var) or "") + " [" + (row.get(c_unit) or "") + "]"] = 1
-            if "intensity" not in text or "co2" not in unit:
-                continue
-            date = (row.get(c_date) or "")[:7]
-            if date < START:
-                continue
-            try:
-                value = round(float(row.get(c_val)), 1)
-            except (TypeError, ValueError):
-                continue
-            for key in {(row.get(c_iso) or "").strip() if c_iso else "", (row.get(c_area) or "").strip() if c_area else ""}:
-                if key:
-                    table.setdefault(key, {})[date] = value
-    if not table:
-        raise RuntimeError("no CO2 intensity rows in the Ember file. Columns: " + ", ".join(header or [])[:200]
-                           + " · variables seen: " + "; ".join(list(seen_vars)[:12])[:300])
-    _ember_cache["t"] = table
+            if "intensity" in text and "co2" in unit:
+                value = row.get(c_val)
+        elif c_int:                                           # wide format with an intensity column
+            value = row.get(c_int)
+        elif c_em and c_gen:                                  # derive from emissions and generation of the total row
+            src = (row.get(c_src) or "").lower() if c_src else "total"
+            if len(sources) < 40:
+                sources[src] = 1
+            if "total" in src:
+                try:
+                    value = 1000 * float(row.get(c_em)) / float(row.get(c_gen))
+                except (TypeError, ValueError, ZeroDivisionError):
+                    value = None
+        try:
+            value = round(float(value), 1)
+        except (TypeError, ValueError):
+            continue
+        for key in {(row.get(c_iso) or "").strip() if c_iso else "", (row.get(c_area) or "").strip() if c_area else ""}:
+            if key:
+                table.setdefault(key, {})[date] = value
+    dbg.update(sources=list(sources)[:40], samples=samples)
     return table
+
+
+def ember_table():
+    """{area key -> {YYYY-MM: gCO2/kWh}}, downloaded once per run. Follows Ember's 'file moved' notices and
+    tries the emissions file next to a generation-only file. Details of every attempt go to data/debug/ember.json."""
+    if "t" in _ember_cache:
+        return _ember_cache["t"]
+    if "err" in _ember_cache:
+        raise RuntimeError(_ember_cache["err"])
+    queue, tried, debug = [EMBER_URL], [], {"attempts": []}
+    while queue and len(tried) < 6:
+        url = queue.pop(0)
+        if url in tried:
+            continue
+        tried.append(url)
+        dbg = {"url": url}
+        debug["attempts"].append(dbg)
+        try:
+            resp, reader = _open_csv(url)
+            with resp:
+                header = [h.strip().lower() for h in (reader.fieldnames or [])]
+                if "new_url" in header:
+                    row = next(reader, {}) or {}
+                    new = next((v for k, v in row.items() if k and k.strip().lower() == "new_url"), "")
+                    dbg["movedTo"] = new
+                    if new.startswith("http"):
+                        queue.insert(0, new)
+                        # a generation-only file usually has an emissions file next to it
+                        for a, b in (("generation", "emissions"), ("generation", "power_sector_emissions"), ("generation", "carbon_intensity")):
+                            if a in new:
+                                queue.append(new.replace(a, b))
+                    continue
+                table = _parse_ember(reader, dbg)
+        except Exception as exc:  # noqa: BLE001 - note and try the next candidate
+            dbg["error"] = str(exc)[:200]
+            continue
+        dbg["areas"] = len(table)
+        if table:
+            _ember_cache["t"] = table
+            break
+    try:
+        EMBER_DEBUG.parent.mkdir(exist_ok=True)
+        EMBER_DEBUG.write_text(json.dumps(debug, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    except OSError:
+        pass
+    if "t" in _ember_cache:
+        return _ember_cache["t"]
+    _ember_cache["err"] = "no CO2 intensity found in the Ember files (details in data/debug/ember.json)"
+    raise RuntimeError(_ember_cache["err"])
 
 
 def ember(ind):

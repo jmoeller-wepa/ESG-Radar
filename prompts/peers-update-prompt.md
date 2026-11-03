@@ -53,6 +53,10 @@ Rules:
 - Return ONLY the complete updated JSON block in a code block, then a short list of what
   changed and which values you could not find.
 
+For WEPA only: also update "targets2030" (used by the "Our targets 2030" widget) from the newest
+WEPA sustainability report: for each item keep "label", "target" and "fmt", and set "current" to the
+reported value; set "year" to the report year and "src" to the report link.
+
 Current block:
 <PASTE THE COMPANY BLOCK HERE>
 ```
