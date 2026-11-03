@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js" defer></script>
+<script src="assets/status.js?v=20261103c" defer></script>
 <style>
   :root {
     --blue-900: #002d55;
@@ -61,8 +61,11 @@
   .btn.go:hover { background: #00866f; }
   .btn[hidden] { display: none; }
 
-  .ov-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 16px; align-items: start; grid-auto-flow: dense; }
-  .w { background: #fff; border: 1px solid #e9ecf1; border-radius: 14px; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; position: relative; }
+  .ov-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 16px; align-items: stretch; grid-auto-flow: dense; }
+  .w { background: #fff; border: 1px solid #e9ecf1; border-radius: 14px; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; position: relative; height: var(--wh, 470px); overflow: hidden; }
+  .w > .wb { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; }
+  .editing .w > .wb { overflow-y: auto; }
+  @media (max-width: 720px) { .w { height: auto; } .w > .wb { overflow: visible; } }
   .w.wide { grid-column: span 2; }
   @media (max-width: 860px) { .w.wide { grid-column: auto; } }
   .wh { display: flex; align-items: center; gap: 8px; min-height: 24px; }
@@ -137,10 +140,16 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css">
+<link rel="stylesheet" href="assets/theme.css?v=20261103c">
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
-  (function () { const h = location.hash; if (/[#&](area|view|tab|type|impact|tool|topic|q)=/.test(h)) location.replace("news.html" + h); })();
+  // (only for links from outside – clicking "Overview" inside the site never redirects)
+  (function () {
+    const h = location.hash, internal = document.referrer && document.referrer.indexOf(location.origin) === 0;
+    if (/[#&](area|view|tab|type|impact|tool|topic|q)=/.test(h)) {
+      if (internal) history.replaceState(null, "", location.pathname); else location.replace("news.html" + h);
+    }
+  })();
 </script>
 </head>
 <body>
@@ -199,7 +208,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js"></script>
+<script src="assets/carbon.js?v=20261103c"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -401,7 +410,7 @@
         btn("⤢", item.wide ? "Make narrow" : "Make wide", () => { item.wide = !item.wide; save(); renderAll(); }), btn("×", "Remove", () => { L.items.splice(idx, 1); save(); renderAll(); renderCat(); }));
       h.appendChild(ctl);
       w.appendChild(h);
-      const body = el("div"); body.style.cssText = "display:flex;flex-direction:column;gap:10px;min-width:0";
+      const body = el("div", "wb"); body.style.cssText = "display:flex;flex-direction:column;gap:10px;min-width:0";
       w.appendChild(body);
       try { def.render(body, w); } catch (e) { body.appendChild(el("p", "empty", "This widget could not be shown.")); console.error(e); }
       if (editing) dragify(w);

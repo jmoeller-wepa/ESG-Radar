@@ -17,7 +17,7 @@
 }
 
 /* ---------- Header ---------- */
-header { background: var(--wepa-dark) !important; border-bottom: 0 !important; }
+header { background: var(--wepa-dark) !important; border-bottom: 0 !important; position: sticky; top: 0; z-index: 60; box-shadow: 0 1px 0 rgba(0, 0, 0, .04), 0 4px 14px rgba(0, 20, 50, .12); }
 header .wrap { min-height: 60px; padding-top: 0 !important; padding-bottom: 0 !important; row-gap: 0 !important; }
 header .brand svg#logo { display: none; }
 header .brand .logo-w { width: 32px; height: 32px; flex: none; display: block; }
@@ -84,3 +84,8 @@ header .stat-btn .stat-dot { box-shadow: 0 0 0 3px rgba(255, 255, 255, .12); }
 
 /* Use the full width of large screens */
 .wrap { max-width: none !important; padding-left: clamp(16px, 2.4vw, 56px) !important; padding-right: clamp(16px, 2.4vw, 56px) !important; }
+
+/* Sticky header: keep the side panel and anchors below it */
+.side { top: 76px !important; max-height: calc(100vh - 92px); overflow-y: auto; scrollbar-width: thin; }
+html { scroll-padding-top: 76px; }
+@media (max-width: 960px) { header { position: static; } .side { max-height: none; overflow: visible; } html { scroll-padding-top: 0; } }
