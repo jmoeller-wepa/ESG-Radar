@@ -1,8 +1,8 @@
-name: Collect feeds (monthly)
+name: Weekly data update
 
 on:
   schedule:
-     - cron: "17 5 * * 1"   # every Monday, 05:17 UTC
+    - cron: "17 5 * * 1"   # every Monday, 05:17 UTC (monthly instead: "17 5 1 * *")
   workflow_dispatch:         # "Run workflow" button for a manual run
 
 permissions:
@@ -11,6 +11,8 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    env:
+      TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}   # optional; empty = no Teams post
     steps:
       - uses: actions/checkout@v4
 
@@ -19,10 +21,30 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install feedparser==6.0.11
+        run: pip install feedparser==6.0.11 openpyxl==3.1.5
 
       - name: Collect new items
         run: python scripts/collect_feeds.py
+
+      - name: Collect consultations & regulation status
+        run: python scripts/collect_regulation.py
+        continue-on-error: true
+
+      - name: Collect market indicators
+        run: python scripts/collect_market.py
+        continue-on-error: true   # an unreachable statistics API never blocks the news update
+
+      - name: Collect EU ETS emissions of peers
+        run: python scripts/collect_ets.py
+        continue-on-error: true   # yearly file; skipped automatically when nothing changed
+
+      - name: Update SBTi status of peers
+        run: python scripts/collect_sbti.py
+        continue-on-error: true
+
+      - name: Collect Fabric / Power BI roadmap
+        run: python scripts/collect_fabric.py
+        continue-on-error: true
 
       - name: Commit changes
         run: |
@@ -35,3 +57,7 @@ jobs:
             git commit -m "Feed run $(date -u +%Y-%m-%d)"
             git push
           fi
+
+      - name: Post to Teams (optional)
+        if: ${{ env.TEAMS_WEBHOOK_URL != '' }}
+        run: python scripts/post_teams.py
