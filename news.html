@@ -175,6 +175,26 @@
   /* Relevance dots */
   .rel { display: inline-block; width: 20px; height: 6px; flex: none; }
 
+  /* News grouped by year and month (M2): year header, month label on the left, cards on the right */
+  .months { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+  .yh { display: flex; align-items: baseline; gap: 10px; margin: 6px 0 -6px; scroll-margin-top: 150px; }
+  .yh h3 { margin: 0; font-size: 24px; font-weight: 650; color: var(--blue-900); letter-spacing: -.01em; }
+  .yh span { font-size: 13px; color: var(--ink-3); }
+  .mrow { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 18px; scroll-margin-top: 150px; }
+  .ml { position: sticky; top: 140px; align-self: start; text-align: right; padding: 4px 12px 4px 0; border-right: 2px solid #e3e7ec; }
+  .ml b { display: block; font-size: 15px; color: var(--blue-900); }
+  .ml small { display: block; font-size: 11.5px; color: var(--ink-3); }
+  .ml .nn { color: var(--wepa-green-soft, #33b09c); font-weight: 700; }
+  .mrow.cur .ml { border-right-color: var(--wepa-green-soft, #33b09c); }
+  .more-months { align-self: center; border: 1px solid #dfe4ea; background: #fff; border-radius: 10px; padding: 8px 16px; font: inherit; font-size: 13.5px; color: var(--blue-900); cursor: pointer; }
+  .more-months:hover { border-color: #b9c6d4; }
+  .arch { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; background: #fff; border: 1px dashed #d5dbe3; border-radius: 12px; padding: 12px 16px; font-size: 13px; color: #5b6472; }
+  .arch button { border: 0; background: none; padding: 0; font: inherit; font-weight: 600; color: var(--blue-700); cursor: pointer; }
+  #jump { display: flex; flex-direction: column; max-height: 300px; overflow-y: auto; scrollbar-width: thin; }
+  #jump .jy { font-size: 11px; font-weight: 600; color: #9aa2ae; padding: 8px 10px 2px; }
+  #jump .sitem { padding: 5px 10px; font-size: 13.5px; }
+  @media (max-width: 720px) { .mrow { grid-template-columns: 1fr; gap: 8px; } .ml { position: static; text-align: left; border-right: 0; border-bottom: 2px solid #e3e7ec; padding: 0 0 4px; display: flex; gap: 8px; align-items: baseline; } }
+
   /* Cards */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; align-items: start; }
   .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; height: 232px; overflow: hidden; transition: border-color .15s, box-shadow .15s; }
@@ -232,9 +252,9 @@
     .feat { flex-basis: 100%; }
   }
 </style>
-<script src="assets/status.js?v=20261103e" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261103e">
-<script src="assets/colresize.js?v=20261103e" defer></script>
+<script src="assets/status.js?v=20261104a" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261104a">
+<script src="assets/colresize.js?v=20261104a" defer></script>
 </head>
 <body>
 <header>
@@ -282,6 +302,7 @@
     <div class="side-body" id="side-body">
       <div class="side-group" role="group" aria-labelledby="v-cap"><p class="cap" id="v-cap">View</p><div id="views"></div></div>
       <div class="side-group" role="group" aria-labelledby="a-cap"><p class="cap" id="a-cap">Area</p><div id="areas"></div></div>
+      <div class="side-group" role="group" aria-labelledby="j-cap" id="jump-group"><p class="cap" id="j-cap">Jump to</p><div id="jump"></div></div>
       <div class="side-group" role="group" aria-labelledby="l-cap"><p class="cap" id="l-cap">Legend</p>
         <div class="side-legend">
           <div class="row"><span class="d" style="background:var(--t-regulation)"></span>Regulation</div>
@@ -345,13 +366,13 @@
       </select>
     </div>
 
-    <div class="grid" id="grid"></div>
+    <div class="months" id="grid"></div>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>News is collected automatically every week. Summaries are aids, not legal advice.</span>
+    <span>News is collected automatically by the scheduled update. Summaries are aids, not legal advice.</span>
   </div>
 </footer>
 
@@ -378,6 +399,7 @@
   const REL_LABEL = { high: "High relevance", medium: "Medium relevance", low: "Low relevance" };
   const REL_RANK = { high: 0, medium: 1, low: 2 };
   const SOON_DAYS = 90;
+  const ui = { months: 6, archive: false }; // months rendered so far · archive shown
   const state = { view: "all", type: "all", rel: "all", impact: "all", only: null, area: "all", tool: "all", q: "", sort: "date", dlView: "list", dlAll: false };
   let roadmap = { rows: [] }, events = [], fabric = { items: [] };
   const IMPACTS = { reporting: 1, datamodel: 1, suppliers: 1, products: 1, costs: 1, watch: 1 };
@@ -418,7 +440,7 @@
   const areasOf = (e) => (e.areas && e.areas.length ? e.areas : e.area ? [e.area] : []);
   const isNew = (e) => newSince != null && (e.added || e.date || "") > newSince;
   const isSaved = (e) => saved.has(e.id);
-  const pool = () => entries.concat(archived.filter(isSaved));
+  const pool = () => entries.concat(ui.archive ? archived : archived.filter(isSaved));
   const TOOLS = {
     fabric: { label: "Fabric", re: /\bfabric\b|onelake|data agent/i },
     powerbi: { label: "Power BI", re: /power ?bi|semantic model|\bdax\b/i },
@@ -946,14 +968,114 @@
     return c;
   }
 
+  const MONTHS_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const monthKey = (e) => (e.dateIsAdded || !e.date ? "ref" : e.date.slice(0, 7));
+  const monthName = (k, long) => (k === "ref" ? "Reference" : (long ? MONTHS_LONG : MONTHS_LONG.map((m) => m.slice(0, 3)))[+k.slice(5, 7) - 1]);
+  // Groups by month, newest month first; inside a month the chosen sort order is kept
+  function groups(list) {
+    const map = new Map();
+    list.forEach((e) => { const k = monthKey(e); if (!map.has(k)) map.set(k, []); map.get(k).push(e); });
+    return [...map.entries()].sort((a, b) => (a[0] === "ref" ? 1 : b[0] === "ref" ? -1 : b[0].localeCompare(a[0])));
+  }
   function render() {
     const list = filtered();
-    $("grid").replaceChildren(...(list.length ? list.map(card)
-      : [el("div", "empty", state.view === "saved" && !pool().some(isSaved) ? "Nothing saved yet – click the star on a card to keep it here."
+    const host = $("grid");
+    if (!list.length) {
+      host.replaceChildren(el("div", "empty", state.view === "saved" && !pool().some(isSaved) ? "Nothing saved yet – click the star on a card to keep it here."
         : state.view === "new" ? "Nothing new since your last visit."
         : state.type === "monthly" ? "No monthly feature summaries yet – they arrive with the next feed run."
-        : "No entries match these filters.")]));
+        : "No entries match these filters."));
+      renderJump([]); appendArchiveNote(host);
+      return;
+    }
+    const gs = groups(list);
+    const nodes = [];
+    let year = null;
+    const thisMonth = new Date().toISOString().slice(0, 7);
+    gs.slice(0, ui.months).forEach(([k, items]) => {
+      const y = k === "ref" ? "ref" : k.slice(0, 4);
+      if (y !== year) {
+        year = y;
+        const yh = el("div", "yh"); yh.id = "y-" + y;
+        const n = gs.filter(([kk]) => (kk === "ref" ? "ref" : kk.slice(0, 4)) === y).reduce((a, [, it]) => a + it.length, 0);
+        yh.append(el("h3", null, y === "ref" ? "Reference – no date" : y), el("span", null, n + (n === 1 ? " item" : " items")));
+        nodes.push(yh);
+      }
+      const row = el("section", "mrow" + (k === thisMonth ? " cur" : "")); row.id = "m-" + k;
+      row.setAttribute("aria-label", k === "ref" ? "Reference entries" : monthName(k, true) + " " + k.slice(0, 4));
+      const ml = el("div", "ml");
+      ml.appendChild(el("b", null, k === "ref" ? "–" : monthName(k)));
+      ml.appendChild(el("small", null, items.length + (items.length === 1 ? " item" : " items")));
+      const nn = items.filter(isNew).length; if (nn) ml.appendChild(el("small", "nn", nn + " new"));
+      const g = el("div", "grid"); items.forEach((e) => g.appendChild(card(e)));
+      row.append(ml, g);
+      nodes.push(row);
+    });
+    if (gs.length > ui.months) {
+      const rest = gs.slice(ui.months);
+      const b = el("button", "more-months", `Show earlier months (${rest.length} more · ${rest.reduce((a, [, it]) => a + it.length, 0)} items)`);
+      b.type = "button"; b.addEventListener("click", () => { ui.months += 6; render(); });
+      nodes.push(b);
+    }
+    host.replaceChildren(...nodes);
+    appendArchiveNote(host);
+    renderJump(gs);
     requestAnimationFrame(measureCards);
+  }
+  // Feed items older than a year move to data/archive.json (weekly/daily run); they can be shown on demand
+  function appendArchiveNote(host) {
+    const hidden = archived.filter((e) => !isSaved(e)).length;
+    if (!hidden) return;
+    const box = el("div", "arch");
+    if (!ui.archive) {
+      box.appendChild(el("span", null, `${hidden} older items (more than 12 months old) are archived to keep this page fast.`));
+      const b = el("button", null, "Show archive"); b.type = "button";
+      b.addEventListener("click", () => { ui.archive = true; ui.months = 999; sync(); render(); });
+      box.appendChild(b);
+    } else {
+      box.appendChild(el("span", null, `Archive shown: ${hidden} items older than 12 months.`));
+      const b = el("button", null, "Hide archive"); b.type = "button";
+      b.addEventListener("click", () => { ui.archive = false; ui.months = 6; sync(); render(); window.scrollTo({ top: 0 }); });
+      box.appendChild(b);
+    }
+    host.appendChild(box);
+  }
+  // Side panel "Jump to": years and months with counts; clicking scrolls there (and renders it first if needed)
+  function renderJump(gs) {
+    const box = $("jump");
+    $("jump-group").hidden = gs.length < 2;
+    let year = null;
+    const nodes = [];
+    gs.forEach(([k, items], i) => {
+      const y = k === "ref" ? "ref" : k.slice(0, 4);
+      if (y !== year) { year = y; nodes.push(el("div", "jy", y === "ref" ? "Other" : y)); }
+      const b = sideItem(null, null, k === "ref" ? "Reference" : monthName(k, true));
+      b.querySelector(".count").textContent = String(items.length);
+      b.dataset.month = k;
+      b.addEventListener("click", () => {
+        if (i >= ui.months) { ui.months = i + 1; render(); }
+        const t = document.getElementById("m-" + k);
+        if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById("side").classList.remove("open");
+      });
+      nodes.push(b);
+    });
+    box.replaceChildren(...nodes);
+    spy();
+  }
+  // Highlight the month currently in view
+  let spyObs = null;
+  function spy() {
+    if (spyObs) spyObs.disconnect();
+    if (!("IntersectionObserver" in window)) return;
+    spyObs = new IntersectionObserver((ents) => {
+      ents.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const k = en.target.id.slice(2);
+        document.querySelectorAll("#jump .sitem").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.month === k)));
+      });
+    }, { rootMargin: "-160px 0px -60% 0px" });
+    document.querySelectorAll("#grid .mrow").forEach((r) => spyObs.observe(r));
   }
 
   // Equal card heights: show "Details" wherever the title or summary is cut off
