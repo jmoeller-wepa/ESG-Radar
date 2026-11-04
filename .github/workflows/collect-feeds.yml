@@ -1,4 +1,4 @@
-name: Weekly data update
+name: Daily data update
 
 on:
   schedule:
