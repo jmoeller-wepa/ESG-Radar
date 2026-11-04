@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-03T13:39:39"
+    "lastFeedRun": "2026-11-04T07:29:59"
   },
   "entries": [
     {
@@ -1652,6 +1652,186 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQUR4S1BlUEhzb3c5YWpUT3k5ZDNxZl9MeDlRb3NCUUl6RmxEV0FzV3R4ck1LejNjMWVQUzd6SWZDaUs0M3dxZkgyWWtsSktMWUpKNlBqRUI5Y2oyRWNVNUFxT2w5YVQwRlFDcThNRDRzX2pKTmZPT0lyX093ZzFKSkZ5TUFLUUFxLU1qWjRpX1F1Nm9ZbmJKZFlTXy1mdHRGd1d4N0d4bw?oc=5",
       "origin": "feed",
       "added": "2026-11-03"
+    },
+    {
+      "id": "feed-6a85cab200",
+      "date": "2026-11-03",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Onelake"
+      ],
+      "title": "Adding the Context Streaming Events Need: Reference Data Joins with OneLake Delta Tables in Fabric Eventstream",
+      "summary": "Enrich events with business context in real time, enabling faster decisions, more relevant alerts, and lower operational effort downstream. A real-time event tells you what happened. Context tells you what it means—and what to do next. In cold-chain logistics, a temperature reading becomes actionable when paired with a shipment’s temperature limits, customer priority, and response contacts. Reference Data Join in…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Adding-the-Context-Streaming-Events-Need-Reference-Data-Joins/ba-p/5382230",
+      "origin": "feed",
+      "added": "2026-11-04"
+    },
+    {
+      "id": "feed-bca544cd94",
+      "date": "2026-11-03",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Onelake"
+      ],
+      "title": "OneLake: The file system for agent-first data engineering",
+      "summary": "Software engineers are increasingly using agents to build software, and data engineers are no different. We want OneLake to help enable data engineers to develop software in this new agent-first era. Think about how you work in a terminal: you use it to run programs that read and write files. Both the programs and the data live in the file system. Now apply that model to data engineering: OneLake is the file…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-The-file-system-for-agent-first-data-engineering/ba-p/5383035",
+      "origin": "feed",
+      "added": "2026-11-04"
+    },
+    {
+      "id": "feed-666aff9e13",
+      "date": "2026-11-02",
+      "type": "practice",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "AI"
+      ],
+      "title": "Optimizing DAX with AI",
+      "summary": "Can AI optimize a DAX expression? Sure, it can. However, when AI and humans work together, the result is better. In this article, we show a simple example. NOTE: The solution in the video differs from the one in the…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "SQLBI",
+      "url": "https://www.sqlbi.com/articles/optimizing-dax-with-ai/",
+      "origin": "feed",
+      "added": "2026-11-04"
+    },
+    {
+      "id": "feed-eff372a8f6",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [
+        "CBAM"
+      ],
+      "title": "Isometric Launches New CBAM Data Preparation and Reporting Service for Exporters",
+      "summary": "Industrial certification provider Isometric announced today the launch of Ready for CBAM, a new service […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/isometric-launches-new-cbam-preparation-service-for-exporters/?utm_source=rss&utm_medium=rss&utm_campaign=isometric-launches-new-cbam-preparation-service-for-exporters",
+      "origin": "feed",
+      "added": "2026-11-04"
+    },
+    {
+      "id": "feed-8e23a4fb14",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [
+        "ISSB"
+      ],
+      "title": "Thailand Launches Mandatory ISSB-Aligned Sustainability Reporting for Public Companies",
+      "summary": "Thailand’s Securities and Exchange Commission (SEC) announced the publication of new regulations requiring listed companies […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/thailand-launches-mandatory-issb-aligned-sustainability-reporting-for-public-companies/?utm_source=rss&utm_medium=rss&utm_campaign=thailand-launches-mandatory-issb-aligned-sustainability-reporting-for-public-companies",
+      "origin": "feed",
+      "added": "2026-11-04"
+    },
+    {
+      "id": "feed-f998221b03",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Biodiversity"
+      ],
+      "title": "BofA, King Charles’ sustainability initiative back $40M nature investment strategy",
+      "summary": "The Lighthouse Initiative seeks to develop and scale nature and biodiversity solutions and direct private capital towards projects that remain underfunded.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/bofa-king-charles-smi-back-40m-nature-investment-strategy-lighthouse-initiative/873622/",
+      "origin": "feed",
+      "added": "2026-11-04"
+    },
+    {
+      "id": "feed-b5adfe26ce",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [],
+      "title": "EFRAG publishes responses to questions on its Call for Tenders: ESRS Knowledge Hub Education Module – Development of the IT Infrastructure - EFRAG",
+      "summary": "EFRAG publishes responses to questions on its Call for Tenders: ESRS Knowledge Hub Education Module – Development of the IT Infrastructure EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNdVRwcnpRQXloUUpYVXpOMmV1bENPOUZnUUotSlI0cEg3Q1k1T0F0cUxlenhoX2JUNExIUlZUQW1QaDgtVTVrb3ozMlk2NlRBcWFWT3pTUzlpNVV6ODFQSDVBTmlaMXJNSDk3OThXeGpoTDhJS3hCOWJTVFVTVW1OM2dGeHV5WDIwaktTaUduWS1TZW1KVWNOQlR6YndmMUlNOG8tUjVtSHQwS241eXVYSmRKNzlKTG0xdEYxelR6VWR5Mm1xdXZuNjhiU01ESHJucVF6M1ZCRUp5VTd3RVkw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-04"
     }
   ]
 }

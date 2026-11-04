@@ -1,25 +1,6 @@
 {
- "updated": "2026-11-03T13:39:43",
+ "updated": "2026-11-04T07:30:03",
  "consultations": [
-  {
-   "id": "14549.0",
-   "title": "EU emissions trading system for maritime, aviation and stationary installations, and market stability reserve - review",
-   "summary": "",
-   "type": "Adoption workflow",
-   "dg": null,
-   "start": "2026-08-20",
-   "end": "2026-11-03",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14549.0_en",
-   "areas": [
-    "climate"
-   ],
-   "topics": [
-    "ets"
-   ],
-   "keywords": [
-    "emission"
-   ]
-  },
   {
    "id": "18833.0",
    "title": "VAT and circular economy",
@@ -759,5 +740,5 @@
    "changed": null
   }
  },
- "consultationsFetched": "2026-11-03T13:39:43"
+ "consultationsFetched": "2026-11-04T07:30:03"
 }

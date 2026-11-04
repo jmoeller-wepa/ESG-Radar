@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T13:42:14",
+ "updated": "2026-11-04T07:32:52",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -657,6 +657,16 @@
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-spark-monitoring-apis-generally-available/5172588"
   },
   {
+   "id": "ef14c40e-0a6f-f011-bec2-00224804b6c3",
+   "name": "Airflow - Workspace Monitoring to include Apache Airflow logs from Airflow Job",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Fabric Apache Airflow jobs provides a SaaS way to build Python-based Airflow DAGs in your Fabric workspace. With this new feature, you will now be able to easily view your runtime logs from Apache Airflow in the Fabric Workspace Monitoring ",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/introducing-apache-airflow-job-in-microsoft-fabric/5173206"
+  },
+  {
    "id": "fbf626c8-726a-f111-a826-000d3a36696c",
    "name": "Connectors - Modernized Exchange connector for Power Query",
    "product": "Data Factory",
@@ -735,6 +745,16 @@
    "quarter": "Q1 2027",
    "desc": "We plan to introduce PowerPoint Presentations (PPTX) as a new data destination for Dataflow Gen2, enabling customers to turn data prepared in Microsoft Fabric into presentation files using the low-code Power Query experience.Designed for ci",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Dataflow-Gen2-and-Power-Query-innovations-at-Microsoft-Build-Low/ba-p/5189028"
+  },
+  {
+   "id": "89223235-516f-f111-ab0d-6045bd006301",
+   "name": "Pipelines - Actions",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "With pipeline Actions, you can now easily define a simple pipeline template that can be a single activity or multiple acitvities, without using the pipeline canvas. Simply tell Copilot what you want to achieve, answer a few configuration pr",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/ai-powered-development-with-copilot-for-data-pipeline---boost-your-productivity-/5172740"
   },
   {
    "id": "75004e12-2158-f111-bec7-6045bd00f798",

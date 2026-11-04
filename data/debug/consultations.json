@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-03T13:39:43+00:00",
+ "fetched": "2026-11-04T07:30:03+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -27,155 +27,14 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": 17873.0,
+    "id": "18393.0",
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2026)4109761",
-    "foreseenActType": "REG_DEL",
-    "shortTitle": "Ecodesign requirements on product repairability",
-    "currentStatuses": [
-     {
-      "frontEndStage": "PLANNING_WORKFLOW",
-      "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/03 09:36:17",
-      "feedbackEndDate": "2027/02/09 23:59:59",
-      "isCurrent": true
-     },
-     {
-      "frontEndStage": "OPC_LAUNCHED",
-      "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/03 09:36:17",
-      "feedbackEndDate": "2027/02/09 23:59:59",
-      "isCurrent": true
-     }
-    ],
-    "topics": [
-     {
-      "code": "ENV",
-      "label": "Environment"
-     }
-    ],
-    "initiativeTranslations": [
-     {
-      "value": "Изисквания за екопроектиране по отношение на ремонтопригодността на продуктите",
-      "language": "BG",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Požadavky na opravitelnost výrobků (ekodesign)",
-      "language": "CS",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Krav til miljøvenligt design af produkters reparationsmuligheder",
-      "language": "DA",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Ökodesign-Anforderungen an die Reparierbarkeit von Produkten",
-      "language": "DE",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Απαιτήσεις οικολογικού σχεδιασμού για τη δυνατότητα επισκευής των προϊόντων",
-      "language": "EL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Ecodesign requirements on product repairability",
-      "language": "EN",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Requisitos de diseño ecológico relativos a la reparabilidad de los productos",
-      "language": "ES",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Toodete parandatavust käsitlevad ökodisaininõuded",
-      "language": "ET",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Exigences en matière d’écoconception relatives à la réparabilité des produits",
-      "language": "FR",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Ceanglais éicidhearthóireachta maidir le hindeisitheacht táirgí",
-      "language": "GA",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Zahtjevi za ekološki dizajn u pogledu mogućnosti popravka proizvoda",
-      "language": "HR",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Specifiche per la progettazione ecocompatibile - riparabilità dei prodotti",
-      "language": "IT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Tuotteiden korjattavuutta koskevat ekosuunnitteluvaatimukset",
-      "language": "FI",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "A termékek javíthatóságára vonatkozó környezettudatos tervezési követelmények",
-      "language": "HU",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Su gaminių taisomumu susiję ekologinio projektavimo reikalavimai",
-      "language": "LT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Ekodizaina prasības attiecībā uz produktu remontējamību",
-      "language": "LV",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Rekwiżiti tal-ekodisinn dwar ir-reparabbiltà tal-prodotti",
-      "language": "MT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Vereisten inzake ecologisch ontwerp voor de repareerbaarheid van producten",
-      "language": "NL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Wymogi dotyczące ekoprojektu w zakresie możliwości naprawy produktów",
-      "language": "PL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Requisitos de conceção ecológica relativamente à possibilidade de reparação dos produtos",
-      "language": "PT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Cerințe în materie de proiectare ecologică privind potențialul de reparare a produselor",
-      "language": "RO",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Požiadavky na ekodizajn týkajúce sa opraviteľnosti výrobkov",
-      "language": "SK",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Zahteve za okoljsko primerno zasnovo glede popravljivosti izdelkov",
-      "language": "SL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Ekodesignkrav för produkters reparerbarhet",
-      "language": "SV",
-      "field": "SHORT_TITLE"
-     }
-    ]
+    "reference": "Ares(2026)5700242",
+    "foreseenActType": "REG_IMPL",
+    "shortTitle": "Amendments of motor vehicle safety requirements in view of their application to fully automated vehicles",
+    "currentStatuses": "[{'frontEndStage': 'ISC_WORKFLOW', 'receivingFeedbackStatus': 'OPEN', 'feedbackStartDate': '2026/11/03 15:34:00', 'feedbackEndDate': '2026/12/01 23:59:59', 'isCurrent': True}]",
+    "initiativeTranslations": "[{'value': 'Изисквания за безопасност на моторните превозни средства — изменения във връзка с прилагането им за напълно автоматизираните превозни средства', 'language': 'BG', 'field': 'SHORT_TITLE'}, {'value': 'Změny požadavků na bezpečnost motorových vozidel s ohledem na jejich uplatňování na plně ",
+    "topics": "[{'code': 'SINGMARK', 'label': 'Single market'}]"
    },
    "openFound": 55,
    "read": 300
