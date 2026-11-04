@@ -2,7 +2,7 @@ name: Weekly data update
 
 on:
   schedule:
-    - cron: "17 5 * * 1"   # every Monday, 05:17 UTC (monthly instead: "17 5 1 * *")
+                 - cron: "17 5 * * 1-5"   # Monday–Friday, 05:17 UTC (every day: "17 5 * * *")
   workflow_dispatch:         # "Run workflow" button for a manual run
 
 permissions:
