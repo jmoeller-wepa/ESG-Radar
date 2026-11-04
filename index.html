@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261104a" defer></script>
+<script src="assets/status.js?v=20261104c" defer></script>
 <style>
   :root {
     --blue-900: #002d55;
@@ -61,13 +61,16 @@
   .btn.go:hover { background: #00866f; }
   .btn[hidden] { display: none; }
 
-  .ov-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 16px; align-items: stretch; grid-auto-flow: dense; }
+  /* Free placement: a fixed grid of cells (columns follow the screen width); each widget remembers its cell */
+  .ov-grid { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); grid-auto-rows: var(--wh, 470px); gap: 16px; align-items: stretch; }
+  .slot { border: 2px dashed #d5dde6; border-radius: 14px; display: grid; place-items: center; color: #9aa2ae; font-size: 13px; transition: background .12s, border-color .12s; }
+  .slot.over { border-color: #009b82; background: #e8f7f4; color: #00594a; }
+  @media (max-width: 720px) { .ov-grid { grid-auto-rows: auto; } .slot { display: none; } }
   .w { background: #fff; border: 1px solid #e9ecf1; border-radius: 14px; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; position: relative; height: var(--wh, 470px); overflow: hidden; }
   .w > .wb { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; }
   .editing .w > .wb { overflow-y: auto; }
   @media (max-width: 720px) { .w { height: auto; } .w > .wb { overflow: visible; } }
-  .w.wide { grid-column: span 2; }
-  @media (max-width: 860px) { .w.wide { grid-column: auto; } }
+
   .wh { display: flex; align-items: center; gap: 8px; min-height: 24px; }
   .wh h3 { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #6b7280; font-weight: 600; }
   .wh a.more { margin-left: auto; font-size: 12.5px; color: #0064aa; text-decoration: none; white-space: nowrap; }
@@ -117,8 +120,7 @@
   /* edit mode */
   .editing .w { cursor: grab; outline: 2px dashed #b9d3e8; outline-offset: -2px; }
   .editing .w.dragging { opacity: .45; }
-  .editing .w.drop-before { box-shadow: -4px 0 0 0 #009b82; }
-  .editing .w.drop-after { box-shadow: 4px 0 0 0 #009b82; }
+  .editing .w.drop-on { box-shadow: 0 0 0 3px #009b82; }
   .wctl { display: none; gap: 4px; margin-left: auto; }
   .editing .wctl { display: flex; }
   .editing .wh a.more { display: none; }
@@ -140,8 +142,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261104a">
-<script src="assets/colresize.js?v=20261104a" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261104c">
+<script src="assets/colresize.js?v=20261104c" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -201,7 +203,7 @@
   <section class="drawer" id="drawer" hidden aria-labelledby="dr-title">
     <h3 id="dr-title">Add or remove widgets</h3>
     <div class="cat" id="cat"></div>
-    <p class="mut">Drag widgets with the mouse to reorder them (or use ↑ ↓). ⤢ switches between narrow and wide. Your layout is saved in this browser.</p>
+    <p class="mut">Drag a widget onto any free cell (dashed) or onto another widget to swap them – or use the arrows. ⤢ switches between narrow and wide. Empty cells stay empty, so you can leave gaps. Your layout is saved in this browser.</p>
   </section>
   <div class="ov-grid" id="grid"></div>
 </main>
@@ -209,7 +211,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261104a"></script>
+<script src="assets/carbon.js?v=20261104c"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -394,55 +396,108 @@
       } },
   };
 
+  // ---------- layout: widgets sit in grid cells {c, r} (0-based); free cells can stay empty ----------
+  const colsNow = () => { const g = $("grid"); const wdt = (g && g.clientWidth) || window.innerWidth; return window.innerWidth <= 720 ? 1 : Math.max(1, Math.min(4, Math.floor((wdt + 16) / (380 + 16)))); };
+  // Place all widgets: keep each one's cell if it fits and is free, otherwise put it in the first free cell.
+  // 'first' gets priority (the widget just moved).
+  function place(cols, first) {
+    const occ = new Set(); const key = (c, r) => c + "," + r;
+    const span = (it) => (it.wide && cols > 1 ? 2 : 1);
+    const free = (c, r, n) => { if (c + n > cols) return false; for (let k = 0; k < n; k++) if (occ.has(key(c + k, r))) return false; return true; };
+    const take = (it, c, r) => { for (let k = 0; k < span(it); k++) occ.add(key(c + k, r)); it.at = { c, r }; };
+    const order = [...L.items].sort((a, b) => (a === first ? -1 : b === first ? 1 : 0));
+    const later = [];
+    order.forEach((it) => {
+      const p = it.pos;
+      if (cols > 1 && p && free(p.c, p.r, span(it))) take(it, p.c, p.r); else later.push(it);
+    });
+    later.forEach((it) => {
+      for (let r = 0; r < 200; r++) { let done = false; for (let c = 0; c < cols; c++) if (free(c, r, span(it))) { take(it, c, r); done = true; break; } if (done) break; }
+    });
+    return occ;
+  }
+  const keepPositions = (cols) => { if (cols > 1) L.items.forEach((it) => { if (it.at) it.pos = { c: it.at.c, r: it.at.r }; }); };
+
   // ---------- render ----------
+  let COLS = 3;
   function renderAll() {
     const grid = $("grid"); grid.replaceChildren();
     grid.classList.toggle("editing", editing);
     L.items = L.items.filter((x) => W[x.id]);
+    COLS = colsNow(); grid.style.setProperty("--cols", COLS);
+    const occ = place(COLS);
     L.items.forEach((item, idx) => {
       const def = W[item.id];
       const w = el("section", "w" + (item.wide ? " wide" : ""));
       w.dataset.id = item.id;
+      if (COLS > 1) { w.style.gridColumn = (item.at.c + 1) + " / span " + (item.wide ? 2 : 1); w.style.gridRow = String(item.at.r + 1); }
       const h = el("div", "wh"); h.append(el("span", "grip", "⋮⋮"), el("h3", null, def.title));
       if (def.more) { const a = el("a", "more", def.more[0]); a.href = def.more[1] || "#"; if (!def.more[1] || /^https?:/.test(def.more[1])) { a.target = "_blank"; a.rel = "noopener"; } h.appendChild(a); }
       const ctl = el("div", "wctl");
       const btn = (t, label, fn) => { const x = el("button", null, t); x.type = "button"; x.title = label; x.setAttribute("aria-label", label + " – " + def.title); x.addEventListener("click", fn); return x; };
-      ctl.append(btn("↑", "Move up", () => move(idx, -1)), btn("↓", "Move down", () => move(idx, 1)),
-        btn("⤢", item.wide ? "Make narrow" : "Make wide", () => { item.wide = !item.wide; save(); renderAll(); }), btn("×", "Remove", () => { L.items.splice(idx, 1); save(); renderAll(); renderCat(); }));
+      ctl.append(btn("←", "Move left", () => nudge(item, -1, 0)), btn("→", "Move right", () => nudge(item, 1, 0)),
+        btn("↑", "Move up", () => nudge(item, 0, -1)), btn("↓", "Move down", () => nudge(item, 0, 1)),
+        btn("⤢", item.wide ? "Make narrow" : "Make wide", () => { freeze(); item.wide = !item.wide; place(COLS, item); keepPositions(COLS); save(); renderAll(); }), btn("×", "Remove", () => { L.items.splice(idx, 1); save(); renderAll(); renderCat(); }));
       h.appendChild(ctl);
       w.appendChild(h);
       const body = el("div", "wb"); body.style.cssText = "display:flex;flex-direction:column;gap:10px;min-width:0";
       w.appendChild(body);
       try { def.render(body, w); } catch (e) { body.appendChild(el("p", "empty", "This widget could not be shown.")); console.error(e); }
-      if (editing) dragify(w);
+      if (editing) dragify(w, item);
       grid.appendChild(w);
     });
+    // Edit mode: every free cell (plus one extra row) becomes a drop target
+    if (editing && COLS > 1) {
+      const rows = Math.max(0, ...L.items.map((it) => it.at.r + 1)) + 1;
+      for (let r = 0; r < rows; r++) for (let c = 0; c < COLS; c++) {
+        if (occ.has(c + "," + r)) continue;
+        const sl = el("div", "slot", "Drop here"); sl.style.gridColumn = String(c + 1); sl.style.gridRow = String(r + 1);
+        sl.addEventListener("dragover", (e) => { if (!dragId) return; e.preventDefault(); sl.classList.add("over"); });
+        sl.addEventListener("dragleave", () => sl.classList.remove("over"));
+        sl.addEventListener("drop", (e) => { e.preventDefault(); const it = L.items.find((x) => x.id === dragId); if (!it) return; freeze(); moveTo(it, c, r); });
+        grid.appendChild(sl);
+      }
+    }
     if (!L.items.length) grid.appendChild(el("p", "empty", "No widgets – click “Customize” and add some."));
   }
-  function move(idx, dir) { const j = idx + dir; if (j < 0 || j >= L.items.length) return; const [x] = L.items.splice(idx, 1); L.items.splice(j, 0, x); save(); renderAll(); }
+  // Pin every widget to the cell it has now, so moving one does not reflow the others
+  const freeze = () => L.items.forEach((x) => { if (x.at) x.pos = { c: x.at.c, r: x.at.r }; });
+  function moveTo(it, c, r) {
+    if (it.wide && c + 2 > COLS) c = Math.max(0, COLS - 2);
+    it.pos = { c, r }; place(COLS, it); keepPositions(COLS); save(); renderAll();
+  }
+  function nudge(it, dc, dr) {
+    if (COLS === 1) { // phone: simple order
+      const i = L.items.indexOf(it), j = i + (dr || dc); if (j < 0 || j >= L.items.length) return;
+      L.items.splice(i, 1); L.items.splice(j, 0, it); L.items.forEach((x) => delete x.pos); save(); renderAll(); return;
+    }
+    freeze();
+    const c = Math.max(0, Math.min(COLS - 1, it.at.c + dc)), r = Math.max(0, it.at.r + dr);
+    const other = L.items.find((x) => x !== it && x.at && x.at.r === r && (x.at.c === c || (x.wide && x.at.c + 1 === c)));
+    if (other) other.pos = { c: it.at.c, r: it.at.r }; // swap
+    moveTo(it, c, r);
+  }
 
-  // drag & drop with the mouse (edit mode)
+  // drag & drop with the mouse (edit mode): onto a free cell = move there, onto a widget = swap
   let dragId = null;
-  function dragify(w) {
+  function dragify(w, item) {
     w.draggable = true;
     w.addEventListener("dragstart", (e) => { dragId = w.dataset.id; w.classList.add("dragging"); e.dataTransfer.effectAllowed = "move"; try { e.dataTransfer.setData("text/plain", dragId); } catch (x) {} });
-    w.addEventListener("dragend", () => { dragId = null; document.querySelectorAll(".w").forEach((n) => n.classList.remove("dragging", "drop-before", "drop-after")); });
-    w.addEventListener("dragover", (e) => {
-      if (!dragId || dragId === w.dataset.id) return;
-      e.preventDefault();
-      const r = w.getBoundingClientRect(); const after = e.clientX > r.left + r.width / 2;
-      w.classList.toggle("drop-after", after); w.classList.toggle("drop-before", !after);
-    });
-    w.addEventListener("dragleave", () => w.classList.remove("drop-before", "drop-after"));
+    w.addEventListener("dragend", () => { dragId = null; document.querySelectorAll(".w, .slot").forEach((n) => n.classList.remove("dragging", "drop-on", "over")); });
+    w.addEventListener("dragover", (e) => { if (!dragId || dragId === w.dataset.id) return; e.preventDefault(); w.classList.add("drop-on"); });
+    w.addEventListener("dragleave", () => w.classList.remove("drop-on"));
     w.addEventListener("drop", (e) => {
       e.preventDefault();
-      const r = w.getBoundingClientRect(); const after = e.clientX > r.left + r.width / 2;
-      const from = L.items.findIndex((x) => x.id === dragId); if (from < 0) return;
-      const [it] = L.items.splice(from, 1);
-      let to = L.items.findIndex((x) => x.id === w.dataset.id); if (after) to += 1;
-      L.items.splice(to, 0, it); save(); renderAll();
+      const it = L.items.find((x) => x.id === dragId); if (!it || it === item) return;
+      if (COLS === 1) { const from = L.items.indexOf(it); L.items.splice(from, 1); L.items.splice(L.items.indexOf(item), 0, it); save(); renderAll(); return; }
+      freeze();
+      const target = { c: item.at.c, r: item.at.r };
+      item.pos = { c: it.at.c, r: it.at.r }; // swap cells
+      moveTo(it, target.c, target.r);
     });
   }
+  let lastCols = null;
+  window.addEventListener("resize", () => { const c = colsNow(); if (c !== lastCols) { lastCols = c; renderAll(); } });
 
   function renderCat() {
     const cat = $("cat"); cat.replaceChildren();

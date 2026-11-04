@@ -80,6 +80,34 @@
   .seg button[hidden] { display: none; }
   .seg.small button { font-size: 12.5px; padding: 4px 10px; }
 
+  /* Coming next: product × quarter matrix (left) + feature list (right) */
+  .fx { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  @media (max-width: 1100px) { .fx { grid-template-columns: 1fr; } }
+  .fx-mx { display: grid; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: 13px; }
+  .fx-mx > * { border: 0; border-bottom: 1px solid var(--line-2, #f0f1f4); background: #fff; font: inherit; font-size: 13px; text-align: left; padding: 7px 10px; min-width: 0; }
+  .fx-h { background: #f8f9fb !important; font-size: 11px !important; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #6b7280; }
+  .fx-q, .fx-p, .fx-c { cursor: pointer; }
+  .fx-q small, .fx-p small { margin-left: 5px; font-size: 11px; font-weight: 400; color: #9aa2ae; text-transform: none; letter-spacing: 0; }
+  .fx-p { color: var(--blue-900); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fx-c { display: flex; align-items: center; gap: 6px; }
+  .fx-c b { font-weight: 600; font-size: 12.5px; min-width: 18px; color: #374151; font-variant-numeric: tabular-nums; }
+  .fx-bar { display: flex; gap: 2px; height: 12px; }
+  .fx-bar i, .fx-lg i { display: block; border-radius: 3px; }
+  .fx-bar i.ga, .fx-lg i.ga { background: #33b09c; }
+  .fx-bar i.pv, .fx-lg i.pv { background: #96d2dc; }
+  .fx-z { color: #c4c9d2; }
+  .fx-mx button:hover { background: #f5f8fb; }
+  .fx-mx button[aria-pressed="true"] { background: #e8f7f4 !important; box-shadow: inset 0 0 0 2px #33b09c; }
+  .fx-list { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .fx-lh { display: flex; flex-direction: column; gap: 1px; }
+  .fx-lh b { font-size: 15px; color: var(--blue-900); }
+  .fx-lh span { font-size: 12.5px; color: var(--ink-3); }
+  .fx-items { display: flex; flex-direction: column; max-height: 420px; overflow-y: auto; border-top: 1px solid var(--line-2, #f0f1f4); }
+  .fx-i { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 8px; align-items: baseline; text-align: left; border: 0; border-bottom: 1px solid var(--line-2, #f0f1f4); background: none; font: inherit; font-size: 13.5px; color: var(--ink); padding: 8px 4px; cursor: pointer; }
+  .fx-i:hover { background: #f7f9fb; }
+  .fx-i small { grid-column: 2; font-size: 12px; color: var(--ink-3); }
+  .fx-lg { display: inline-flex; align-items: center; gap: 5px; }
+  .fx-lg i { width: 10px; height: 10px; margin-left: 4px; }
   .nx { display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch; }
   .feat { flex: 0 1 360px; min-width: 260px; border-radius: 10px; background: var(--blue-50); padding: 20px; display: flex; flex-direction: column; gap: 4px; }
   .feat .big { display: flex; align-items: baseline; gap: 8px; margin-top: 6px; }
@@ -195,6 +223,32 @@
   #jump .sitem { padding: 5px 10px; font-size: 13.5px; }
   @media (max-width: 720px) { .mrow { grid-template-columns: 1fr; gap: 8px; } .ml { position: static; text-align: left; border-right: 0; border-bottom: 2px solid #e3e7ec; padding: 0 0 4px; display: flex; gap: 8px; align-items: baseline; } }
 
+  /* News pop-up (opens when a card is clicked) */
+  dialog.ndlg { width: min(720px, calc(100vw - 32px)); max-height: calc(100vh - 48px); border: 0; border-radius: 16px; padding: 0; box-shadow: 0 24px 64px rgba(0, 20, 50, .25); color: var(--ink); }
+  dialog.ndlg[open] { display: flex; flex-direction: column; }
+  dialog.ndlg::backdrop { background: rgba(0, 20, 45, .35); }
+  .nd-head { display: flex; align-items: center; gap: 10px; padding: 16px 20px 0 24px; }
+  .nd-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12.5px; color: #6b7280; flex: 1; }
+  .nd-x { border: 0; background: #f0f2f5; width: 32px; height: 32px; border-radius: 8px; font-size: 18px; cursor: pointer; color: #4b5563; flex: none; }
+  .nd-body { padding: 10px 24px 8px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+  .nd-body h2 { margin: 0; font-size: 20px; line-height: 1.3; color: var(--blue-900); }
+  .nd-body > p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #374151; white-space: pre-line; }
+  .nd-why { background: var(--blue-50); border-radius: 10px; padding: 10px 14px; font-size: 14px; line-height: 1.55; color: var(--blue-900); }
+  .nd-facts { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 6px 14px; font-size: 13px; margin: 0; }
+  .nd-facts dt { color: #6b7280; }
+  .nd-facts dd { margin: 0; color: #111827; }
+  .nd-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .nd-tags span { font-size: 12px; background: #f3f5f8; border-radius: 6px; padding: 2px 8px; color: #4b5563; }
+  .nd-foot { display: flex; align-items: center; gap: 12px; padding: 14px 24px 18px; border-top: 1px solid var(--line-2, #f0f1f4); }
+  .nd-foot .src { font-size: 12.5px; color: #8a94a3; margin-right: auto; }
+  .nd-open { background: var(--wepa-dark, #002d55); color: #fff; border-radius: 9px; padding: 8px 16px; font-size: 13.5px; font-weight: 600; text-decoration: none; }
+  .nd-open:hover { background: #0064aa; }
+  .card { cursor: pointer; }
+  .card .det { display: none !important; }
+  /* first year header sits in the filter bar */
+  .toolbar .yh { margin: 0; scroll-margin-top: 0; }
+  @media (max-width: 600px) { .nd-facts { grid-template-columns: 1fr; gap: 2px; } .nd-facts dd { margin-bottom: 6px; } }
+
   /* Cards */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; align-items: start; }
   .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; height: 232px; overflow: hidden; transition: border-color .15s, box-shadow .15s; }
@@ -252,9 +306,9 @@
     .feat { flex-basis: 100%; }
   }
 </style>
-<script src="assets/status.js?v=20261104a" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261104a">
-<script src="assets/colresize.js?v=20261104a" defer></script>
+<script src="assets/status.js?v=20261104c" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261104c">
+<script src="assets/colresize.js?v=20261104c" defer></script>
 </head>
 <body>
 <header>
@@ -369,6 +423,15 @@
     <div class="months" id="grid"></div>
   </div>
 </main>
+
+<dialog class="ndlg" id="ndlg" aria-labelledby="nd-title">
+  <div class="nd-head">
+    <div class="nd-meta" id="nd-meta"></div>
+    <button type="button" class="nd-x" id="nd-x" aria-label="Close">×</button>
+  </div>
+  <div class="nd-body" id="nd-body"></div>
+  <div class="nd-foot" id="nd-foot"></div>
+</dialog>
 
 <footer>
   <div class="wrap">
@@ -614,8 +677,7 @@
   function closeSide() { $("side").classList.remove("open"); $("side-toggle").setAttribute("aria-expanded", "false"); }
 
   function syncCount() {
-    const n = filtered().length;
-    $("count").textContent = n + (n === 1 ? " entry" : " entries");
+    // the entry count is no longer shown; the first year header takes its place (see render)
   }
   function sync() {
     // View counts follow the selected area
@@ -817,40 +879,88 @@
   }
 
   // ---- Coming next (Fabric / Power BI roadmap, Data & AI only) ----
-  const nextOpen = new Set();
+  // R2: product × quarter matrix; clicking a cell (or a product / quarter header) lists those features
+  let nextSel = null; // { p: product or null, q: quarter or null }
+  const cleanText = (t) => new DOMParser().parseFromString(String(t || "").replace(/\*\*/g, ""), "text/html").documentElement.textContent.trim();
   function comingView() {
     const items = fabric.items.filter((i) => state.tool === "all" || i.tool === state.tool);
-    if (!items.length) return el("p", "s", fabric.items.length ? "No planned features for this tool." : "The Fabric roadmap arrives with the next weekly run of the GitHub Action.");
-    const quarters = [];
-    items.forEach((i) => { if (!quarters.includes(i.quarter)) quarters.push(i.quarter); });
+    if (!items.length) return el("p", "s", fabric.items.length ? "No planned features for this tool." : "The Fabric roadmap arrives with the next run of the GitHub Action.");
     const order = (q) => (q === "Later" ? "9999" : q.slice(3) + q.slice(1, 2));
-    quarters.sort((a, b) => order(a).localeCompare(order(b)));
-    const wrap = el("div", "nq");
-    quarters.slice(0, 4).forEach((q) => {
-      const list = items.filter((i) => i.quarter === q);
-      const col = el("div", "nq-col");
-      const h = el("div", "nq-h"); h.append(el("b", null, q === "Later" ? "Later / no date" : q), el("span", null, list.length + (list.length === 1 ? " feature" : " features")));
-      col.appendChild(h);
-      const open = nextOpen.has(q);
-      list.slice(0, open ? list.length : 5).forEach((i) => {
-        const a = el("a", "nq-i"); a.href = i.url; a.target = "_blank"; a.rel = "noopener"; a.title = i.desc || i.name;
-        a.append(el("span", "nq-t " + (i.type === "GA" ? "ga" : "pv"), i.type), document.createTextNode(i.name), el("small", null, i.product));
-        col.appendChild(a);
+    const quarters = [...new Set(items.map((i) => i.quarter))].sort((a, b) => order(a).localeCompare(order(b))).slice(0, 4);
+    const inQ = items.filter((i) => quarters.includes(i.quarter));
+    const count = {}; inQ.forEach((i) => { count[i.product] = (count[i.product] || 0) + 1; });
+    const products = Object.keys(count).sort((a, b) => count[b] - count[a] || a.localeCompare(b));
+    const cell = (p, q) => inQ.filter((i) => (!p || i.product === p) && (!q || i.quarter === q));
+    if (!nextSel || !cell(nextSel.p, nextSel.q).length) nextSel = { p: products.includes("Power BI") ? "Power BI" : products[0], q: quarters[0] };
+    const maxN = Math.max(1, ...products.flatMap((p) => quarters.map((q) => cell(p, q).length)));
+    const isSel = (p, q) => nextSel.p === p && nextSel.q === q;
+    const pick = (p, q) => { nextSel = { p, q }; renderDeadlines(); };
+
+    const wrap = el("div", "fx");
+    // matrix
+    const mx = el("div", "fx-mx"); mx.style.gridTemplateColumns = `minmax(150px, 1.3fr) repeat(${quarters.length}, minmax(0, 1fr))`;
+    const hb = (txt, on, fn, cls) => { const b = el("button", cls, txt); b.type = "button"; b.setAttribute("aria-pressed", String(on)); b.addEventListener("click", fn); return b; };
+    mx.appendChild(el("div", "fx-h", "Product"));
+    quarters.forEach((q) => { const n = cell(null, q).length; const b = hb(q === "Later" ? "Later" : q, isSel(null, q), () => pick(null, q), "fx-h fx-q"); b.appendChild(el("small", null, String(n))); b.title = "All features in " + q; mx.appendChild(b); });
+    products.forEach((p) => {
+      const pb = hb(p, isSel(p, null), () => pick(p, null), "fx-p"); pb.appendChild(el("small", null, String(count[p]))); pb.title = "All quarters for " + p; mx.appendChild(pb);
+      quarters.forEach((q) => {
+        const list = cell(p, q);
+        if (!list.length) { mx.appendChild(el("div", "fx-c fx-z", "–")); return; }
+        const ga = list.filter((i) => i.type === "GA").length;
+        const b = hb("", isSel(p, q), () => pick(p, q), "fx-c");
+        b.title = `${p} · ${q}: ${ga} GA, ${list.length - ga} Preview`;
+        const bar = el("span", "fx-bar"); bar.style.width = Math.max(8, (list.length / maxN) * 100) + "%";
+        if (ga) { const g = el("i", "ga"); g.style.flex = String(ga); bar.appendChild(g); }
+        if (list.length - ga) { const v = el("i", "pv"); v.style.flex = String(list.length - ga); bar.appendChild(v); }
+        b.append(el("b", null, String(list.length)), bar);
+        mx.appendChild(b);
       });
-      if (list.length > 5) {
-        const more = el("button", "nq-more", open ? "Show less" : "+ " + (list.length - 5) + " more"); more.type = "button";
-        more.addEventListener("click", () => { open ? nextOpen.delete(q) : nextOpen.add(q); renderDeadlines(); });
-        col.appendChild(more);
-      }
-      wrap.appendChild(col);
     });
+    // list for the selection
+    const side = el("div", "fx-list");
+    const sel = cell(nextSel.p, nextSel.q).sort((a, b) => order(a.quarter).localeCompare(order(b.quarter)) || (a.type === b.type ? 0 : a.type === "GA" ? -1 : 1) || a.name.localeCompare(b.name));
+    const ga = sel.filter((i) => i.type === "GA").length;
+    const head = el("div", "fx-lh");
+    head.append(el("b", null, (nextSel.p || "All products") + " · " + (nextSel.q || "all quarters")), el("span", null, `${sel.length} features · ${ga} GA · ${sel.length - ga} Preview`));
+    side.appendChild(head);
+    const ul = el("div", "fx-items");
+    sel.forEach((i) => {
+      const b = el("button", "fx-i"); b.type = "button";
+      b.append(el("span", "nq-t " + (i.type === "GA" ? "ga" : "pv"), i.type), el("span", "fx-n", i.name));
+      const sub = [!nextSel.p ? i.product : null, !nextSel.q ? i.quarter : null].filter(Boolean).join(" · ");
+      if (sub) b.appendChild(el("small", null, sub));
+      b.addEventListener("click", () => openFeature(i));
+      ul.appendChild(b);
+    });
+    side.appendChild(ul);
+    wrap.append(mx, side);
+
     const note = el("p", "nq-note");
-    note.append(document.createTextNode("Planned features from Microsoft's Fabric roadmap (incl. Power BI), via "));
+    const lg = el("span", "fx-lg"); lg.append(el("i", "ga"), document.createTextNode("GA (generally available)"), el("i", "pv"), document.createTextNode("Preview"));
+    note.append(lg, document.createTextNode(" · Click a cell, product or quarter to list its features. From Microsoft's Fabric roadmap (incl. Power BI) via "));
     const a1 = el("a", null, "Fabric GPS"); a1.href = "https://www.fabric-gps.com"; a1.target = "_blank"; a1.rel = "noopener";
     const a2 = el("a", null, "official roadmap ↗"); a2.href = "https://aka.ms/FabricRoadmap"; a2.target = "_blank"; a2.rel = "noopener";
     note.append(a1, document.createTextNode(", a community mirror not run by Microsoft · "), a2, document.createTextNode(" · Dates are Microsoft's estimates and can move."));
     const frag = el("div"); frag.append(wrap, note);
     return frag;
+  }
+  // Pop-up for one roadmap feature (reuses the news pop-up)
+  function openFeature(i) {
+    const meta = $("nd-meta"); meta.replaceChildren();
+    meta.append(el("span", "nq-t " + (i.type === "GA" ? "ga" : "pv"), i.type), el("span", null, i.product + " · planned for " + i.quarter));
+    const body = $("nd-body"); body.replaceChildren();
+    const h = el("h2", null, cleanText(i.name)); h.id = "nd-title"; body.appendChild(h);
+    if (i.desc) body.appendChild(el("p", null, cleanText(i.desc) + (i.desc.length >= 240 ? " …" : "")));
+    const dl = el("dl", "nd-facts");
+    [["Product", i.product], ["Release", i.type === "GA" ? "General availability" : "Public preview"], ["Planned", i.quarter + " (Microsoft's estimate)"], ["Tool", i.tool === "powerbi" ? "Power BI" : "Microsoft Fabric"]]
+      .forEach(([k, v]) => { if (v) dl.append(el("dt", null, k), el("dd", null, v)); });
+    body.appendChild(dl);
+    const foot = $("nd-foot"); foot.replaceChildren();
+    foot.appendChild(el("span", "src", "Fabric roadmap via Fabric GPS"));
+    const a = el("a", "nd-open", "Open on the roadmap ↗"); a.href = i.url || "https://aka.ms/FabricRoadmap"; a.target = "_blank"; a.rel = "noopener";
+    foot.appendChild(a);
+    $("ndlg").showModal();
   }
 
   // ---- Events ----
@@ -965,6 +1075,10 @@
     a.href = e.url; a.target = "_blank"; a.rel = "noopener";
     f.appendChild(a);
     c.appendChild(f);
+    c.tabIndex = 0;
+    c.setAttribute("aria-label", e.title + " – open details");
+    c.addEventListener("click", (ev) => { if (!ev.target.closest("a, button")) openNews(e); });
+    c.addEventListener("keydown", (ev) => { if (ev.key === "Enter" && ev.target === c) openNews(e); });
     return c;
   }
 
@@ -977,6 +1091,42 @@
     list.forEach((e) => { const k = monthKey(e); if (!map.has(k)) map.set(k, []); map.get(k).push(e); });
     return [...map.entries()].sort((a, b) => (a[0] === "ref" ? 1 : b[0] === "ref" ? -1 : b[0].localeCompare(a[0])));
   }
+  // ---- Pop-up with the full content of one entry ----
+  const IMPACT_LABEL = { reporting: "Our reporting", datamodel: "Our data model & KPIs", suppliers: "Suppliers & sourcing", products: "Products & packaging", costs: "Costs & investments", watch: "Watch only" };
+  function openNews(e) {
+    const meta = $("nd-meta"); meta.replaceChildren();
+    const ty = el("span", "ty", TYPE_LABEL[e.type] || e.type); ty.style.setProperty("--tc", `var(--t-${e.type === "practice" ? "practice" : e.type === "tool" ? "tool" : "regulation"})`);
+    meta.append(ty, el("span", "num", e.dateIsAdded ? fmtMonth(e.added || e.date) : e.date ? fmt(e.date) : ""));
+    if (isNew(e)) meta.appendChild(el("span", "new", "New"));
+    if (e.monthlySummary) meta.appendChild(el("span", "chip", "Monthly"));
+    const r = relIcon(relOf(e)); meta.appendChild(r); meta.appendChild(el("span", null, REL_LABEL[relOf(e)] || ""));
+    const body = $("nd-body"); body.replaceChildren();
+    const h = el("h2", null, e.title); h.id = "nd-title"; body.appendChild(h);
+    if (e.summary) body.appendChild(el("p", null, e.summary));
+    if (e.whyItMatters) { const w = el("div", "nd-why"); w.append(el("b", null, "Why it matters for us: "), document.createTextNode(e.whyItMatters)); body.appendChild(w); }
+    const dl = el("dl", "nd-facts");
+    const fact = (k, v) => { if (!v) return; dl.append(el("dt", null, k), el("dd", null, v)); };
+    if (e.nextDate) fact(daysFrom(e.nextDate) >= 0 ? "Next date" : "Date", fmt(e.nextDate) + (e.nextDateLabel ? " · " + e.nextDateLabel : ""));
+    if (e.status && e.origin !== "feed") fact("Status", e.status);
+    fact("Area", areasOf(e).map((a) => (AREAS[a] ? AREAS[a].label : a)).join(", "));
+    fact("Impact on us", (e.impacts || []).map((i) => IMPACT_LABEL[i] || i).join(", "));
+    fact("Source", e.source);
+    if (dl.children.length) body.appendChild(dl);
+    if (e.tags && e.tags.length) { const t = el("div", "nd-tags"); e.tags.forEach((x) => t.appendChild(el("span", null, x))); body.appendChild(t); }
+    const foot = $("nd-foot"); foot.replaceChildren();
+    foot.appendChild(el("span", "src", e.origin === "feed" ? "Collected automatically from " + (e.source || "a feed") : "Curated entry"));
+    const star = el("button", "star"); star.type = "button";
+    star.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>';
+    const setStar = () => { const on = isSaved(e); star.setAttribute("aria-pressed", String(on)); star.title = on ? "Saved – click to remove" : "Save for later"; star.setAttribute("aria-label", star.title); star.querySelector("path").setAttribute("fill", on ? "currentColor" : "none"); };
+    setStar();
+    star.addEventListener("click", () => { isSaved(e) ? saved.delete(e.id) : saved.add(e.id); persistSaved(); setStar(); sync(); render(); });
+    const a = el("a", "nd-open", "Open article ↗"); a.href = e.url; a.target = "_blank"; a.rel = "noopener";
+    foot.append(star, a);
+    $("ndlg").showModal();
+  }
+  $("nd-x").addEventListener("click", () => $("ndlg").close());
+  $("ndlg").addEventListener("click", (ev) => { if (ev.target === $("ndlg")) $("ndlg").close(); });
+
   function render() {
     const list = filtered();
     const host = $("grid");
@@ -985,12 +1135,13 @@
         : state.view === "new" ? "Nothing new since your last visit."
         : state.type === "monthly" ? "No monthly feature summaries yet – they arrive with the next feed run."
         : "No entries match these filters."));
-      renderJump([]); appendArchiveNote(host);
+      $("count").replaceChildren(); renderJump([]); appendArchiveNote(host);
       return;
     }
     const gs = groups(list);
     const nodes = [];
-    let year = null;
+    let year = null, firstYear = true;
+    $("count").replaceChildren();
     const thisMonth = new Date().toISOString().slice(0, 7);
     gs.slice(0, ui.months).forEach(([k, items]) => {
       const y = k === "ref" ? "ref" : k.slice(0, 4);
@@ -999,7 +1150,7 @@
         const yh = el("div", "yh"); yh.id = "y-" + y;
         const n = gs.filter(([kk]) => (kk === "ref" ? "ref" : kk.slice(0, 4)) === y).reduce((a, [, it]) => a + it.length, 0);
         yh.append(el("h3", null, y === "ref" ? "Reference – no date" : y), el("span", null, n + (n === 1 ? " item" : " items")));
-        nodes.push(yh);
+        if (firstYear) { firstYear = false; $("count").replaceChildren(yh); } else nodes.push(yh);
       }
       const row = el("section", "mrow" + (k === thisMonth ? " cur" : "")); row.id = "m-" + k;
       row.setAttribute("aria-label", k === "ref" ? "Reference entries" : monthName(k, true) + " " + k.slice(0, 4));
