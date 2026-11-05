@@ -2,7 +2,7 @@ name: Daily data update
 
 on:
   schedule:
-                 - cron: "17 5 * * 1-5"   # Monday–Friday, 05:17 UTC (every day: "17 5 * * *")
+    - cron: "17 5 * * 1-5"   # Monday–Friday, 05:17 UTC (every day: "17 5 * * *")
   workflow_dispatch:         # "Run workflow" button for a manual run
 
 permissions:
@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}   # optional; empty = no Teams post
+      DESTATIS_TOKEN: ${{ secrets.DESTATIS_TOKEN }}         # GENESIS-Online API token (Destatis indicators)
     steps:
       - uses: actions/checkout@v4
 
@@ -21,7 +22,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install feedparser==6.0.11 openpyxl==3.1.5
+        run: pip install feedparser==6.0.11 openpyxl==3.1.5 pypdf==5.1.0
 
       - name: Collect new items
         run: python scripts/collect_feeds.py
@@ -33,6 +34,10 @@ jobs:
       - name: Collect market indicators
         run: python scripts/collect_market.py
         continue-on-error: true   # an unreachable statistics API never blocks the news update
+
+      - name: Collect industry statistics
+        run: python scripts/collect_industry.py
+        continue-on-error: true
 
       - name: Collect EU ETS emissions of peers
         run: python scripts/collect_ets.py
