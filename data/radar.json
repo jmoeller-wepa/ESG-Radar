@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-05T12:00:59"
+    "lastFeedRun": "2026-11-05T15:27:51"
   },
   "entries": [
     {
@@ -2295,6 +2295,33 @@
       "nextDateLabel": null,
       "source": "ESG Today",
       "url": "https://www.esgtoday.com/the-emergency-brake-on-deforestation-is-ready-will-companies-step-up/?utm_source=rss&utm_medium=rss&utm_campaign=the-emergency-brake-on-deforestation-is-ready-will-companies-step-up",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-bd7b2a2fff",
+      "date": "2026-11-05",
+      "type": "regulation",
+      "areas": [
+        "climate",
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Water"
+      ],
+      "title": "EU Lawmakers Move to Water Down CO2 Emissions Reduction Requirements for Cars",
+      "summary": "Lawmakers in the European Parliament’s Environment Committee (ENVI) adopted a position in a 48-30 vote […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/eu-lawmakers-vote-to-water-down-co2-emissions-reduction-requirements-for-cars/?utm_source=rss&utm_medium=rss&utm_campaign=eu-lawmakers-vote-to-water-down-co2-emissions-reduction-requirements-for-cars",
       "origin": "feed",
       "added": "2026-11-05"
     }

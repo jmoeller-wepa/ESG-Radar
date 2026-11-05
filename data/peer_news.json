@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T12:09:28",
+ "updated": "2026-11-05T15:35:42",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -48,9 +48,9 @@
     "date": "2026-11-04"
    },
    {
-    "title": "Essity poaches K-C chief for top consumer tissue role",
-    "source": "DecisionMarketing",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTjN0SU41bXd4TVpGb0lZWnQ2Y2czSkpURGFHanVHZHJyTkNub0dwWjUxTDdMUnZPUEt1VHF0b3h0MkJNY1RrbjFfRldtNnBYdW5lZ1pMUHB3UGxyOGxWdzV5Q0VvOHBoaWhwd3RWUGwwREo0WXZ4cE9rYTBib3gwVEcwY2U0dnhEVHdKY3ZueWRlazZhbW0tNklR?oc=5",
+    "title": "Essity stock faces PFAS lawsuit over Carefree liners",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNQXJOOGdQbjE1TVdpRFEtRU5yY0kxdFJ4MUhKeFhMRHF0aEhMZTIyWE9iODQ5b1ZPek5OZDA4VUY3X0ZfRG9OUGFNeFo5emtfaTJDT3dqQkQtcEhTQWZaYldVdGpZUG5vNTZQQ0FPOUtRaGRmTDZFd1IzZ2RWYzhiNHg3U2VvbG01ZE1oWFdUejZYZm14VWtJNlpibVFtLS1jTEFoRzFHeWVNX0JiUElVeXBIanhaUQ?oc=5",
     "date": "2026-11-04"
    }
   ],
@@ -116,6 +116,18 @@
   ],
   "kimberly-clark": [
    {
+    "title": "Kimberly-Clark (KMB) Q3 Earnings Beat Expectations, Dividend Sus",
+    "source": "GuruFocus",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNM0lEbDFMdlVHajJpeDNYaV83Q2ZyOGdYQmFmMDJQQk5zcTFldnJFQ29NTnJnRWs3RUI3ajZpN1dUV1JPbVFqUXExbWRhTHBIZzdWQndGWjA0OHFmNTlUUF9JYVdTY1hUaFF0clkwZjM4U1dSUXZMRlRuLTgtWFA5N1pGMTc3dTVMd1lxdXZSaUwzSkFoa1FMcDF4STdHSTRpMjJqQkJ4YkJEc1hhMWJfSVhnZ0VnVUhtbS1B?oc=5",
+    "date": "2026-11-05"
+   },
+   {
+    "title": "Kimberly-Clark Q3 Adjusted Earnings Increase, Revenue Falls; 2026 Adjusted EPS Guidance Maintained",
+    "source": "marketscreener.com",
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdkUwTkdCdklTLXlTQzF6b3NSbUlmNE1RNTVzRFRKdnJjbHlLSE45dmFZbnhseGlOdVBXSVNHTXlNLXlLd3dlNzJ4aHI3TzFKNENtd0FxZnZ3R3JJN1BRM3BSODVTMFFtRU5rX2x4Sm5hNkp0WFY2WFhPSGJfNTNDTWJTZVVXTWhqcVJOSjhxZU1qdUhvbnZEM01jd0c3UXU5ZThSLWtGNjNmTnNZeVVtbkZlVnZwMUx1SWt3REdaUjlmR21JUW5XMG1jNGtmeGF0SUxwVVJydmxQUVZ4Wkw5RjJHSQ?oc=5",
+    "date": "2026-11-05"
+   },
+   {
     "title": "Kimberly-Clark completes acquisition of Kenvue, expanding global consumer health portfolio",
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkJjQ3VyQTRFa2djWW1SU3NiRm95bXZiQS0tNTVKYy1vS2FibUEyeUE5eXA5M1pEWHpobllod3pZeEZHSFhFaUlaQm5KSVZMdUQ1cDB6TjRFZnZlVU1vdjg5WUI2WEp3MElHWlNBMGc4OEtmSjVnUzlLdi1fNnQ4NnJVcVk5cEZxbkZia09DY0VRSEt0VHNuWlF2WFRqZFI2LWlBbE4zSGJtN3JielpRemRHZk16ZTM2ZEo3X21JaGdGYVZTc2c?oc=5",
@@ -126,33 +138,9 @@
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVGhJaEhaeGZndllkVUl6dGx3ZnZ2ZmU0ZWpPU3hXNlJ6SWItWWx1bGZCeUU2NDdlcTU4cHpfOEVsdGFyY3JlZU1mZklJVW14YUQ0d0xzTnNYWVBBcVlBOENkdjhrNlNqTmZaX0h6RG05dURtbjdDQVpEeHp3dFBoRDhGTThzMHlETS1wLVZMU1FNR0NVUmVhcmk4cHpaWHNSTjZ6c0N6azZFZEpkbDlGa0hDa0ppZktaelducWxmTWk4czF0TFE?oc=5",
     "date": "2026-11-04"
-   },
-   {
-    "title": "Kimberly-Clark Mexico stock trades at 1.82 euros in Berlin morning",
-    "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSXc1aEZOWFRiR3VLVXFyRF9nN3E2NnY0dWktSi1IWjFId2NZNlR3TjdRbFQtay15MHFtZE9tZVdUc3lBa2xwejdNZERaVXpwTWlvTkt0QWdTZ1ZCcXFzeTJoTzRIUV9KQjBwWTBWUDNWUHk1RElOaDFRVFVyTEl1amdoYlJhZWctaS1JZF9iYW1FdEFUTUJTUzBZc0FXd1lPZm9vUmhYTVM3c0lONEpxVFFtTV8zaVVtMXJ6aWcyTTA5SC1CYm1uSg?oc=5",
-    "date": "2026-11-04"
-   },
-   {
-    "title": "Kimberly-Clark stock slips 3.6 percent below November 3 Xetra close",
-    "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQamotZWswS04wOWY1MkYyb0F5QUhYdmUzdDBMc0VTZFFxalZaU0FYZ2R1WUlFUmltZERkOVFfSDRmVWJLeWNBd2pfX2pXaTY0OHFsMkk5RVpDb0lRYzhwQmoyZGRvOWc5RVFMZDJTSVNuWHlsZ2xidmhWcWVfRzhmdTVVNHNSeEl5bkJ3SXRjYmhCeXlQTlRhbFlCOGJlRV9kNHFMd2tUQlhkNjlQSWlFSnpGWjNVZllKbWh1RHZKYndDUGtmck9hRmJR?oc=5",
-    "date": "2026-11-03"
    }
   ],
   "pg": [
-   {
-    "title": "Dishwasher Detergent Pack Market To 2035: Premiumization and Emerging-Market Penetration Drive Growth - News and Statistics",
-    "source": "IndexBox",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQVFVUdHhNbTZaRUxyRjVUZXh1Y0VURzR1eXhpU0xHaWpBVVRjWmg3VlJEQXgwLWtYb3ZxUTZQb3VLRWg3dXdTWUtmYUNDeUc3Mk5OSW53SjFuSVdaR0Jka3NmTjQ1MC1xYlFnQl9YeGE4MlBwNkxDY2t1U3ZadmtWMEdvdWphTDUwZWZWVzFWVzVpQkJDQkR2a3RNZE1tNkpqRWtPTUFfVmhjQzg4aFNzMWczNDYycDZsWVpIQ2wxMW1weGJEeURHNnlZYWczb3ZydVZHWHgzWHJ2dw?oc=5",
-    "date": "2026-11-04"
-   },
-   {
-    "title": "Procter & Gamble (NYSE:PG) Stock Forecast & Analyst Predictions",
-    "source": "Simply Wall St",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBPMVJlcjRCN2RCWjBKRHBLd0IxbHEzVFJoT3IzTWJzUGZobFIzMkNXVGNyaTQ1bHIzSGV5VXNLTkhxcXd0dEN4MFdxVTdkczVmZzVHb29hSVcwTnZsNlhnY0RPQjZsZTVhRVpJVG5oZHUyXzJjclZmTW90SQ?oc=5",
-    "date": "2026-11-02"
-   },
    {
     "title": "Procter & Gamble Health Q2FY27 Results: Net profit rises 26% to ₹112 crore",
     "source": "scanx.trade",
@@ -164,6 +152,18 @@
     "source": "ENDS Europe",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNN25RVHVJa001SkpQWmljbXV5RjF0REMzdnlUY1o0SjZRZmxoSEJKWHU2Z2pVTnFZdlBzNzV4NEpKbVJ5X3hVQkRjSmNoV05EWkd4bnVGQnBaRHBXX2ZCWlI5Q3ctcko2ekJYeFFPaHNjWkJvSnlNNTUtYTJ6UzgyNmZvT1dQVDZVOVZlWFVDNHNOcHd3SzFEc3JGal9MVHJheUdKS3JwZHlxMG5jTHBfLXBXUQ?oc=5",
     "date": "2026-10-30"
+   },
+   {
+    "title": "From Scrap Wood to Steam: How Procter & Gamble is Using Renewable Energy to Make Toilet Paper",
+    "source": "Environmental Leader",
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOGh4RkNtdzRZSUNuVTVZdXlfRXJ5ZzdOcUdlNk0yLXgyalJZcTFIRVFDUUpEOGJTMlNEdnhxUUdDTjQ4OThOVTdDWHhoQzE3UFR3TlBldXpTV3R1N0RQQkpUdjF0QVdSMmxfdEdJM2lGdXNmUGZ4YUhsWWJPaXkzZmphUkpTbWJMWE15VEtXZU10Wml6RHJLRk93Z25ZaUFJYXRIam8wYUFTaDgzaUpaUjRadHNraHhxYWZJVmYtRHNraXAtNmpVbEtTR2hzNHI4WTVfTGRCR2UzNU9LRDZPN2dUWQ?oc=5",
+    "date": "2026-10-26"
+   },
+   {
+    "title": "What Procter & Gamble Shares Means For Shareholders",
+    "source": "Simply Wall St",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRzFTVnZKSUZVOVQ1Z2h3emliOC1FYkUzRHBfVE1ROHdqU29Sd0JuajFVa1VyTkFlRXRmRDViMzVBT1pyN3htd3lqRjBuT215WTg1bHpTTVJHT1Y4UmpVSHZhT3VTMHp4VVhkUnR1bHZWTEg2TWpfaUc4ZDNqYWJvVmVDal9zdEs1UGJKOGJhSGVXZjE2NkZrWU45N1V0cGhmRnZpc1BodXFya1AzdWdFUnVDdk41bXJtWHpv0gHAAUFVX3lxTE1XeUN0SkRHZWxZZV85M1N1TFJLR0NGU0hsY2xRS3h4cWlqVHNkVndac0kwM0xmLUVGS29UZDR0QW9LLUV4OUpkQjJJOTB4Mnh6OHBNRWRHRXhxRjZOdnlwLVFHRWN6STFUU0RrdWVEZGNYUGlpUFFsckFJQlBrNXNWc1hWRW1ZdXY0TEpmaXRyT3pTMXhhTVdZdXc5VEtQVG1USzhsSXdrT1NyWFJhcUQzcjhCXzBPUmprSHc5ZTV3VQ?oc=5",
+    "date": "2026-10-25"
    }
   ],
   "georgia-pacific": [
@@ -234,6 +234,12 @@
   ],
   "softys": [
    {
+    "title": "Earnings To Watch: Empresas CMPC SA (XSGO:CMPC) Q3 2026 -- GF Va",
+    "source": "GuruFocus",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZUtONjUtb2lPVkJuVDdNZFlJb1V3TmVHSUw4LWxuekZXVkZXU0E0UVFwdFl5cGxaMkpLUlVXb1FOX0JRTmJveGVPa3dSbmFLQS1EaHBaNnJlSGpwMHBxblpVSG00UnhuUEdiUHdGV3RtRmRjaW1pdzAxR3Vkd3BfZDB5dGNPSkZOSTBOYkpuM1BHLURaNy02MWwzY2VKSmo1ZkdOX3FjY2d6S2JfREttTFN4bHQ?oc=5",
+    "date": "2026-11-05"
+   },
+   {
     "title": "Guillermo Turner Named Next Executive Director of Chile’s Salmon Council",
     "source": "Seafoodnews",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPSE1JZHE4X2liY1VkQjRINTFmZ3JFWWR3dmJScjhNaGktTTlIb1lNN01nZ0N1czNzVmtvZFdRdDI4UGU4RnBSNFBTU0dCWGktQl9oOU9kWHhMdHFycGpIOXVpU1NPOHNEaHZhRmgzTUFteTUwTWI2cHA2dWF4ZW9rSUhRaUpMTW9pRzh6bkZhSTl3a3hlVzlMUVUxZ1dkdnJxZmFqamdnNC0xZFVQTW16S2tJWQ?oc=5",
@@ -250,12 +256,6 @@
     "source": "Recycling Today",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdUg5WmVGZ1hfb1dpT29NZjFzYy1SQkVPdXA5UXBvdV9oczZoQ3I5bHBxMm80elhrbmxCeEo3ek1PdkNqUHJLeU1sUEtOeDdVWktCV2FPNGV4WmFUblpTNTBBUFhJUFpneEY5OFZNbm00WjBRSmdQN0QwWVBYZi1nUHpoM2VfNHh6U250bmNMYjd0LVg3ZmZ5cU9RdWZWVklIYUJFY3JVX3p2NEk4VnYwMzV3?oc=5",
     "date": "2026-09-28"
-   },
-   {
-    "title": "Key deals this week: Qualcomm, Smurfit Westrock, Capri Holdings, and more",
-    "source": "TradingView",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNnhXYzk1MTNtc01wR0ZBd1dSeHhaamtCRVVWVUZ3eFVBdUxWWkVPRjJKRWFBOVpLS3VvY1FPb0JXQ05aVGhjdVlJSXRfd3B5bVRqTDdBamcydUlBdXNDLW9qNlN4V1daT0hmNE1CY3h0SXlnMDVjSUVYcmhSWWI5R0VlX3BFQzZRX3lZNFJZVFZ2WmpLejUzSUdlT1hYX0dWdExDN05QcmNJQ3M1b0p5T2ZLbENQeE5BV1BQTDQ4dXFRY2l0NFZUMjJZa0g?oc=5",
-    "date": "2026-09-27"
    }
   ],
   "kruger": [

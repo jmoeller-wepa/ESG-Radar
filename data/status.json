@@ -3,29 +3,29 @@
   "feeds": {
    "label": "News feeds",
    "status": "ok",
-   "detail": "9 of 9 feeds · 3 new",
-   "at": "2026-11-05T12:01:04",
+   "detail": "9 of 9 feeds · 1 new",
+   "at": "2026-11-05T15:27:55",
    "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "ok",
    "detail": "14 open and relevant",
-   "at": "2026-11-05T12:01:53",
+   "at": "2026-11-05T15:28:46",
    "order": 20
   },
   "procedures": {
    "label": "Regulation status",
    "status": "ok",
    "detail": "5 of 5 procedures",
-   "at": "2026-11-05T12:02:38",
+   "at": "2026-11-05T15:29:15",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
    "status": "warn",
    "detail": "32 of 36 indicators · failed: de_rcp_102, de_rcp_104, de_rcp_403, de_rcp_111",
-   "at": "2026-11-05T12:09:10",
+   "at": "2026-11-05T15:35:23",
    "order": 30,
    "failingSince": "2026-11-05T12:09:10"
   },
@@ -33,40 +33,39 @@
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
    "detail": "Already processed this file with the same mapping – nothing to do.",
-   "at": "2026-11-05T12:09:21",
+   "at": "2026-11-05T15:35:34",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
    "detail": "8 peers found · no changes",
-   "at": "2026-11-05T12:09:25",
+   "at": "2026-11-05T15:35:38",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
    "detail": "112 planned features",
-   "at": "2026-11-05T12:09:29",
+   "at": "2026-11-05T15:35:44",
    "order": 50
   },
   "peernews": {
    "label": "Peer news",
    "status": "ok",
    "detail": "43 headlines for 12 companies",
-   "at": "2026-11-05T12:09:28",
+   "at": "2026-11-05T15:35:42",
    "order": 46
   },
   "industry": {
    "label": "Industry statistics",
-   "status": "warn",
-   "detail": "monthly update failed: period not found – showing the previous figures",
-   "at": "2026-11-05T12:09:20",
-   "order": 36,
-   "failingSince": "2026-11-05T12:09:20"
+   "status": "ok",
+   "detail": "Jan – Sep 2026: hygiene paper 990 kt (-1.9 %)",
+   "at": "2026-11-05T15:35:33",
+   "order": 36
   }
  },
- "lastRun": "2026-11-05T12:09:29",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/42023559118",
+ "lastRun": "2026-11-05T15:35:44",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/42055187232",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }

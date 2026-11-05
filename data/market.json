@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T12:02:38",
+ "updated": "2026-11-05T15:29:15",
  "groups": {
   "fibre": "Fibre & products",
   "recovered": "Recovered paper",
@@ -398,7 +398,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -573,7 +573,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -972,7 +972,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -1365,7 +1365,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRD",
@@ -1765,7 +1765,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "us_wood_pulp",
@@ -2156,7 +2156,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "pulp_nbsk_eu",
@@ -2544,7 +2544,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -2936,7 +2936,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -3327,7 +3327,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -3718,7 +3718,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4109,7 +4109,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4500,7 +4500,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4891,7 +4891,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -5278,7 +5278,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "INT_EU27_2020"
@@ -5665,7 +5665,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "INT_EU27_2020"
@@ -5688,7 +5688,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "new-line character seen in unquoted field - do you need to open the file with newline=''?"
+   "error": "unknown table layout (value=None, time=None, month=None) – see data/debug/destatis.json"
   },
   {
    "id": "de_rcp_104",
@@ -5707,7 +5707,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "new-line character seen in unquoted field - do you need to open the file with newline=''?"
+   "error": "unknown table layout (value=None, time=None, month=None) – see data/debug/destatis.json"
   },
   {
    "id": "de_rcp_403",
@@ -5726,7 +5726,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "new-line character seen in unquoted field - do you need to open the file with newline=''?"
+   "error": "unknown table layout (value=None, time=None, month=None) – see data/debug/destatis.json"
   },
   {
    "id": "de_rcp_111",
@@ -5745,7 +5745,7 @@
    "series": [],
    "status": "missing",
    "fetched": null,
-   "error": "new-line character seen in unquoted field - do you need to open the file with newline=''?"
+   "error": "unknown table layout (value=None, time=None, month=None) – see data/debug/destatis.json"
   },
   {
    "id": "ppi_corrugated",
@@ -6136,7 +6136,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -6535,7 +6535,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "us_corrugated_boxes",
@@ -6926,7 +6926,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "gas_ttf",
@@ -7317,7 +7317,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "elec_de",
@@ -7396,7 +7396,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "MWH2000-19999",
@@ -7800,7 +7800,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "gas_de",
@@ -7879,7 +7879,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38",
+   "fetched": "2026-11-05T15:29:15",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "GJ10000-99999",
@@ -8283,7 +8283,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_eu",
@@ -8678,7 +8678,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_de",
@@ -9073,7 +9073,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_fr",
@@ -9468,7 +9468,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_it",
@@ -9863,7 +9863,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_pl",
@@ -10258,7 +10258,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_nl",
@@ -10653,7 +10653,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_be",
@@ -11048,7 +11048,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "grid_gb",
@@ -11439,7 +11439,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "eua",
@@ -11469,7 +11469,7 @@
     ]
    ],
    "status": "manual",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   },
   {
    "id": "eurusd",
@@ -11864,7 +11864,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-05T12:02:38"
+   "fetched": "2026-11-05T15:29:15"
   }
  ]
 }

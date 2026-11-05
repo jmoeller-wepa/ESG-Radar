@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-05T12:01:04+00:00",
+ "fetched": "2026-11-05T15:27:55+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,13 +12,13 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
-     "last",
      "totalPages",
      "totalElements",
-     "sort",
+     "last",
      "numberOfElements",
      "size",
      "number",
+     "sort",
      "first",
      "empty"
     ]
@@ -39,6 +39,12 @@
       "feedbackStartDate": "2026/11/04 14:42:25",
       "feedbackEndDate": "2026/12/31 23:59:59",
       "isCurrent": true
+     }
+    ],
+    "topics": [
+     {
+      "code": "CLIMA",
+      "label": "Climate action"
      }
     ],
     "initiativeTranslations": [
@@ -161,12 +167,6 @@
       "value": "Klimatresiliens och klimatriskhantering – förslag till EU-regler",
       "language": "SV",
       "field": "SHORT_TITLE"
-     }
-    ],
-    "topics": [
-     {
-      "code": "CLIMA",
-      "label": "Climate action"
      }
     ]
    },
