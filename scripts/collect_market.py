@@ -343,7 +343,12 @@ def _destatis_table(name):
         info = json.loads(text)
         dbg["answer"] = {k: info.get(k) for k in ("Status", "Ident") if k in info}
         raise RuntimeError("GENESIS: " + json.dumps(info.get("Status") or info)[:180])
-    rows = list(csv.reader(io.StringIO(text), delimiter=";"))
+    dbg["raw"] = text[:600]
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    rows = [r for r in csv.reader(io.StringIO(text, newline=""), delimiter=";") if r]
+    # ffcsv starts with the header row; skip any preamble lines before it
+    start = next((k for k, r in enumerate(rows) if any(c.strip().lower() in ("value", "time") for c in r)), 0)
+    rows = rows[start:]
     head = [h.strip() for h in rows[0]]
     dbg["columns"] = head
     dbg["sample"] = rows[1:4]

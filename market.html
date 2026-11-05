@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261105b">
+<link rel="stylesheet" href="assets/side.css?v=20261105e">
 <style>
   :root {
     --blue-900: #002d55;
@@ -59,6 +59,10 @@
   .cmp-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 6px; }
   .cmp-head h3 { margin: 0; font-size: 15px; font-weight: 600; color: var(--blue-900); }
   .cmp-head .hint { font-size: 12.5px; color: var(--ink-3); }
+  .gran { display: inline-flex; background: #eef1f4; border-radius: 8px; padding: 2px; margin-left: auto; }
+  .gran button { border: 0; background: none; font: inherit; font-size: 12.5px; color: #4b5563; padding: 3px 10px; border-radius: 6px; cursor: pointer; }
+  .gran button[aria-pressed="true"] { background: #fff; color: var(--blue-900); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+  .gran button small { color: #9aa2ae; font-weight: 400; margin-left: 3px; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-left: auto; }
   .lg { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink-2); border: 0; background: none; padding: 2px 0; cursor: pointer; }
   .lg i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
@@ -226,9 +230,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261105b" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261105b">
-<script src="assets/colresize.js?v=20261105b" defer></script>
+<script src="assets/status.js?v=20261105e" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261105e">
+<script src="assets/colresize.js?v=20261105e" defer></script>
 </head>
 <body>
 <header>
@@ -276,8 +280,9 @@
     <p class="tab-lead">Compare indicators as an index (first month of the period = 100). Up to 6 share one chart; with more, each gets its own small chart. Tick them in the side panel – "Select all" adds a whole category – or use the box on a card. Click a card for details.</p>
     <section class="panel cmp" aria-labelledby="cmp-title">
       <div class="cmp-head">
-        <h3 id="cmp-title">Compare</h3>
+        <h3 id="cmp-title">Trends</h3>
         <span class="hint" id="cmp-hint">Index · first month of the period = 100</span>
+        <span class="gran" id="gran" role="group" aria-label="Time axis"></span>
         <div class="legend" id="legend"></div>
       </div>
       <div class="chart" id="chart"></div>
@@ -298,8 +303,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261105b"></script>
-<script src="assets/carbon.js?v=20261105b"></script>
+<script src="assets/side.js?v=20261105e"></script>
+<script src="assets/carbon.js?v=20261105e"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -312,7 +317,7 @@
   const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
   const EARLIEST = "2019-01";
   const DEFAULT_CMP = ["ppi_tissue", "pulp_nbsk_eu", "rcp_export_eu", "power_de_spot", "ppi_pulp", "us_recovered_paper", "gas_ttf"];
-  const state = { tab: "cmp", area: RadarSide.area(), sel: new Set(), cmp: [] };
+  const state = { gran: "auto", tab: "cmp", area: RadarSide.area(), sel: new Set(), cmp: [] };
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
   // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
@@ -384,11 +389,13 @@
     const p = new URLSearchParams(location.hash.slice(1));
     if (p.get("months")) state.sel = decodeSel(p.get("months"));
     if (p.get("cmp") != null) state.cmp = p.get("cmp").split(",").filter(Boolean);
+    if (["auto", "year", "quarter", "month"].includes(p.get("gran"))) state.gran = p.get("gran");
     if (p.get("tab") && TABS.some((t) => t.id === p.get("tab"))) state.tab = p.get("tab");
   }
   function writeHash() {
     const p = new URLSearchParams();
     if (state.tab !== "cmp") p.set("tab", state.tab);
+    if (state.gran !== "auto") p.set("gran", state.gran);
     if (state.area !== "all") p.set("area", state.area);
     const def = preset("36"); const same = def.size === state.sel.size && [...def].every((m) => state.sel.has(m));
     if (!same) p.set("months", encodeSel());
@@ -442,12 +449,40 @@
     return base ? pts.map((p) => ({ d: p[0], v: (100 * p[1]) / base, raw: p[1] })) : [];
   }
 
+  // ---- time axis: years / quarters / months (values are averaged per period) ----
+  const QN = (m) => Math.floor((+m.slice(5, 7) - 1) / 3) + 1;
+  function effGran(nMonths) { return state.gran !== "auto" ? state.gran : nMonths <= 36 ? "month" : nMonths <= 96 ? "quarter" : "year"; }
+  const bucketOf = (d, g) => (g === "year" ? d.slice(0, 4) : g === "quarter" ? d.slice(0, 4) + "-Q" + QN(d) : d.slice(0, 7));
+  const bucketLabel = (b, g) => (g === "year" ? b : g === "quarter" ? b.slice(5) + " " + b.slice(0, 4) : fmtMonth(b));
+  function aggregate(pts, g) {
+    if (g === "month") return pts.map((p) => ({ ...p, d: p.d.slice(0, 7), b: p.d.slice(0, 7) }));
+    const m = new Map();
+    pts.forEach((p) => { const b = bucketOf(p.d, g); if (!m.has(b)) m.set(b, []); m.get(b).push(p); });
+    return [...m.entries()].map(([b, arr]) => {
+      const ds = arr.map((p) => toN(p.d)); const mid = fromN(Math.round((Math.min(...ds) + Math.max(...ds)) / 2));
+      return { d: mid, b, v: arr.reduce((a, p) => a + p.v, 0) / arr.length, raw: arr.reduce((a, p) => a + p.raw, 0) / arr.length, n: arr.length };
+    });
+  }
+  let curG = "month";
+  function renderGran(nMonths) {
+    const box = $("gran"); box.replaceChildren();
+    const eff = effGran(nMonths);
+    [["auto", "Auto"], ["year", "Years"], ["quarter", "Quarters"], ["month", "Months"]].forEach(([k, label]) => {
+      const b = el("button", null, label); b.type = "button"; b.setAttribute("aria-pressed", String(state.gran === k));
+      if (k === "auto") b.appendChild(el("small", null, eff === "year" ? "years" : eff === "quarter" ? "quarters" : "months"));
+      b.title = k === "auto" ? "Choose automatically from the period length" : "Show one value per " + k + (k === "month" ? "" : " (average of its months)");
+      b.addEventListener("click", () => { state.gran = k; renderChart(); writeHash(); });
+      box.appendChild(b);
+    });
+  }
   function renderChart() {
     const box = $("chart"); box.replaceChildren();
     const legend = $("legend"); legend.replaceChildren();
     const start = periodStart();
     const byId = Object.fromEntries(M.indicators.map((i) => [i.id, i]));
-    const sel = state.cmp.map((id) => byId[id]).filter((i) => i && chartable(i)).map((i) => ({ ind: i, pts: start ? indexed(i) : [], color: colorOf[i.id] }));
+    const nMonths = start ? monthRange(start, periodEnd()).length : 0;
+    const G = effGran(nMonths); renderGran(nMonths); curG = G;
+    const sel = state.cmp.map((id) => byId[id]).filter((i) => i && chartable(i)).map((i) => ({ ind: i, pts: start ? aggregate(indexed(i), G) : [], color: colorOf[i.id] }));
     const lines = sel.filter((l) => l.pts.length);
     const gaps = sel.filter((l) => !l.pts.length);
     renderTable(lines);
@@ -490,14 +525,22 @@
     }
     svg.appendChild(grid);
     const base = svgEl("g", { class: "base" }); base.appendChild(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(100), y2: y(100) })); svg.appendChild(base);
-    // x labels: years (or quarters for 1Y)
+    // x labels follow the time axis: years, quarters or months (thinned out to fit)
     const xl = svgEl("g");
-    months.forEach((d) => {
-      const mo = d.slice(5, 7);
-      const short = months.length <= 18, long = months.length > 72;
-      const show = short ? ["01", "04", "07", "10"].includes(mo) : mo === "01" && (!long || Number(d.slice(0, 4)) % 2 === 0);
-      if (!show || x(d) > W - m.r) return;
-      const t = svgEl("text", { x: x(d), y: H - 6, "text-anchor": "middle" }); t.textContent = months.length <= 18 ? fmtMonth(d) : d.slice(0, 4); xl.appendChild(t);
+    const buckets = [...new Set(months.map((d) => bucketOf(d, G)))];
+    const mid = (b) => { const ds = months.filter((d) => bucketOf(d, G) === b); return fromN(Math.round((toN(ds[0]) + toN(ds[ds.length - 1])) / 2)); };
+    const room = Math.max(1, Math.floor((W - m.l - m.r) / (G === "month" ? 46 : G === "quarter" ? 58 : 44)));
+    const every = Math.max(1, Math.ceil(buckets.length / room));
+    const MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    buckets.forEach((b, k) => {
+      if (k % every) return;
+      const at = G === "month" ? b : mid(b);
+      if (x(at) > W - m.r + 4) return;
+      // separators at year starts for months / quarters
+      if (G !== "year" && (b.endsWith("-01") || b.endsWith("Q1")) && k) svg.appendChild(svgEl("line", { x1: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), x2: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), y1: m.t, y2: H - m.b, stroke: "#eef0f3" }));
+      const t = svgEl("text", { x: x(at), y: H - 6, "text-anchor": "middle" });
+      t.textContent = G === "year" ? b : G === "quarter" ? (b.endsWith("Q1") || k === 0 ? b.slice(5) + " ’" + b.slice(2, 4) : b.slice(5)) : (b.endsWith("-01") || k === 0 ? MONS[+b.slice(5, 7) - 1] + " ’" + b.slice(2, 4) : MONS[+b.slice(5, 7) - 1]);
+      xl.appendChild(t);
     });
     svg.appendChild(xl);
     // lines + end labels (de-overlapped)
@@ -506,10 +549,13 @@
       // a gap in the selected months breaks the line instead of bridging it
       const d = l.pts.map((p, k) => {
         const prev = l.pts[k - 1];
-        const broken = !prev || monthRange(fromN(toN(prev.d) + 1), fromN(Math.max(toN(prev.d) + 1, toN(p.d) - 1))).some((m) => toN(m) < toN(p.d) && !state.sel.has(m));
+        const broken = !prev || (G === "month"
+          ? monthRange(fromN(toN(prev.d) + 1), fromN(Math.max(toN(prev.d) + 1, toN(p.d) - 1))).some((m) => toN(m) < toN(p.d) && !state.sel.has(m))
+          : buckets.indexOf(p.b) - buckets.indexOf(prev.b) > 1);
         return (broken ? "M" : "L") + x(p.d).toFixed(1) + " " + y(p.v).toFixed(1);
       }).join("");
       svg.appendChild(svgEl("path", { class: "line", stroke: l.color, d }));
+      if (G !== "month" && l.pts.length <= 40) l.pts.forEach((p) => svg.appendChild(svgEl("circle", { cx: x(p.d), cy: y(p.v), r: 2.6, fill: l.color })));
       const last = l.pts[l.pts.length - 1];
       svg.appendChild(svgEl("circle", { cx: x(last.d), cy: y(last.v), r: 3.5, fill: l.color, stroke: "#fff", "stroke-width": 2 }));
       ends.push({ y: y(last.v), x: x(last.d), text: Math.round(last.v) + " " + shortName(l.ind) });
@@ -526,11 +572,13 @@
     const move = (ev) => {
       const r = svg.getBoundingClientRect(); const px = ((ev.clientX - r.left) / r.width) * W;
       let best = null, bd = 1e9;
-      months.forEach((d) => { const dd = Math.abs(x(d) - px); if (dd < bd) { bd = dd; best = d; } });
-      const rows = lines.map((l) => { let p = null; l.pts.forEach((q) => { if (q.d.slice(0, 7) <= best) p = q; }); return { l, p }; }).filter((r2) => r2.p);
+      const cands = G === "month" ? months : buckets.map(mid);
+      cands.forEach((d) => { const dd = Math.abs(x(d) - px); if (dd < bd) { bd = dd; best = d; } });
+      const bb = bucketOf(best, G);
+      const rows = lines.map((l) => { let p = null; l.pts.forEach((q) => { if (G === "month" ? q.d.slice(0, 7) <= best : q.b === bb) p = q; }); return { l, p }; }).filter((r2) => r2.p);
       if (!rows.length) { tip.hidden = true; xh.setAttribute("visibility", "hidden"); return; }
       xh.setAttribute("x1", x(best)); xh.setAttribute("x2", x(best)); xh.setAttribute("visibility", "visible");
-      tip.replaceChildren(el("b", null, fmtMonth(best)));
+      tip.replaceChildren(el("b", null, bucketLabel(G === "month" ? best : bb, G) + (G === "month" ? "" : " · average")));
       rows.forEach(({ l, p }) => {
         const row = el("div"); const s = el("span"); const i = el("i"); i.style.background = l.color; s.append(i, document.createTextNode(shortName(l.ind)));
         row.append(s, el("em", null, Math.round(p.v) + "  ·  " + fmtVal(p.raw, l.ind.unit))); tip.appendChild(row);
@@ -589,12 +637,13 @@
     const t = $("dtable"); t.replaceChildren();
     if (!lines.length) { $("tbl-btn").hidden = true; return; }
     $("tbl-btn").hidden = false;
-    const dates = [...new Set(lines.flatMap((l) => l.pts.map((p) => p.d.slice(0, 7))))].sort().reverse();
-    const table = el("table"); const hr = el("tr"); hr.appendChild(el("th", null, "Month"));
+    const key = (p) => p.b || p.d.slice(0, 7);
+    const dates = [...new Set(lines.flatMap((l) => l.pts.map(key)))].sort().reverse();
+    const table = el("table"); const hr = el("tr"); hr.appendChild(el("th", null, curG === "year" ? "Year (average)" : curG === "quarter" ? "Quarter (average)" : "Month"));
     lines.forEach((l) => hr.appendChild(el("th", null, shortName(l.ind) + " (index)")));
     const thead = el("thead"); thead.appendChild(hr); table.appendChild(thead);
     const tb = el("tbody");
-    dates.forEach((d) => { const tr = el("tr"); tr.appendChild(el("td", null, fmtMonth(d))); lines.forEach((l) => { const p = l.pts.find((q) => q.d.slice(0, 7) === d); tr.appendChild(el("td", null, p ? p.v.toFixed(1) : "")); }); tb.appendChild(tr); });
+    dates.forEach((d) => { const tr = el("tr"); tr.appendChild(el("td", null, curG === "month" ? fmtMonth(d) : bucketLabel(d, curG))); lines.forEach((l) => { const p = l.pts.find((q) => key(q) === d); tr.appendChild(el("td", null, p ? p.v.toFixed(1) : "")); }); tb.appendChild(tr); });
     table.appendChild(tb); t.appendChild(table);
   }
 
@@ -627,7 +676,7 @@
     t.appendChild(el("div", "lbl", ind.label));
     if (can) {
       const p = el("button", "pin", sel ? "✓" : ""); p.type = "button"; p.setAttribute("role", "checkbox"); p.setAttribute("aria-checked", String(sel));
-      p.title = sel ? "Remove from the Compare chart" : "Add to the Compare chart"; p.setAttribute("aria-label", p.title + " – " + ind.label);
+      p.title = sel ? "Remove from the Trends chart" : "Add to the Trends chart"; p.setAttribute("aria-label", p.title + " – " + ind.label);
       if (sel && LIGHT.has(colorOf[ind.id])) p.style.color = "#002d55";
       p.addEventListener("click", (e) => { e.stopPropagation(); toggle(ind.id); });
       t.appendChild(p);
@@ -811,7 +860,7 @@
     body.appendChild(srcFoot(ind, "* incomplete year. Source: Ember, monthly electricity data (CC BY 4.0)."));
     $("gdlg").showModal();
   }
-  // footer: source link + add to / remove from the Compare chart
+  // footer: source link + add to / remove from the Trends chart
   function srcFoot(ind, text) {
     const foot = el("div", "gd-foot");
     const sp = el("span", null, text || ("Source: " + (ind.attribution || "") + " "));
@@ -819,7 +868,7 @@
     foot.appendChild(sp);
     if (chartable(ind)) {
       const on = state.cmp.includes(ind.id);
-      const add = el("button", "gd-add" + (on ? " on" : ""), on ? "✓ In the Compare chart – remove" : "Add to Compare chart"); add.type = "button";
+      const add = el("button", "gd-add" + (on ? " on" : ""), on ? "✓ In the Trends chart – remove" : "Add to Trends chart"); add.type = "button";
       add.addEventListener("click", () => { toggle(ind.id); $("gdlg").close(); });
       foot.appendChild(add);
     }
@@ -984,7 +1033,7 @@
     }
   }
   function buildTabs() {
-    TABS = [{ id: "cmp", label: "Compare", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "industry" ? !!IND : t.groups.some((g) => M.groups[g])))];
+    TABS = [{ id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "industry" ? !!IND : t.groups.some((g) => M.groups[g])))];
   }
   function renderTabs() {
     $("tabs").replaceChildren(...TABS.map((t) => {
@@ -996,12 +1045,12 @@
     $("tab-cmp").hidden = state.tab !== "cmp";
     $("groups").hidden = state.tab === "cmp";
   }
-  // Strip on the Grid tab: what is in the Compare chart right now
+  // Strip on the Grid tab: what is in the Trends chart right now
   function cmpStrip() {
     const box = el("div", "cmp-strip");
-    box.appendChild(el("span", null, state.cmp.length ? "In the Compare chart:" : "Nothing in the Compare chart yet."));
+    box.appendChild(el("span", null, state.cmp.length ? "In the Trends chart:" : "Nothing in the Trends chart yet."));
     state.cmp.forEach((id) => { const i = M.indicators.find((x) => x.id === id); if (!i) return; const c = el("span", "cs-chip"); const d = el("i"); d.style.background = colorOf[id]; c.append(d, document.createTextNode(shortName(i))); box.appendChild(c); });
-    if (state.cmp.length) { const go = el("button", "cs-go", "Open Compare →"); go.type = "button"; go.addEventListener("click", () => { state.tab = "cmp"; renderAll(); window.scrollTo({ top: 0 }); }); box.appendChild(go); }
+    if (state.cmp.length) { const go = el("button", "cs-go", "Open Trends →"); go.type = "button"; go.addEventListener("click", () => { state.tab = "cmp"; renderAll(); window.scrollTo({ top: 0 }); }); box.appendChild(go); }
     return box;
   }
   // Compare tab: indicator tiles by topic below the chart (grid countries live on their own tab)

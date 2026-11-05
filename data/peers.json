@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-11-02",
+    "updated": "2026-11-05",
     "note": "Values collected from public company reports, press releases and rating announcements. Each value links to its source. Targets differ in base year and scope (absolute vs. intensity), so compare with care. Empty cells = not found in public sources at the time of collection."
   },
   "groups": {
@@ -505,9 +505,45 @@
           "src": "https://www.essity.com/investors/targets-and-outcomes/"
         },
         "safety": {
-          "v": "Recordable incident rate −66% vs. 2019 (target −75%)",
+          "v": "TRI rate 2.6 per million hours (2.6 in 2024) · −66% vs. 2019 (target −75%)",
           "y": "2025",
-          "src": "https://www.essity.com/investors/targets-and-outcomes/"
+          "d": "TRI rate 2.6 per million hours (2.6 in 2024) · −66% vs. 2019 (target −75%)",
+          "src": "https://assets.www.essity.com/essity/Annual-Report-2025-digital-pdf.pdf",
+          "note": "Annual Report 2025, S1-14, PDF p. 84"
+        },
+        "plasticTarget": {
+          "v": null,
+          "y": "2025",
+          "d": "85% renewable or recycled packaging material by 2025 · 81% achieved; recycled content in plastic packaging 20% (target 25%)",
+          "src": "https://assets.www.essity.com/essity/Annual-Report-2025-digital-pdf.pdf",
+          "note": "Annual Report 2025, PDF p. 74–75"
+        },
+        "renewableElectricity": {
+          "v": 22,
+          "y": "2025",
+          "d": "22% of purchased electricity certified renewable (861 of 3,887 GWh, calculated) · 30% renewable share of total energy",
+          "src": "https://assets.www.essity.com/essity/Annual-Report-2025-digital-pdf.pdf",
+          "note": "Annual Report 2025, E1-5, PDF p. 66–67"
+        },
+        "recyclablePackaging": {
+          "v": 92,
+          "y": "2025",
+          "d": "92% of packaging technically recyclable (paper 98%, plastic 74%)",
+          "src": "https://assets.www.essity.com/essity/Annual-Report-2025-digital-pdf.pdf",
+          "note": "Annual Report 2025, E5, PDF p. 75",
+          "history": [
+            {
+              "v": 91,
+              "y": "2024"
+            }
+          ]
+        },
+        "womenTotal": {
+          "v": 33.8,
+          "y": "2025",
+          "d": "33.8% of employees (12,296 of 36,375, calculated)",
+          "src": "https://assets.www.essity.com/essity/Annual-Report-2025-digital-pdf.pdf",
+          "note": "Annual Report 2025, S1, PDF p. 81"
         }
       },
       "targets": [
@@ -581,6 +617,54 @@
           "v": 24,
           "d": "−24%/t by 2030 (2018)",
           "src": "https://www.sofidel.com/en/?p=4270"
+        },
+        "recyclablePackaging": {
+          "v": 84.8,
+          "y": "2024",
+          "d": "84.8% of primary packaging made with easily recyclable materials",
+          "src": "https://www.sofidel.com/wp-content/uploads/2026/02/Integrated_Report_2024_Sofidel_EN-1.pdf"
+        },
+        "womenTotal": {
+          "v": 18.6,
+          "y": "2025",
+          "d": "18.6% of employees (1,797 of 9,664, calculated)",
+          "src": "https://www.sofidel.com/en/media/publications",
+          "note": "Integrated Annual Report 2025 (excerpt), PDF p. 61"
+        },
+        "womenManagement": {
+          "v": 25,
+          "y": "2025",
+          "d": "women-to-men ratio 1:3 in managerial roles (senior management 1:5)",
+          "src": "https://www.sofidel.com/en/media/publications",
+          "note": "Integrated Annual Report 2025 (excerpt), PDF p. 62"
+        },
+        "safety": {
+          "v": "Recordable injury rate 14.1 per million hours (15.9 in 2024) · target −10% per year vs. 2022",
+          "y": "2025",
+          "d": "Recordable injury rate 14.1 per million hours (15.9 in 2024) · target −10% per year vs. 2022",
+          "src": "https://www.sofidel.com/en/media/publications",
+          "note": "Integrated Annual Report 2025 (excerpt), PDF p. 66, 68"
+        },
+        "recycledFibre": {
+          "v": 5,
+          "y": "2025",
+          "d": "5% recycled paper in fibre procurement (95% virgin fibre)",
+          "src": "https://www.sofidel.com/en/media/publications",
+          "note": "Integrated Annual Report 2025 (excerpt), PDF p. 53"
+        },
+        "cdpWater": {
+          "v": "B",
+          "y": "2025",
+          "d": "CDP 2025: A- Climate, A- Forests, B Water",
+          "src": "https://www.sofidel.com/en/media/publications",
+          "note": "Integrated Annual Report 2025 (excerpt), PDF p. 8"
+        },
+        "renewableElectricity": {
+          "v": null,
+          "y": "2025",
+          "d": "7.2% renewable share of total energy consumption (12% in 2024); electricity share not reported separately",
+          "src": "https://www.sofidel.com/en/media/publications",
+          "note": "Integrated Annual Report 2025 (excerpt), PDF p. 48"
         }
       },
       "targets": [
@@ -619,6 +703,32 @@
               "src": "https://www.metsagroup.com/metsatissue/news-and-publications/news/2026/metsa-tissue-scores-91100-in-ecovadis-its-highest-rating-in-seven-consecutive-platinum-years/"
             }
           ]
+        },
+        "scope12Target": {
+          "v": 100,
+          "y": "2024",
+          "d": "−100% fossil CO₂ Scope 1+2 by 2030 (fossil-free mills) · more than 40% achieved",
+          "src": "https://www.metsagroup.com/metsatissue/news-and-publications/cases-and-articles/metsa-tissue-sets-science-aligned-climate-target-to-reduce-total-greenhouse-gas-emissions-by-50-by-2030/"
+        },
+        "scope3Target": {
+          "v": 8,
+          "y": "2024",
+          "d": "−8% Scope 3 by 2030 · total GHG −50% by 2030 (1.5°C-aligned; SBTi validation not stated)",
+          "src": "https://www.metsagroup.com/metsatissue/news-and-publications/cases-and-articles/metsa-tissue-sets-science-aligned-climate-target-to-reduce-total-greenhouse-gas-emissions-by-50-by-2030/"
+        },
+        "womenTotal": {
+          "v": 24.1,
+          "y": "2025",
+          "d": "Metsä Group, all businesses: 24.1% of employees (2,285 of 9,476, calculated)",
+          "src": "https://www.metsagroup.com/globalassets/metsa-group/documents/investors/financial-reporting/annual-reports/2025/metsa-group-annual-review-2025.pdf",
+          "note": "Metsä Group Annual Review 2025, S1, PDF p. 44"
+        },
+        "womenManagement": {
+          "v": 30,
+          "y": "2025",
+          "d": "Metsä Group, all businesses: 30% women in leadership roles (target >35%)",
+          "src": "https://www.metsagroup.com/globalassets/metsa-group/documents/investors/financial-reporting/annual-reports/2025/metsa-group-annual-review-2025.pdf",
+          "note": "Metsä Group Annual Review 2025, PDF p. 20, 44"
         }
       },
       "targets": [
@@ -659,19 +769,53 @@
         },
         "recycledFibre": {
           "v": 54,
-          "y": "2024",
-          "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+          "y": "2025",
+          "d": "54% paper for recycling in raw materials · target 60% by 2030",
+          "src": "https://www.lucartgroup.com/wp-content/uploads/2026/07/SR-Lucart_EN_web.pdf"
         },
         "recyclablePackaging": {
           "v": 100,
-          "d": "100% recyclable or compostable",
-          "y": "2024",
-          "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+          "y": "2025",
+          "d": "100% recyclable or compostable · 85% recycled-content packaging",
+          "src": "https://www.lucartgroup.com/wp-content/uploads/2026/07/SR-Lucart_EN_web.pdf"
         },
         "waterTarget": {
           "v": "9.43 m³/t (−26.8% vs. 2013); 2025 target 9.40 m³/t",
           "y": "2024",
           "src": "https://ondemand.tappi.org/lucart-presents-its-20th-sustainability-report/"
+        },
+        "scope12Target": {
+          "v": 67.8,
+          "y": "2025",
+          "d": "−67.8% Scope 1+2 by 2035 (2019, SBTi)",
+          "src": "https://www.lucartgroup.com/wp-content/uploads/2026/07/SR-Lucart_EN_web.pdf"
+        },
+        "scope3Target": {
+          "v": 40,
+          "y": "2025",
+          "d": "−40% fuel- and energy-related Scope 3 by 2035 (2019, SBTi)",
+          "src": "https://www.lucartgroup.com/wp-content/uploads/2026/07/SR-Lucart_EN_web.pdf"
+        },
+        "womenTotal": {
+          "v": 13.7,
+          "y": "2025",
+          "d": "13.7% of employees (241 of 1,760, calculated: managers 15%, office 31%, production 7%)",
+          "src": "https://www.lucartgroup.com/wp-content/uploads/2026/07/SR-Lucart_EN_web.pdf",
+          "note": "Sustainability Report 2025, PDF p. 73"
+        },
+        "womenManagement": {
+          "v": 15,
+          "y": "2025",
+          "d": "15% of managers (23 of 153)",
+          "src": "https://www.lucartgroup.com/wp-content/uploads/2026/07/SR-Lucart_EN_web.pdf",
+          "note": "Sustainability Report 2025, PDF p. 73"
+        },
+        "safety": {
+          "v": "Frequency index 15.66 accidents per million hours (employees, 42 accidents) · lower than 2024",
+          "y": "2025",
+          "d": "Frequency index 15.66 accidents per million hours (employees, 42 accidents) · lower than 2024",
+          "src": "https://www.lucartgroup.com/wp-content/uploads/2026/07/SR-Lucart_EN_web.pdf",
+          "note": "Sustainability Report 2025, PDF p. 80"
         }
       },
       "targets": [
@@ -725,10 +869,11 @@
           "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
         },
         "plasticTarget": {
-          "v": 50,
-          "d": "−50% plastic footprint by 2030 (2019) · −16% achieved",
+          "v": null,
           "y": "2025",
-          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+          "d": "Target: 20% average recycled plastic content in plastic packaging by 2025 · 17.6% achieved",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf",
+          "note": "2025 Sustainability Report, PDF p. 12; Appendix p. 37"
         },
         "waterTarget": {
           "v": "−50% water use at water-stressed sites by 2030 (2015) · −45% achieved",
@@ -739,6 +884,20 @@
           "v": "TRIR 0.65 (employees)",
           "y": "2025",
           "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf"
+        },
+        "recyclablePackaging": {
+          "v": null,
+          "y": "2025",
+          "d": "Not quantified – K-C says a % of recyclable packaging is unavailable because recycling infrastructure varies",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf",
+          "note": "2025 Sustainability Report Appendix, PDF p. 37"
+        },
+        "womenTotal": {
+          "v": null,
+          "y": "2025",
+          "d": "Not disclosed – gender data withheld in the 2025 report",
+          "src": "https://www.kimberly-clark.com/-/media/feature/kcc/corporate/pdf/key-download-pdf/KMB-2025-Sustainability-Report_Final.pdf",
+          "note": "2025 Sustainability Report Appendix, PDF p. 60, 66"
         }
       },
       "targets": [
@@ -804,6 +963,27 @@
           "v": 42,
           "y": "2024",
           "src": "https://us.pg.com/2024CitizenshipDataMetrics/"
+        },
+        "scope3Target": {
+          "v": 40,
+          "y": "2024",
+          "d": "−40% supply chain emissions per unit of production by 2030 (2020) · 8–9% achieved; SBTi-validated Scope 3 targets",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/",
+          "note": "FY2024 Citizenship Summary, PDF p. 5"
+        },
+        "plasticTarget": {
+          "v": 50,
+          "y": "2024",
+          "d": "−50% virgin petroleum plastic in consumer packaging per unit by 2030 (2017) · −21% achieved",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/",
+          "note": "FY2024 Citizenship Summary, PDF p. 23"
+        },
+        "certifiedFibre": {
+          "v": 100,
+          "y": "2024",
+          "d": "100% of wood pulp third-party certified (FSC preferred)",
+          "src": "https://us.pg.com/2024CitizenshipDataMetrics/",
+          "note": "FY2024 Citizenship Summary, PDF p. 9"
         }
       },
       "targets": [
@@ -883,6 +1063,48 @@
           "v": "B-",
           "y": "2022",
           "src": "https://app.co.id/-/asia-pulp-paper-app-sinar-mas-maintains-climate-change-b-score-from-cdp"
+        },
+        "recycledFibre": {
+          "v": 47,
+          "y": "2025",
+          "d": "47% recycled fibre composition (target ≥30% by 2030 achieved)",
+          "src": "https://app.co.id/",
+          "note": "PT APP Purinusa Ekapersada Sustainability Report 2025, PDF p. 33"
+        },
+        "waterTarget": {
+          "v": "−30% water intensity by 2030 (2018: 33.00 m³/t) · 27.07 m³/t in 2025 (−18%)",
+          "y": "2025",
+          "d": "−30% water intensity by 2030 (2018: 33.00 m³/t) · 27.07 m³/t in 2025 (−18%)",
+          "src": "https://app.co.id/",
+          "note": "PT APP Purinusa Ekapersada Sustainability Report 2025, PDF p. 33"
+        },
+        "womenTotal": {
+          "v": 8.2,
+          "y": "2025",
+          "d": "8.2% of employees (2,785 of 34,043, calculated)",
+          "src": "https://app.co.id/",
+          "note": "PT APP Purinusa Ekapersada Sustainability Report 2025, PDF p. 124"
+        },
+        "womenManagement": {
+          "v": 29.8,
+          "y": "2025",
+          "d": "29.8% of senior management at APP headquarters (target 30%)",
+          "src": "https://app.co.id/",
+          "note": "PT APP Purinusa Ekapersada Sustainability Report 2025, PDF p. 35"
+        },
+        "safety": {
+          "v": "LTIFR 0.64 in mills, 0.24 in forestry (target below 1)",
+          "y": "2025",
+          "d": "LTIFR 0.64 in mills, 0.24 in forestry (target below 1)",
+          "src": "https://app.co.id/",
+          "note": "PT APP Purinusa Ekapersada Sustainability Report 2025, PDF p. 35"
+        },
+        "renewableElectricity": {
+          "v": null,
+          "y": "2025",
+          "d": "About 58% of the energy mix from renewable sources (mainly biomass and black liquor); electricity share not reported separately",
+          "src": "https://app.co.id/",
+          "note": "PT APP Purinusa Ekapersada Sustainability Report 2025, PDF p. 105"
         }
       },
       "targets": [

@@ -59,25 +59,37 @@ def num(s):
 
 
 def parse(text):
-    period = re.search(r"Jan\w*\s*[-–]\s*(\w{3})\w*\.?\s+(\d{4})", text)
-    if not period:
+    """Works whether the PDF text keeps table rows on one line or puts every value on its own line."""
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    flat = " ".join(lines)
+    period = re.search(r"Jan\w*\s*[-–]\s*(\w{3})\w*\.?(?:\s+Jan\w*\s*[-–]\s*\w+\.?)*\s+(?:Veränd\.?\s+)?(?:in 1\.000 t\s+)?(\d{4})", flat)
+    title = re.search(r"\b(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s+(\d{4})\b", flat)
+    m = y = None
+    if period:
+        m, y = MONTHS.get(period.group(1)[:3]), int(period.group(2))
+    if (not m or not y) and title:
+        names = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
+        m, y = names.index(title.group(1)) + 1, int(title.group(2))
+    if not m or not y:
         raise RuntimeError("period not found")
-    m, y = MONTHS.get(period.group(1)[:3]), int(period.group(2))
+    numre = re.compile(r"^[-−–]?\d{1,3}(?:\.\d{3})*(?:,\d+)?$")
     rows, grade = {}, None
-    for line in text.splitlines():
+    for k, line in enumerate(lines):
         for key, _, pat in GRADES:
-            if re.search(pat, line, re.I) and not re.search(r"\d{2,}\.\d{3}", line):
+            if re.search(pat, line, re.I) and not numre.search(line.split()[-1]):
                 grade = key
         for mk, pat in MEASURES:
-            if grade and re.search(pat, line):
-                nums = re.findall(r"[-−–]?\d{1,3}(?:\.\d{3})*(?:,\d+)?", line[re.search(pat, line).end():])
-                if len(nums) >= 3:
-                    rows.setdefault(grade, {})[mk] = [num(nums[0]), num(nums[1]), num(nums[2])]
+            hit = re.match(pat, line)
+            if grade and hit:
+                vals = re.findall(r"[-−–]?\d{1,3}(?:\.\d{3})*(?:,\d+)?", line[hit.end():])
+                j = k + 1
+                while len(vals) < 3 and j < len(lines) and numre.match(lines[j]):
+                    vals.append(lines[j]); j += 1
+                if len(vals) >= 3:
+                    rows.setdefault(grade, {})[mk] = [num(vals[0]), num(vals[1]), num(vals[2])]
     if "hygiene" not in rows or "production" not in rows["hygiene"]:
         raise RuntimeError("hygiene paper row not found")
-    label = f"Jan – {EN[m - 1]} {y}" if m else period.group(0)
-    prev = f"Jan – {EN[m - 1]} {y - 1}" if m else ""
-    return label, prev, rows
+    return f"Jan – {EN[m - 1]} {y}", f"Jan – {EN[m - 1]} {y - 1}", rows
 
 
 def main():
