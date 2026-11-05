@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T06:20:41",
+ "updated": "2026-11-05T06:47:46",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -36,12 +36,6 @@
     "date": "2026-11-04"
    },
    {
-    "title": "Millennium is no longer a public short seller in Essity",
-    "source": "www.marketscreener.com",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOW1XbC1ncVJPcnN6Vl95ODhybzRRYzZyR2t6UFM4TW1WV1prOUhWRV9IY1RLY1UtaHNQWnZkdHc4N2JMQm1DTDVfby1kSGhXUVVLbG5yb3hQZ1loM01tVE1tc0FuVzA3b0pKb1VfUWUwdW9SWTdaMnZ2U1c0TXFLTXVhYkoyMnpaVWg1ODFGTlV6R1lxWndMcElWanIzMDhzOW5WR0o1bnlKbnFx?oc=5",
-    "date": "2026-11-04"
-   },
-   {
     "title": "Essity poaches K-C chief for top consumer tissue role",
     "source": "DecisionMarketing",
     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTjN0SU41bXd4TVpGb0lZWnQ2Y2czSkpURGFHanVHZHJyTkNub0dwWjUxTDdMUnZPUEt1VHF0b3h0MkJNY1RrbjFfRldtNnBYdW5lZ1pMUHB3UGxyOGxWdzV5Q0VvOHBoaWhwd3RWUGwwREo0WXZ4cE9rYTBib3gwVEcwY2U0dnhEVHdKY3ZueWRlazZhbW0tNklR?oc=5",
@@ -51,6 +45,12 @@
     "title": "Essity stock faces PFAS lawsuit over Carefree liners",
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcjA5eENaVlJ1YUZXN0NFdHRocldBcVRxVFBpYkw0bDVtR3ZseDZfR3dpZTJyREMwR1JNcW9qUFIzbGdnU1dTR0VLWk4xN2xpQ0RuMHdILU5lQjFmOElkb3JUSnVrZlJOOW9PazRvaEtEODd6U0JGX2dncXpqWHlxOXdkQ1REMXRucF94bVp1OFFiS2Z3dl9xVktzWEw3WUU0U09MSzF6MllUai12b3ZYN2RtWjROUQ?oc=5",
+    "date": "2026-11-04"
+   },
+   {
+    "title": "Help the Essity truly sparkle and get the Nomads a record crowd!",
+    "source": "Grassroots North Wales",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTUo1ZGJ5T2dlWUY2dGJfVW5NZndpZERSNWxiclFyTlRTWGZLZlJaY2prdWNnbjZNVGRNd2lqMzBUTm5MT3VkTld3SEt1TWI3VVA1bTc0b01BcHNtOFl3ai01em5rLURjZFlaTGNJTFR5WmNySlh0YUsxME1FSFRFZEttR0pQTFZNSG9Ealg5Z3ZrS3NsN3JIZlhnUi1XUdIBowFBVV95cUxPNDFhcFNJVTVleHlUTm9BeHRVM2ktYVIwVmtTQjNPUl84cldVUVpCZHFxZjNHVnM5dUlDRnF4WktyQjZuZXE3cXpPR1NIYzB6U0hLZGZScE8wUEN1c1l0ZG52dWFMRGlWTk9OaVVGTFA4NmpWOHBJeG9ZdUhqV1FyR2ZOQ0x2NjdfS1hqMHdzRUFGY2RLUFNjRE1Jd0ctd3RXeGVz?oc=5",
     "date": "2026-11-04"
    }
   ],
@@ -74,10 +74,10 @@
     "date": "2026-11-02"
    },
    {
-    "title": "60 Years of Sustainable Progress: Building on Our Past, Investing in Our Future",
-    "source": "Progressive Grocer",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVFFEX0lhV2ZIWmg2Z2wyRk9fckI3X1Njc0x1WnlSVkc4eUhmajFOUmMtUmZJekVvU3ljZXlBUGFrdDlUT01TVTR1ak9GTDhZY0dTUFpZYTF2SWV5d1lqTC0yVmRodlRRNjgxQ2lrcEpFWDN5cnBnckZCeEVzcVdrOFFpSjBBbnp5YzRYeENBTEwyUnhLak1iSWQ2ZEZ4VWM?oc=5",
-    "date": "2026-11-01"
+    "title": "Canal Park opens their new vault toilet",
+    "source": "Circleville Herald",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMWQyLXRMVEcxdVgwUG5vNkM3Yk5nRE9nSVpkLXNYbWJVZ2JyTF9ZVGVTcmlwRnlCSEt0T3I4TmpjYmdtdUxnejJsaFRxRHF2NGkwU0d3N2JFVkdQUm0xWmtPZjdZOEw5XzlzaV9yZlVuNlI3THZtazRKZXpYTXVmbnFyQkRWd3JzMDlncWpVVW9lZWpDRmNRN3UwVkhvXzYyOFVuZ2dhbzdrbFRXbTRhSVppa2gwdEJ4cERfWFZFNjl3Vnp1YXZrSW5xLVFSdw?oc=5",
+    "date": "2026-11-02"
    }
   ],
   "metsa-tissue": [
@@ -224,12 +224,6 @@
     "source": "Simply Wall St",
     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOeTNIYzNEbndVaTBpOElQbHNIUGxTWkg5VzJrM0s4dEplTHppVjZodGNaOW4xTkYtQzlpZXh5N1RCcEZFRGM3U0VlQlNNdERuN0pLZDdITjBWeUU3Wlh0VVFhTUhYRnJJYWFTM0gxdm5wRnNySmM0WWRqLVhJQXFLMUxlZGx3bVhfbmF3LXhjOGxxMFE5Mkw3NlZNQzJRamc4bGFhRUI3eWJRME5fbUsta0lCT0lIck1aY09VZVFaQUNOWmRONDVZYkNWb1k5bGQ0MUdTMkwxU1JRenlycTFOVGpDMkPSAeoBQVVfeXFMTUtDUTJJeWN4M0JyLUdrT2tTRzJPWWtUaTlyQ0hwV2VWN3BPUENpVGZ4eThxV3N0MmFfZGJ0SjNaTlV5QldjcTZMU2xyaHlLOWVDUWQzdklHRVZkcFZteVFfNVRNREgtU1ZqQmdiOVE3WFR6YlQxaWZSdkFvazJBUUYzY0NNWVEzT2ZCQ3F5T0Q0M2U4bnJ2ZHY5cHQwNzY2QkZ4MUEtUXdKM0NTS1VVYkFIYm13Wnphb1FJVFYteTZLWF9LNmdaVlQ0aU15NHBrRlBHLURta0RrUl9INVdrUU1QWEVkRGR6d09n?oc=5",
     "date": "2026-11-02"
-   },
-   {
-    "title": "Hengan International Group (SEHK:1044) Following Chairman's Death Is Its Low Valuation Justified",
-    "source": "Simply Wall St",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOVlFXYjIxMU9aendhd0FoUFFKUFI0blFaZllRV2t5TThOb3AtWTMzMmRsel9PMnI1d2RjbzNRWkRPaGlweFZHZGtrV2dIVzRCSXFOb2FYbWdjVHdVWDlSLUI0LWZnd2I4S2FrQ0laRDdKM1J6M2JZQjRqSS1VWXR0THJaTVRhME5aUWNSVzlIRWVXYmR4bWRSemp6WElQVUQ1cVZUd1paeGJkRUdhSFMzcVpKR1FYZnFFSmh0YW9STXg5WWd2X0o2Nnk4TzBqSFp6MDZwUVNRUmRPT29NN2lKUFRKTnTSAeoBQVVfeXFMTnR3eTZpYm1YWmZEZG9fdnk3cy1QQ2kzVE1DYnhlOWVEcExKQ1BZS0MyajJTRTZJNFlpaTFxWEN6NV9sRmo0UjJpMU9PT1dWYTEwM3B6OWVUOXNUUW1sWWlvck5VTjZOMG5WME5VbDVJVjdISWNzbnNrdUR2RnVrbTlGZHR4MDRhWWVIYzhGOEJieFZmbkU3UkVLamx4cmVHR1ZScF91ZUMtNURHU0FqQUczY3FBYjdGQVJ6a0RGYzVhVktvOWJZcFFmbTBJWjBUNVpyOGJOYWJvZkNSWWJWUm9BNGZWZzBQZlBn?oc=5",
-    "date": "2026-10-09"
    },
    {
     "title": "Hengan International founder Sze Man Bok dies at 78 — the industrialist exits as the company bets on overseas expansion and AI for a turnaround",
