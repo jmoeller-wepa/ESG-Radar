@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-04T07:30:03+00:00",
+ "fetched": "2026-11-05T06:17:37+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,13 +12,13 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
-     "last",
      "totalPages",
      "totalElements",
-     "sort",
+     "last",
      "numberOfElements",
      "size",
      "number",
+     "sort",
      "first",
      "empty"
     ]
@@ -27,16 +27,150 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": "18393.0",
+    "id": 14770.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2026)5700242",
-    "foreseenActType": "REG_IMPL",
-    "shortTitle": "Amendments of motor vehicle safety requirements in view of their application to fully automated vehicles",
-    "currentStatuses": "[{'frontEndStage': 'ISC_WORKFLOW', 'receivingFeedbackStatus': 'OPEN', 'feedbackStartDate': '2026/11/03 15:34:00', 'feedbackEndDate': '2026/12/01 23:59:59', 'isCurrent': True}]",
-    "initiativeTranslations": "[{'value': 'Изисквания за безопасност на моторните превозни средства — изменения във връзка с прилагането им за напълно автоматизираните превозни средства', 'language': 'BG', 'field': 'SHORT_TITLE'}, {'value': 'Změny požadavků na bezpečnost motorových vozidel s ohledem na jejich uplatňování na plně ",
-    "topics": "[{'code': 'SINGMARK', 'label': 'Single market'}]"
+    "reference": "Ares(2025)5580019",
+    "foreseenActType": "PROP_REG",
+    "shortTitle": "European climate resilience and risk management law",
+    "currentStatuses": [
+     {
+      "frontEndStage": "ADOPTION_WORKFLOW",
+      "receivingFeedbackStatus": "OPEN",
+      "feedbackStartDate": "2026/11/04 14:42:25",
+      "feedbackEndDate": "2026/12/31 23:59:59",
+      "isCurrent": true
+     }
+    ],
+    "topics": [
+     {
+      "code": "CLIMA",
+      "label": "Climate action"
+     }
+    ],
+    "initiativeTranslations": [
+     {
+      "value": "Устойчивост спрямо изменението на климата и управление на климатичните рискове в Европа — интегрирана рамка",
+      "language": "BG",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Odolnost EU vůči změně klimatu a řízení klimatických rizik – integrovaný rámec",
+      "language": "CS",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "EU's modstandsdygtighed over for klimaændringer og risikostyring – integreret ramme",
+      "language": "DA",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Europäische Initiative für Klimaresilienz und -risikomanagement – integrierter Rahmen",
+      "language": "DE",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Ανθεκτικότητα στην κλιματική αλλαγή και διαχείριση κινδύνων στην Ευρώπη — ολοκληρωμένο πλαίσιο",
+      "language": "EL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "European climate resilience and risk management – integrated framework",
+      "language": "EN",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Resiliencia frente al cambio climático y gestión de riesgos en Europa: marco integrado",
+      "language": "ES",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Euroopa kliimakerksus ja kliimariskide juhtimine – integreeritud raamistik",
+      "language": "ET",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Initiative européenne sur la résilience climatique et la gestion des risques - cadre intégré",
+      "language": "FR",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Creat comhtháite Eorpach um athléimneacht in aghaidh an athraithe aeráide agus bainistiú riosca",
+      "language": "GA",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Europska inicijativa za otpornost na klimatske promjene i upravljanje klimatskim rizicima – integrirani okvir",
+      "language": "HR",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Iniziativa europea per la resilienza ai cambiamenti climatici e la gestione dei rischi legati al clima - quadro integrato",
+      "language": "IT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Euroopan ilmastokestävyys ja riskinhallinta – yhtenäinen kehys",
+      "language": "FI",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Az éghajlatváltozás hatásaival szembeni reziliencia és az éghajlatváltozással kapcsolatos kockázatok kezelése – integrált keret",
+      "language": "HU",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Integruota Europos atsparumo klimato kaitai ir rizikos valdymo sistema",
+      "language": "LT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Eiropas klimatnoturības un risku pārvaldības iniciatīva: integrētais satvars",
+      "language": "LV",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Qafas integrat Ewropew għar-reżiljenza għat-tibdil fil-klima u l-ġestjoni tar-riskju",
+      "language": "MT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Europees initiatief inzake klimaatveerkracht en het beheer van klimaatrisico’s – geïntegreerd kader",
+      "language": "NL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Europejska inicjatywa na rzecz odporności na zmianę klimatu i zarządzania ryzykiem – zintegrowane ramy",
+      "language": "PL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Resiliência climática e gestão dos riscos na Europa - quadro integrado",
+      "language": "PT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Reziliența la schimbările climatice și gestionarea riscurilor în Europa – Un cadru integrat",
+      "language": "RO",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Odolnosť EÚ proti zmene klímy a riadenie klimatických rizík – integrovaný rámec",
+      "language": "SK",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Evropska odpornost proti podnebnim spremembam in obvladovanje tveganj – celovit okvir",
+      "language": "SL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Klimatresiliens och klimatriskhantering – förslag till EU-regler",
+      "language": "SV",
+      "field": "SHORT_TITLE"
+     }
+    ]
    },
-   "openFound": 55,
+   "openFound": 56,
    "read": 300
   }
  ]

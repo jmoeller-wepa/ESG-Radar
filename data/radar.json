@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-04T07:29:59"
+    "lastFeedRun": "2026-11-05T06:17:34"
   },
   "entries": [
     {
@@ -1832,6 +1832,366 @@
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNdVRwcnpRQXloUUpYVXpOMmV1bENPOUZnUUotSlI0cEg3Q1k1T0F0cUxlenhoX2JUNExIUlZUQW1QaDgtVTVrb3ozMlk2NlRBcWFWT3pTUzlpNVV6ODFQSDVBTmlaMXJNSDk3OThXeGpoTDhJS3hCOWJTVFVTVW1OM2dGeHV5WDIwaktTaUduWS1TZW1KVWNOQlR6YndmMUlNOG8tUjVtSHQwS241eXVYSmRKNzlKTG0xdEYxelR6VWR5Mm1xdXZuNjhiU01ESHJucVF6M1ZCRUp5VTd3RVkw?oc=5",
       "origin": "feed",
       "added": "2026-11-04"
+    },
+    {
+      "id": "feed-e23fad0ddd",
+      "date": "2026-11-04",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Generally Available",
+        "Onelake"
+      ],
+      "title": "Eventhouse support for OneLake security (Generally Available)",
+      "summary": "Security should be consistent wherever you query your data. With OneLake security, you can define access controls once, close to the data, and apply them across supported Microsoft Fabric engines without recreating your security rules for each experience. Today, we’re announcing the general availability of OneLake security support for Eventhouse external tables. When these external tables query data secured by…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Eventhouse-support-for-OneLake-security-Generally-Available/ba-p/5377875",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-eb6fb91698",
+      "date": "2026-11-04",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Generally Available"
+      ],
+      "title": "Find expensive queries from Capacity Metrics (Generally Available)",
+      "summary": "When warehouse capacity usage spikes, you need to quickly understand what ran, which warehouse drove the usage, and which queries require investigation. The Monitor in warehouse action in the Microsoft Fabric Capacity Metrics app connects the capacity-level view directly to Warehouse Monitor. It opens the selected warehouse with the relevant time window already applied, eliminating manual correlation across…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Find-expensive-queries-from-Capacity-Metrics-Generally-Available/ba-p/5393588",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-3cf817db3b",
+      "date": "2026-11-04",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Onelake"
+      ],
+      "title": "OneLake table APIs: Now with Iceberg writes, plus richer table metadata (Preview)",
+      "summary": "OneLake table APIs already let Iceberg-compatible engines discover and read tables in Microsoft Fabric. Today we're taking the next step with two additions: Iceberg REST Catalog (IRC) writes through the OneLake table endpoint, now available, and a new additional table metadata API, in preview, for adding descriptions and tags to tables and columns. Together, they make OneLake a place where any engine can not only…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-table-APIs-Now-with-Iceberg-writes-plus-richer-table/ba-p/5391262",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-2fe4fbe32c",
+      "date": "2026-11-04",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Governance"
+      ],
+      "title": "Govern Fabric connections with admin APIs and data connection policies (Preview)",
+      "summary": "Co-author: Abhishek Narain Protect continuity, understand connection risk, and set tenant-wide guardrails Imagine that the person who built a business-critical pipeline has left your organization. The connection still exists, but nobody is sure who can manage it or whether its credentials will keep working. What begins as a handover problem quickly becomes a governance question: who owns your connections, where do…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Govern-Fabric-connections-with-admin-APIs-and-data-connection/ba-p/5383656",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-fdd5d75281",
+      "date": "2026-11-04",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric Apps",
+        "Power Bi"
+      ],
+      "title": "Bring your Fabric data into your next app with connectors",
+      "summary": "Most business applications start with data that already exists. Customer orders may live in a Fabric SQL database. Inventory history may be in a Lakehouse. Sales performance may already be modeled in Power BI. The opportunity is not to move that data again, but to turn trusted data into an experience that helps people make decisions and take action. Connectors in Fabric Apps shorten that path. They give an app a…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Bring-your-Fabric-data-into-your-next-app-with-connectors/ba-p/5377609",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-a72fbd9496",
+      "date": "2026-11-04",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Onelake"
+      ],
+      "title": "Salesforce Data 360 integration with OneLake (Preview)",
+      "summary": "A customer reports a missing delivery. The service case is in Salesforce, while the shipping and returns records are in Microsoft Fabric. Before a team can decide what to do next, it needs to connect those two views of the same customer experience. For many organizations, answering questions like this still means exporting customer data, building ingestion pipelines, and maintaining another copy for analytics.…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Salesforce-Data-360-integration-with-OneLake-Preview/ba-p/5384626",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-9620ab6eca",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "AI"
+      ],
+      "title": "Optimizing DAX with AI",
+      "summary": "Can AI optimize a DAX expression? Sure, it can. However, when AI and humans work together, the result is better.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "SQLBI",
+      "url": "https://www.sqlbi.com/tv/optimizing-dax-with-ai/",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-997050ef46",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "circularity",
+        "reporting"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [
+        "Green Claims"
+      ],
+      "title": "EU Commission Scraps Green Claims Directive",
+      "summary": "The European Commission revealed on Wednesday that it has officially withdrawn the Green Claims Directive, […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/eu-commission-scraps-green-claims-directive/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-scraps-green-claims-directive",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-7c7772c3ec",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Deforestation"
+      ],
+      "title": "Brazil Releases Roadmaps to Phase Out Fossil Fuels, End Deforestation",
+      "summary": "COP30 host Brazil announced the release of two new “Roadmaps,” outlining global strategies to transitioning […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/brazil-launches-roadmaps-to-phase-out-fossil-fuels-end-deforestation/?utm_source=rss&utm_medium=rss&utm_campaign=brazil-launches-roadmaps-to-phase-out-fossil-fuels-end-deforestation",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-19b16666e1",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [
+        "Taxonomy"
+      ],
+      "title": "EU Regulators Propose Simplification of Taxonomy Reporting Rules for Banks, Insurers and Investors",
+      "summary": "Europe’s three primary financial regulatory agencies, the European Supervisory Authorities (ESAs) announced the release of […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/eu-regulators-propose-simplification-of-taxonomy-reporting-rules-for-banks-insurers-and-investors/?utm_source=rss&utm_medium=rss&utm_campaign=eu-regulators-propose-simplification-of-taxonomy-reporting-rules-for-banks-insurers-and-investors",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-8ce386f572",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "EFRAG Releases the Voluntary Standard Digital Template and XBRL Converter - EFRAG",
+      "summary": "EFRAG Releases the Voluntary Standard Digital Template and XBRL Converter EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORGVmWUo0bUd6UUUtbkxRVU9RRkJyMGJNdDlUZEd0SVlhc2ZnX3YzYkRwRS1hejgzV0lqaDlaUnRiZE5CV1lYbmU1dmpqUVNicC05akdNdXRPSUZGcXZwN1k2RVM0bVNUYTVzRmpHRi1yYVBOTHlIMm9hU215dGE0QjBRX183RWREQ2NKR0prcEllakFiOUM2OEw2UEpFZGJ3TGVOaEo0Q1hPNUc1MUNyRnE1bTRKeC1rMXpFRDNR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-420ed43c0e",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG SR TEG Online Meeting 9 November 2026 - EFRAG",
+      "summary": "EFRAG SR TEG Online Meeting 9 November 2026 EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONjAxTjdQSTVxZVUtRVVYdkEwMkZpR09fbUt2eGh3UEFhcDFWbllLLTdYUC1vVHZkbXUybVNFWm1QTTJRNXhHbDZkMzRjNDBWNkxhVzNZM2xlYzRrUVFOMHVsbldteWVxem51Z3hCcmF4c1hRdTJ1UG90VjJHUFpUQnppSjRtVjlCbHBJQnpsMWtEVGJ2dmU4OE40eGtUbG0yYTVIMG1pZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-331467bb72",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG Update: October Edition Now Available - EFRAG",
+      "summary": "EFRAG Update: October Edition Now Available EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNdFFXM01iT3ZBclVkeHVFMG1aNmptWG9WOWxaa1B4azFRUFh3OVp6eWxNWDhMNHdGS1pSamFzZDFOQWRFNWVyanpiUy1PZjVsY1lBakk0RWdzUWo0WFdzTjM4VXNjRWVfb0NfWnhJNFI2cGNNVEZDOTMxSjdLMVlBT2U0cDZDYjEwRUZycl9wNndRc3laRXMw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-80ad41d963",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "VS Digital Template and XBRL Taxonomy - EFRAG",
+      "summary": "VS Digital Template and XBRL Taxonomy EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5GOHBBS2hwdTV3d040ZTlXMXoxYlpXUExZRXo1d3pnd1FGYWh0R2dLbkIzc1ZiU0FWenFzQ19yM3B0UXhFUmlZX0xfMmZ0YW5BZjIzVUJDTEtHQmJ2cS0yNmM3dFg0eHBlNFh4TUU5aw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-05"
     }
   ]
 }

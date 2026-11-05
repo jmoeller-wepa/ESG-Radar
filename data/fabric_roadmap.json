@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T07:32:52",
+ "updated": "2026-11-05T06:20:42",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -405,16 +405,6 @@
    "quarter": "Q4 2026",
    "desc": "Display a built-in trend chart (line or column) inside Card visuals to show how values change over time. No SVGs or extra visuals needed.",
    "url": "https://www.fabric-gps.com/release/df66c8a5-d46f-f111-ab0d-000d3a376137"
-  },
-  {
-   "id": "e1ba1ef1-03a0-f111-b8db-000d3a3ad6b6",
-   "name": "Explore",
-   "product": "Power BI",
-   "tool": "powerbi",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "Explore data in a focused experience without creating a report. Quickly investigate and customize your analysis using matrices and visuals, then save the exploration to a workspace or as a report.",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/microsoft-fabric-november-2023-update/5172115"
   },
   {
    "id": "4ffd1a22-b7bb-f111-aaad-000d3a373559",

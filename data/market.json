@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T07:31:18",
+ "updated": "2026-11-05T06:18:47",
  "groups": {
   "fibre": "Fibre & products",
   "energy": "Energy",
@@ -392,7 +392,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18",
+   "fetched": "2026-11-05T06:18:47",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -567,7 +567,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18",
+   "fetched": "2026-11-05T06:18:47",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -962,7 +962,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18",
+   "fetched": "2026-11-05T06:18:47",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -1355,7 +1355,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18",
+   "fetched": "2026-11-05T06:18:47",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRD",
@@ -1755,7 +1755,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "us_wood_pulp",
@@ -2146,7 +2146,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "gas_ttf",
@@ -2537,7 +2537,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "elec_de",
@@ -2616,7 +2616,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18",
+   "fetched": "2026-11-05T06:18:47",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "MWH2000-19999",
@@ -2704,7 +2704,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18",
+   "fetched": "2026-11-05T06:18:47",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "GJ10000-99999",
@@ -3108,7 +3108,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_eu",
@@ -3503,7 +3503,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_de",
@@ -3898,7 +3898,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_fr",
@@ -4293,7 +4293,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_it",
@@ -4688,7 +4688,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_pl",
@@ -5083,7 +5083,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_nl",
@@ -5478,7 +5478,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_be",
@@ -5873,7 +5873,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "grid_gb",
@@ -6264,7 +6264,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "eua",
@@ -6294,7 +6294,7 @@
     ]
    ],
    "status": "manual",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   },
   {
    "id": "eurusd",
@@ -6689,7 +6689,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-04T07:31:18"
+   "fetched": "2026-11-05T06:18:47"
   }
  ]
 }
