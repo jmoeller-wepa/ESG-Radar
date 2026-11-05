@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T06:47:47",
+ "updated": "2026-11-05T07:33:30",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -608,13 +608,13 @@
   },
   {
    "id": "a3c892bc-d7b2-f111-aaab-70a8a59cbac4",
-   "name": "Preview - Runtime 2.1 (Spark 4.2 and Delta 4.4)",
+   "name": "Runtime 2.1 (Spark 4.2 and Delta 4.4)",
    "product": "Data Engineering",
    "tool": "fabric",
    "type": "Preview",
    "quarter": "Q1 2027",
    "desc": "Microsoft Fabric Runtime 2.1 updates the Apache Spark foundation to Spark 4.2 and Delta Lake 4.4, with Python 3.14, Scala 2.13, and Java 21. For supported workloads, the Native Execution Engine is enabled by default to provide acceleration ",
-   "url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-preview"
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Fabric-Runtime-2-0-Generally-Available/ba-p/5326359"
   },
   {
    "id": "71469140-3550-f111-bec7-6045bd00fc61",

@@ -4,60 +4,60 @@
    "label": "News feeds",
    "status": "ok",
    "detail": "9 of 9 feeds · 0 new",
-   "at": "2026-11-05T06:45:08",
+   "at": "2026-11-05T07:30:19",
    "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "ok",
    "detail": "13 open and relevant",
-   "at": "2026-11-05T06:45:54",
+   "at": "2026-11-05T07:31:08",
    "order": 20
   },
   "procedures": {
    "label": "Regulation status",
    "status": "ok",
    "detail": "5 of 5 procedures",
-   "at": "2026-11-05T06:46:21",
+   "at": "2026-11-05T07:31:57",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
    "status": "ok",
    "detail": "19 of 19 indicators",
-   "at": "2026-11-05T06:47:37",
+   "at": "2026-11-05T07:33:21",
    "order": 30
   },
   "ets": {
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
    "detail": "Already processed this file with the same mapping – nothing to do.",
-   "at": "2026-11-05T06:47:38",
+   "at": "2026-11-05T07:33:22",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
    "detail": "8 peers found · no changes",
-   "at": "2026-11-05T06:47:42",
+   "at": "2026-11-05T07:33:25",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
    "detail": "112 planned features",
-   "at": "2026-11-05T06:47:47",
+   "at": "2026-11-05T07:33:30",
    "order": 50
   },
   "peernews": {
    "label": "Peer news",
    "status": "ok",
-   "detail": "43 headlines for 12 companies",
-   "at": "2026-11-05T06:47:46",
+   "detail": "44 headlines for 12 companies",
+   "at": "2026-11-05T07:33:28",
    "order": 46
   }
  },
- "lastRun": "2026-11-05T06:47:47",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/41982496199",
+ "lastRun": "2026-11-05T07:33:30",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/41987643724",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T06:47:46",
+ "updated": "2026-11-05T07:33:28",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -30,6 +30,12 @@
   ],
   "essity": [
    {
+    "title": "People: Arbtech; Law Distribution; BDO; Bruntwood; Essity; Cavendish; CarMoney",
+    "source": "TheBusinessDesk.com",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQlY0RlktOFZncTNZYm81cEtXYURvdnpwdTF0aE9EeFBkaVdGTjBkcmt0Q2djOElIdG5tVVh3NHhMRTJtSm43YkFTaXZja1BUMjZPQ0RnRlFBLThEMTJSNXNyZEwwSlZHWkFESzBHS3p0YzdJV2tXcjVDZ3F5SHpxM1hFOU1lbU5WcngyNlFXa2c3MlBjQ242MWV3ak80Z2g0QjZaOFlqeEt1dzNiM3c?oc=5",
+    "date": "2026-11-05"
+   },
+   {
     "title": "Essity launches community initiative connecting local production with social support in Alabama",
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOaTJ6OGx0dnFVWFhsY2pFYXNTYkhOZG11YjlxZTVaNWlXdlcwVzBYbEI0dmpzSklJdXV6M0pBOUM0cUtYcnZRbkNwZTZ6REF1cnlnWGx0aGhNUlB2ZXF6Q1dDMzZoajJBVUljSkhhUHpXRTYyNWhaNkZCYkxlaFZBblYzTlRpVV95LTY0V3g2ZlVPY25DLVBRQ0FibDg3QkplVlNralI3M256ZE13OWZJVk1wWEI0WW04MG1aSzRoMnNxU0FiRTE5ZzhmNWxadw?oc=5",
@@ -45,12 +51,6 @@
     "title": "Essity stock faces PFAS lawsuit over Carefree liners",
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcjA5eENaVlJ1YUZXN0NFdHRocldBcVRxVFBpYkw0bDVtR3ZseDZfR3dpZTJyREMwR1JNcW9qUFIzbGdnU1dTR0VLWk4xN2xpQ0RuMHdILU5lQjFmOElkb3JUSnVrZlJOOW9PazRvaEtEODd6U0JGX2dncXpqWHlxOXdkQ1REMXRucF94bVp1OFFiS2Z3dl9xVktzWEw3WUU0U09MSzF6MllUai12b3ZYN2RtWjROUQ?oc=5",
-    "date": "2026-11-04"
-   },
-   {
-    "title": "Help the Essity truly sparkle and get the Nomads a record crowd!",
-    "source": "Grassroots North Wales",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTUo1ZGJ5T2dlWUY2dGJfVW5NZndpZERSNWxiclFyTlRTWGZLZlJaY2prdWNnbjZNVGRNd2lqMzBUTm5MT3VkTld3SEt1TWI3VVA1bTc0b01BcHNtOFl3ai01em5rLURjZFlaTGNJTFR5WmNySlh0YUsxME1FSFRFZEttR0pQTFZNSG9Ealg5Z3ZrS3NsN3JIZlhnUi1XUdIBowFBVV95cUxPNDFhcFNJVTVleHlUTm9BeHRVM2ktYVIwVmtTQjNPUl84cldVUVpCZHFxZjNHVnM5dUlDRnF4WktyQjZuZXE3cXpPR1NIYzB6U0hLZGZScE8wUEN1c1l0ZG52dWFMRGlWTk9OaVVGTFA4NmpWOHBJeG9ZdUhqV1FyR2ZOQ0x2NjdfS1hqMHdzRUFGY2RLUFNjRE1Jd0ctd3RXeGVz?oc=5",
     "date": "2026-11-04"
    }
   ],
@@ -226,6 +226,12 @@
     "date": "2026-11-02"
    },
    {
+    "title": "Hengan International Group (SEHK:1044) Following Chairman's Death Is Its Low Valuation Justified",
+    "source": "Simply Wall St",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOVlFXYjIxMU9aendhd0FoUFFKUFI0blFaZllRV2t5TThOb3AtWTMzMmRsel9PMnI1d2RjbzNRWkRPaGlweFZHZGtrV2dIVzRCSXFOb2FYbWdjVHdVWDlSLUI0LWZnd2I4S2FrQ0laRDdKM1J6M2JZQjRqSS1VWXR0THJaTVRhME5aUWNSVzlIRWVXYmR4bWRSemp6WElQVUQ1cVZUd1paeGJkRUdhSFMzcVpKR1FYZnFFSmh0YW9STXg5WWd2X0o2Nnk4TzBqSFp6MDZwUVNRUmRPT29NN2lKUFRKTnTSAeoBQVVfeXFMTnR3eTZpYm1YWmZEZG9fdnk3cy1QQ2kzVE1DYnhlOWVEcExKQ1BZS0MyajJTRTZJNFlpaTFxWEN6NV9sRmo0UjJpMU9PT1dWYTEwM3B6OWVUOXNUUW1sWWlvck5VTjZOMG5WME5VbDVJVjdISWNzbnNrdUR2RnVrbTlGZHR4MDRhWWVIYzhGOEJieFZmbkU3UkVLamx4cmVHR1ZScF91ZUMtNURHU0FqQUczY3FBYjdGQVJ6a0RGYzVhVktvOWJZcFFmbTBJWjBUNVpyOGJOYWJvZkNSWWJWUm9BNGZWZzBQZlBn?oc=5",
+    "date": "2026-10-09"
+   },
+   {
     "title": "Hengan International founder Sze Man Bok dies at 78 — the industrialist exits as the company bets on overseas expansion and AI for a turnaround",
     "source": "BigGo Finance",
     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAtWXhMNm5Tb3VzXzRJa3NwekstNXZESmNhcHhJZ1Vqa0lpaUJPS2JYN2VIQUJ6VkJ2eUxLZXI0SVdscGxpYU9RMkV1c1lld0dFb0hOSF9idGlGOVRXUURjb1kzSlFiWVdwZ1o4RlJJR1N5V0ItNkE?oc=5",
@@ -240,12 +246,6 @@
     "date": "2026-11-04"
    },
    {
-    "title": "Chile's CMPC sells 60,000 hectares of forestland to J.P. Morgan Natural Capital for USD 365.5 million",
-    "source": "Prop News Time",
-    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNbEZ5TU5DUGFKUDBBaFdMR2tMSFROZHJOc3NLNG9PMnlueWdjd2Jza1JsY2w0Y1lOa0hMM1o3U3JpajlIMmlxcXhlRlFUal9pZVdqT3ZNWnlBeGRLVHd1UUY2VDVLcUhXVjB0NVNVNXgtVFZZZ0FVWGVJNnVnSHh1ejNnYzl3aHdMd3lDcEpRM2RjUVZjeWh0NUJhS1dtMUVYWVNDRUEzUndyX2JDQ0FGRGtDTnJHR3l2aWJGSjhWLUpqdVRvdC01akZFOXVJUXVIc244Q2pTWnVTZkVPY1JySHZmRUhmMTQ?oc=5",
-    "date": "2026-10-26"
-   },
-   {
     "title": "A $4.6 Billion Pulp Project in Brazil Has Chile’s CMPC in a Bind",
     "source": "Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQWjktUDJJX0x0N0VvV3lRdHNqcWppZ1hVdDB2VzZBM0VZUWNSeXBoX0JVSU5RaEdhNHNZMUEzSThRUThfYlNBaDlWS0QtT0YyY01yRVNUWmJ3d204Y0pRZFU1LTZvRFRScnZkWDhHTnlJU05mNTYyRm83c0xYaTBPVlc4eFo0eWczR1k1aTZNenVkOUd1MHNMZlhodzhVc1N1RmRXbmZTbUltb0dGdnhGLV96MU8?oc=5",
@@ -256,6 +256,12 @@
     "source": "Recycling Today",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOdUg5WmVGZ1hfb1dpT29NZjFzYy1SQkVPdXA5UXBvdV9oczZoQ3I5bHBxMm80elhrbmxCeEo3ek1PdkNqUHJLeU1sUEtOeDdVWktCV2FPNGV4WmFUblpTNTBBUFhJUFpneEY5OFZNbm00WjBRSmdQN0QwWVBYZi1nUHpoM2VfNHh6U250bmNMYjd0LVg3ZmZ5cU9RdWZWVklIYUJFY3JVX3p2NEk4VnYwMzV3?oc=5",
     "date": "2026-09-28"
+   },
+   {
+    "title": "Key deals this week: Qualcomm, Smurfit Westrock, Capri Holdings, and more",
+    "source": "TradingView",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNnhXYzk1MTNtc01wR0ZBd1dSeHhaamtCRVVWVUZ3eFVBdUxWWkVPRjJKRWFBOVpLS3VvY1FPb0JXQ05aVGhjdVlJSXRfd3B5bVRqTDdBamcydUlBdXNDLW9qNlN4V1daT0hmNE1CY3h0SXlnMDVjSUVYcmhSWWI5R0VlX3BFQzZRX3lZNFJZVFZ2WmpLejUzSUdlT1hYX0dWdExDN05QcmNJQ3M1b0p5T2ZLbENQeE5BV1BQTDQ4dXFRY2l0NFZUMjJZa0g?oc=5",
+    "date": "2026-09-27"
    }
   ],
   "kruger": [
