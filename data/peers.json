@@ -1130,7 +1130,9 @@
         "msci": {
           "v": "A",
           "y": "2025",
-          "src": "https://vir.com.vn/hengan-msci-esg-a-rating-2025-hygiene-giant-goes-greener-136725.html"
+          "d": "MSCI ESG rating upgraded from BBB to A",
+          "src": "https://www.hengan.com/",
+          "note": "Hengan ESG Report 2025, PDF p. 11"
         },
         "womenTotal": {
           "v": 54,
@@ -1147,6 +1149,34 @@
           "v": "6.8 t water per t paper (51% below national limit)",
           "y": "2024",
           "src": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0414/2025041401468.pdf"
+        },
+        "netZeroYear": {
+          "v": null,
+          "y": "2025",
+          "d": "No own target – supports China's goals: CO₂ peak before 2030, carbon neutrality before 2060",
+          "src": "https://www.hengan.com/",
+          "note": "Hengan ESG Report 2025, PDF p. 52"
+        },
+        "certifiedFibre": {
+          "v": 95,
+          "y": "2025",
+          "d": "95% of wood pulp PEFC-certified, 15% FSC-certified; 94% traceable to the forest",
+          "src": "https://www.hengan.com/",
+          "note": "Hengan ESG Report 2025, PDF p. 72"
+        },
+        "recyclablePackaging": {
+          "v": null,
+          "y": "2025",
+          "d": "92% of outer packaging bags for personal care products made of single, recyclable materials",
+          "src": "https://www.hengan.com/",
+          "note": "Hengan ESG Report 2025, PDF p. 77"
+        },
+        "safety": {
+          "v": "63 work injuries, 2,634 days lost, 0 fatalities (65 injuries in 2024)",
+          "y": "2025",
+          "d": "63 work injuries, 2,634 days lost, 0 fatalities (65 injuries in 2024)",
+          "src": "https://www.hengan.com/",
+          "note": "Hengan ESG Report 2025, PDF p. 168"
         }
       },
       "targets": [
@@ -1209,6 +1239,34 @@
           "d": "−37.5% by 2035 (2020, CMPC) · currently +9%",
           "y": "2025",
           "src": "https://www.cmpc.com/en/sustainability/environment/decarbonization-and-greenhouse-gas-emissions/"
+        },
+        "renewableElectricity": {
+          "v": 81,
+          "y": "2025",
+          "d": "81% of purchased electricity covered by renewable certificates (882 of 1,088 GWh, calculated; I-RECs)",
+          "src": "https://www.softys.com/",
+          "note": "Softys Reporte de Sostenibilidad 2025, PDF p. 122, 130"
+        },
+        "plasticTarget": {
+          "v": 50,
+          "y": "2025",
+          "d": "−50% virgin fossil plastic in packaging by 2030",
+          "src": "https://www.softys.com/",
+          "note": "Softys Reporte de Sostenibilidad 2025, PDF p. 52"
+        },
+        "recyclablePackaging": {
+          "v": null,
+          "y": "2025",
+          "d": "Target: 100% recyclable, reusable or compostable packaging by 2030 (no status reported)",
+          "src": "https://www.softys.com/",
+          "note": "Softys Reporte de Sostenibilidad 2025, PDF p. 52"
+        },
+        "safety": {
+          "v": "TRIF 1.52 (employees, 47 lost-time accidents); contractors TRIF 0.73 with 1 fatality",
+          "y": "2025",
+          "d": "TRIF 1.52 (employees, 47 lost-time accidents); contractors TRIF 0.73 with 1 fatality",
+          "src": "https://www.softys.com/",
+          "note": "Softys Reporte de Sostenibilidad 2025, PDF p. 157, 163"
         }
       },
       "targets": [
@@ -1280,6 +1338,37 @@
           "v": "TIR 0.77 (target 0.82)",
           "y": "2025",
           "src": "https://www.krugerproducts.ca/sites/default/files/2026-06/kruger-2025-sr-eng.pdf"
+        },
+        "womenManagement": {
+          "v": 28,
+          "y": "2025",
+          "d": "28% of management roles (senior leadership 25%)",
+          "src": "https://www.krugerproducts.ca/",
+          "note": "Kruger Products 2025 Sustainability Report, PDF p. 63",
+          "history": [
+            {
+              "v": 20,
+              "y": "2023"
+            },
+            {
+              "v": 23,
+              "y": "2024"
+            }
+          ]
+        },
+        "recyclablePackaging": {
+          "v": 88,
+          "y": "2025",
+          "d": "About 88% of packaging material by weight fibre-based and recyclable",
+          "src": "https://www.krugerproducts.ca/",
+          "note": "Kruger Products 2025 Sustainability Report, PDF p. 42"
+        },
+        "renewableElectricity": {
+          "v": null,
+          "y": "2025",
+          "d": "3% of total energy from renewables (4% in 2024); electricity share not reported separately",
+          "src": "https://www.krugerproducts.ca/",
+          "note": "Kruger Products 2025 Sustainability Report, PDF p. 55"
         }
       },
       "targets": [
