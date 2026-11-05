@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261104c" defer></script>
+<script src="assets/status.js?v=20261104e" defer></script>
 <style>
   :root {
     --blue-900: #002d55;
@@ -142,8 +142,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261104c">
-<script src="assets/colresize.js?v=20261104c" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261104e">
+<script src="assets/colresize.js?v=20261104e" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -211,7 +211,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261104c"></script>
+<script src="assets/carbon.js?v=20261104e"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -239,7 +239,7 @@
 
   // ---------- layout ----------
   const KEY = "radar.overview.v1";
-  const DEFAULT = { items: [{ id: "carbon", wide: true }, { id: "alerts" }, { id: "targets" }, { id: "deadlines" }, { id: "newsince" }, { id: "peernews" }], threshold: 10, snap: ["ppi_tissue", "ppi_pulp", "gas_ttf", "eurusd"] };
+  const DEFAULT = { items: [{ id: "alerts" }, { id: "targets" }, { id: "deadlines" }, { id: "newsince" }, { id: "peernews" }], threshold: 10, snap: ["ppi_tissue", "ppi_pulp", "gas_ttf", "eurusd"] };
   let L = (() => { try { const x = JSON.parse(store.get(KEY)); if (x && Array.isArray(x.items)) return { ...DEFAULT, ...x }; } catch (e) {} return JSON.parse(JSON.stringify(DEFAULT)); })();
   const save = () => store.set(KEY, JSON.stringify(L));
   let editing = false, D = {};
@@ -265,7 +265,7 @@
 
   // ---------- widgets ----------
   const W = {
-    carbon: { title: "Carbon cost exposure", desc: "WEPA's EU ETS emissions × EUA price, with a price slider", wide: true, more: ["Market →", "market.html#carbon"],
+    carbon: { off: true, title: "Carbon cost exposure", desc: "WEPA's EU ETS emissions × EUA price, with a price slider", wide: true, more: ["Market →", "market.html#carbon"],
       render(b) { CarbonCost.render(b, D.ets, D.market, {}); } },
     alerts: { title: "Market alerts", desc: "Indicators that moved beyond your threshold", more: ["Market →", "market.html"],
       render(b) {
@@ -423,7 +423,7 @@
   function renderAll() {
     const grid = $("grid"); grid.replaceChildren();
     grid.classList.toggle("editing", editing);
-    L.items = L.items.filter((x) => W[x.id]);
+    L.items = L.items.filter((x) => W[x.id] && !W[x.id].off); // "off" widgets are switched off for now
     COLS = colsNow(); grid.style.setProperty("--cols", COLS);
     const occ = place(COLS);
     L.items.forEach((item, idx) => {
@@ -501,7 +501,7 @@
 
   function renderCat() {
     const cat = $("cat"); cat.replaceChildren();
-    Object.entries(W).forEach(([id, def]) => {
+    Object.entries(W).filter(([, def]) => !def.off).forEach(([id, def]) => {
       const on = L.items.some((x) => x.id === id);
       const b = el("button", "ci" + (on ? " on" : "")); b.type = "button"; b.setAttribute("aria-pressed", String(on));
       b.append(el("b", null, (on ? "✓ " : "＋ ") + def.title), el("small", null, def.desc));

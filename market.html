@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261104c">
+<link rel="stylesheet" href="assets/side.css?v=20261104e">
 <style>
   :root {
     --blue-900: #002d55;
@@ -136,6 +136,30 @@
   /* Tiles */
   .group h3 { margin: 0 0 10px; }
   .group h3.cap:not(:first-child) { margin-top: 20px; }
+  /* Grid history pop-up */
+  dialog.gdlg { width: min(900px, calc(100vw - 32px)); max-height: calc(100vh - 48px); border: 0; border-radius: 16px; padding: 0; box-shadow: 0 24px 64px rgba(0, 20, 50, .25); color: var(--ink); }
+  dialog.gdlg::backdrop { background: rgba(0, 20, 45, .35); }
+  .gd-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 20px 24px 10px; }
+  .gd-head h3 { margin: 0; font-size: 20px; color: var(--blue-900); }
+  .gd-head p { margin: 2px 0 0; font-size: 13px; color: var(--ink-3); }
+  .gd-x { border: 0; background: #f0f2f5; width: 32px; height: 32px; border-radius: 8px; font-size: 18px; cursor: pointer; color: #4b5563; flex: none; }
+  .gd-body { padding: 4px 24px 22px; display: flex; flex-direction: column; gap: 14px; }
+  .gd-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .gd-kpis div { background: #f5f8fb; border-radius: 10px; padding: 9px 12px; font-size: 12px; color: #6b7280; }
+  .gd-kpis b { display: block; font-size: 19px; color: var(--blue-900); font-variant-numeric: tabular-nums; }
+  .gd-lg { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: #4b5563; }
+  .gd-lg span { display: inline-flex; align-items: center; gap: 6px; }
+  .gd-lg i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+  .gd-chart { position: relative; }
+  .gd-chart svg { width: 100%; height: auto; display: block; }
+  .gd-tip { position: absolute; pointer-events: none; background: #002d55; color: #fff; font-size: 12px; border-radius: 7px; padding: 5px 8px; white-space: nowrap; transform: translate(-50%, -110%); }
+  .gd-yr { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .gd-yr th, .gd-yr td { padding: 6px 10px; border-bottom: 1px solid var(--line-2); text-align: right; }
+  .gd-yr th:first-child, .gd-yr td:first-child { text-align: left; }
+  .gd-yr th { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #6b7280; }
+  .gd-foot { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-3); }
+  .gd-add { margin-left: auto; border: 0; background: #009b82; color: #fff; border-radius: 9px; padding: 8px 14px; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+  .gd-add.on { background: #fff; color: #00594a; box-shadow: inset 0 0 0 1px #33b09c; }
   .cmp-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; color: #6b7280; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
   .cs-chip { display: inline-flex; align-items: center; gap: 6px; background: #f3f5f8; border-radius: 6px; padding: 2px 8px; color: #374151; }
   .cs-chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
@@ -167,9 +191,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261104c" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261104c">
-<script src="assets/colresize.js?v=20261104c" defer></script>
+<script src="assets/status.js?v=20261104e" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261104e">
+<script src="assets/colresize.js?v=20261104e" defer></script>
 </head>
 <body>
 <header>
@@ -231,12 +255,16 @@
   </div>
 </main>
 <footer><div class="wrap">
-  <p>Sources: Eurostat (producer prices, production, energy prices) · U.S. Bureau of Labor Statistics, IMF and Federal Reserve via FRED · Bundesnetzagentur | SMARD.de (CC BY 4.0) · EU carbon price entered manually from press reports (exchange prices are licensed).</p>
+  <p>Sources: Eurostat (producer prices, production, energy prices) · Eurostat Comext (EU trade: pulp import and recovered paper export unit values = value ÷ volume, a market signal, not a contract price) · U.S. Bureau of Labor Statistics, IMF and Federal Reserve via FRED · Bundesnetzagentur | SMARD.de (CC BY 4.0) · EU carbon price entered manually from press reports (exchange prices are licensed).</p>
   <p>Updated weekly by the GitHub Action; Eurostat and FRED publish monthly, energy prices half-yearly. Indices are for trend orientation only. Pulp and recovered-paper market prices (FOEX, Fastmarkets) are paid data and therefore not shown.</p>
 </div></footer>
 
-<script src="assets/side.js?v=20261104c"></script>
-<script src="assets/carbon.js?v=20261104c"></script>
+<dialog class="gdlg" id="gdlg" aria-labelledby="gd-title">
+  <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
+  <div class="gd-body" id="gd-body"></div>
+</dialog>
+<script src="assets/side.js?v=20261104e"></script>
+<script src="assets/carbon.js?v=20261104e"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -246,13 +274,12 @@
   const LIGHT = new Set(["#f4b49f", "#96d2dc"]); // light colours: dark tick mark instead of white
   const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
   const EARLIEST = "2019-01";
-  const DEFAULT_CMP = ["ppi_tissue", "ppi_pulp", "us_recovered_paper", "gas_ttf", "us_wood_pulp", "elec_de"];
+  const DEFAULT_CMP = ["ppi_tissue", "pulp_nbsk_eu", "rcp_export_eu", "power_de_spot", "ppi_pulp", "us_recovered_paper", "gas_ttf"];
   const state = { tab: "cmp", area: RadarSide.area(), sel: new Set(), cmp: [] };
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
   // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
-    { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a row to add the country to the Compare chart." },
-    { id: "carbon", label: "Carbon cost", groups: ["carbon"], lead: "What WEPA's EU ETS emissions cost at a given carbon price – move the slider or pick another year." },
+    { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history." },
   ];
   let TABS = [];
   const ui = { open: false, exp: new Set() };
@@ -274,6 +301,8 @@
     if (unit === "€/kWh") return v.toLocaleString("en-GB", { minimumFractionDigits: 3, maximumFractionDigits: 3 });
     if (unit === "USD per EUR") return v.toLocaleString("en-GB", { minimumFractionDigits: 3, maximumFractionDigits: 3 });
     if (unit && unit.startsWith("g CO")) return Math.round(v).toLocaleString("en-GB");
+    if (unit === "€/t") return Math.round(v).toLocaleString("en-GB");
+    if (unit === "€/MWh") return v.toLocaleString("en-GB", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
     if (unit === "%" || unit === "index") return v.toLocaleString("en-GB", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
     return v.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
@@ -473,7 +502,7 @@
   function niceStep(raw) { const p = Math.pow(10, Math.floor(Math.log10(raw || 1))); const f = raw / p; return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p; }
   const trunc = (s, n) => (s.length > n ? s.slice(0, Math.max(4, n - 1)) + "…" : s);
   function shortName(i) {
-    return { ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", gas_ttf: "Gas TTF", elec_de: "Electricity DE", gas_de: "Gas DE", res_share_de: "Renewables DE", eua: "EUA", eurusd: "EUR/USD" }[i.id] || (i.country ? "Grid " + i.country : i.label);
+    return { ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", pulp_nbsk_eu: "Pulp NBSK (EU imp.)", pulp_bhkp_eu: "Pulp BHKP (EU imp.)", rcp_export_eu: "Recovered paper (EU exp.)", power_de_spot: "Power DE spot", gas_ttf: "Gas TTF", elec_de: "Electricity DE", gas_de: "Gas DE", res_share_de: "Renewables DE", eua: "EUA", eurusd: "EUR/USD" }[i.id] || (i.country ? "Grid " + i.country : i.label);
   }
 
   function renderTable(lines) {
@@ -499,7 +528,7 @@
   function spark(ind, color) {
     let pts = ind.series.filter((p) => inSel(p[0]));
     if (pts.length < 3) pts = ind.series.slice(-6); // half-yearly data: show the last three years
-    const svg = svgEl("svg", { class: "spark", viewBox: "0 0 200 34", preserveAspectRatio: "none", "aria-hidden": "true" });
+    const svg = svgEl("svg", { class: "spark", viewBox: "0 0 200 34", "aria-hidden": "true" });
     if (pts.length < 2) return svg;
     const vs = pts.map((p) => p[1]); const lo = Math.min(...vs), hi = Math.max(...vs) || 1;
     const d = pts.map((p, k) => (k ? "L" : "M") + ((k / (pts.length - 1)) * 198 + 1).toFixed(1) + " " + (31 - ((p[1] - lo) / (hi - lo || 1)) * 28).toFixed(1)).join("");
@@ -558,7 +587,7 @@
     const last = rows[0].i.series[rows[0].i.series.length - 1][0];
     const box = el("div", "panel gt");
     const head = el("div", "gt-head");
-    head.append(el("span", null, `g CO₂/kWh · 12-month average to ${fmtMonth(last)} · Ember (CC BY 4.0) · click a row to add it to the chart`));
+    head.append(el("span", null, `g CO₂/kWh · 12-month average to ${fmtMonth(last)} · Ember (CC BY 4.0) · click a country for its history`));
     box.appendChild(head);
     const wrap = el("div", "dtable"); const t = el("table", "gtt");
     const hr = el("tr"); ["Country", "12-month average", "vs. previous 12 months", "Trend 5 years", eu ? "× EU average" : ""].forEach((h) => hr.appendChild(el("th", null, h)));
@@ -567,9 +596,9 @@
     rows.forEach(({ i, now, prev }) => {
       const sel = state.cmp.includes(i.id);
       const tr = el("tr", (i.id === "grid_eu" ? "ref" : "") + (sel ? " sel" : ""));
-      tr.tabIndex = 0; tr.title = sel ? "Remove from chart" : "Add to chart";
+      tr.tabIndex = 0; tr.title = "Show the history";
       if (sel) tr.style.setProperty("--sel", colorOf[i.id]);
-      tr.addEventListener("click", () => toggle(i.id)); tr.addEventListener("keydown", (e) => { if (e.key === "Enter") toggle(i.id); });
+      tr.addEventListener("click", () => openGrid(i, items)); tr.addEventListener("keydown", (e) => { if (e.key === "Enter") openGrid(i, items); });
       tr.appendChild(el("td", null, i.id === "grid_eu" ? "EU average" : i.country || i.label));
       const bar = el("div", "gbar"); const b = el("i"); b.style.width = Math.max(2, (now / maxV) * 180) + "px";
       bar.append(el("b", null, Math.round(now).toString()), b);
@@ -585,6 +614,91 @@
     t.appendChild(tb); wrap.appendChild(t); box.appendChild(wrap);
     return box;
   }
+  // ---- Pop-up: history of one country's grid carbon intensity ----
+  function openGrid(ind, all) {
+    const s = (ind.series || []).filter((p) => p[1] != null);
+    const eu = all.find((x) => x.id === "grid_eu");
+    const name = ind.id === "grid_eu" ? "EU average" : ind.country || ind.label;
+    $("gd-title").textContent = name + " · grid carbon intensity";
+    $("gd-sub").textContent = "g CO₂ per kWh of electricity generated · monthly · Ember (CC BY 4.0)";
+    const body = $("gd-body"); body.replaceChildren();
+    if (s.length < 2) { body.appendChild(el("p", "empty", "No history yet.")); $("gdlg").showModal(); return; }
+    const roll = (arr) => arr.map((p, k) => (k < 11 ? null : [p[0], arr.slice(k - 11, k + 1).reduce((a, q) => a + q[1], 0) / 12]));
+    const r12 = roll(s).filter(Boolean);
+    const euMap = eu && eu !== ind ? new Map(roll(eu.series.filter((p) => p[1] != null)).filter(Boolean).map((p) => [p[0].slice(0, 7), p[1]])) : null;
+    // key numbers
+    const now = r12[r12.length - 1], yAgo = r12[r12.length - 13], first = r12[0];
+    const k = el("div", "gd-kpis");
+    const kp = (label, val) => { const d = el("div"); d.append(document.createTextNode(label), el("b", null, val)); return d; };
+    k.append(kp("12-month average to " + fmtMonth(now[0]), Math.round(now[1]) + " g"),
+      kp("vs. a year earlier", yAgo ? ((now[1] - yAgo[1]) / yAgo[1] * 100 > 0 ? "+" : "") + ((now[1] - yAgo[1]) / yAgo[1] * 100).toFixed(1) + " %" : "–"),
+      kp("vs. " + first[0].slice(0, 4) + " (12-month avg.)", ((now[1] - first[1]) / first[1] * 100 > 0 ? "+" : "") + ((now[1] - first[1]) / first[1] * 100).toFixed(0) + " %"),
+      kp("Lowest / highest month", Math.round(Math.min(...s.map((p) => p[1]))) + " / " + Math.round(Math.max(...s.map((p) => p[1])))));
+    body.appendChild(k);
+    // legend + chart
+    const lg = el("div", "gd-lg");
+    const li = (c, t, dash) => { const x = el("span"); const i = el("i"); i.style.background = dash ? "repeating-linear-gradient(90deg," + c + " 0 4px,transparent 4px 7px)" : c; x.append(i, document.createTextNode(t)); return x; };
+    lg.append(li("#96d2dc", "Monthly value"), li("#0064aa", "12-month average"));
+    if (euMap) lg.appendChild(li("#8a94a3", "EU average (12-month)", true));
+    body.appendChild(lg);
+    const box = el("div", "gd-chart");
+    const W = 840, H = 260, L = 44, R = 12, T = 10, B = 26;
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": name + " grid carbon intensity history" });
+    const xs = s.map((p) => p[0]);
+    const vals = s.map((p) => p[1]).concat(euMap ? [...euMap.values()] : []);
+    const hi = Math.max(...vals) * 1.05, lo = Math.max(0, Math.min(...vals) * 0.9);
+    const x = (idx) => L + (idx / (xs.length - 1)) * (W - L - R);
+    const y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+    const step = niceStep((hi - lo) / 4);
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "#eef0f3" }));
+      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "#8a94a3" }); t.textContent = Math.round(v); svg.appendChild(t);
+    }
+    xs.forEach((d, idx) => { if (d.slice(5, 7) === "01") { const t = svgEl("text", { x: x(idx), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "#8a94a3" }); t.textContent = d.slice(0, 4); svg.appendChild(t); svg.appendChild(svgEl("line", { x1: x(idx), x2: x(idx), y1: T, y2: H - B, stroke: "#f3f4f6" })); } });
+    const path = (pts, attrs) => svg.appendChild(svgEl("path", Object.assign({ d: pts.map((p, n) => (n ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(""), fill: "none", "stroke-linejoin": "round", "stroke-linecap": "round" }, attrs)));
+    const idxOf = new Map(xs.map((d, n) => [d.slice(0, 7), n]));
+    path(s.map((p, n) => [x(n), y(p[1])]), { stroke: "#96d2dc", "stroke-width": 1.6 });
+    if (euMap) path([...euMap.entries()].filter(([m]) => idxOf.has(m)).map(([m, v]) => [x(idxOf.get(m)), y(v)]), { stroke: "#8a94a3", "stroke-width": 1.6, "stroke-dasharray": "5 4" });
+    path(r12.map((p) => [x(idxOf.get(p[0].slice(0, 7))), y(p[1])]), { stroke: "#0064aa", "stroke-width": 2.6 });
+    // hover
+    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "#002d55", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
+    const tip = el("div", "gd-tip"); tip.hidden = true;
+    const r12Map = new Map(r12.map((p) => [p[0].slice(0, 7), p[1]]));
+    svg.addEventListener("pointermove", (ev) => {
+      const rc = svg.getBoundingClientRect(); const px = ((ev.clientX - rc.left) / rc.width) * W;
+      const n = Math.max(0, Math.min(xs.length - 1, Math.round(((px - L) / (W - L - R)) * (xs.length - 1))));
+      const m = xs[n].slice(0, 7);
+      hl.setAttribute("x1", x(n)); hl.setAttribute("x2", x(n)); hl.setAttribute("opacity", 1);
+      tip.hidden = false; tip.style.left = (x(n) / W) * 100 + "%"; tip.style.top = (y(s[n][1]) / H) * 100 + "%";
+      tip.textContent = fmtMonth(xs[n]) + ": " + Math.round(s[n][1]) + " g" + (r12Map.has(m) ? " · 12-mo. " + Math.round(r12Map.get(m)) : "") + (euMap && euMap.has(m) ? " · EU " + Math.round(euMap.get(m)) : "");
+    });
+    svg.addEventListener("pointerleave", () => { hl.setAttribute("opacity", 0); tip.hidden = true; });
+    box.append(svg, tip); body.appendChild(box);
+    // yearly averages
+    const years = [...new Set(s.map((p) => p[0].slice(0, 4)))];
+    const t = el("table", "gd-yr"); const hr = el("tr");
+    ["Year", "Average g CO₂/kWh", "vs. previous year", "Months", euMap ? "× EU average" : ""].forEach((h) => hr.appendChild(el("th", null, h)));
+    const th = el("thead"); th.appendChild(hr); t.appendChild(th);
+    const tb = el("tbody"); let prev = null;
+    const euYear = (yr) => { if (!eu) return null; const v = eu.series.filter((p) => p[0].startsWith(yr) && p[1] != null); return v.length ? v.reduce((a, p) => a + p[1], 0) / v.length : null; };
+    years.forEach((yr) => {
+      const v = s.filter((p) => p[0].startsWith(yr)); const avg = v.reduce((a, p) => a + p[1], 0) / v.length;
+      const tr = el("tr"); const e = euYear(yr);
+      tr.append(el("td", null, yr + (v.length < 12 ? " *" : "")), el("td", null, Math.round(avg).toString()),
+        el("td", null, prev ? ((avg - prev) / prev * 100 > 0 ? "+" : "") + ((avg - prev) / prev * 100).toFixed(1) + " %" : "–"),
+        el("td", null, String(v.length)), el("td", null, euMap && e ? (avg / e).toFixed(2) + " ×" : ""));
+      tb.prepend(tr); prev = avg;
+    });
+    t.appendChild(tb); const wrap = el("div"); wrap.style.overflowX = "auto"; wrap.appendChild(t); body.appendChild(wrap);
+    // footer: add to compare chart
+    const foot = el("div", "gd-foot");
+    foot.appendChild(el("span", null, "* incomplete year. Source: Ember, monthly electricity data (CC BY 4.0)."));
+    const on = state.cmp.includes(ind.id);
+    const add = el("button", "gd-add" + (on ? " on" : ""), on ? "✓ In the Compare chart – remove" : "Add to Compare chart"); add.type = "button";
+    add.addEventListener("click", () => { toggle(ind.id); $("gdlg").close(); });
+    foot.appendChild(add); body.appendChild(foot);
+    $("gdlg").showModal();
+  }
   function sparkVals(vals) {
     const svg = svgEl("svg", { class: "gsp", viewBox: "0 0 110 24", "aria-hidden": "true" });
     if (vals.length < 2) return svg;
@@ -593,6 +707,8 @@
     return svg;
   }
 
+  $("gd-x").addEventListener("click", () => $("gdlg").close());
+  $("gdlg").addEventListener("click", (ev) => { if (ev.target === $("gdlg")) $("gdlg").close(); });
   function buildTabs() {
     TABS = [{ id: "cmp", label: "Compare", groups: [] }, ...TAB_DEF.filter((t) => t.groups.some((g) => M.groups[g]))];
   }
@@ -740,7 +856,6 @@
       extra: [{ id: "period", title: "Period", node: periodNode, before: true, show: () => state.tab === "cmp" }, { id: "ind", title: "Indicators in chart", node: indicatorNode, show: () => state.tab === "cmp" }],
     });
     buildTabs();
-    if (/carbon/.test(START_HASH)) state.tab = "carbon";
     state.sel = preset("36");
     if (latestMonth()) ui.exp.add(latestMonth().slice(0, 4));
     readHash();

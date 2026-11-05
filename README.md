@@ -113,9 +113,12 @@ These parts are updated by hand, with the prompts in `prompts/` (they work in M3
 | Recovered paper and wood pulp producer price indices (US) | US BLS via FRED (`WPU0912`, `WPU0911`) | monthly | Public domain. Used only as a trend proxy for fibre prices |
 | EUR/USD | Federal Reserve via FRED (`EXUSEU`) | monthly | Public |
 | Renewable share of German power generation | Bundesnetzagentur \| SMARD.de | monthly | CC BY 4.0 |
+| Wholesale electricity price Germany (day-ahead DE-LU, monthly average) | Bundesnetzagentur \| SMARD.de (filter 4169) | monthly | CC BY 4.0 |
+| EU import price of pulp: NBSK (CN 4703 21) and BHKP / eucalyptus (CN 4703 29) | Eurostat Comext (`DS-045409`), unit value = import value ÷ volume, extra-EU | monthly, about 2 months' delay | Free reuse with attribution. A market signal, not a contract price |
+| EU export price of recovered paper (HS 4707, all grades) | Eurostat Comext (`DS-045409`), unit value of extra-EU exports | monthly, about 2 months' delay | Free reuse with attribution |
 | EU carbon price (EUA) | Press / exchange reports | manual | Exchange prices are licensed, so this value is entered by hand with its source |
 
-**Not included:** Pulp prices (NBSK/BHKP) and European recovered paper prices from FOEX, Fastmarkets or EUWID are paid data. Daily power exchange prices are licensed as well.
+**Not included:** Exchange-quoted pulp prices (NBSK/BHKP) and European recovered paper prices from FOEX, Fastmarkets or EUWID are paid data; the Comext unit values above are the free alternative. If a Comext series fails, `data/debug/comext.json` shows which codes were tried.
 
 **Changing indicators:** edit `config/market.json`. For Eurostat, `params` filter the query. If a code doesn't exist, the collector tries `alts` and finally only geo, NACE and product, choosing the remaining codes from `prefer`. The run summary in the Actions tab shows which parameters were actually used.
 
