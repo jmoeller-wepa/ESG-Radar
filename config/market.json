@@ -963,5 +963,60 @@
     "limits": "Based on generation, so electricity imports are not included. It is not the official factor WEPA uses in its report (often from the IEA, AIB or national agencies), and it does not affect market-based Scope 2, which depends on contracts and guarantees of origin."
   },
   "_comment_about": "'about' (what / wepa / limits) is shown when an indicator card is opened on the Market page. 'gridAbout' is used for all grid carbon intensity countries.",
-  "_comment_destatis": "Indicators with source 'destatis' need the GitHub secret DESTATIS_TOKEN (or DESTATIS_USER + DESTATIS_PASSWORD). 'match' = regular expressions for the series name in the GENESIS table; data/debug/destatis.json lists the names found. 'accumulate' keeps older months, because the table only holds the current and previous year."
+  "_comment_destatis": "Indicators with source 'destatis' need the GitHub secret DESTATIS_TOKEN (or DESTATIS_USER + DESTATIS_PASSWORD). 'match' = regular expressions for the series name in the GENESIS table; data/debug/destatis.json lists the names found. 'accumulate' keeps older months, because the table only holds the current and previous year.",
+  "costIndex": {
+    "_comment": "Tissue cost driver index on the Market page ('Cost index' tab). Weights are ILLUSTRATIVE shares of a non-integrated tissue mill's cash cost, not WEPA figures – each user can change them in the browser; edit the defaults here. 'ids' = indicators in order of preference (the first one with data is used). 'usd': true converts a US-dollar price into euro with EUR/USD. 'other' = costs held constant (labour, chemicals, packaging, logistics …).",
+    "components": [
+      {
+        "key": "nbsk",
+        "label": "Pulp – softwood (NBSK)",
+        "weight": 15,
+        "ids": [
+          "pulp_nbsk_eu"
+        ]
+      },
+      {
+        "key": "bhkp",
+        "label": "Pulp – hardwood (BHKP / eucalyptus)",
+        "weight": 20,
+        "ids": [
+          "pulp_bhkp_eu"
+        ]
+      },
+      {
+        "key": "rcp",
+        "label": "Recovered paper (deinking grades)",
+        "weight": 10,
+        "ids": [
+          "de_rcp_111",
+          "rcp_white_intra",
+          "rcp_white_exp"
+        ]
+      },
+      {
+        "key": "gas",
+        "label": "Natural gas (TTF, in €)",
+        "weight": 12,
+        "ids": [
+          "gas_ttf"
+        ],
+        "usd": true
+      },
+      {
+        "key": "power",
+        "label": "Electricity (DE day-ahead)",
+        "weight": 8,
+        "ids": [
+          "power_de_spot"
+        ]
+      }
+    ],
+    "other": 35,
+    "compare": "ppi_tissue",
+    "about": {
+      "what": "A single index of the main input costs of tissue making – pulp, recovered paper, gas and electricity – weighted by their typical share of cash cost. 100 = first month of the selected period. It is drawn next to the producer price index for tissue (what producers charge).",
+      "wepa": "When the cost index rises faster than the tissue price index, margins come under pressure (the gap turns negative); when it falls faster, there is room. It shows at a glance which input drove the change.",
+      "limits": "Illustrative weights, not WEPA's cost structure – adjust them to your own view (stored only in your browser). Uses public market prices, not WEPA's contract prices; hedging and purchase timing are not reflected. Costs outside the listed inputs are held constant."
+    }
+  }
 }

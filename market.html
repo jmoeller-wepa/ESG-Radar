@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script src="assets/theme.js?v=20261105i"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261105f">
+<link rel="stylesheet" href="assets/side.css?v=20261105i">
 <style>
   :root {
-    --blue-900: #002d55;
-    --blue-700: #0f4c9c;
+    --blue-900: var(--d-002d55-text, #002d55);
+    --blue-700: var(--d-0f4c9c-text, #0f4c9c);
     --blue-500: #1f6fd1;
-    --blue-100: #e6eef9;
-    --blue-50:  #f3f7fc;
-    --wepa: #002d55;
+    --blue-100: var(--d-e6eef9-bg, #e6eef9);
+    --blue-50:  var(--d-f3f7fc-bg, #f3f7fc);
+    --wepa: var(--d-002d55-text, #002d55);
     --red: #FF667E;
-    --red-text: #c42840;
+    --red-text: var(--d-c42840-text, #c42840);
     --green: #66C3B4;
-    --green-ink: #0d3d35;
-    --green-50: #e4f4f1;
-    --green-text: #1d6b5e;
-    --ink: #111827;
-    --ink-2: #4b5563;
-    --ink-3: #8a94a3;
-    --line: #ebedf1;
-    --line-2: #f0f1f4;
-    --bg: #fafafb;
+    --green-ink: var(--d-0d3d35-text, #0d3d35);
+    --green-50: var(--d-e4f4f1-bg, #e4f4f1);
+    --green-text: var(--d-1d6b5e-text, #1d6b5e);
+    --ink: var(--d-111827-text, #111827);
+    --ink-2: var(--d-4b5563-text, #4b5563);
+    --ink-3: var(--d-8a94a3-text, #8a94a3);
+    --line: var(--d-ebedf1-border, #ebedf1);
+    --line-2: var(--d-f0f1f4-border, #f0f1f4);
+    --bg: var(--d-fafafb-page, #fafafb);
     --font: Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; }
@@ -42,27 +43,27 @@
   .brand h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
   .nav { display: flex; gap: 4px; }
   .nav a { font-size: 14px; color: var(--ink-2); text-decoration: none; padding: 6px 12px; border-radius: 8px; }
-  .nav a:hover { background: #f3f4f6; }
-  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: #eceef1; }
+  .nav a:hover { background: var(--d-f3f4f6-bg, #f3f4f6); }
+  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: var(--d-eceef1-bg, #eceef1); }
   .meta { margin-left: auto; font-size: 13px; color: var(--ink-3); }
 
   main.wrap { padding-top: 28px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 24px; }
   .intro h2 { margin: 0; font-size: 22px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
   .intro p { margin: 4px 0 0; font-size: 13.5px; color: var(--ink-2); }
-  .cap { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6b7280; }
+  .cap { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); }
   .intro { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
   .intro p { flex-basis: 100%; }
-  .panel { background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+  .panel { background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 12px; }
 
   /* Compare chart */
   .cmp { padding: 18px 20px 14px; }
   .cmp-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 6px; }
   .cmp-head h3 { margin: 0; font-size: 15px; font-weight: 600; color: var(--blue-900); }
   .cmp-head .hint { font-size: 12.5px; color: var(--ink-3); }
-  .gran { display: inline-flex; background: #eef1f4; border-radius: 8px; padding: 2px; margin-left: auto; }
-  .gran button { border: 0; background: none; font: inherit; font-size: 12.5px; color: #4b5563; padding: 3px 10px; border-radius: 6px; cursor: pointer; }
-  .gran button[aria-pressed="true"] { background: #fff; color: var(--blue-900); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
-  .gran button small { color: #9aa2ae; font-weight: 400; margin-left: 3px; }
+  .gran { display: inline-flex; background: var(--d-eef1f4-bg, #eef1f4); border-radius: 8px; padding: 2px; margin-left: auto; }
+  .gran button { border: 0; background: none; font: inherit; font-size: 12.5px; color: var(--d-4b5563-text, #4b5563); padding: 3px 10px; border-radius: 6px; cursor: pointer; }
+  .gran button[aria-pressed="true"] { background: var(--d-fff-bg, #fff); color: var(--blue-900); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.06); }
+  .gran button small { color: var(--d-9aa2ae-text, #9aa2ae); font-weight: 400; margin-left: 3px; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-left: auto; }
   .lg { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink-2); border: 0; background: none; padding: 2px 0; cursor: pointer; }
   .lg i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
@@ -71,13 +72,23 @@
   .lg.off { color: var(--ink-3); } .lg.off i { opacity: .35; }
   .chart { position: relative; }
   .chart svg { display: block; width: 100%; height: 300px; overflow: visible; }
-  .chart .grid line { stroke: #eef0f3; }
-  .chart .base line { stroke: #c9ced6; stroke-dasharray: 3 3; }
-  .chart text { font-size: 11.5px; fill: #8a94a3; font-family: var(--font); }
-  .chart .end { font-size: 12px; font-weight: 600; fill: #374151; }
+  .chart .grid line { stroke: var(--d-eef0f3-border, #eef0f3); }
+  .chart .base line { stroke: var(--d-c9ced6-border, #c9ced6); stroke-dasharray: 3 3; }
+  .chart text { font-size: 11.5px; fill: var(--d-8a94a3-text, #8a94a3); font-family: var(--font); }
+  .chart .end { font-size: 12px; font-weight: 600; fill: var(--d-374151-text, #374151); }
+  .chart .regm { cursor: help; outline: none; }
+  .chart .regm-l { stroke: var(--d-c9b6e4-border, #c9b6e4); stroke-width: 1; stroke-dasharray: 2 3; opacity: 0; transition: opacity .12s; }
+  .chart .regm-d { fill: var(--d-fff-bg, #fff); stroke: var(--d-7a5cb8-text, #7a5cb8); stroke-width: 1.6; }
+  .chart .regm.on .regm-l, .chart .regm:focus .regm-l { opacity: 1; }
+  .chart .regm.on .regm-d, .chart .regm:focus .regm-d { fill: var(--d-7a5cb8-text, #7a5cb8); }
+  .reg-tgl { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink-2); cursor: pointer; user-select: none; }
+  .reg-tgl input { margin: 0; accent-color: #7a5cb8; }
+  .reg-tgl i { width: 9px; height: 9px; transform: rotate(45deg); border: 1.6px solid #7a5cb8; display: inline-block; border-radius: 1px; }
+  .reg-tgl small { color: var(--ink-3); }
+  .reg-tgl[hidden] { display: none; }
   .chart .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
-  .chart .xh { stroke: #9aa2ae; stroke-width: 1; }
-  .tip { position: absolute; pointer-events: none; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 20, 50, .12); padding: 8px 10px; font-size: 12.5px; min-width: 170px; z-index: 3; }
+  .chart .xh { stroke: var(--d-9aa2ae-text, #9aa2ae); stroke-width: 1; }
+  .tip { position: absolute; pointer-events: none; background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 20, 50, .12); padding: 8px 10px; font-size: 12.5px; min-width: 170px; z-index: 3; }
   .tip b { display: block; font-size: 12px; color: var(--ink-3); font-weight: 600; margin-bottom: 4px; }
   .tip div { display: flex; align-items: center; gap: 6px; justify-content: space-between; }
   .tip span { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
@@ -94,7 +105,7 @@
   .gt-head { font-size: 12.5px; color: var(--ink-3); margin-bottom: 2px; }
   .gtt { width: 100%; }
   .gtt tbody tr { cursor: pointer; }
-  .gtt tbody tr:hover td { background: #f7f9fb; }
+  .gtt tbody tr:hover td { background: var(--d-f7f9fb-bg, #f7f9fb); }
   .gtt tr.ref td { color: var(--ink-3); font-style: italic; }
   .gtt tr.sel td:first-child { box-shadow: inset 3px 0 0 var(--sel); font-weight: 600; }
   .gtt td:first-child { min-width: 120px; }
@@ -105,50 +116,50 @@
   .gsp { width: 110px; height: 24px; display: block; }
   /* Side panel: period slicer + indicator checklist */
   .ps { position: relative; padding: 0 2px 2px; }
-  .ps-dd { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; padding: 6px 12px; border: 1px solid #e1e5eb; border-radius: 10px; background: #fff; font: inherit; font-size: 13px; color: var(--ink); cursor: pointer; text-align: left; }
-  .ps-dd:hover { border-color: #c9d0d9; }
+  .ps-dd { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 36px; padding: 6px 12px; border: 1px solid var(--d-e1e5eb-border, #e1e5eb); border-radius: 10px; background: var(--d-fff-bg, #fff); font: inherit; font-size: 13px; color: var(--ink); cursor: pointer; text-align: left; }
+  .ps-dd:hover { border-color: var(--d-c9d0d9-border, #c9d0d9); }
   .chev { width: 8px; height: 8px; border-right: 1.6px solid #8a94a3; border-bottom: 1.6px solid #8a94a3; transform: rotate(45deg) translateY(-2px); flex: none; }
   .chev.up { transform: rotate(225deg) translateY(-2px); }
-  .ps-tree { margin-top: 6px; border: 1px solid #e9ecf1; border-radius: 12px; padding: 6px; background: #fff; max-height: 420px; overflow-y: auto; }
+  .ps-tree { margin-top: 6px; border: 1px solid var(--d-e9ecf1-border, #e9ecf1); border-radius: 12px; padding: 6px; background: var(--d-fff-bg, #fff); max-height: 420px; overflow-y: auto; }
   .ps-row { display: flex; align-items: center; gap: 2px; }
-  .ps-tw { width: 22px; height: 26px; border: 0; background: none; color: #8a94a3; cursor: pointer; font-size: 11px; flex: none; }
+  .ps-tw { width: 22px; height: 26px; border: 0; background: none; color: var(--d-8a94a3-text, #8a94a3); cursor: pointer; font-size: 11px; flex: none; }
   .ps-year { flex: 1; display: flex; align-items: center; gap: 8px; border: 0; background: none; padding: 5px 6px; border-radius: 7px; font: inherit; font-size: 13px; color: var(--ink-2); cursor: pointer; text-align: left; }
-  .ps-year:hover, .ind:hover:not(:disabled) { background: #f5f7f9; }
+  .ps-year:hover, .ind:hover:not(:disabled) { background: var(--d-f5f7f9-bg, #f5f7f9); }
   .ps-year b { font-weight: 600; color: var(--ink); }
-  .ps-year small { margin-left: auto; font-size: 11.5px; color: #9aa2ae; }
-  .cbx { width: 15px; height: 15px; border-radius: 4px; border: 1.5px solid #c4ccd6; flex: none; display: grid; place-items: center; font-size: 10px; line-height: 1; color: #fff; box-sizing: border-box; }
+  .ps-year small { margin-left: auto; font-size: 11.5px; color: var(--d-9aa2ae-text, #9aa2ae); }
+  .cbx { width: 15px; height: 15px; border-radius: 4px; border: 1.5px solid var(--d-c4ccd6-border, #c4ccd6); flex: none; display: grid; place-items: center; font-size: 10px; line-height: 1; color: #fff; box-sizing: border-box; }
   .cbx.on, .cbx.part { border: 0; background: #0064aa; }
-  .cbx.part::after { content: ""; width: 7px; height: 2px; background: #fff; border-radius: 1px; }
+  .cbx.part::after { content: ""; width: 7px; height: 2px; background: var(--d-fff-bg, #fff); border-radius: 1px; }
   .ps-months { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 2px 4px 8px 30px; }
-  .ps-m { border: 0; border-radius: 6px; padding: 4px 0; font: inherit; font-size: 11.5px; background: #f0f3f6; color: #4b5563; cursor: pointer; }
+  .ps-m { border: 0; border-radius: 6px; padding: 4px 0; font: inherit; font-size: 11.5px; background: var(--d-f0f3f6-bg, #f0f3f6); color: var(--d-4b5563-text, #4b5563); cursor: pointer; }
   .ps-m.on { background: #0064aa; color: #fff; }
   .ps-m:disabled { opacity: .4; cursor: default; }
-  .ps-qs { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 4px 2px; border-top: 1px solid #f0f2f5; margin-top: 4px; }
-  .ps-qs button { border: 1px solid #cfe3f1; background: #fff; color: #0064aa; border-radius: 12px; padding: 1px 9px; font: inherit; font-size: 11.5px; cursor: pointer; }
-  .ps-qs button:hover { background: #eef5fb; }
+  .ps-qs { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 4px 2px; border-top: 1px solid var(--d-f0f2f5-border, #f0f2f5); margin-top: 4px; }
+  .ps-qs button { border: 1px solid var(--d-cfe3f1-border, #cfe3f1); background: var(--d-fff-bg, #fff); color: var(--d-0064aa-text, #0064aa); border-radius: 12px; padding: 1px 9px; font: inherit; font-size: 11.5px; cursor: pointer; }
+  .ps-qs button:hover { background: var(--d-eef5fb-bg, #eef5fb); }
   .ps-empty { margin: 4px 8px; font-size: 12.5px; color: var(--ink-3); }
   .ind-list { display: flex; flex-direction: column; gap: 1px; padding: 0 2px; }
-  .ind-grp { margin: 8px 8px 2px; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #9aa2ae; }
+  .ind-grp { margin: 8px 8px 2px; font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--d-9aa2ae-text, #9aa2ae); }
   .ind-grp:first-child { margin-top: 0; }
   div.ind-grp { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-  .ind-all { border: 0; background: none; padding: 0; font: inherit; font-size: 11px; font-weight: 600; letter-spacing: 0; text-transform: none; color: #0064aa; cursor: pointer; }
+  .ind-all { border: 0; background: none; padding: 0; font: inherit; font-size: 11px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--d-0064aa-text, #0064aa); cursor: pointer; }
   .ind-all:hover { text-decoration: underline; }
   /* small multiples (more than 6 indicators) */
   .sm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 12px; }
-  .sm { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px 6px; background: #fff; display: flex; flex-direction: column; gap: 2px; min-width: 0; position: relative; }
+  .sm { border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px 6px; background: var(--d-fff-bg, #fff); display: flex; flex-direction: column; gap: 2px; min-width: 0; position: relative; }
   .sm-h { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
   .sm-h button.t { border: 0; background: none; padding: 0; font: inherit; font-size: 12.5px; font-weight: 600; color: var(--blue-900); cursor: pointer; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
   .sm-h button.t:hover { text-decoration: underline; }
-  .sm-h .x { border: 0; background: none; color: #9aa2ae; cursor: pointer; font-size: 14px; padding: 0 2px; }
-  .sm-v { font-size: 11.5px; color: #6b7280; font-variant-numeric: tabular-nums; }
-  .sm-v b { color: #111827; font-size: 13px; }
+  .sm-h .x { border: 0; background: none; color: var(--d-9aa2ae-text, #9aa2ae); cursor: pointer; font-size: 14px; padding: 0 2px; }
+  .sm-v { font-size: 11.5px; color: var(--d-6b7280-text, #6b7280); font-variant-numeric: tabular-nums; }
+  .sm-v b { color: var(--d-111827-text, #111827); font-size: 13px; }
   .chart .sm svg { display: block; width: 100%; height: 86px; overflow: visible; }
-  .sm svg text { font-size: 10px; fill: #9aa2ae; font-family: var(--font); }
-  .sm-tip { position: absolute; pointer-events: none; background: #002d55; color: #fff; font-size: 11.5px; border-radius: 6px; padding: 3px 7px; white-space: nowrap; transform: translate(-50%, -100%); }
-  .sm-note { margin: 0 0 8px; font-size: 12.5px; color: #6b7280; }
-  .ind { display: flex; align-items: center; gap: 9px; border: 0; background: none; padding: 5px 8px; border-radius: 7px; font: inherit; font-size: 13px; color: #374151; cursor: pointer; text-align: left; }
+  .sm svg text { font-size: 10px; fill: var(--d-9aa2ae-text, #9aa2ae); font-family: var(--font); }
+  .sm-tip { position: absolute; pointer-events: none; background: var(--d-002d55-bg, #002d55); color: #fff; font-size: 11.5px; border-radius: 6px; padding: 3px 7px; white-space: nowrap; transform: translate(-50%, -100%); }
+  .sm-note { margin: 0 0 8px; font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); }
+  .ind { display: flex; align-items: center; gap: 9px; border: 0; background: none; padding: 5px 8px; border-radius: 7px; font: inherit; font-size: 13px; color: var(--d-374151-text, #374151); cursor: pointer; text-align: left; }
   .ind:disabled { opacity: .45; cursor: default; }
-  .ind-note { margin: 6px 8px 2px; font-size: 11.5px; color: #9aa2ae; }
+  .ind-note { margin: 6px 8px 2px; font-size: 11.5px; color: var(--d-9aa2ae-text, #9aa2ae); }
   .cc-panel { padding: 16px 18px; margin-bottom: 14px; scroll-margin-top: 16px; }
   .cc-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 10px; }
   .cc-head h4 { margin: 0; font-size: 15px; color: var(--blue-900); }
@@ -162,54 +173,57 @@
   .gd-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 20px 24px 10px; }
   .gd-head h3 { margin: 0; font-size: 20px; color: var(--blue-900); }
   .gd-head p { margin: 2px 0 0; font-size: 13px; color: var(--ink-3); }
-  .gd-x { border: 0; background: #f0f2f5; width: 32px; height: 32px; border-radius: 8px; font-size: 18px; cursor: pointer; color: #4b5563; flex: none; }
+  .gd-x { border: 0; background: var(--d-f0f2f5-bg, #f0f2f5); width: 32px; height: 32px; border-radius: 8px; font-size: 18px; cursor: pointer; color: var(--d-4b5563-text, #4b5563); flex: none; }
   .gd-body { padding: 4px 24px 22px; display: flex; flex-direction: column; gap: 14px; }
   .gd-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
-  .gd-kpis div { background: #f5f8fb; border-radius: 10px; padding: 9px 12px; font-size: 12px; color: #6b7280; }
+  .gd-kpis div { background: var(--d-f5f8fb-bg, #f5f8fb); border-radius: 10px; padding: 9px 12px; font-size: 12px; color: var(--d-6b7280-text, #6b7280); }
   .gd-kpis b { display: block; font-size: 19px; color: var(--blue-900); font-variant-numeric: tabular-nums; }
-  .gd-lg { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: #4b5563; }
+  .gd-lg { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--d-4b5563-text, #4b5563); }
   .gd-lg span { display: inline-flex; align-items: center; gap: 6px; }
   .gd-lg i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
   .gd-chart { position: relative; }
   .gd-chart svg { width: 100%; height: auto; display: block; }
-  .gd-tip { position: absolute; pointer-events: none; background: #002d55; color: #fff; font-size: 12px; border-radius: 7px; padding: 5px 8px; white-space: nowrap; transform: translate(-50%, -110%); }
+  .gd-tip { position: absolute; pointer-events: none; background: var(--d-002d55-bg, #002d55); color: #fff; font-size: 12px; border-radius: 7px; padding: 5px 8px; white-space: nowrap; transform: translate(-50%, -110%); }
   .gd-about { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-  .gd-about > div { border-radius: 10px; padding: 10px 12px; background: #f7f9fb; border-top: 3px solid #96d2dc; }
-  .gd-about > .ab1 { border-top-color: #33b09c; background: #f1faf7; }
-  .gd-about > .ab2 { border-top-color: #f4b49f; background: #fdf6f3; }
+  .gd-about > div { border-radius: 10px; padding: 10px 12px; background: var(--d-f7f9fb-bg, #f7f9fb); border-top: 3px solid var(--d-96d2dc-border, #96d2dc); }
+  .gd-about > .ab1 { border-top-color: #33b09c; background: var(--d-f1faf7-bg, #f1faf7); }
+  .gd-about > .ab2 { border-top-color: var(--d-f4b49f-border, #f4b49f); background: var(--d-fdf6f3-bg, #fdf6f3); }
   .gd-about b { display: block; font-size: 12px; letter-spacing: .03em; color: var(--blue-900); margin-bottom: 4px; }
-  .gd-about p { margin: 0; font-size: 13px; line-height: 1.5; color: #374151; }
+  .gd-about p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--d-374151-text, #374151); }
   @media (max-width: 760px) { .gd-about { grid-template-columns: 1fr; } }
-  .gd-warn { margin: 0; font-size: 12.5px; color: #8a5a00; background: #fff6e0; border-radius: 8px; padding: 6px 10px; }
+  .gd-warn { margin: 0; font-size: 12.5px; color: var(--d-8a5a00-text, #8a5a00); background: var(--d-fff6e0-bg, #fff6e0); border-radius: 8px; padding: 6px 10px; }
   .tile { cursor: pointer; }
   .tile .pin { cursor: pointer; font: inherit; }
   .ind-sec { padding: 16px 18px; display: flex; flex-direction: column; gap: 14px; }
   .ind-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
   .ind-h h3 { margin: 0; font-size: 16px; color: var(--blue-900); }
   .ind-h span { font-size: 12.5px; color: var(--ink-3); }
-  .gd-kpis small { display: block; font-size: 11.5px; color: #6b7280; margin-top: 1px; }
+  .gd-kpis small { display: block; font-size: 11.5px; color: var(--d-6b7280-text, #6b7280); margin-top: 1px; }
   .ind-k { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)) !important; }
-  .ind-t tr.us td { background: #f1faf7; font-weight: 600; color: var(--blue-900); }
-  .ind-t td.chg.up { color: #1d7a6b; } .ind-t td.chg.dn { color: #c42840; }
-  .ind-note, .ind-src { margin: 0; font-size: 12.5px; color: #6b7280; }
+  .ind-t tr.us td { background: var(--d-f1faf7-bg, #f1faf7); font-weight: 600; color: var(--blue-900); }
+  .ind-t td.chg { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .ind-note, .ind-src { margin: 0; font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); }
+  .cost-t td:nth-child(n+3), .cost-t th:nth-child(n+3) { text-align: right; }
+  .w-in { width: 64px; font: inherit; font-size: 13px; padding: 3px 6px; border: 1px solid var(--d-d5dbe3-border, #d5dbe3); border-radius: 6px; text-align: right; }
+  button.link { border: 0; background: none; padding: 0; font: inherit; color: var(--d-0064aa-text, #0064aa); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
   .gd-yr { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
   .gd-yr th, .gd-yr td { padding: 6px 10px; border-bottom: 1px solid var(--line-2); text-align: right; }
   .gd-yr th:first-child, .gd-yr td:first-child { text-align: left; }
-  .gd-yr th { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #6b7280; }
+  .gd-yr th { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); }
   .gd-foot { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-3); }
   .gd-add { margin-left: auto; border: 0; background: #009b82; color: #fff; border-radius: 9px; padding: 8px 14px; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; }
-  .gd-add.on { background: #fff; color: #00594a; box-shadow: inset 0 0 0 1px #33b09c; }
-  .cmp-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; color: #6b7280; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
-  .cs-chip { display: inline-flex; align-items: center; gap: 6px; background: #f3f5f8; border-radius: 6px; padding: 2px 8px; color: #374151; }
+  .gd-add.on { background: var(--d-fff-bg, #fff); color: var(--d-00594a-text, #00594a); box-shadow: inset 0 0 0 1px #33b09c; }
+  .cmp-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; color: var(--d-6b7280-text, #6b7280); background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+  .cs-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--d-f3f5f8-bg, #f3f5f8); border-radius: 6px; padding: 2px 8px; color: var(--d-374151-text, #374151); }
   .cs-chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-  .cs-go { margin-left: auto; border: 0; background: none; color: #0064aa; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 0; }
+  .cs-go { margin-left: auto; border: 0; background: none; color: var(--d-0064aa-text, #0064aa); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; padding: 0; }
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
-  .tile { position: relative; display: flex; flex-direction: column; gap: 6px; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 12px; min-height: 178px; cursor: pointer; color: inherit; font: inherit; transition: border-color .15s, box-shadow .15s; }
-  .tile:hover { border-color: #d5dae2; box-shadow: 0 4px 14px rgba(0, 20, 50, .06); }
+  .tile { position: relative; display: flex; flex-direction: column; gap: 6px; text-align: left; background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 12px; min-height: 178px; cursor: pointer; color: inherit; font: inherit; transition: border-color .15s, box-shadow .15s; }
+  .tile:hover { border-color: var(--d-d5dae2-border, #d5dae2); box-shadow: 0 4px 14px rgba(0, 20, 50, .06); }
   .tile.sel { border-color: var(--sel, var(--blue-900)); box-shadow: inset 0 3px 0 var(--sel, var(--blue-900)); }
   .tile.static { cursor: default; }
   .tile .lbl { font-size: 13px; color: var(--ink-2); line-height: 1.35; padding-right: 26px; min-height: 35px; }
-  .tile .pin { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid #d0d5dd; display: grid; place-items: center; font-size: 13px; line-height: 1; color: #fff; }
+  .tile .pin { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid var(--d-d0d5dd-border, #d0d5dd); display: grid; place-items: center; font-size: 13px; line-height: 1; color: #fff; }
   .tile.sel .pin { background: var(--sel); border-color: var(--sel); }
   .tile .val { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
   .tile .val b { font-size: 24px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
@@ -222,7 +236,7 @@
   .tile .src a { color: var(--ink-3); text-decoration: none; }
   .tile .src a:hover { color: var(--blue-700); }
   .tile .na { font-size: 13px; color: var(--ink-3); margin: auto 0; }
-  .tile .warn { font-size: 11.5px; color: #8a6a00; }
+  .tile .warn { font-size: 11.5px; color: var(--d-8a6a00-text, #8a6a00); }
   .tile .note { font-size: 12px; color: var(--ink-3); }
 
   footer { border-top: 1px solid var(--line); padding: 16px 0 28px; font-size: 12.5px; color: var(--ink-3); }
@@ -230,9 +244,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261105f" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261105f">
-<script src="assets/colresize.js?v=20261105f" defer></script>
+<script src="assets/status.js?v=20261105i" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261105i">
+<script src="assets/colresize.js?v=20261105i" defer></script>
 </head>
 <body>
 <header>
@@ -283,6 +297,7 @@
         <h3 id="cmp-title">Trends</h3>
         <span class="hint" id="cmp-hint">Index · first month of the period = 100</span>
         <span class="gran" id="gran" role="group" aria-label="Time axis"></span>
+        <label class="reg-tgl" id="reg-toggle" hidden><input type="checkbox" id="reg-cb"><i aria-hidden="true"></i>Regulation milestones <small></small></label>
         <div class="legend" id="legend"></div>
       </div>
       <div class="chart" id="chart"></div>
@@ -303,8 +318,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261105f"></script>
-<script src="assets/carbon.js?v=20261105f"></script>
+<script src="assets/side.js?v=20261105i"></script>
+<script src="assets/carbon.js?v=20261105i"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -312,15 +327,28 @@
   const SLOTS = ["#33b09c", "#0064aa", "#f4b49f", "#335777", "#96d2dc", "#828282"]; // fixed order; a series keeps its colour while selected (6th: WEPA grey)
   const MAX_LINES = 6;      // up to 6 lines share one chart; with more, every indicator gets its own small chart
   const MAX_SEL = 40;
-  const SM_COLOR = "#0064aa"; // small multiples: one colour, the panel title carries the identity
+  const SM_COLOR = "var(--d-0064aa-text, #0064aa)"; // small multiples: one colour, the panel title carries the identity
   const LIGHT = new Set(["#f4b49f", "#96d2dc"]); // light colours: dark tick mark instead of white
   const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
   const EARLIEST = "2019-01";
   const DEFAULT_CMP = ["ppi_tissue", "pulp_nbsk_eu", "rcp_export_eu", "power_de_spot", "ppi_pulp", "us_recovered_paper", "gas_ttf"];
   const state = { gran: "auto", tab: "cmp", area: RadarSide.area(), sel: new Set(), cmp: [] };
+  // regulation milestones as markers on the Trends time axis (data/roadmap.json)
+  let REG_EVENTS = [];
+  let showReg = true; try { showReg = localStorage.getItem("radar.trendsReg") !== "0"; } catch (e) {}
+  function regEvents(rm) {
+    const out = [];
+    ((rm && rm.rows) || []).forEach((r) => {
+      (r.milestones || []).forEach((m) => out.push({ d: m.date, label: m.label, topic: r.label, area: r.area }));
+      (r.phases || []).forEach((ph) => { if (ph.from && /appl|force|start/i.test((ph.status || "") + " " + (ph.label || ""))) out.push({ d: ph.from, label: ph.label, topic: r.label, area: r.area }); });
+    });
+    const seen = new Set();
+    return out.filter((e) => e.d && !seen.has(e.d + e.topic) && seen.add(e.d + e.topic)).sort((a, b) => a.d.localeCompare(b.d));
+  }
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
   // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
+    { id: "cost", label: "Cost index", groups: [], lead: "Tissue cost driver index: pulp, recovered paper, gas and electricity in one line, set against the producer price index for tissue." },
     { id: "industry", label: "Industry", groups: [], lead: "The paper industry around WEPA: German production and sales by grade (monthly), recovered paper use by grade and the European picture (yearly)." },
     { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history and what it means for WEPA." },
   ];
@@ -508,7 +536,12 @@
     }
 
     const W = Math.max(320, box.clientWidth || 800), H = box.clientWidth < 600 ? 240 : 300;
-    const m = { t: 12, r: Math.min(150, W * 0.22), b: 26, l: 40 };
+    // right margin = width of the longest end label (measured), so names are not cut off
+    const ctx = (renderChart._c = renderChart._c || document.createElement("canvas")).getContext("2d");
+    ctx.font = "600 12px " + getComputedStyle(box).fontFamily;
+    const endText = (l) => Math.round(l.pts[l.pts.length - 1].v) + " " + shortName(l.ind);
+    const need = Math.max(...lines.map((l) => ctx.measureText(endText(l)).width)) + 16;
+    const m = { t: 12, r: Math.min(need, W * 0.34), b: 26, l: 40 };
     const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Indexed comparison chart" });
     const months = monthRange(start, periodEnd());
     const t0 = start, t1 = months[months.length - 1];
@@ -537,7 +570,7 @@
       const at = G === "month" ? b : mid(b);
       if (x(at) > W - m.r + 4) return;
       // separators at year starts for months / quarters
-      if (G !== "year" && (b.endsWith("-01") || b.endsWith("Q1")) && k) svg.appendChild(svgEl("line", { x1: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), x2: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), y1: m.t, y2: H - m.b, stroke: "#eef0f3" }));
+      if (G !== "year" && (b.endsWith("-01") || b.endsWith("Q1")) && k) svg.appendChild(svgEl("line", { x1: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), x2: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), y1: m.t, y2: H - m.b, stroke: "var(--d-eef0f3-border, #eef0f3)" }));
       const t = svgEl("text", { x: x(at), y: H - 6, "text-anchor": "middle" });
       t.textContent = G === "year" ? b : G === "quarter" ? (b.endsWith("Q1") || k === 0 ? b.slice(5) + " ’" + b.slice(2, 4) : b.slice(5)) : (b.endsWith("-01") || k === 0 ? MONS[+b.slice(5, 7) - 1] + " ’" + b.slice(2, 4) : MONS[+b.slice(5, 7) - 1]);
       xl.appendChild(t);
@@ -557,18 +590,44 @@
       svg.appendChild(svgEl("path", { class: "line", stroke: l.color, d }));
       if (G !== "month" && l.pts.length <= 40) l.pts.forEach((p) => svg.appendChild(svgEl("circle", { cx: x(p.d), cy: y(p.v), r: 2.6, fill: l.color })));
       const last = l.pts[l.pts.length - 1];
-      svg.appendChild(svgEl("circle", { cx: x(last.d), cy: y(last.v), r: 3.5, fill: l.color, stroke: "#fff", "stroke-width": 2 }));
-      ends.push({ y: y(last.v), x: x(last.d), text: Math.round(last.v) + " " + shortName(l.ind) });
+      svg.appendChild(svgEl("circle", { cx: x(last.d), cy: y(last.v), r: 3.5, fill: l.color, stroke: "var(--d-fff-border, #fff)", "stroke-width": 2 }));
+      ends.push({ y: y(last.v), x: x(last.d), text: endText(l), full: l.ind.label });
     });
     ends.sort((a, b) => a.y - b.y);
     for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 15) ends[k].y = ends[k - 1].y + 15;
-    ends.forEach((e) => { const t = svgEl("text", { class: "end", x: Math.min(e.x, W - m.r) + 8, y: e.y + 4 }); t.textContent = trunc(e.text, Math.floor(m.r / 7)); svg.appendChild(t); });
+    ends.forEach((e) => {
+      const t = svgEl("text", { class: "end", x: Math.min(e.x, W - m.r) + 8, y: e.y + 4 });
+      let txt = e.text; while (txt.length > 6 && ctx.measureText(txt).width > m.r - 12) txt = txt.slice(0, -2);
+      t.textContent = txt === e.text ? txt : txt.trimEnd() + "…";
+      const ti = svgEl("title"); ti.textContent = e.full; t.appendChild(ti); svg.appendChild(t);
+    });
 
     // hover: crosshair + tooltip
     const xh = svgEl("line", { class: "xh", y1: m.t, y2: H - m.b, visibility: "hidden" }); svg.appendChild(xh);
     const hit = svgEl("rect", { x: m.l, y: 0, width: W - m.l - m.r, height: H, fill: "transparent" }); svg.appendChild(hit);
     box.appendChild(svg);
     const tip = el("div", "tip"); tip.hidden = true; box.appendChild(tip);
+    // regulation milestones: small markers on the time axis, hover for the name
+    const evs = showReg ? REG_EVENTS.filter((e) => e.d.slice(0, 7) >= t0.slice(0, 7) && e.d.slice(0, 7) <= t1.slice(0, 7) && (state.area === "all" || !e.area || e.area === state.area)) : [];
+    const byM = {}; evs.forEach((e) => (byM[e.d.slice(0, 7)] = byM[e.d.slice(0, 7)] || []).push(e));
+    Object.entries(byM).forEach(([mo, list]) => {
+      const cx = x(mo), cy = H - m.b;
+      const g = svgEl("g", { class: "regm", tabindex: "0", role: "img", "aria-label": list.map((e) => e.topic + ": " + e.label).join("; ") });
+      g.appendChild(svgEl("line", { x1: cx, x2: cx, y1: m.t, y2: cy, class: "regm-l" }));
+      g.appendChild(svgEl("path", { d: `M${cx} ${cy - 6} L${cx + 5} ${cy} L${cx} ${cy + 6} L${cx - 5} ${cy} Z`, class: "regm-d" }));
+      g.appendChild(svgEl("rect", { x: cx - 9, y: cy - 10, width: 18, height: 20, fill: "transparent" }));
+      const show = () => {
+        tip.replaceChildren(el("b", null, "Regulation · " + fmtMonth(mo)));
+        list.forEach((e) => { const row = el("div"); row.append(el("span", null, e.topic), el("em", null, e.label)); tip.appendChild(row); });
+        tip.hidden = false; g.classList.add("on");
+        const r = svg.getBoundingClientRect(); const left = (cx / W) * r.width; const tw = tip.offsetWidth;
+        tip.style.left = Math.max(0, Math.min(r.width - tw, left - tw / 2)) + "px"; tip.style.top = Math.max(0, (cy / H) * r.height - tip.offsetHeight - 14) + "px";
+      };
+      const hide = () => { tip.hidden = true; g.classList.remove("on"); };
+      g.addEventListener("pointerenter", show); g.addEventListener("pointerleave", hide); g.addEventListener("focus", show); g.addEventListener("blur", hide);
+      svg.appendChild(g);
+    });
+    const rt = $("reg-toggle"); if (rt) { rt.hidden = !REG_EVENTS.length; rt.querySelector("small").textContent = evs.length ? Object.keys(byM).length + " in period" : ""; }
     const move = (ev) => {
       const r = svg.getBoundingClientRect(); const px = ((ev.clientX - r.left) / r.width) * W;
       let best = null, bd = 1e9;
@@ -611,7 +670,7 @@
       const last = l.pts[l.pts.length - 1];
       const v = el("div", "sm-v"); v.append(el("b", null, String(Math.round(last.v))), document.createTextNode(" · " + fmtVal(last.raw, l.ind.unit) + " " + unitLabel(l.ind.unit) + " · " + fmtDate(last.d, l.ind)));
       const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: "none", role: "img", "aria-label": shortName(l.ind) + " indexed" });
-      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(100), y2: y(100), stroke: "#c9ced6", "stroke-dasharray": "3 3", "vector-effect": "non-scaling-stroke" }));
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(100), y2: y(100), stroke: "var(--d-c9ced6-border, #c9ced6)", "stroke-dasharray": "3 3", "vector-effect": "non-scaling-stroke" }));
       const d = l.pts.map((p, k) => (k ? "L" : "M") + x(p.d).toFixed(1) + " " + y(p.v).toFixed(1)).join("");
       svg.appendChild(svgEl("path", { d, fill: "none", stroke: SM_COLOR, "stroke-width": 2, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }));
       const tip = el("div", "sm-tip"); tip.hidden = true;
@@ -661,7 +720,7 @@
     if (pts.length < 2) return svg;
     const vs = pts.map((p) => p[1]); const lo = Math.min(...vs), hi = Math.max(...vs) || 1;
     const d = pts.map((p, k) => (k ? "L" : "M") + ((k / (pts.length - 1)) * 198 + 1).toFixed(1) + " " + (31 - ((p[1] - lo) / (hi - lo || 1)) * 28).toFixed(1)).join("");
-    svg.appendChild(svgEl("path", { d, fill: "none", stroke: color || "#335777", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
+    svg.appendChild(svgEl("path", { d, fill: "none", stroke: color || "var(--d-335777-text, #335777)", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
     return svg;
   }
   function tile(ind) {
@@ -677,7 +736,7 @@
     if (can) {
       const p = el("button", "pin", sel ? "✓" : ""); p.type = "button"; p.setAttribute("role", "checkbox"); p.setAttribute("aria-checked", String(sel));
       p.title = sel ? "Remove from the Trends chart" : "Add to the Trends chart"; p.setAttribute("aria-label", p.title + " – " + ind.label);
-      if (sel && LIGHT.has(colorOf[ind.id])) p.style.color = "#002d55";
+      if (sel && LIGHT.has(colorOf[ind.id])) p.style.color = "var(--d-002d55-text, #002d55)";
       p.addEventListener("click", (e) => { e.stopPropagation(); toggle(ind.id); });
       t.appendChild(p);
     }
@@ -760,7 +819,7 @@
     return box;
   }
   // ---- Pop-up for any indicator: key numbers, explanation for WEPA, history chart, yearly averages ----
-  let ABOUT = {}, GRID_ABOUT = null, IND = null; // from config/market.json (loaded with the data)
+  let ABOUT = {}, GRID_ABOUT = null, IND = null, COST = null; // from config/market.json (loaded with the data)
   function aboutBlock(ind) {
     const a = ind.group === "grid" ? GRID_ABOUT : ABOUT[ind.id] || ind.about;
     if (!a) return null;
@@ -818,17 +877,17 @@
     const y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
     const step = niceStep((hi - lo) / 4);
     for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
-      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "#eef0f3" }));
-      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "#8a94a3" }); t.textContent = Math.round(v); svg.appendChild(t);
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--d-eef0f3-border, #eef0f3)" }));
+      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = Math.round(v); svg.appendChild(t);
     }
-    xs.forEach((d, idx) => { if (d.slice(5, 7) === "01") { const t = svgEl("text", { x: x(idx), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "#8a94a3" }); t.textContent = d.slice(0, 4); svg.appendChild(t); svg.appendChild(svgEl("line", { x1: x(idx), x2: x(idx), y1: T, y2: H - B, stroke: "#f3f4f6" })); } });
+    xs.forEach((d, idx) => { if (d.slice(5, 7) === "01") { const t = svgEl("text", { x: x(idx), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = d.slice(0, 4); svg.appendChild(t); svg.appendChild(svgEl("line", { x1: x(idx), x2: x(idx), y1: T, y2: H - B, stroke: "var(--d-f3f4f6-border, #f3f4f6)" })); } });
     const path = (pts, attrs) => svg.appendChild(svgEl("path", Object.assign({ d: pts.map((p, n) => (n ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(""), fill: "none", "stroke-linejoin": "round", "stroke-linecap": "round" }, attrs)));
     const idxOf = new Map(xs.map((d, n) => [d.slice(0, 7), n]));
-    path(s.map((p, n) => [x(n), y(p[1])]), { stroke: "#96d2dc", "stroke-width": 1.6 });
-    if (euMap) path([...euMap.entries()].filter(([m]) => idxOf.has(m)).map(([m, v]) => [x(idxOf.get(m)), y(v)]), { stroke: "#8a94a3", "stroke-width": 1.6, "stroke-dasharray": "5 4" });
-    path(r12.map((p) => [x(idxOf.get(p[0].slice(0, 7))), y(p[1])]), { stroke: "#0064aa", "stroke-width": 2.6 });
+    path(s.map((p, n) => [x(n), y(p[1])]), { stroke: "var(--d-96d2dc-border, #96d2dc)", "stroke-width": 1.6 });
+    if (euMap) path([...euMap.entries()].filter(([m]) => idxOf.has(m)).map(([m, v]) => [x(idxOf.get(m)), y(v)]), { stroke: "var(--d-8a94a3-text, #8a94a3)", "stroke-width": 1.6, "stroke-dasharray": "5 4" });
+    path(r12.map((p) => [x(idxOf.get(p[0].slice(0, 7))), y(p[1])]), { stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 2.6 });
     // hover
-    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "#002d55", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
+    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "var(--d-002d55-text, #002d55)", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
     const tip = el("div", "gd-tip"); tip.hidden = true;
     const r12Map = new Map(r12.map((p) => [p[0].slice(0, 7), p[1]]));
     svg.addEventListener("pointermove", (ev) => {
@@ -899,14 +958,14 @@
     const y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
     const step = niceStep((hi - lo) / 4);
     for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
-      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "#eef0f3" }));
-      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "#8a94a3" }); t.textContent = fmtVal(Math.abs(v) < step / 1e6 ? 0 : v, ind.unit === "index" ? "%" : ind.unit); svg.appendChild(t);
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--d-eef0f3-border, #eef0f3)" }));
+      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = fmtVal(Math.abs(v) < step / 1e6 ? 0 : v, ind.unit === "index" ? "%" : ind.unit); svg.appendChild(t);
     }
     let lastYear = null;
-    xs.forEach((d, idx) => { const yr = d.slice(0, 4); if (yr !== lastYear) { lastYear = yr; const t = svgEl("text", { x: x(idx), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "#8a94a3" }); t.textContent = yr; svg.appendChild(t); svg.appendChild(svgEl("line", { x1: x(idx), x2: x(idx), y1: T, y2: H - B, stroke: "#f3f4f6" })); } });
-    svg.appendChild(svgEl("path", { d: s.map((p, n) => (n ? "L" : "M") + x(n).toFixed(1) + " " + y(p[1]).toFixed(1)).join(""), fill: "none", stroke: "#0064aa", "stroke-width": 2.4, "stroke-linejoin": "round", "stroke-linecap": "round" }));
-    if (s.length < 30) s.forEach((p, n) => svg.appendChild(svgEl("circle", { cx: x(n), cy: y(p[1]), r: 3, fill: "#0064aa" })));
-    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "#002d55", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
+    xs.forEach((d, idx) => { const yr = d.slice(0, 4); if (yr !== lastYear) { lastYear = yr; const t = svgEl("text", { x: x(idx), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = yr; svg.appendChild(t); svg.appendChild(svgEl("line", { x1: x(idx), x2: x(idx), y1: T, y2: H - B, stroke: "var(--d-f3f4f6-border, #f3f4f6)" })); } });
+    svg.appendChild(svgEl("path", { d: s.map((p, n) => (n ? "L" : "M") + x(n).toFixed(1) + " " + y(p[1]).toFixed(1)).join(""), fill: "none", stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 2.4, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    if (s.length < 30) s.forEach((p, n) => svg.appendChild(svgEl("circle", { cx: x(n), cy: y(p[1]), r: 3, fill: "var(--d-0064aa-text, #0064aa)" })));
+    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "var(--d-002d55-text, #002d55)", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
     const tip = el("div", "gd-tip"); tip.hidden = true;
     svg.addEventListener("pointermove", (ev) => {
       const rc = svg.getBoundingClientRect(); const px = ((ev.clientX - rc.left) / rc.width) * W;
@@ -940,12 +999,127 @@
     const svg = svgEl("svg", { class: "gsp", viewBox: "0 0 110 24", "aria-hidden": "true" });
     if (vals.length < 2) return svg;
     const lo = Math.min(...vals), hi = Math.max(...vals);
-    svg.appendChild(svgEl("path", { d: vals.map((v, k) => (k ? "L" : "M") + (2 + (k / (vals.length - 1)) * 106).toFixed(1) + " " + (21 - ((v - lo) / (hi - lo || 1)) * 18).toFixed(1)).join(""), fill: "none", stroke: "#335777", "stroke-width": 2, "stroke-linejoin": "round" }));
+    svg.appendChild(svgEl("path", { d: vals.map((v, k) => (k ? "L" : "M") + (2 + (k / (vals.length - 1)) * 106).toFixed(1) + " " + (21 - ((v - lo) / (hi - lo || 1)) * 18).toFixed(1)).join(""), fill: "none", stroke: "var(--d-335777-text, #335777)", "stroke-width": 2, "stroke-linejoin": "round" }));
     return svg;
   }
 
   $("gd-x").addEventListener("click", () => $("gdlg").close());
   $("gdlg").addEventListener("click", (ev) => { if (ev.target === $("gdlg")) $("gdlg").close(); });
+  // ---------- Cost driver index ----------
+  const COST_KEY = "radar.costWeights";
+  function costWeights() {
+    let saved = {}; try { saved = JSON.parse(localStorage.getItem(COST_KEY) || "{}") || {}; } catch (e) {}
+    const w = {}; COST.components.forEach((c) => { w[c.key] = saved[c.key] != null ? +saved[c.key] : c.weight; });
+    w.other = saved.other != null ? +saved.other : COST.other;
+    return w;
+  }
+  function seriesMap(id) { const i = M.indicators.find((x) => x.id === id); return i && i.series && i.series.length > 1 ? new Map(i.series.map((p) => [p[0].slice(0, 7), p[1]])) : null; }
+  // value at month m, carried forward up to 'gap' months (statistics are published with a delay)
+  function at(map, m, gap) { for (let k = 0; k <= gap; k++) { const v = map.get(fromN(toN(m) - k)); if (v != null) return v; } return null; }
+  function computeCost() {
+    const W = costWeights();
+    const fx = seriesMap("eurusd");
+    const comps = COST.components.map((c) => {
+      const id = c.ids.find((x) => seriesMap(x)); if (!id) return { ...c, id: null, w: W[c.key] || 0 };
+      let map = seriesMap(id);
+      if (c.usd && fx) { const m2 = new Map(); map.forEach((v, k) => { const r = at(fx, k, 2); if (r) m2.set(k, v / r); }); map = m2; }
+      return { ...c, id, map, w: W[c.key] || 0, ind: M.indicators.find((x) => x.id === id) };
+    });
+    const months = selSorted();
+    const usable = comps.filter((c) => c.map && c.w > 0);
+    const base = months.find((m) => usable.every((c) => at(c.map, m, 2) != null));
+    if (!base) return { comps, W, rows: [] };
+    const totalW = usable.reduce((a, c) => a + c.w, 0) + (W.other || 0);
+    const ppi = seriesMap(COST.compare);
+    const ppiBase = ppi ? at(ppi, base, 2) : null;
+    const rows = [];
+    months.filter((m) => m >= base).forEach((m) => {
+      const vals = usable.map((c) => at(c.map, m, 2));
+      if (vals.some((v) => v == null)) return;
+      const idx = (usable.reduce((a, c, k) => a + c.w * (vals[k] / at(c.map, base, 2)), 0) + (W.other || 0)) / totalW * 100;
+      const p = ppi && ppiBase ? at(ppi, m, 0) : null;
+      rows.push({ m, idx, ppi: p != null ? (p / ppiBase) * 100 : null, parts: usable.map((c, k) => ({ key: c.key, ratio: vals[k] / at(c.map, base, 2) })) });
+    });
+    return { comps, usable, W, totalW, base, rows };
+  }
+  function renderCost(host) {
+    const R = computeCost();
+    const sec = el("section", "panel ind-sec");
+    const h = el("div", "ind-h"); h.append(el("h3", null, "Tissue cost driver index"), el("span", null, R.base ? fmtMonth(R.base) + " = 100 · period from the side panel" : ""));
+    sec.appendChild(h);
+    if (!R.rows.length) { sec.appendChild(el("div", "empty", "Not enough data for this period – choose a longer period, or wait for the next data update.")); host.appendChild(sec); return; }
+    const last = R.rows[R.rows.length - 1], lastP = [...R.rows].reverse().find((r) => r.ppi != null);
+    const k = el("div", "gd-kpis");
+    const kp = (label, v, sub) => { const d = el("div"); d.append(document.createTextNode(label), el("b", null, v)); if (sub) d.appendChild(el("small", null, sub)); return d; };
+    k.appendChild(kp("Cost index · " + fmtMonth(last.m), last.idx.toFixed(1), (last.idx >= 100 ? "+" : "") + (last.idx - 100).toFixed(1) + " % since " + fmtMonth(R.base)));
+    if (lastP) {
+      k.appendChild(kp("Tissue price index · " + fmtMonth(lastP.m), lastP.ppi.toFixed(1), (lastP.ppi >= 100 ? "+" : "") + (lastP.ppi - 100).toFixed(1) + " % since " + fmtMonth(R.base)));
+      const gap = lastP.ppi - R.rows.find((r) => r.m === lastP.m).idx;
+      k.appendChild(kp("Price minus cost · " + fmtMonth(lastP.m), (gap > 0 ? "+" : "") + gap.toFixed(1) + " pts", gap >= 0 ? "prices ahead of costs – room for margin" : "costs ahead of prices – margin pressure"));
+    }
+    sec.appendChild(k);
+    // chart
+    const lg = el("div", "gd-lg");
+    [["#0064aa", "Cost driver index"], ["#33b09c", "Tissue producer price index (EU)"]].forEach(([c, t]) => { const x = el("span"); const i = el("i"); i.style.background = c; x.append(i, document.createTextNode(t)); lg.appendChild(x); });
+    sec.appendChild(lg);
+    const box = el("div", "gd-chart");
+    const Wd = 840, H = 250, L = 44, Rr = 16, T = 10, B = 24;
+    const svg = svgEl("svg", { viewBox: `0 0 ${Wd} ${H}`, role: "img", "aria-label": "Tissue cost driver index vs. tissue price index" });
+    const xs = R.rows.map((r) => r.m);
+    const vals = R.rows.flatMap((r) => [r.idx, r.ppi].filter((v) => v != null)).concat([100]);
+    const span = Math.max(...vals) - Math.min(...vals) || 10;
+    const hi = Math.max(...vals) + span * .1, lo = Math.min(...vals) - span * .1;
+    const x = (n) => L + (n / Math.max(1, xs.length - 1)) * (Wd - L - Rr), y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+    const step = niceStep((hi - lo) / 4);
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) { svg.appendChild(svgEl("line", { x1: L, x2: Wd - Rr, y1: y(v), y2: y(v), stroke: v === 100 ? "var(--d-c9ced6-border, #c9ced6)" : "var(--d-eef0f3-border, #eef0f3)", "stroke-dasharray": v === 100 ? "3 3" : "" })); const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = Math.round(v); svg.appendChild(t); }
+    const firstJan = xs.findIndex((m) => m.endsWith("-01"));
+    xs.forEach((m, n) => { if (m.endsWith("-01") || (n === 0 && (firstJan < 0 || firstJan > 3))) { const t = svgEl("text", { x: x(n), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = n === 0 && !m.endsWith("-01") ? fmtMonth(m) : m.slice(0, 4); svg.appendChild(t); } });
+    // shaded gap between the two lines
+    const both = R.rows.map((r, n) => ({ n, a: r.idx, b: r.ppi })).filter((r) => r.b != null);
+    if (both.length > 1) svg.appendChild(svgEl("path", { d: both.map((r, k) => (k ? "L" : "M") + x(r.n) + " " + y(r.b)).join("") + both.slice().reverse().map((r) => "L" + x(r.n) + " " + y(r.a)).join("") + "Z", fill: "#96d2dc", opacity: .18 }));
+    svg.appendChild(svgEl("path", { d: both.map((r, k) => (k ? "L" : "M") + x(r.n).toFixed(1) + " " + y(r.b).toFixed(1)).join(""), fill: "none", stroke: "var(--d-33b09c-text, #33b09c)", "stroke-width": 2.2, "stroke-linejoin": "round" }));
+    svg.appendChild(svgEl("path", { d: R.rows.map((r, n) => (n ? "L" : "M") + x(n).toFixed(1) + " " + y(r.idx).toFixed(1)).join(""), fill: "none", stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 2.6, "stroke-linejoin": "round" }));
+    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "var(--d-002d55-text, #002d55)", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
+    const tip = el("div", "gd-tip"); tip.hidden = true;
+    svg.addEventListener("pointermove", (ev) => {
+      const rc = svg.getBoundingClientRect(); const px = ((ev.clientX - rc.left) / rc.width) * Wd;
+      const n = Math.max(0, Math.min(xs.length - 1, Math.round(((px - L) / (Wd - L - Rr)) * (xs.length - 1)))); const r = R.rows[n];
+      hl.setAttribute("x1", x(n)); hl.setAttribute("x2", x(n)); hl.setAttribute("opacity", 1);
+      tip.hidden = false; tip.style.left = (x(n) / Wd) * 100 + "%"; tip.style.top = (y(r.idx) / H) * 100 + "%";
+      tip.textContent = fmtMonth(r.m) + ": cost " + r.idx.toFixed(1) + (r.ppi != null ? " · price " + r.ppi.toFixed(1) + " · gap " + (r.ppi - r.idx > 0 ? "+" : "") + (r.ppi - r.idx).toFixed(1) : "");
+    });
+    svg.addEventListener("pointerleave", () => { hl.setAttribute("opacity", 0); tip.hidden = true; });
+    box.append(svg, tip); sec.appendChild(box);
+    // contributions + weights
+    const t = el("table", "gd-yr cost-t"); const hr = el("tr");
+    ["Input", "Indicator used", "Weight %", "Change since " + fmtMonth(R.base), "Contribution (index points)"].forEach((x2) => hr.appendChild(el("th", null, x2)));
+    const th = el("thead"); th.appendChild(hr); t.appendChild(th);
+    const tb = el("tbody");
+    const W = costWeights();
+    const save = (k2, v) => { const cur = costWeights(); cur[k2] = Math.max(0, +v || 0); try { localStorage.setItem(COST_KEY, JSON.stringify(cur)); } catch (e) {} renderTiles(); };
+    const winput = (k2, v) => { const i = el("input"); i.type = "number"; i.min = 0; i.max = 100; i.step = 1; i.value = v; i.className = "w-in"; i.setAttribute("aria-label", "Weight " + k2); i.addEventListener("change", () => save(k2, i.value)); return i; };
+    R.comps.forEach((c) => {
+      const tr = el("tr");
+      const part = last.parts.find((p) => p.key === c.key);
+      const ch = part ? (part.ratio - 1) * 100 : null;
+      const contrib = part ? (c.w * (part.ratio - 1) * 100) / R.totalW : null;
+      const ind = el("td"); if (c.ind) { const a = el("button", "link", shortName(c.ind)); a.type = "button"; a.addEventListener("click", () => openInd(c.ind)); ind.appendChild(a); } else ind.textContent = "no data yet";
+      const wt = el("td"); wt.appendChild(winput(c.key, W[c.key]));
+      tr.append(el("td", null, c.label), ind, wt, el("td", null, ch == null ? "–" : (ch > 0 ? "+" : "") + ch.toFixed(1) + " %"), el("td", null, contrib == null ? "–" : (contrib > 0 ? "+" : "") + contrib.toFixed(1)));
+      tb.appendChild(tr);
+    });
+    const tro = el("tr"); const wo = el("td"); wo.appendChild(winput("other", W.other));
+    tro.append(el("td", null, "Other costs (held constant)"), el("td", null, "labour, chemicals, packaging, logistics …"), wo, el("td", null, "0 %"), el("td", null, "0"));
+    tb.appendChild(tro);
+    t.appendChild(tb); const tw = el("div"); tw.style.overflowX = "auto"; tw.appendChild(t); sec.appendChild(tw);
+    const note = el("p", "ind-src");
+    const reset = el("button", "link", "Reset to default weights"); reset.type = "button"; reset.addEventListener("click", () => { try { localStorage.removeItem(COST_KEY); } catch (e) {} renderTiles(); });
+    note.append(document.createTextNode("Weights are illustrative shares of cash cost (total " + Math.round(R.totalW) + ") and are saved only in your browser. Gas is converted to euro with EUR/USD; missing recent months are carried forward up to two months. "), reset);
+    sec.appendChild(note);
+    const ab = aboutOf(COST.about); if (ab) sec.appendChild(ab);
+    host.appendChild(sec);
+  }
+
   // ---------- Industry tab ----------
   function srcLink(src) { const a = el("a", null, (src && src.label) || "Source"); if (src && src.url) { a.href = src.url; a.target = "_blank"; a.rel = "noopener"; } return a; }
   function aboutOf(a) { if (!a) return null; return aboutBlock({ about: a, id: "" }); }
@@ -1001,9 +1175,9 @@
       const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": rr.label });
       const ys = rr.years, n = ys.length;
       const x = (k) => L + (k / (n - 1)) * (W - L - R), y = (v) => T + (1 - v / 120) * (H - T - B);
-      [0, 20, 40, 60, 80, 100, 120].forEach((v) => { svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "#eef0f3" })); const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "#8a94a3" }); t.textContent = v + "%"; svg.appendChild(t); });
-      ys.forEach((yr, k) => { if (k % 2 === 0 || k === n - 1) { const t = svgEl("text", { x: x(k), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "#8a94a3" }); t.textContent = yr; svg.appendChild(t); } });
-      if (rr.wepaRef) svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(rr.wepaRef.value), y2: y(rr.wepaRef.value), stroke: "#0064aa", "stroke-width": 1.6, "stroke-dasharray": "5 4" }));
+      [0, 20, 40, 60, 80, 100, 120].forEach((v) => { svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--d-eef0f3-border, #eef0f3)" })); const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = v + "%"; svg.appendChild(t); });
+      ys.forEach((yr, k) => { if (k % 2 === 0 || k === n - 1) { const t = svgEl("text", { x: x(k), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = yr; svg.appendChild(t); } });
+      if (rr.wepaRef) svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(rr.wepaRef.value), y2: y(rr.wepaRef.value), stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 1.6, "stroke-dasharray": "5 4" }));
       const ends = [];
       Object.entries(rr.series).forEach(([name, vals]) => {
         const c = COLS[name] || "#828282";
@@ -1012,7 +1186,7 @@
       });
       if (rr.wepaRef) ends.push({ y: y(rr.wepaRef.value), text: rr.wepaRef.value + "% WEPA" });
       ends.sort((a, b) => a.y - b.y); for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 14) ends[k].y = ends[k - 1].y + 14;
-      ends.forEach((e) => { const t = svgEl("text", { x: W - R + 8, y: e.y + 4, "font-size": 11.5, fill: "#374151", "font-weight": 600 }); t.textContent = e.text; svg.appendChild(t); });
+      ends.forEach((e) => { const t = svgEl("text", { x: W - R + 8, y: e.y + 4, "font-size": 11.5, fill: "var(--d-374151-text, #374151)", "font-weight": 600 }); t.textContent = e.text; svg.appendChild(t); });
       box.appendChild(svg); sec.appendChild(box);
       const ab = aboutOf(rr.about); if (ab) sec.appendChild(ab);
       const f = el("p", "ind-src"); f.append("Source: ", srcLink(rr.source)); sec.appendChild(f);
@@ -1033,7 +1207,7 @@
     }
   }
   function buildTabs() {
-    TABS = [{ id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "industry" ? !!IND : t.groups.some((g) => M.groups[g])))];
+    TABS = [{ id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "industry" ? !!IND : t.id === "cost" ? !!COST : t.groups.some((g) => M.groups[g])))];
   }
   function renderTabs() {
     $("tabs").replaceChildren(...TABS.map((t) => {
@@ -1078,6 +1252,7 @@
       host.appendChild(t || el("div", "empty", items.length ? "Grid data arrives with the next weekly run (Ember)." : "No grid data for this area. Choose “All areas” in the side panel."));
     }
     if (tab.id === "industry") renderIndustry(host);
+    if (tab.id === "cost") renderCost(host);
     if (tab.id === "carbon") {
       const panel = el("div", "panel cc-panel"); panel.id = "carbon";
       const hd = el("div", "cc-head"); hd.append(el("h4", null, "Carbon cost exposure · WEPA EU ETS sites"), el("span", null, "verified emissions × EUA price"));
@@ -1150,7 +1325,7 @@
       items.forEach((i) => {
         const on = state.cmp.includes(i.id);
         const b = el("button", "ind"); b.type = "button"; b.setAttribute("role", "checkbox"); b.setAttribute("aria-checked", String(on));
-        const c = cbox(on); if (on) { c.style.background = colorOf[i.id]; if (LIGHT.has(colorOf[i.id])) c.style.color = "#002d55"; }
+        const c = cbox(on); if (on) { c.style.background = colorOf[i.id]; if (LIGHT.has(colorOf[i.id])) c.style.color = "var(--d-002d55-text, #002d55)"; }
         b.append(c, el("span", null, shortName(i)));
         b.title = i.label;
         b.addEventListener("click", () => toggle(i.id));
@@ -1169,6 +1344,8 @@
     renderTabs(); if (state.tab === "cmp") renderChart(); renderCmpTiles(); renderTiles(); writeHash();
   }
 
+  $("reg-cb").checked = showReg;
+  $("reg-cb").addEventListener("change", () => { showReg = $("reg-cb").checked; try { localStorage.setItem("radar.trendsReg", showReg ? "1" : "0"); } catch (e) {} renderAll(); });
   $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });
   let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); }, 120); });
 
@@ -1177,13 +1354,14 @@
     fetch("data/peer_emissions.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("config/market.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/industry.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-  ]).then(([data, ets, cfg, ind]) => {
-    M = data; ETS = ets; IND = ind;
-    if (cfg) { (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; }); GRID_ABOUT = cfg.gridAbout || null; }
+    fetch("data/roadmap.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  ]).then(([data, ets, cfg, ind, roadmap]) => {
+    M = data; ETS = ets; IND = ind; REG_EVENTS = regEvents(roadmap);
+    if (cfg) { (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; }); GRID_ABOUT = cfg.gridAbout || null; COST = cfg.costIndex || null; }
     $("meta").textContent = data.updated ? "Updated " + fmtDay(data.updated) : "Not collected yet";
     side = RadarSide.build($("side"), {
       toggleLabel: "Period, area & indicators", onChange: onSide,
-      extra: [{ id: "period", title: "Period", node: periodNode, before: true, show: () => state.tab === "cmp" }, { id: "ind", title: "Indicators in chart", node: indicatorNode, show: () => state.tab === "cmp" }],
+      extra: [{ id: "period", title: "Period", node: periodNode, before: true, show: () => state.tab === "cmp" || state.tab === "cost" }, { id: "ind", title: "Indicators in chart", node: indicatorNode, show: () => state.tab === "cmp" }],
     });
     buildTabs();
     state.sel = preset("36");
@@ -1194,7 +1372,13 @@
     if (state.area !== "all" && !avail.has(state.area)) state.area = "all";
     state.cmp = state.cmp.filter((id) => M.indicators.some((i) => i.id === id && chartable(i))).slice(0, MAX_SEL);
     if (!new URLSearchParams(location.hash.slice(1)).has("cmp")) state.cmp = defaultCmp();
+    // "Add to Trends chart" from the search window: market.html#add=<indicator id>
+    const addId = new URLSearchParams(START_HASH.slice(1)).get("add");
+    if (addId && M.indicators.some((i) => i.id === addId && chartable(i))) { state.tab = "cmp"; if (!state.cmp.includes(addId)) state.cmp.push(addId); }
     renderAll();
+    const indLink = new URLSearchParams(START_HASH.slice(1)).get("ind");
+    const indObj = indLink && M.indicators.find((i) => i.id === indLink);
+    if (indObj) setTimeout(() => openInd(indObj), 50);
   }).catch(() => {
     $("meta").textContent = "";
     $("groups").hidden = false; $("groups").replaceChildren(el("div", "empty", "Market data is not available yet. It is created by the weekly GitHub Action (scripts/collect_market.py)."));
@@ -1202,5 +1386,7 @@
   });
 })();
 </script>
+<script src="assets/search.js?v=20261105i" defer></script>
+<script src="assets/guide.js?v=20261105i" defer></script>
 </body>
 </html>

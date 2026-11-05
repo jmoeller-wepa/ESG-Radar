@@ -152,3 +152,10 @@ These parts are updated by hand, with the prompts in `prompts/` (they work in M3
 - **Feeds:** add or change them in `config/feeds.json`. A feed that fails is reported in the run summary and skipped.
 
 Summaries are aids, not legal advice. Market indices are for trend orientation only. Always check the linked source.
+
+## Look & feel (Nov 2026)
+
+- **Search window:** the "Search · Ctrl K" button in the header (or the "/" key) opens one search across all pages, with filters by type and a preview of the selected result (`assets/search.js`).
+- **Overview as a briefing:** summary sentence, five key numbers (choose them under "Customize"), the monthly round-up, the next 30 days – and your own cards below.
+- **Dark mode:** the half-moon button in the header switches Auto (follows the computer) → Light → Dark (`assets/theme.js`). Colours in the pages are written as `var(--d-<colour>-<role>, <light colour>)`; the dark values live at the end of `assets/theme.css`. When you add a new colour, write it the same way – or just use the light colour, it will then stay the same in dark mode.
+- **Smooth page changes:** pages fade into each other (CSS view transitions; browsers without support simply switch).

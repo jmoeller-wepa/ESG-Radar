@@ -6,30 +6,30 @@
   const css = `
   .cc-wrap { display: flex; flex-direction: column; gap: 12px; }
   .cc-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
-  .cc-kpi { background: #f5f8fb; border-radius: 10px; padding: 10px 12px; }
-  .cc-kpi p { margin: 0; font-size: 11.5px; color: #6b7280; }
-  .cc-kpi b { font-size: 19px; color: #002d55; font-variant-numeric: tabular-nums; }
-  .cc-kpi small { font-size: 11.5px; color: #8a94a3; margin-left: 4px; }
+  .cc-kpi { background: var(--d-f5f8fb-bg, #f5f8fb); border-radius: 10px; padding: 10px 12px; }
+  .cc-kpi p { margin: 0; font-size: 11.5px; color: var(--d-6b7280-text, #6b7280); }
+  .cc-kpi b { font-size: 19px; color: var(--d-002d55-text, #002d55); font-variant-numeric: tabular-nums; }
+  .cc-kpi small { font-size: 11.5px; color: var(--d-8a94a3-text, #8a94a3); margin-left: 4px; }
   .cc-res { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: flex-end; }
-  .cc-res p { margin: 0 0 2px; font-size: 12.5px; color: #6b7280; }
-  .cc-big { font-size: 30px; font-weight: 650; color: #002d55; letter-spacing: -.01em; line-height: 1.05; font-variant-numeric: tabular-nums; }
-  .cc-big.net { color: #0064aa; }
-  .cc-big.sur { color: #1d7f6c; }
-  .cc-sub { font-size: 12px; color: #6b7280; margin-top: 3px; }
-  .cc-yrs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 12.5px; color: #6b7280; }
-  .cc-yrs button { border: 1px solid #e3e7ec; background: #fff; border-radius: 7px; padding: 2px 9px; font: inherit; font-size: 12.5px; color: #374151; cursor: pointer; }
-  .cc-yrs button[aria-pressed="true"] { border-color: #33b09c; background: #e8f7f4; color: #00594a; font-weight: 600; }
-  .cc-hist tr.cur td { background: #f5f8fb; font-weight: 600; }
+  .cc-res p { margin: 0 0 2px; font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); }
+  .cc-big { font-size: 30px; font-weight: 650; color: var(--d-002d55-text, #002d55); letter-spacing: -.01em; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .cc-big.net { color: var(--d-0064aa-text, #0064aa); }
+  .cc-big.sur { color: var(--d-1d7f6c-text, #1d7f6c); }
+  .cc-sub { font-size: 12px; color: var(--d-6b7280-text, #6b7280); margin-top: 3px; }
+  .cc-yrs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); }
+  .cc-yrs button { border: 1px solid var(--d-e3e7ec-border, #e3e7ec); background: var(--d-fff-bg, #fff); border-radius: 7px; padding: 2px 9px; font: inherit; font-size: 12.5px; color: var(--d-374151-text, #374151); cursor: pointer; }
+  .cc-yrs button[aria-pressed="true"] { border-color: #33b09c; background: var(--d-e8f7f4-bg, #e8f7f4); color: var(--d-00594a-text, #00594a); font-weight: 600; }
+  .cc-hist tr.cur td { background: var(--d-f5f8fb-bg, #f5f8fb); font-weight: 600; }
   .cc-sl { display: flex; flex-direction: column; gap: 4px; }
-  .cc-sl label { font-size: 12.5px; color: #4b5563; }
-  .cc-sl label b { color: #002d55; }
+  .cc-sl label { font-size: 12.5px; color: var(--d-4b5563-text, #4b5563); }
+  .cc-sl label b { color: var(--d-002d55-text, #002d55); }
   .cc-sl input[type=range] { width: 100%; accent-color: #0064aa; }
-  .cc-ticks { display: flex; justify-content: space-between; font-size: 11px; color: #9aa2ae; }
-  .cc-note { margin: 0; font-size: 12px; color: #6b7280; line-height: 1.45; }
+  .cc-ticks { display: flex; justify-content: space-between; font-size: 11px; color: var(--d-9aa2ae-text, #9aa2ae); }
+  .cc-note { margin: 0; font-size: 12px; color: var(--d-6b7280-text, #6b7280); line-height: 1.45; }
   .cc-hist { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
-  .cc-hist th, .cc-hist td { padding: 5px 8px; border-bottom: 1px solid #f0f2f5; text-align: right; white-space: nowrap; }
+  .cc-hist th, .cc-hist td { padding: 5px 8px; border-bottom: 1px solid var(--d-f0f2f5-border, #f0f2f5); text-align: right; white-space: nowrap; }
   .cc-hist th:first-child, .cc-hist td:first-child { text-align: left; }
-  .cc-hist th { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #6b7280; }`;
+  .cc-hist th { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); }`;
   const st = document.createElement("style"); st.textContent = css; document.head.appendChild(st);
 
   const fmtT = (t) => (t / 1000).toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 1 }) + " kt";

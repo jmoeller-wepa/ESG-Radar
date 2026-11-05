@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script src="assets/theme.js?v=20261105i"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261105f" defer></script>
+<script src="assets/status.js?v=20261105i" defer></script>
 <style>
   :root {
-    --blue-900: #002d55;
-    --blue-700: #0f4c9c;
+    --blue-900: var(--d-002d55-text, #002d55);
+    --blue-700: var(--d-0f4c9c-text, #0f4c9c);
     --blue-500: #1f6fd1;
-    --blue-100: #e6eef9;
-    --blue-50:  #f3f7fc;
-    --wepa: #002d55;
+    --blue-100: var(--d-e6eef9-bg, #e6eef9);
+    --blue-50:  var(--d-f3f7fc-bg, #f3f7fc);
+    --wepa: var(--d-002d55-text, #002d55);
     --red: #FF667E;
-    --red-text: #c42840;
+    --red-text: var(--d-c42840-text, #c42840);
     --green: #66C3B4;
-    --green-ink: #0d3d35;
-    --green-50: #e4f4f1;
-    --green-text: #1d6b5e;
-    --ink: #111827;
-    --ink-2: #4b5563;
-    --ink-3: #8a94a3;
-    --line: #ebedf1;
-    --line-2: #f0f1f4;
-    --bg: #fafafb;
+    --green-ink: var(--d-0d3d35-text, #0d3d35);
+    --green-50: var(--d-e4f4f1-bg, #e4f4f1);
+    --green-text: var(--d-1d6b5e-text, #1d6b5e);
+    --ink: var(--d-111827-text, #111827);
+    --ink-2: var(--d-4b5563-text, #4b5563);
+    --ink-3: var(--d-8a94a3-text, #8a94a3);
+    --line: var(--d-ebedf1-border, #ebedf1);
+    --line-2: var(--d-f0f1f4-border, #f0f1f4);
+    --bg: var(--d-fafafb-page, #fafafb);
     --font: Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; }
@@ -42,108 +43,155 @@
   .brand h1 { margin: 0; font-size: 18px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
   .nav { display: flex; gap: 4px; }
   .nav a { font-size: 14px; color: var(--ink-2); text-decoration: none; padding: 6px 12px; border-radius: 8px; }
-  .nav a:hover { background: #f3f4f6; }
-  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: #eceef1; }
+  .nav a:hover { background: var(--d-f3f4f6-bg, #f3f4f6); }
+  .nav a[aria-current="page"] { color: var(--blue-900); font-weight: 600; background: var(--d-eceef1-bg, #eceef1); }
   .meta { margin-left: auto; font-size: 13px; color: var(--ink-3); }
 
   main.wrap { padding-top: 28px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 24px; }
   .intro h2 { margin: 0; font-size: 22px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; }
   .intro p { margin: 4px 0 0; font-size: 13.5px; color: var(--ink-2); }
-  .cap { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #6b7280; }
+  .cap { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); }
   main.wrap { padding-top: 24px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 18px; }
   .ov-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
   .ov-top h2 { margin: 0; font-size: 22px; font-weight: 650; color: var(--blue-900); letter-spacing: -.01em; }
   .ov-top p { margin: 0; font-size: 13.5px; color: var(--ink-3); }
   .ov-actions { margin-left: auto; display: flex; gap: 8px; }
-  .btn { font: inherit; font-size: 13.5px; border-radius: 10px; padding: 7px 14px; cursor: pointer; border: 1px solid #d5e2ec; background: #fff; color: #0064aa; display: inline-flex; align-items: center; gap: 6px; }
-  .btn:hover { border-color: #aac6dc; }
+  .btn { font: inherit; font-size: 13.5px; border-radius: 10px; padding: 7px 14px; cursor: pointer; border: 1px solid var(--d-d5e2ec-border, #d5e2ec); background: var(--d-fff-bg, #fff); color: var(--d-0064aa-text, #0064aa); display: inline-flex; align-items: center; gap: 6px; }
+  .btn:hover { border-color: var(--d-aac6dc-border, #aac6dc); }
   .btn.go { background: #009b82; border-color: #009b82; color: #fff; font-weight: 600; }
   .btn.go:hover { background: #00866f; }
   .btn[hidden] { display: none; }
 
   /* Free placement: a fixed grid of cells (columns follow the screen width); each widget remembers its cell */
   .ov-grid { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); grid-auto-rows: var(--wh, 470px); gap: 16px; align-items: stretch; }
-  .slot { border: 2px dashed #d5dde6; border-radius: 14px; display: grid; place-items: center; color: #9aa2ae; font-size: 13px; transition: background .12s, border-color .12s; }
-  .slot.over { border-color: #009b82; background: #e8f7f4; color: #00594a; }
+  .slot { border: 2px dashed var(--d-d5dde6-border, #d5dde6); border-radius: 14px; display: grid; place-items: center; color: var(--d-9aa2ae-text, #9aa2ae); font-size: 13px; transition: background .12s, border-color .12s; }
+  .slot.over { border-color: #009b82; background: var(--d-e8f7f4-bg, #e8f7f4); color: var(--d-00594a-text, #00594a); }
   @media (max-width: 720px) { .ov-grid { grid-auto-rows: auto; } .slot { display: none; } }
-  .w { background: #fff; border: 1px solid #e9ecf1; border-radius: 14px; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; position: relative; height: var(--wh, 470px); overflow: hidden; }
+  .w { background: var(--d-fff-bg, #fff); border: 1px solid var(--d-e9ecf1-border, #e9ecf1); border-radius: 14px; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; position: relative; height: var(--wh, 470px); overflow: hidden; }
   .w > .wb { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; }
   .editing .w > .wb { overflow-y: auto; }
   @media (max-width: 720px) { .w { height: auto; } .w > .wb { overflow: visible; } }
 
   .wh { display: flex; align-items: center; gap: 8px; min-height: 24px; }
-  .wh h3 { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #6b7280; font-weight: 600; }
-  .wh a.more { margin-left: auto; font-size: 12.5px; color: #0064aa; text-decoration: none; white-space: nowrap; }
+  .wh h3 { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); font-weight: 600; }
+  .wh a.more { margin-left: auto; font-size: 12.5px; color: var(--d-0064aa-text, #0064aa); text-decoration: none; white-space: nowrap; }
   .wh a.more:hover { text-decoration: underline; }
-  .mut { margin: 0; font-size: 12.5px; color: #6b7280; line-height: 1.45; }
-  .li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-top: 1px solid #f0f2f5; font-size: 13.5px; color: var(--ink); text-decoration: none; line-height: 1.35; }
+  .mut { margin: 0; font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); line-height: 1.45; }
+  .li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-top: 1px solid var(--d-f0f2f5-border, #f0f2f5); font-size: 13.5px; color: var(--ink); text-decoration: none; line-height: 1.35; }
   .li:first-of-type { border-top: 0; padding-top: 2px; }
-  a.li:hover .t { color: #0064aa; }
+  a.li:hover .t { color: var(--d-0064aa-text, #0064aa); }
   .li .t { flex: 1; min-width: 0; }
-  .li small { display: block; color: #8a94a3; font-size: 11.5px; margin-top: 2px; }
+  .li small { display: block; color: var(--d-8a94a3-text, #8a94a3); font-size: 11.5px; margin-top: 2px; }
   .li .r { margin-left: auto; font-size: 12px; font-weight: 600; white-space: nowrap; font-variant-numeric: tabular-nums; }
-  .soon { color: #e5485f; } .later { color: #6b7280; font-weight: 400 !important; }
+  .soon { color: var(--d-b4441c-text, #b4441c); } .later { color: var(--d-6b7280-text, #6b7280); font-weight: 400 !important; }
   .dd { width: 34px; text-align: center; line-height: 1; flex: none; }
   .dd b { display: block; font-size: 16px; color: var(--ink); }
-  .dd span { font-size: 10px; color: #6b7280; text-transform: uppercase; letter-spacing: .04em; }
-  .tag { font-size: 10.5px; font-weight: 700; color: #335777; background: #e8f4f6; border-radius: 4px; padding: 1px 6px; margin-right: 6px; white-space: nowrap; }
+  .dd span { font-size: 10px; color: var(--d-6b7280-text, #6b7280); text-transform: uppercase; letter-spacing: .04em; }
+  .tag { font-size: 10.5px; font-weight: 700; color: var(--d-335777-text, #335777); background: var(--d-e8f4f6-bg, #e8f4f6); border-radius: 4px; padding: 1px 6px; margin-right: 6px; white-space: nowrap; }
   .chg { font-weight: 700; min-width: 64px; font-variant-numeric: tabular-nums; }
-  .chg.up { color: #c4354b; } .chg.dn { color: #1d7f6c; }
+  .chg.up, .chg.dn { color: var(--ink); }
   .tg { display: flex; flex-direction: column; gap: 4px; }
-  .tg .lab { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: #374151; }
-  .tg .lab span { color: #6b7280; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .bar { height: 10px; border-radius: 5px; background: #eef1f4; position: relative; overflow: hidden; }
+  .tg .lab { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--d-374151-text, #374151); }
+  .tg .lab span { color: var(--d-6b7280-text, #6b7280); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .bar { height: 10px; border-radius: 5px; background: var(--d-eef1f4-bg, #eef1f4); position: relative; overflow: hidden; }
   .bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px; }
   .snap { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-  .sn { background: #f7f9fb; border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-  .sn p { margin: 0; font-size: 11.5px; color: #4b5563; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .sn b { font-size: 18px; color: #002d55; font-variant-numeric: tabular-nums; }
-  .sn small { font-size: 11.5px; color: #6b7280; }
+  .sn { background: var(--d-f7f9fb-bg, #f7f9fb); border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .sn p { margin: 0; font-size: 11.5px; color: var(--d-4b5563-text, #4b5563); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sn b { font-size: 18px; color: var(--d-002d55-text, #002d55); font-variant-numeric: tabular-nums; }
+  .sn small { font-size: 11.5px; color: var(--d-6b7280-text, #6b7280); }
   .sn svg { width: 100%; height: 26px; display: block; margin-top: 4px; }
   .ps { display: flex; flex-direction: column; gap: 10px; }
-  .ps-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; font-size: 13px; color: #374151; }
+  .ps-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; font-size: 13px; color: var(--d-374151-text, #374151); }
   .ps-row .scale { grid-column: 1 / -1; position: relative; height: 18px; }
-  .ps-row .scale::before { content: ""; position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: #e9edf2; border-radius: 2px; }
+  .ps-row .scale::before { content: ""; position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: var(--d-e9edf2-bg, #e9edf2); border-radius: 2px; }
   .ps-row .m { position: absolute; top: 3px; width: 12px; height: 12px; border-radius: 50%; margin-left: -6px; }
   .ps-row .m.peer { background: #c4ccd6; width: 8px; height: 8px; top: 5px; margin-left: -4px; }
-  .ps-row .m.med { background: #fff; border: 2px solid #6b7280; }
-  .ps-row .m.us { background: #0064aa; border: 2px solid #fff; box-shadow: 0 0 0 1px #0064aa; }
-  .st-row { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #374151; padding: 4px 0; }
+  .ps-row .m.med { background: var(--d-fff-bg, #fff); border: 2px solid #6b7280; }
+  .ps-row .m.us { background: #0064aa; border: 2px solid var(--d-fff-border, #fff); box-shadow: 0 0 0 1px #0064aa; }
+  .st-row { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--d-374151-text, #374151); padding: 4px 0; }
   .st-row i { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex: none; background: #33b09c; }
   .st-row i.warn { background: #f2b33d; } .st-row i.error { background: #FF667E; }
-  .st-row span { margin-left: auto; color: #8a94a3; font-size: 12px; text-align: right; }
+  .st-row span { margin-left: auto; color: var(--d-8a94a3-text, #8a94a3); font-size: 12px; text-align: right; }
   .empty { margin: 0; font-size: 13px; color: var(--ink-3); }
-  .cfg { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 8px 10px; background: #f5f8fb; border-radius: 10px; font-size: 12.5px; color: #4b5563; }
-  .cfg input[type=number] { width: 64px; font: inherit; padding: 3px 6px; border: 1px solid #d5dbe3; border-radius: 6px; }
+  .cfg { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 8px 10px; background: var(--d-f5f8fb-bg, #f5f8fb); border-radius: 10px; font-size: 12.5px; color: var(--d-4b5563-text, #4b5563); }
+  .cfg input[type=number] { width: 64px; font: inherit; padding: 3px 6px; border: 1px solid var(--d-d5dbe3-border, #d5dbe3); border-radius: 6px; }
   .cfg label { display: inline-flex; align-items: center; gap: 5px; }
 
+  /* briefing (B1): summary, key numbers, round-up + next 30 days */
+  .brief { display: flex; flex-direction: column; gap: 16px; }
+  .br-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
+  .br-txt h2 { margin: 0; font-size: 24px; font-weight: 650; color: var(--blue-900); letter-spacing: -.01em; }
+  .br-txt p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); max-width: 860px; line-height: 1.5; }
+  .br-txt p b { color: var(--ink); font-weight: 600; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .kpi { background: var(--d-fff-bg, #fff); border: 1px solid var(--d-e9ecf1-border, #e9ecf1); border-radius: 14px; padding: 14px 16px 10px; display: flex; flex-direction: column; gap: 3px; text-decoration: none; color: inherit; min-width: 0; transition: border-color .12s, box-shadow .12s; }
+  .kpi:hover { border-color: var(--d-b9d3e8-border, #b9d3e8); box-shadow: 0 4px 14px rgba(0, 45, 85, .06); }
+  .kpi .l { font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .kpi .v { font-size: 26px; font-weight: 650; color: var(--d-002d55-text, #002d55); letter-spacing: -.01em; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .kpi .v small { font-size: 12.5px; font-weight: 500; color: var(--d-6b7280-text, #6b7280); margin-left: 4px; letter-spacing: 0; }
+  .kpi .d { font-size: 12.5px; color: var(--d-374151-text, #374151); font-variant-numeric: tabular-nums; }
+  .kpi .d i { font-style: normal; color: var(--d-8a94a3-text, #8a94a3); }
+  .kpi svg { width: 100%; height: 34px; display: block; margin-top: 4px; }
+  @media (max-width: 600px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .kpi { padding: 10px 12px 8px; } .kpi .v { font-size: 21px; } .kpi .d i { display: none; } .kpi svg { height: 24px; } }
+  .br-cols { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+  @media (max-width: 1000px) { .br-cols { grid-template-columns: minmax(0, 1fr); } }
+  .card { background: var(--d-fff-bg, #fff); border: 1px solid var(--d-e9ecf1-border, #e9ecf1); border-radius: 14px; padding: 14px 18px 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .br-story .rm-grid { display: flex; flex-direction: column; gap: 0; }
+  .br-story .rm-sec { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 4px 16px; padding: 10px 0; border-top: 1px solid var(--d-f0f2f5-border, #f0f2f5); }
+  .br-story .rm-sec:first-child { border-top: 0; }
+  .br-story .rm-sec h4 { flex-direction: column; gap: 0; align-items: flex-start; padding-top: 3px; }
+  .br-story .rm-sec h4 .rm-n { font-weight: 400; color: var(--d-8a94a3-text, #8a94a3); text-transform: none; letter-spacing: 0; }
+  .br-story .rm-items .li:first-of-type { padding-top: 2px; }
+  .br-story .rm-items > .empty { padding-top: 2px; }
+  .rm-chips { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 2px; }
+  .rm-chips a { font-size: 13px; background: var(--d-f4f5f7-bg, #f4f5f7); border-radius: 8px; padding: 3px 10px; color: var(--ink); text-decoration: none; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .rm-chips a:hover { background: var(--d-e8edf3-bg, #e8edf3); }
+  @media (max-width: 600px) { .br-story .rm-sec { grid-template-columns: minmax(0, 1fr); } }
+  .nx-then { margin: 4px 0 0; font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); }
+  .cards-h { font-size: 13px !important; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280) !important; font-weight: 600 !important; }
+  .drawer h3 + .cfg { margin-bottom: 6px; }
+
+  /* monthly round-up */
+  .rm-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .rm-bar b { font-size: 15px; color: var(--d-002d55-text, #002d55); min-width: 150px; text-align: center; }
+  .rm-nav { border: 1px solid var(--d-dfe4ea-border, #dfe4ea); background: var(--d-fff-bg, #fff); border-radius: 8px; width: 28px; height: 28px; cursor: pointer; font-size: 15px; color: var(--d-374151-text, #374151); }
+  .rm-nav:disabled { opacity: .35; cursor: default; }
+  .rm-copy { margin-left: auto; border: 1px solid var(--d-dfe4ea-border, #dfe4ea); background: var(--d-fff-bg, #fff); border-radius: 8px; padding: 4px 12px; font: inherit; font-size: 13px; color: var(--d-0064aa-text, #0064aa); cursor: pointer; }
+  .rm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 14px 18px; }
+  .rm-sec h4 { margin: 0 0 4px; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); display: flex; gap: 6px; align-items: baseline; }
+  .rm-n { font-size: 12px; font-weight: 700; color: var(--d-33b09c-text, #33b09c); letter-spacing: 0; }
+  .rm-types { margin: 0 0 4px; font-size: 12px; color: var(--d-8a94a3-text, #8a94a3); }
+  .rm-mv { display: flex; justify-content: space-between; gap: 8px; }
+  .rm-mv b { color: var(--d-374151-text, #374151); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
   /* edit mode */
-  .editing .w { cursor: grab; outline: 2px dashed #b9d3e8; outline-offset: -2px; }
+  .editing .w { cursor: grab; outline: 2px dashed var(--d-b9d3e8-border, #b9d3e8); outline-offset: -2px; }
   .editing .w.dragging { opacity: .45; }
   .editing .w.drop-on { box-shadow: 0 0 0 3px #009b82; }
   .wctl { display: none; gap: 4px; margin-left: auto; }
   .editing .wctl { display: flex; }
   .editing .wh a.more { display: none; }
-  .wctl button { width: 26px; height: 26px; border: 0; border-radius: 7px; background: #f0f3f6; color: #4b5563; cursor: pointer; font-size: 13px; line-height: 1; }
-  .wctl button:hover { background: #e3e9ef; }
-  .grip { color: #9aa2ae; font-size: 14px; letter-spacing: -2px; margin-right: 2px; display: none; }
+  .wctl button { width: 26px; height: 26px; border: 0; border-radius: 7px; background: var(--d-f0f3f6-bg, #f0f3f6); color: var(--d-4b5563-text, #4b5563); cursor: pointer; font-size: 13px; line-height: 1; }
+  .wctl button:hover { background: var(--d-e3e9ef-bg, #e3e9ef); }
+  .grip { color: var(--d-9aa2ae-text, #9aa2ae); font-size: 14px; letter-spacing: -2px; margin-right: 2px; display: none; }
   .editing .grip { display: inline; }
-  .drawer { background: #fff; border: 1px solid #e9ecf1; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .drawer { background: var(--d-fff-bg, #fff); border: 1px solid var(--d-e9ecf1-border, #e9ecf1); border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
   .drawer[hidden] { display: none; }
-  .drawer h3 { margin: 0; font-size: 14px; color: #002d55; }
+  .drawer h3 { margin: 0; font-size: 14px; color: var(--d-002d55-text, #002d55); }
   .cat { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
-  .ci { border: 1px dashed #c9d3de; border-radius: 10px; padding: 10px 12px; text-align: left; font: inherit; background: #fff; cursor: pointer; display: flex; flex-direction: column; gap: 3px; }
-  .ci b { font-size: 13.5px; color: #002d55; }
-  .ci small { font-size: 12px; color: #6b7280; }
-  .ci.on { border-style: solid; border-color: #33b09c; background: #f1faf8; }
+  .ci { border: 1px dashed var(--d-c9d3de-border, #c9d3de); border-radius: 10px; padding: 10px 12px; text-align: left; font: inherit; background: var(--d-fff-bg, #fff); cursor: pointer; display: flex; flex-direction: column; gap: 3px; }
+  .ci b { font-size: 13.5px; color: var(--d-002d55-text, #002d55); }
+  .ci small { font-size: 12px; color: var(--d-6b7280-text, #6b7280); }
+  .ci.on { border-style: solid; border-color: #33b09c; background: var(--d-f1faf8-bg, #f1faf8); }
   .ci:hover { border-color: #33b09c; }
   footer { border-top: 1px solid var(--line); padding: 16px 0 28px; font-size: 12.5px; color: var(--ink-3); }
   footer p { margin: 0 0 4px; }
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261105f">
-<script src="assets/colresize.js?v=20261105f" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261105i">
+<script src="assets/colresize.js?v=20261105i" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -190,20 +238,32 @@
   </div>
 </header>
 <main class="wrap">
+  <section class="brief" aria-labelledby="hello">
+    <div class="br-top">
+      <div class="br-txt"><h2 id="hello">Overview</h2><p id="summary">Loading the latest data …</p></div>
+    </div>
+    <div class="kpis" id="kpis" aria-label="Key numbers"></div>
+    <div class="br-cols">
+      <section class="card br-story" aria-labelledby="rm-title"><div class="wh"><h3 id="rm-title">Monthly round-up</h3></div><div id="roundup"></div></section>
+      <section class="card br-next" aria-labelledby="nx-title"><div class="wh"><h3 id="nx-title">Next 30 days</h3><a class="more" href="regulation.html#view=roadmap">All deadlines →</a></div><div id="next30"></div></section>
+    </div>
+  </section>
   <div class="ov-top">
-    <h2 id="hello">Overview</h2>
+    <h2 class="cards-h">Your cards</h2>
     <p id="since"></p>
     <div class="ov-actions">
       <button type="button" class="btn" id="reset" hidden>↺ Reset</button>
-      <button type="button" class="btn" id="add" hidden>＋ Add widgets</button>
+      <button type="button" class="btn" id="add" hidden>＋ Add cards</button>
       <button type="button" class="btn" id="edit">✎ Customize</button>
       <button type="button" class="btn go" id="done" hidden>Done</button>
     </div>
   </div>
   <section class="drawer" id="drawer" hidden aria-labelledby="dr-title">
-    <h3 id="dr-title">Add or remove widgets</h3>
+    <h3>Key numbers</h3>
+    <div class="cfg" id="kpi-cfg"></div>
+    <h3 id="dr-title">Add or remove cards</h3>
     <div class="cat" id="cat"></div>
-    <p class="mut">Drag a widget onto any free cell (dashed) or onto another widget to swap them – or use the arrows. ⤢ switches between narrow and wide. Empty cells stay empty, so you can leave gaps. Your layout is saved in this browser.</p>
+    <p class="mut">Tick up to five key numbers for the top row. Drag a card onto any free cell (dashed) or onto another card to swap them – or use the arrows. ⤢ switches between narrow and wide. Empty cells stay empty, so you can leave gaps. Your layout is saved in this browser.</p>
   </section>
   <div class="ov-grid" id="grid"></div>
 </main>
@@ -211,7 +271,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261105f"></script>
+<script src="assets/carbon.js?v=20261105i"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -239,7 +299,7 @@
 
   // ---------- layout ----------
   const KEY = "radar.overview.v1";
-  const DEFAULT = { items: [{ id: "alerts" }, { id: "targets" }, { id: "deadlines" }, { id: "newsince" }, { id: "peernews" }], threshold: 10, snap: ["ppi_tissue", "ppi_pulp", "gas_ttf", "eurusd"] };
+  const DEFAULT = { items: [{ id: "targets" }, { id: "alerts" }, { id: "newsince" }, { id: "peernews" }, { id: "peersnap" }, { id: "status" }], threshold: 10, snap: ["ppi_tissue", "ppi_pulp", "gas_ttf", "eurusd"], kpis: ["ppi_tissue", "pulp_nbsk_eu", "rcp_white_exp", "power_de_spot", "gas_ttf"] };
   let L = (() => { try { const x = JSON.parse(store.get(KEY)); if (x && Array.isArray(x.items)) return { ...DEFAULT, ...x }; } catch (e) {} return JSON.parse(JSON.stringify(DEFAULT)); })();
   const save = () => store.set(KEY, JSON.stringify(L));
   let editing = false, D = {};
@@ -252,7 +312,7 @@
     const s = svgEl("svg", { viewBox: "0 0 100 26", preserveAspectRatio: "none", "aria-hidden": "true" });
     const pts = series.slice(-24); if (pts.length < 2) return s;
     const v = pts.map((p) => p[1]), lo = Math.min(...v), hi = Math.max(...v);
-    s.appendChild(svgEl("path", { d: pts.map((p, k) => (k ? "L" : "M") + ((k / (pts.length - 1)) * 98 + 1).toFixed(1) + " " + (23 - ((p[1] - lo) / (hi - lo || 1)) * 20).toFixed(1)).join(""), fill: "none", stroke: color || "#335777", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
+    s.appendChild(svgEl("path", { d: pts.map((p, k) => (k ? "L" : "M") + ((k / (pts.length - 1)) * 98 + 1).toFixed(1) + " " + (23 - ((p[1] - lo) / (hi - lo || 1)) * 20).toFixed(1)).join(""), fill: "none", stroke: color || "var(--d-335777-text, #335777)", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
     return s;
   }
   const marketList = () => (D.market && D.market.indicators || []).filter((i) => i.series && i.series.length > 1 && i.source !== "manual");
@@ -267,6 +327,8 @@
   const W = {
     carbon: { off: true, title: "Carbon cost exposure", desc: "WEPA's EU ETS emissions × EUA price, with a price slider", wide: true, more: ["Market →", "market.html#carbon"],
       render(b) { CarbonCost.render(b, D.ets, D.market, {}); } },
+    roundup: { off: true, title: "Monthly round-up", desc: "What changed in a month: regulation, news, market moves, peers – copy it for Teams or e-mail", wide: true, more: null,
+      render(b) { renderRoundup(b); } },
     alerts: { title: "Market alerts", desc: "Indicators that moved beyond your threshold", more: ["Market →", "market.html"],
       render(b) {
         const th = Number(L.threshold) || 10;
@@ -396,6 +458,128 @@
       } },
   };
 
+  // ---------- Monthly round-up ----------
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const SHORT = { ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", pulp_nbsk_eu: "Pulp NBSK (EU imp.)", pulp_bhkp_eu: "Pulp BHKP (EU imp.)", rcp_export_eu: "Recovered paper (EU exp.)", rcp_occ_exp: "OCC (EU exp.)", rcp_white_exp: "White grades (EU exp.)", rcp_news_exp: "News & PAMS (EU exp.)", rcp_mixed_exp: "Mixed papers (EU exp.)", rcp_occ_intra: "OCC (intra-EU)", rcp_white_intra: "White grades (intra-EU)", de_rcp_102: "DE 1.02 mixed", de_rcp_104: "DE 1.04 packaging", de_rcp_403: "DE 4.03 kraft corrugated", de_rcp_111: "DE 1.11 deinking", ppi_corrugated: "Corrugated PPI (EU)", us_recycled_board: "Recycled board (US)", us_corrugated_boxes: "Corrugated boxes (US)", gas_ttf: "Gas TTF", elec_de: "Electricity DE", power_de_spot: "Power DE spot", gas_de: "Gas DE", res_share_de: "Renewables DE", eurusd: "EUR/USD" };
+  let rmMonth = null; // "YYYY-MM"
+  function roundupData(m) {
+    const inM = (d) => (d || "").slice(0, 7) === m;
+    const rows = Object.fromEntries((D.roadmap.rows || []).map((r) => [r.id, r.label]));
+    const reg = [];
+    Object.entries(D.reg.procedures || {}).forEach(([id, p]) => (p.steps || []).filter((st) => inM(st.date)).forEach((st) => reg.push({ t: (rows[id] || id) + ": " + st.label, d: st.date, href: "regulation.html#topic=" + id })));
+    const seenReg = new Set(); const regU = reg.sort((a, b) => b.d.localeCompare(a.d)).filter((r) => { const k = r.t; if (seenReg.has(k)) return false; seenReg.add(k); return true; });
+    const news = (D.radar.entries || []).filter((e) => inM(e.date) && !e.dateIsAdded);
+    const high = news.filter((e) => e.relevance === "high").sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    const byType = {}; news.forEach((e) => { byType[e.type] = (byType[e.type] || 0) + 1; });
+    const moves = [];
+    (D.market && D.market.indicators || []).forEach((i) => {
+      if (!i.series || i.group === "grid" || i.source === "manual") return;
+      const k = i.series.findIndex((p) => p[0].slice(0, 7) === m); if (k < 1) return;
+      const a = i.series[k - 1][1], v = i.series[k][1]; if (!a) return;
+      moves.push({ id: i.id, name: SHORT[i.id] || i.label, pct: (100 * (v - a)) / Math.abs(a), unit: i.unit });
+    });
+    moves.sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
+    const names = Object.fromEntries((D.peers.companies || []).map((c) => [c.id, c.name]));
+    const pn = []; Object.entries((D.pnews && D.pnews.companies) || {}).forEach(([id, list]) => (list || []).forEach((n) => { if (inM(n.date)) pn.push({ ...n, co: names[id] || id }); }));
+    const seenPn = new Set(); const pnU = pn.sort((a, b) => (b.date || "").localeCompare(a.date || "")).filter((n) => { const k = n.title.slice(0, 60).toLowerCase(); if (seenPn.has(k)) return false; seenPn.add(k); return true; });
+    const cons = (D.reg.consultations || []).filter((c) => inM(c.end));
+    return { reg: regU, news, high, byType, moves, pn: pnU, cons };
+  }
+  function renderRoundup(b) {
+    const now = new Date(); const cur = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0");
+    const prevM = (m, d) => { const [y, mo] = m.split("-").map(Number); const t = y * 12 + mo - 1 + d; return Math.floor(t / 12) + "-" + String((t % 12) + 1).padStart(2, "0"); };
+    if (!rmMonth) rmMonth = prevM(cur, -1); // default: last complete month
+    const m = rmMonth, R = roundupData(m), label = MONTHS[+m.slice(5) - 1] + " " + m.slice(0, 4) + (m === cur ? " (so far)" : "");
+    const bar = el("div", "rm-bar");
+    const nav = (txt, d, dis) => { const x = el("button", "rm-nav", txt); x.type = "button"; x.disabled = dis; x.setAttribute("aria-label", d < 0 ? "Previous month" : "Next month"); x.addEventListener("click", () => { rmMonth = prevM(m, d); b.replaceChildren(); renderRoundup(b); }); return x; };
+    bar.append(nav("‹", -1, false), el("b", null, label), nav("›", 1, m >= cur));
+    const copy = el("button", "rm-copy", "Copy as text"); copy.type = "button"; copy.title = "Copies a plain-text summary for Teams or e-mail";
+    copy.addEventListener("click", () => {
+      const lines = ["ESG Radar · Round-up " + label, ""];
+      lines.push("Regulation (" + R.reg.length + " official steps)"); R.reg.slice(0, 5).forEach((r) => lines.push("• " + r.t + " (" + fmtShort(r.d) + ")"));
+      if (R.cons.length) lines.push("• Consultations closing: " + R.cons.map((c) => c.title).slice(0, 3).join("; "));
+      lines.push("", "News (" + R.news.length + " new, " + R.high.length + " high relevance)"); R.high.slice(0, 5).forEach((e) => lines.push("• " + e.title));
+      lines.push("", "Market moves vs. previous month"); R.moves.slice(0, 5).forEach((x) => lines.push("• " + x.name + " " + (x.pct > 0 ? "+" : "") + x.pct.toFixed(1) + " %"));
+      lines.push("", "Peers (" + R.pn.length + " headlines)"); R.pn.slice(0, 4).forEach((n) => lines.push("• " + n.co + ": " + n.title));
+      lines.push("", location.href.replace(/[#?].*$/, ""));
+      const txt = lines.join("\n");
+      (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(() => { copy.textContent = "✓ Copied"; setTimeout(() => { copy.textContent = "Copy as text"; }, 1800); })
+        .catch(() => { window.prompt("Copy the summary:", txt); });
+    });
+    bar.appendChild(copy);
+    b.appendChild(bar);
+    const g = el("div", "rm-grid");
+    const sec = (title, n, items, empty) => { const s = el("div", "rm-sec"); const h = el("h4", null, title); if (n != null) h.appendChild(el("span", "rm-n", String(n))); const box = el("div", "rm-items"); s.append(h, box); if (!items.length) box.appendChild(el("p", "empty", empty)); items.forEach((x) => box.appendChild(x)); return s; };
+    const item = (href, t, sub) => { const r = li(href); r.append(tx(t, sub)); return r; };
+    g.append(
+      sec("Regulation", R.reg.length + R.cons.length, R.reg.slice(0, 4).map((r) => item(r.href, r.t, fmtShort(r.d))).concat(R.cons.slice(0, 2).map((c) => item(c.url, "Consultation closed: " + c.title, fmtShort(c.end)))), "No official steps this month."),
+      sec("News", R.news.length, [el("p", "rm-types", Object.entries(R.byType).map(([t, n]) => n + " " + ({ regulation: "regulation", tool: "tools & updates", practice: "best practice" }[t] || t)).join(" · ") || "")].concat(R.high.slice(0, 4).map((e) => item("news.html#" + e.id, e.title, fmtShort(e.date) + " · high relevance"))), "No news this month."),
+      sec("Market moves", null, R.moves.length ? [(() => { const c = el("div", "rm-chips"); R.moves.slice(0, 6).forEach((x) => { const a = el("a", null, x.name + " " + (x.pct > 0 ? "▲ " : x.pct < 0 ? "▼ " : "▬ ") + Math.abs(x.pct).toFixed(1) + " %"); a.href = "market.html#ind=" + x.id; a.title = "vs. previous month"; c.appendChild(a); }); return c; })()] : [], "No monthly values for this month yet – statistics are published with a delay of 1–3 months."),
+      sec("Peers", R.pn.length, R.pn.filter((n, k, a) => a.findIndex((x) => x.co === n.co && x.date === n.date) === k).slice(0, 4).map((n) => item(n.url, n.title, n.co + " · " + fmtShort(n.date))), "No peer headlines this month."));
+    b.appendChild(g);
+  }
+
+  // ---------- Briefing (B1): summary sentence, key numbers, round-up, next 30 days ----------
+  const fmtVal = (v, unit) => { const a = Math.abs(v); const d = unit === "index" || unit === "%" ? 1 : a >= 100 ? 0 : a >= 10 ? 1 : 2; return v.toLocaleString("en-GB", { minimumFractionDigits: d, maximumFractionDigits: d }); };
+  const SLOT = ["#33b09c", "#0064aa", "#335777", "#e8957a", "#828282"];
+  function upcoming() {
+    const list = [];
+    (D.radar.entries || []).forEach((e) => { if (e.nextDate && e.nextDate >= todayIso) list.push({ date: e.nextDate, title: e.nextDateLabel || e.title, sub: e.title, href: "news.html#open=" + encodeURIComponent(e.id) }); });
+    (D.reg.consultations || []).forEach((c) => { if (c.end >= todayIso) list.push({ date: c.end, title: "Consultation closes: " + c.title, sub: "Have your say", href: c.url }); });
+    const seen = new Set();
+    return list.sort((a, b) => a.date.localeCompare(b.date)).filter((x) => { const k = x.date + x.title; if (seen.has(k)) return false; seen.add(k); return true; });
+  }
+  function kpiList() { const all = marketList(); return (L.kpis || DEFAULT.kpis).map((id) => all.find((i) => i.id === id)).filter(Boolean).slice(0, 5); }
+  function renderBrief() {
+    // key numbers
+    const box = $("kpis"); box.replaceChildren();
+    kpiList().forEach((i, k) => {
+      const s = i.series, last = s[s.length - 1], c = change(i);
+      const a = el("a", "kpi"); a.href = "market.html#ind=" + i.id; a.title = i.label;
+      const v = el("span", "v", fmtVal(last[1], i.unit)); v.appendChild(el("small", null, i.unit === "index" ? "index" : i.unit));
+      const d = el("span", "d");
+      if (c) d.append((c.pct > 0 ? "▲ " : c.pct < 0 ? "▼ " : "▬ ") + Math.abs(c.pct).toFixed(1) + " % ", el("i", null, "vs. " + MON[+c.from.slice(5, 7) - 1] + " · " + fmtMonth(c.to)));
+      else d.appendChild(el("i", null, fmtMonth(last[0])));
+      a.append(el("span", "l", SHORT[i.id] || short(i)), v, d, spark(s.slice(-12), SLOT[k % SLOT.length]));
+      box.appendChild(a);
+    });
+    box.hidden = !box.children.length;
+    // round-up
+    const rb = $("roundup"); rb.replaceChildren(); renderRoundup(rb);
+    // next 30 days
+    const up = upcoming(), nx = $("next30"); nx.replaceChildren();
+    const soon = up.filter((x) => days(x.date) <= 30), show = (soon.length >= 3 ? soon : up).slice(0, 5);
+    if (!show.length) nx.appendChild(el("p", "empty", "No upcoming deadlines recorded."));
+    show.forEach((x) => { const r = li(x.href); const d = days(x.date); r.append(dd(x.date), tx(x.title, x.sub !== x.title ? x.sub : null), el("span", "r " + (d <= 7 ? "soon" : "later"), d <= 0 ? "today" : d + " d")); nx.appendChild(r); });
+    const then = up.filter((x) => !show.includes(x) && x.date > (show.length ? show[show.length - 1].date : todayIso)).slice(0, 2);
+    if (then.length) nx.appendChild(el("p", "nx-then", "Then: " + then.map((x) => { const t = x.title.replace(/^Consultation closes: /, ""); return (t.length > 48 ? t.slice(0, 46) + "…" : t) + " (" + fmtShort(x.date) + ")"; }).join(" · ")));
+    // summary sentence – built from the data by fixed rules
+    const p = $("summary"); p.replaceChildren();
+    const bits = [];
+    const wk = up.filter((x) => days(x.date) <= 7).length;
+    const part = (pre, strong, post) => { const f = document.createDocumentFragment(); if (pre) f.append(pre); f.append(el("b", null, strong)); if (post) f.append(post); return f; };
+    bits.push(part("", wk ? wk + (wk === 1 ? " deadline" : " deadlines") : "no deadlines", " in the next 7 days"));
+    const recent = marketList().filter((i) => i.group !== "grid").map((i) => ({ i, c: change(i) })).filter((x) => x.c && x.c.to >= isoDay(new Date(today.getFullYear(), today.getMonth() - 3, 1)).slice(0, 7) && Math.abs(x.c.pct) >= 5)
+      .sort((a, b) => Math.abs(b.c.pct) - Math.abs(a.c.pct)).slice(0, 2);
+    if (recent.length) { const f = document.createDocumentFragment(); f.append("biggest market moves: "); recent.forEach((x, k) => { if (k) f.append(", "); f.append(el("b", null, (SHORT[x.i.id] || short(x.i)) + " " + (x.c.pct > 0 ? "+" : "−") + Math.abs(x.c.pct).toFixed(1) + " %")); }); f.append(" on the month"); bits.push(f); }
+    const lm = (() => { const t = today.getFullYear() * 12 + today.getMonth() - 1; return Math.floor(t / 12) + "-" + String((t % 12) + 1).padStart(2, "0"); })();
+    const pnN = roundupData(lm).pn.length;
+    if (pnN) bits.push(part("", pnN + " peer headlines", " in " + MONTHS[+lm.slice(5) - 1]));
+    const lead = today.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + " · ";
+    p.append(lead); bits.forEach((b, k) => { if (k) p.append(k === bits.length - 1 ? " and " : ", "); p.append(b); }); p.append(".");
+  }
+  function renderKpiCfg() {
+    const cfg = $("kpi-cfg"); cfg.replaceChildren();
+    marketList().filter((i) => i.group !== "grid").forEach((i) => {
+      const lab = el("label"); const cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = (L.kpis || []).includes(i.id);
+      cb.addEventListener("change", () => {
+        if (cb.checked && L.kpis.length >= 5) { cb.checked = false; return; }
+        L.kpis = cb.checked ? [...L.kpis, i.id] : L.kpis.filter((x) => x !== i.id); save(); renderBrief();
+      });
+      lab.append(cb, document.createTextNode(SHORT[i.id] || short(i))); cfg.appendChild(lab);
+    });
+  }
+
   // ---------- layout: widgets sit in grid cells {c, r} (0-based); free cells can stay empty ----------
   const colsNow = () => { const g = $("grid"); const wdt = (g && g.clientWidth) || window.innerWidth; return window.innerWidth <= 720 ? 1 : Math.max(1, Math.min(4, Math.floor((wdt + 16) / (380 + 16)))); };
   // Place all widgets: keep each one's cell if it fits and is free, otherwise put it in the first free cell.
@@ -424,6 +608,11 @@
     const grid = $("grid"); grid.replaceChildren();
     grid.classList.toggle("editing", editing);
     L.items = L.items.filter((x) => W[x.id] && !W[x.id].off); // "off" widgets are switched off for now
+    // new widgets are offered once to existing layouts (they can be removed again)
+    L.intro = L.intro || [];
+    // the briefing (B1) now shows the round-up and the next deadlines above the cards: take them out of older layouts once
+    if (!L.intro.includes("briefing")) { L.intro.push("briefing"); L.items = L.items.filter((x) => x.id !== "deadlines"); L.items.forEach((x) => delete x.pos); save(); }
+    if (!L.kpis) L.kpis = DEFAULT.kpis.slice();
     COLS = colsNow(); grid.style.setProperty("--cols", COLS);
     const occ = place(COLS);
     L.items.forEach((item, idx) => {
@@ -515,14 +704,14 @@
     if (!on) $("drawer").hidden = true;
     renderAll();
   }
-  $("edit").addEventListener("click", () => { setEdit(true); $("drawer").hidden = false; renderCat(); });
+  $("edit").addEventListener("click", () => { setEdit(true); $("drawer").hidden = false; renderCat(); renderKpiCfg(); });
   $("done").addEventListener("click", () => setEdit(false));
   $("add").addEventListener("click", () => { $("drawer").hidden = !$("drawer").hidden; renderCat(); });
-  $("reset").addEventListener("click", () => { L = JSON.parse(JSON.stringify(DEFAULT)); save(); renderAll(); renderCat(); });
+  $("reset").addEventListener("click", () => { L = JSON.parse(JSON.stringify(DEFAULT)); L.intro = ["briefing"]; save(); renderAll(); renderCat(); renderKpiCfg(); renderBrief(); });
 
   const h = new Date().getHours();
   $("hello").textContent = h < 11 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
-  $("since").textContent = base < todayIso ? "What changed since your last visit on " + fmt(base) : "Your overview";
+  $("since").textContent = "Saved in this browser – “Customize” to add, move or remove cards";
 
   Promise.all([
     getJSON("data/radar.json", { entries: [] }), getJSON("data/regulation.json", { consultations: [], procedures: {} }), getJSON("data/roadmap.json", { rows: [] }),
@@ -531,8 +720,11 @@
   ]).then(([radar, reg, roadmap, market, ets, peers, pnews, status]) => {
     D = { radar, reg: { consultations: [], procedures: {}, ...reg }, roadmap, market, ets, peers, pnews, status };
     renderAll();
+    try { renderBrief(); } catch (e) { console.error(e); }
   });
 })();
 </script>
+<script src="assets/search.js?v=20261105i" defer></script>
+<script src="assets/guide.js?v=20261105i" defer></script>
 </body>
 </html>

@@ -21,6 +21,7 @@ import sys
 import urllib.parse
 import urllib.error
 import urllib.request
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -320,7 +321,17 @@ def _genesis_post(method, params, timeout=120):
     req = urllib.request.Request(GENESIS + method, data=body, method="POST",
                                  headers={"User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded", **auth})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
-        return resp.read().decode("utf-8-sig", "replace")
+        raw = resp.read()
+    # GENESIS sends large tables as a zip file (even with compress=false): unpack the first file
+    if raw[:2] == b"PK":
+        with zipfile.ZipFile(io.BytesIO(raw)) as z:
+            raw = z.read(z.namelist()[0])
+    for enc in ("utf-8-sig", "cp1252"):
+        try:
+            return raw.decode(enc)
+        except UnicodeDecodeError:
+            pass
+    return raw.decode("utf-8", "replace")
 
 
 def _num_de(v):
