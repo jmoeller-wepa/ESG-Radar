@@ -15,7 +15,9 @@
   th:hover > .cr-h::after { background: #c9d1db; }
   .cr-h:hover::after, .cr-h.on::after { background: #33b09c; width: 2px; left: 3.5px; }
   table.cr-fixed { table-layout: fixed; }
-  table.cr-fixed td, table.cr-fixed th { overflow: hidden; text-overflow: ellipsis; }
+  /* after resizing, text wraps onto the next line instead of being cut off */
+  table.cr-fixed td, table.cr-fixed th, table.cr-fixed td *, table.cr-fixed th * { white-space: normal !important; overflow-wrap: break-word; }
+  table.cr-fixed td, table.cr-fixed th { vertical-align: top; }
   body.cr-drag, body.cr-drag * { cursor: col-resize !important; user-select: none !important; }`;
   document.head.appendChild(st);
 

@@ -44,6 +44,11 @@
           "PRC_PRR_DOM",
           "PRC_PRR"
         ]
+      },
+      "about": {
+        "what": "An index of the prices EU producers charge for household and sanitary paper products when they sell in their home market (NACE C17.22, 2021 = 100). It moves with list and contract price changes across the industry.",
+        "wepa": "The closest public signal for the selling-price environment WEPA operates in. Put next to pulp, recovered paper and energy, it shows whether input costs are rising faster than market prices – a margin squeeze – or the other way round.",
+        "limits": "Not WEPA's own prices, and not retail shelf prices. C17.22 also includes nappies and other hygiene products, and private-label contracts often follow with a delay. An index shows direction, not a price level."
       }
     },
     {
@@ -83,6 +88,11 @@
           "PRC_PRR_DOM",
           "PRC_PRR"
         ]
+      },
+      "about": {
+        "what": "An index of the prices EU pulp producers charge in their home market (NACE C17.11).",
+        "wepa": "A rough indicator of the direction of European pulp prices – pulp is WEPA's largest raw material cost for fresh-fibre products.",
+        "limits": "Mixes all pulp grades and includes integrated producers' internal sales. Eurostat publishes it irregularly and with gaps (some countries keep data confidential). For price levels in €/t, use the EU import prices for NBSK and BHKP."
       }
     },
     {
@@ -122,6 +132,11 @@
           "PRC_PRR_DOM",
           "PRC_PRR"
         ]
+      },
+      "about": {
+        "what": "An index of the prices EU producers charge for paper and paperboard (NACE C17.12), including tissue base paper (parent reels).",
+        "wepa": "Shows the wider paper market climate. Relevant when WEPA buys or sells parent reels and as a cross-check for the tissue index.",
+        "limits": "Dominated by packaging and graphic papers, which follow their own cycles. Says little about tissue-specific prices."
       }
     },
     {
@@ -164,6 +179,11 @@
           "PRD",
           "PROD"
         ]
+      },
+      "about": {
+        "what": "An index of production volume in the EU paper and paper products industry (NACE C17).",
+        "wepa": "An activity signal: falling volumes point to weak demand or curtailments (often triggered by energy prices), rising volumes to a tightening market for fibre and energy.",
+        "limits": "Volume, not price, and the whole paper industry rather than tissue. Tissue demand is much more stable than packaging or graphic paper demand."
       }
     },
     {
@@ -179,7 +199,12 @@
       "series": "WPU0912",
       "freq": "monthly",
       "attribution": "U.S. Bureau of Labor Statistics via FRED",
-      "link": "https://fred.stlouisfed.org/series/WPU0912"
+      "link": "https://fred.stlouisfed.org/series/WPU0912",
+      "about": {
+        "what": "The US producer price index for recovered paper (waste paper), from the US Bureau of Labor Statistics.",
+        "wepa": "A long, reliable series that shows the direction of the global recovered paper market, which also influences European prices through export flows.",
+        "limits": "US market and US dollars, and dominated by brown grades (old corrugated containers). WEPA's recycled tissue needs deinking grades such as office paper, which can move differently. Use the EU export price for a European signal."
+      }
     },
     {
       "id": "us_wood_pulp",
@@ -193,7 +218,76 @@
       "series": "WPU0911",
       "freq": "monthly",
       "attribution": "U.S. Bureau of Labor Statistics via FRED",
-      "link": "https://fred.stlouisfed.org/series/WPU0911"
+      "link": "https://fred.stlouisfed.org/series/WPU0911",
+      "about": {
+        "what": "The US producer price index for wood pulp, from the US Bureau of Labor Statistics.",
+        "wepa": "Market pulp is traded globally in US dollars, so this index is a stable trend proxy for the pulp prices WEPA pays – together with EUR/USD.",
+        "limits": "US domestic prices across several grades, as an index. It does not show the €/t level or the spread between softwood and hardwood pulp."
+      }
+    },
+    {
+      "id": "pulp_nbsk_eu",
+      "group": "fibre",
+      "areas": [
+        "forests",
+        "circularity"
+      ],
+      "label": "Pulp import price · bleached softwood kraft (NBSK), EU",
+      "unit": "€/t",
+      "source": "comext",
+      "product": "470321",
+      "flow": 1,
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "_note": "Unit value = import value / import volume of CN 4703 21 from outside the EU. Follows market prices with a lag; not a contract price.",
+      "about": {
+        "what": "The average price per tonne of bleached softwood kraft pulp (NBSK, CN 4703 21) that the EU imported from outside the EU, calculated as import value ÷ import volume from EU trade statistics.",
+        "wepa": "Long-fibre pulp gives tissue its strength and is one of WEPA's biggest cost items. This series gives a real price level in €/t without paid price reports (FOEX, Fastmarkets).",
+        "limits": "An average of all deliveries that month, including discounts and contracts agreed earlier, so it lags market quotes by one to three months. It excludes pulp from Sweden and Finland (trade inside the EU) and is not WEPA's purchase price."
+      }
+    },
+    {
+      "id": "pulp_bhkp_eu",
+      "group": "fibre",
+      "areas": [
+        "forests",
+        "circularity"
+      ],
+      "label": "Pulp import price · bleached hardwood kraft (eucalyptus, BHKP), EU",
+      "unit": "€/t",
+      "source": "comext",
+      "product": "470329",
+      "flow": 1,
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "about": {
+        "what": "The average price per tonne of bleached hardwood kraft pulp (CN 4703 29) imported into the EU from outside the EU – mostly eucalyptus pulp from Brazil, Uruguay and Chile.",
+        "wepa": "Short-fibre pulp gives tissue its softness and is used in large volumes. Its price depends heavily on new mill capacity in South America, the Brazilian real and sea freight.",
+        "limits": "Same caveats as NBSK: an average unit value that lags spot prices, excludes birch pulp from inside the EU, and is not a contract price."
+      }
+    },
+    {
+      "id": "rcp_export_eu",
+      "group": "fibre",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Recovered paper export price · EU (all grades)",
+      "unit": "€/t",
+      "source": "comext",
+      "product": "4707",
+      "flow": 2,
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "_note": "Unit value of EU exports of recovered paper (HS 4707) outside the EU – a market signal for European recovered paper prices.",
+      "about": {
+        "what": "The average price per tonne of recovered paper (HS 4707, all grades) exported from the EU to countries outside the EU, calculated from EU trade statistics.",
+        "wepa": "When export prices rise, more European recovered paper leaves for Asia or Turkey and less is available for mills here – a signal for tighter supply and higher prices for WEPA's recycled-fibre products.",
+        "limits": "Mixes all grades and is dominated by brown packaging grades. It is not what European mills pay, and the deinking grades WEPA needs can move differently."
+      }
     },
     {
       "id": "gas_ttf",
@@ -207,7 +301,12 @@
       "series": "PNGASEUUSDM",
       "freq": "monthly",
       "attribution": "IMF Primary Commodity Prices via FRED",
-      "link": "https://fred.stlouisfed.org/series/PNGASEUUSDM"
+      "link": "https://fred.stlouisfed.org/series/PNGASEUUSDM",
+      "about": {
+        "what": "The monthly average price of natural gas at the Dutch TTF hub, Europe's benchmark wholesale market (IMF data, in US dollars per million British thermal units).",
+        "wepa": "Drying tissue on Yankee cylinders and hoods uses a lot of gas, and gas also feeds on-site power plants. TTF is the main driver of WEPA's energy costs and of electricity prices.",
+        "limits": "A wholesale benchmark in US dollars. WEPA buys forward and hedges, so price moves reach its costs with a delay. Network fees, taxes and CO₂ costs come on top."
+      }
     },
     {
       "id": "elec_de",
@@ -248,6 +347,31 @@
         "nrg_cons": [
           "MWH2000-19999"
         ]
+      },
+      "about": {
+        "what": "The average price German industrial customers with 2,000–20,000 MWh a year pay for electricity, including network charges and levies but excluding VAT (Eurostat, half-yearly).",
+        "wepa": "A reference for the full electricity bill of an industrial site in Germany, beyond the wholesale price.",
+        "limits": "A smaller consumption band than WEPA's larger mills, and published half-yearly with a long delay. It does not reflect relief schemes WEPA may use, such as electricity price compensation or reduced levies."
+      }
+    },
+    {
+      "id": "power_de_spot",
+      "group": "energy",
+      "areas": [
+        "climate"
+      ],
+      "label": "Wholesale electricity price · Germany (day-ahead, monthly average)",
+      "unit": "€/MWh",
+      "source": "smard_price",
+      "filter": 4169,
+      "region": "DE-LU",
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "about": {
+        "what": "The monthly average day-ahead wholesale electricity price for Germany/Luxembourg, from the Bundesnetzagentur's SMARD platform.",
+        "wepa": "The most current signal for the electricity market. It shows where prices for unhedged volumes and the next procurement rounds are heading, and often follows gas and CO₂ prices.",
+        "limits": "Wholesale only – network charges, taxes and levies come on top. A monthly average hides very high and negative hours, and WEPA's actual cost depends on its contracts."
       }
     },
     {
@@ -293,6 +417,11 @@
         "nrg_cons": [
           "GJ10000-99999"
         ]
+      },
+      "about": {
+        "what": "The average price German industrial customers with 10,000–100,000 GJ a year pay for natural gas, including network charges but excluding VAT (Eurostat, half-yearly).",
+        "wepa": "A reference for the full gas bill in Germany, including network costs, next to the TTF wholesale price.",
+        "limits": "A smaller consumption band than WEPA's mills use, half-yearly and published late. Hedging and individual contracts are not reflected."
       }
     },
     {
@@ -322,7 +451,12 @@
       ],
       "freq": "monthly",
       "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
-      "link": "https://www.smard.de/en"
+      "link": "https://www.smard.de/en",
+      "about": {
+        "what": "The share of renewable sources (wind, solar, hydro, biomass and others) in Germany's public net electricity generation, from SMARD.",
+        "wepa": "Explains much of the movement in the German grid carbon intensity – the location-based Scope 2 factor for German sites – and in power prices: more wind and solar means lower prices in those hours.",
+        "limits": "Generation, not consumption (imports are excluded). It does not change WEPA's market-based Scope 2, which depends on its contracts and guarantees of origin."
+      }
     },
     {
       "id": "grid_eu",
@@ -477,7 +611,12 @@
       ],
       "freq": "manual, quarterly",
       "attribution": "Press / exchange reports",
-      "link": "https://www.hellenicshippingnews.com/ten-eu-countries-make-last-minute-push-for-industry-reprieve-in-ets-overhaul/"
+      "link": "https://www.hellenicshippingnews.com/ten-eu-countries-make-last-minute-push-for-industry-reprieve-in-ets-overhaul/",
+      "about": {
+        "what": "The price of an EU emission allowance (EUA) under the EU Emissions Trading System, in € per tonne of CO₂, entered by hand from press and exchange reports.",
+        "wepa": "WEPA's mills with combustion plants are in the EU ETS. The EUA price sets the cost of emissions not covered by free allocation and makes gas-based heat more expensive than low-carbon alternatives.",
+        "limits": "A manually entered value, not a live exchange price. WEPA's actual cost depends on its free allocation and when allowances are bought."
+      }
     },
     {
       "id": "eurusd",
@@ -491,8 +630,19 @@
       "series": "EXUSEU",
       "freq": "monthly",
       "attribution": "Federal Reserve via FRED",
-      "link": "https://fred.stlouisfed.org/series/EXUSEU"
+      "link": "https://fred.stlouisfed.org/series/EXUSEU",
+      "about": {
+        "what": "The monthly average exchange rate: how many US dollars one euro buys (Federal Reserve data).",
+        "wepa": "Market pulp is priced in US dollars. A weaker euro makes the same dollar pulp price more expensive for WEPA, a stronger euro cheaper.",
+        "limits": "A monthly average. WEPA's actual exchange rates depend on payment dates and hedging."
+      }
     }
   ],
-  "gridNote": "Countries with WEPA sites. 'isUs' marks them in the table; the EU average is the reference line. Edit the list freely (area = ISO 3 code from the Ember file, or 'EU')."
+  "gridNote": "Countries with WEPA sites. 'isUs' marks them in the table; the EU average is the reference line. Edit the list freely (area = ISO 3 code from the Ember file, or 'EU').",
+  "gridAbout": {
+    "what": "How many grams of CO₂ are emitted for each kWh of electricity generated in the country, from Ember's monthly electricity data. The table shows 12-month averages, which smooth out seasonal swings.",
+    "wepa": "Electricity use × this factor gives the location-based Scope 2 emissions of WEPA's sites in that country. It also shows where electrifying heat (for example e-boilers or heat pumps instead of gas) actually lowers emissions: a lot in France, little in Poland.",
+    "limits": "Based on generation, so electricity imports are not included. It is not the official factor WEPA uses in its report (often from the IEA, AIB or national agencies), and it does not affect market-based Scope 2, which depends on contracts and guarantees of origin."
+  },
+  "_comment_about": "'about' (what / wepa / limits) is shown when an indicator card is opened on the Market page. 'gridAbout' is used for all grid carbon intensity countries."
 }

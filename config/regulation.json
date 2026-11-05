@@ -10,7 +10,10 @@
     "ets": null,
     "ets2": null,
     "taxonomy": null,
-    "sbti": null
+    "sbti": null,
+    "espr": null,
+    "aiact": null,
+    "dataact": null
   },
   "consultations": {
     "_comment": "Open consultations on the Commission's 'Have your say' portal are kept when their title or summary matches one of these keywords (case-insensitive). Areas are assigned with the areaKeywords from config/feeds.json.",
@@ -56,7 +59,13 @@
       "simplification",
       "forced labour",
       "supply chain",
-      "product passport"
+      "product passport",
+      "artificial intelligence",
+      "AI Act",
+      "Data Act",
+      "data sharing",
+      "digital omnibus",
+      "unsold"
     ],
     "maxPages": 6
   },
@@ -101,6 +110,21 @@
       "due diligence",
       "CSDDD"
     ],
-    "sbti": []
+    "sbti": [],
+    "espr": [
+      "ecodesign",
+      "product passport",
+      "ESPR",
+      "unsold"
+    ],
+    "aiact": [
+      "artificial intelligence",
+      "AI Act"
+    ],
+    "dataact": [
+      "Data Act",
+      "data sharing",
+      "cloud switching"
+    ]
   }
 }

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261104e">
+<link rel="stylesheet" href="assets/side.css?v=20261105a">
 <style>
   :root {
     --blue-900: #002d55;
@@ -153,6 +153,16 @@
   .gd-chart { position: relative; }
   .gd-chart svg { width: 100%; height: auto; display: block; }
   .gd-tip { position: absolute; pointer-events: none; background: #002d55; color: #fff; font-size: 12px; border-radius: 7px; padding: 5px 8px; white-space: nowrap; transform: translate(-50%, -110%); }
+  .gd-about { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .gd-about > div { border-radius: 10px; padding: 10px 12px; background: #f7f9fb; border-top: 3px solid #96d2dc; }
+  .gd-about > .ab1 { border-top-color: #33b09c; background: #f1faf7; }
+  .gd-about > .ab2 { border-top-color: #f4b49f; background: #fdf6f3; }
+  .gd-about b { display: block; font-size: 12px; letter-spacing: .03em; color: var(--blue-900); margin-bottom: 4px; }
+  .gd-about p { margin: 0; font-size: 13px; line-height: 1.5; color: #374151; }
+  @media (max-width: 760px) { .gd-about { grid-template-columns: 1fr; } }
+  .gd-warn { margin: 0; font-size: 12.5px; color: #8a5a00; background: #fff6e0; border-radius: 8px; padding: 6px 10px; }
+  .tile { cursor: pointer; }
+  .tile .pin { cursor: pointer; font: inherit; }
   .gd-yr { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
   .gd-yr th, .gd-yr td { padding: 6px 10px; border-bottom: 1px solid var(--line-2); text-align: right; }
   .gd-yr th:first-child, .gd-yr td:first-child { text-align: left; }
@@ -167,11 +177,11 @@
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
   .tile { position: relative; display: flex; flex-direction: column; gap: 6px; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 12px; min-height: 178px; cursor: pointer; color: inherit; font: inherit; transition: border-color .15s, box-shadow .15s; }
   .tile:hover { border-color: #d5dae2; box-shadow: 0 4px 14px rgba(0, 20, 50, .06); }
-  .tile[aria-pressed="true"] { border-color: var(--sel, var(--blue-900)); box-shadow: inset 0 3px 0 var(--sel, var(--blue-900)); }
+  .tile.sel { border-color: var(--sel, var(--blue-900)); box-shadow: inset 0 3px 0 var(--sel, var(--blue-900)); }
   .tile.static { cursor: default; }
   .tile .lbl { font-size: 13px; color: var(--ink-2); line-height: 1.35; padding-right: 26px; min-height: 35px; }
   .tile .pin { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid #d0d5dd; display: grid; place-items: center; font-size: 13px; line-height: 1; color: #fff; }
-  .tile[aria-pressed="true"] .pin { background: var(--sel); border-color: var(--sel); }
+  .tile.sel .pin { background: var(--sel); border-color: var(--sel); }
   .tile .val { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
   .tile .val b { font-size: 24px; font-weight: 600; color: var(--blue-900); letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
   .tile .val small { font-size: 12.5px; color: var(--ink-3); }
@@ -191,9 +201,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261104e" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261104e">
-<script src="assets/colresize.js?v=20261104e" defer></script>
+<script src="assets/status.js?v=20261105a" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261105a">
+<script src="assets/colresize.js?v=20261105a" defer></script>
 </head>
 <body>
 <header>
@@ -263,8 +273,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261104e"></script>
-<script src="assets/carbon.js?v=20261104e"></script>
+<script src="assets/side.js?v=20261105a"></script>
+<script src="assets/carbon.js?v=20261105a"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -279,7 +289,7 @@
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
   // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
-    { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history." },
+    { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history and what it means for WEPA." },
   ];
   let TABS = [];
   const ui = { open: false, exp: new Set() };
@@ -538,11 +548,20 @@
   function tile(ind) {
     const can = chartable(ind);
     const sel = state.cmp.includes(ind.id);
-    const t = el(can ? "button" : "div", "tile" + (can ? "" : " static"));
-    if (can) { t.type = "button"; t.setAttribute("aria-pressed", String(sel)); t.title = sel ? "Remove from chart" : "Add to chart"; t.addEventListener("click", (e) => { if (!e.target.closest("a")) toggle(ind.id); }); }
+    const t = el("div", "tile" + (can ? "" : " static") + (sel ? " sel" : ""));
+    t.tabIndex = 0; t.setAttribute("role", "button"); t.title = "Open: history and what it means for WEPA";
+    t.setAttribute("aria-label", ind.label + " – open details");
+    t.addEventListener("click", (e) => { if (!e.target.closest("a, .pin")) openInd(ind); });
+    t.addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target === t) openInd(ind); });
     if (sel) t.style.setProperty("--sel", colorOf[ind.id]);
     t.appendChild(el("div", "lbl", ind.label));
-    if (can) { const p = el("span", "pin", sel ? "✓" : ""); p.setAttribute("aria-hidden", "true"); if (sel && LIGHT.has(colorOf[ind.id])) p.style.color = "#002d55"; t.appendChild(p); }
+    if (can) {
+      const p = el("button", "pin", sel ? "✓" : ""); p.type = "button"; p.setAttribute("role", "checkbox"); p.setAttribute("aria-checked", String(sel));
+      p.title = sel ? "Remove from the Compare chart" : "Add to the Compare chart"; p.setAttribute("aria-label", p.title + " – " + ind.label);
+      if (sel && LIGHT.has(colorOf[ind.id])) p.style.color = "#002d55";
+      p.addEventListener("click", (e) => { e.stopPropagation(); toggle(ind.id); });
+      t.appendChild(p);
+    }
     if (!hasData(ind)) {
       t.appendChild(el("div", "na", "No data yet – arrives with the next weekly run."));
     } else {
@@ -598,7 +617,7 @@
       const tr = el("tr", (i.id === "grid_eu" ? "ref" : "") + (sel ? " sel" : ""));
       tr.tabIndex = 0; tr.title = "Show the history";
       if (sel) tr.style.setProperty("--sel", colorOf[i.id]);
-      tr.addEventListener("click", () => openGrid(i, items)); tr.addEventListener("keydown", (e) => { if (e.key === "Enter") openGrid(i, items); });
+      tr.addEventListener("click", () => openInd(i)); tr.addEventListener("keydown", (e) => { if (e.key === "Enter") openInd(i); });
       tr.appendChild(el("td", null, i.id === "grid_eu" ? "EU average" : i.country || i.label));
       const bar = el("div", "gbar"); const b = el("i"); b.style.width = Math.max(2, (now / maxV) * 180) + "px";
       bar.append(el("b", null, Math.round(now).toString()), b);
@@ -614,15 +633,36 @@
     t.appendChild(tb); wrap.appendChild(t); box.appendChild(wrap);
     return box;
   }
-  // ---- Pop-up: history of one country's grid carbon intensity ----
-  function openGrid(ind, all) {
+  // ---- Pop-up for any indicator: key numbers, explanation for WEPA, history chart, yearly averages ----
+  let ABOUT = {}, GRID_ABOUT = null; // from config/market.json (loaded with the data)
+  function aboutBlock(ind) {
+    const a = ind.group === "grid" ? GRID_ABOUT : ABOUT[ind.id] || ind.about;
+    if (!a) return null;
+    const box = el("div", "gd-about");
+    [["What it shows", a.what], ["What it means for WEPA", a.wepa], ["What it doesn't tell you", a.limits]].forEach(([h, t], n) => {
+      if (!t) return; const d = el("div", "ab" + n); d.append(el("b", null, h), el("p", null, t)); box.appendChild(d);
+    });
+    return box;
+  }
+  function openInd(ind) {
+    const isGrid = ind.group === "grid";
+    const all = M.indicators;
     const s = (ind.series || []).filter((p) => p[1] != null);
-    const eu = all.find((x) => x.id === "grid_eu");
-    const name = ind.id === "grid_eu" ? "EU average" : ind.country || ind.label;
-    $("gd-title").textContent = name + " · grid carbon intensity";
-    $("gd-sub").textContent = "g CO₂ per kWh of electricity generated · monthly · Ember (CC BY 4.0)";
+    const eu = isGrid ? all.find((x) => x.id === "grid_eu") : null;
+    const name = isGrid ? (ind.id === "grid_eu" ? "EU average" : ind.country || ind.label) + " · grid carbon intensity" : ind.label;
+    const u = unitLabel(ind.unit);
+    $("gd-title").textContent = name;
+    $("gd-sub").textContent = isGrid ? "g CO₂ per kWh of electricity generated · monthly · Ember (CC BY 4.0)" : [u, ind.freq, ind.attribution].filter(Boolean).join(" · ");
     const body = $("gd-body"); body.replaceChildren();
-    if (s.length < 2) { body.appendChild(el("p", "empty", "No history yet.")); $("gdlg").showModal(); return; }
+    const ab = aboutBlock(ind);
+    if (s.length < 2) {
+      if (s.length === 1) { const k1 = el("div", "gd-kpis"); const d = el("div"); d.append(document.createTextNode("Latest · " + fmtDate(s[0][0], ind)), el("b", null, fmtVal(s[0][1], ind.unit) + " " + u)); k1.appendChild(d); body.appendChild(k1); }
+      if (ab) body.appendChild(ab);
+      (ind.notes || []).slice().reverse().forEach((n) => body.appendChild(el("p", "empty", fmtDate(n.date, ind) + " · " + (n.note || ""))));
+      if (!s.length) body.appendChild(el("p", "empty", "No data yet – arrives with the next run of the data update."));
+      body.appendChild(srcFoot(ind)); $("gdlg").showModal(); return;
+    }
+    if (!isGrid) return openSeries(ind, s, body, ab);
     const roll = (arr) => arr.map((p, k) => (k < 11 ? null : [p[0], arr.slice(k - 11, k + 1).reduce((a, q) => a + q[1], 0) / 12]));
     const r12 = roll(s).filter(Boolean);
     const euMap = eu && eu !== ind ? new Map(roll(eu.series.filter((p) => p[1] != null)).filter(Boolean).map((p) => [p[0].slice(0, 7), p[1]])) : null;
@@ -635,6 +675,7 @@
       kp("vs. " + first[0].slice(0, 4) + " (12-month avg.)", ((now[1] - first[1]) / first[1] * 100 > 0 ? "+" : "") + ((now[1] - first[1]) / first[1] * 100).toFixed(0) + " %"),
       kp("Lowest / highest month", Math.round(Math.min(...s.map((p) => p[1]))) + " / " + Math.round(Math.max(...s.map((p) => p[1])))));
     body.appendChild(k);
+    if (ab) body.appendChild(ab);
     // legend + chart
     const lg = el("div", "gd-lg");
     const li = (c, t, dash) => { const x = el("span"); const i = el("i"); i.style.background = dash ? "repeating-linear-gradient(90deg," + c + " 0 4px,transparent 4px 7px)" : c; x.append(i, document.createTextNode(t)); return x; };
@@ -690,13 +731,83 @@
       tb.prepend(tr); prev = avg;
     });
     t.appendChild(tb); const wrap = el("div"); wrap.style.overflowX = "auto"; wrap.appendChild(t); body.appendChild(wrap);
-    // footer: add to compare chart
+    body.appendChild(srcFoot(ind, "* incomplete year. Source: Ember, monthly electricity data (CC BY 4.0)."));
+    $("gdlg").showModal();
+  }
+  // footer: source link + add to / remove from the Compare chart
+  function srcFoot(ind, text) {
     const foot = el("div", "gd-foot");
-    foot.appendChild(el("span", null, "* incomplete year. Source: Ember, monthly electricity data (CC BY 4.0)."));
-    const on = state.cmp.includes(ind.id);
-    const add = el("button", "gd-add" + (on ? " on" : ""), on ? "✓ In the Compare chart – remove" : "Add to Compare chart"); add.type = "button";
-    add.addEventListener("click", () => { toggle(ind.id); $("gdlg").close(); });
-    foot.appendChild(add); body.appendChild(foot);
+    const sp = el("span", null, text || ("Source: " + (ind.attribution || "") + " "));
+    if (!text && ind.link) { const a = el("a", null, "open ↗"); a.href = ind.link; a.target = "_blank"; a.rel = "noopener"; sp.appendChild(a); }
+    foot.appendChild(sp);
+    if (chartable(ind)) {
+      const on = state.cmp.includes(ind.id);
+      const add = el("button", "gd-add" + (on ? " on" : ""), on ? "✓ In the Compare chart – remove" : "Add to Compare chart"); add.type = "button";
+      add.addEventListener("click", () => { toggle(ind.id); $("gdlg").close(); });
+      foot.appendChild(add);
+    }
+    return foot;
+  }
+  // Non-grid indicators: one line in its own unit, hover values, yearly averages
+  function openSeries(ind, s, body, ab) {
+    const u = unitLabel(ind.unit);
+    const last = s[s.length - 1], first = s[0];
+    const c = yoy(ind);
+    const k = el("div", "gd-kpis");
+    const kp = (label, val) => { const d = el("div"); d.append(document.createTextNode(label), el("b", null, val)); return d; };
+    const pct = (a, b) => ((a - b) / Math.abs(b) * 100 > 0 ? "+" : "") + ((a - b) / Math.abs(b) * 100).toFixed(1) + " %";
+    k.append(kp("Latest · " + fmtDate(last[0], ind), fmtVal(last[1], ind.unit) + (ind.unit === "index" ? "" : " " + u)),
+      kp("vs. a year earlier", c ? (ind.unit === "%" ? (c.pp > 0 ? "+" : "") + c.pp.toFixed(1) + " pp" : (c.pct > 0 ? "+" : "") + c.pct.toFixed(1) + " %") : "–"),
+      kp("vs. " + fmtDate(first[0], ind), ind.unit === "%" ? ((last[1] - first[1]) > 0 ? "+" : "") + (last[1] - first[1]).toFixed(1) + " pp" : pct(last[1], first[1])),
+      kp("Lowest / highest", fmtVal(Math.min(...s.map((p) => p[1])), ind.unit) + " / " + fmtVal(Math.max(...s.map((p) => p[1])), ind.unit)));
+    body.appendChild(k);
+    if (ab) body.appendChild(ab);
+    const box = el("div", "gd-chart");
+    const W = 840, H = 240, L = 52, R = 12, T = 10, B = 26;
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": ind.label + " history" });
+    const xs = s.map((p) => p[0]);
+    const vals = s.map((p) => p[1]);
+    const span = Math.max(...vals) - Math.min(...vals) || Math.abs(vals[0]) || 1;
+    const hi = Math.max(...vals) + span * 0.08, lo = Math.min(...vals) - span * 0.08;
+    const x = (idx) => L + (xs.length === 1 ? 0 : (idx / (xs.length - 1)) * (W - L - R));
+    const y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
+    const step = niceStep((hi - lo) / 4);
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) {
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "#eef0f3" }));
+      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "#8a94a3" }); t.textContent = fmtVal(Math.abs(v) < step / 1e6 ? 0 : v, ind.unit === "index" ? "%" : ind.unit); svg.appendChild(t);
+    }
+    let lastYear = null;
+    xs.forEach((d, idx) => { const yr = d.slice(0, 4); if (yr !== lastYear) { lastYear = yr; const t = svgEl("text", { x: x(idx), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "#8a94a3" }); t.textContent = yr; svg.appendChild(t); svg.appendChild(svgEl("line", { x1: x(idx), x2: x(idx), y1: T, y2: H - B, stroke: "#f3f4f6" })); } });
+    svg.appendChild(svgEl("path", { d: s.map((p, n) => (n ? "L" : "M") + x(n).toFixed(1) + " " + y(p[1]).toFixed(1)).join(""), fill: "none", stroke: "#0064aa", "stroke-width": 2.4, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    if (s.length < 30) s.forEach((p, n) => svg.appendChild(svgEl("circle", { cx: x(n), cy: y(p[1]), r: 3, fill: "#0064aa" })));
+    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "#002d55", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
+    const tip = el("div", "gd-tip"); tip.hidden = true;
+    svg.addEventListener("pointermove", (ev) => {
+      const rc = svg.getBoundingClientRect(); const px = ((ev.clientX - rc.left) / rc.width) * W;
+      const n = Math.max(0, Math.min(xs.length - 1, Math.round(((px - L) / (W - L - R)) * (xs.length - 1))));
+      hl.setAttribute("x1", x(n)); hl.setAttribute("x2", x(n)); hl.setAttribute("opacity", 1);
+      tip.hidden = false; tip.style.left = (x(n) / W) * 100 + "%"; tip.style.top = (y(s[n][1]) / H) * 100 + "%";
+      tip.textContent = fmtDate(xs[n], ind) + ": " + fmtVal(s[n][1], ind.unit) + (ind.unit === "index" ? "" : " " + u);
+    });
+    svg.addEventListener("pointerleave", () => { hl.setAttribute("opacity", 0); tip.hidden = true; });
+    box.append(svg, tip); body.appendChild(box);
+    // yearly averages
+    const years = [...new Set(xs.map((d) => d.slice(0, 4)))];
+    const t = el("table", "gd-yr"); const hr = el("tr");
+    ["Year", "Average" + (ind.unit === "index" ? " (index)" : " · " + u), "vs. previous year", "Values"].forEach((h) => hr.appendChild(el("th", null, h)));
+    const th = el("thead"); th.appendChild(hr); t.appendChild(th);
+    const tb = el("tbody"); let prev = null;
+    const full = ind.freq === "half-yearly" ? 2 : 12;
+    years.forEach((yr) => {
+      const v = s.filter((p) => p[0].startsWith(yr)); const avg = v.reduce((a, p) => a + p[1], 0) / v.length;
+      const tr = el("tr");
+      tr.append(el("td", null, yr + (v.length < full ? " *" : "")), el("td", null, fmtVal(avg, ind.unit)),
+        el("td", null, prev == null ? "–" : ind.unit === "%" ? ((avg - prev) > 0 ? "+" : "") + (avg - prev).toFixed(1) + " pp" : pct(avg, prev)), el("td", null, String(v.length)));
+      tb.prepend(tr); prev = avg;
+    });
+    t.appendChild(tb); const wrap = el("div"); wrap.style.overflowX = "auto"; wrap.appendChild(t); body.appendChild(wrap);
+    body.appendChild(srcFoot(ind));
+    if (ind.status === "stale") body.insertBefore(el("p", "gd-warn", "The last update of this indicator failed – showing the previous values."), body.firstChild);
     $("gdlg").showModal();
   }
   function sparkVals(vals) {
@@ -848,8 +959,10 @@
   Promise.all([
     fetch("data/market.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
     fetch("data/peer_emissions.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-  ]).then(([data, ets]) => {
+    fetch("config/market.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  ]).then(([data, ets, cfg]) => {
     M = data; ETS = ets;
+    if (cfg) { (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; }); GRID_ABOUT = cfg.gridAbout || null; }
     $("meta").textContent = data.updated ? "Updated " + fmtDay(data.updated) : "Not collected yet";
     side = RadarSide.build($("side"), {
       toggleLabel: "Period, area & indicators", onChange: onSide,

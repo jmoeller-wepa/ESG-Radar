@@ -52,7 +52,9 @@
    "espr",
    "waste",
    "epr",
-   "green claims"
+   "green claims",
+   "digital product passport",
+   "product passport"
   ],
   "water": [
    "water",
@@ -96,7 +98,11 @@
    "data agent",
    "semantic model",
    "onelake",
-   "foundry"
+   "foundry",
+   "ai act",
+   "artificial intelligence act",
+   "data act",
+   "digital omnibus"
   ]
  },
  "feeds": [
@@ -399,7 +405,11 @@
     "waste",
     "chemicals",
     "pulp",
-    "paper"
+    "paper",
+    "AI Act",
+    "artificial intelligence",
+    "Data Act",
+    "product passport"
    ],
    "highKeywords": [
     "sustainability reporting",

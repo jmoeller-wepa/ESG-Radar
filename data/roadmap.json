@@ -1,97 +1,444 @@
 {
-  "_comment": "Regulation roadmap shown in the 'What's ahead' panel (Roadmap tab). status: proposal | adopted | applies. 'entries' links a row to radar entry ids (clicking the row filters the cards). Edit dates here when rules change.",
-  "window": { "from": "2024-01-01", "to": "2030-12-31" },
-  "rows": [
+ "_comment": "Regulation roadmap shown in the 'What's ahead' panel (Roadmap tab). status: proposal | adopted | applies. 'entries' links a row to radar entry ids (clicking the row filters the cards). Edit dates here when rules change.",
+ "window": {
+  "from": "2024-01-01",
+  "to": "2030-12-31"
+ },
+ "rows": [
+  {
+   "id": "csrd",
+   "label": "CSRD / ESRS",
+   "area": "reporting",
+   "entries": [
+    "reg-omnibus-csrd",
+    "reg-esrs-2026",
+    "reg-esrs-xbrl",
+    "reg-voluntary-standard",
+    "bp-stolt-nielsen-csrd"
+   ],
+   "phases": [
     {
-      "id": "csrd", "label": "CSRD / ESRS", "area": "reporting",
-      "entries": ["reg-omnibus-csrd", "reg-esrs-2026", "reg-esrs-xbrl", "reg-voluntary-standard", "bp-stolt-nielsen-csrd"],
-      "phases": [
-        { "from": "2024-01-01", "to": "2026-03-18", "status": "applies", "label": "Applies – first reports FY2024" },
-        { "from": "2026-03-18", "to": "2027-01-01", "status": "adopted", "label": "Omnibus I · revised ESRS adopted" },
-        { "from": "2027-01-01", "to": "2030-12-31", "status": "applies", "label": "Revised ESRS apply (FY2027 →)" }
-      ],
-      "milestones": [ { "date": "2027-01-01", "label": "Revised ESRS apply" }, { "date": "2027-03-19", "label": "CSRD transposition deadline" } ]
+     "from": "2024-01-01",
+     "to": "2026-03-18",
+     "status": "applies",
+     "label": "Applies – first reports FY2024"
     },
     {
-      "id": "taxonomy", "label": "EU Taxonomy", "area": "reporting",
-      "entries": ["reg-taxonomy-simplification"],
-      "phases": [
-        { "from": "2024-01-01", "to": "2026-01-01", "status": "applies", "label": "Applies" },
-        { "from": "2026-01-01", "to": "2030-12-31", "status": "applies", "label": "Simplified reporting (FY2026 →)" }
-      ],
-      "milestones": [ { "date": "2026-01-01", "label": "Simplified reporting applies" } ]
+     "from": "2026-03-18",
+     "to": "2027-01-01",
+     "status": "adopted",
+     "label": "Omnibus I · revised ESRS adopted"
     },
     {
-      "id": "eudr", "label": "EUDR", "area": "forests",
-      "entries": ["reg-eudr"],
-      "phases": [
-        { "from": "2024-01-01", "to": "2026-12-30", "status": "adopted", "label": "In force · postponed & simplified" },
-        { "from": "2026-12-30", "to": "2030-12-31", "status": "applies", "label": "Applies (large/medium) · small from Jun 2027" }
-      ],
-      "milestones": [ { "date": "2026-12-30", "label": "Applies to large & medium" }, { "date": "2027-06-30", "label": "Applies to micro & small" } ]
-    },
-    {
-      "id": "ppwr", "label": "PPWR", "area": "circularity",
-      "entries": ["reg-ppwr"],
-      "phases": [
-        { "from": "2024-01-01", "to": "2025-02-11", "status": "proposal", "label": "Negotiation" },
-        { "from": "2025-02-11", "to": "2026-08-12", "status": "adopted", "label": "In force" },
-        { "from": "2026-08-12", "to": "2030-12-31", "status": "applies", "label": "Applies – obligations phased in" }
-      ],
-      "milestones": [ { "date": "2026-08-12", "label": "PPWR applies" } ]
-    },
-    {
-      "id": "ecgt", "label": "Green claims (ECGT)", "area": "reporting",
-      "entries": ["reg-ecgt"],
-      "phases": [
-        { "from": "2024-03-26", "to": "2026-09-27", "status": "adopted", "label": "In force, transposition" },
-        { "from": "2026-09-27", "to": "2030-12-31", "status": "applies", "label": "Applies" }
-      ],
-      "milestones": [ { "date": "2026-09-27", "label": "Green-claims rules apply" } ]
-    },
-    {
-      "id": "cbam", "label": "CBAM", "area": "climate",
-      "entries": ["reg-cbam"],
-      "phases": [
-        { "from": "2024-01-01", "to": "2026-01-01", "status": "adopted", "label": "Transitional – reporting only" },
-        { "from": "2026-01-01", "to": "2030-12-31", "status": "applies", "label": "Definitive period" }
-      ],
-      "milestones": [ { "date": "2027-02-01", "label": "Certificate sales start" } ]
-    },
-    {
-      "id": "ets", "label": "EU ETS reform (post-2030)", "area": "climate",
-      "entries": ["reg-ets-review"],
-      "phases": [
-        { "from": "2026-07-17", "to": "2030-12-31", "status": "proposal", "label": "Commission proposal – negotiations" }
-      ],
-      "milestones": []
-    },
-    {
-      "id": "ets2", "label": "ETS2 (buildings & transport)", "area": "climate",
-      "entries": ["reg-ets2-delay"],
-      "phases": [
-        { "from": "2024-01-01", "to": "2028-01-01", "status": "adopted", "label": "Adopted · start postponed" },
-        { "from": "2028-01-01", "to": "2030-12-31", "status": "applies", "label": "Applies" }
-      ],
-      "milestones": [ { "date": "2028-01-01", "label": "ETS2 starts" } ]
-    },
-    {
-      "id": "csddd", "label": "CSDDD", "area": "people",
-      "entries": ["reg-omnibus-csddd"],
-      "phases": [
-        { "from": "2024-07-25", "to": "2029-07-26", "status": "adopted", "label": "In force · transposition until Jul 2028" },
-        { "from": "2029-07-26", "to": "2030-12-31", "status": "applies", "label": "Applies" }
-      ],
-      "milestones": [ { "date": "2028-07-26", "label": "Transposition deadline" }, { "date": "2029-07-26", "label": "Compliance starts" } ]
-    },
-    {
-      "id": "sbti", "label": "SBTi Net-Zero Standard v2", "area": "climate",
-      "entries": ["std-sbti-cnzs-v2"],
-      "phases": [
-        { "from": "2026-06-11", "to": "2028-01-31", "status": "adopted", "label": "Published – voluntary use" },
-        { "from": "2028-01-31", "to": "2030-12-31", "status": "applies", "label": "Mandatory for new targets" }
-      ],
-      "milestones": [ { "date": "2028-01-31", "label": "v2.0 mandatory" } ]
+     "from": "2027-01-01",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Revised ESRS apply (FY2027 →)"
     }
-  ]
+   ],
+   "milestones": [
+    {
+     "date": "2027-01-01",
+     "label": "Revised ESRS apply"
+    },
+    {
+     "date": "2027-03-19",
+     "label": "CSRD transposition deadline"
+    }
+   ]
+  },
+  {
+   "id": "taxonomy",
+   "label": "EU Taxonomy",
+   "area": "reporting",
+   "entries": [
+    "reg-taxonomy-simplification"
+   ],
+   "phases": [
+    {
+     "from": "2024-01-01",
+     "to": "2026-01-01",
+     "status": "applies",
+     "label": "Applies"
+    },
+    {
+     "from": "2026-01-01",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Simplified reporting (FY2026 →)"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2026-01-01",
+     "label": "Simplified reporting applies"
+    }
+   ]
+  },
+  {
+   "id": "eudr",
+   "label": "EUDR",
+   "area": "forests",
+   "entries": [
+    "reg-eudr"
+   ],
+   "phases": [
+    {
+     "from": "2024-01-01",
+     "to": "2026-12-30",
+     "status": "adopted",
+     "label": "In force · postponed & simplified"
+    },
+    {
+     "from": "2026-12-30",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Applies (large/medium) · small from Jun 2027"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2026-12-30",
+     "label": "Applies to large & medium"
+    },
+    {
+     "date": "2027-06-30",
+     "label": "Applies to micro & small"
+    }
+   ]
+  },
+  {
+   "id": "ppwr",
+   "label": "PPWR",
+   "area": "circularity",
+   "entries": [
+    "reg-ppwr"
+   ],
+   "phases": [
+    {
+     "from": "2024-01-01",
+     "to": "2025-02-11",
+     "status": "proposal",
+     "label": "Negotiation"
+    },
+    {
+     "from": "2025-02-11",
+     "to": "2026-08-12",
+     "status": "adopted",
+     "label": "In force"
+    },
+    {
+     "from": "2026-08-12",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Applies – obligations phased in"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2026-08-12",
+     "label": "PPWR applies"
+    }
+   ]
+  },
+  {
+   "id": "ecgt",
+   "label": "Green claims (ECGT)",
+   "area": "reporting",
+   "entries": [
+    "reg-ecgt"
+   ],
+   "phases": [
+    {
+     "from": "2024-03-26",
+     "to": "2026-09-27",
+     "status": "adopted",
+     "label": "In force, transposition"
+    },
+    {
+     "from": "2026-09-27",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Applies"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2026-09-27",
+     "label": "Green-claims rules apply"
+    }
+   ]
+  },
+  {
+   "id": "cbam",
+   "label": "CBAM",
+   "area": "climate",
+   "entries": [
+    "reg-cbam"
+   ],
+   "phases": [
+    {
+     "from": "2024-01-01",
+     "to": "2026-01-01",
+     "status": "adopted",
+     "label": "Transitional – reporting only"
+    },
+    {
+     "from": "2026-01-01",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Definitive period"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2027-02-01",
+     "label": "Certificate sales start"
+    }
+   ]
+  },
+  {
+   "id": "ets",
+   "label": "EU ETS reform (post-2030)",
+   "area": "climate",
+   "entries": [
+    "reg-ets-review"
+   ],
+   "phases": [
+    {
+     "from": "2026-07-17",
+     "to": "2030-12-31",
+     "status": "proposal",
+     "label": "Commission proposal – negotiations"
+    }
+   ],
+   "milestones": []
+  },
+  {
+   "id": "ets2",
+   "label": "ETS2 (buildings & transport)",
+   "area": "climate",
+   "entries": [
+    "reg-ets2-delay"
+   ],
+   "phases": [
+    {
+     "from": "2024-01-01",
+     "to": "2028-01-01",
+     "status": "adopted",
+     "label": "Adopted · start postponed"
+    },
+    {
+     "from": "2028-01-01",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Applies"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2028-01-01",
+     "label": "ETS2 starts"
+    }
+   ]
+  },
+  {
+   "id": "csddd",
+   "label": "CSDDD",
+   "area": "people",
+   "entries": [
+    "reg-omnibus-csddd"
+   ],
+   "phases": [
+    {
+     "from": "2024-07-25",
+     "to": "2029-07-26",
+     "status": "adopted",
+     "label": "In force · transposition until Jul 2028"
+    },
+    {
+     "from": "2029-07-26",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Applies"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2028-07-26",
+     "label": "Transposition deadline"
+    },
+    {
+     "date": "2029-07-26",
+     "label": "Compliance starts"
+    }
+   ]
+  },
+  {
+   "id": "sbti",
+   "label": "SBTi Net-Zero Standard v2",
+   "area": "climate",
+   "entries": [
+    "std-sbti-cnzs-v2"
+   ],
+   "phases": [
+    {
+     "from": "2026-06-11",
+     "to": "2028-01-31",
+     "status": "adopted",
+     "label": "Published – voluntary use"
+    },
+    {
+     "from": "2028-01-31",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Mandatory for new targets"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2028-01-31",
+     "label": "v2.0 mandatory"
+    }
+   ]
+  },
+  {
+   "id": "espr",
+   "label": "ESPR / Digital Product Passport",
+   "area": "circularity",
+   "entries": [],
+   "phases": [
+    {
+     "from": "2024-01-01",
+     "to": "2024-07-18",
+     "status": "proposal",
+     "label": "Final adoption"
+    },
+    {
+     "from": "2024-07-18",
+     "to": "2026-07-19",
+     "status": "adopted",
+     "label": "In force · working plan & DPP standards"
+    },
+    {
+     "from": "2026-07-19",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "DPP registry live · product rules via delegated acts (paper/tissue not yet planned)"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2025-04-16",
+     "label": "Working plan 2025–2030 adopted"
+    },
+    {
+     "date": "2026-07-19",
+     "label": "DPP registry live · ban on destroying unsold apparel & footwear (large companies)"
+    },
+    {
+     "date": "2026-12-31",
+     "label": "Iron & steel delegated act (expected Q4 2026)"
+    },
+    {
+     "date": "2027-02-18",
+     "label": "Battery passport mandatory (Batteries Regulation)"
+    },
+    {
+     "date": "2027-12-31",
+     "label": "Textiles delegated act (expected Q4 2027)"
+    }
+   ]
+  },
+  {
+   "id": "aiact",
+   "label": "AI Act",
+   "area": "data",
+   "entries": [],
+   "phases": [
+    {
+     "from": "2024-01-01",
+     "to": "2024-08-01",
+     "status": "proposal",
+     "label": "Final adoption"
+    },
+    {
+     "from": "2024-08-01",
+     "to": "2025-02-02",
+     "status": "adopted",
+     "label": "In force (1 Aug 2024)"
+    },
+    {
+     "from": "2025-02-02",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Applies step by step · high-risk delayed by Digital Omnibus (Reg. 2026/1744)"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2025-02-02",
+     "label": "Prohibited practices & AI literacy apply"
+    },
+    {
+     "date": "2025-08-02",
+     "label": "Rules for general-purpose AI models apply"
+    },
+    {
+     "date": "2026-08-02",
+     "label": "Transparency rules apply (Art. 50: chatbots, AI-generated content)"
+    },
+    {
+     "date": "2026-12-02",
+     "label": "Marking of AI-generated content for systems already on the market"
+    },
+    {
+     "date": "2027-12-02",
+     "label": "High-risk AI (Annex III, e.g. HR, credit) – postponed by Digital Omnibus"
+    },
+    {
+     "date": "2028-08-02",
+     "label": "High-risk AI in regulated products (Annex I)"
+    }
+   ]
+  },
+  {
+   "id": "dataact",
+   "label": "Data Act",
+   "area": "data",
+   "entries": [],
+   "phases": [
+    {
+     "from": "2024-01-11",
+     "to": "2025-09-12",
+     "status": "adopted",
+     "label": "In force (11 Jan 2024)"
+    },
+    {
+     "from": "2025-09-12",
+     "to": "2030-12-31",
+     "status": "applies",
+     "label": "Applies · changes proposed in Digital Omnibus (pending)"
+    }
+   ],
+   "milestones": [
+    {
+     "date": "2025-09-12",
+     "label": "Applies: data sharing, unfair B2B contract terms, cloud switching"
+    },
+    {
+     "date": "2026-09-12",
+     "label": "Data access by design for new connected products"
+    },
+    {
+     "date": "2027-01-12",
+     "label": "Cloud providers may no longer charge switching fees"
+    },
+    {
+     "date": "2027-09-12",
+     "label": "Unfair-terms rules extend to older long-term contracts"
+    }
+   ]
+  }
+ ]
 }

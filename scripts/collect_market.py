@@ -161,12 +161,12 @@ def fred(ind):
 
 
 # ---------- SMARD ----------
-def smard_monthly(filter_id):
-    base = f"https://www.smard.de/app/chart_data/{filter_id}/DE"
+def smard_monthly(filter_id, region="DE"):
+    base = f"https://www.smard.de/app/chart_data/{filter_id}/{region}"
     stamps = json.loads(get(f"{base}/index_month.json")).get("timestamps", [])
     out = {}
     for ts in stamps[-10:]:
-        data = json.loads(get(f"{base}/{filter_id}_DE_month_{ts}.json"))
+        data = json.loads(get(f"{base}/{filter_id}_{region}_month_{ts}.json"))
         for t, v in data.get("series", []):
             if v is None:
                 continue
@@ -194,6 +194,105 @@ def smard(ind):
     if not series:
         raise RuntimeError("no data")
     return series, None
+
+
+def smard_price(ind):
+    """Day-ahead wholesale price (€/MWh), monthly average. SMARD gives one value per month for prices;
+    if those look like sums instead of averages, fall back to the weekly values averaged per month."""
+    fid, region = ind.get("filter", 4169), ind.get("region", "DE-LU")
+    base = f"https://www.smard.de/app/chart_data/{fid}/{region}"
+    now_month = datetime.now(timezone.utc).strftime("%Y-%m")
+    vals = {}
+    stamps = json.loads(get(f"{base}/index_month.json")).get("timestamps", [])
+    for ts in stamps[-10:]:
+        for t, v in json.loads(get(f"{base}/{fid}_{region}_month_{ts}.json")).get("series", []):
+            if v is not None:
+                vals[datetime.fromtimestamp(t / 1000 + 3 * 3600, tz=timezone.utc).strftime("%Y-%m")] = float(v)
+    good = sorted(vals.values())
+    if not good or good[len(good) // 2] > 600:      # implausible as an average price -> use weekly values
+        weeks = {}
+        wstamps = json.loads(get(f"{base}/index_week.json")).get("timestamps", [])
+        for ts in wstamps[-120:]:
+            for t, v in json.loads(get(f"{base}/{fid}_{region}_week_{ts}.json")).get("series", []):
+                if v is not None:
+                    m = datetime.fromtimestamp(t / 1000 + 3 * 3600 * 24, tz=timezone.utc).strftime("%Y-%m")  # mid-week
+                    weeks.setdefault(m, []).append(float(v))
+        vals = {m: sum(v) / len(v) for m, v in weeks.items()}
+    series = [[m, round(v, 2)] for m, v in sorted(vals.items()) if START <= m < now_month]
+    if not series:
+        raise RuntimeError("no data")
+    return series, None
+
+
+# ---------- Eurostat Comext (EU external trade): unit value = value / quantity, €/t ----------
+COMEXT = "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/"
+COMEXT_DEBUG = ROOT / "data" / "debug" / "comext.json"
+_comext_dbg = {}
+
+
+def comext(ind):
+    """Monthly unit value (€ per tonne) of EU imports or exports of one product code (HS/CN),
+    from Eurostat Comext. Example: 470321 = bleached softwood kraft pulp (NBSK)."""
+    dbg = _comext_dbg.setdefault(ind["id"], {"tries": []})
+    dataset = ind.get("dataset", "DS-045409")
+    reporters = ind.get("reporters", ["EU27_2020", "EU"])
+    partners = ind.get("partners", ["EXT_EU27_2020", "EXTRA_EU27_2020", "EXT_EU"])
+    base_q = {"format": "JSON", "lang": "EN", "freq": "M", "product": ind["product"], "flow": str(ind["flow"])}
+    last_err = "no data"
+    for rep_code in reporters:
+        for partner in partners + [None]:      # None = all partners, choose from the answer
+            q = dict(base_q, reporter=rep_code)
+            if partner:
+                q["partner"] = partner
+            url = COMEXT + dataset + "?" + urllib.parse.urlencode(q) + "&indicators=VALUE_IN_EUROS&indicators=QUANTITY_IN_100KG"
+            try:
+                data = json.loads(get(url, timeout=120))
+                dims = data.get("id", [])
+                dbg["dims"] = dims
+                pdim = next((d for d in dims if d.lower() == "partner"), None)
+                if partner is None and pdim:
+                    idx = data["dimension"][pdim]["category"]["index"]
+                    codes = list(idx) if isinstance(idx, dict) else idx
+                    dbg["partnerCodes"] = [c for c in codes if not (len(c) == 2 and c.isalpha())][:40]
+                    partner = next((c for c in codes if c.upper().startswith(("EXT", "EXTRA"))), None)
+                    if not partner:
+                        raise RuntimeError("no extra-EU partner code in answer")
+                ind_dim = next(d for d in dims if d.lower() == "indicators")
+                base_req = {pdim: partner} if pdim and partner else {}
+                # trade is split by customs procedure (normal, inward/outward processing …): add all parts up
+                sdim = next((d for d in dims if d.lower() == "stat_procedure"), None)
+                procs = [None]
+                if sdim:
+                    sidx = data["dimension"][sdim]["category"]["index"]
+                    procs = list(sidx) if isinstance(sidx, dict) else sidx
+                    dbg["procedures"] = procs
+                    tot = [c for c in procs if c.upper() in ("TOTAL", "ALL")]
+                    if tot:
+                        procs = tot
+                v_sum, q_sum = {}, {}
+                for pc in procs:
+                    req = dict(base_req, **({sdim: pc} if sdim and pc else {}))
+                    for code, acc in (("VALUE_IN_EUROS", v_sum), ("QUANTITY_IN_100KG", q_sum)):
+                        part, _ = pick_series(data, {}, dict(req, **{ind_dim: code}))
+                        for m, v in part:
+                            acc[m] = acc.get(m, 0.0) + v
+                series = [[m, round(v_sum[m] / (q_sum[m] / 10), 1)] for m in sorted(v_sum)
+                          if q_sum.get(m, 0) >= ind.get("minQty100kg", 1000)]
+                dbg["tries"].append({"reporter": rep_code, "partner": partner, "ok": len(series)})
+                if series:
+                    dbg["used"] = {"reporter": rep_code, "partner": partner, "latest": series[-1]}
+                    return series, {"reporter": rep_code, "partner": partner}
+                last_err = "no months with enough volume"
+            except urllib.error.HTTPError as exc:
+                last_err = f"HTTP {exc.code}"
+                try:
+                    dbg["tries"].append({"reporter": rep_code, "partner": partner, "error": last_err, "body": exc.read().decode("utf-8", "replace")[:300]})
+                except Exception:  # noqa: BLE001
+                    dbg["tries"].append({"reporter": rep_code, "partner": partner, "error": last_err})
+            except Exception as exc:  # noqa: BLE001
+                last_err = str(exc)[:160]
+                dbg["tries"].append({"reporter": rep_code, "partner": partner, "error": last_err})
+    raise RuntimeError(last_err)
 
 
 # ---------- Ember (grid carbon intensity, CC BY 4.0) ----------
@@ -324,7 +423,7 @@ def manual(ind):
     return [[v["date"], float(v["value"])] for v in vals], None
 
 
-FETCH = {"eurostat": eurostat, "fred": fred, "smard": smard, "ember": ember, "manual": manual}
+FETCH = {"eurostat": eurostat, "fred": fred, "smard": smard, "smard_price": smard_price, "comext": comext, "ember": ember, "manual": manual}
 KEEP = ("id", "group", "areas", "label", "unit", "freq", "attribution", "link", "source", "country", "isUs")
 
 
@@ -355,6 +454,9 @@ def main():
             report.append(f"| {ind['id']} | ⚠️ {str(exc)[:80]} | {len(item['series'])} (kept) | – |")
         result.append(item)
 
+    if _comext_dbg:
+        COMEXT_DEBUG.parent.mkdir(parents=True, exist_ok=True)
+        COMEXT_DEBUG.write_text(json.dumps({"checked": now, "indicators": _comext_dbg}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     auto = [r for r in result if r.get("source") != "manual"]
     bad = [r["id"] for r in auto if r.get("status") in ("stale", "missing")]
     report_status("market", "Market indicators", "error" if auto and len(bad) == len(auto) else "warn" if bad else "ok",
