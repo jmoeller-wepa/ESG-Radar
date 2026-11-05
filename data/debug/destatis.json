@@ -1,0 +1,114 @@
+{
+ "checked": "2026-11-05T12:02:38",
+ "credentials": true,
+ "61281-0006": {},
+ "search": {
+  "Toilettenpapier": [
+   {
+    "code": "42131-0002",
+    "content": "Produktion im Verarbeitenden Gewerbe: Deutschland, Quartale,\nGüterverzeichnis (9-Steller)"
+   },
+   {
+    "code": "42131-0004",
+    "content": "Produktion im Verarbeitenden Gewerbe: Deutschland, Jahre,\nGüterverzeichnis (9-Steller)"
+   },
+   {
+    "code": "51000-0005",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWarensystematik"
+   },
+   {
+    "code": "51000-0006",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate,\nWarensystematik"
+   },
+   {
+    "code": "51000-0009",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre, Land,\nWarenverzeichnis (4-/6-Steller)"
+   },
+   {
+    "code": "51000-0010",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWare (4-/6-Steller), Länder"
+   },
+   {
+    "code": "51000-0011",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate, Land,\nWarenverzeichnis (4-/6-Steller)"
+   },
+   {
+    "code": "51000-0012",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate,\nWare (4-/6-Steller), Länder"
+   },
+   {
+    "code": "51000-0013",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWarenverzeichnis (8-Steller)"
+   },
+   {
+    "code": "51000-0014",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate,\nWarenverzeichnis (8-Steller)"
+   },
+   {
+    "code": "51000-0015",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre, Land,\nWarenverzeichnis (8-Steller)"
+   },
+   {
+    "code": "51000-0016",
+    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWare (8-Steller), Länder"
+   }
+  ],
+  "Hygienepapier": [
+   {
+    "code": "42121-0001",
+    "content": "Produktion im Verarbeitenden Gewerbe: Deutschland, Monate,\nGüteraggregate"
+   }
+  ],
+  "Sondervertragskunden": [
+   {
+    "code": "43331-0001",
+    "content": "Stromabsatz und Erlöse der\nElektrizitätsversorgungsunternehmen: Deutschland, Jahre,\nAbnehmergruppen"
+   },
+   {
+    "code": "61241-0003",
+    "content": "Erzeugerpreisindex gewerblicher Produkte: Deutschland,\nJahre, Güterverzeichnis (GP2019 2-/3-/4-/5-/6-/9-Steller/\nSonderpositionen)"
+   },
+   {
+    "code": "61241-0004",
+    "content": "Erzeugerpreisindex gewerblicher Produkte: Deutschland,\nMonate, Güterverzeichnis (GP2019 2-/3-/4-/5-/6-/9-Steller/\nSonderpositionen)"
+   }
+  ],
+  "Erdgas Industrie": "The read operation timed out",
+  "Einfuhrpreise Zellstoff": [
+   {
+    "code": "61411-0003",
+    "content": "Index der Einfuhrpreise: Deutschland, Jahre,\nGüterverzeichnis (GP2019 2-/3-/4-Steller/Sonderpositionen)"
+   },
+   {
+    "code": "61411-0004",
+    "content": "Index der Einfuhrpreise: Deutschland, Monate,\nGüterverzeichnis (GP2019 2-/3-/4-Steller/Sonderpositionen)"
+   },
+   {
+    "code": "61411-0005",
+    "content": "Index der Einfuhrpreise: Deutschland, Jahre,\nGüterverzeichnis (GP2019 2-4-Steller Hierarchie)"
+   },
+   {
+    "code": "61411-0006",
+    "content": "Index der Einfuhrpreise: Deutschland, Monate,\nGüterverzeichnis (GP2019 2-4-Steller Hierarchie)"
+   },
+   {
+    "code": "61411-0011",
+    "content": "Index der Einfuhrpreise: Deutschland, Jahre,\nEuro-Länder und Nicht-Euro-Länder, Güterverzeichnis\n(GP2019 Sonderpositionen)"
+   },
+   {
+    "code": "61411-0012",
+    "content": "Index der Einfuhrpreise: Deutschland, Monate,\nEuro-Länder und Nicht-Euro-Länder, Güterverzeichnis\n(GP2019 Sonderpositionen)"
+   }
+  ],
+  "Verbraucherpreisindex Toilettenpapier": [
+   {
+    "code": "61111-0005",
+    "content": "Verbraucherpreisindex: Deutschland, Jahre,\nKlassifikation der Verwendungszwecke des Individualkonsums\n(COICOP 2-/3-/4-/5-/10-Steller/Sonderpositionen)"
+   },
+   {
+    "code": "61111-0006",
+    "content": "Verbraucherpreisindex: Deutschland, Monate,\nKlassifikation der Verwendungszwecke des Individualkonsums\n(COICOP 2-/3-/4-/5-/10-Steller/Sonderpositionen)"
+   }
+  ]
+ }
+}

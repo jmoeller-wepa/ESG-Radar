@@ -3,61 +3,70 @@
   "feeds": {
    "label": "News feeds",
    "status": "ok",
-   "detail": "9 of 9 feeds · 1 new",
-   "at": "2026-11-05T08:39:52",
+   "detail": "9 of 9 feeds · 3 new",
+   "at": "2026-11-05T12:01:04",
    "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "ok",
    "detail": "14 open and relevant",
-   "at": "2026-11-05T08:40:43",
+   "at": "2026-11-05T12:01:53",
    "order": 20
   },
   "procedures": {
    "label": "Regulation status",
    "status": "ok",
    "detail": "5 of 5 procedures",
-   "at": "2026-11-05T08:41:08",
+   "at": "2026-11-05T12:02:38",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
-   "status": "ok",
-   "detail": "23 of 23 indicators",
-   "at": "2026-11-05T08:42:53",
-   "order": 30
+   "status": "warn",
+   "detail": "32 of 36 indicators · failed: de_rcp_102, de_rcp_104, de_rcp_403, de_rcp_111",
+   "at": "2026-11-05T12:09:10",
+   "order": 30,
+   "failingSince": "2026-11-05T12:09:10"
   },
   "ets": {
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
    "detail": "Already processed this file with the same mapping – nothing to do.",
-   "at": "2026-11-05T08:42:54",
+   "at": "2026-11-05T12:09:21",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
    "detail": "8 peers found · no changes",
-   "at": "2026-11-05T08:42:58",
+   "at": "2026-11-05T12:09:25",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
    "detail": "112 planned features",
-   "at": "2026-11-05T08:43:02",
+   "at": "2026-11-05T12:09:29",
    "order": 50
   },
   "peernews": {
    "label": "Peer news",
    "status": "ok",
-   "detail": "44 headlines for 12 companies",
-   "at": "2026-11-05T08:43:01",
+   "detail": "43 headlines for 12 companies",
+   "at": "2026-11-05T12:09:28",
    "order": 46
+  },
+  "industry": {
+   "label": "Industry statistics",
+   "status": "warn",
+   "detail": "monthly update failed: period not found – showing the previous figures",
+   "at": "2026-11-05T12:09:20",
+   "order": 36,
+   "failingSince": "2026-11-05T12:09:20"
   }
  },
- "lastRun": "2026-11-05T08:43:02",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/41996182941",
+ "lastRun": "2026-11-05T12:09:29",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/42023559118",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }

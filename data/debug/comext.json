@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-05T08:41:08",
+ "checked": "2026-11-05T12:02:38",
  "indicators": {
   "pulp_nbsk_eu": {
    "tries": [
@@ -76,6 +76,162 @@
     "latest": [
      "2026-08",
      136.5
+    ]
+   }
+  },
+  "rcp_occ_exp": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "EXT_EU27_2020",
+     "ok": 92
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "EXT_EU27_2020",
+    "latest": [
+     "2026-08",
+     134.9
+    ]
+   }
+  },
+  "rcp_white_exp": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "EXT_EU27_2020",
+     "ok": 92
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "EXT_EU27_2020",
+    "latest": [
+     "2026-08",
+     270.0
+    ]
+   }
+  },
+  "rcp_news_exp": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "EXT_EU27_2020",
+     "ok": 92
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "EXT_EU27_2020",
+    "latest": [
+     "2026-08",
+     146.9
+    ]
+   }
+  },
+  "rcp_mixed_exp": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "EXT_EU27_2020",
+     "ok": 92
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "EXT_EU27_2020",
+    "latest": [
+     "2026-08",
+     132.8
+    ]
+   }
+  },
+  "rcp_occ_intra": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "INT_EU27_2020",
+     "ok": 91
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "INT_EU27_2020",
+    "latest": [
+     "2026-07",
+     130.4
+    ]
+   }
+  },
+  "rcp_white_intra": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "INT_EU27_2020",
+     "ok": 91
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "INT_EU27_2020",
+    "latest": [
+     "2026-07",
+     222.1
     ]
    }
   }

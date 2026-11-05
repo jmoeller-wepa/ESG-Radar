@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-05T08:39:47"
+    "lastFeedRun": "2026-11-05T12:00:59"
   },
   "entries": [
     {
@@ -2216,6 +2216,85 @@
       "nextDateLabel": null,
       "source": "SQLBI",
       "url": "https://www.sqlbi.com/tv/inside-daxbench-v2-results-and-your-questions/",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-9d00ca1791",
+      "date": "2026-11-05",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Copilot",
+        "GA"
+      ],
+      "title": "What’s new in Microsoft Foundry | October 2026",
+      "summary": "Plan your Microsoft Ignite November 17-20 viewing, then explore October's Copilot harness preview, GA browser automation and hosted-agent resilience, Decisions API, and SDK updates with chapter-linked Handoff demos. The post What’s new in Microsoft Foundry | October 2026 appeared first on Microsoft Foundry Blog .",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Foundry Blog",
+      "url": "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-october-2026/",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-6cd4ce5ee4",
+      "date": "2026-11-05",
+      "type": "regulation",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Human Rights"
+      ],
+      "title": "UK to Introduce Mandatory Supply Chain Human Rights Due Diligence Law",
+      "summary": "The UK government announced a new commitment to introduce a new mandatory human rights due […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/uk-to-introduce-mandatory-supply-chain-human-rights-due-diligence-law/?utm_source=rss&utm_medium=rss&utm_campaign=uk-to-introduce-mandatory-supply-chain-human-rights-due-diligence-law",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-2099f26c0c",
+      "date": "2026-11-05",
+      "type": "regulation",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Deforestation"
+      ],
+      "title": "The Emergency Brake on Deforestation is Ready. Will Companies Step Up?",
+      "summary": "Guest post by: Lucy Almond, Director and Chair, Nature4Climate After decades of debate, we finally […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/the-emergency-brake-on-deforestation-is-ready-will-companies-step-up/?utm_source=rss&utm_medium=rss&utm_campaign=the-emergency-brake-on-deforestation-is-ready-will-companies-step-up",
       "origin": "feed",
       "added": "2026-11-05"
     }
