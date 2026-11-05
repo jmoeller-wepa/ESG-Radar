@@ -60,3 +60,26 @@ reported value; set "year" to the report year and "src" to the report link.
 Current block:
 <PASTE THE COMPANY BLOCK HERE>
 ```
+
+---
+
+## Part 2 (yearly): industry figures for the Market page (`data/industry.json`)
+
+The monthly German figures in `germanyMonthly` update automatically. Once a year, update the two yearly blocks:
+
+- **`europe`** – after Cepi publishes its Key Statistics (usually July).
+- **`germanyRecoveredRate`** – after DIE PAPIERINDUSTRIE publishes its Leistungsbericht PAPIER (the Umweltbundesamt republishes the table "Altpapiereinsatzquoten" in December).
+
+```
+Update the JSON blocks below with the newest published figures. Search the web.
+1) "europe": Cepi Key Statistics of the latest year (cepi.org, press release or report). Keep the same
+   KPI labels where possible; set "year", "label" and "source" (label + URL of the document you used).
+2) "germanyRecoveredRate": add the newest year to "years" and one value per series
+   (Altpapiereinsatzquote in % for Hygienepapiere, Gesamt, Verpackungspapiere gesamt, Grafische Papiere gesamt)
+   from the table of Die Papierindustrie / Umweltbundesamt. Update "wepaRef.value" with WEPA's recycled
+   fibre share from its newest sustainability report.
+Rules: only values you found on a page you opened; never estimate. Return ONLY the two updated JSON
+blocks, then a short list of what changed.
+
+<PASTE THE BLOCKS "europe" AND "germanyRecoveredRate" FROM data/industry.json HERE>
+```

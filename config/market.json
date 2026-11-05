@@ -2,6 +2,8 @@
   "_comment": "Market indicators collected automatically by scripts/collect_market.py (official, freely reusable statistics). 'alts' are fallback parameter sets tried in order if the first returns no data. 'areas' decides where a tile appears when an area is selected in the sidebar. 'manual' indicators are not fetched: update their 'values' by hand or with the quarterly prompt. Eurostat: 'params' filter the query; if a code does not exist the collector retries with 'alts' and finally only geo/nace_r2/product, choosing the remaining codes from 'prefer'.",
   "groups": {
     "fibre": "Fibre & products",
+    "recovered": "Recovered paper",
+    "packaging": "Packaging & board",
     "energy": "Energy",
     "grid": "Grid carbon intensity",
     "carbon": "Carbon & currency"
@@ -188,7 +190,7 @@
     },
     {
       "id": "us_recovered_paper",
-      "group": "fibre",
+      "group": "recovered",
       "areas": [
         "circularity",
         "forests"
@@ -270,11 +272,11 @@
     },
     {
       "id": "rcp_export_eu",
-      "group": "fibre",
+      "group": "recovered",
       "areas": [
         "circularity"
       ],
-      "label": "Recovered paper export price · EU (all grades)",
+      "label": "Recovered paper export price · EU, all grades",
       "unit": "€/t",
       "source": "comext",
       "product": "4707",
@@ -287,6 +289,322 @@
         "what": "The average price per tonne of recovered paper (HS 4707, all grades) exported from the EU to countries outside the EU, calculated from EU trade statistics.",
         "wepa": "When export prices rise, more European recovered paper leaves for Asia or Turkey and less is available for mills here – a signal for tighter supply and higher prices for WEPA's recycled-fibre products.",
         "limits": "Mixes all grades and is dominated by brown packaging grades. It is not what European mills pay, and the deinking grades WEPA needs can move differently."
+      }
+    },
+    {
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "source": "comext",
+      "unit": "€/t",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "id": "rcp_occ_exp",
+      "label": "Recovered paper export price · OCC / corrugated (HS 4707 10), EU",
+      "product": "470710",
+      "flow": 2,
+      "about": {
+        "what": "Average price per tonne of unbleached kraft and corrugated recovered paper (roughly grades 1.04/1.05, 'OCC') exported from the EU to countries outside the EU.",
+        "wepa": "The brown grade behind WEPA's OCC-based products. Strong export demand (Asia, Turkey) pulls OCC out of Europe and pushes up the price WEPA pays.",
+        "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code."
+      }
+    },
+    {
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "source": "comext",
+      "unit": "€/t",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "id": "rcp_white_exp",
+      "label": "Recovered paper export price · white / office grades (HS 4707 20), EU",
+      "product": "470720",
+      "flow": 2,
+      "about": {
+        "what": "Average price per tonne of recovered paper made mainly of bleached chemical pulp – white and office grades, the deinking qualities for white recycled tissue – exported from the EU.",
+        "wepa": "The most relevant recovered paper grade for white recycled tissue. It competes with fresh pulp: when pulp is cheap, these grades lose value, and vice versa.",
+        "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code. Export volumes of white grades are small, so single months can jump."
+      }
+    },
+    {
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "source": "comext",
+      "unit": "€/t",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "id": "rcp_news_exp",
+      "label": "Recovered paper export price · news & magazines (HS 4707 30), EU",
+      "product": "470730",
+      "flow": 2,
+      "about": {
+        "what": "Average price per tonne of recovered newspapers, magazines and similar paper made mainly of mechanical pulp (roughly grade 1.11, news & PAMS) exported from the EU.",
+        "wepa": "A deinking grade used for recycled tissue. Supply keeps shrinking as fewer newspapers and magazines are printed, which supports prices in the long run.",
+        "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code."
+      }
+    },
+    {
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "source": "comext",
+      "unit": "€/t",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "id": "rcp_mixed_exp",
+      "label": "Recovered paper export price · mixed & unsorted (HS 4707 90), EU",
+      "product": "470790",
+      "flow": 2,
+      "about": {
+        "what": "Average price per tonne of mixed and unsorted recovered paper (roughly grade 1.02) exported from the EU.",
+        "wepa": "The cheapest grade and a sensitive gauge of overall recovered paper demand – it reacts first when markets tighten or ease.",
+        "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code."
+      }
+    },
+    {
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "source": "comext",
+      "unit": "€/t",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "id": "rcp_occ_intra",
+      "label": "Recovered paper price within the EU · OCC / corrugated (HS 4707 10)",
+      "product": "470710",
+      "flow": 2,
+      "about": {
+        "what": "Average price per tonne of OCC / corrugated recovered paper sold from one EU country to another (intra-EU dispatches).",
+        "wepa": "Closer to what European mills pay than the export price, because it covers deliveries within the EU – for example from France or the Netherlands to German mills.",
+        "limits": "Unit values from trade statistics: an average over all deals and sub-grades, about two months late. Domestic deals (within Germany) are not included."
+      },
+      "partners": [
+        "INT_EU27_2020",
+        "INTRA_EU27_2020",
+        "INT_EU"
+      ],
+      "partnerPrefix": [
+        "INT"
+      ]
+    },
+    {
+      "freq": "monthly",
+      "attribution": "Eurostat Comext (EU trade statistics)",
+      "link": "https://ec.europa.eu/eurostat/comext/newxtweb/",
+      "source": "comext",
+      "unit": "€/t",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "id": "rcp_white_intra",
+      "label": "Recovered paper price within the EU · white / office grades (HS 4707 20)",
+      "product": "470720",
+      "flow": 2,
+      "about": {
+        "what": "Average price per tonne of white and office recovered paper sold from one EU country to another.",
+        "wepa": "The European price signal for the deinking grades WEPA uses for white recycled tissue.",
+        "limits": "Unit values from trade statistics: an average over all deals and sub-grades, about two months late. Domestic deals are not included."
+      },
+      "partners": [
+        "INT_EU27_2020",
+        "INTRA_EU27_2020",
+        "INT_EU"
+      ],
+      "partnerPrefix": [
+        "INT"
+      ]
+    },
+    {
+      "source": "destatis",
+      "table": "61281-0006",
+      "unit": "index",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61281-0006, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/table/61281-0006",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "accumulate": true,
+      "id": "de_rcp_102",
+      "label": "Recovered paper wholesale price DE · 1.02 mixed papers",
+      "match": [
+        "1\\.02",
+        "gemischt"
+      ],
+      "about": {
+        "what": "Destatis index of the prices German recovered paper wholesalers charge for mixed papers and boards (grade 1.02), surveyed monthly.",
+        "wepa": "The German market signal for the lowest grade. It reacts quickly to demand from packaging mills and to export flows.",
+        "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ."
+      }
+    },
+    {
+      "source": "destatis",
+      "table": "61281-0006",
+      "unit": "index",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61281-0006, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/table/61281-0006",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "accumulate": true,
+      "id": "de_rcp_104",
+      "label": "Recovered paper wholesale price DE · 1.04 packaging (department-store grade)",
+      "match": [
+        "1\\.04",
+        "Kaufhaus",
+        "Verpackungen aus Papier"
+      ],
+      "about": {
+        "what": "Destatis index for paper and board packaging from retail and commerce (grade 1.04, 'department-store' waste paper, close to OCC).",
+        "wepa": "The closest German price signal for the brown grades behind WEPA's OCC-based products.",
+        "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ."
+      }
+    },
+    {
+      "source": "destatis",
+      "table": "61281-0006",
+      "unit": "index",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61281-0006, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/table/61281-0006",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "accumulate": true,
+      "id": "de_rcp_403",
+      "label": "Recovered paper wholesale price DE · 4.03 used kraft corrugated",
+      "match": [
+        "4\\.03",
+        "Kraftwellpappe",
+        "gebrauchte .*Wellpappe"
+      ],
+      "about": {
+        "what": "Destatis index for used corrugated board with kraft liners (grade 4.03), a higher-quality brown grade.",
+        "wepa": "A cleaner brown grade with longer fibres – relevant where WEPA needs strength from recycled brown fibre.",
+        "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ."
+      }
+    },
+    {
+      "source": "destatis",
+      "table": "61281-0006",
+      "unit": "index",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61281-0006, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/table/61281-0006",
+      "group": "recovered",
+      "areas": [
+        "circularity"
+      ],
+      "accumulate": true,
+      "id": "de_rcp_111",
+      "label": "Recovered paper wholesale price DE · 1.11 deinking & news/magazines",
+      "match": [
+        "1\\.11",
+        "Deinking"
+      ],
+      "about": {
+        "what": "Destatis index for newspapers and magazines and sorted graphic paper for deinking (grades 1.08/1.09/1.11).",
+        "wepa": "The German price signal for the deinking grades used in white recycled tissue.",
+        "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ. Combines several deinking grades, weighted by Destatis."
+      }
+    },
+    {
+      "id": "ppi_corrugated",
+      "group": "packaging",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Producer prices · corrugated paper & board, packaging (C17.21), EU",
+      "unit": "index",
+      "source": "eurostat",
+      "dataset": "sts_inppd_m",
+      "params": {
+        "geo": "EU27_2020",
+        "indic_bt": "PRC_PRR_DOM",
+        "nace_r2": "C1721",
+        "s_adj": "NSA",
+        "unit": "I21"
+      },
+      "alts": [
+        {
+          "unit": "I15"
+        }
+      ],
+      "freq": "monthly",
+      "attribution": "Eurostat",
+      "link": "https://ec.europa.eu/eurostat/databrowser/view/sts_inppd_m/default/table",
+      "prefer": {
+        "s_adj": [
+          "NSA"
+        ],
+        "unit": [
+          "I21",
+          "I15"
+        ],
+        "indic_bt": [
+          "PRC_PRR_DOM",
+          "PRC_PRR"
+        ]
+      },
+      "about": {
+        "what": "Index of the prices EU producers charge in their home market for corrugated paper and board and for paper and board packaging (NACE C17.21).",
+        "wepa": "Two uses: it shows whether higher OCC prices are passed on in packaging markets (where OCC demand comes from), and it tracks the cost of WEPA's own cardboard packaging.",
+        "limits": "Covers all corrugated and paper packaging in the EU; an index, not a price level. Says nothing about tissue prices."
+      }
+    },
+    {
+      "id": "us_recycled_board",
+      "group": "packaging",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Recycled paperboard · US producer price index",
+      "unit": "index",
+      "source": "fred",
+      "series": "WPU09141105",
+      "freq": "monthly",
+      "attribution": "U.S. Bureau of Labor Statistics via FRED",
+      "link": "https://fred.stlouisfed.org/series/WPU09141105",
+      "about": {
+        "what": "US producer price index for recycled paperboard – board made mainly from recovered paper.",
+        "wepa": "Shows how prices for products made from recycled fibre develop when recovered paper prices change – a long, reliable trend series.",
+        "limits": "US market and US dollars; recycled board, not tissue."
+      }
+    },
+    {
+      "id": "us_corrugated_boxes",
+      "group": "packaging",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Corrugated shipping containers · US producer price index",
+      "unit": "index",
+      "source": "fred",
+      "series": "WPU09150301",
+      "freq": "monthly",
+      "attribution": "U.S. Bureau of Labor Statistics via FRED",
+      "link": "https://fred.stlouisfed.org/series/WPU09150301",
+      "about": {
+        "what": "US producer price index for corrugated shipping boxes.",
+        "wepa": "A demand signal for OCC: box prices and volumes drive how much brown recovered paper the packaging industry absorbs.",
+        "limits": "US market and US dollars; an index, not a price level."
       }
     },
     {
@@ -644,5 +962,6 @@
     "wepa": "Electricity use × this factor gives the location-based Scope 2 emissions of WEPA's sites in that country. It also shows where electrifying heat (for example e-boilers or heat pumps instead of gas) actually lowers emissions: a lot in France, little in Poland.",
     "limits": "Based on generation, so electricity imports are not included. It is not the official factor WEPA uses in its report (often from the IEA, AIB or national agencies), and it does not affect market-based Scope 2, which depends on contracts and guarantees of origin."
   },
-  "_comment_about": "'about' (what / wepa / limits) is shown when an indicator card is opened on the Market page. 'gridAbout' is used for all grid carbon intensity countries."
+  "_comment_about": "'about' (what / wepa / limits) is shown when an indicator card is opened on the Market page. 'gridAbout' is used for all grid carbon intensity countries.",
+  "_comment_destatis": "Indicators with source 'destatis' need the GitHub secret DESTATIS_TOKEN (or DESTATIS_USER + DESTATIS_PASSWORD). 'match' = regular expressions for the series name in the GENESIS table; data/debug/destatis.json lists the names found. 'accumulate' keeps older months, because the table only holds the current and previous year."
 }

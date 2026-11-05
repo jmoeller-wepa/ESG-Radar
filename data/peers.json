@@ -304,7 +304,7 @@
         },
         "safety": {
           "v": "LTIR 1.73",
-          "d": "LTIR 1.73 (−13% vs. 2024) · target −10% per year",
+          "d": "LTIR 1.73 (2.01 in 2024, as restated in the 2025 report) · target −10% per year",
           "y": "2025",
           "src": "https://www.wepa.eu/fileadmin/content/docs/sustainability/WEPA_Sustainability_Report_2025.pdf",
           "history": [
@@ -313,8 +313,63 @@
               "y": "2023"
             },
             {
-              "v": "LTIR 1.98",
+              "v": "LTIR 2.01",
               "y": "2024"
+            }
+          ]
+        },
+        "womenTotal": {
+          "v": 15.1,
+          "y": "2025",
+          "d": "15.1% of headcount (674 of 4,477)",
+          "src": "https://www.wepa.eu/fileadmin/content/docs/sustainability/WEPA_Sustainability_Report_2025.pdf",
+          "note": "Sustainability Report 2025, S1-5, p. 139",
+          "history": [
+            {
+              "v": 14.1,
+              "y": "2023"
+            },
+            {
+              "v": 14.3,
+              "y": "2024"
+            }
+          ]
+        },
+        "womenManagement": {
+          "v": 17.2,
+          "y": "2025",
+          "d": "17.2% of top management (25 of 145, European Leadership Team)",
+          "src": "https://www.wepa.eu/fileadmin/content/docs/sustainability/WEPA_Sustainability_Report_2025.pdf",
+          "note": "Sustainability Report 2025, S1-8, p. 144",
+          "history": [
+            {
+              "v": 13.1,
+              "y": "2023"
+            },
+            {
+              "v": 16.2,
+              "y": "2024"
+            }
+          ]
+        },
+        "recyclablePackaging": {
+          "v": null,
+          "y": "2025",
+          "d": "Cardboard packaging 100% recyclable by design · plastic packaging 96% recyclability (cyclos-certified, selected products)",
+          "src": "https://www.wepa.eu/fileadmin/content/docs/sustainability/WEPA_Sustainability_Report_2025.pdf",
+          "note": "Sustainability Report 2025, E5-5, p. 111"
+        },
+        "plasticTarget": {
+          "v": null,
+          "y": "2025",
+          "d": "8,000 t primary plastic saved per year and 60% recycled material in packaging by 2030 (base 2021) · 41% PCR in primary packaging in 2025",
+          "src": "https://www.wepa.eu/fileadmin/content/docs/sustainability/WEPA_Sustainability_Report_2025.pdf",
+          "note": "Sustainability Report 2025, E5-3 p. 104 and E5 metrics p. 111",
+          "history": [
+            {
+              "v": null,
+              "y": "2024",
+              "d": "29.4% PCR in primary packaging"
             }
           ]
         }

@@ -116,9 +116,15 @@ These parts are updated by hand, with the prompts in `prompts/` (they work in M3
 | Wholesale electricity price Germany (day-ahead DE-LU, monthly average) | Bundesnetzagentur \| SMARD.de (filter 4169) | monthly | CC BY 4.0 |
 | EU import price of pulp: NBSK (CN 4703 21) and BHKP / eucalyptus (CN 4703 29) | Eurostat Comext (`DS-045409`), unit value = import value ÷ volume, extra-EU | monthly, about 2 months' delay | Free reuse with attribution. A market signal, not a contract price |
 | EU export price of recovered paper (HS 4707, all grades) | Eurostat Comext (`DS-045409`), unit value of extra-EU exports | monthly, about 2 months' delay | Free reuse with attribution |
+| Recovered paper by grade: OCC (4707 10), white/office (4707 20), news & PAMS (4707 30), mixed (4707 90) – exports outside the EU; OCC and white grades also within the EU | Eurostat Comext (`DS-045409`), unit values | monthly, about 2 months' delay | Free reuse with attribution |
+| German wholesale prices for recovered paper: 1.02, 1.04, 4.03, 1.11 (index 2021 = 100) | Destatis GENESIS table `61281-0006` | monthly | Datenlizenz Deutschland – Namensnennung 2.0. Needs the secret `DESTATIS_TOKEN` (free GENESIS account). Older months are kept, because the table only holds the current and previous year |
+| Producer prices for corrugated paper & packaging (C17.21), EU | Eurostat (`sts_inppd_m`) | monthly | Free reuse with attribution |
+| Recycled paperboard and corrugated boxes (US) | US BLS via FRED (`WPU09141105`, `WPU09150301`) | monthly | Public domain |
+| Industry tab: German production and sales by grade (incl. hygiene papers) | DIE PAPIERINDUSTRIE, Statistische Kurzinformation (PDF), `scripts/collect_industry.py` | monthly | Public; figures shown with source |
+| Industry tab: recovered paper utilisation rate by grade (DE), European key figures | Umweltbundesamt / DIE PAPIERINDUSTRIE, Cepi – in `data/industry.json` | yearly, by hand (prompt part 2 in `prompts/peers-update-prompt.md`) | Public; figures shown with source |
 | EU carbon price (EUA) | Press / exchange reports | manual | Exchange prices are licensed, so this value is entered by hand with its source |
 
-**Not included:** Exchange-quoted pulp prices (NBSK/BHKP) and European recovered paper prices from FOEX, Fastmarkets or EUWID are paid data; the Comext unit values above are the free alternative. If a Comext series fails, `data/debug/comext.json` shows which codes were tried.
+**Not included:** Exchange-quoted pulp prices (NBSK/BHKP) and European recovered paper prices from FOEX, Fastmarkets or EUWID are paid data; the Comext unit values above are the free alternative. If a Comext series fails, `data/debug/comext.json` shows which codes were tried; for Destatis see `data/debug/destatis.json` (it also lists further GENESIS tables found for tissue, energy and pulp prices), for the industry PDF `data/debug/industry.json`.
 
 **Changing indicators:** edit `config/market.json`. For Eurostat, `params` filter the query. If a code doesn't exist, the collector tries `alts` and finally only geo, NACE and product, choosing the remaining codes from `prefer`. The run summary in the Actions tab shows which parameters were actually used.
 

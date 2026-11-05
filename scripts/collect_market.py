@@ -254,9 +254,10 @@ def comext(ind):
                     idx = data["dimension"][pdim]["category"]["index"]
                     codes = list(idx) if isinstance(idx, dict) else idx
                     dbg["partnerCodes"] = [c for c in codes if not (len(c) == 2 and c.isalpha())][:40]
-                    partner = next((c for c in codes if c.upper().startswith(("EXT", "EXTRA"))), None)
+                    prefixes = tuple(ind.get("partnerPrefix", ["EXT", "EXTRA"]))
+                    partner = next((c for c in codes if c.upper().startswith(prefixes)), None)
                     if not partner:
-                        raise RuntimeError("no extra-EU partner code in answer")
+                        raise RuntimeError("no partner code starting with " + "/".join(prefixes) + " in answer")
                 ind_dim = next(d for d in dims if d.lower() == "indicators")
                 base_req = {pdim: partner} if pdim and partner else {}
                 # trade is split by customs procedure (normal, inward/outward processing …): add all parts up
@@ -293,6 +294,112 @@ def comext(ind):
                 last_err = str(exc)[:160]
                 dbg["tries"].append({"reporter": rep_code, "partner": partner, "error": last_err})
     raise RuntimeError(last_err)
+
+
+# ---------- Destatis GENESIS (needs the GitHub secret DESTATIS_TOKEN, or DESTATIS_USER + DESTATIS_PASSWORD) ----------
+GENESIS = "https://genesis.destatis.de/genesisWS/rest/2020/"
+DESTATIS_DEBUG = ROOT / "data" / "debug" / "destatis.json"
+_destatis = {"tables": {}, "debug": {}}
+
+
+def _genesis_auth():
+    tok = os.environ.get("DESTATIS_TOKEN", "").strip()
+    if tok:
+        return {"username": tok, "password": ""}
+    user, pw = os.environ.get("DESTATIS_USER", "").strip(), os.environ.get("DESTATIS_PASSWORD", "")
+    if user:
+        return {"username": user, "password": pw}
+    return None
+
+
+def _genesis_post(method, params, timeout=120):
+    auth = _genesis_auth()
+    if not auth:
+        raise RuntimeError("GitHub secret DESTATIS_TOKEN is not set")
+    body = urllib.parse.urlencode({"language": "de", **params}).encode("utf-8")
+    req = urllib.request.Request(GENESIS + method, data=body, method="POST",
+                                 headers={"User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded", **auth})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read().decode("utf-8-sig", "replace")
+
+
+def _num_de(v):
+    v = (v or "").strip().replace(".", "").replace(",", ".") if "," in (v or "") else (v or "").strip()
+    try:
+        return float(v)
+    except ValueError:
+        return None
+
+
+def _destatis_table(name):
+    """Download a GENESIS table as flat CSV (ffcsv) and return {series label: {YYYY-MM: value}}."""
+    if name in _destatis["tables"]:
+        return _destatis["tables"][name]
+    dbg = _destatis["debug"].setdefault(name, {})
+    year = datetime.now(timezone.utc).year
+    text = _genesis_post("data/tablefile", {"name": name, "area": "all", "compress": "false", "transpose": "false",
+                                            "startyear": str(int(START[:4])), "endyear": str(year), "format": "ffcsv"})
+    if text.lstrip().startswith("{"):
+        info = json.loads(text)
+        dbg["answer"] = {k: info.get(k) for k in ("Status", "Ident") if k in info}
+        raise RuntimeError("GENESIS: " + json.dumps(info.get("Status") or info)[:180])
+    rows = list(csv.reader(io.StringIO(text), delimiter=";"))
+    head = [h.strip() for h in rows[0]]
+    dbg["columns"] = head
+    dbg["sample"] = rows[1:4]
+    low = [h.lower() for h in head]
+    # value column: 'value' (ffcsv) – else the last column whose content is numeric
+    vcol = next((k for k, h in enumerate(low) if h == "value"), None)
+    tcol = next((k for k, h in enumerate(low) if h in ("time", "zeit")), None)
+    # month column: an attribute code like MONAT01
+    mcol = None
+    for k in range(len(head)):
+        vals = {r[k] for r in rows[1:50] if len(r) > k}
+        if vals and all(re.fullmatch(r"MONAT\d\d", v or "") for v in vals):
+            mcol = k
+            break
+    label_cols = [k for k, h in enumerate(low) if h.endswith("attribute_label") and k != (mcol + 1 if mcol is not None else -1)]
+    label_cols = [k for k in label_cols if not any(re.fullmatch(r"(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)", r[k] or "") for r in rows[1:20] if len(r) > k)]
+    if vcol is None or tcol is None or mcol is None:
+        raise RuntimeError(f"unknown table layout (value={vcol}, time={tcol}, month={mcol}) – see data/debug/destatis.json")
+    out = {}
+    for r in rows[1:]:
+        if len(r) <= max(vcol, tcol, mcol):
+            continue
+        val = _num_de(r[vcol])
+        if val is None:
+            continue
+        label = " · ".join(r[k].strip() for k in label_cols if len(r) > k and r[k].strip())
+        out.setdefault(label, {})[f"{r[tcol].strip()[:4]}-{r[mcol][-2:]}"] = val
+    dbg["series"] = sorted(out)[:80]
+    _destatis["tables"][name] = out
+    return out
+
+
+def destatis(ind):
+    table = _destatis_table(ind["table"])
+    pats = [re.compile(p, re.I) for p in ind.get("match", [])]
+    # patterns in order of priority: the grade code first, the name only as a fallback
+    label = next((l for p in pats for l in table if p.search(l) and not re.search(r"\bohne\b", l, re.I)), None)
+    if not label:
+        raise RuntimeError("no series matches " + " / ".join(ind.get("match", [])) + " – see data/debug/destatis.json")
+    _destatis["debug"].setdefault("matched", {})[ind["id"]] = label
+    series = [[m, round(v, 2)] for m, v in sorted(table[label].items()) if m >= START]
+    if not series:
+        raise RuntimeError("no data")
+    return series, {"series": label}
+
+
+def destatis_discover():
+    """Search GENESIS for further tables of interest; the result helps to configure new indicators."""
+    found = {}
+    for term in ("Toilettenpapier", "Hygienepapier", "Sondervertragskunden", "Erdgas Industrie", "Einfuhrpreise Zellstoff", "Verbraucherpreisindex Toilettenpapier"):
+        try:
+            info = json.loads(_genesis_post("find/find", {"term": term, "category": "tables", "pagelength": "12"}, timeout=60))
+            found[term] = [{"code": t.get("Code"), "content": t.get("Content")} for t in (info.get("Tables") or [])][:12]
+        except Exception as exc:  # noqa: BLE001
+            found[term] = str(exc)[:160]
+    _destatis["debug"]["search"] = found
 
 
 # ---------- Ember (grid carbon intensity, CC BY 4.0) ----------
@@ -423,7 +530,7 @@ def manual(ind):
     return [[v["date"], float(v["value"])] for v in vals], None
 
 
-FETCH = {"eurostat": eurostat, "fred": fred, "smard": smard, "smard_price": smard_price, "comext": comext, "ember": ember, "manual": manual}
+FETCH = {"eurostat": eurostat, "fred": fred, "smard": smard, "smard_price": smard_price, "comext": comext, "destatis": destatis, "ember": ember, "manual": manual}
 KEEP = ("id", "group", "areas", "label", "unit", "freq", "attribution", "link", "source", "country", "isUs")
 
 
@@ -443,6 +550,11 @@ def main():
             item["notes"] = [{k: v[k] for k in ("date", "note", "url") if k in v} for v in ind.get("values", [])]
         try:
             series, used = FETCH[ind["source"]](ind)
+            if ind.get("accumulate") and old.get(ind["id"], {}).get("series"):
+                # the source only holds recent months: keep older ones from earlier runs
+                merged = {m: v for m, v in old[ind["id"]]["series"]}
+                merged.update({m: v for m, v in series})
+                series = [[m, merged[m]] for m in sorted(merged)]
             item.update(series=series, status="manual" if ind["source"] == "manual" else "ok", fetched=now)
             if used and used != ind.get("params"):
                 item["usedParams"] = used
@@ -454,6 +566,15 @@ def main():
             report.append(f"| {ind['id']} | ⚠️ {str(exc)[:80]} | {len(item['series'])} (kept) | – |")
         result.append(item)
 
+    if any(i["source"] == "destatis" for i in config["indicators"]):
+        if _genesis_auth():
+            try:
+                destatis_discover()
+            except Exception as exc:  # noqa: BLE001
+                _destatis["debug"]["search"] = str(exc)[:160]
+        DESTATIS_DEBUG.parent.mkdir(parents=True, exist_ok=True)
+        DESTATIS_DEBUG.write_text(json.dumps({"checked": now, "credentials": bool(_genesis_auth()), **_destatis["debug"]},
+                                             ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     if _comext_dbg:
         COMEXT_DEBUG.parent.mkdir(parents=True, exist_ok=True)
         COMEXT_DEBUG.write_text(json.dumps({"checked": now, "indicators": _comext_dbg}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
