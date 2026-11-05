@@ -1,0 +1,83 @@
+{
+ "checked": "2026-11-05T08:41:08",
+ "indicators": {
+  "pulp_nbsk_eu": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "EXT_EU27_2020",
+     "ok": 92
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "EXT_EU27_2020",
+    "latest": [
+     "2026-08",
+     845.6
+    ]
+   }
+  },
+  "pulp_bhkp_eu": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "EXT_EU27_2020",
+     "ok": 92
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "EXT_EU27_2020",
+    "latest": [
+     "2026-08",
+     567.6
+    ]
+   }
+  },
+  "rcp_export_eu": {
+   "tries": [
+    {
+     "reporter": "EU27_2020",
+     "partner": "EXT_EU27_2020",
+     "ok": 92
+    }
+   ],
+   "dims": [
+    "freq",
+    "reporter",
+    "partner",
+    "product",
+    "flow",
+    "indicators",
+    "time"
+   ],
+   "used": {
+    "reporter": "EU27_2020",
+    "partner": "EXT_EU27_2020",
+    "latest": [
+     "2026-08",
+     136.5
+    ]
+   }
+  }
+ }
+}

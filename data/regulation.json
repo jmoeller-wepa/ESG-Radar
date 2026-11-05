@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T07:30:19",
+ "updated": "2026-11-05T08:39:52",
  "consultations": [
   {
    "id": "16912.0",
@@ -33,6 +33,25 @@
    "topics": [],
    "keywords": [
     "emission"
+   ]
+  },
+  {
+   "id": "19292.0",
+   "title": "Articles 75c – 75d AI Act Implementing Act",
+   "summary": "",
+   "type": "Isc workflow",
+   "dg": null,
+   "start": "2026-10-12",
+   "end": "2026-11-09",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19292.0_en",
+   "areas": [
+    "data"
+   ],
+   "topics": [
+    "aiact"
+   ],
+   "keywords": [
+    "ai act"
    ]
   },
   {
@@ -224,7 +243,9 @@
    "areas": [
     "circularity"
    ],
-   "topics": [],
+   "topics": [
+    "espr"
+   ],
    "keywords": [
     "ecodesign"
    ]
@@ -740,5 +761,5 @@
    "changed": null
   }
  },
- "consultationsFetched": "2026-11-05T07:30:19"
+ "consultationsFetched": "2026-11-05T08:39:52"
 }

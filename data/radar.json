@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-05T07:30:15"
+    "lastFeedRun": "2026-11-05T08:39:47"
   },
   "entries": [
     {
@@ -2190,6 +2190,32 @@
       "nextDateLabel": null,
       "source": "EFRAG (via Google News)",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5GOHBBS2hwdTV3d040ZTlXMXoxYlpXUExZRXo1d3pnd1FGYWh0R2dLbkIzc1ZiU0FWenFzQ19yM3B0UXhFUmlZX0xfMmZ0YW5BZjIzVUJDTEtHQmJ2cS0yNmM3dFg0eHBlNFh4TUU5aw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-05"
+    },
+    {
+      "id": "feed-26e061f165",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "AI"
+      ],
+      "title": "Inside DAXBench v2: Results and Your Questions",
+      "summary": "How well do AI models write DAX? DAXBench is a public leaderboard that tests AI models on DAX tasks. Version 2 uses a new set of tasks that run against prepared Power BI models. In this webinar, Marco Russo (SQLBI)…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "SQLBI",
+      "url": "https://www.sqlbi.com/tv/inside-daxbench-v2-results-and-your-questions/",
       "origin": "feed",
       "added": "2026-11-05"
     }
