@@ -107,3 +107,41 @@ window.RadarViz = (function () {
   }
   return { path, area };
 })();
+
+/* Link style "A" (quiet text link): every link or button whose text ends in " ↗" (opens another site) or " →" (goes somewhere
+   in the radar) gets a small drawn icon instead of the text arrow and the class "lk" (styled in theme.css).
+   Works for static HTML and for everything the pages render later. */
+(function () {
+  const NS = "http://www.w3.org/2000/svg";
+  const PATHS = { ext: ["M6.5 3.5h-3v9h9v-3", "M9.5 2.5h4v4", "M13.5 2.5 7.5 8.5"], in: ["M6 3.5 10.5 8 6 12.5"] };
+  function icon(kind) {
+    const s = document.createElementNS(NS, "svg");
+    s.setAttribute("viewBox", "0 0 16 16"); s.setAttribute("class", "lk-i"); s.setAttribute("aria-hidden", "true");
+    PATHS[kind].forEach((d) => { const p = document.createElementNS(NS, "path"); p.setAttribute("d", d); s.appendChild(p); });
+    return s;
+  }
+  function fix(a) {
+    if (a.querySelector(":scope > .lk-i")) return;
+    let last = a.lastChild;
+    while (last && last.nodeType === 3 && !last.nodeValue.trim()) last = last.previousSibling;
+    if (!last || last.nodeType !== 3) return;
+    const m = last.nodeValue.match(/^([\s\S]*\S)\s+([↗→])\s*$/);
+    if (!m) return;
+    last.nodeValue = m[1];
+    a.appendChild(icon(m[2] === "↗" ? "ext" : "in"));
+    a.classList.add("lk", m[2] === "↗" ? "lk-ext" : "lk-in");
+  }
+  function scan(root) {
+    if (root.nodeType !== 1) return;
+    if (root.matches("a, button")) fix(root);
+    root.querySelectorAll("a, button").forEach(fix);
+  }
+  function start() {
+    scan(document.body);
+    new MutationObserver((ms) => ms.forEach((m) => {
+      m.addedNodes.forEach(scan);
+      if (m.type === "characterData" && m.target.parentElement) { const a = m.target.parentElement.closest("a, button"); if (a) fix(a); }
+    })).observe(document.body, { childList: true, subtree: true, characterData: true });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+})();

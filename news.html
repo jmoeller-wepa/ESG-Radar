@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261105j"></script>
+<script src="assets/theme.js?v=20261106b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>News – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
@@ -217,7 +217,7 @@
   .ml { position: sticky; top: 140px; align-self: start; text-align: right; padding: 4px 12px 4px 0; border-right: 2px solid var(--d-e3e7ec-border, #e3e7ec); }
   .ml b { display: block; font-size: 15px; color: var(--blue-900); }
   .ml small { display: block; font-size: 11.5px; color: var(--ink-3); }
-  .ml .nn { color: var(--wepa-green-soft, var(--d-33b09c-text, #33b09c)); font-weight: 700; }
+  .ml .nn { color: var(--ink-3, #8a94a3); font-weight: 400; }
   .mrow.cur .ml { border-right-color: var(--wepa-green-soft, #33b09c); }
   .more-months { align-self: center; border: 1px solid var(--d-dfe4ea-border, #dfe4ea); background: var(--d-fff-bg, #fff); border-radius: 10px; padding: 8px 16px; font: inherit; font-size: 13.5px; color: var(--blue-900); cursor: pointer; }
   .more-months:hover { border-color: var(--d-b9c6d4-border, #b9c6d4); }
@@ -284,6 +284,9 @@
   .cf .src { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
   .det[hidden] { display: none; }
   select[hidden] { display: none; }
+  /* toolbar dropdowns are as wide as the chosen option (Chrome/Edge), so all filters fit on one line */
+  .toolbar select { field-sizing: content; min-width: 0; }
+  @media (min-width: 1280px) { .toolbar:has(#tool[hidden]) { flex-wrap: nowrap; } .toolbar .tsearch { flex: 0 1 220px; min-width: 130px; } .toolbar .count-txt { flex: none; } }
   .cf .due { color: var(--red-text); font-weight: 600; }
   .cf .st { color: var(--ink-2); }
   .det { border: 0; background: none; padding: 0; color: var(--blue-700); font-size: 12px; font-weight: 600; cursor: pointer; }
@@ -315,9 +318,9 @@
     .feat { flex-basis: 100%; }
   }
 </style>
-<script src="assets/status.js?v=20261105j" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261105j">
-<script src="assets/colresize.js?v=20261105j" defer></script>
+<script src="assets/status.js?v=20261106b" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261106b">
+<script src="assets/colresize.js?v=20261106b" defer></script>
 </head>
 <body>
 <header>
@@ -388,13 +391,13 @@
     </section>
 
     <div class="toolbar">
+      <span class="count-txt" id="count"></span>
+      <span class="only-chip" id="only" hidden></span>
+      <div class="spacer"></div>
       <label class="search tsearch">
         <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
         <input id="q" type="search" placeholder="Filter these cards …" aria-label="Filter news cards">
       </label>
-      <span class="count-txt" id="count"></span>
-      <span class="only-chip" id="only" hidden></span>
-      <div class="spacer"></div>
       <select id="tool" aria-label="Tool" hidden>
         <option value="all">All tools</option>
         <optgroup label="Microsoft data">
@@ -410,32 +413,37 @@
         </optgroup>
         <option value="other">Other tools</option>
       </select>
-      <select id="impact" aria-label="Impact">
-        <option value="all">All impacts</option>
-        <option value="reporting">Our reporting</option>
-        <option value="datamodel">Our data model &amp; KPIs</option>
-        <option value="suppliers">Suppliers &amp; sourcing</option>
-        <option value="products">Products &amp; packaging</option>
-        <option value="costs">Costs &amp; investments</option>
-        <option value="watch">Watch only</option>
-      </select>
-      <select id="topic" aria-label="Topic"><option value="all">All topics</option></select>
-      <select id="type" aria-label="Type">
-        <option value="all">All types</option>
+      <!-- "What it is": kind of item; peer news can be narrowed to a topic -->
+      <select id="type" aria-label="What it is">
+        <option value="all">What it is: everything</option>
         <option value="regulation">Regulation</option>
         <option value="tool">Tools &amp; updates</option>
         <option value="practice">Best practice</option>
         <option value="peer">Peer news</option>
         <option value="monthly" id="opt-monthly">Monthly updates</option>
       </select>
+      <!-- "Affects us": what it touches at WEPA -->
+      <select id="impact" aria-label="Affects us">
+        <option value="all">Affects us: anything</option>
+        <option value="reporting">Affects our reporting</option>
+        <option value="datamodel">Affects our data model &amp; KPIs</option>
+        <option value="suppliers">Affects suppliers &amp; sourcing</option>
+        <option value="products">Affects products &amp; packaging</option>
+        <option value="costs">Affects costs &amp; investments</option>
+        <option value="watch">Watch only</option>
+      </select>
       <select id="rel" aria-label="Relevance">
         <option value="all">All relevance</option>
         <option value="high">High only</option>
         <option value="medium">High &amp; medium</option>
       </select>
-      <select id="sort" aria-label="Sort">
-        <option value="date">Newest</option>
-        <option value="relevance">Most relevant</option>
+      <select id="sort" aria-label="Sort by">
+        <option value="date">Sort by: Newest first</option>
+        <option value="oldest">Sort by: Oldest first</option>
+        <option value="relevance">Sort by: Most relevant</option>
+        <option value="deadline">Sort by: Next deadline</option>
+        <option value="type">Sort by: Type</option>
+        <option value="source">Sort by: Source A–Z</option>
       </select>
     </div>
 
@@ -478,6 +486,7 @@
     people: { label: "People & organisation", re: /\bCEO\b|\bCFO\b|appoint|names .* (chief|head|president)|board|management team|employees|jobs|layoff|strike|union|Vorstand|Geschäftsführ|Mitarbeiter|Stellen|Streik|nomina|amministratore|despid|nombra/i },
     policy: { label: "Regulation & policy", re: /regulation|directive|\blaw\b|Commission|omnibus|\bCSRD\b|\bESRS\b|\bEUDR\b|\bPPWR\b|\bETS\b|\bCBAM\b|taxonomy|Gesetz|Verordnung|Richtlinie|normativ|regolament/i },
   };
+  const PEER_TOPICS = ["capacity", "deals", "products", "markets", "people"]; // offered under "Peer news" in the "What it is" filter
   const topicsOf = (e) => e._topics || (e._topics = Object.keys(TOPICS).filter((k) => TOPICS[k].re.test(e.title + " " + (e.summary || "") + " " + (e.tags || []).join(" "))));
   const AREAS = {
     climate: { label: "Climate & Energy", icon: '<path d="M10 9.5V3.5a2 2 0 1 0-4 0v6a3 3 0 1 0 4 0Z"/><path d="M8 6v5"/>' },
@@ -593,6 +602,10 @@
     const t = p.get("type") || (v === "monthly" ? "monthly" : null);
     if (t === "monthly") { state.areas = new Set(["data"]); syncArea(); state.type = "monthly"; }
     else if (t && TYPE_LABEL[t]) state.type = t;
+    // topics only narrow peer news (other topics are covered by the areas and types)
+    if (!PEER_TOPICS.includes(state.topic)) state.topic = "all";
+    else if (state.type === "all") state.type = "peer";
+    else if (state.type !== "peer") state.topic = "all";
   }
   function writeHash() {
     const p = new URLSearchParams();
@@ -718,13 +731,13 @@
       refresh();
     });
     // Filters above the cards
-    $("type").addEventListener("change", (ev) => { state.type = ev.target.value; sync(); render(); });
+    // "What it is": value is a type, or "peer:<topic>" for peer news about one topic
+    PEER_TOPICS.slice().reverse().forEach((k) => { const o = document.createElement("option"); o.value = "peer:" + k; o.textContent = "Peer news · " + TOPICS[k].label; $("type").querySelector('[value="peer"]').after(o); });
+    $("type").addEventListener("change", (ev) => { const [t, tp] = ev.target.value.split(":"); state.type = t; state.topic = tp || "all"; sync(); render(); });
     $("tool").addEventListener("change", (ev) => { state.tool = ev.target.value; refresh(); });
     window.addEventListener("resize", debounce(measureCards, 150));
     $("rel").addEventListener("change", (ev) => { state.rel = ev.target.value; render(); syncCount(); });
     $("impact").addEventListener("change", (ev) => { state.impact = ev.target.value; sync(); render(); });
-    Object.entries(TOPICS).forEach(([k, t]) => { const o = document.createElement("option"); o.value = k; o.textContent = t.label; $("topic").appendChild(o); });
-    $("topic").addEventListener("change", (ev) => { state.topic = ev.target.value; sync(); render(); });
     $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
     $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); syncCount(); });
     // Footer legend
@@ -773,7 +786,7 @@
     $("dl-next").hidden = !inData;
     const dv = currentDlView();
     document.querySelectorAll(".dl-panel [data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === dv)));
-    $("type").value = state.type; $("rel").value = state.rel; $("impact").value = state.impact; $("topic").value = state.topic;
+    $("type").value = state.type === "peer" && state.topic !== "all" ? "peer:" + state.topic : state.type; $("rel").value = state.rel; $("impact").value = state.impact;
     const only = $("only");
     only.hidden = !state.only;
     if (state.only) {
@@ -794,7 +807,7 @@
   }
 
   function jumpTo(id) {
-    state.view = "all"; state.type = "all"; state.rel = "all"; state.impact = "all"; state.only = null; state.q = ""; $("q").value = ""; sync(); render();
+    state.view = "all"; state.type = "all"; state.topic = "all"; state.rel = "all"; state.impact = "all"; state.only = null; state.q = ""; $("q").value = ""; sync(); render();
     const c = document.getElementById(id);
     if (!c) return;
     c.classList.add("open", "flash");
@@ -1069,7 +1082,17 @@
     if (state.q) list = list.filter((e) => [e.title, e.summary, e.whyItMatters, e.source, (e.tags || []).join(" ")].join(" ").toLowerCase().includes(state.q));
     const key = (e) => (e.dateIsAdded ? "" : e.date || ""); // undated references go last
     const byDate = (a, b) => key(b).localeCompare(key(a));
-    list.sort(state.sort === "relevance" ? (a, b) => REL_RANK[relOf(a)] - REL_RANK[relOf(b)] || byDate(a, b) : byDate);
+    const TYPE_ORDER = { regulation: 0, tool: 1, practice: 2, peer: 3 };
+    const nd = (e) => (e.nextDate && daysFrom(e.nextDate) >= 0 ? e.nextDate : "9999");
+    const SORTS = {
+      date: byDate,
+      oldest: (a, b) => key(a).localeCompare(key(b)),
+      relevance: (a, b) => REL_RANK[relOf(a)] - REL_RANK[relOf(b)] || byDate(a, b),
+      deadline: (a, b) => nd(a).localeCompare(nd(b)) || byDate(a, b),
+      type: (a, b) => (TYPE_ORDER[a.type] ?? 9) - (TYPE_ORDER[b.type] ?? 9) || byDate(a, b),
+      source: (a, b) => (a.source || "~").localeCompare(b.source || "~", "en", { sensitivity: "base" }) || byDate(a, b),
+    };
+    list.sort(SORTS[state.sort] || byDate);
     return list;
   }
 
@@ -1158,11 +1181,12 @@
   const MONTHS_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const monthKey = (e) => (e.dateIsAdded || !e.date ? "ref" : e.date.slice(0, 7));
   const monthName = (k, long) => (k === "ref" ? "Reference" : (long ? MONTHS_LONG : MONTHS_LONG.map((m) => m.slice(0, 3)))[+k.slice(5, 7) - 1]);
-  // Groups by month, newest month first; inside a month the chosen sort order is kept
+  // Groups by month, newest month first (oldest first for "Oldest first"); inside a month the chosen sort order is kept
   function groups(list) {
     const map = new Map();
     list.forEach((e) => { const k = monthKey(e); if (!map.has(k)) map.set(k, []); map.get(k).push(e); });
-    return [...map.entries()].sort((a, b) => (a[0] === "ref" ? 1 : b[0] === "ref" ? -1 : b[0].localeCompare(a[0])));
+    const dir = state.sort === "oldest" ? -1 : 1; // "Oldest first" also turns the month order around
+    return [...map.entries()].sort((a, b) => (a[0] === "ref" ? 1 : b[0] === "ref" ? -1 : dir * b[0].localeCompare(a[0])));
   }
   // ---- Pop-up with the full content of one entry ----
   const IMPACT_LABEL = { reporting: "Our reporting", datamodel: "Our data model & KPIs", suppliers: "Suppliers & sourcing", products: "Products & packaging", costs: "Costs & investments", watch: "Watch only" };
@@ -1315,7 +1339,7 @@
   function debounce(fn, ms) { let t; return () => { clearTimeout(t); t = setTimeout(fn, ms); }; }
 })();
 </script>
-<script src="assets/search.js?v=20261105j" defer></script>
-<script src="assets/guide.js?v=20261105j" defer></script>
+<script src="assets/search.js?v=20261106b" defer></script>
+<script src="assets/guide.js?v=20261106b" defer></script>
 </body>
 </html>

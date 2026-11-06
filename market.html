@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261105j"></script>
+<script src="assets/theme.js?v=20261106b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261105j">
+<link rel="stylesheet" href="assets/side.css?v=20261106b">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -76,16 +76,6 @@
   .chart .base line { stroke: var(--d-c9ced6-border, #c9ced6); stroke-dasharray: 3 3; }
   .chart text { font-size: 11.5px; fill: var(--d-8a94a3-text, #8a94a3); font-family: var(--font); }
   .chart .end { font-size: 12px; font-weight: 600; fill: var(--d-374151-text, #374151); }
-  .chart .regm { cursor: help; outline: none; }
-  .chart .regm-l { stroke: var(--d-c9b6e4-border, #c9b6e4); stroke-width: 1; stroke-dasharray: 2 3; opacity: 0; transition: opacity .12s; }
-  .chart .regm-d { fill: var(--d-fff-bg, #fff); stroke: var(--d-7a5cb8-text, #7a5cb8); stroke-width: 1.6; }
-  .chart .regm.on .regm-l, .chart .regm:focus .regm-l { opacity: 1; }
-  .chart .regm.on .regm-d, .chart .regm:focus .regm-d { fill: var(--d-7a5cb8-text, #7a5cb8); }
-  .reg-tgl { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink-2); cursor: pointer; user-select: none; }
-  .reg-tgl input { margin: 0; accent-color: #7a5cb8; }
-  .reg-tgl i { width: 9px; height: 9px; transform: rotate(45deg); border: 1.6px solid #7a5cb8; display: inline-block; border-radius: 1px; }
-  .reg-tgl small { color: var(--ink-3); }
-  .reg-tgl[hidden] { display: none; }
   .chart .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
   .chart .xh { stroke: var(--d-9aa2ae-text, #9aa2ae); stroke-width: 1; }
   .tip { position: absolute; pointer-events: none; background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 20, 50, .12); padding: 8px 10px; font-size: 12.5px; min-width: 170px; z-index: 3; }
@@ -182,6 +172,8 @@
   .gd-lg span { display: inline-flex; align-items: center; gap: 6px; }
   .gd-lg i { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
   .gd-chart { position: relative; }
+  .ind-chart { margin: 6px 0 4px; }
+  .ind-lg { margin: 2px 0 4px; justify-content: flex-start; } .ind-lg .lg { cursor: default; }
   .gd-chart svg { width: 100%; height: auto; display: block; }
   .gd-tip { position: absolute; pointer-events: none; background: var(--d-002d55-bg, #002d55); color: #fff; font-size: 12px; border-radius: 7px; padding: 5px 8px; white-space: nowrap; transform: translate(-50%, -110%); }
   .gd-about { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
@@ -244,9 +236,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261105j" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261105j">
-<script src="assets/colresize.js?v=20261105j" defer></script>
+<script src="assets/status.js?v=20261106b" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261106b">
+<script src="assets/colresize.js?v=20261106b" defer></script>
 </head>
 <body>
 <header>
@@ -297,7 +289,6 @@
         <h3 id="cmp-title">Trends</h3>
         <span class="hint" id="cmp-hint">Index · first month of the period = 100</span>
         <span class="gran" id="gran" role="group" aria-label="Time axis"></span>
-        <label class="reg-tgl" id="reg-toggle" hidden><input type="checkbox" id="reg-cb"><i aria-hidden="true"></i>Regulation milestones <small></small></label>
         <div class="legend" id="legend"></div>
       </div>
       <div class="chart" id="chart"></div>
@@ -318,8 +309,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261105j"></script>
-<script src="assets/carbon.js?v=20261105j"></script>
+<script src="assets/side.js?v=20261106b"></script>
+<script src="assets/carbon.js?v=20261106b"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -333,18 +324,6 @@
   const EARLIEST = "2019-01";
   const DEFAULT_CMP = ["ppi_tissue", "pulp_nbsk_eu", "rcp_export_eu", "power_de_spot", "ppi_pulp", "us_recovered_paper", "gas_ttf"];
   const state = { gran: "auto", tab: "cmp", area: RadarSide.area(), sel: new Set(), cmp: [] };
-  // regulation milestones as markers on the Trends time axis (data/roadmap.json)
-  let REG_EVENTS = [];
-  let showReg = true; try { showReg = localStorage.getItem("radar.trendsReg") !== "0"; } catch (e) {}
-  function regEvents(rm) {
-    const out = [];
-    ((rm && rm.rows) || []).forEach((r) => {
-      (r.milestones || []).forEach((m) => out.push({ d: m.date, label: m.label, topic: r.label, area: r.area }));
-      (r.phases || []).forEach((ph) => { if (ph.from && /appl|force|start/i.test((ph.status || "") + " " + (ph.label || ""))) out.push({ d: ph.from, label: ph.label, topic: r.label, area: r.area }); });
-    });
-    const seen = new Set();
-    return out.filter((e) => e.d && !seen.has(e.d + e.topic) && seen.add(e.d + e.topic)).sort((a, b) => a.d.localeCompare(b.d));
-  }
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
   // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
@@ -614,27 +593,6 @@
     const hit = svgEl("rect", { x: m.l, y: 0, width: W - m.l - m.r, height: H, fill: "transparent" }); svg.appendChild(hit);
     box.appendChild(svg);
     const tip = el("div", "tip"); tip.hidden = true; box.appendChild(tip);
-    // regulation milestones: small markers on the time axis, hover for the name
-    const evs = showReg ? REG_EVENTS.filter((e) => e.d.slice(0, 7) >= t0.slice(0, 7) && e.d.slice(0, 7) <= t1.slice(0, 7) && (state.area === "all" || !e.area || e.area === state.area)) : [];
-    const byM = {}; evs.forEach((e) => (byM[e.d.slice(0, 7)] = byM[e.d.slice(0, 7)] || []).push(e));
-    Object.entries(byM).forEach(([mo, list]) => {
-      const cx = x(mo), cy = H - m.b;
-      const g = svgEl("g", { class: "regm", tabindex: "0", role: "img", "aria-label": list.map((e) => e.topic + ": " + e.label).join("; ") });
-      g.appendChild(svgEl("line", { x1: cx, x2: cx, y1: m.t, y2: cy, class: "regm-l" }));
-      g.appendChild(svgEl("path", { d: `M${cx} ${cy - 6} L${cx + 5} ${cy} L${cx} ${cy + 6} L${cx - 5} ${cy} Z`, class: "regm-d" }));
-      g.appendChild(svgEl("rect", { x: cx - 9, y: cy - 10, width: 18, height: 20, fill: "transparent" }));
-      const show = () => {
-        tip.replaceChildren(el("b", null, "Regulation · " + fmtMonth(mo)));
-        list.forEach((e) => { const row = el("div"); row.append(el("span", null, e.topic), el("em", null, e.label)); tip.appendChild(row); });
-        tip.hidden = false; g.classList.add("on");
-        const r = svg.getBoundingClientRect(); const left = (cx / W) * r.width; const tw = tip.offsetWidth;
-        tip.style.left = Math.max(0, Math.min(r.width - tw, left - tw / 2)) + "px"; tip.style.top = Math.max(0, (cy / H) * r.height - tip.offsetHeight - 14) + "px";
-      };
-      const hide = () => { tip.hidden = true; g.classList.remove("on"); };
-      g.addEventListener("pointerenter", show); g.addEventListener("pointerleave", hide); g.addEventListener("focus", show); g.addEventListener("blur", hide);
-      svg.appendChild(g);
-    });
-    const rt = $("reg-toggle"); if (rt) { rt.hidden = !REG_EVENTS.length; rt.querySelector("small").textContent = evs.length ? Object.keys(byM).length + " in period" : ""; }
     const move = (ev) => {
       const r = svg.getBoundingClientRect(); const px = ((ev.clientX - r.left) / r.width) * W;
       let best = null, bd = 1e9;
@@ -693,6 +651,84 @@
       grid.appendChild(card);
     });
     box.appendChild(grid);
+  }
+  // Shared line chart in the Trends style (smooth lines, soft gradient areas, end labels, crosshair + tooltip).
+  // Draws into an element that is already on the page, so the SVG matches its real width (text is not scaled).
+  // o = { keys: [x keys], series: [{ name, color, vals: [number|null], end?, width?, dash? }], height, base?, refs?: [{ v, label, color }],
+  //       yFmt(v), xLabel(key, k) → text|null, sep(key, k) → true for a year separator, tipTitle(key), tipVal(series, v), lo?, hi? }
+  function trendChart(box, o) {
+    box.replaceChildren();
+    const W = Math.max(320, box.clientWidth || 800), H = o.height || (box.clientWidth < 600 ? 240 : 280);
+    const n = o.keys.length;
+    const ctx = (trendChart._c = trendChart._c || document.createElement("canvas")).getContext("2d");
+    ctx.font = "600 12px " + getComputedStyle(box).fontFamily;
+    const lastOf = (sr) => { for (let k = n - 1; k >= 0; k--) if (sr.vals[k] != null) return k; return -1; };
+    const ends = o.series.map((sr) => ({ sr, k: lastOf(sr) })).filter((e) => e.k >= 0).map((e) => ({ ...e, text: sr2end(e.sr, e.sr.vals[e.k]) }))
+      .concat((o.refs || []).map((r) => ({ ref: r, text: r.label })));
+    function sr2end(sr, v) { return sr.end ? sr.end(v) : o.yFmt(v) + " " + sr.name; }
+    const need = Math.max(0, ...ends.map((e) => ctx.measureText(e.text).width)) + 16;
+    const m = { t: 12, r: Math.min(need, W * 0.34), b: 26, l: 44 };
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": o.label || "Chart" });
+    svg.style.height = H + "px";
+    const x = (k) => m.l + (k / Math.max(1, n - 1)) * (W - m.l - m.r);
+    const all = o.series.flatMap((sr) => sr.vals.filter((v) => v != null)).concat(o.base != null ? [o.base] : [], (o.refs || []).map((r) => r.v));
+    let lo = o.lo != null ? o.lo : Math.min(...all), hi = o.hi != null ? o.hi : Math.max(...all);
+    if (o.lo == null || o.hi == null) { const pad = (hi - lo) * 0.08 || 5; if (o.lo == null) lo -= pad; if (o.hi == null) hi += pad; }
+    const y = (v) => m.t + (1 - (v - lo) / (hi - lo)) * (H - m.t - m.b);
+    const step = niceStep((hi - lo) / 5);
+    const grid = svgEl("g", { class: "grid" });
+    for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) {
+      grid.appendChild(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v) }));
+      const t = svgEl("text", { x: m.l - 8, y: y(v) + 4, "text-anchor": "end" }); t.textContent = o.yFmt(v); grid.appendChild(t);
+    }
+    svg.appendChild(grid);
+    if (o.base != null) { const b = svgEl("g", { class: "base" }); b.appendChild(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(o.base), y2: y(o.base) })); svg.appendChild(b); }
+    const room = Math.max(1, Math.floor((W - m.l - m.r) / 46));
+    const every = o.thin === false ? 1 : Math.max(1, Math.ceil(n / room));
+    o.keys.forEach((key, k) => {
+      if (o.sep && k && o.sep(key, k)) svg.appendChild(svgEl("line", { x1: x(k), x2: x(k), y1: m.t, y2: H - m.b, stroke: "var(--d-eef0f3-border, #eef0f3)" }));
+      const txt = o.xLabel(key, k, every); if (txt == null) return;
+      const t = svgEl("text", { x: x(k), y: H - 6, "text-anchor": "middle" }); t.textContent = txt; svg.appendChild(t);
+    });
+    (o.refs || []).forEach((r) => svg.appendChild(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(r.v), y2: y(r.v), stroke: r.color, "stroke-width": 1.6, "stroke-dasharray": "5 4" })));
+    const fill = o.series.length <= 2 ? 0.26 : o.series.length <= 4 ? 0.14 : 0.1;
+    const firstLine = svg.lastChild;
+    o.series.forEach((sr) => {
+      const segs = [[]];
+      sr.vals.forEach((v, k) => { if (v == null) { if (segs[segs.length - 1].length) segs.push([]); return; } segs[segs.length - 1].push([x(k), y(v)]); });
+      if (sr.area !== false) segs.forEach((sg) => RadarViz.area(svg, sg, H - m.b, sr.color, fill, firstLine && firstLine.nextSibling));
+      const ln = svgEl("path", { class: "line", stroke: sr.color, d: segs.map((sg) => RadarViz.path(sg)).join("") });
+      if (sr.width) ln.setAttribute("stroke-width", sr.width);
+      svg.appendChild(ln);
+      const k = lastOf(sr); if (k >= 0) svg.appendChild(svgEl("circle", { cx: x(k), cy: y(sr.vals[k]), r: 3.5, fill: sr.color, stroke: "var(--d-fff-border, #fff)", "stroke-width": 2 }));
+    });
+    const lab = ends.map((e) => ({ y: e.ref ? y(e.ref.v) : y(e.sr.vals[e.k]), x: e.ref ? W - m.r : x(e.k), text: e.text })).sort((a, b) => a.y - b.y);
+    for (let k = 1; k < lab.length; k++) if (lab[k].y - lab[k - 1].y < 15) lab[k].y = lab[k - 1].y + 15;
+    lab.forEach((e) => {
+      const t = svgEl("text", { class: "end", x: Math.min(e.x, W - m.r) + 8, y: e.y + 4 });
+      let txt = e.text; while (txt.length > 6 && ctx.measureText(txt).width > m.r - 12) txt = txt.slice(0, -2);
+      t.textContent = txt === e.text ? txt : txt.trimEnd() + "…";
+      const ti = svgEl("title"); ti.textContent = e.text; t.appendChild(ti); svg.appendChild(t);
+    });
+    const xh = svgEl("line", { class: "xh", y1: m.t, y2: H - m.b, visibility: "hidden" }); svg.appendChild(xh);
+    const hit = svgEl("rect", { x: m.l, y: 0, width: W - m.l - m.r, height: H, fill: "transparent" }); svg.appendChild(hit);
+    box.appendChild(svg);
+    const tip = el("div", "tip"); tip.hidden = true; box.appendChild(tip);
+    hit.addEventListener("pointermove", (ev) => {
+      const r = svg.getBoundingClientRect(); const px = ((ev.clientX - r.left) / r.width) * W;
+      const k = Math.max(0, Math.min(n - 1, Math.round(((px - m.l) / (W - m.l - m.r)) * (n - 1))));
+      const rows = o.series.filter((sr) => sr.vals[k] != null);
+      if (!rows.length) { tip.hidden = true; xh.setAttribute("visibility", "hidden"); return; }
+      xh.setAttribute("x1", x(k)); xh.setAttribute("x2", x(k)); xh.setAttribute("visibility", "visible");
+      tip.replaceChildren(el("b", null, o.tipTitle(o.keys[k])));
+      rows.forEach((sr) => { const row = el("div"); const sp = el("span"); const i = el("i"); i.style.background = sr.color; sp.append(i, document.createTextNode(sr.name)); row.append(sp, el("em", null, o.tipVal ? o.tipVal(sr, sr.vals[k]) : o.yFmt(sr.vals[k]))); tip.appendChild(row); });
+      if (o.tipExtra) { const ex = o.tipExtra(k); if (ex) tip.appendChild(ex); }
+      tip.hidden = false;
+      const left = (x(k) / W) * r.width; const tw = tip.offsetWidth;
+      tip.style.left = Math.max(0, Math.min(r.width - tw, left + (left > r.width / 2 ? -tw - 12 : 12))) + "px";
+      tip.style.top = "8px";
+    });
+    hit.addEventListener("pointerleave", () => { tip.hidden = true; xh.setAttribute("visibility", "hidden"); });
   }
   function niceStep(raw) { const p = Math.pow(10, Math.floor(Math.log10(raw || 1))); const f = raw / p; return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p; }
   const trunc = (s, n) => (s.length > n ? s.slice(0, Math.max(4, n - 1)) + "…" : s);
@@ -1058,6 +1094,7 @@
   }
   function renderCost(host) {
     const R = computeCost();
+    const draws = [];
     const sec = el("section", "panel ind-sec");
     const h = el("div", "ind-h"); h.append(el("h3", null, "Tissue cost driver index"), el("span", null, R.base ? fmtMonth(R.base) + " = 100 · period from the side panel" : ""));
     sec.appendChild(h);
@@ -1072,38 +1109,23 @@
       k.appendChild(kp("Price minus cost · " + fmtMonth(lastP.m), (gap > 0 ? "+" : "") + gap.toFixed(1) + " pts", gap >= 0 ? "prices ahead of costs – room for margin" : "costs ahead of prices – margin pressure"));
     }
     sec.appendChild(k);
-    // chart
-    const lg = el("div", "gd-lg");
-    [["#0064aa", "Cost driver index"], ["#33b09c", "Tissue producer price index (EU)"]].forEach(([c, t]) => { const x = el("span"); const i = el("i"); i.style.background = c; x.append(i, document.createTextNode(t)); lg.appendChild(x); });
-    sec.appendChild(lg);
-    const box = el("div", "gd-chart");
-    const Wd = 840, H = 250, L = 44, Rr = 16, T = 10, B = 24;
-    const svg = svgEl("svg", { viewBox: `0 0 ${Wd} ${H}`, role: "img", "aria-label": "Tissue cost driver index vs. tissue price index" });
-    const xs = R.rows.map((r) => r.m);
-    const vals = R.rows.flatMap((r) => [r.idx, r.ppi].filter((v) => v != null)).concat([100]);
-    const span = Math.max(...vals) - Math.min(...vals) || 10;
-    const hi = Math.max(...vals) + span * .1, lo = Math.min(...vals) - span * .1;
-    const x = (n) => L + (n / Math.max(1, xs.length - 1)) * (Wd - L - Rr), y = (v) => T + (1 - (v - lo) / (hi - lo)) * (H - T - B);
-    const step = niceStep((hi - lo) / 4);
-    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) { svg.appendChild(svgEl("line", { x1: L, x2: Wd - Rr, y1: y(v), y2: y(v), stroke: v === 100 ? "var(--d-c9ced6-border, #c9ced6)" : "var(--d-eef0f3-border, #eef0f3)", "stroke-dasharray": v === 100 ? "3 3" : "" })); const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = Math.round(v); svg.appendChild(t); }
-    const firstJan = xs.findIndex((m) => m.endsWith("-01"));
-    xs.forEach((m, n) => { if (m.endsWith("-01") || (n === 0 && (firstJan < 0 || firstJan > 3))) { const t = svgEl("text", { x: x(n), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = n === 0 && !m.endsWith("-01") ? fmtMonth(m) : m.slice(0, 4); svg.appendChild(t); } });
-    // shaded gap between the two lines
-    const both = R.rows.map((r, n) => ({ n, a: r.idx, b: r.ppi })).filter((r) => r.b != null);
-    if (both.length > 1) svg.appendChild(svgEl("path", { d: both.map((r, k) => (k ? "L" : "M") + x(r.n) + " " + y(r.b)).join("") + both.slice().reverse().map((r) => "L" + x(r.n) + " " + y(r.a)).join("") + "Z", fill: "#96d2dc", opacity: .18 }));
-    svg.appendChild(svgEl("path", { d: both.map((r, k) => (k ? "L" : "M") + x(r.n).toFixed(1) + " " + y(r.b).toFixed(1)).join(""), fill: "none", stroke: "var(--d-33b09c-text, #33b09c)", "stroke-width": 2.2, "stroke-linejoin": "round" }));
-    svg.appendChild(svgEl("path", { d: R.rows.map((r, n) => (n ? "L" : "M") + x(n).toFixed(1) + " " + y(r.idx).toFixed(1)).join(""), fill: "none", stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 2.6, "stroke-linejoin": "round" }));
-    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "var(--d-002d55-text, #002d55)", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
-    const tip = el("div", "gd-tip"); tip.hidden = true;
-    svg.addEventListener("pointermove", (ev) => {
-      const rc = svg.getBoundingClientRect(); const px = ((ev.clientX - rc.left) / rc.width) * Wd;
-      const n = Math.max(0, Math.min(xs.length - 1, Math.round(((px - L) / (Wd - L - Rr)) * (xs.length - 1)))); const r = R.rows[n];
-      hl.setAttribute("x1", x(n)); hl.setAttribute("x2", x(n)); hl.setAttribute("opacity", 1);
-      tip.hidden = false; tip.style.left = (x(n) / Wd) * 100 + "%"; tip.style.top = (y(r.idx) / H) * 100 + "%";
-      tip.textContent = fmtMonth(r.m) + ": cost " + r.idx.toFixed(1) + (r.ppi != null ? " · price " + r.ppi.toFixed(1) + " · gap " + (r.ppi - r.idx > 0 ? "+" : "") + (r.ppi - r.idx).toFixed(1) : "");
-    });
-    svg.addEventListener("pointerleave", () => { hl.setAttribute("opacity", 0); tip.hidden = true; });
-    box.append(svg, tip); sec.appendChild(box);
+    // chart (same style as Trends)
+    const box = el("div", "chart ind-chart"); sec.appendChild(box);
+    const MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    draws.push(() => trendChart(box, {
+      label: "Tissue cost driver index vs. tissue price index",
+      keys: R.rows.map((r) => r.m), base: 100,
+      series: [
+        { name: "Cost driver index", color: "#0064aa", vals: R.rows.map((r) => r.idx), end: (v) => Math.round(v) + " Cost index" },
+        { name: "Tissue price index (EU)", color: "#33b09c", vals: R.rows.map((r) => (r.ppi == null ? null : r.ppi)), end: (v) => Math.round(v) + " Tissue price" },
+      ],
+      yFmt: (v) => String(Math.round(v)),
+      sep: (key) => key.endsWith("-01"),
+      xLabel: (key, k, every) => (k % every ? null : (key.endsWith("-01") || k === 0 ? MONS[+key.slice(5, 7) - 1] + " ’" + key.slice(2, 4) : MONS[+key.slice(5, 7) - 1])),
+      tipTitle: (key) => fmtMonth(key),
+      tipVal: (sr, v) => v.toFixed(1),
+      tipExtra: (k) => { const r = R.rows[k]; if (r.ppi == null) return null; const d = el("div"); const g = r.ppi - r.idx; d.append(el("span", null, "Price minus cost"), el("em", null, (g > 0 ? "+" : "") + g.toFixed(1) + " pts")); return d; },
+    }));
     // contributions + weights
     const t = el("table", "gd-yr cost-t"); const hr = el("tr");
     ["Input", "Indicator used", "Weight %", "Change since " + fmtMonth(R.base), "Contribution (index points)"].forEach((x2) => hr.appendChild(el("th", null, x2)));
@@ -1132,12 +1154,14 @@
     sec.appendChild(note);
     const ab = aboutOf(COST.about); if (ab) sec.appendChild(ab);
     host.appendChild(sec);
+    draws.forEach((f) => f());
   }
 
   // ---------- Industry tab ----------
   function srcLink(src) { const a = el("a", null, (src && src.label) || "Source"); if (src && src.url) { a.href = src.url; a.target = "_blank"; a.rel = "noopener"; } return a; }
   function aboutOf(a) { if (!a) return null; return aboutBlock({ about: a, id: "" }); }
   function renderIndustry(host) {
+    const draws = [];
     if (!IND) { host.appendChild(el("div", "empty", "Industry figures are not available yet.")); return; }
     const pct = (v) => (v > 0 ? "+" : v < 0 ? "−" : "±") + Math.abs(v).toFixed(1).replace(".0", "") + " %";
     const kt = (v) => Math.round(v).toLocaleString("en-GB");
@@ -1180,28 +1204,21 @@
       const h = el("div", "ind-h"); h.append(el("h3", null, "Germany · recovered paper utilisation rate by grade"), el("span", null, "% of paper production · yearly " + rr.years[0] + "–" + rr.years[rr.years.length - 1]));
       sec.appendChild(h);
       const COLS = { "Hygiene papers": "#33b09c", "All paper & board": "#335777", "Packaging papers": "#96d2dc", "Graphic papers": "#f4b49f" };
-      const lg = el("div", "gd-lg");
-      Object.keys(rr.series).forEach((n) => { const x = el("span"); const i = el("i"); i.style.background = COLS[n] || "#828282"; x.append(i, document.createTextNode(n)); lg.appendChild(x); });
-      if (rr.wepaRef) { const x = el("span"); const i = el("i"); i.style.background = "repeating-linear-gradient(90deg,#0064aa 0 4px,transparent 4px 7px)"; x.append(i, document.createTextNode(rr.wepaRef.label + " (" + rr.wepaRef.value + " %, " + rr.wepaRef.note + ")")); lg.appendChild(x); }
+      const lg = el("div", "legend ind-lg");
+      Object.keys(rr.series).forEach((nm) => { const x = el("span", "lg"); const i = el("i"); i.style.background = COLS[nm] || "#828282"; x.append(i, el("span", null, nm)); lg.appendChild(x); });
+      if (rr.wepaRef) { const x = el("span", "lg"); const i = el("i"); i.style.background = "repeating-linear-gradient(90deg,#0064aa 0 4px,transparent 4px 7px)"; x.append(i, el("span", null, rr.wepaRef.label + " (" + rr.wepaRef.value + " %, " + rr.wepaRef.note + ")")); lg.appendChild(x); }
       sec.appendChild(lg);
-      const box = el("div", "gd-chart");
-      const W = 840, H = 230, L = 40, R = 140, T = 10, B = 24;
-      const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": rr.label });
-      const ys = rr.years, n = ys.length;
-      const x = (k) => L + (k / (n - 1)) * (W - L - R), y = (v) => T + (1 - v / 120) * (H - T - B);
-      [0, 20, 40, 60, 80, 100, 120].forEach((v) => { svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--d-eef0f3-border, #eef0f3)" })); const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = v + "%"; svg.appendChild(t); });
-      ys.forEach((yr, k) => { if (k % 2 === 0 || k === n - 1) { const t = svgEl("text", { x: x(k), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = yr; svg.appendChild(t); } });
-      if (rr.wepaRef) svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(rr.wepaRef.value), y2: y(rr.wepaRef.value), stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 1.6, "stroke-dasharray": "5 4" }));
-      const ends = [];
-      Object.entries(rr.series).forEach(([name, vals]) => {
-        const c = COLS[name] || "#828282";
-        svg.appendChild(svgEl("path", { d: vals.map((v, k) => (k ? "L" : "M") + x(k).toFixed(1) + " " + y(v).toFixed(1)).join(""), fill: "none", stroke: c, "stroke-width": name === "Hygiene papers" ? 3 : 2, "stroke-linejoin": "round" }));
-        ends.push({ y: y(vals[n - 1]), text: vals[n - 1] + "% " + name });
-      });
-      if (rr.wepaRef) ends.push({ y: y(rr.wepaRef.value), text: rr.wepaRef.value + "% WEPA" });
-      ends.sort((a, b) => a.y - b.y); for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 14) ends[k].y = ends[k - 1].y + 14;
-      ends.forEach((e) => { const t = svgEl("text", { x: W - R + 8, y: e.y + 4, "font-size": 11.5, fill: "var(--d-374151-text, #374151)", "font-weight": 600 }); t.textContent = e.text; svg.appendChild(t); });
-      box.appendChild(svg); sec.appendChild(box);
+      const box = el("div", "chart ind-chart"); sec.appendChild(box);
+      const ys = rr.years;
+      draws.push(() => trendChart(box, {
+        label: rr.label, keys: ys, lo: 0, hi: 120,
+        series: Object.entries(rr.series).map(([nm, vals]) => ({ name: nm, color: COLS[nm] || "#828282", vals, width: nm === "Hygiene papers" ? 2.6 : null, end: (v) => v + "% " + nm })),
+        refs: rr.wepaRef ? [{ v: rr.wepaRef.value, label: rr.wepaRef.value + "% WEPA", color: "var(--d-0064aa-text, #0064aa)" }] : [],
+        yFmt: (v) => Math.round(v) + "%",
+        xLabel: (key, k) => (k % 2 === 0 || k === ys.length - 1 ? String(key) : null), thin: false,
+        tipTitle: (key) => String(key),
+        tipVal: (sr, v) => v + " %",
+      }));
       const ab = aboutOf(rr.about); if (ab) sec.appendChild(ab);
       const f = el("p", "ind-src"); f.append("Source: ", srcLink(rr.source)); sec.appendChild(f);
       host.appendChild(sec);
@@ -1219,6 +1236,7 @@
       const f = el("p", "ind-src"); f.append("Source: ", srcLink(eu.source)); sec.appendChild(f);
       host.appendChild(sec);
     }
+    draws.forEach((f) => f());
   }
   function buildTabs() {
     TABS = [{ id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "industry" ? !!IND : t.id === "cost" ? !!COST : t.groups.some((g) => M.groups[g])))];
@@ -1358,19 +1376,16 @@
     renderTabs(); if (state.tab === "cmp") renderChart(); renderCmpTiles(); renderTiles(); writeHash();
   }
 
-  $("reg-cb").checked = showReg;
-  $("reg-cb").addEventListener("change", () => { showReg = $("reg-cb").checked; try { localStorage.setItem("radar.trendsReg", showReg ? "1" : "0"); } catch (e) {} renderAll(); });
   $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });
-  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); }, 120); });
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry") renderTiles(); }, 120); });
 
   Promise.all([
     fetch("data/market.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
     fetch("data/peer_emissions.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("config/market.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/industry.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    fetch("data/roadmap.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-  ]).then(([data, ets, cfg, ind, roadmap]) => {
-    M = data; ETS = ets; IND = ind; REG_EVENTS = regEvents(roadmap);
+  ]).then(([data, ets, cfg, ind]) => {
+    M = data; ETS = ets; IND = ind;
     if (cfg) { (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; }); GRID_ABOUT = cfg.gridAbout || null; COST = cfg.costIndex || null; }
     $("meta").textContent = data.updated ? "Updated " + fmtDay(data.updated) : "Not collected yet";
     side = RadarSide.build($("side"), {
@@ -1400,7 +1415,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261105j" defer></script>
-<script src="assets/guide.js?v=20261105j" defer></script>
+<script src="assets/search.js?v=20261106b" defer></script>
+<script src="assets/guide.js?v=20261106b" defer></script>
 </body>
 </html>

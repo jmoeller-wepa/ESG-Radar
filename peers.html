@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261105j"></script>
+<script src="assets/theme.js?v=20261106b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261105j">
+<link rel="stylesheet" href="assets/side.css?v=20261106b">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -71,9 +71,14 @@
   tr.us td.co b { color: var(--wepa); }
   .peers-legend .sw, .legend .sw { display: inline-flex; align-items: center; gap: 6px; }
   .peers-legend .sw i, .legend .sw i { width: 14px; height: 14px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .06); }
-  .compact #tbl td { padding-top: 5px; padding-bottom: 5px; }
-  .compact #tbl .yr { display: none; }
-  .compact #tbl .v { max-width: 210px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; vertical-align: middle; }
+  /* Compact view: one short line per value (e.g. "Validated", "−52.5% by 2030", "2040"), no year line, no country, tighter rows.
+     The full text stays in the hover text and in the profile. */
+  #tbl .t-short { display: none; }
+  .compact #tbl .t-short { display: inline; }
+  .compact #tbl .t-full { display: none; }
+  .compact #tbl td { padding-top: 4px; padding-bottom: 4px; }
+  .compact #tbl .yr, .compact #tbl td.co small { display: none; }
+  .compact #tbl .v { max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block; vertical-align: middle; }
   .lead-row { display: flex; align-items: center; gap: 10px 16px; flex-wrap: wrap; }
   .lead-row .tab-lead { flex: 1; margin: 0; }
   .tgl { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); cursor: pointer; user-select: none; }
@@ -218,9 +223,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
-<script src="assets/status.js?v=20261105j" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261105j">
-<script src="assets/colresize.js?v=20261105j" defer></script>
+<script src="assets/status.js?v=20261106b" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261106b">
+<script src="assets/colresize.js?v=20261106b" defer></script>
 </head>
 <body>
 <header>
@@ -302,7 +307,7 @@
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261105j"></script>
+<script src="assets/side.js?v=20261106b"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
@@ -429,6 +434,15 @@
     return String(cell.v);
   }
 
+  // Short form for the compact table: first part only, no brackets; targets as "−52.5% by 2030"
+  function shorten(t) {
+    t = String(t || "");
+    const tg = t.match(/^([−-]?\s?[\d.,]+\s?%)(?:\/t)?.*?\bby (20\d\d)/);
+    if (tg) return tg[1].replace(/\s/g, "") + " by " + tg[2];
+    let s = t.split(" · ")[0].replace(/\s*\([^)]*\)?/g, "").trim();
+    return s || t;
+  }
+
   function valueNode(key, cell, rating, withYear) {
     const def = P.kpis[key];
     const frag = document.createDocumentFragment();
@@ -439,8 +453,11 @@
     // table: numbers stay short ("33.8%", "−52.5%"); the full description goes into the hover text and the profile
     if (withYear && cell.d && typeof cell.v === "number" && def.unit === "%") text = cell.v + "%";
     const cls = def.kind === "text" ? "v plain" : "v " + (rating || "mid");
-    const node = cell.src ? el("a", cls, text) : el("span", cls, text);
-    if (cell.src) { node.href = cell.src; node.target = "_blank"; node.rel = "noopener"; node.title = (cell.d && text !== cell.d ? cell.d + "\n" : "") + (cell.note ? cell.note + "\n" : "") + "Source" + (cell.y ? " · " + cell.y : "") + " – opens in a new tab"; }
+    const node = cell.src ? el("a", cls) : el("span", cls);
+    const short = withYear ? shorten(text) : text;
+    if (short !== text) { node.append(el("span", "t-full", text), el("span", "t-short", short)); if (!cell.src && !cell.note) node.title = text; }
+    else node.textContent = text;
+    if (cell.src) { node.href = cell.src; node.target = "_blank"; node.rel = "noopener"; node.title = (cell.d && text !== cell.d ? cell.d + "\n" : short !== text ? text + "\n" : "") + (cell.note ? cell.note + "\n" : "") + "Source" + (cell.y ? " · " + cell.y : "") + " – opens in a new tab"; }
     else if (cell.note) node.title = cell.note;
     frag.appendChild(node);
     // Trend vs. previous value (history is filled by the yearly update)
@@ -764,7 +781,7 @@
   }
 })();
 </script>
-<script src="assets/search.js?v=20261105j" defer></script>
-<script src="assets/guide.js?v=20261105j" defer></script>
+<script src="assets/search.js?v=20261106b" defer></script>
+<script src="assets/guide.js?v=20261106b" defer></script>
 </body>
 </html>

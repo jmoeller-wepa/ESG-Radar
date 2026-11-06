@@ -1,5 +1,5 @@
 /* "How to read this page": a "?" button in the header opens a side drawer with a short, page-specific guide.
-   On the first visit of each page a small hint points to the button (remembered per browser). */
+ */
 (function () {
   const page = (location.pathname.split("/").pop() || "index.html").replace(".html", "") || "index";
   const G = {
@@ -18,7 +18,7 @@
       title: "News",
       intro: "News from ESG, regulation, AI & data sources and from our peers, grouped by month.",
       items: [
-        ["Filters", "Choose one or more areas, a type (news, regulation, tools, peer news) and a topic such as capacity, deals or products. Filters are kept in the link, so you can share a filtered view."],
+        ["Filters", "Choose one or more areas in the side panel. Above the cards, “What it is” picks the kind of item (regulation, tools, best practice, peer news – peer news also by topic such as capacity or deals) and “Affects us” what it touches at WEPA. Filters are kept in the link, so you can share a filtered view."],
         ["Filter & search", "The box above the cards filters this page. The Search button in the header (Ctrl K) searches all pages at once."],
         ["Open a card", "Click a card for the full summary, why it matters for WEPA, the source and related entries."],
         ["Deadlines & coming next", "The side panel lists upcoming regulation deadlines. In the Data & AI area, “Coming next” shows planned Microsoft Fabric / Power BI features by quarter."],
@@ -52,7 +52,7 @@
       title: "Market",
       intro: "Prices and statistics for the main cost drivers of tissue: fibre, recovered paper, energy, CO₂ and packaging.",
       items: [
-        ["Trends", "Pick indicators on the left. Up to 6 are shown in one chart as an index (start = 100); with more, each gets its own small chart. Switch between years, quarters and months above the chart. The purple diamonds on the time axis mark regulation milestones – hover them for the name."],
+        ["Trends", "Pick indicators on the left. Up to 6 are shown in one chart as an index (start = 100); with more, each gets its own small chart. Switch between years, quarters and months above the chart."],
         ["Indicator details", "Click the name of an indicator for what it measures, what it does and does not tell you, and the source."],
         ["Cost index", "A weighted index of tissue input costs compared with the tissue producer price. You can change the weights – they are saved in your browser only."],
         ["Industry", "Production and recovered-paper figures for Germany (Die Papierindustrie, UBA) and Europe (Cepi)."],
@@ -110,13 +110,5 @@
   dlg.querySelector(".ui-x").addEventListener("click", () => dlg.close());
   dlg.addEventListener("click", (ev) => { if (ev.target === dlg) dlg.close(); });
 
-  let isSeen = false; try { isSeen = !!localStorage.getItem(KEY); } catch (e) { isSeen = true; }
-  if (!isSeen) {
-    tip = document.createElement("div"); tip.className = "hg-tip"; tip.setAttribute("role", "note");
-    tip.innerHTML = "<b>New on this page?</b>A one-minute guide explains what you see here.<br>";
-    const ok = document.createElement("button"); ok.type = "button"; ok.textContent = "Got it";
-    ok.addEventListener("click", (ev) => { ev.stopPropagation(); tip.remove(); tip = null; seen(); });
-    tip.appendChild(ok); btn.appendChild(tip);
-    tip.addEventListener("click", (ev) => { if (ev.target !== ok) { ev.stopPropagation(); open(); } });
-  }
+  // No automatic hint any more: the guide opens only when the "?" button is clicked.
 })();
