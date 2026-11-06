@@ -1052,26 +1052,33 @@
       "label": "Producer prices · pulp, Germany",
       "unit": "index",
       "source": "destatis",
-      "table": "61241-0004",
+      "table": "61241-*",
       "filter": {
-        "var": "GP2019|Güterverzeichnis|Güter",
+        "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
+          "^GP19-1711$",
           "^Holz- und Zellstoff$",
-          "^Zellstoff",
-          "Holz- und Zellstoff"
+          "Holz.*Zellstoff",
+          "^Zellstoff"
         ]
       },
       "unit_match": "=100",
       "good": "down",
       "freq": "monthly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241",
       "short": "German producer prices for pulp; a domestic check on the import prices.",
       "about": {
         "what": "Destatis producer price index for pulp sold by German producers (GP 17.11, 2021 = 100), monthly.",
         "wepa": "A German view on fresh-fibre costs next to the EU import prices in €/t.",
         "limits": "Few German producers sell market pulp, so the index can be volatile; it is an index, not a price level."
-      }
+      },
+      "tableMatch": [
+        "Monate.*9-Steller",
+        "Monate.*Sonderpos",
+        "Monate.*(6-Steller|5-Steller|4-Steller)",
+        "Monate"
+      ]
     },
     {
       "id": "de_ppi_tissue",
@@ -1082,26 +1089,32 @@
       "label": "Producer prices · household & sanitary paper, Germany",
       "unit": "index",
       "source": "destatis",
-      "table": "61241-0004",
+      "table": "61241-*",
       "filter": {
-        "var": "GP2019|Güterverzeichnis|Güter",
+        "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
+          "^GP19-1722$",
           "^Haushalts-, Hygiene- und Toilettenartikel",
-          "Haushalts-.*Hygiene",
-          "Toilettenpapier"
+          "Haushalt.*Hygiene|Hygiene.*Toilett"
         ]
       },
       "unit_match": "=100",
       "good": "up",
       "freq": "monthly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241",
       "short": "What German producers get for household and sanitary paper.",
       "about": {
         "what": "Destatis producer price index for household, hygiene and toilet articles of paper (GP 17.22, 2021 = 100), sold in Germany, monthly.",
         "wepa": "The German counterpart of the EU tissue price index: shows whether price increases reach the home market.",
         "limits": "Includes other hygiene paper articles; not WEPA's own prices and not shelf prices."
-      }
+      },
+      "tableMatch": [
+        "Monate.*9-Steller",
+        "Monate.*Sonderpos",
+        "Monate.*(6-Steller|5-Steller|4-Steller)",
+        "Monate"
+      ]
     },
     {
       "id": "de_ppi_gas",
@@ -1112,25 +1125,32 @@
       "label": "Producer prices · natural gas for industry, Germany",
       "unit": "index",
       "source": "destatis",
-      "table": "61241-0004",
+      "table": "61241-*",
       "filter": {
-        "var": "GP2019|Güterverzeichnis|Güter",
+        "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
-          "Erdgas, bei Abgabe an die Industrie",
-          "Erdgas.*Industrie"
+          "Erdgas,? bei Abgabe an (die )?Industrie",
+          "Erdgas.*Industrie",
+          "Erdgas.*Ind\\b|Erdgas.*Ind\\."
         ]
       },
       "unit_match": "=100",
       "good": "down",
       "freq": "monthly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241",
       "short": "Gas price German industry pays, monthly; drives hood and CHP costs.",
       "about": {
         "what": "Destatis producer price index for natural gas supplied to industry (2021 = 100), monthly.",
         "wepa": "More current than the half-yearly gas bill figures and closer to German contract prices than TTF.",
         "limits": "An average over contract types and sizes; it does not include WEPA's own hedging."
-      }
+      },
+      "tableMatch": [
+        "Monate.*9-Steller",
+        "Monate.*Sonderpos",
+        "Monate.*(6-Steller|5-Steller|4-Steller)",
+        "Monate"
+      ]
     },
     {
       "id": "de_ppi_power",
@@ -1141,26 +1161,32 @@
       "label": "Producer prices · electricity for special-contract customers, Germany",
       "unit": "index",
       "source": "destatis",
-      "table": "61241-0004",
+      "table": "61241-*",
       "filter": {
-        "var": "GP2019|Güterverzeichnis|Güter",
+        "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
-          "Elektrischer Strom, bei Abgabe an Sondervertragskunden",
-          "Strom.*Sondervertrag",
+          "Elektrischer Strom,? bei Abgabe an Sondervertragskunden",
+          "Strom.*Sondervertr",
           "Strom.*Industrie"
         ]
       },
       "unit_match": "=100",
       "good": "down",
       "freq": "monthly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241",
       "short": "Electricity price for German industrial customers on special contracts, monthly.",
       "about": {
         "what": "Destatis producer price index for electricity supplied to special-contract customers (mainly industry, 2021 = 100), monthly.",
         "wepa": "Shows how fast wholesale price moves reach industrial contracts like those of WEPA's German mills.",
         "limits": "An average over contracts; levies, grid charges and relief schemes differ by site."
-      }
+      },
+      "tableMatch": [
+        "Monate.*9-Steller",
+        "Monate.*Sonderpos",
+        "Monate.*(6-Steller|5-Steller|4-Steller)",
+        "Monate"
+      ]
     },
     {
       "id": "de_ppi_diesel",
@@ -1171,27 +1197,33 @@
       "label": "Producer prices · diesel fuel, Germany",
       "unit": "index",
       "source": "destatis",
-      "table": "61241-0004",
+      "table": "61241-*",
       "filter": {
-        "var": "GP2019|Güterverzeichnis|Güter",
+        "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
+          "^Dieselkraftstoff$",
           "^Dieselkraftstoff",
-          "Dieselkraftstoff",
-          "Diesel"
+          "Dieselkraftstoff|Diesel"
         ]
       },
       "unit_match": "=100",
       "good": "down",
       "freq": "monthly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241",
       "short": "Diesel price behind truck freight for raw materials and finished goods.",
       "about": {
         "what": "Destatis producer price index for diesel fuel (2021 = 100), monthly.",
         "wepa": "A cost signal for inbound and outbound truck freight, a large share of logistics costs for bulky tissue.",
         "limits": "Fuel only; tolls, driver wages and capacity also drive freight rates."
       },
-      "glance": true
+      "glance": true,
+      "tableMatch": [
+        "Monate.*9-Steller",
+        "Monate.*Sonderpos",
+        "Monate.*(6-Steller|5-Steller|4-Steller)",
+        "Monate"
+      ]
     },
     {
       "id": "de_labour_paper",
@@ -1199,17 +1231,17 @@
       "areas": [
         "people"
       ],
-      "label": "Labour cost index · paper industry, Germany",
+      "label": "Labour cost index · manufacturing, Germany",
       "unit": "index",
       "source": "destatis",
       "table": "62421-*",
       "tableMatch": "Quartal",
       "filter": {
-        "var": "WZ|Wirtschaftszweig",
+        "var": "WZ|Wirtschaftszweig|Wirtschaftsbereich",
         "values": [
-          "^Herstellung von Papier, Pappe und Waren daraus$",
-          "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17$",
+          "^WZ08-C$",
+          "^Verarbeitendes Gewerbe$"
         ]
       },
       "match": [
@@ -1223,11 +1255,11 @@
       "freq": "quarterly",
       "attribution": "Destatis (Statistisches Bundesamt), GENESIS 62421, dl-de/by-2-0",
       "link": "https://www-genesis.destatis.de/datenbank/online/statistic/62421",
-      "short": "Labour cost trend in the German paper industry, the main cost not set by markets.",
+      "short": "Labour cost trend in German manufacturing, the main cost not set by markets.",
       "about": {
-        "what": "Destatis labour cost index per hour worked for the manufacture of paper and paper products (WZ 17, 2020 = 100), quarterly.",
-        "wepa": "Wages and social costs are a large part of a tissue mill's cost base. This shows the industry trend WEPA's wage rounds follow.",
-        "limits": "Industry average, not WEPA's wage agreements; published about three months after the quarter."
+        "what": "Destatis labour cost index per hour worked in German manufacturing (WZ section C, 2020 = 100), calendar and seasonally adjusted, quarterly. Destatis does not publish this index for the paper industry alone.",
+        "wepa": "Wages and social costs are a large part of a tissue mill's cost base. This shows the manufacturing trend that wage rounds in the paper industry broadly follow.",
+        "limits": "All of manufacturing, not paper alone, and not WEPA's wage agreements; published about three months after the quarter."
       },
       "glance": true
     },
@@ -1241,13 +1273,19 @@
       "unit": "index",
       "source": "destatis",
       "table": "42153-*",
-      "tableMatch": "Monat",
+      "tableMatch": [
+        "Monate.*2-/3-/4-Steller\\)",
+        "Monate.*Steller",
+        "Monat"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "match": [
@@ -1278,12 +1316,16 @@
       "unit": "index",
       "source": "destatis",
       "table": "45212-*",
-      "tableMatch": "Monat",
+      "tableMatch": [
+        "Umsatzindex.*Monate, Preisarten, Original",
+        "Umsatzindex.*Monate"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
-          "Drogerie",
-          "47\\.75"
+          "^WZ08-4775$",
+          "kosmet",
+          "Drogerie"
         ]
       },
       "match": [
@@ -1302,7 +1344,8 @@
         "wepa": "A demand signal for consumer tissue in one of its main channels in Germany.",
         "limits": "All drugstore goods, not tissue alone; online and discounter sales of tissue are partly elsewhere."
       },
-      "glance": true
+      "glance": true,
+      "valueLabel": "Umsatz"
     },
     {
       "id": "de_retail_food",
@@ -1314,13 +1357,16 @@
       "unit": "index",
       "source": "destatis",
       "table": "45212-*",
-      "tableMatch": "Monat",
+      "tableMatch": [
+        "Umsatzindex.*Monate, Preisarten, Original",
+        "Umsatzindex.*Monate"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
-          "Hauptrichtung Nahrungs",
-          "47\\.11",
-          "Lebensmittel"
+          "^WZ08-4711$",
+          "Hauptr(ichtung|\\.)? Nahrungs",
+          "Waren versch.*Nahrung"
         ]
       },
       "match": [
@@ -1339,7 +1385,8 @@
         "wepa": "Together with drugstores, the main channel for consumer tissue, private labels included.",
         "limits": "All goods, not tissue alone."
       },
-      "glance": true
+      "glance": true,
+      "valueLabel": "Umsatz"
     },
     {
       "id": "de_imp_tissue",
@@ -1679,16 +1726,21 @@
       "source": "destatis",
       "table": "43531-*",
       "match": [
-        "insgesamt"
+        "^Deutschland · Insgesamt · [^·|]+ · Insgesamt\\b"
       ],
       "sum": false,
-      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "tableMatch": [
+        "Energieverbrauch.*Energieträger",
+        "Jahr.*(WZ|Wirtschaftszweig)"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "freq": "yearly",
@@ -1701,7 +1753,8 @@
         "limits": "All paper grades; yearly, about a year after the reporting year."
       },
       "stack": "energy",
-      "esrs": "ESRS E1"
+      "esrs": "ESRS E1",
+      "toUnit": "TJ"
     },
     {
       "id": "prof_energy_gas",
@@ -1714,16 +1767,21 @@
       "source": "destatis",
       "table": "43531-*",
       "match": [
-        "Erdgas"
+        "^Deutschland · Insgesamt · [^·|]+ · Erdgas"
       ],
       "sum": false,
-      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "tableMatch": [
+        "Energieverbrauch.*Energieträger",
+        "Jahr.*(WZ|Wirtschaftszweig)"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "freq": "yearly",
@@ -1736,7 +1794,8 @@
         "limits": "All paper grades; yearly, about a year after the reporting year."
       },
       "stack": "energy",
-      "esrs": "ESRS E1"
+      "esrs": "ESRS E1",
+      "toUnit": "TJ"
     },
     {
       "id": "prof_energy_power",
@@ -1749,16 +1808,21 @@
       "source": "destatis",
       "table": "43531-*",
       "match": [
-        "\\bStrom\\b"
+        "^Deutschland · Insgesamt · [^·|]+ · Strom"
       ],
       "sum": false,
-      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "tableMatch": [
+        "Energieverbrauch.*Energieträger",
+        "Jahr.*(WZ|Wirtschaftszweig)"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "freq": "yearly",
@@ -1771,7 +1835,8 @@
         "limits": "All paper grades; yearly, about a year after the reporting year."
       },
       "stack": "energy",
-      "esrs": "ESRS E1"
+      "esrs": "ESRS E1",
+      "toUnit": "TJ"
     },
     {
       "id": "prof_energy_coal",
@@ -1784,16 +1849,21 @@
       "source": "destatis",
       "table": "43531-*",
       "match": [
-        "Steinkohle|Braunkohle"
+        "^Deutschland · Insgesamt · [^·|]+ · (Steinkohle|Braunkohle|Staub- und Trockenkohle|Sonstige Steinkohle)"
       ],
       "sum": true,
-      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "tableMatch": [
+        "Energieverbrauch.*Energieträger",
+        "Jahr.*(WZ|Wirtschaftszweig)"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "freq": "yearly",
@@ -1806,7 +1876,8 @@
         "limits": "All paper grades; yearly, about a year after the reporting year."
       },
       "stack": "energy",
-      "esrs": "ESRS E1"
+      "esrs": "ESRS E1",
+      "toUnit": "TJ"
     },
     {
       "id": "prof_energy_oil",
@@ -1819,16 +1890,21 @@
       "source": "destatis",
       "table": "43531-*",
       "match": [
-        "Heizöl|Mineralöl"
+        "^Deutschland · Insgesamt · [^·|]+ · Heizöl"
       ],
       "sum": true,
-      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "tableMatch": [
+        "Energieverbrauch.*Energieträger",
+        "Jahr.*(WZ|Wirtschaftszweig)"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "freq": "yearly",
@@ -1841,7 +1917,8 @@
         "limits": "All paper grades; yearly, about a year after the reporting year."
       },
       "stack": "energy",
-      "esrs": "ESRS E1"
+      "esrs": "ESRS E1",
+      "toUnit": "TJ"
     },
     {
       "id": "prof_energy_renew",
@@ -1854,16 +1931,21 @@
       "source": "destatis",
       "table": "43531-*",
       "match": [
-        "Erneuerbar|Biomasse|Biogas|Holz|Klärschlamm"
+        "^Deutschland · Insgesamt · [^·|]+ · (Biogas|Feste biogene|Klärgas|Wärmepumpen|Deponiegas)"
       ],
       "sum": true,
-      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "tableMatch": [
+        "Energieverbrauch.*Energieträger",
+        "Jahr.*(WZ|Wirtschaftszweig)"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "freq": "yearly",
@@ -1876,7 +1958,8 @@
         "limits": "All paper grades; yearly, about a year after the reporting year."
       },
       "stack": "energy",
-      "esrs": "ESRS E1"
+      "esrs": "ESRS E1",
+      "toUnit": "TJ"
     },
     {
       "id": "prof_water",
@@ -1887,14 +1970,19 @@
       "label": "Water use, paper industry",
       "unit": "million m³",
       "source": "destatis",
-      "table": "32221-*",
-      "tableMatch": "Wirtschaftszweig|WZ",
+      "table": "322*",
+      "tableMatch": [
+        "(Wassereinsatz|Wasseraufkommen|Frischwasser).*Wirtschaftszweig",
+        "Wasser.*Wirtschaftszweig"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "match": [
@@ -1905,14 +1993,15 @@
       ],
       "esrs": "ESRS E3",
       "freq": "yearly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 32221, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32221",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 322xx, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32211",
       "short": "Tissue mills are water-intensive: a benchmark for WEPA's water intake.",
       "about": {
         "what": "Water used by German paper mills (WZ 17), from the Destatis survey of non-public water supply (every three years).",
         "wepa": "A yardstick for WEPA's own water intake, for ESRS E3 texts and customer questionnaires.",
         "limits": "Every three years only; all paper grades; the unit follows the Destatis table."
-      }
+      },
+      "toUnit": "million m³"
     },
     {
       "id": "prof_waste",
@@ -1923,31 +2012,38 @@
       "label": "Waste generated, paper industry",
       "unit": "kt",
       "source": "destatis",
-      "table": "321*",
-      "tableMatch": "Abfall.*(Wirtschaftszweig|WZ)|(Wirtschaftszweig|WZ).*Abfall",
+      "table": "32161-*",
+      "tableMatch": [
+        "erzeugte Abfallmenge.*Jahre, Wirtschaftszweige$",
+        "erzeugte Abfallmenge.*Wirtschaftszweig"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-",
+          "Papier"
         ]
       },
       "match": [
         "insgesamt",
         "."
       ],
-      "scale": 0.001,
       "esrs": "ESRS E5",
       "freq": "yearly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 321*, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/321*",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 32161, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32161",
       "short": "Sludge, rejects and ash: context for WEPA's landfill and recycling targets.",
       "about": {
         "what": "Waste generated by German paper mills (WZ 17), from Destatis waste statistics (yearly).",
         "wepa": "Context for WEPA's targets on landfill and recycling of mill residues, for ESRS E5.",
         "limits": "Yearly with a long delay; definitions follow the waste statistics."
-      }
+      },
+      "valueLabel": "Abfallmenge",
+      "toUnit": "kt"
     },
     {
       "id": "prof_envinv",
@@ -1959,20 +2055,24 @@
       "unit": "€ m",
       "source": "destatis",
       "table": "32511-*",
-      "tableMatch": "Wirtschaftszweig|WZ",
+      "tableMatch": [
+        "Jahre, Art der Investition, Wirtschaftszweige",
+        "Investitionen.*Jahre, (?!.*bis 20).*Wirtschaftszweig"
+      ],
       "filter": {
         "var": "WZ|Wirtschaftszweig",
         "values": [
+          "^WZ08-17$",
           "^Herstellung von Papier, Pappe und Waren daraus$",
+          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
           "Herstellung von Papier",
-          "^C?17$|WZ08-17$"
+          "^WZ08-17-"
         ]
       },
       "match": [
-        "Umweltbereiche insgesamt|insgesamt",
+        "insgesamt",
         "."
       ],
-      "scale": 0.001,
       "esrs": "ESRS E1 · E3",
       "freq": "yearly",
       "attribution": "Destatis (Statistisches Bundesamt), GENESIS 32511, dl-de/by-2-0",
@@ -1982,7 +2082,9 @@
         "what": "Investment of German paper mills (WZ 17) in environmental protection, all environmental areas, from Destatis (yearly).",
         "wepa": "A benchmark for WEPA's own environmental capex in reports and customer talks.",
         "limits": "Yearly; only investments reported as environmental protection."
-      }
+      },
+      "valueLabel": "^Investitionen",
+      "toUnit": "€ m"
     }
   ],
   "gridNote": "Countries with WEPA sites. 'isUs' marks them in the table; the EU average is the reference line. Edit the list freely (area = ISO 3 code from the Ember file, or 'EU').",
@@ -2041,7 +2143,7 @@
       },
       {
         "key": "labour",
-        "label": "Labour (paper industry)",
+        "label": "Labour (manufacturing)",
         "weight": 15,
         "ids": [
           "de_labour_paper"

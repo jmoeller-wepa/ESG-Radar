@@ -322,7 +322,7 @@ def comext(ind):
 GENESIS = "https://genesis.destatis.de/genesisWS/rest/2020/"
 DESTATIS_DEBUG = ROOT / "data" / "debug" / "destatis.json"
 DESTATIS_BUDGET = 900      # seconds for all GENESIS calls of one run; later Destatis indicators keep their old values
-_destatis = {"tables": {}, "debug": {}, "meta": {}, "values": {}, "resolved": {}, "t0": None}
+_destatis = {"tables": {}, "debug": {}, "meta": {}, "values": {}, "resolved": {}, "catalogue": {}, "t0": None}
 _PERIOD = re.compile(r"(MONAT|QUART|HALBJ|HJAHR)\D*(\d{1,2})$")
 
 
@@ -384,23 +384,30 @@ def _flat(s):
     return re.sub(r"\s+", " ", s or "").strip()
 
 
-def _resolve_table(ind):
-    """'62421-*' + 'tableMatch' -> the first table of that statistic whose title matches (catalogue/tables)."""
+def _resolve_tables(ind):
+    """'62421-*' + 'tableMatch' -> candidate tables of that statistic whose title matches (catalogue/tables).
+    tableMatch may be a list of regexes in priority order; the collector tries the candidates in turn."""
     name = ind["table"]
     if "*" not in name:
-        return name
-    key = name + "|" + ind.get("tableMatch", "")
+        return [name]
+    pats = ind.get("tableMatch", ".")
+    pats = [pats] if isinstance(pats, str) else list(pats)
+    key = name + "|" + "|".join(pats)
     if key in _destatis["resolved"]:
         return _destatis["resolved"][key]
-    info = _genesis_json("catalogue/tables", {"selection": name, "area": "all", "pagelength": "100"})
-    tables = [{"code": t.get("Code"), "content": _flat(t.get("Content"))} for t in (info.get("List") or [])]
-    _destatis["debug"].setdefault("catalogue", {})[name] = tables[:40]
-    pat = re.compile(ind.get("tableMatch", "."), re.I)
-    hit = next((t["code"] for t in tables if pat.search(t["content"])), None)
-    if not hit:
-        raise RuntimeError(f"no table {name} matches '{ind.get('tableMatch')}' – see data/debug/destatis.json (catalogue)")
-    _destatis["resolved"][key] = hit
-    return hit
+    if name not in _destatis["catalogue"]:
+        info = _genesis_json("catalogue/tables", {"selection": name, "area": "all", "pagelength": "200"})
+        _destatis["catalogue"][name] = [{"code": t.get("Code"), "content": _flat(t.get("Content"))} for t in (info.get("List") or [])]
+        _destatis["debug"].setdefault("catalogue", {})[name] = _destatis["catalogue"][name][:60]
+    tables = _destatis["catalogue"][name]
+    hits = []
+    for p in pats:
+        rx = re.compile(p, re.I)
+        hits += [t["code"] for t in tables if rx.search(t["content"]) and t["code"] not in hits]
+    if not hits:
+        raise RuntimeError(f"no table {name} matches {pats} – see data/debug/destatis.json (catalogue)")
+    _destatis["resolved"][key] = hits
+    return hits
 
 
 def _variables(table):
@@ -438,38 +445,66 @@ def _values(var):
 
 def _classify(ind, table, dbg):
     """'filter': {'var': regex, 'values': [regex, …], 'multi': bool} -> GENESIS classifying parameters.
-    Each value regex is tried in order against code and name; the shortest (most aggregated) code wins,
-    or all hits when 'multi' is set (e.g. several CN codes that are summed afterwards)."""
+    Every variable of the table that matches 'var' is tried in turn (a table can have e.g. GP 2-Steller and
+    9-Steller lists). Each value regex is tried in order against code and name; the shortest (most aggregated)
+    code wins, or all hits when 'multi' is set (e.g. several CN codes that are summed afterwards)."""
     f = ind.get("filter")
     if not f:
         return {}
-    var = f.get("code")
-    if not var:
+    if f.get("code"):
+        cands = [f["code"]]
+    else:
         vp = re.compile(f["var"], re.I)
-        cands = [v for v in _variables(table) if vp.search(v["content"]) or vp.search(v["code"])]
+        cands = [v["code"] for v in _variables(table) if vp.search(v["content"]) or vp.search(v["code"])]
         if not cands:
             raise RuntimeError(f"no variable matches '{f['var']}' in {table} – see data/debug/destatis.json (variables)")
-        var = cands[0]["code"]
-    keys = f.get("keys")
+    keys, var = f.get("keys"), cands[0]
     if not keys:
-        vals = _values(var)
-        dbg["valueCount"] = len(vals)
         hits = []
-        for p in f.get("values", []):
-            rx = re.compile(p, re.I)
-            hits = [v for v in vals if rx.search(v["content"]) or rx.search(v["code"])]
+        for var in cands:
+            vals = _values(var)
+            for p in f.get("values", []):
+                rx = re.compile(p, re.I)
+                hits = [v for v in vals if rx.search(v["content"]) or rx.search(v["code"])]
+                if hits:
+                    break
             if hits:
+                dbg["valueCount"] = len(vals)
                 break
+            dbg.setdefault("valueSample", {})[var] = vals[:40]
         if not hits:
-            dbg["valueSample"] = vals[:25]
-            raise RuntimeError(f"no value of {var} matches {f.get('values')} – see data/debug/destatis.json")
+            raise RuntimeError(f"no value of {', '.join(cands)} in {table} matches {f.get('values')} – see data/debug/destatis.json")
         hits.sort(key=lambda v: (len(v["code"]), v["code"]))
         if not f.get("multi"):
             hits = hits[:1]
         keys = [v["code"] for v in hits[:40]]
         dbg["values"] = hits[:40]
+        dbg.pop("valueSample", None)
     dbg["classify"] = {"var": var, "keys": keys}
     return {"classifyingvariable1": var, "classifyingkey1": ",".join(keys)}
+
+
+_UNIT_BASE = {"TJ": ("J", 1e12), "kt": ("t", 1e3), "€ m": ("EUR", 1e6), "million m³": ("m3", 1e6)}
+
+
+def _unit_factor(unit, target):
+    """Factor that converts a GENESIS value unit (e.g. 'GJ', 'Tsd. t', '1000 EUR', 'Mill. cbm') into target."""
+    if target not in _UNIT_BASE:
+        return 1.0
+    base, tsize = _UNIT_BASE[target]
+    u = (unit or "").strip().replace("€", "EUR").replace("m³", "m3").replace("cbm", "m3").replace("Kubikmeter", "m3")
+    mult = 1.0
+    m = re.match(r"(1\.?000\.?000|1\.?000|Tsd\.?|Mill\.?|Mio\.?|Mrd\.?)\s*", u, re.I)
+    if m:
+        mult = {"1000": 1e3, "1.000": 1e3, "tsd": 1e3, "1000000": 1e6, "1.000.000": 1e6, "mill": 1e6, "mio": 1e6, "mrd": 1e9}[m.group(1).lower().rstrip(".")]
+        u = u[m.end():]
+    pre = {"k": 1e3, "M": 1e6, "G": 1e9, "T": 1e12, "P": 1e15}
+    u = u.strip()
+    if u == base or u.lower() == base.lower():
+        return mult / tsize
+    if len(u) == len(base) + 1 and u.endswith(base) and u[0] in pre:
+        return mult * pre[u[0]] / tsize
+    return 1.0
 
 
 def _destatis_table(name, extra=None):
@@ -544,10 +579,28 @@ def destatis(ind):
     """Options: table (code, or 'NNNNN-*' with tableMatch), filter (classifying variable, see _classify),
     unit / valueLabel (regex on the value unit / value variable, e.g. index rows only, or 'Einfuhr: Gewicht'),
     match (regexes for the series name in priority order), sum (add up all matching series), scale (factor)."""
-    table = _resolve_table(ind)
-    dbg = _destatis["debug"].setdefault("indicators", {}).setdefault(ind["id"], {"table": table})
+    tables = _resolve_tables(ind)
+    tried, last = {}, None
+    for table in tables[:5]:
+        try:
+            return _destatis_one(ind, table, tried)
+        except RuntimeError as exc:
+            if "time budget" in str(exc):
+                raise
+            tried[table], last = str(exc)[:200], exc
+    raise last
+
+
+def _destatis_one(ind, table, tried):
+    dbg = {"table": table}
+    if tried:
+        dbg["tried"] = dict(tried)
+    _destatis["debug"].setdefault("indicators", {})[ind["id"]] = dbg
     extra = _classify(ind, table, dbg)
     rows = _destatis_table(table, extra)
+    if ind.get("toUnit"):
+        dbg["units"] = sorted({r[2] for r in rows})[:8]
+        rows = [(l, vl, u, per, v * _unit_factor(u, ind["toUnit"])) for l, vl, u, per, v in rows]
     if ind.get("unit_match"):
         ux = re.compile(ind["unit_match"], re.I)
         rows = [r for r in rows if ux.search(r[2])]
@@ -585,8 +638,8 @@ def destatis(ind):
 def destatis_discover():
     """Search GENESIS for tables of interest; the result helps to configure new indicators."""
     found = {}
-    for term in ("Arbeitskostenindex", "Produktionsindex Papier", "Einzelhandel Umsatz", "Energieverwendung Verarbeitendes Gewerbe",
-                 "Wassereinsatz", "Umweltschutzinvestitionen", "Abfallerzeugung"):
+    for term in ("Erzeugerpreise gewerblicher Produkte", "Wassereinsatz Wirtschaftszweige", "Wasseraufkommen Betriebe",
+                 "Arbeitskosten Wirtschaftszweige", "Abfallmenge Wirtschaftszweige"):
         try:
             info = json.loads(_genesis_post("find/find", {"term": term, "category": "tables", "pagelength": "12"}, timeout=60))
             found[term] = [{"code": t.get("Code"), "content": _flat(t.get("Content"))} for t in (info.get("Tables") or [])][:12]
