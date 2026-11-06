@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T11:19:28",
+ "updated": "2026-11-06T11:52:01",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -30,27 +30,27 @@
   ],
   "essity": [
    {
+    "title": "Essity expands coreless technology to Lotus Just-1 toilet paper in France",
+    "source": "Tissue Online North America",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMGZFS3lqSzhwTlY4LUI1cE82R1hkaUVzaC1HOWJndXpWekp2VW9rVUR4dGVibEJOeFc0cUZYN01aMk04OGJDSGo1dk00bTViUm00SUxob2sxOFY0aC0yVlB0QmxIOVRiRUREU1pnR2NoaW02c1EzWV9VVWNGNHJ6VVF4aVU3ZEp1dG56VHpCbUZOOTRZT1VDYldRWmVvUlBjMHdWaXJxZ3N1c1VyTHNBTw?oc=5",
+    "date": "2026-11-06"
+   },
+   {
+    "title": "The Essity Inclusive Hygiene Report",
+    "source": "Yahoo News UK",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5xWWlGaEtRclp5TTkxb3MzSkxXTk96a19wS3Q2TFRaelhXcGd3YW8yS1BmR055Zk9CdnhpVjA2LWJady1sVC1RXzlkSFhxSDBSeG03aHR0MGl2bjdZcHByUUhtNXNSMjlTcnNMc3FEbzloT1hMRXV4T010eHE?oc=5",
+    "date": "2026-11-06"
+   },
+   {
     "title": "Essity stock in focus after board member buys 700,000 shares",
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOeU5vUC1zTVBzdXVhT1M5dmY3dXlkZTNoNjl1d3lTQnJrSFlKc2MxM1lNSmFKSkhOemVqcVBlOWFwSGI2UVRNZVJsbXE1TGJ2dnZpWjJGa1drRWVWakZjNlZFVDM5MUhiX2hzODEySTB0UWRSZDk2S25OMms4VlVxSnhhNHRkbHhmNU5aOGw0aVFvckxDLXNrNEVtcHVBd0lid0ZlSDZmbkRza25rSDB2UkRueFZxY215NEhvX1htUkg?oc=5",
     "date": "2026-11-06"
    },
    {
-    "title": "Essity AB (publ) (ESSITY-B.ST) Seasonal returns chart - Yahoo Finance",
-    "source": "Yahoo Finance Singapore",
-    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hZ2VHMmZlczA1N3JqTGFHcl9aeGdwZ1lYckFDTVFQYVBjUXFUWTJjdS1VcGlLcWNzNDJocWdDdEoweXBTemtOblZvVEUxdmN6SGhXSFBmLWUyaGZZalVESkJ3dmpWQVR0bGJj?oc=5",
-    "date": "2026-11-05"
-   },
-   {
     "title": "People: Arbtech; Law Distribution; BDO; Bruntwood; Essity; Cavendish; CarMoney",
     "source": "TheBusinessDesk.com",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQlY0RlktOFZncTNZYm81cEtXYURvdnpwdTF0aE9EeFBkaVdGTjBkcmt0Q2djOElIdG5tVVh3NHhMRTJtSm43YkFTaXZja1BUMjZPQ0RnRlFBLThEMTJSNXNyZEwwSlZHWkFESzBHS3p0YzdJV2tXcjVDZ3F5SHpxM1hFOU1lbU5WcngyNlFXa2c3MlBjQ242MWV3ak80Z2g0QjZaOFlqeEt1dzNiM3c?oc=5",
-    "date": "2026-11-05"
-   },
-   {
-    "title": "Essity stock gains 3.3% since last report as PFAS case persists",
-    "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYzZ0bGthMkpfT0YzeTZiaXh5ellrdkYzZ0M0b0k1MGM5RWpDcFUwRjZYMmZWVEE4YnN0WTYzcWdmVUVfWVBoUk1JSHBwOUwyLXJmRl9MelE4TUY2cGZNZEpTVjV6WXJuaXQ3UmVjYVRMUG1Ia29aeElCWV9jTVJYOUlfc1JRcVNKdVpuNFJyZWFKM0FaODhWRnBseXFkclBmMVFUSi1oQWg2c2ZYbVdrbVhISUdoTlF6TGFzUTFpSXhQYkE?oc=5",
     "date": "2026-11-05"
    }
   ],
@@ -236,7 +236,7 @@
    {
     "title": "CMPC: Higher sales volumes could not offset cost pressure: adjusted EBITDA fell 7% QoQ",
     "source": "TradingView",
-    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOelRXYzF3RTQ4SnFmV1h4RER6VFZRZlZHNUNGdlBMZ1NiWDFDb1VpU1ZPV1hlWkxjZDRtanFFSDNKRGFUTFhWMTlwejZ1YnA3cnY1ZjZtTVdORmYtS1FERTZOczd0U3F6REpvR2NxVWwtdUk5dGs4cEhtNUh2T2lOSGtILW81SDdlc3hySnBnOWxVMTZoVWtJcU5xdXRWNTVSTzNKcENfbkVCMm5xMWRVWWtyRlhoNjJwdjAzYnJuVEdOV0tpcTN4b2xZMW5BUHVfSmhtdUpSTml4eW1HUVpQaGFVWUtxSzdoN0xBQTFZdnZOd09zeEc1OUNn?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxObnhLbHlnSGZ2bVY1azZseVJyanMwT29IMzVVTFQxSWQyZUVOMkNEQ2NSMVR5cVNGOFFDRHIxWUdDWFZtaF9zN1RGWWh2S2xiV1RhN2NwNTdpU0M4QVlfb1AxRmRTXzZjRklwWF9WRkR1d2JGS2lRTTFWWlRvVy1fZVprRHQzVmlPRDQzR1RwVEVodG9HZF9kejA5M0paXy1lbTVQbTdoVDVrLUllMEw4RHNjZmtxUG1wb3o0R1R6QTJrbWQyUjg5eDgyb25PS2M2VzVnM29sSmVKRnZRa21ZNWlBYVIxaDN1QjhaYi00UlNjOVRsZk9yZXpYV2RaSFJsR0kzdVIxYkRINlZ2eG5rOVZ2Zw?oc=5",
     "date": "2026-11-06"
    },
    {

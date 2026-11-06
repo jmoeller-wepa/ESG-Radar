@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-06T11:09:51+00:00",
+ "fetched": "2026-11-06T11:39:30+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,13 +12,13 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
+     "last",
      "totalPages",
      "totalElements",
-     "last",
+     "sort",
      "numberOfElements",
      "size",
      "number",
-     "sort",
      "first",
      "empty"
     ]
@@ -27,150 +27,150 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": 14770.0,
+    "id": 16733.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2025)5580019",
-    "foreseenActType": "PROP_REG",
-    "shortTitle": "European climate resilience and risk management law",
+    "reference": "Ares(2026)1255657",
+    "foreseenActType": "REG_DEL",
+    "shortTitle": "Exclusion of duty-free imports to the outermost regions of the Union from reference quantity for some tariff rate quotas",
     "currentStatuses": [
      {
-      "frontEndStage": "ADOPTION_WORKFLOW",
+      "frontEndStage": "ISC_WORKFLOW",
       "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/04 14:42:25",
-      "feedbackEndDate": "2027/01/01 23:59:59",
+      "feedbackStartDate": "2026/11/06 12:17:52",
+      "feedbackEndDate": "2026/12/04 23:59:59",
       "isCurrent": true
-     }
-    ],
-    "topics": [
-     {
-      "code": "CLIMA",
-      "label": "Climate action"
      }
     ],
     "initiativeTranslations": [
      {
-      "value": "Устойчивост спрямо изменението на климата и управление на климатичните рискове в Европа — интегрирана рамка",
+      "value": "Тарифни квоти за внос — изчисляване на референтните количества",
       "language": "BG",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Odolnost EU vůči změně klimatu a řízení klimatických rizik – integrovaný rámec",
+      "value": "Dovozní celní kvóty – výpočet referenčních množství",
       "language": "CS",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "EU's modstandsdygtighed over for klimaændringer og risikostyring – integreret ramme",
+      "value": "Importtoldkontingenter – beregning af referencemængder",
       "language": "DA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Europäische Initiative für Klimaresilienz und -risikomanagement – integrierter Rahmen",
+      "value": "Einfuhrzollkontingente – Berechnung der Referenzmengen",
       "language": "DE",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Ανθεκτικότητα στην κλιματική αλλαγή και διαχείριση κινδύνων στην Ευρώπη — ολοκληρωμένο πλαίσιο",
+      "value": "Δασμολογικές ποσοστώσεις εισαγωγής — υπολογισμός ποσοτήτων αναφοράς",
       "language": "EL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "European climate resilience and risk management – integrated framework",
+      "value": "Import tariff quotas – calculation of reference quantities",
       "language": "EN",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Resiliencia frente al cambio climático y gestión de riesgos en Europa: marco integrado",
+      "value": "Contingentes arancelarios de importación – cálculo de las cantidades de referencia",
       "language": "ES",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Euroopa kliimakerksus ja kliimariskide juhtimine – integreeritud raamistik",
+      "value": "Tariifikvoodid – võrdluskoguste arvutamine",
       "language": "ET",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Initiative européenne sur la résilience climatique et la gestion des risques - cadre intégré",
+      "value": "Contingents tarifaires d’importation — calcul des quantités de référence",
       "language": "FR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Creat comhtháite Eorpach um athléimneacht in aghaidh an athraithe aeráide agus bainistiú riosca",
+      "value": "Taraifchuótaí ar allmhairí – cainníochtaí tagartha a ríomh",
       "language": "GA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Europska inicijativa za otpornost na klimatske promjene i upravljanje klimatskim rizicima – integrirani okvir",
+      "value": "Uvozne carinske kvote – izračun referentnih količina",
       "language": "HR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Iniziativa europea per la resilienza ai cambiamenti climatici e la gestione dei rischi legati al clima - quadro integrato",
+      "value": "Contingenti tariffari di importazione – calcolo dei quantitativi di riferimento",
       "language": "IT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Euroopan ilmastokestävyys ja riskinhallinta – yhtenäinen kehys",
+      "value": "Tuontitariffikiintiöt – viitemäärien laskenta",
       "language": "FI",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Az éghajlatváltozás hatásaival szembeni reziliencia és az éghajlatváltozással kapcsolatos kockázatok kezelése – integrált keret",
+      "value": "Behozatali vámkontingensek – a referenciamennyiségek számítása",
       "language": "HU",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Integruota Europos atsparumo klimato kaitai ir rizikos valdymo sistema",
+      "value": "Importo tarifinės kvotos. Referencinių kiekių apskaičiavimas",
       "language": "LT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Eiropas klimatnoturības un risku pārvaldības iniciatīva: integrētais satvars",
+      "value": "Importa tarifa kvotas — references daudzumu aprēķināšana",
       "language": "LV",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Qafas integrat Ewropew għar-reżiljenza għat-tibdil fil-klima u l-ġestjoni tar-riskju",
+      "value": "Kwoti tariffarji tal-importazzjoni – kalkolu tal-kwantitajiet ta’ referenza",
       "language": "MT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Europees initiatief inzake klimaatveerkracht en het beheer van klimaatrisico’s – geïntegreerd kader",
+      "value": "Invoertariefcontingenten – berekening van referentiehoeveelheden",
       "language": "NL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Europejska inicjatywa na rzecz odporności na zmianę klimatu i zarządzania ryzykiem – zintegrowane ramy",
+      "value": "Przywozowe kontyngenty taryfowe – obliczanie ilości referencyjnych",
       "language": "PL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Resiliência climática e gestão dos riscos na Europa - quadro integrado",
+      "value": "Contingentes pautais de importação — cálculo das quantidades de referência",
       "language": "PT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Reziliența la schimbările climatice și gestionarea riscurilor în Europa – Un cadru integrat",
+      "value": "Contingente tarifare de import – calcularea cantităților de referință",
       "language": "RO",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Odolnosť EÚ proti zmene klímy a riadenie klimatických rizík – integrovaný rámec",
+      "value": "Dovozné colné kvóty – výpočet referenčných množstiev",
       "language": "SK",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Evropska odpornost proti podnebnim spremembam in obvladovanje tveganj – celovit okvir",
+      "value": "Uvozne tarifne kvote – izračun referenčnih količin",
       "language": "SL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Klimatresiliens och klimatriskhantering – förslag till EU-regler",
+      "value": "Tullkvoter – beräkning av referenskvantiteter",
       "language": "SV",
       "field": "SHORT_TITLE"
      }
+    ],
+    "topics": [
+     {
+      "code": "AGRI",
+      "label": "Agriculture and rural development"
+     }
     ]
    },
-   "openFound": 54,
+   "openFound": 55,
    "read": 300
   }
  ]
