@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T06:23:00",
+ "updated": "2026-11-06T11:19:28",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -30,6 +30,12 @@
   ],
   "essity": [
    {
+    "title": "Essity stock in focus after board member buys 700,000 shares",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOeU5vUC1zTVBzdXVhT1M5dmY3dXlkZTNoNjl1d3lTQnJrSFlKc2MxM1lNSmFKSkhOemVqcVBlOWFwSGI2UVRNZVJsbXE1TGJ2dnZpWjJGa1drRWVWakZjNlZFVDM5MUhiX2hzODEySTB0UWRSZDk2S25OMms4VlVxSnhhNHRkbHhmNU5aOGw0aVFvckxDLXNrNEVtcHVBd0lid0ZlSDZmbkRza25rSDB2UkRueFZxY215NEhvX1htUkg?oc=5",
+    "date": "2026-11-06"
+   },
+   {
     "title": "Essity AB (publ) (ESSITY-B.ST) Seasonal returns chart - Yahoo Finance",
     "source": "Yahoo Finance Singapore",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hZ2VHMmZlczA1N3JqTGFHcl9aeGdwZ1lYckFDTVFQYVBjUXFUWTJjdS1VcGlLcWNzNDJocWdDdEoweXBTemtOblZvVEUxdmN6SGhXSFBmLWUyaGZZalVESkJ3dmpWQVR0bGJj?oc=5",
@@ -46,12 +52,6 @@
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYzZ0bGthMkpfT0YzeTZiaXh5ellrdkYzZ0M0b0k1MGM5RWpDcFUwRjZYMmZWVEE4YnN0WTYzcWdmVUVfWVBoUk1JSHBwOUwyLXJmRl9MelE4TUY2cGZNZEpTVjV6WXJuaXQ3UmVjYVRMUG1Ia29aeElCWV9jTVJYOUlfc1JRcVNKdVpuNFJyZWFKM0FaODhWRnBseXFkclBmMVFUSi1oQWg2c2ZYbVdrbVhISUdoTlF6TGFzUTFpSXhQYkE?oc=5",
     "date": "2026-11-05"
-   },
-   {
-    "title": "Essity launches community initiative connecting local production with social support in Alabama",
-    "source": "Tissue Online North America",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOaTJ6OGx0dnFVWFhsY2pFYXNTYkhOZG11YjlxZTVaNWlXdlcwVzBYbEI0dmpzSklJdXV6M0pBOUM0cUtYcnZRbkNwZTZ6REF1cnlnWGx0aGhNUlB2ZXF6Q1dDMzZoajJBVUljSkhhUHpXRTYyNWhaNkZCYkxlaFZBblYzTlRpVV95LTY0V3g2ZlVPY25DLVBRQ0FibDg3QkplVlNralI3M256ZE13OWZJVk1wWEI0WW04MG1aSzRoMnNxU0FiRTE5ZzhmNWxadw?oc=5",
-    "date": "2026-11-04"
    }
   ],
   "sofidel": [
@@ -122,6 +122,12 @@
     "date": "2026-11-05"
    },
    {
+    "title": "What Kimberly-Clark (KMB) Said on Its Q3 Earnings Call",
+    "source": "TradingView",
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVmpLcTJaX3pDSWwwZ1NLX1FBX1d2azgwcVp5REdoNUZycDdaWXEtR3o2R0tzZWtSVmx2ZTAyVjRjYUNhb0RjQnR3c1pxNkJjVkM0Q0JnVTl4LUhfRElVUTZuZlRMQzZvVUg0dmJnd3NDSm1wRUEzQkVfNEhES0ZHdjRTUjNYRFlMSTA3eG9GT2lkaE03bFpSSUtFS1d0bloxWHpsRkN2anFJbVJNN2FfLXZmUQ?oc=5",
+    "date": "2026-11-05"
+   },
+   {
     "title": "Kimberly-Clark (KMB) Q3 Earnings Beat Expectations, Dividend Sus",
     "source": "GuruFocus",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNM0lEbDFMdlVHajJpeDNYaV83Q2ZyOGdYQmFmMDJQQk5zcTFldnJFQ29NTnJnRWs3RUI3ajZpN1dUV1JPbVFqUXExbWRhTHBIZzdWQndGWjA0OHFmNTlUUF9JYVdTY1hUaFF0clkwZjM4U1dSUXZMRlRuLTgtWFA5N1pGMTc3dTVMd1lxdXZSaUwzSkFoa1FMcDF4STdHSTRpMjJqQkJ4YkJEc1hhMWJfSVhnZ0VnVUhtbS1B?oc=5",
@@ -132,21 +138,9 @@
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkJjQ3VyQTRFa2djWW1SU3NiRm95bXZiQS0tNTVKYy1vS2FibUEyeUE5eXA5M1pEWHpobllod3pZeEZHSFhFaUlaQm5KSVZMdUQ1cDB6TjRFZnZlVU1vdjg5WUI2WEp3MElHWlNBMGc4OEtmSjVnUzlLdi1fNnQ4NnJVcVk5cEZxbkZia09DY0VRSEt0VHNuWlF2WFRqZFI2LWlBbE4zSGJtN3JielpRemRHZk16ZTM2ZEo3X21JaGdGYVZTc2c?oc=5",
     "date": "2026-11-05"
-   },
-   {
-    "title": "Kimberly-Clark Q3 Adjusted Earnings Increase, Revenue Falls; 2026 Adjusted EPS Guidance Maintained",
-    "source": "marketscreener.com",
-    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNdkUwTkdCdklTLXlTQzF6b3NSbUlmNE1RNTVzRFRKdnJjbHlLSE45dmFZbnhseGlOdVBXSVNHTXlNLXlLd3dlNzJ4aHI3TzFKNENtd0FxZnZ3R3JJN1BRM3BSODVTMFFtRU5rX2x4Sm5hNkp0WFY2WFhPSGJfNTNDTWJTZVVXTWhqcVJOSjhxZU1qdUhvbnZEM01jd0c3UXU5ZThSLWtGNjNmTnNZeVVtbkZlVnZwMUx1SWt3REdaUjlmR21JUW5XMG1jNGtmeGF0SUxwVVJydmxQUVZ4Wkw5RjJHSQ?oc=5",
-    "date": "2026-11-05"
    }
   ],
   "pg": [
-   {
-    "title": "The Procter & Gamble Company (PG) Stock Price, News, Quote & History",
-    "source": "Yahoo! Finance Canada",
-    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9EQ0RfZHRkYzVkZTRtX2g4TXQ4NGNXQ2MzeGhkTTA4Skp2WWd6YlJ6cHdQQ2RHTzdGcE5RMmZHd0ViSnp1WVJGQm5GQVc0SEE?oc=5",
-    "date": "2026-11-04"
-   },
    {
     "title": "Procter & Gamble (NYSE:PG) Stock Forecast & Analyst Predictions",
     "source": "Simply Wall St",
@@ -164,6 +158,12 @@
     "source": "Environmental Leader",
     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNOGh4RkNtdzRZSUNuVTVZdXlfRXJ5ZzdOcUdlNk0yLXgyalJZcTFIRVFDUUpEOGJTMlNEdnhxUUdDTjQ4OThOVTdDWHhoQzE3UFR3TlBldXpTV3R1N0RQQkpUdjF0QVdSMmxfdEdJM2lGdXNmUGZ4YUhsWWJPaXkzZmphUkpTbWJMWE15VEtXZU10Wml6RHJLRk93Z25ZaUFJYXRIam8wYUFTaDgzaUpaUjRadHNraHhxYWZJVmYtRHNraXAtNmpVbEtTR2hzNHI4WTVfTGRCR2UzNU9LRDZPN2dUWQ?oc=5",
     "date": "2026-10-26"
+   },
+   {
+    "title": "What Procter & Gamble Shares Means For Shareholders",
+    "source": "Simply Wall St",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRzFTVnZKSUZVOVQ1Z2h3emliOC1FYkUzRHBfVE1ROHdqU29Sd0JuajFVa1VyTkFlRXRmRDViMzVBT1pyN3htd3lqRjBuT215WTg1bHpTTVJHT1Y4UmpVSHZhT3VTMHp4VVhkUnR1bHZWTEg2TWpfaUc4ZDNqYWJvVmVDal9zdEs1UGJKOGJhSGVXZjE2NkZrWU45N1V0cGhmRnZpc1BodXFya1AzdWdFUnVDdk41bXJtWHpv0gHAAUFVX3lxTE1XeUN0SkRHZWxZZV85M1N1TFJLR0NGU0hsY2xRS3h4cWlqVHNkVndac0kwM0xmLUVGS29UZDR0QW9LLUV4OUpkQjJJOTB4Mnh6OHBNRWRHRXhxRjZOdnlwLVFHRWN6STFUU0RrdWVEZGNYUGlpUFFsckFJQlBrNXNWc1hWRW1ZdXY0TEpmaXRyT3pTMXhhTVdZdXc5VEtQVG1USzhsSXdrT1NyWFJhcUQzcjhCXzBPUmprSHc5ZTV3VQ?oc=5",
+    "date": "2026-10-25"
    }
   ],
   "georgia-pacific": [
@@ -194,10 +194,10 @@
   ],
   "app": [
    {
-    "title": "APP Group Works with Consortium to Take Early Steps Toward Landscape-Scale Conservation in Sumatra Through PROTECT30",
-    "source": "Sustainable Packaging News",
-    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4tZGhtZkNsbkpLaXY4cldneVg1V3JuM1VQXzVjWFd3VURtQUhDUks2bDV6ekJ1T3NPdkZtRDRaQmlRUWJtWmJWOVkwanVFWFJnTnkxRWV6bWFYQTRPbC15edIBa0FVX3lxTE5Sc2tJMV9EYkF6dEtNZUlKdXFCRUR5ZHZEalJhTDJzb1hHbXdQemF0ZF9zWV9ubUpKQjVINXFhNG9fOVpyMngtUUNxSGlhWWljNzV4TDV1NVpfYzBaZkFFNWdvN0x4eER0Rmh3?oc=5",
-    "date": "2026-11-03"
+    "title": "APP Group Works with Consortium to Take Early Steps Toward",
+    "source": "GlobeNewswire",
+    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQNk5XaXRMYjZyMEkxT3g0NmFpc2lTelpzQ0psMDB5VjBUYlV0RVl5WEJhVlphcV9NRDdBd1VrSkw4dkhBT29WTjJoZEJtbXliVWJ4Uk10M2RqXzVVdEJhZ1dxQUhKd09MN0lGNUVTX3RuX3Q4SXowbWZGZHU2bkNfQU1Oa0VVTHRpcmxhbks4ckRQSE9uY2lFNnpsanAzamFON1A0OFBVa2hOaHRYUWZqclFaWWRrZ3htdzhTNjBiVHlBSk11eVFXYVlZTFJVc1VLQlpjTmNGTGNuVW1EQ1ViRVN1MHpZS0R5SGF3MTZRTkdicVBfY0Ztd3IwckdRSXRiREtTcUdPSXMzTUs3OUNCci1VNXg4VTA?oc=5",
+    "date": "2026-10-28"
    },
    {
     "title": "After 11 years, Asia Pulp & Paper has been named again over links to haze fires. What is it & what's the S'pore connection?",
@@ -234,6 +234,12 @@
   ],
   "softys": [
    {
+    "title": "CMPC: Higher sales volumes could not offset cost pressure: adjusted EBITDA fell 7% QoQ",
+    "source": "TradingView",
+    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOelRXYzF3RTQ4SnFmV1h4RER6VFZRZlZHNUNGdlBMZ1NiWDFDb1VpU1ZPV1hlWkxjZDRtanFFSDNKRGFUTFhWMTlwejZ1YnA3cnY1ZjZtTVdORmYtS1FERTZOczd0U3F6REpvR2NxVWwtdUk5dGs4cEhtNUh2T2lOSGtILW81SDdlc3hySnBnOWxVMTZoVWtJcU5xdXRWNTVSTzNKcENfbkVCMm5xMWRVWWtyRlhoNjJwdjAzYnJuVEdOV0tpcTN4b2xZMW5BUHVfSmhtdUpSTml4eW1HUVpQaGFVWUtxSzdoN0xBQTFZdnZOd09zeEc1OUNn?oc=5",
+    "date": "2026-11-06"
+   },
+   {
     "title": "CMPC Q3 adjusted EBITDA falls 3% as pulp prices and diesel costs weigh",
     "source": "Lesprom Network",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVDZEMkdKX0pCWWNvTHlVeklkM0lVbVhSaGVLREQtVS1LeGx3akVtZWI5UVBHUWRWNmFqTjB1end6aFNVdkQ2dUhrM2JtM0tGYzhyRmVCUFVEMVZlemtvN2N2aktzeE1iYjV6Z2YyMTNMOWlONTUxODE2SldwWlMzalJ6Mm1XM2NjVWU4bWQ5WDY4RnZjbDFENkp3eTdZem5nUmxDRm9va1lpN0RDZmc?oc=5",
@@ -249,12 +255,6 @@
     "title": "Earnings To Watch: Empresas CMPC SA (XSGO:CMPC) Q3 2026 -- GF Va",
     "source": "GuruFocus",
     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZUtONjUtb2lPVkJuVDdNZFlJb1V3TmVHSUw4LWxuekZXVkZXU0E0UVFwdFl5cGxaMkpLUlVXb1FOX0JRTmJveGVPa3dSbmFLQS1EaHBaNnJlSGpwMHBxblpVSG00UnhuUEdiUHdGV3RtRmRjaW1pdzAxR3Vkd3BfZDB5dGNPSkZOSTBOYkpuM1BHLURaNy02MWwzY2VKSmo1ZkdOX3FjY2d6S2JfREttTFN4bHQ?oc=5",
-    "date": "2026-11-05"
-   },
-   {
-    "title": "Empresas CMPC S.A. (CMPC.SN) Seasonal returns chart",
-    "source": "Yahoo Finance UK",
-    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1kdzRxX0tkMzRxUUpPcnhkMkVBTkdaZTVrbWxMSFg5d1V3aEZ6eTVqazQ0NzdtVUx3MEV6REZqUlBFblJOcF9zZWhfbnJIeV8ycmNnbjB5R05sQjBGOU5kajFma2U0UQ?oc=5",
     "date": "2026-11-05"
    }
   ],

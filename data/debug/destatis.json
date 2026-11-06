@@ -1,6 +1,1339 @@
 {
- "checked": "2026-11-06T06:17:41",
+ "checked": "2026-11-06T11:11:05",
  "credentials": true,
+ "indicators": {
+  "de_rcp_102": {
+   "table": "61281-0006",
+   "matched": [
+    "Deutschland · Gemischtes Altpapier"
+   ]
+  },
+  "de_rcp_104": {
+   "table": "61281-0006",
+   "matched": [
+    "Deutschland · Verpackungen aus Papier und Karton"
+   ]
+  },
+  "de_rcp_403": {
+   "table": "61281-0006",
+   "matched": [
+    "Deutschland · Gebrauchte Kraftwellpappe 2"
+   ]
+  },
+  "de_rcp_111": {
+   "table": "61281-0006",
+   "matched": [
+    "Deutschland · Zeitungen und Illustrierte, Deinkingware"
+   ]
+  },
+  "de_ppi_pulp": {
+   "table": "61241-0004",
+   "valueCount": 30,
+   "valueSample": [
+    {
+     "code": "GP19-05",
+     "content": "Kohle"
+    },
+    {
+     "code": "GP19-06",
+     "content": "Erdöl und Erdgas"
+    },
+    {
+     "code": "GP19-08",
+     "content": "Steine und Erden, sonstige Bergbauerzeugnisse"
+    },
+    {
+     "code": "GP19-10",
+     "content": "Nahrungsmittel und Futtermittel"
+    },
+    {
+     "code": "GP19-11",
+     "content": "Getränke"
+    },
+    {
+     "code": "GP19-12",
+     "content": "Tabakerzeugnisse"
+    },
+    {
+     "code": "GP19-13",
+     "content": "Textilien"
+    },
+    {
+     "code": "GP19-14",
+     "content": "Bekleidung"
+    },
+    {
+     "code": "GP19-15",
+     "content": "Leder und Lederwaren"
+    },
+    {
+     "code": "GP19-16",
+     "content": "Holz und Holz- Kork- Korb- Flechtwaren ohne Möbel"
+    },
+    {
+     "code": "GP19-17",
+     "content": "Papier, Pappe und Waren daraus"
+    },
+    {
+     "code": "GP19-18",
+     "content": "Druckerzeugnisse, besp. Ton-, Bild- u. Datenträger"
+    },
+    {
+     "code": "GP19-19",
+     "content": "Kokereierzeugnisse und Mineralölerzeugnisse"
+    },
+    {
+     "code": "GP19-20",
+     "content": "Chemische Erzeugnisse"
+    },
+    {
+     "code": "GP19-21",
+     "content": "Pharmazeutische und ähnliche Erzeugnisse"
+    },
+    {
+     "code": "GP19-22",
+     "content": "Gummi- und Kunststoffwaren"
+    },
+    {
+     "code": "GP19-23",
+     "content": "Glas und -waren, Keramik, Steine und Erden"
+    },
+    {
+     "code": "GP19-24",
+     "content": "Metalle"
+    },
+    {
+     "code": "GP19-25",
+     "content": "Metallerzeugnisse"
+    },
+    {
+     "code": "GP19-26",
+     "content": "Datenverarbeitungsgeräte, elektr. u. opt. Erzeugn."
+    },
+    {
+     "code": "GP19-27",
+     "content": "Elektrische Ausrüstungen"
+    },
+    {
+     "code": "GP19-28",
+     "content": "Maschinen"
+    },
+    {
+     "code": "GP19-29",
+     "content": "Kraftwagen und Kraftwagenteile"
+    },
+    {
+     "code": "GP19-30",
+     "content": "Sonstige Fahrzeuge"
+    },
+    {
+     "code": "GP19-31",
+     "content": "Möbel"
+    }
+   ]
+  },
+  "de_ppi_tissue": {
+   "table": "61241-0004",
+   "valueCount": 30,
+   "valueSample": [
+    {
+     "code": "GP19-05",
+     "content": "Kohle"
+    },
+    {
+     "code": "GP19-06",
+     "content": "Erdöl und Erdgas"
+    },
+    {
+     "code": "GP19-08",
+     "content": "Steine und Erden, sonstige Bergbauerzeugnisse"
+    },
+    {
+     "code": "GP19-10",
+     "content": "Nahrungsmittel und Futtermittel"
+    },
+    {
+     "code": "GP19-11",
+     "content": "Getränke"
+    },
+    {
+     "code": "GP19-12",
+     "content": "Tabakerzeugnisse"
+    },
+    {
+     "code": "GP19-13",
+     "content": "Textilien"
+    },
+    {
+     "code": "GP19-14",
+     "content": "Bekleidung"
+    },
+    {
+     "code": "GP19-15",
+     "content": "Leder und Lederwaren"
+    },
+    {
+     "code": "GP19-16",
+     "content": "Holz und Holz- Kork- Korb- Flechtwaren ohne Möbel"
+    },
+    {
+     "code": "GP19-17",
+     "content": "Papier, Pappe und Waren daraus"
+    },
+    {
+     "code": "GP19-18",
+     "content": "Druckerzeugnisse, besp. Ton-, Bild- u. Datenträger"
+    },
+    {
+     "code": "GP19-19",
+     "content": "Kokereierzeugnisse und Mineralölerzeugnisse"
+    },
+    {
+     "code": "GP19-20",
+     "content": "Chemische Erzeugnisse"
+    },
+    {
+     "code": "GP19-21",
+     "content": "Pharmazeutische und ähnliche Erzeugnisse"
+    },
+    {
+     "code": "GP19-22",
+     "content": "Gummi- und Kunststoffwaren"
+    },
+    {
+     "code": "GP19-23",
+     "content": "Glas und -waren, Keramik, Steine und Erden"
+    },
+    {
+     "code": "GP19-24",
+     "content": "Metalle"
+    },
+    {
+     "code": "GP19-25",
+     "content": "Metallerzeugnisse"
+    },
+    {
+     "code": "GP19-26",
+     "content": "Datenverarbeitungsgeräte, elektr. u. opt. Erzeugn."
+    },
+    {
+     "code": "GP19-27",
+     "content": "Elektrische Ausrüstungen"
+    },
+    {
+     "code": "GP19-28",
+     "content": "Maschinen"
+    },
+    {
+     "code": "GP19-29",
+     "content": "Kraftwagen und Kraftwagenteile"
+    },
+    {
+     "code": "GP19-30",
+     "content": "Sonstige Fahrzeuge"
+    },
+    {
+     "code": "GP19-31",
+     "content": "Möbel"
+    }
+   ]
+  },
+  "de_ppi_gas": {
+   "table": "61241-0004",
+   "valueCount": 30,
+   "valueSample": [
+    {
+     "code": "GP19-05",
+     "content": "Kohle"
+    },
+    {
+     "code": "GP19-06",
+     "content": "Erdöl und Erdgas"
+    },
+    {
+     "code": "GP19-08",
+     "content": "Steine und Erden, sonstige Bergbauerzeugnisse"
+    },
+    {
+     "code": "GP19-10",
+     "content": "Nahrungsmittel und Futtermittel"
+    },
+    {
+     "code": "GP19-11",
+     "content": "Getränke"
+    },
+    {
+     "code": "GP19-12",
+     "content": "Tabakerzeugnisse"
+    },
+    {
+     "code": "GP19-13",
+     "content": "Textilien"
+    },
+    {
+     "code": "GP19-14",
+     "content": "Bekleidung"
+    },
+    {
+     "code": "GP19-15",
+     "content": "Leder und Lederwaren"
+    },
+    {
+     "code": "GP19-16",
+     "content": "Holz und Holz- Kork- Korb- Flechtwaren ohne Möbel"
+    },
+    {
+     "code": "GP19-17",
+     "content": "Papier, Pappe und Waren daraus"
+    },
+    {
+     "code": "GP19-18",
+     "content": "Druckerzeugnisse, besp. Ton-, Bild- u. Datenträger"
+    },
+    {
+     "code": "GP19-19",
+     "content": "Kokereierzeugnisse und Mineralölerzeugnisse"
+    },
+    {
+     "code": "GP19-20",
+     "content": "Chemische Erzeugnisse"
+    },
+    {
+     "code": "GP19-21",
+     "content": "Pharmazeutische und ähnliche Erzeugnisse"
+    },
+    {
+     "code": "GP19-22",
+     "content": "Gummi- und Kunststoffwaren"
+    },
+    {
+     "code": "GP19-23",
+     "content": "Glas und -waren, Keramik, Steine und Erden"
+    },
+    {
+     "code": "GP19-24",
+     "content": "Metalle"
+    },
+    {
+     "code": "GP19-25",
+     "content": "Metallerzeugnisse"
+    },
+    {
+     "code": "GP19-26",
+     "content": "Datenverarbeitungsgeräte, elektr. u. opt. Erzeugn."
+    },
+    {
+     "code": "GP19-27",
+     "content": "Elektrische Ausrüstungen"
+    },
+    {
+     "code": "GP19-28",
+     "content": "Maschinen"
+    },
+    {
+     "code": "GP19-29",
+     "content": "Kraftwagen und Kraftwagenteile"
+    },
+    {
+     "code": "GP19-30",
+     "content": "Sonstige Fahrzeuge"
+    },
+    {
+     "code": "GP19-31",
+     "content": "Möbel"
+    }
+   ]
+  },
+  "de_ppi_power": {
+   "table": "61241-0004",
+   "valueCount": 30,
+   "valueSample": [
+    {
+     "code": "GP19-05",
+     "content": "Kohle"
+    },
+    {
+     "code": "GP19-06",
+     "content": "Erdöl und Erdgas"
+    },
+    {
+     "code": "GP19-08",
+     "content": "Steine und Erden, sonstige Bergbauerzeugnisse"
+    },
+    {
+     "code": "GP19-10",
+     "content": "Nahrungsmittel und Futtermittel"
+    },
+    {
+     "code": "GP19-11",
+     "content": "Getränke"
+    },
+    {
+     "code": "GP19-12",
+     "content": "Tabakerzeugnisse"
+    },
+    {
+     "code": "GP19-13",
+     "content": "Textilien"
+    },
+    {
+     "code": "GP19-14",
+     "content": "Bekleidung"
+    },
+    {
+     "code": "GP19-15",
+     "content": "Leder und Lederwaren"
+    },
+    {
+     "code": "GP19-16",
+     "content": "Holz und Holz- Kork- Korb- Flechtwaren ohne Möbel"
+    },
+    {
+     "code": "GP19-17",
+     "content": "Papier, Pappe und Waren daraus"
+    },
+    {
+     "code": "GP19-18",
+     "content": "Druckerzeugnisse, besp. Ton-, Bild- u. Datenträger"
+    },
+    {
+     "code": "GP19-19",
+     "content": "Kokereierzeugnisse und Mineralölerzeugnisse"
+    },
+    {
+     "code": "GP19-20",
+     "content": "Chemische Erzeugnisse"
+    },
+    {
+     "code": "GP19-21",
+     "content": "Pharmazeutische und ähnliche Erzeugnisse"
+    },
+    {
+     "code": "GP19-22",
+     "content": "Gummi- und Kunststoffwaren"
+    },
+    {
+     "code": "GP19-23",
+     "content": "Glas und -waren, Keramik, Steine und Erden"
+    },
+    {
+     "code": "GP19-24",
+     "content": "Metalle"
+    },
+    {
+     "code": "GP19-25",
+     "content": "Metallerzeugnisse"
+    },
+    {
+     "code": "GP19-26",
+     "content": "Datenverarbeitungsgeräte, elektr. u. opt. Erzeugn."
+    },
+    {
+     "code": "GP19-27",
+     "content": "Elektrische Ausrüstungen"
+    },
+    {
+     "code": "GP19-28",
+     "content": "Maschinen"
+    },
+    {
+     "code": "GP19-29",
+     "content": "Kraftwagen und Kraftwagenteile"
+    },
+    {
+     "code": "GP19-30",
+     "content": "Sonstige Fahrzeuge"
+    },
+    {
+     "code": "GP19-31",
+     "content": "Möbel"
+    }
+   ]
+  },
+  "de_ppi_diesel": {
+   "table": "61241-0004",
+   "valueCount": 30,
+   "valueSample": [
+    {
+     "code": "GP19-05",
+     "content": "Kohle"
+    },
+    {
+     "code": "GP19-06",
+     "content": "Erdöl und Erdgas"
+    },
+    {
+     "code": "GP19-08",
+     "content": "Steine und Erden, sonstige Bergbauerzeugnisse"
+    },
+    {
+     "code": "GP19-10",
+     "content": "Nahrungsmittel und Futtermittel"
+    },
+    {
+     "code": "GP19-11",
+     "content": "Getränke"
+    },
+    {
+     "code": "GP19-12",
+     "content": "Tabakerzeugnisse"
+    },
+    {
+     "code": "GP19-13",
+     "content": "Textilien"
+    },
+    {
+     "code": "GP19-14",
+     "content": "Bekleidung"
+    },
+    {
+     "code": "GP19-15",
+     "content": "Leder und Lederwaren"
+    },
+    {
+     "code": "GP19-16",
+     "content": "Holz und Holz- Kork- Korb- Flechtwaren ohne Möbel"
+    },
+    {
+     "code": "GP19-17",
+     "content": "Papier, Pappe und Waren daraus"
+    },
+    {
+     "code": "GP19-18",
+     "content": "Druckerzeugnisse, besp. Ton-, Bild- u. Datenträger"
+    },
+    {
+     "code": "GP19-19",
+     "content": "Kokereierzeugnisse und Mineralölerzeugnisse"
+    },
+    {
+     "code": "GP19-20",
+     "content": "Chemische Erzeugnisse"
+    },
+    {
+     "code": "GP19-21",
+     "content": "Pharmazeutische und ähnliche Erzeugnisse"
+    },
+    {
+     "code": "GP19-22",
+     "content": "Gummi- und Kunststoffwaren"
+    },
+    {
+     "code": "GP19-23",
+     "content": "Glas und -waren, Keramik, Steine und Erden"
+    },
+    {
+     "code": "GP19-24",
+     "content": "Metalle"
+    },
+    {
+     "code": "GP19-25",
+     "content": "Metallerzeugnisse"
+    },
+    {
+     "code": "GP19-26",
+     "content": "Datenverarbeitungsgeräte, elektr. u. opt. Erzeugn."
+    },
+    {
+     "code": "GP19-27",
+     "content": "Elektrische Ausrüstungen"
+    },
+    {
+     "code": "GP19-28",
+     "content": "Maschinen"
+    },
+    {
+     "code": "GP19-29",
+     "content": "Kraftwagen und Kraftwagenteile"
+    },
+    {
+     "code": "GP19-30",
+     "content": "Sonstige Fahrzeuge"
+    },
+    {
+     "code": "GP19-31",
+     "content": "Möbel"
+    }
+   ]
+  },
+  "de_labour_paper": {
+   "table": "62421-0001",
+   "valueCount": 24,
+   "valueSample": [
+    {
+     "code": "WZ08-B-08",
+     "content": "Produzierendes Gewerbe und Dienstleistungsbereich"
+    },
+    {
+     "code": "WZ08-B-09",
+     "content": "Produzierendes Gewerbe und wirtschaftl. Dienstl."
+    },
+    {
+     "code": "WZ08-B-05",
+     "content": "Produzierendes Gewerbe"
+    },
+    {
+     "code": "WZ08-B",
+     "content": "Bergbau und Gewinnung von Steinen und Erden"
+    },
+    {
+     "code": "WZ08-C",
+     "content": "Verarbeitendes Gewerbe"
+    },
+    {
+     "code": "WZ08-D",
+     "content": "Energieversorgung"
+    },
+    {
+     "code": "WZ08-E",
+     "content": "Wasserversorg.,Entsorg.,Beseitig.v.Umweltverschm."
+    },
+    {
+     "code": "WZ08-F",
+     "content": "Baugewerbe"
+    },
+    {
+     "code": "WZ08-G-02",
+     "content": "Dienstleistungsbereich"
+    },
+    {
+     "code": "WZ08-G-03",
+     "content": "Wirtschaftliche Dienstleistungen"
+    },
+    {
+     "code": "WZ08-G",
+     "content": "Handel, Instandhaltung und Reparatur von Kfz"
+    },
+    {
+     "code": "WZ08-H",
+     "content": "Verkehr und Lagerei"
+    },
+    {
+     "code": "WZ08-I",
+     "content": "Gastgewerbe"
+    },
+    {
+     "code": "WZ08-J",
+     "content": "Information und Kommunikation"
+    },
+    {
+     "code": "WZ08-K",
+     "content": "Erbringung v. Finanz- u. Versicherungsdienstleist."
+    },
+    {
+     "code": "WZ08-L",
+     "content": "Grundstücks- und Wohnungswesen"
+    },
+    {
+     "code": "WZ08-M",
+     "content": "Freiberufliche, wiss. u. techn. Dienstleistungen"
+    },
+    {
+     "code": "WZ08-N",
+     "content": "Sonstige wirtschaftliche Dienstleistungen"
+    },
+    {
+     "code": "WZ08-O-01",
+     "content": "Öffentliche und persönliche Dienstleistungen"
+    },
+    {
+     "code": "WZ08-O",
+     "content": "Öff. Verwaltung, Verteidigung, Sozialversicherung"
+    },
+    {
+     "code": "WZ08-P",
+     "content": "Erziehung und Unterricht"
+    },
+    {
+     "code": "WZ08-Q",
+     "content": "Gesundheits- und Sozialwesen"
+    },
+    {
+     "code": "WZ08-R",
+     "content": "Kunst, Unterhaltung und Erholung"
+    },
+    {
+     "code": "WZ08-S",
+     "content": "Erbringung von sonstigen Dienstleistungen"
+    }
+   ]
+  },
+  "de_prod_paper": {
+   "table": "42153-0001",
+   "valueCount": 55,
+   "valueSample": [
+    {
+     "code": "WZ08-B-05",
+     "content": "Produzierendes Gewerbe"
+    },
+    {
+     "code": "WZ08-B-18",
+     "content": "Produzierendes Gewerbe ohne Baugewerbe"
+    },
+    {
+     "code": "WZ08-B-20",
+     "content": "Produzierendes Gewerbe ohne Energie u. Baugewerbe"
+    },
+    {
+     "code": "WZ08-B-28",
+     "content": "Prod. Gew. (oh.Energie,Baugew.,energieintens.Ind.)"
+    },
+    {
+     "code": "WZ08-B-29",
+     "content": "Prod. Gew. (oh.Energie,Baugew.,energieint.Ind.,29)"
+    },
+    {
+     "code": "WZ08-B-30",
+     "content": "Prod. Gewerbe (ohne Energie, Baugewerbe, 29)"
+    },
+    {
+     "code": "WZ08-B-10",
+     "content": "Energieintensive Industriezweige"
+    },
+    {
+     "code": "WZ08-B-04",
+     "content": "Bergbau, Gew.v.Steinen u.Erden und Verarb. Gewerbe"
+    },
+    {
+     "code": "WZ08-B-01",
+     "content": "Bergb.,Gew.v.Stein.u.Erd.u.Verarb.Gew.(o.Energie)"
+    },
+    {
+     "code": "WZ08-B-25",
+     "content": "Bergbau u. Verarb. Gewerbe (ohne Energie,10,11,12)"
+    },
+    {
+     "code": "WZ08-B-26",
+     "content": "Bergbau u. Verarb. Gewerbe (ohne Energie, 30)"
+    },
+    {
+     "code": "GUT-VORL-01",
+     "content": "Vorleistungsgüter"
+    },
+    {
+     "code": "GUT-INVEST-01",
+     "content": "Investitionsgüter"
+    },
+    {
+     "code": "GUT-GEBR-01",
+     "content": "Gebrauchsgüter"
+    },
+    {
+     "code": "GUT-VERBR-01",
+     "content": "Verbrauchsgüter"
+    },
+    {
+     "code": "GUT-KONSUM-01",
+     "content": "Konsumgüter"
+    },
+    {
+     "code": "WZ08-D-03",
+     "content": "Energie (ohne Abschnitt E)"
+    },
+    {
+     "code": "WZ08-D-04",
+     "content": "Energie (ohne Abschnitt D und E)"
+    },
+    {
+     "code": "WZ08-B",
+     "content": "Bergbau und Gewinnung von Steinen und Erden"
+    },
+    {
+     "code": "WZ08-C",
+     "content": "Verarbeitendes Gewerbe"
+    },
+    {
+     "code": "WZ08-D",
+     "content": "Energieversorgung"
+    },
+    {
+     "code": "WZ08-F",
+     "content": "Baugewerbe"
+    },
+    {
+     "code": "WZ08-41-01",
+     "content": "Hoch- und Tiefbau"
+    },
+    {
+     "code": "WZ08-F-02",
+     "content": "Baugewerbe ohne Tiefbau"
+    },
+    {
+     "code": "WZ08-41",
+     "content": "Hochbau"
+    }
+   ]
+  },
+  "de_retail_drug": {
+   "table": "45212-0002",
+   "valueCount": 68,
+   "valueSample": [
+    {
+     "code": "WZ08-G",
+     "content": "Handel, Instandhaltung und Reparatur von Kfz"
+    },
+    {
+     "code": "WZ08-47",
+     "content": "Einzelhandel (ohne Handel mit Kraftfahrzeugen)"
+    },
+    {
+     "code": "WZ08-471",
+     "content": "Eh.m. Waren verschiedener Art (in Verkaufsräumen)"
+    },
+    {
+     "code": "WZ08-4711",
+     "content": "Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw"
+    },
+    {
+     "code": "WZ08-4719",
+     "content": "Sonstiger Einzelhandel mit Waren verschiedener Art"
+    },
+    {
+     "code": "WZ08-472",
+     "content": "Eh.m. Nahrungsmitteln usw (in Verkaufsräumen)"
+    },
+    {
+     "code": "WZ08-4721",
+     "content": "Einzelhandel mit Obst, Gemüse und Kartoffeln"
+    },
+    {
+     "code": "WZ08-4722",
+     "content": "Einzelhandel mit Fleisch und Fleischwaren"
+    },
+    {
+     "code": "WZ08-4723",
+     "content": "Eh.m. Fisch und Fischerzeugnissen, Meeresfrüchten"
+    },
+    {
+     "code": "WZ08-4724",
+     "content": "Einzelhandel mit Back- und Süßwaren"
+    },
+    {
+     "code": "WZ08-4725",
+     "content": "Einzelhandel mit Getränken"
+    },
+    {
+     "code": "WZ08-4726",
+     "content": "Einzelhandel mit Tabakwaren"
+    },
+    {
+     "code": "WZ08-4729",
+     "content": "Sonstiger Eh.m. Nahrungs- und Genussmitteln"
+    },
+    {
+     "code": "WZ08-473",
+     "content": "Einzelhandel mit Motorenkraftstoffen (Tankstellen)"
+    },
+    {
+     "code": "WZ08-474",
+     "content": "Eh.m. Kommunik.- und Info.technik (in Verkaufsr.)"
+    },
+    {
+     "code": "WZ08-4741",
+     "content": "Eh.m. DV-Gerät., peripheren Einheiten und Software"
+    },
+    {
+     "code": "WZ08-4742",
+     "content": "Einzelhandel mit Telekommunikationsgeräten"
+    },
+    {
+     "code": "WZ08-4743",
+     "content": "Eh.m. Geräten der Unterhaltungselektronik"
+    },
+    {
+     "code": "WZ08-475",
+     "content": "Eh.m. sonst. Haush.geräten usw (in Verkaufsräumen)"
+    },
+    {
+     "code": "WZ08-4751",
+     "content": "Einzelhandel mit Textilien"
+    },
+    {
+     "code": "WZ08-4752",
+     "content": "Eh.m. Metallw.,Anstrichm.u.Bau-u.Heimwerkerbedarf"
+    },
+    {
+     "code": "WZ08-4753",
+     "content": "Eh.m. Vorhängen,Teppichen u. Bodenbelägen, Tapeten"
+    },
+    {
+     "code": "WZ08-4754",
+     "content": "Einzelhandel mit elektrischen Haushaltsgeräten"
+    },
+    {
+     "code": "WZ08-4759",
+     "content": "Eh.m. Möbeln, Einr.gegenständen und sonst. Hausrat"
+    },
+    {
+     "code": "WZ08-476",
+     "content": "Eh.m. Sportausrüstg., Verlagserzeugn. u.Spielwaren"
+    }
+   ]
+  },
+  "de_retail_food": {
+   "table": "45212-0002",
+   "valueCount": 68,
+   "values": [
+    {
+     "code": "WZ08-4711-01",
+     "content": "Eh.m. Lebensmitteln (ohne Eh.m. LM an Verkaufsst.)"
+    }
+   ],
+   "classify": {
+    "var": "WZ08E5",
+    "keys": [
+     "WZ08-4711-01"
+    ]
+   },
+   "seriesFound": [
+    "Deutschland · Eh.m. Lebensmitteln (ohne Eh.m. LM an Verkaufsst.) | Beschäftigtenindex"
+   ]
+  },
+  "de_imp_tissue": {
+   "table": "51000-0014",
+   "valueCount": 10000,
+   "values": [
+    {
+     "code": "WA48030010",
+     "content": "Zellstoffwatte, in Rollen, ungefaltet"
+    },
+    {
+     "code": "WA48030031",
+     "content": "Gekrepptes Papier für Haushalt, <=25g/m2"
+    },
+    {
+     "code": "WA48030039",
+     "content": "Gekrepptes Papier für Haushalt, >25g/m2"
+    },
+    {
+     "code": "WA48030090",
+     "content": "Papiere, Herstellung von Toilettenpapier u.a."
+    },
+    {
+     "code": "WA48181010",
+     "content": "Toilettenpapier, qm-Gewicht bis 25g"
+    },
+    {
+     "code": "WA48181090",
+     "content": "Toilettenpapier, qm-Gewicht über 25g"
+    },
+    {
+     "code": "WA48182010",
+     "content": "Taschentücher und Abschminktücher, aus Papier"
+    },
+    {
+     "code": "WA48182091",
+     "content": "Handtücher, in Rollen, aus Papierhalbstoff"
+    },
+    {
+     "code": "WA48182099",
+     "content": "Handtücher, nicht in Rollen, aus Papier"
+    },
+    {
+     "code": "WA48183000",
+     "content": "Tischtücher und Servietten, aus Papier"
+    }
+   ],
+   "classify": {
+    "var": "WAM8",
+    "keys": [
+     "WA48030010",
+     "WA48030031",
+     "WA48030039",
+     "WA48030090",
+     "WA48181010",
+     "WA48181090",
+     "WA48182010",
+     "WA48182091",
+     "WA48182099",
+     "WA48183000"
+    ]
+   },
+   "matched": [
+    "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Gewicht",
+    "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Gewicht",
+    "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Gewicht",
+    "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Gewicht",
+    "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Gewicht",
+    "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Gewicht",
+    "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Gewicht",
+    "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Gewicht",
+    "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Gewicht",
+    "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Gewicht"
+   ]
+  },
+  "de_exp_tissue": {
+   "table": "51000-0014",
+   "valueCount": 10000,
+   "values": [
+    {
+     "code": "WA48030010",
+     "content": "Zellstoffwatte, in Rollen, ungefaltet"
+    },
+    {
+     "code": "WA48030031",
+     "content": "Gekrepptes Papier für Haushalt, <=25g/m2"
+    },
+    {
+     "code": "WA48030039",
+     "content": "Gekrepptes Papier für Haushalt, >25g/m2"
+    },
+    {
+     "code": "WA48030090",
+     "content": "Papiere, Herstellung von Toilettenpapier u.a."
+    },
+    {
+     "code": "WA48181010",
+     "content": "Toilettenpapier, qm-Gewicht bis 25g"
+    },
+    {
+     "code": "WA48181090",
+     "content": "Toilettenpapier, qm-Gewicht über 25g"
+    },
+    {
+     "code": "WA48182010",
+     "content": "Taschentücher und Abschminktücher, aus Papier"
+    },
+    {
+     "code": "WA48182091",
+     "content": "Handtücher, in Rollen, aus Papierhalbstoff"
+    },
+    {
+     "code": "WA48182099",
+     "content": "Handtücher, nicht in Rollen, aus Papier"
+    },
+    {
+     "code": "WA48183000",
+     "content": "Tischtücher und Servietten, aus Papier"
+    }
+   ],
+   "classify": {
+    "var": "WAM8",
+    "keys": [
+     "WA48030010",
+     "WA48030031",
+     "WA48030039",
+     "WA48030090",
+     "WA48181010",
+     "WA48181090",
+     "WA48182010",
+     "WA48182091",
+     "WA48182099",
+     "WA48183000"
+    ]
+   },
+   "matched": [
+    "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Gewicht",
+    "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Gewicht",
+    "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Gewicht",
+    "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Gewicht",
+    "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Gewicht",
+    "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Gewicht",
+    "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Gewicht",
+    "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Gewicht",
+    "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Gewicht",
+    "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Gewicht"
+   ]
+  },
+  "de_imp_pulp": {
+   "table": "51000-0014",
+   "valueCount": 10000,
+   "values": [
+    {
+     "code": "WA47032100",
+     "content": "Chemische Halbstoffe, Nadelholz, gebleicht kgtr90%"
+    },
+    {
+     "code": "WA47032900",
+     "content": "Chemische Halbstoffe aus Holz, gebleicht kgtr90%"
+    }
+   ],
+   "classify": {
+    "var": "WAM8",
+    "keys": [
+     "WA47032100",
+     "WA47032900"
+    ]
+   },
+   "matched": [
+    "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Gewicht",
+    "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Gewicht"
+   ]
+  },
+  "prof_energy_total": {
+   "table": "43531-0001",
+   "valueCount": 32,
+   "values": [
+    {
+     "code": "WZ08-17",
+     "content": "Herstellung von Papier, Pappe und Waren daraus"
+    }
+   ],
+   "classify": {
+    "var": "WZ08S1",
+    "keys": [
+     "WZ08-17"
+    ]
+   },
+   "matched": [
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch"
+   ]
+  },
+  "prof_energy_gas": {
+   "table": "43531-0001",
+   "valueCount": 32,
+   "values": [
+    {
+     "code": "WZ08-17",
+     "content": "Herstellung von Papier, Pappe und Waren daraus"
+    }
+   ],
+   "classify": {
+    "var": "WZ08S1",
+    "keys": [
+     "WZ08-17"
+    ]
+   },
+   "matched": [
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas"
+   ]
+  },
+  "prof_energy_power": {
+   "table": "43531-0001",
+   "valueCount": 32,
+   "values": [
+    {
+     "code": "WZ08-17",
+     "content": "Herstellung von Papier, Pappe und Waren daraus"
+    }
+   ],
+   "classify": {
+    "var": "WZ08S1",
+    "keys": [
+     "WZ08-17"
+    ]
+   },
+   "seriesFound": [
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Abfall (Hausmüll, Siedlungsabfälle)",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Biogas",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Braunkohlenbriketts",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Dieselkraftstoff",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Feste biogene Stoffe",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Flüssiggas",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, leicht",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, schwer",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Klärgas",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Staub- und Trockenkohle",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Steinkohlen",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Wärme",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Wärmepumpen (Erd- und Umweltwärme)",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Abfall (Hausmüll, Siedlungsabfälle)",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Biogas",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Braunkohlenbriketts",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Dieselkraftstoff",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Feste biogene Stoffe",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Flüssiggas",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, leicht",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, schwer",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Insgesamt",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Klärgas",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Staub- und Trockenkohle",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Steinkohlen",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Wärme",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Wärmepumpen (Erd- und Umweltwärme)"
+   ]
+  },
+  "prof_energy_coal": {
+   "table": "43531-0001",
+   "valueCount": 32,
+   "values": [
+    {
+     "code": "WZ08-17",
+     "content": "Herstellung von Papier, Pappe und Waren daraus"
+    }
+   ],
+   "classify": {
+    "var": "WZ08S1",
+    "keys": [
+     "WZ08-17"
+    ]
+   },
+   "matched": [
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Steinkohlen | Energieverbrauch",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Braunkohlenbriketts | Energieverbrauch",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Steinkohlen | Energieverbrauch",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Braunkohlenbriketts | Energieverbrauch"
+   ]
+  },
+  "prof_energy_oil": {
+   "table": "43531-0001",
+   "valueCount": 32,
+   "values": [
+    {
+     "code": "WZ08-17",
+     "content": "Herstellung von Papier, Pappe und Waren daraus"
+    }
+   ],
+   "classify": {
+    "var": "WZ08S1",
+    "keys": [
+     "WZ08-17"
+    ]
+   },
+   "matched": [
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, leicht | Energieverbrauch",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, leicht | Energieverbrauch",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, schwer | Energieverbrauch",
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, schwer | Energieverbrauch"
+   ]
+  },
+  "prof_energy_renew": {
+   "table": "43531-0001",
+   "valueCount": 32,
+   "values": [
+    {
+     "code": "WZ08-17",
+     "content": "Herstellung von Papier, Pappe und Waren daraus"
+    }
+   ],
+   "classify": {
+    "var": "WZ08S1",
+    "keys": [
+     "WZ08-17"
+    ]
+   },
+   "matched": [
+    "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Biogas | Energieverbrauch",
+    "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Biogas | Energieverbrauch"
+   ]
+  },
+  "prof_waste": {
+   "table": "32151-0001",
+   "valueCount": 34,
+   "valueSample": [
+    {
+     "code": "WZ08-A",
+     "content": "Land- und Forstwirtschaft, Fischerei"
+    },
+    {
+     "code": "WZ08-B",
+     "content": "Bergbau und Gewinnung von Steinen und Erden"
+    },
+    {
+     "code": "WZ08-C",
+     "content": "Verarbeitendes Gewerbe"
+    },
+    {
+     "code": "WZ08-10-01",
+     "content": "Ernährungsgewerbe und Tabakverarbeitung"
+    },
+    {
+     "code": "WZ08-13-02",
+     "content": "Textilien, Bekleidung, Leder und Lederwaren"
+    },
+    {
+     "code": "WZ08-16",
+     "content": "H.v. Holz-, Flecht-, Korb-u.Korkwaren (ohne Möbel)"
+    },
+    {
+     "code": "WZ08-17-01",
+     "content": "Herstellung v. Papier,Pappe,Druckerzeugnissen usw."
+    },
+    {
+     "code": "WZ08-19",
+     "content": "Kokerei und Mineralölverarbeitung"
+    },
+    {
+     "code": "WZ08-20",
+     "content": "Herstellung von chemischen Erzeugnissen"
+    },
+    {
+     "code": "WZ08-21",
+     "content": "Herstellung von pharmazeutischen Erzeugnissen"
+    },
+    {
+     "code": "WZ08-22",
+     "content": "Herstellung von Gummi- und Kunststoffwaren"
+    },
+    {
+     "code": "WZ08-23",
+     "content": "H.v.Glas,-waren,Keramik,Verarb. v.Steinen u.Erden"
+    },
+    {
+     "code": "WZ08-24",
+     "content": "Metallerzeugung und -bearbeitung"
+    },
+    {
+     "code": "WZ08-25",
+     "content": "Herstellung von Metallerzeugnissen"
+    },
+    {
+     "code": "WZ08-26-01",
+     "content": "Herstellung v. DV-Geräten u. elektr. Ausrüstungen"
+    },
+    {
+     "code": "WZ08-28",
+     "content": "Maschinenbau"
+    },
+    {
+     "code": "WZ08-29-01",
+     "content": "Fahrzeugbau"
+    },
+    {
+     "code": "WZ08-31-02",
+     "content": "Herstellung von Möbeln und sonstigen Waren"
+    },
+    {
+     "code": "WZ08-33",
+     "content": "Reparatur u.Installation von Masch.u.Ausrüstungen"
+    },
+    {
+     "code": "WZ08-D",
+     "content": "Energieversorgung"
+    },
+    {
+     "code": "WZ08-E",
+     "content": "Wasserversorg.,Entsorg.,Beseitig.v.Umweltverschm."
+    },
+    {
+     "code": "WZ08-38",
+     "content": "Sammlung, Abfallbeseitigung, Rückgewinnung"
+    },
+    {
+     "code": "WZ08-F",
+     "content": "Baugewerbe"
+    },
+    {
+     "code": "WZ08-G",
+     "content": "Handel, Instandhaltung und Reparatur von Kfz"
+    },
+    {
+     "code": "WZ08-H",
+     "content": "Verkehr und Lagerei"
+    }
+   ]
+  },
+  "prof_envinv": {
+   "table": "32511-0001",
+   "valueCount": 44,
+   "values": [
+    {
+     "code": "WZ08-17",
+     "content": "Herstellung von Papier, Pappe und Waren daraus"
+    }
+   ],
+   "classify": {
+    "var": "WZ08Y8",
+    "keys": [
+     "WZ08-17"
+    ]
+   }
+  }
+ },
  "61281-0006": {
   "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n61281;Index der Großhandelsverkaufspreise;JAHR;Jahr;2025;MONAT;Monate;MONAT04;April;DINSG;Deutschland insgesamt;DG;Deutschland;CP08P1;CPA 2008: Altpapier und Altmetalle;CPA08-381152-07;Sortiertes Büroaltpapier;18,0;%;PRE011;i",
   "columns": [
@@ -98,130 +1431,1253 @@
    ]
   ],
   "series": [
-   "Deutschland · Abfälle u. Schrott aus Kupfer u. Kupferlegierungen",
-   "Deutschland · Abfälle und Schrott aus Aluminium",
-   "Deutschland · Abfälle und Schrott aus Eisen und Stahl",
-   "Deutschland · Gebrauchte Kraftwellpappe 2",
-   "Deutschland · Gemischtes Altpapier",
-   "Deutschland · Papier- u.Pappereststoffe z.Papier- u.Pappeherst.",
-   "Deutschland · Sortiertes Büroaltpapier",
-   "Deutschland · Verpackungen aus Papier und Karton",
-   "Deutschland · Zeitungen",
-   "Deutschland · Zeitungen und Illustrierte, Deinkingware"
-  ]
+   "Deutschland · Abfälle u. Schrott aus Kupfer u. Kupferlegierungen | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Abfälle u. Schrott aus Kupfer u. Kupferlegierungen | in [%]",
+   "Deutschland · Abfälle und Schrott aus Aluminium | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Abfälle und Schrott aus Aluminium | in [%]",
+   "Deutschland · Abfälle und Schrott aus Eisen und Stahl | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Abfälle und Schrott aus Eisen und Stahl | in [%]",
+   "Deutschland · Gebrauchte Kraftwellpappe 2 | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Gebrauchte Kraftwellpappe 2 | in [%]",
+   "Deutschland · Gemischtes Altpapier | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Gemischtes Altpapier | in [%]",
+   "Deutschland · Papier- u.Pappereststoffe z.Papier- u.Pappeherst. | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Papier- u.Pappereststoffe z.Papier- u.Pappeherst. | in [%]",
+   "Deutschland · Sortiertes Büroaltpapier | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Sortiertes Büroaltpapier | in [%]",
+   "Deutschland · Verpackungen aus Papier und Karton | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Verpackungen aus Papier und Karton | in [%]",
+   "Deutschland · Zeitungen und Illustrierte, Deinkingware | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Zeitungen und Illustrierte, Deinkingware | in [%]",
+   "Deutschland · Zeitungen | Index der Großhandelsverkaufspreise [2021=100]",
+   "Deutschland · Zeitungen | in [%]"
+  ],
+  "periodColumn": "1_variable_attribute_code"
  },
  "matched": {
   "de_rcp_102": "Deutschland · Gemischtes Altpapier",
   "de_rcp_104": "Deutschland · Verpackungen aus Papier und Karton",
   "de_rcp_403": "Deutschland · Gebrauchte Kraftwellpappe 2",
-  "de_rcp_111": "Deutschland · Zeitungen und Illustrierte, Deinkingware"
+  "de_rcp_111": "Deutschland · Zeitungen und Illustrierte, Deinkingware",
+  "de_imp_tissue": "10 series (sum)",
+  "de_exp_tissue": "10 series (sum)",
+  "de_imp_pulp": "2 series (sum)",
+  "prof_energy_total": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
+  "prof_energy_gas": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
+  "prof_energy_coal": "4 series (sum)",
+  "prof_energy_oil": "4 series (sum)",
+  "prof_energy_renew": "2 series (sum)"
+ },
+ "variables": {
+  "61241-0004": [
+   {
+    "code": "61241",
+    "content": "Index der Erzeugerpreise gewerblicher Produkte"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "PRE001",
+    "content": "Erzeugerpreisindex gewerblicher Produkte"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   },
+   {
+    "code": "MONAT",
+    "content": "Monate"
+   },
+   {
+    "code": "GP19M2",
+    "content": "GP2019 (2-Steller): Gewerbliche Produkte"
+   }
+  ],
+  "62421-0001": [
+   {
+    "code": "62421",
+    "content": "Arbeitskostenindex"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "AKI001",
+    "content": "Index der Arbeitskosten je geleistete Stunde"
+   },
+   {
+    "code": "WZ08D2",
+    "content": "WZ2008 (Wirtschaftsbereiche): Arbeitskostenindex"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   },
+   {
+    "code": "QUARTG",
+    "content": "Quartale"
+   },
+   {
+    "code": "WERT07",
+    "content": "Original- und bereinigte Daten"
+   }
+  ],
+  "42153-0001": [
+   {
+    "code": "42153",
+    "content": "Indizes der Produktion im Verarbeitenden Gewerbe"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "PRO101",
+    "content": "Produktionsindex"
+   },
+   {
+    "code": "WERT03",
+    "content": "Original- und bereinigte Daten"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   },
+   {
+    "code": "MONAT",
+    "content": "Monate"
+   },
+   {
+    "code": "WZ08V1",
+    "content": "WZ2008 (Hauptgruppen, Aggregate): Verarb. Gewerbe"
+   }
+  ],
+  "45212-0002": [
+   {
+    "code": "45212",
+    "content": "Monatsstatistik im Einzelhandel"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "BES100",
+    "content": "Beschäftigtenindex"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   },
+   {
+    "code": "MONAT",
+    "content": "Monate"
+   },
+   {
+    "code": "WZ08E5",
+    "content": "WZ2008 (2- bis 4-Steller): Einzelhandel"
+   }
+  ],
+  "51000-0014": [
+   {
+    "code": "51000",
+    "content": "Außenhandel"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "MONAT",
+    "content": "Monate"
+   },
+   {
+    "code": "BMA",
+    "content": "Ausfuhr: Besondere Maßeinheit"
+   },
+   {
+    "code": "GEWA",
+    "content": "Ausfuhr: Gewicht"
+   },
+   {
+    "code": "WERTA",
+    "content": "Ausfuhr: Wert"
+   },
+   {
+    "code": "WERTAS",
+    "content": "Ausfuhr: Wert (US-Dollar)"
+   },
+   {
+    "code": "BME",
+    "content": "Einfuhr: Besondere Maßeinheit"
+   },
+   {
+    "code": "GEWE",
+    "content": "Einfuhr: Gewicht"
+   },
+   {
+    "code": "WERTE",
+    "content": "Einfuhr: Wert"
+   },
+   {
+    "code": "WERTES",
+    "content": "Einfuhr: Wert (US-Dollar)"
+   },
+   {
+    "code": "WAM8",
+    "content": "Warenverzeichnis Außenhandelsstatistik (8-Steller)"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   }
+  ],
+  "43531-0001": [
+   {
+    "code": "43531",
+    "content": "Energieverwendung der Betriebe im Verarb. Gewerbe"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "VBR001",
+    "content": "Energieverbrauch"
+   },
+   {
+    "code": "ENRNZ1",
+    "content": "Nutzung des Energieverbrauchs"
+   },
+   {
+    "code": "WZ08S1",
+    "content": "WZ2008 (ausgewählte Positionen): Energie"
+   },
+   {
+    "code": "ENRG08",
+    "content": "Energieträger"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   }
+  ],
+  "32151-0001": [
+   {
+    "code": "32151",
+    "content": "Erhebung der gefährlichen Abfälle"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "ABF010",
+    "content": "Abfallerzeuger"
+   },
+   {
+    "code": "ABF011",
+    "content": "Abfallmengen"
+   },
+   {
+    "code": "ABF012",
+    "content": "Abfallmengen, von Primärerzeugern erzeugt"
+   },
+   {
+    "code": "WZ08G5",
+    "content": "WZ2008 (ausgewählte Positionen): Abfallwirtschaft"
+   },
+   {
+    "code": "EAVXG2",
+    "content": "Abfallarten (EAV 2-Steller)"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   }
+  ],
+  "32511-0001": [
+   {
+    "code": "32511",
+    "content": "Erhebung der Investitionen für den Umweltschutz"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "UNT003",
+    "content": "Unternehmen"
+   },
+   {
+    "code": "UNT007",
+    "content": "Unternehmen mit Investitionen"
+   },
+   {
+    "code": "UNT014",
+    "content": "Unternehmen mit Gesamtinvestitionen f.Umweltschutz"
+   },
+   {
+    "code": "INV001",
+    "content": "Investitionen"
+   },
+   {
+    "code": "INV016",
+    "content": "Invest. i.Untern. m.Gesamtinvest. f.d.Umweltschutz"
+   },
+   {
+    "code": "WZ08Y8",
+    "content": "WZ2008: Investitionen für den Umweltschutz"
+   },
+   {
+    "code": "UMSGR1",
+    "content": "Umsatzgrößenklassen der Unternehmen"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   }
+  ]
+ },
+ "catalogue": {
+  "62421-*": [
+   {
+    "code": "62421-0001",
+    "content": "Arbeitskostenindizes: Deutschland, Quartale, Wirtschaftsbereiche, Original- und bereinigte Daten"
+   },
+   {
+    "code": "62421-0010",
+    "content": "Gewichtung der Arbeitskostenindizes: Deutschland, Jahre, Wirtschaftsabschnitte"
+   }
+  ],
+  "42153-*": [
+   {
+    "code": "42153-0001",
+    "content": "Produktionsindex für das Verarbeitende Gewerbe: Deutschland, Monate, Original- und bereinigte Daten, Wirtschaftszweige (Hauptgruppen und Aggregate)"
+   },
+   {
+    "code": "42153-0002",
+    "content": "Produktionsindex für das Verarbeitende Gewerbe: Deutschland, Monate, Original- und bereinigte Daten, Wirtschaftszweige (2-/3-/4-Steller)"
+   },
+   {
+    "code": "42153-0003",
+    "content": "Produktionsindex für das Verarbeitende Gewerbe: Deutschland, Monate, Original- und bereinigte Daten, Wirtschaftszweige (2-4-Steller Hierarchie)"
+   }
+  ],
+  "45212-*": [
+   {
+    "code": "45212-0001",
+    "content": "Beschäftigtenindex im Einzelhandel: Deutschland, Jahre, Wirtschaftszweige"
+   },
+   {
+    "code": "45212-0002",
+    "content": "Beschäftigtenindex im Einzelhandel: Deutschland, Monate/Quartale/Halbjahre, Wirtschaftszweige"
+   },
+   {
+    "code": "45212-0003",
+    "content": "Umsatzindex im Einzelhandel: Deutschland, Jahre, Preisarten, Wirtschaftszweige"
+   },
+   {
+    "code": "45212-0004",
+    "content": "Umsatzindex im Einzelhandel: Deutschland, Monate/Quartale/Halbjahre, Preisarten, Wirtschaftszweige"
+   },
+   {
+    "code": "45212-0005",
+    "content": "Umsatzindex im Einzelhandel: Deutschland, Monate, Preisarten, Original- und bereinigte Daten, Wirtschaftszweige"
+   },
+   {
+    "code": "45212-0011",
+    "content": "Beschäftigtenindex im Einzelhandel: Bundesländer, Jahre"
+   },
+   {
+    "code": "45212-0012",
+    "content": "Beschäftigtenindex im Einzelhandel: Bundesländer, Monate/Quartale/Halbjahre"
+   },
+   {
+    "code": "45212-0013",
+    "content": "Umsatzindex im Einzelhandel: Bundesländer, Jahre, Preisarten"
+   },
+   {
+    "code": "45212-0014",
+    "content": "Umsatzindex im Einzelhandel: Bundesländer, Monate/Quartale/Halbjahre, Preisarten"
+   }
+  ],
+  "43531-*": [
+   {
+    "code": "43531-0001",
+    "content": "Energieverbrauch der Betriebe im Verarbeitenden Gewerbe: Deutschland, Jahre, Nutzung des Energieverbrauchs, Wirtschaftszweige, Energieträger"
+   },
+   {
+    "code": "43531-0002",
+    "content": "Stromerzeugung, Strombezug, Stromabgabe, Stromverbrauch: Deutschland, Jahre, Wirtschaftszweige"
+   }
+  ],
+  "32221-*": [
+   {
+    "code": "32221-0001",
+    "content": "Wasseraufkommen, Betriebe mit Wasseraufkommen: Bundesländer, Jahre (bis 2019), Wassergewinnung und -bezug"
+   },
+   {
+    "code": "32221-0002",
+    "content": "Wasseraufkommen: Bundesländer, Jahre (bis 2019), Eigengewinnung und Fremdbezug"
+   },
+   {
+    "code": "32221-0003",
+    "content": "Wasseraufkommen: Bundesländer, Jahre, Verwendungsarten"
+   },
+   {
+    "code": "32221-0004",
+    "content": "Frischwassereinsatz: Bundesländer, Jahre, Wassernutzung"
+   },
+   {
+    "code": "32221-0005",
+    "content": "Unbehandeltes Abwasser: Bundesländer, Jahre (bis 2019), Abwassereinleitungsarten"
+   }
+  ],
+  "321*": [
+   {
+    "code": "32111-0001",
+    "content": "Abfallentsorgung: Deutschland, Jahre"
+   },
+   {
+    "code": "32111-0002",
+    "content": "Abfallentsorgung: Deutschland, Jahre, Abfallarten"
+   },
+   {
+    "code": "32111-0003",
+    "content": "Abfallentsorgung: Deutschland, Jahre, Anlagenart"
+   },
+   {
+    "code": "32111-0004",
+    "content": "Abfallentsorgung: Deutschland, Jahre, Anlagenart, Abfallarten"
+   },
+   {
+    "code": "32111-0010",
+    "content": "Abfallentsorgung: Bundesländer, Jahre"
+   },
+   {
+    "code": "32111-0011",
+    "content": "Abfallentsorgung: Bundesländer, Jahre, Anlagenart"
+   },
+   {
+    "code": "32121-0001",
+    "content": "Aufkommen an Haushaltsabfällen: Deutschland, Jahre, Abfallarten"
+   },
+   {
+    "code": "32121-0002",
+    "content": "Aufkommen an Haushaltsabfällen: Bundesländer, Jahre"
+   },
+   {
+    "code": "32121-0003",
+    "content": "Aufkommen an Haushaltsabfällen: Bundesländer, Jahre, Abfallarten"
+   },
+   {
+    "code": "32131-0001",
+    "content": "Eingesammelte Transport- und Umverpackungen, Einsammler: Deutschland, Jahre"
+   },
+   {
+    "code": "32131-0002",
+    "content": "Eingesammelte Transport- und Umverpackungen: Deutschland, Jahre, Verbleib der Verpackungen, Verpackungsarten"
+   },
+   {
+    "code": "32131-0003",
+    "content": "Eingesammelte Transport- und Umverpackungen: Bundesländer, Jahre, Verbleib der Verpackungen"
+   },
+   {
+    "code": "32136-0001",
+    "content": "Unternehmen, Erfasste Verkaufsverpackungen von privaten Endverbrauchern, Verkaufsverpackungen nach der Sortierung: Deutschland, Jahre"
+   },
+   {
+    "code": "32136-0002",
+    "content": "Unternehmen, Erfasste Verkaufsverpackungen von privaten Endverbrauchern, Verkaufsverpackungen nach der Sortierung: Deutschland, Jahre, Rücknahmearten"
+   },
+   {
+    "code": "32136-0003",
+    "content": "Erfasste Verkaufsverpackungen von privaten Endverbrauchern: Deutschland, Jahre, Rücknahmearten, Art der Verkaufsverpackungen"
+   },
+   {
+    "code": "32136-0004",
+    "content": "Verkaufsverpackungen nach der Sortierung: Deutschland, Jahre, Materialarten"
+   },
+   {
+    "code": "32136-0005",
+    "content": "Verkaufsverpackungen nach der Sortierung: Deutschland, Jahre, Materialarten, Verwertungsarten"
+   },
+   {
+    "code": "32136-0006",
+    "content": "Verkaufsverpackungen nach der Sortierung: Deutschland, Jahre, Rücknahmearten, Verwertungsarten"
+   },
+   {
+    "code": "32136-0010",
+    "content": "Unternehmen, Erfasste Verkaufsverpackungen von privaten Endverbrauchern: Bundesländer, Jahre"
+   },
+   {
+    "code": "32136-0011",
+    "content": "Erfasste Verkaufsverpackungen von privaten Endverbrauchern: Bundesländer, Jahre, Art der Verkaufsverpackungen"
+   },
+   {
+    "code": "32137-0001",
+    "content": "Verkaufs-, Transport- und Umverpackungen, Pfandpflichtige Einweggetränkeverpackungen: Deutschland, Jahre, Verwertungsarten, Art des Verpackungsmaterials"
+   },
+   {
+    "code": "32137-0002",
+    "content": "Ausgesonderte Mehrwegverpackungen: Deutschland, Jahre"
+   },
+   {
+    "code": "32137-0010",
+    "content": "Verkaufs-, Transport- und Umverpackungen, Pfandpflichtige Einweggetränkeverpackungen: Bundesländer, Jahre, Verwertungsarten, Art des Verpackungsmaterials"
+   },
+   {
+    "code": "32137-0011",
+    "content": "Ausgesonderte Mehrwegverpackungen: Bundesländer, Jahre"
+   },
+   {
+    "code": "32141-0001",
+    "content": "Bauschuttaufbereitungsanlagen, Asphaltmischanlagen: Deutschland, Jahre, Anlagenart"
+   },
+   {
+    "code": "32141-0002",
+    "content": "Bauschuttaufbereitungsanlagen: Deutschland, Jahre, Abfallarten"
+   },
+   {
+    "code": "32141-0003",
+    "content": "Asphaltmischanlagen: Deutschland, Jahre, Abfallarten"
+   },
+   {
+    "code": "32141-0004",
+    "content": "Bauschuttaufbereitungsanlagen, Asphaltmischanlagen: Bundesländer, Jahre"
+   },
+   {
+    "code": "32151-0001",
+    "content": "Abfallerzeuger, Abfallmengen (gefährliche Abfälle): Deutschland, Jahre, Wirtschaftszweige, Abfallarten (EAV 2-Steller)"
+   },
+   {
+    "code": "32151-0002",
+    "content": "Abfallerzeuger, Abfallmengen (gefährliche Abfälle): Deutschland, Jahre, Abfallarten (EAV 2- und 6-Steller)"
+   },
+   {
+    "code": "32151-0003",
+    "content": "Abfallerzeuger, Abfallmengen (gefährliche Abfälle): Bundesländer, Jahre"
+   },
+   {
+    "code": "32151-0004",
+    "content": "Erzeuger von primär nachgewiesenen Abfallmengen, Abgegebene Abfallmenge an Entsorger (gefährliche Abfälle): Deutschland, Jahre (bis 2008)"
+   },
+   {
+    "code": "32151-0005",
+    "content": "Erzeuger von primär nachgewiesenen Abfallmengen, Abgegebene Abfallmenge an Entsorger (gefährliche Abfälle): Bundesländer, Jahre (bis 2008)"
+   },
+   {
+    "code": "32161-0001",
+    "content": "Betriebe, erzeugte Abfallmenge: Deutschland, Jahre, Abfallarten"
+   },
+   {
+    "code": "32161-0002",
+    "content": "Betriebe, erzeugte Abfallmenge: Deutschland, Jahre, Wirtschaftszweige, Abfallarten"
+   },
+   {
+    "code": "32161-0003",
+    "content": "Betriebe, erzeugte Abfallmenge, Beschäftigte, Erfassungsgrad der Betriebe, Erfassungsgrad der Beschäftigten: Deutschland, Jahre, Wirtschaftszweige"
+   },
+   {
+    "code": "32161-0004",
+    "content": "Betriebe, erzeugte Abfallmenge: Bundesländer, Jahre"
+   },
+   {
+    "code": "32171-0001",
+    "content": "Abfallaufkommen: Deutschland, Jahre, Art der Abfallentsorgung, Abfallarten"
+   },
+   {
+    "code": "32171-0002",
+    "content": "Abfallverwertungsquote, Stoffliche Abfallverwertungsquote, Abfallrecyclingquote: Deutschland, Jahre, Abfallarten"
+   },
+   {
+    "code": "32171-0003",
+    "content": "Abfallaufkommen: Deutschland, Jahre, Art der Abfallentsorgung, Abfallarten, Gefährlichkeit der Abfälle"
+   }
+  ],
+  "32511-*": [
+   {
+    "code": "32511-0001",
+    "content": "Unternehmen und Investitionen für den Umweltschutz: Deutschland, Jahre (bis 2017), Umsatz-/ Beschäftigtengrößenklassen, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0002",
+    "content": "Investitionen für den Umweltschutz: Deutschland, Jahre (bis 2017), Umsatz-/Beschäftigtengrößenklassen, Umweltbereiche, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0003",
+    "content": "Unternehmen und Investitionen für den Umweltschutz: Deutschland, Jahre, Art der Investition, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0004",
+    "content": "Investitionen in Sachanlagen für den Umweltschutz: Deutschland, Jahre, Umweltschutztyp, Umweltbereiche, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0005",
+    "content": "Investitionen in neu gemietete und gepachtete neue Sachanlagen für den Umweltschutz: Deutschland, Jahre, Umweltbereiche, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0006",
+    "content": "Investitionen in immaterielle Vermögensgegenstände für den Umweltschutz: Deutschland, Jahre, Art der immateriellen Vermögensgegenstände, Wirtschaftszweige"
+   }
+  ]
+ },
+ "45212-0002 · WZ08-4711-01": {
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n45212;Monatsstatistik im Einzelhandel;JAHR;Jahr;2023;MONAT;Monate;MONAT12;Dezember;DINSG;Deutschland insgesamt;DG;Deutschland;WZ08E5;WZ2008 (2- bis 4-Steller): Einzelhandel;WZ08-4711-01;Eh.m. Lebensmitteln (ohne Eh.m. LM an V",
+  "columns": [
+   "statistics_code",
+   "statistics_label",
+   "time_code",
+   "time_label",
+   "time",
+   "1_variable_code",
+   "1_variable_label",
+   "1_variable_attribute_code",
+   "1_variable_attribute_label",
+   "2_variable_code",
+   "2_variable_label",
+   "2_variable_attribute_code",
+   "2_variable_attribute_label",
+   "3_variable_code",
+   "3_variable_label",
+   "3_variable_attribute_code",
+   "3_variable_attribute_label",
+   "value",
+   "value_unit",
+   "value_variable_code",
+   "value_variable_label"
+  ],
+  "sample": [
+   [
+    "45212",
+    "Monatsstatistik im Einzelhandel",
+    "JAHR",
+    "Jahr",
+    "2023",
+    "MONAT",
+    "Monate",
+    "MONAT12",
+    "Dezember",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WZ08E5",
+    "WZ2008 (2- bis 4-Steller): Einzelhandel",
+    "WZ08-4711-01",
+    "Eh.m. Lebensmitteln (ohne Eh.m. LM an Verkaufsst.)",
+    "0,4",
+    "%",
+    "BES100",
+    "in"
+   ],
+   [
+    "45212",
+    "Monatsstatistik im Einzelhandel",
+    "JAHR",
+    "Jahr",
+    "2023",
+    "MONAT",
+    "Monate",
+    "MONAT12",
+    "Dezember",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WZ08E5",
+    "WZ2008 (2- bis 4-Steller): Einzelhandel",
+    "WZ08-4711-01",
+    "Eh.m. Lebensmitteln (ohne Eh.m. LM an Verkaufsst.)",
+    "99,2",
+    "2021=100",
+    "BES100",
+    "Beschäftigtenindex"
+   ],
+   [
+    "45212",
+    "Monatsstatistik im Einzelhandel",
+    "JAHR",
+    "Jahr",
+    "2022",
+    "MONAT",
+    "Monate",
+    "MONAT09",
+    "September",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WZ08E5",
+    "WZ2008 (2- bis 4-Steller): Einzelhandel",
+    "WZ08-4711-01",
+    "Eh.m. Lebensmitteln (ohne Eh.m. LM an Verkaufsst.)",
+    "-0,2",
+    "%",
+    "BES100",
+    "in"
+   ]
+  ],
+  "series": [
+   "Deutschland · Eh.m. Lebensmitteln (ohne Eh.m. LM an Verkaufsst.) | Beschäftigtenindex [2021=100]",
+   "Deutschland · Eh.m. Lebensmitteln (ohne Eh.m. LM an Verkaufsst.) | in [%]"
+  ],
+  "periodColumn": "1_variable_attribute_code"
+ },
+ "51000-0014 · WA48030010,WA48030031,WA48030039,WA48030090,WA48181010,WA481": {
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n51000;Außenhandel;JAHR;Jahr;2026;MONAT;Monate;MONAT07;Juli;DINSG;Deutschland insgesamt;DG;Deutschland;WAM8;Warenverzeichnis Außenhandelsstatistik (8-Steller);WA48181090;Toilettenpapier, qm-Gewicht über 25g;-;Anzahl;BMA;Ausfuh",
+  "columns": [
+   "statistics_code",
+   "statistics_label",
+   "time_code",
+   "time_label",
+   "time",
+   "1_variable_code",
+   "1_variable_label",
+   "1_variable_attribute_code",
+   "1_variable_attribute_label",
+   "2_variable_code",
+   "2_variable_label",
+   "2_variable_attribute_code",
+   "2_variable_attribute_label",
+   "3_variable_code",
+   "3_variable_label",
+   "3_variable_attribute_code",
+   "3_variable_attribute_label",
+   "value",
+   "value_unit",
+   "value_variable_code",
+   "value_variable_label"
+  ],
+  "sample": [
+   [
+    "51000",
+    "Außenhandel",
+    "JAHR",
+    "Jahr",
+    "2026",
+    "MONAT",
+    "Monate",
+    "MONAT07",
+    "Juli",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WAM8",
+    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
+    "WA48181090",
+    "Toilettenpapier, qm-Gewicht über 25g",
+    "-",
+    "Anzahl",
+    "BMA",
+    "Ausfuhr: Besondere Maßeinheit"
+   ],
+   [
+    "51000",
+    "Außenhandel",
+    "JAHR",
+    "Jahr",
+    "2026",
+    "MONAT",
+    "Monate",
+    "MONAT07",
+    "Juli",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WAM8",
+    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
+    "WA48181090",
+    "Toilettenpapier, qm-Gewicht über 25g",
+    "364,8",
+    "t",
+    "GEWA",
+    "Ausfuhr: Gewicht"
+   ],
+   [
+    "51000",
+    "Außenhandel",
+    "JAHR",
+    "Jahr",
+    "2026",
+    "MONAT",
+    "Monate",
+    "MONAT07",
+    "Juli",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WAM8",
+    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
+    "WA48181090",
+    "Toilettenpapier, qm-Gewicht über 25g",
+    "917",
+    "Tsd. US $",
+    "WERTAS",
+    "Ausfuhr: Wert (US-Dollar)"
+   ]
+  ],
+  "series": [
+   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Gewicht [t]",
+   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Gewicht [t]",
+   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Gewicht [t]",
+   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Gewicht [t]",
+   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Gewicht [t]",
+   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Gewicht [t]",
+   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Gewicht [t]",
+   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Gewicht [t]",
+   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Gewicht [t]",
+   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Gewicht [t]",
+   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Gewicht [t]",
+   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Gewicht [t]",
+   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Gewicht [t]",
+   "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Gewicht [t]",
+   "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Gewicht [t]",
+   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Gewicht [t]",
+   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Gewicht [t]",
+   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Gewicht [t]",
+   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Gewicht [t]",
+   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Gewicht [t]",
+   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Wert [Tsd. EUR]"
+  ],
+  "periodColumn": "1_variable_attribute_code"
+ },
+ "51000-0014 · WA47032100,WA47032900": {
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n51000;Außenhandel;JAHR;Jahr;2023;MONAT;Monate;MONAT07;Juli;DINSG;Deutschland insgesamt;DG;Deutschland;WAM8;Warenverzeichnis Außenhandelsstatistik (8-Steller);WA47032900;Chemische Halbstoffe aus Holz, gebleicht   kgtr90%;11894",
+  "columns": [
+   "statistics_code",
+   "statistics_label",
+   "time_code",
+   "time_label",
+   "time",
+   "1_variable_code",
+   "1_variable_label",
+   "1_variable_attribute_code",
+   "1_variable_attribute_label",
+   "2_variable_code",
+   "2_variable_label",
+   "2_variable_attribute_code",
+   "2_variable_attribute_label",
+   "3_variable_code",
+   "3_variable_label",
+   "3_variable_attribute_code",
+   "3_variable_attribute_label",
+   "value",
+   "value_unit",
+   "value_variable_code",
+   "value_variable_label"
+  ],
+  "sample": [
+   [
+    "51000",
+    "Außenhandel",
+    "JAHR",
+    "Jahr",
+    "2023",
+    "MONAT",
+    "Monate",
+    "MONAT07",
+    "Juli",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WAM8",
+    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
+    "WA47032900",
+    "Chemische Halbstoffe aus Holz, gebleicht   kgtr90%",
+    "11894125",
+    "Anzahl",
+    "BMA",
+    "Ausfuhr: Besondere Maßeinheit"
+   ],
+   [
+    "51000",
+    "Außenhandel",
+    "JAHR",
+    "Jahr",
+    "2023",
+    "MONAT",
+    "Monate",
+    "MONAT07",
+    "Juli",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WAM8",
+    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
+    "WA47032900",
+    "Chemische Halbstoffe aus Holz, gebleicht   kgtr90%",
+    "12387,3",
+    "t",
+    "GEWA",
+    "Ausfuhr: Gewicht"
+   ],
+   [
+    "51000",
+    "Außenhandel",
+    "JAHR",
+    "Jahr",
+    "2023",
+    "MONAT",
+    "Monate",
+    "MONAT07",
+    "Juli",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "WAM8",
+    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
+    "WA47032900",
+    "Chemische Halbstoffe aus Holz, gebleicht   kgtr90%",
+    "7564",
+    "Tsd. US $",
+    "WERTAS",
+    "Ausfuhr: Wert (US-Dollar)"
+   ]
+  ],
+  "series": [
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Besondere Maßeinheit [Anzahl]",
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Gewicht [t]",
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Besondere Maßeinheit [Anzahl]",
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Gewicht [t]",
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Besondere Maßeinheit [Anzahl]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Gewicht [t]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Wert [Tsd. EUR]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Besondere Maßeinheit [Anzahl]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Gewicht [t]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
+   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Wert [Tsd. EUR]"
+  ],
+  "periodColumn": "1_variable_attribute_code"
+ },
+ "43531-0001 · WZ08-17": {
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;4_variable_code;4_variable_label;4_variable_attribute_code;4_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n43531;Energieverwendung der Betriebe im Verarb. Gewerbe;JAHR;Jahr;2021;DINSG;Deutschland insgesamt;DG;Deutschland;ENRNZ1;Nutzung des Energi",
+  "columns": [
+   "statistics_code",
+   "statistics_label",
+   "time_code",
+   "time_label",
+   "time",
+   "1_variable_code",
+   "1_variable_label",
+   "1_variable_attribute_code",
+   "1_variable_attribute_label",
+   "2_variable_code",
+   "2_variable_label",
+   "2_variable_attribute_code",
+   "2_variable_attribute_label",
+   "3_variable_code",
+   "3_variable_label",
+   "3_variable_attribute_code",
+   "3_variable_attribute_label",
+   "4_variable_code",
+   "4_variable_label",
+   "4_variable_attribute_code",
+   "4_variable_attribute_label",
+   "value",
+   "value_unit",
+   "value_variable_code",
+   "value_variable_label"
+  ],
+  "sample": [
+   [
+    "43531",
+    "Energieverwendung der Betriebe im Verarb. Gewerbe",
+    "JAHR",
+    "Jahr",
+    "2021",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "ENRNZ1",
+    "Nutzung des Energieverbrauchs",
+    "ENRGNZ-02",
+    "Nichtenergetisch genutzt",
+    "WZ08S1",
+    "WZ2008 (ausgewählte Positionen): Energie",
+    "WZ08-17",
+    "Herstellung von Papier, Pappe und Waren daraus",
+    "ENRG08",
+    "Energieträger",
+    "KHL-B-STK",
+    "Staub- und Trockenkohle",
+    "-",
+    "GJ",
+    "VBR001",
+    "Energieverbrauch"
+   ],
+   [
+    "43531",
+    "Energieverwendung der Betriebe im Verarb. Gewerbe",
+    "JAHR",
+    "Jahr",
+    "2019",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "ENRNZ1",
+    "Nutzung des Energieverbrauchs",
+    "",
+    "Insgesamt",
+    "WZ08S1",
+    "WZ2008 (ausgewählte Positionen): Energie",
+    "WZ08-17",
+    "Herstellung von Papier, Pappe und Waren daraus",
+    "ENRG08",
+    "Energieträger",
+    "KHL-S-SONST",
+    "Sonstige Steinkohlen",
+    "-",
+    "GJ",
+    "VBR001",
+    "Energieverbrauch"
+   ],
+   [
+    "43531",
+    "Energieverwendung der Betriebe im Verarb. Gewerbe",
+    "JAHR",
+    "Jahr",
+    "2020",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "ENRNZ1",
+    "Nutzung des Energieverbrauchs",
+    "",
+    "Insgesamt",
+    "WZ08S1",
+    "WZ2008 (ausgewählte Positionen): Energie",
+    "WZ08-17",
+    "Herstellung von Papier, Pappe und Waren daraus",
+    "ENRG08",
+    "Energieträger",
+    "STROM-03",
+    "Stromverbrauch",
+    "63045154,65",
+    "GJ",
+    "VBR001",
+    "Energieverbrauch"
+   ]
+  ],
+  "series": [
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Abfall (Hausmüll, Siedlungsabfälle) | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Biogas | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Braunkohlenbriketts | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Dieselkraftstoff | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Feste biogene Stoffe | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Flüssiggas | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, leicht | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, schwer | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Klärgas | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Staub- und Trockenkohle | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Steinkohlen | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Wärme | Energieverbrauch [GJ]",
+   "Deutschland · Energetisch genutzt · Herstellung von Papier, Pappe und Waren daraus · Wärmepumpen (Erd- und Umweltwärme) | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Abfall (Hausmüll, Siedlungsabfälle) | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Biogas | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Braunkohlenbriketts | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Dieselkraftstoff | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Feste biogene Stoffe | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Flüssiggas | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, leicht | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Heizöl, schwer | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Insgesamt | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Klärgas | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Staub- und Trockenkohle | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Steinkohlen | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Wärme | Energieverbrauch [GJ]",
+   "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Wärmepumpen (Erd- und Umweltwärme) | Energieverbrauch [GJ]"
+  ],
+  "periodColumn": "none (yearly)"
+ },
+ "32511-0001 · WZ08-17": {
+  "answer": {
+   "Status": {
+    "Code": 7015,
+    "Content": "Für das Strukturelement JAHR\n existieren keine Werte zu den ausgewählten Ausprägungen.",
+    "Type": "Information"
+   },
+   "Ident": {
+    "Service": "data",
+    "Method": "tablefile"
+   }
+  }
  },
  "search": {
-  "Toilettenpapier": [
+  "Arbeitskostenindex": [
    {
-    "code": "42131-0002",
-    "content": "Produktion im Verarbeitenden Gewerbe: Deutschland, Quartale,\nGüterverzeichnis (9-Steller)"
+    "code": "62421-0001",
+    "content": "Arbeitskostenindizes: Deutschland, Quartale, Wirtschaftsbereiche, Original- und bereinigte Daten"
    },
    {
-    "code": "42131-0004",
-    "content": "Produktion im Verarbeitenden Gewerbe: Deutschland, Jahre,\nGüterverzeichnis (9-Steller)"
-   },
-   {
-    "code": "51000-0005",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWarensystematik"
-   },
-   {
-    "code": "51000-0006",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate,\nWarensystematik"
-   },
-   {
-    "code": "51000-0009",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre, Land,\nWarenverzeichnis (4-/6-Steller)"
-   },
-   {
-    "code": "51000-0010",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWare (4-/6-Steller), Länder"
-   },
-   {
-    "code": "51000-0011",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate, Land,\nWarenverzeichnis (4-/6-Steller)"
-   },
-   {
-    "code": "51000-0012",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate,\nWare (4-/6-Steller), Länder"
-   },
-   {
-    "code": "51000-0013",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWarenverzeichnis (8-Steller)"
-   },
-   {
-    "code": "51000-0014",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Monate,\nWarenverzeichnis (8-Steller)"
-   },
-   {
-    "code": "51000-0015",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre, Land,\nWarenverzeichnis (8-Steller)"
-   },
-   {
-    "code": "51000-0016",
-    "content": "Aus- und Einfuhr (Außenhandel): Deutschland, Jahre,\nWare (8-Steller), Länder"
+    "code": "62421-0010",
+    "content": "Gewichtung der Arbeitskostenindizes: Deutschland, Jahre, Wirtschaftsabschnitte"
    }
   ],
-  "Hygienepapier": [
+  "Produktionsindex Papier": "The read operation timed out",
+  "Einzelhandel Umsatz": [
    {
-    "code": "42121-0001",
-    "content": "Produktion im Verarbeitenden Gewerbe: Deutschland, Monate,\nGüteraggregate"
+    "code": "45341-0001",
+    "content": "Unternehmen, Beschäftigte, Umsatz und weitere betriebs- und volkswirtschaftliche Kennzahlen im Handel: Deutschland, Jahre, Wirtschaftszweige"
+   },
+   {
+    "code": "45341-0002",
+    "content": "Unternehmen, Beschäftigte, Umsatz und weitere betriebs- und volkswirtschaftliche Kennzahlen im Handel: Deutschland, Jahre, Wirtschaftszweige, Beschäftigtengrößenklassen"
+   },
+   {
+    "code": "45341-0003",
+    "content": "Unternehmen, Beschäftigte, Umsatz und weitere betriebs- und volkswirtschaftliche Kennzahlen im Handel: Deutschland, Jahre, Wirtschaftszweige, Umsatzgrößenklassen"
+   },
+   {
+    "code": "45341-0005",
+    "content": "Umsatz im Handel: Deutschland, Jahre, Umsatzarten, Wirtschaftszweige"
+   },
+   {
+    "code": "45341-0008",
+    "content": "Umsatz im Handel: Deutschland, Jahre, Wirtschaftszweige, Produkte"
+   },
+   {
+    "code": "45341-0050",
+    "content": "Unternehmen, Beschäftigte, Umsatz und weitere betriebs- und volkswirtschaftliche Kennzahlen im Einzelhandel: Deutschland, Jahre, Einzelhandelsbranchen"
+   },
+   {
+    "code": "45341-0100",
+    "content": "Verfügbares Einkommen, Umsatz, Arbeitsstätten, Verkaufsfläche im Einzelhandel (ohne Handel mit Kraftfahrzeugen): Deutschland, Jahre"
+   },
+   {
+    "code": "45341-0102",
+    "content": "Verfügbares Einkommen, Umsatz, Arbeitsstätten, Verkaufsfläche im Einzelhandel (ohne Handel mit Kraftfahrzeugen): Bundesländer, Jahre"
+   },
+   {
+    "code": "45341-0103",
+    "content": "Umsatz, Arbeitsstätten, Verkaufsfläche im Einzelhandel (ohne Handel mit Kraftfahrzeugen): Regierungsbezirke, Jahre"
+   },
+   {
+    "code": "48112-0001",
+    "content": "Unternehmen (EU), Tätige Personen, Umsatz, Produktionswert und weitere betriebswirtschaftliche Kennzahlen: Deutschland, Jahre, Wirtschaftszweige (WZ2008 1-/2-/3-/4-Steller)"
+   },
+   {
+    "code": "48112-0002",
+    "content": "Unternehmen (EU), Tätige Personen, Umsatz, Produktionswert und weitere betriebswirtschaftliche Kennzahlen: Deutschland, Jahre, Wirtschaftszweige (WZ2008 1-4-Steller Hierarchie)"
+   },
+   {
+    "code": "48121-0002",
+    "content": "Unternehmen, Tätige Personen, Umsatz und weitere betriebs- und volkswirtschaftliche Kennzahlen: Deutschland, Jahre, Unternehmensgröße, Wirtschaftszweige (WZ2008 1-/2-/3-St.)"
    }
   ],
-  "Sondervertragskunden": [
+  "Energieverwendung Verarbeitendes Gewerbe": [],
+  "Wassereinsatz": [],
+  "Umweltschutzinvestitionen": [
    {
-    "code": "43331-0001",
-    "content": "Stromabsatz und Erlöse der\nElektrizitätsversorgungsunternehmen: Deutschland, Jahre,\nAbnehmergruppen"
+    "code": "32511-0001",
+    "content": "Unternehmen und Investitionen für den Umweltschutz: Deutschland, Jahre (bis 2017), Umsatz-/ Beschäftigtengrößenklassen, Wirtschaftszweige"
    },
    {
-    "code": "61241-0003",
-    "content": "Erzeugerpreisindex gewerblicher Produkte: Deutschland,\nJahre, Güterverzeichnis (GP2019 2-/3-/4-/5-/6-/9-Steller/\nSonderpositionen)"
+    "code": "32511-0002",
+    "content": "Investitionen für den Umweltschutz: Deutschland, Jahre (bis 2017), Umsatz-/Beschäftigtengrößenklassen, Umweltbereiche, Wirtschaftszweige"
    },
    {
-    "code": "61241-0004",
-    "content": "Erzeugerpreisindex gewerblicher Produkte: Deutschland,\nMonate, Güterverzeichnis (GP2019 2-/3-/4-/5-/6-/9-Steller/\nSonderpositionen)"
+    "code": "32511-0003",
+    "content": "Unternehmen und Investitionen für den Umweltschutz: Deutschland, Jahre, Art der Investition, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0004",
+    "content": "Investitionen in Sachanlagen für den Umweltschutz: Deutschland, Jahre, Umweltschutztyp, Umweltbereiche, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0005",
+    "content": "Investitionen in neu gemietete und gepachtete neue Sachanlagen für den Umweltschutz: Deutschland, Jahre, Umweltbereiche, Wirtschaftszweige"
+   },
+   {
+    "code": "32511-0006",
+    "content": "Investitionen in immaterielle Vermögensgegenstände für den Umweltschutz: Deutschland, Jahre, Art der immateriellen Vermögensgegenstände, Wirtschaftszweige"
    }
   ],
-  "Erdgas Industrie": "The read operation timed out",
-  "Einfuhrpreise Zellstoff": [
+  "Abfallerzeugung": [
    {
-    "code": "61411-0003",
-    "content": "Index der Einfuhrpreise: Deutschland, Jahre,\nGüterverzeichnis (GP2019 2-/3-/4-Steller/Sonderpositionen)"
+    "code": "32151-0004",
+    "content": "Erzeuger von primär nachgewiesenen Abfallmengen, Abgegebene Abfallmenge an Entsorger (gefährliche Abfälle): Deutschland, Jahre (bis 2008)"
    },
    {
-    "code": "61411-0004",
-    "content": "Index der Einfuhrpreise: Deutschland, Monate,\nGüterverzeichnis (GP2019 2-/3-/4-Steller/Sonderpositionen)"
+    "code": "32151-0005",
+    "content": "Erzeuger von primär nachgewiesenen Abfallmengen, Abgegebene Abfallmenge an Entsorger (gefährliche Abfälle): Bundesländer, Jahre (bis 2008)"
    },
    {
-    "code": "61411-0005",
-    "content": "Index der Einfuhrpreise: Deutschland, Jahre,\nGüterverzeichnis (GP2019 2-4-Steller Hierarchie)"
+    "code": "32161-0001",
+    "content": "Betriebe, erzeugte Abfallmenge: Deutschland, Jahre, Abfallarten"
    },
    {
-    "code": "61411-0006",
-    "content": "Index der Einfuhrpreise: Deutschland, Monate,\nGüterverzeichnis (GP2019 2-4-Steller Hierarchie)"
+    "code": "32161-0002",
+    "content": "Betriebe, erzeugte Abfallmenge: Deutschland, Jahre, Wirtschaftszweige, Abfallarten"
    },
    {
-    "code": "61411-0011",
-    "content": "Index der Einfuhrpreise: Deutschland, Jahre,\nEuro-Länder und Nicht-Euro-Länder, Güterverzeichnis\n(GP2019 Sonderpositionen)"
+    "code": "32161-0003",
+    "content": "Betriebe, erzeugte Abfallmenge, Beschäftigte, Erfassungsgrad der Betriebe, Erfassungsgrad der Beschäftigten: Deutschland, Jahre, Wirtschaftszweige"
    },
    {
-    "code": "61411-0012",
-    "content": "Index der Einfuhrpreise: Deutschland, Monate,\nEuro-Länder und Nicht-Euro-Länder, Güterverzeichnis\n(GP2019 Sonderpositionen)"
-   }
-  ],
-  "Verbraucherpreisindex Toilettenpapier": [
-   {
-    "code": "61111-0005",
-    "content": "Verbraucherpreisindex: Deutschland, Jahre,\nKlassifikation der Verwendungszwecke des Individualkonsums\n(COICOP 2-/3-/4-/5-/10-Steller/Sonderpositionen)"
-   },
-   {
-    "code": "61111-0006",
-    "content": "Verbraucherpreisindex: Deutschland, Monate,\nKlassifikation der Verwendungszwecke des Individualkonsums\n(COICOP 2-/3-/4-/5-/10-Steller/Sonderpositionen)"
+    "code": "32161-0004",
+    "content": "Betriebe, erzeugte Abfallmenge: Bundesländer, Jahre"
    }
   ]
  }
