@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-05T15:27:51"
+    "lastFeedRun": "2026-11-06T06:16:32"
   },
   "entries": [
     {
@@ -2324,6 +2324,189 @@
       "url": "https://www.esgtoday.com/eu-lawmakers-vote-to-water-down-co2-emissions-reduction-requirements-for-cars/?utm_source=rss&utm_medium=rss&utm_campaign=eu-lawmakers-vote-to-water-down-co2-emissions-reduction-requirements-for-cars",
       "origin": "feed",
       "added": "2026-11-05"
+    },
+    {
+      "id": "feed-5673f63258",
+      "date": "2026-11-05",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric",
+        "Semantic Model"
+      ],
+      "title": "Power BI reports support OAP exceptions for semantic models in separate workspaces (Preview)",
+      "summary": "Workspace outbound access protection (OAP) helps you control where data in a Microsoft Fabric workspace can flow. The initial preview for Power BI reports , launched in June, required a report in an OAP-protected workspace to use a semantic model in that same workspace. Customer feedback highlighted that this was too restrictive. With this improvement, a report can now query a semantic model in another workspace…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Power BI Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-reports-support-OAP-exceptions-for-semantic-models-in/ba-p/5377907",
+      "origin": "feed",
+      "added": "2026-11-06"
+    },
+    {
+      "id": "feed-aca6659448",
+      "date": "2026-11-05",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric"
+      ],
+      "title": "Power Query Corner: Finding and connecting to data in the new experience (Preview)",
+      "summary": "About this series This is the first in a six-part Power Query Corner series exploring the new Power Query experience. Each post takes a closer look at a different part of the experience, including what’s changing, why it matters, and how you can put it to work. Getting data doesn't always begin with a connector name. You might know which database to use, recognize a team-maintained Fabric item, want to return to a…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Power BI Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-Query-Corner-Finding-and-connecting-to-data-in-the-new/ba-p/5382053",
+      "origin": "feed",
+      "added": "2026-11-06"
+    },
+    {
+      "id": "feed-3f8664fcab",
+      "date": "2026-11-05",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Semantic Model"
+      ],
+      "title": "Build more connected workflows with Fabric Actions and Business Actions in Fabric Pipelines (Preview)",
+      "summary": "Modern data workflows rarely stop at moving and transforming data. Once data is ready, you may need to trigger another operation in Fabric, refresh a semantic model, update a business application, send a notification, generate a document, or kick off the next step in a business process. With Fabric Actions and Business Actions activities in Microsoft Fabric Data Factory, you can bring these steps directly into your…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Build-more-connected-workflows-with-Fabric-Actions-and-Business/ba-p/5377911",
+      "origin": "feed",
+      "added": "2026-11-06"
+    },
+    {
+      "id": "feed-3b1aa647a1",
+      "date": "2026-11-05",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Generally Available",
+        "Onelake"
+      ],
+      "title": "Use OneLake as native storage for Azure Databricks (Generally Available)",
+      "summary": "Organizations increasingly use Microsoft Fabric and Azure Databricks together so teams can choose the tools that best fit their data engineering, analytics, and AI workloads while working from a common data foundation. OneLake external-location support for Azure Databricks Unity Catalog is now Generally available from the Microsoft Fabric side, with OneLake Security enabled by default for Azure Databricks Storage…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Use-OneLake-as-native-storage-for-Azure-Databricks-Generally/ba-p/5377939",
+      "origin": "feed",
+      "added": "2026-11-06"
+    },
+    {
+      "id": "feed-9a4fc5949e",
+      "date": "2026-11-05",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Generally Available"
+      ],
+      "title": "Microsoft Foundry extension for Azure Developer CLI is generally available",
+      "summary": "Set up, test, evaluate, and deploy hosted agents with the generally available Microsoft Foundry extension for Azure Developer CLI, keeping agent and deployment configuration alongside your code. The post Microsoft Foundry extension for Azure Developer CLI is generally available appeared first on Microsoft Foundry Blog .",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Foundry Blog",
+      "url": "https://devblogs.microsoft.com/foundry/microsoft-foundry-azure-developer-cli-ga/",
+      "origin": "feed",
+      "added": "2026-11-06"
+    },
+    {
+      "id": "feed-8678012360",
+      "date": "2026-11-05",
+      "type": "regulation",
+      "areas": [
+        "circularity",
+        "reporting"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [
+        "Green Claims"
+      ],
+      "title": "Deloitte launches AI-powered compliance tool to curb corporate greenwashing",
+      "summary": "The “Green Claims Navigator” is designed to speedily detect misleading statements a company has made about the environmental benefits of its products or practice across its entire content ecosystem.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/deloitte-launches-ai-powered-compliance-tool-to-curb-corporate-greenwashing/873902/",
+      "origin": "feed",
+      "added": "2026-11-06"
+    },
+    {
+      "id": "feed-e27bdc6bb6",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG FR TEG & SR TEG Joint Online Meeting - 4 November 2026 - EFRAG",
+      "summary": "EFRAG FR TEG & SR TEG Joint Online Meeting - 4 November 2026 EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUmlnMExzT0l4U1JtZXdIcWFyeldMUkJaakRMck0xMkVzVENBX1h5RUlqeDVWcGllQkZkS1p1R1FDMmkyZEF2NkdtSnRPczI4eGxfTHRyRFptU21HRi1sRm9Fci1QZnhYbU45TkZ1YTJMTHdRUm1jUDlGQmU3SHJXQjgtRTBibjFCUmNBRTllcVg2QjdxeXFTVjlMd1NaNmNVVWh6UEtHcks4NkVvVGx0RkVHZUc2SGU0?oc=5",
+      "origin": "feed",
+      "added": "2026-11-06"
     }
   ]
 }

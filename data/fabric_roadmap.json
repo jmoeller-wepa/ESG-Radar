@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T15:35:44",
+ "updated": "2026-11-06T06:23:01",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -263,7 +263,7 @@
    "tool": "fabric",
    "type": "GA",
    "quarter": "Q4 2026",
-   "desc": "This feature is part of the concurrency control strategy for Fabric DW. File-level write-write conflict detection is a mechanism designed to prevent two concurrent transactions from modifying the same physical file in a data warehouse at th",
+   "desc": "Improve write concurrency in Microsoft Fabric Warehouse with file-level conflict detection. Concurrent updates and deletes that affect different data files within the same table can commit without unnecessary write conflicts, reducing trans",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/resolving-write-conflicts-in-microsoft-fabric-data-warehouse/5172544"
   },
   {
@@ -374,7 +374,7 @@
    "type": "GA",
    "quarter": "Q4 2026",
    "desc": "Production-ready support for Azure Databricks to store data in OneLake with OneLake Security enabled",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/zero-copy-access-to-onelake-data-in-azure-databricks-preview/5172291"
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Use-OneLake-as-native-storage-for-Azure-Databricks-Generally/ba-p/5377939"
   },
   {
    "id": "b99f2796-064f-f111-bec7-000d3a36696c",
@@ -555,16 +555,6 @@
    "quarter": "Q4 2026",
    "desc": "Fuzzy string match is now generally available across Microsoft SQL offerings, including Azure SQL Database, Azure SQL Managed Instanced, SQL database in Microsoft Fabric, and SQL Server 2025. You can compare strings based on how similar or ",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/New-string-functions-and-operators-in-Fabric-Data-Warehouse/ba-p/5195232"
-  },
-  {
-   "id": "0ba89ee5-81b3-f111-aaab-70a8a59cbac4",
-   "name": "Point-in-time restore from dropped databases",
-   "product": "SQL database",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "Today users can restore a database into any point-in-time from live databases in Microsoft Fabric. Point-in-time restore (PITR) feature should have enhanced capability to help their users recover from accidental database deletion and ensure",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/extending-point-in-time-retention-in-fabric-sql-db-from-7-to-35-days/5172554"
   },
   {
    "id": "009295f2-84b6-f111-aaab-7ced8d70bb60",
