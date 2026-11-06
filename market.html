@@ -76,6 +76,11 @@
   .chart .base line { stroke: var(--d-c9ced6-border, #c9ced6); stroke-dasharray: 3 3; }
   .chart text { font-size: 11.5px; fill: var(--d-8a94a3-text, #8a94a3); font-family: var(--font); }
   .chart .end { font-size: 12px; font-weight: 600; fill: var(--d-374151-text, #374151); }
+  .chart .yband { fill: var(--d-f3f6f9-bg, #f3f6f9); }
+  .chart .ysep { stroke: var(--d-dfe4ea-border, #dfe4ea); stroke-width: 1.2; }
+  .chart text.yl { font-size: 12.5px; font-weight: 700; fill: var(--blue-900, #002d55); }
+  :root[data-theme="dark"] .chart .yband { fill: rgba(255, 255, 255, .035); } :root[data-theme="dark"] .chart .ysep { stroke: rgba(255, 255, 255, .12); } :root[data-theme="dark"] .chart text.yl { fill: #cfe3f5; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chart .yband { fill: rgba(255, 255, 255, .035); } :root:not([data-theme="light"]) .chart .ysep { stroke: rgba(255, 255, 255, .12); } :root:not([data-theme="light"]) .chart text.yl { fill: #cfe3f5; } }
   .chart .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
   .chart .xh { stroke: var(--d-9aa2ae-text, #9aa2ae); stroke-width: 1; }
   .tip { position: absolute; pointer-events: none; background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 20, 50, .12); padding: 8px 10px; font-size: 12.5px; min-width: 170px; z-index: 3; }
@@ -632,7 +637,7 @@
     ctx.font = "600 12px " + getComputedStyle(box).fontFamily;
     const endText = (l) => Math.round(l.pts[l.pts.length - 1].v) + " " + shortName(l.ind);
     const need = Math.max(...lines.map((l) => ctx.measureText(endText(l)).width)) + 16;
-    const m = { t: 12, r: Math.min(need, W * 0.34), b: 26, l: 40 };
+    const m = { t: 12, r: Math.min(need, W * 0.34), b: G === "year" ? 26 : 44, l: 40 }; // months/quarters: extra row for the years
     const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Indexed comparison chart" });
     const months = monthRange(start, periodEnd());
     const t0 = start, t1 = months[months.length - 1];
@@ -649,21 +654,34 @@
     }
     svg.appendChild(grid);
     const base = svgEl("g", { class: "base" }); base.appendChild(svgEl("line", { x1: m.l, x2: W - m.r, y1: y(100), y2: y(100) })); svg.appendChild(base);
-    // x labels follow the time axis: years, quarters or months (thinned out to fit)
+    // x axis in two rows: months (or quarters) in grey, the year in bold underneath, centred on its months.
+    // Every second year gets a light band and each new year a solid line, so the years are easy to find.
     const xl = svgEl("g");
     const buckets = [...new Set(months.map((d) => bucketOf(d, G)))];
     const mid = (b) => { const ds = months.filter((d) => bucketOf(d, G) === b); return fromN(Math.round((toN(ds[0]) + toN(ds[ds.length - 1])) / 2)); };
-    const room = Math.max(1, Math.floor((W - m.l - m.r) / (G === "month" ? 46 : G === "quarter" ? 58 : 44)));
+    const room = Math.max(1, Math.floor((W - m.l - m.r) / (G === "month" ? 34 : G === "quarter" ? 30 : 44)));
     const every = Math.max(1, Math.ceil(buckets.length / room));
     const MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const evM = every <= 1 ? 1 : every <= 2 ? 2 : every <= 3 ? 3 : every <= 6 ? 6 : 12; // month labels on a regular rhythm (every 2nd, 3rd … month)
+    if (G !== "year") {
+      const halfM = months.length > 1 ? (x(months[1]) - x(months[0])) / 2 : 0;
+      const bands = svgEl("g", { class: "ybands" });
+      const yrs = [...new Set(months.map((d) => d.slice(0, 4)))];
+      yrs.forEach((yr) => {
+        const ds = months.filter((d) => d.startsWith(yr));
+        const xa = Math.max(m.l, x(ds[0]) - halfM), xb = Math.min(W - m.r, x(ds[ds.length - 1]) + halfM);
+        if (+yr % 2 === 0) bands.appendChild(svgEl("rect", { x: xa, y: m.t, width: Math.max(0, xb - xa), height: H - m.t - m.b, class: "yband" }));
+        if (ds[0] !== months[0]) xl.appendChild(svgEl("line", { x1: xa, x2: xa, y1: m.t, y2: H - 4, class: "ysep" }));
+        if (xb - xa > 26) { const t = svgEl("text", { x: (xa + xb) / 2, y: H - 6, "text-anchor": "middle", class: "yl" }); t.textContent = yr; xl.appendChild(t); }
+      });
+      svg.insertBefore(bands, svg.firstChild);
+    }
     buckets.forEach((b, k) => {
-      if (k % every) return;
+      if (G === "month" ? (+b.slice(5, 7) - 1) % evM : k % every) return;
       const at = G === "month" ? b : mid(b);
       if (x(at) > W - m.r + 4) return;
-      // separators at year starts for months / quarters
-      if (G !== "year" && (b.endsWith("-01") || b.endsWith("Q1")) && k) svg.appendChild(svgEl("line", { x1: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), x2: x(G === "month" ? b : months.find((d) => bucketOf(d, G) === b)), y1: m.t, y2: H - m.b, stroke: "var(--d-eef0f3-border, #eef0f3)" }));
-      const t = svgEl("text", { x: x(at), y: H - 6, "text-anchor": "middle" });
-      t.textContent = G === "year" ? b : G === "quarter" ? (b.endsWith("Q1") || k === 0 ? b.slice(5) + " ’" + b.slice(2, 4) : b.slice(5)) : (b.endsWith("-01") || k === 0 ? MONS[+b.slice(5, 7) - 1] + " ’" + b.slice(2, 4) : MONS[+b.slice(5, 7) - 1]);
+      const t = svgEl("text", { x: x(at), y: G === "year" ? H - 6 : H - 25, "text-anchor": "middle", class: G === "year" ? "yl" : null });
+      t.textContent = G === "year" ? b : G === "quarter" ? b.slice(5) : MONS[+b.slice(5, 7) - 1];
       xl.appendChild(t);
     });
     svg.appendChild(xl);
