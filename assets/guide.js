@@ -63,8 +63,8 @@
   };
   const g = G[page]; if (!g) return;
   const css = `
-  .hg-btn { flex: none; width: 34px; height: 34px; border-radius: 10px; border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.12); color: #fff; font: 600 16px/1 inherit; cursor: pointer; position: relative; }
-  .hg-btn:hover { background: rgba(255,255,255,.22); }
+  .hg-btn { flex: none; width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--h-ctl-border, rgba(255,255,255,.28)); background: var(--h-ctl-bg, rgba(255,255,255,.12)); color: var(--h-ctl-fg, #fff); font: 600 16px/1 inherit; cursor: pointer; position: relative; }
+  .hg-btn:hover { background: var(--h-ctl-hover, rgba(255,255,255,.22)); }
   .hg-btn:focus-visible { outline: 2px solid var(--d-96d2dc-border, #96d2dc); outline-offset: 2px; }
   .hg-tip { position: absolute; top: calc(100% + 10px); right: -6px; width: 220px; background: var(--d-fff-bg, #fff); color: var(--d-111827-text, #111827); border-radius: 10px; padding: 10px 12px; font: 400 13px/1.4 inherit; text-align: left; box-shadow: 0 12px 32px rgba(0,20,50,.25); z-index: 90; cursor: default; }
   .hg-tip::before { content: ""; position: absolute; top: -6px; right: 16px; width: 12px; height: 12px; background: var(--d-fff-bg, #fff); transform: rotate(45deg); }

@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261105i"></script>
+<script src="assets/theme.js?v=20261105j"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261105i">
+<link rel="stylesheet" href="assets/side.css?v=20261105j">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -244,9 +244,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261105i" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261105i">
-<script src="assets/colresize.js?v=20261105i" defer></script>
+<script src="assets/status.js?v=20261105j" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261105j">
+<script src="assets/colresize.js?v=20261105j" defer></script>
 </head>
 <body>
 <header>
@@ -318,8 +318,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261105i"></script>
-<script src="assets/carbon.js?v=20261105i"></script>
+<script src="assets/side.js?v=20261105j"></script>
+<script src="assets/carbon.js?v=20261105j"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -578,15 +578,22 @@
     svg.appendChild(xl);
     // lines + end labels (de-overlapped)
     const ends = [];
+    // soft gradient under each line (shadcn-style area chart); fainter when many lines overlap
+    const fill = lines.length <= 2 ? 0.26 : lines.length <= 4 ? 0.16 : 0.1;
+    const firstLine = svg.lastChild;
     lines.forEach((l) => {
       // a gap in the selected months breaks the line instead of bridging it
-      const d = l.pts.map((p, k) => {
+      const segs = [];
+      l.pts.forEach((p, k) => {
         const prev = l.pts[k - 1];
         const broken = !prev || (G === "month"
           ? monthRange(fromN(toN(prev.d) + 1), fromN(Math.max(toN(prev.d) + 1, toN(p.d) - 1))).some((m) => toN(m) < toN(p.d) && !state.sel.has(m))
           : buckets.indexOf(p.b) - buckets.indexOf(prev.b) > 1);
-        return (broken ? "M" : "L") + x(p.d).toFixed(1) + " " + y(p.v).toFixed(1);
-      }).join("");
+        if (broken) segs.push([]);
+        segs[segs.length - 1].push([x(p.d), y(p.v)]);
+      });
+      segs.forEach((sg) => RadarViz.area(svg, sg, H - m.b, l.color, fill, firstLine && firstLine.nextSibling));
+      const d = segs.map((sg) => RadarViz.path(sg)).join("");
       svg.appendChild(svgEl("path", { class: "line", stroke: l.color, d }));
       if (G !== "month" && l.pts.length <= 40) l.pts.forEach((p) => svg.appendChild(svgEl("circle", { cx: x(p.d), cy: y(p.v), r: 2.6, fill: l.color })));
       const last = l.pts[l.pts.length - 1];
@@ -671,8 +678,9 @@
       const v = el("div", "sm-v"); v.append(el("b", null, String(Math.round(last.v))), document.createTextNode(" · " + fmtVal(last.raw, l.ind.unit) + " " + unitLabel(l.ind.unit) + " · " + fmtDate(last.d, l.ind)));
       const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: "none", role: "img", "aria-label": shortName(l.ind) + " indexed" });
       svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(100), y2: y(100), stroke: "var(--d-c9ced6-border, #c9ced6)", "stroke-dasharray": "3 3", "vector-effect": "non-scaling-stroke" }));
-      const d = l.pts.map((p, k) => (k ? "L" : "M") + x(p.d).toFixed(1) + " " + y(p.v).toFixed(1)).join("");
-      svg.appendChild(svgEl("path", { d, fill: "none", stroke: SM_COLOR, "stroke-width": 2, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }));
+      const sp = l.pts.map((p) => [x(p.d), y(p.v)]);
+      RadarViz.area(svg, sp, H - B, SM_COLOR, 0.24);
+      svg.appendChild(svgEl("path", { d: RadarViz.path(sp), fill: "none", stroke: SM_COLOR, "stroke-width": 2, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }));
       const tip = el("div", "sm-tip"); tip.hidden = true;
       svg.addEventListener("pointermove", (ev) => {
         const r = svg.getBoundingClientRect(); const px = ((ev.clientX - r.left) / r.width) * W;
@@ -719,8 +727,10 @@
     const svg = svgEl("svg", { class: "spark", viewBox: "0 0 200 34", "aria-hidden": "true" });
     if (pts.length < 2) return svg;
     const vs = pts.map((p) => p[1]); const lo = Math.min(...vs), hi = Math.max(...vs) || 1;
-    const d = pts.map((p, k) => (k ? "L" : "M") + ((k / (pts.length - 1)) * 198 + 1).toFixed(1) + " " + (31 - ((p[1] - lo) / (hi - lo || 1)) * 28).toFixed(1)).join("");
-    svg.appendChild(svgEl("path", { d, fill: "none", stroke: color || "var(--d-335777-text, #335777)", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
+    const sp = pts.map((p, k) => [(k / (pts.length - 1)) * 198 + 1, 31 - ((p[1] - lo) / (hi - lo || 1)) * 26]);
+    const c = color || "var(--d-335777-text, #335777)";
+    RadarViz.area(svg, sp, 34, c, 0.3);
+    svg.appendChild(svgEl("path", { d: RadarViz.path(sp), fill: "none", stroke: c, "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
     return svg;
   }
   function tile(ind) {
@@ -963,7 +973,9 @@
     }
     let lastYear = null;
     xs.forEach((d, idx) => { const yr = d.slice(0, 4); if (yr !== lastYear) { lastYear = yr; const t = svgEl("text", { x: x(idx), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: "var(--d-8a94a3-text, #8a94a3)" }); t.textContent = yr; svg.appendChild(t); svg.appendChild(svgEl("line", { x1: x(idx), x2: x(idx), y1: T, y2: H - B, stroke: "var(--d-f3f4f6-border, #f3f4f6)" })); } });
-    svg.appendChild(svgEl("path", { d: s.map((p, n) => (n ? "L" : "M") + x(n).toFixed(1) + " " + y(p[1]).toFixed(1)).join(""), fill: "none", stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 2.4, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    const dp = s.map((p, n) => [x(n), y(p[1])]);
+    RadarViz.area(svg, dp, H - B, "var(--d-0064aa-text, #0064aa)", 0.24);
+    svg.appendChild(svgEl("path", { d: RadarViz.path(dp), fill: "none", stroke: "var(--d-0064aa-text, #0064aa)", "stroke-width": 2.4, "stroke-linejoin": "round", "stroke-linecap": "round" }));
     if (s.length < 30) s.forEach((p, n) => svg.appendChild(svgEl("circle", { cx: x(n), cy: y(p[1]), r: 3, fill: "var(--d-0064aa-text, #0064aa)" })));
     const hl = svgEl("line", { y1: T, y2: H - B, stroke: "var(--d-002d55-text, #002d55)", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
     const tip = el("div", "gd-tip"); tip.hidden = true;
@@ -999,7 +1011,9 @@
     const svg = svgEl("svg", { class: "gsp", viewBox: "0 0 110 24", "aria-hidden": "true" });
     if (vals.length < 2) return svg;
     const lo = Math.min(...vals), hi = Math.max(...vals);
-    svg.appendChild(svgEl("path", { d: vals.map((v, k) => (k ? "L" : "M") + (2 + (k / (vals.length - 1)) * 106).toFixed(1) + " " + (21 - ((v - lo) / (hi - lo || 1)) * 18).toFixed(1)).join(""), fill: "none", stroke: "var(--d-335777-text, #335777)", "stroke-width": 2, "stroke-linejoin": "round" }));
+    const vp = vals.map((v, k) => [2 + (k / (vals.length - 1)) * 106, 21 - ((v - lo) / (hi - lo || 1)) * 18]);
+    RadarViz.area(svg, vp, 24, "var(--d-335777-text, #335777)", 0.28);
+    svg.appendChild(svgEl("path", { d: RadarViz.path(vp), fill: "none", stroke: "var(--d-335777-text, #335777)", "stroke-width": 2, "stroke-linejoin": "round" }));
     return svg;
   }
 
@@ -1386,7 +1400,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261105i" defer></script>
-<script src="assets/guide.js?v=20261105i" defer></script>
+<script src="assets/search.js?v=20261105j" defer></script>
+<script src="assets/guide.js?v=20261105j" defer></script>
 </body>
 </html>

@@ -11,9 +11,10 @@
   const strip = (t) => String(t || "").replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
 
   const css = `
-  header .gs-btn { display: flex; align-items: center; gap: 10px; height: 36px; padding: 0 10px 0 12px; margin-left: auto; border-radius: 10px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.24); color: #c9d6e6; font: inherit; font-size: 13.5px; cursor: pointer; flex: none; }
-  header .gs-btn:hover { background: rgba(255,255,255,.2); color: #fff; }
-  header .gs-btn .kb { font-size: 11px; border: 1px solid rgba(255,255,255,.3); border-radius: 5px; padding: 1px 6px; }
+  header .gs-btn { display: flex; align-items: center; gap: 10px; height: 36px; min-width: 240px; padding: 0 10px 0 12px; margin-left: auto; border-radius: 8px; background: var(--h-search-bg, rgba(255,255,255,.12)); border: 1px solid var(--h-search-border, rgba(255,255,255,.24)); color: var(--h-search-fg, #c9d6e6); font: inherit; font-size: 13.5px; cursor: pointer; flex: none; }
+  header .gs-btn .gs-lbl { flex: 1; text-align: left; }
+  header .gs-btn:hover { border-color: var(--h-search-fg, rgba(255,255,255,.4)); color: var(--h-active, #fff); }
+  header .gs-btn .kb { font-size: 11px; border: 1px solid var(--h-search-border, rgba(255,255,255,.3)); border-radius: 5px; padding: 1px 6px; background: var(--h-ctl-bg, transparent); }
   header .gs-btn ~ .meta, header .gs-btn ~ .stat-wrap { margin-left: 0 !important; }
   dialog.gs-dlg { width: min(820px, calc(100vw - 32px)); max-height: min(640px, calc(100vh - 96px)); margin: 72px auto auto; padding: 0; border: 0; border-radius: 16px; background: var(--surface, var(--d-fff-bg, #fff)); color: var(--ink, var(--d-111827-text, #111827)); box-shadow: 0 24px 64px rgba(0,20,50,.3); overflow: hidden; }
   dialog.gs-dlg[open] { display: flex; flex-direction: column; animation: gs-in .14s ease-out; }
@@ -68,7 +69,7 @@
   .gs-foot span:last-child { margin-left: auto; }
   @media (max-width: 760px) {
     header .gs-btn .gs-lbl, header .gs-btn .kb { display: none; }
-    header .gs-btn { width: 34px; padding: 0; justify-content: center; }
+    header .gs-btn { width: 34px; min-width: 0; padding: 0; justify-content: center; }
     dialog.gs-dlg { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; border-radius: 0; }
     .gs-body { grid-template-columns: minmax(0, 1fr); } .gs-pv { display: none; } .gs-body:not(.solo) .gs-list { border-right: 0; }
     .gs-qa { grid-template-columns: 1fr 1fr; } .gs-foot { display: none; }

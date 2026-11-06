@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261105i"></script>
+<script src="assets/theme.js?v=20261105j"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261105i" defer></script>
+<script src="assets/status.js?v=20261105j" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -122,7 +122,22 @@
   .brief { display: flex; flex-direction: column; gap: 16px; }
   .br-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
   .br-txt h2 { margin: 0; font-size: 24px; font-weight: 650; color: var(--blue-900); letter-spacing: -.01em; }
-  .br-txt p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); max-width: 860px; line-height: 1.5; }
+  .br-txt { flex: 1 1 100%; min-width: 0; }
+  .br-txt p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
+  .kpi-h { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: -6px; }
+  .kpi-h h3 { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); font-weight: 600; }
+  .kpi-h button { border: 0; background: none; font: inherit; font-size: 12.5px; color: var(--d-0064aa-text, #0064aa); cursor: pointer; padding: 4px 8px; border-radius: 8px; }
+  .kpi-h button:hover { background: var(--d-f0f2f5-bg, #f0f2f5); }
+  .kpi-box[hidden] { display: none; }
+  .kcfg { display: flex; flex-direction: column; gap: 10px; padding: 12px 14px; background: var(--d-f5f8fb-bg, #f5f8fb); border-radius: 10px; font-size: 13px; color: var(--d-374151-text, #374151); }
+  .kcfg .sw { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--d-002d55-text, #002d55); }
+  .kcfg .kg { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 12px; align-items: baseline; }
+  .kcfg .kg > span { font-size: 11.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); font-weight: 600; }
+  .kcfg .kg div { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .kcfg label { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+  .kcfg .n { font-size: 12px; color: var(--d-6b7280-text, #6b7280); }
+  .kcfg.off .kg { opacity: .45; pointer-events: none; }
+  @media (max-width: 600px) { .kcfg .kg { grid-template-columns: minmax(0, 1fr); } }
   .br-txt p b { color: var(--ink); font-weight: 600; }
   .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
   .kpi { background: var(--d-fff-bg, #fff); border: 1px solid var(--d-e9ecf1-border, #e9ecf1); border-radius: 14px; padding: 14px 16px 10px; display: flex; flex-direction: column; gap: 3px; text-decoration: none; color: inherit; min-width: 0; transition: border-color .12s, box-shadow .12s; }
@@ -190,8 +205,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261105i">
-<script src="assets/colresize.js?v=20261105i" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261105j">
+<script src="assets/colresize.js?v=20261105j" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -242,10 +257,9 @@
     <div class="br-top">
       <div class="br-txt"><h2 id="hello">Overview</h2><p id="summary">Loading the latest data …</p></div>
     </div>
-    <div class="kpis" id="kpis" aria-label="Key numbers"></div>
-    <div class="br-cols">
-      <section class="card br-story" aria-labelledby="rm-title"><div class="wh"><h3 id="rm-title">Monthly round-up</h3></div><div id="roundup"></div></section>
-      <section class="card br-next" aria-labelledby="nx-title"><div class="wh"><h3 id="nx-title">Next 30 days</h3><a class="more" href="regulation.html#view=roadmap">All deadlines →</a></div><div id="next30"></div></section>
+    <div class="kpi-box" id="kpi-box">
+      <div class="kpi-h"><h3 id="kpi-title">Key numbers</h3><button type="button" id="kpi-edit" title="Choose which indicators to show, or hide this row">✎ Edit</button></div>
+      <div class="kpis" id="kpis" aria-labelledby="kpi-title"></div>
     </div>
   </section>
   <div class="ov-top">
@@ -259,11 +273,11 @@
     </div>
   </div>
   <section class="drawer" id="drawer" hidden aria-labelledby="dr-title">
-    <h3>Key numbers</h3>
-    <div class="cfg" id="kpi-cfg"></div>
+    <h3 id="kpi-cfg-title">Key numbers</h3>
+    <div class="kcfg" id="kpi-cfg"></div>
     <h3 id="dr-title">Add or remove cards</h3>
     <div class="cat" id="cat"></div>
-    <p class="mut">Tick up to five key numbers for the top row. Drag a card onto any free cell (dashed) or onto another card to swap them – or use the arrows. ⤢ switches between narrow and wide. Empty cells stay empty, so you can leave gaps. Your layout is saved in this browser.</p>
+    <p class="mut">Drag a card onto any free cell (dashed) or onto another card to swap them – or use the arrows. ⤢ switches between narrow and wide. Empty cells stay empty, so you can leave gaps. Your layout is saved in this browser.</p>
   </section>
   <div class="ov-grid" id="grid"></div>
 </main>
@@ -271,7 +285,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261105i"></script>
+<script src="assets/carbon.js?v=20261105j"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -299,7 +313,7 @@
 
   // ---------- layout ----------
   const KEY = "radar.overview.v1";
-  const DEFAULT = { items: [{ id: "targets" }, { id: "alerts" }, { id: "newsince" }, { id: "peernews" }, { id: "peersnap" }, { id: "status" }], threshold: 10, snap: ["ppi_tissue", "ppi_pulp", "gas_ttf", "eurusd"], kpis: ["ppi_tissue", "pulp_nbsk_eu", "rcp_white_exp", "power_de_spot", "gas_ttf"] };
+  const DEFAULT = { items: [{ id: "roundup", wide: true }, { id: "next30" }, { id: "targets" }, { id: "alerts" }, { id: "newsince" }, { id: "peernews" }, { id: "peersnap" }, { id: "status" }], threshold: 10, snap: ["ppi_tissue", "ppi_pulp", "gas_ttf", "eurusd"], kpis: ["ppi_tissue", "pulp_nbsk_eu", "rcp_white_exp", "power_de_spot", "gas_ttf"], showKpis: true, intro: ["briefing", "cards2"] };
   let L = (() => { try { const x = JSON.parse(store.get(KEY)); if (x && Array.isArray(x.items)) return { ...DEFAULT, ...x }; } catch (e) {} return JSON.parse(JSON.stringify(DEFAULT)); })();
   const save = () => store.set(KEY, JSON.stringify(L));
   let editing = false, D = {};
@@ -312,7 +326,9 @@
     const s = svgEl("svg", { viewBox: "0 0 100 26", preserveAspectRatio: "none", "aria-hidden": "true" });
     const pts = series.slice(-24); if (pts.length < 2) return s;
     const v = pts.map((p) => p[1]), lo = Math.min(...v), hi = Math.max(...v);
-    s.appendChild(svgEl("path", { d: pts.map((p, k) => (k ? "L" : "M") + ((k / (pts.length - 1)) * 98 + 1).toFixed(1) + " " + (23 - ((p[1] - lo) / (hi - lo || 1)) * 20).toFixed(1)).join(""), fill: "none", stroke: color || "var(--d-335777-text, #335777)", "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
+    const c = color || "var(--d-335777-text, #335777)", sp = pts.map((p, k) => [(k / (pts.length - 1)) * 98 + 1, 23 - ((p[1] - lo) / (hi - lo || 1)) * 20]);
+    RadarViz.area(s, sp, 26, c, 0.3);
+    s.appendChild(svgEl("path", { d: RadarViz.path(sp), fill: "none", stroke: c, "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
     return s;
   }
   const marketList = () => (D.market && D.market.indicators || []).filter((i) => i.series && i.series.length > 1 && i.source !== "manual");
@@ -327,8 +343,10 @@
   const W = {
     carbon: { off: true, title: "Carbon cost exposure", desc: "WEPA's EU ETS emissions × EUA price, with a price slider", wide: true, more: ["Market →", "market.html#carbon"],
       render(b) { CarbonCost.render(b, D.ets, D.market, {}); } },
-    roundup: { off: true, title: "Monthly round-up", desc: "What changed in a month: regulation, news, market moves, peers – copy it for Teams or e-mail", wide: true, more: null,
+    roundup: { title: "Monthly round-up", desc: "What changed in a month: regulation, news, market moves, peers – copy it for Teams or e-mail", wide: true, more: null,
       render(b) { renderRoundup(b); } },
+    next30: { title: "Next 30 days", desc: "Deadlines and consultations closing soon", more: ["All deadlines →", "regulation.html#view=roadmap"],
+      render(b) { renderNext30(b); } },
     alerts: { title: "Market alerts", desc: "Indicators that moved beyond your threshold", more: ["Market →", "market.html"],
       render(b) {
         const th = Number(L.threshold) || 10;
@@ -543,16 +561,8 @@
       a.append(el("span", "l", SHORT[i.id] || short(i)), v, d, spark(s.slice(-12), SLOT[k % SLOT.length]));
       box.appendChild(a);
     });
-    box.hidden = !box.children.length;
-    // round-up
-    const rb = $("roundup"); rb.replaceChildren(); renderRoundup(rb);
-    // next 30 days
-    const up = upcoming(), nx = $("next30"); nx.replaceChildren();
-    const soon = up.filter((x) => days(x.date) <= 30), show = (soon.length >= 3 ? soon : up).slice(0, 5);
-    if (!show.length) nx.appendChild(el("p", "empty", "No upcoming deadlines recorded."));
-    show.forEach((x) => { const r = li(x.href); const d = days(x.date); r.append(dd(x.date), tx(x.title, x.sub !== x.title ? x.sub : null), el("span", "r " + (d <= 7 ? "soon" : "later"), d <= 0 ? "today" : d + " d")); nx.appendChild(r); });
-    const then = up.filter((x) => !show.includes(x) && x.date > (show.length ? show[show.length - 1].date : todayIso)).slice(0, 2);
-    if (then.length) nx.appendChild(el("p", "nx-then", "Then: " + then.map((x) => { const t = x.title.replace(/^Consultation closes: /, ""); return (t.length > 48 ? t.slice(0, 46) + "…" : t) + " (" + fmtShort(x.date) + ")"; }).join(" · ")));
+    $("kpi-box").hidden = L.showKpis === false || !box.children.length;
+    const up = upcoming();
     // summary sentence – built from the data by fixed rules
     const p = $("summary"); p.replaceChildren();
     const bits = [];
@@ -568,15 +578,41 @@
     const lead = today.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + " · ";
     p.append(lead); bits.forEach((b, k) => { if (k) p.append(k === bits.length - 1 ? " and " : ", "); p.append(b); }); p.append(".");
   }
+  // "Next 30 days" card
+  function renderNext30(nx) {
+    const up = upcoming();
+    const soon = up.filter((x) => days(x.date) <= 30), show = (soon.length >= 3 ? soon : up).slice(0, 5);
+    if (!show.length) nx.appendChild(el("p", "empty", "No upcoming deadlines recorded."));
+    show.forEach((x) => { const r = li(x.href); const d = days(x.date); r.append(dd(x.date), tx(x.title, x.sub !== x.title ? x.sub : null), el("span", "r " + (d <= 7 ? "soon" : "later"), d <= 0 ? "today" : d + " d")); nx.appendChild(r); });
+    const then = up.filter((x) => !show.includes(x) && x.date > (show.length ? show[show.length - 1].date : todayIso)).slice(0, 2);
+    if (then.length) nx.appendChild(el("p", "nx-then", "Then: " + then.map((x) => { const t = x.title.replace(/^Consultation closes: /, ""); return (t.length > 48 ? t.slice(0, 46) + "…" : t) + " (" + fmtShort(x.date) + ")"; }).join(" · ")));
+  }
+  // Key numbers: switch the row on/off and pick up to five indicators, grouped like on the Market page
   function renderKpiCfg() {
     const cfg = $("kpi-cfg"); cfg.replaceChildren();
-    marketList().filter((i) => i.group !== "grid").forEach((i) => {
-      const lab = el("label"); const cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = (L.kpis || []).includes(i.id);
-      cb.addEventListener("change", () => {
-        if (cb.checked && L.kpis.length >= 5) { cb.checked = false; return; }
-        L.kpis = cb.checked ? [...L.kpis, i.id] : L.kpis.filter((x) => x !== i.id); save(); renderBrief();
+    const on = L.showKpis !== false;
+    cfg.classList.toggle("off", !on);
+    const sw = el("label", "sw"); const t = document.createElement("input"); t.type = "checkbox"; t.checked = on;
+    t.addEventListener("change", () => { L.showKpis = t.checked; save(); renderBrief(); renderKpiCfg(); });
+    sw.append(t, document.createTextNode("Show key numbers at the top"));
+    const n = el("span", "n", (L.kpis || []).length + " of 5 chosen");
+    const top = el("div"); top.style.cssText = "display:flex;gap:12px;align-items:center;flex-wrap:wrap"; top.append(sw, n); cfg.appendChild(top);
+    const groups = (D.market && D.market.groups) || {};
+    const list = marketList().filter((i) => i.group !== "grid");
+    const order = Object.keys(groups).concat([...new Set(list.map((i) => i.group))].filter((g) => !(g in groups)));
+    order.forEach((g) => {
+      const items = list.filter((i) => i.group === g); if (!items.length) return;
+      const row = el("div", "kg"); row.appendChild(el("span", null, groups[g] || g || "Other"));
+      const box = el("div");
+      items.forEach((i) => {
+        const lab = el("label"); const cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = (L.kpis || []).includes(i.id);
+        cb.disabled = !cb.checked && (L.kpis || []).length >= 5;
+        cb.addEventListener("change", () => {
+          L.kpis = cb.checked ? [...(L.kpis || []), i.id].slice(0, 5) : L.kpis.filter((x) => x !== i.id); save(); renderBrief(); renderKpiCfg();
+        });
+        lab.title = i.label; lab.append(cb, document.createTextNode(SHORT[i.id] || short(i))); box.appendChild(lab);
       });
-      lab.append(cb, document.createTextNode(SHORT[i.id] || short(i))); cfg.appendChild(lab);
+      row.appendChild(box); cfg.appendChild(row);
     });
   }
 
@@ -612,6 +648,13 @@
     L.intro = L.intro || [];
     // the briefing (B1) now shows the round-up and the next deadlines above the cards: take them out of older layouts once
     if (!L.intro.includes("briefing")) { L.intro.push("briefing"); L.items = L.items.filter((x) => x.id !== "deadlines"); L.items.forEach((x) => delete x.pos); save(); }
+    // round-up and "Next 30 days" moved from the fixed briefing into the cards: add them once at the top of older layouts
+    if (!L.intro.includes("cards2")) {
+      L.intro.push("cards2");
+      const add = [{ id: "roundup", wide: true }, { id: "next30" }].filter((n) => !L.items.some((x) => x.id === n.id));
+      if (add.length) { L.items = [...add, ...L.items]; L.items.forEach((x) => delete x.pos); }
+      save();
+    }
     if (!L.kpis) L.kpis = DEFAULT.kpis.slice();
     COLS = colsNow(); grid.style.setProperty("--cols", COLS);
     const occ = place(COLS);
@@ -705,6 +748,7 @@
     renderAll();
   }
   $("edit").addEventListener("click", () => { setEdit(true); $("drawer").hidden = false; renderCat(); renderKpiCfg(); });
+  $("kpi-edit").addEventListener("click", () => { setEdit(true); $("drawer").hidden = false; renderCat(); renderKpiCfg(); $("kpi-cfg-title").scrollIntoView({ behavior: "smooth", block: "center" }); });
   $("done").addEventListener("click", () => setEdit(false));
   $("add").addEventListener("click", () => { $("drawer").hidden = !$("drawer").hidden; renderCat(); });
   $("reset").addEventListener("click", () => { L = JSON.parse(JSON.stringify(DEFAULT)); L.intro = ["briefing"]; save(); renderAll(); renderCat(); renderKpiCfg(); renderBrief(); });
@@ -724,7 +768,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261105i" defer></script>
-<script src="assets/guide.js?v=20261105i" defer></script>
+<script src="assets/search.js?v=20261105j" defer></script>
+<script src="assets/guide.js?v=20261105j" defer></script>
 </body>
 </html>
