@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Collect new items from RSS/Atom feeds into data/radar.json (no manual review needed).
 
-Run by the monthly GitHub Action (or locally: python scripts/collect_feeds.py).
+Run by the daily GitHub Action (or locally: python scripts/collect_feeds.py).
 - Reads config/feeds.json
 - Keeps items newer than the last run whose title/summary match a feed keyword
 - Rates them automatically: monthly feature summaries and 'highKeywords' -> high,
@@ -129,6 +129,10 @@ def main():
             e["areas"] = areas_for(feed, text)
 
     known = {e.get("url") for e in radar["entries"]} | {e.get("url") for e in archive}
+    # Feeds read before: a feed added later to config/feeds.json reads back 'lookbackDaysFirstRun'
+    # days once, so its area is not empty until news arrives (older runs: feeds that already have items)
+    seen = set(radar["meta"].get("feedsSeen") or {e.get("source") for e in radar["entries"] + archive if e.get("origin") == "feed"})
+    backfill = now - timedelta(days=config.get("lookbackDaysFirstRun", 45))
     report, added = [], []
 
     for feed in config.get("feeds", []):
@@ -142,6 +146,8 @@ def main():
             report.append(f"| {name} | ⚠️ failed: {reason} | 0 |")
             continue
 
+        feed_since = since if name in seen else min(since, backfill)
+        seen.add(name)
         match = matcher(feed.get("keywords", []))
         match_high = matcher(feed.get("highKeywords", []))
         count = 0
@@ -150,7 +156,7 @@ def main():
                 break
             link = item.get("link")
             published = entry_date(item)
-            if not link or link in known or (published and published < since):
+            if not link or link in known or (published and published < feed_since):
                 continue
             title = clean(item.get("title"), 200)
             summary = clean(item.get("summary") or item.get("description"))
@@ -205,6 +211,7 @@ def main():
             keep.append(e)
     radar["entries"] = keep
 
+    radar["meta"]["feedsSeen"] = sorted(n for n in seen if n)
     radar["meta"]["lastFeedRun"] = now.replace(microsecond=0, tzinfo=None).isoformat()
     save(RADAR, radar)
     if archive or ARCHIVE.exists():

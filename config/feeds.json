@@ -1,5 +1,5 @@
 {
- "_comment": "Feeds the monthly GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only).",
+ "_comment": "Feeds the daily GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only). A feed added later reads back 'lookbackDaysFirstRun' days on its first run.",
  "lookbackDaysFirstRun": 60,
  "archiveFeedItemsAfterDays": 365,
  "monthlySummaryPattern": "feature summary",
@@ -102,7 +102,13 @@
    "ai act",
    "artificial intelligence act",
    "data act",
-   "digital omnibus"
+   "digital omnibus",
+   "claude",
+   "chatgpt",
+   "openai",
+   "anthropic",
+   "gemini",
+   "llm"
   ]
  },
  "feeds": [
@@ -217,6 +223,133 @@
    "highKeywords": [
     "copilot",
     "agent"
+   ]
+  },
+  {
+   "name": "Claude Blog (Anthropic)",
+   "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_claude.xml",
+   "type": "tool",
+   "defaultArea": "data",
+   "onlyDefaultArea": true,
+   "maxItems": 8,
+   "defaultRelevance": "low",
+   "_comment": "Anthropic has no RSS feed of its own. This is a free community mirror (github.com/Olshansk/rss-feeds) of claude.com/resources/articles, updated automatically. Every item is taken.",
+   "keywords": [],
+   "highKeywords": [
+    "introducing",
+    "now available",
+    "generally available",
+    "new feature",
+    "excel",
+    "powerpoint",
+    "microsoft 365",
+    "enterprise",
+    "projects",
+    "connectors",
+    "skills",
+    "cowork"
+   ]
+  },
+  {
+   "name": "Anthropic News",
+   "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml",
+   "type": "tool",
+   "defaultArea": "data",
+   "onlyDefaultArea": true,
+   "maxItems": 5,
+   "defaultRelevance": "low",
+   "_comment": "Community mirror of anthropic.com/news (no official RSS). Only product and model news is kept.",
+   "keywords": [
+    "introducing",
+    "launch",
+    "launches",
+    "now available",
+    "generally available",
+    "new model",
+    "claude opus",
+    "claude sonnet",
+    "claude haiku",
+    "claude fable",
+    "claude for",
+    "model"
+   ],
+   "highKeywords": [
+    "introducing",
+    "new model",
+    "claude opus",
+    "claude sonnet",
+    "generally available"
+   ]
+  },
+  {
+   "name": "OpenAI News",
+   "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_openai_main.xml",
+   "type": "tool",
+   "defaultArea": "data",
+   "onlyDefaultArea": true,
+   "maxItems": 6,
+   "defaultRelevance": "low",
+   "_comment": "Community mirror of openai.com/news (the official RSS blocks automated readers). Only ChatGPT, model and product news is kept.",
+   "keywords": [
+    "chatgpt",
+    "gpt",
+    "codex",
+    "introducing",
+    "now available",
+    "launch",
+    "launches",
+    "enterprise",
+    "agent",
+    "agents"
+   ],
+   "highKeywords": [
+    "chatgpt",
+    "introducing",
+    "chatgpt enterprise",
+    "chatgpt business"
+   ]
+  },
+  {
+   "name": "Microsoft 365 Blog",
+   "url": "https://www.microsoft.com/en-us/microsoft-365/blog/feed/",
+   "type": "tool",
+   "defaultArea": "data",
+   "onlyDefaultArea": true,
+   "maxItems": 6,
+   "defaultRelevance": "low",
+   "_comment": "Official Microsoft 365 blog: Microsoft 365 Copilot, Copilot Chat and agents.",
+   "keywords": [
+    "copilot",
+    "agent",
+    "agents",
+    "ai"
+   ],
+   "highKeywords": [
+    "microsoft 365 copilot",
+    "copilot chat",
+    "introducing",
+    "generally available",
+    "excel",
+    "teams"
+   ]
+  },
+  {
+   "name": "Google Gemini (via Google News)",
+   "url": "https://news.google.com/rss/search?q=site:blog.google+gemini+when:30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "tool",
+   "defaultArea": "data",
+   "onlyDefaultArea": true,
+   "maxItems": 4,
+   "defaultRelevance": "low",
+   "_comment": "Google News search for Gemini posts on Google's official blog (blog.google).",
+   "keywords": [
+    "gemini"
+   ],
+   "highKeywords": [
+    "introducing",
+    "workspace",
+    "new model",
+    "now available"
    ]
   },
   {

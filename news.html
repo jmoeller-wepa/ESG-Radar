@@ -395,11 +395,19 @@
       <span class="count-txt" id="count"></span>
       <span class="only-chip" id="only" hidden></span>
       <div class="spacer"></div>
-      <select id="tool" aria-label="Microsoft tool" hidden>
+      <select id="tool" aria-label="Tool" hidden>
         <option value="all">All tools</option>
-        <option value="fabric">Fabric</option>
-        <option value="powerbi">Power BI</option>
-        <option value="copilot">Copilot</option>
+        <optgroup label="Microsoft data">
+          <option value="fabric">Fabric</option>
+          <option value="powerbi">Power BI</option>
+        </optgroup>
+        <optgroup label="AI assistants">
+          <option value="ai">All AI news</option>
+          <option value="copilot">Microsoft Copilot</option>
+          <option value="claude">Claude</option>
+          <option value="chatgpt">ChatGPT</option>
+          <option value="gemini">Gemini</option>
+        </optgroup>
         <option value="other">Other tools</option>
       </select>
       <select id="impact" aria-label="Impact">
@@ -531,12 +539,17 @@
     fabric: { label: "Fabric", re: /\bfabric\b|onelake|data agent/i },
     powerbi: { label: "Power BI", re: /power ?bi|semantic model|\bdax\b/i },
     copilot: { label: "Copilot", re: /copilot/i },
+    claude: { label: "Claude", re: /\bclaude\b|anthropic/i },
+    chatgpt: { label: "ChatGPT", re: /chatgpt|openai|\bgpt\b|\bcodex\b/i },
+    gemini: { label: "Gemini", re: /\bgemini\b|deepmind/i },
+    ai: { label: "AI news", of: ["copilot", "claude", "chatgpt", "gemini"] },
     other: { label: "Other" }
   };
   const toolsOf = (e) => {
     if (e._tools) return e._tools;
     const t = [e.title, e.summary, e.source, (e.tags || []).join(" ")].join(" ");
     const found = Object.keys(TOOLS).filter((k) => TOOLS[k].re && TOOLS[k].re.test(t));
+    if (found.some((k) => TOOLS.ai.of.includes(k))) found.push("ai");
     return (e._tools = found.length ? found : ["other"]);
   };
   // several areas can be selected; none selected = all areas. state.area is the single area if exactly one is selected
