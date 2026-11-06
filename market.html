@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261106b"></script>
+<script src="assets/theme.js?v=20261106c"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261106b">
+<link rel="stylesheet" href="assets/side.css?v=20261106c">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -214,7 +214,7 @@
   .tile:hover { border-color: var(--d-d5dae2-border, #d5dae2); box-shadow: 0 4px 14px rgba(0, 20, 50, .06); }
   .tile.sel { border-color: var(--sel, var(--blue-900)); box-shadow: inset 0 3px 0 var(--sel, var(--blue-900)); }
   .tile.static { cursor: default; }
-  .tile .lbl { font-size: 13px; color: var(--ink-2); line-height: 1.35; padding-right: 26px; min-height: 35px; }
+  .tile .lbl { font-size: 13px; color: var(--ink-2); line-height: 1.35; padding-right: 26px; height: calc(3 * 1.35em); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; } /* fixed 3 lines: values line up across a row */
   .tile .pin { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid var(--d-d0d5dd-border, #d0d5dd); display: grid; place-items: center; font-size: 13px; line-height: 1; color: #fff; }
   .tile.sel .pin { background: var(--sel); border-color: var(--sel); }
   .tile .val { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
@@ -231,14 +231,108 @@
   .tile .warn { font-size: 11.5px; color: var(--d-8a6a00-text, #8a6a00); }
   .tile .note { font-size: 12px; color: var(--ink-3); }
 
+  /* At a glance */
+  .gl-sum { padding: 14px 18px; display: flex; gap: 18px; align-items: baseline; }
+  .gl-sum .cap { flex: none; width: 112px; }
+  .gl-sum p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--blue-900); }
+  .gl { overflow: hidden; }
+  .gl-h { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding: 14px 18px 12px; }
+  .gl-h h3 { margin: 0; font-size: 15.5px; color: var(--blue-900); }
+  .gl-h p { margin: 3px 0 0; font-size: 13px; color: var(--ink-2); }
+  .gl-go { flex: none; border: 0; background: none; padding: 0; font: inherit; font-size: 13px; color: var(--d-0064aa-text, #0064aa); cursor: pointer; white-space: nowrap; }
+  .gl-go:hover { text-decoration: underline; text-underline-offset: 2px; }
+  .gl-w { overflow-x: auto; }
+  .gl-t { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; min-width: 720px; }
+  .gl-t th { padding: 7px 12px; background: var(--d-f7f9fb-bg, #f7f9fb); border-top: 1px solid var(--line-2); font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); text-align: left; }
+  .gl-t td { padding: 10px 12px; border-top: 1px solid var(--line-2); vertical-align: middle; }
+  .gl-t th:first-child, .gl-t td:first-child { padding-left: 18px; }
+  .gl-t th:last-child, .gl-t td:last-child { padding-right: 18px; }
+  .gl-t col.c-v { width: 150px; } .gl-t col.c-c { width: 130px; } .gl-t col.c-s { width: 136px; } .gl-t col.c-g { width: 150px; }
+  .gl-t th { white-space: nowrap; }
+  .gl-t tbody tr { cursor: pointer; }
+  .gl-t tbody tr:hover td { background: var(--d-f7f9fb-bg, #f7f9fb); }
+  .gl-n b { display: block; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+  .gl-n span { display: block; font-size: 12.5px; line-height: 1.4; color: var(--ink-2); }
+  .gl-v b { display: block; font-size: 14px; font-weight: 600; color: var(--blue-900); font-variant-numeric: tabular-nums; }
+  .gl-v small, .gl-wait { display: block; font-size: 11.5px; color: var(--ink-3); }
+  .gl-t .num { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .gl-t .gsp { width: 110px; }
+  .sig { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .sig.head { background: var(--d-fdf0eb-bg, #fdf0eb); color: var(--d-8a4a33-text, #8a4a33); }
+  .sig.tail { background: var(--d-e4f4f1-bg, #e4f4f1); color: var(--d-1d6b5e-text, #1d6b5e); }
+  .sig.flat { background: var(--d-eef1f4-bg, #eef1f4); color: var(--d-4b5563-text, #4b5563); }
+  .sig.none { padding-left: 0; font-weight: 400; color: var(--ink-3); }
+  .gl-band { padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .gl-band h3 { margin: 0; font-size: 15.5px; color: var(--blue-900); }
+  .gl-band p { margin: 3px 0 0; font-size: 13px; color: var(--ink-2); }
+  .gl-foot { margin: 0; font-size: 12.5px; color: var(--ink-3); }
+  /* "For WEPA" line on cards: always three lines high, so cards in a row stay aligned */
+  .wepa { font-size: 12.5px; line-height: 1.45; color: var(--d-374151-text, #374151); background: var(--d-eef5fb-bg, #eef5fb); border-radius: 8px; padding: 7px 10px; height: calc(3 * 1.45em + 14px); box-sizing: border-box; }
+  .wepa > span { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .wepa b { color: var(--blue-900); font-weight: 600; }
+  .tile .tag { position: absolute; top: 12px; right: 12px; }
+  .tag { flex: none; font-size: 11px; font-weight: 600; background: var(--d-e6eef9-bg, #e6eef9); color: var(--blue-900); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
+  .tile.has-tag .lbl { padding-right: 76px; }
+  /* Cost chain */
+  .ch { padding: 16px 18px; display: flex; flex-direction: column; gap: 14px; }
+  .ch-row { display: grid; grid-template-columns: minmax(0, 1.55fr) 20px minmax(150px, .62fr) 20px minmax(0, 1fr); gap: 14px; align-items: center; }
+  .ch-in { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .ch-i, .ch-lg { display: grid; grid-template-columns: minmax(0, 1fr) 70px 52px; gap: 8px; align-items: center; }
+  .ch-i { width: 100%; border: 1px solid var(--line); border-radius: 9px; padding: 7px 10px; background: var(--d-fff-bg, #fff); font: inherit; text-align: left; cursor: pointer; color: inherit; }
+  .ch-i:hover { border-color: var(--d-d5dae2-border, #d5dae2); }
+  .ch-i:disabled { cursor: default; opacity: .7; }
+  .ch-i b { display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ch-i small { display: block; font-size: 11.5px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ch-i .num, .ch-lg span { text-align: right; font-size: 13px; }
+  .ch-i .pts { font-weight: 600; color: var(--blue-900); }
+  .ch-lg { padding: 0 11px; } .ch-lg span { font-size: 11px; color: var(--ink-3); }
+  .ch-arrow { font-size: 20px; color: var(--ink-3); text-align: center; }
+  .ch-mid { display: flex; flex-direction: column; gap: 10px; }
+  .ch-k { border-radius: 10px; padding: 12px 14px; border: 1px solid var(--line); }
+  .ch-k span { display: block; font-size: 12px; font-weight: 600; color: var(--ink-3); }
+  .ch-k b { display: block; font-size: 26px; line-height: 1.2; color: var(--blue-900); font-variant-numeric: tabular-nums; }
+  .ch-k small { display: block; font-size: 11.5px; color: var(--ink-3); }
+  .ch-k.main { background: var(--d-002d55-bg, #002d55); border-color: transparent; }
+  .ch-k.main span, .ch-k.main small { color: #c9dcee; } .ch-k.main b { color: #fff; }
+  .ch-out { border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; align-self: center; }
+  .ch-out.head { background: var(--d-fdf0eb-bg, #fdf0eb); color: var(--d-6b3b25-text, #6b3b25); }
+  .ch-out.tail { background: var(--d-e4f4f1-bg, #e4f4f1); color: var(--d-0d3d35-text, #0d3d35); }
+  .ch-out span { font-size: 12.5px; font-weight: 600; }
+  .ch-out b { font-size: 32px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .ch-out p { margin: 0; font-size: 13px; line-height: 1.5; }
+  @media (max-width: 1180px) { .ch-row { grid-template-columns: minmax(0, 1fr); } .ch-arrow { transform: rotate(90deg); } }
+  /* Industry + grid sections */
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; }
+  .jump button { border: 1px solid var(--line); background: var(--d-fff-bg, #fff); border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 13px; color: var(--ink-2); cursor: pointer; }
+  .jump button:hover { border-color: var(--d-c9d0d9-border, #c9d0d9); color: var(--blue-900); }
+  .sec-h { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 16px; scroll-margin-top: 16px; }
+  .sec-h h3 { margin: 2px 0 0; font-size: 17px; color: var(--blue-900); }
+  .sec-h.gap { margin-top: 10px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .sec-tools { display: flex; align-items: center; gap: 12px; font-size: 12.5px; color: var(--ink-3); }
+  .btn-o { border: 1px solid var(--d-cfd8e3-border, #cfd8e3); background: var(--d-fff-bg, #fff); border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 13px; color: var(--blue-900); cursor: pointer; }
+  .btn-o:hover { border-color: var(--d-aac6dc-border, #aac6dc); }
+  .mix { display: flex; height: 28px; border-radius: 8px; overflow: hidden; background: var(--d-eef1f4-bg, #eef1f4); }
+  .mix i { display: block; height: 100%; }
+  .mix i + i { box-shadow: inset 1px 0 0 var(--d-fff-border, #fff); }
+  .mix-lg { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12.5px; color: var(--ink-2); }
+  .mix-lg span { display: inline-flex; align-items: center; gap: 6px; }
+  .mix-lg i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+  .mix-lg b { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .wepa-l { margin: 0; font-size: 13px; line-height: 1.5; color: var(--d-374151-text, #374151); }
+  .wepa-l b { color: var(--blue-900); }
+  /* Indicator dropdown in the side panel */
+  .idd .ps-tree { padding: 8px 6px 6px; }
+  .ind-q { width: 100%; box-sizing: border-box; font: inherit; font-size: 13px; padding: 6px 9px; margin: 0 0 8px; border: 1px solid var(--d-e1e5eb-border, #e1e5eb); border-radius: 8px; background: var(--d-fff-bg, #fff); color: var(--ink); }
+  @media (max-width: 720px) { .gl-sum { flex-direction: column; gap: 4px; } .gl-h, .gl-band { flex-direction: column; align-items: flex-start; } }
+
   footer { border-top: 1px solid var(--line); padding: 16px 0 28px; font-size: 12.5px; color: var(--ink-3); }
   footer p { margin: 0 0 4px; }
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261106b" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261106b">
-<script src="assets/colresize.js?v=20261106b" defer></script>
+<script src="assets/status.js?v=20261106c" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261106c">
+<script src="assets/colresize.js?v=20261106c" defer></script>
 </head>
 <body>
 <header>
@@ -275,11 +369,11 @@
   </div>
 </header>
 <main class="wrap layout">
-  <aside class="side" id="side" aria-label="Period and area"></aside>
+  <aside class="side" id="side" aria-label="Question, period and indicators"></aside>
   <div class="content">
     <div class="intro">
       <h2 id="title">Market</h2>
-      <p>Public price and energy statistics behind tissue costs.</p>
+      <p>Public price, demand and energy statistics behind tissue costs.</p>
     </div>
     <div class="ptabs" role="tablist" id="tabs" aria-label="Market sections"></div>
     <div class="tabp" id="tab-cmp" role="tabpanel">
@@ -301,7 +395,7 @@
   </div>
 </main>
 <footer><div class="wrap">
-  <p>Sources: Eurostat (producer prices, production, energy prices) · Eurostat Comext (EU trade: unit values = value ÷ volume, a market signal, not a contract price) · Destatis, GENESIS-Online (wholesale prices for recovered paper; Datenlizenz Deutschland – Namensnennung 2.0) · U.S. Bureau of Labor Statistics, IMF and Federal Reserve via FRED · Bundesnetzagentur | SMARD.de (CC BY 4.0) · Ember (CC BY 4.0) · DIE PAPIERINDUSTRIE e.V., Umweltbundesamt and Cepi (industry figures) · EU carbon price entered manually from press reports (exchange prices are licensed).</p>
+  <p>Sources: Eurostat (producer prices, production, energy prices) · Eurostat Comext (EU trade: unit values = value ÷ volume, a market signal, not a contract price) · Destatis, GENESIS-Online (wholesale prices for recovered paper; Datenlizenz Deutschland – Namensnennung 2.0) · U.S. Bureau of Labor Statistics, IMF and Federal Reserve via FRED · Bundesnetzagentur | SMARD.de (CC BY 4.0) · Ember (CC BY 4.0) · Destatis (producer prices, labour costs, production, retail sales, foreign trade, energy use, water, waste and environmental investment) · DIE PAPIERINDUSTRIE e.V., Umweltbundesamt and Cepi (industry figures) · EU carbon price entered manually from press reports (exchange prices are licensed).</p>
   <p>Updated by the scheduled GitHub Action; most statistics are published monthly with a delay of one to three months, energy prices half-yearly, industry figures yearly. Indices are for trend orientation only. Exchange-quoted pulp and recovered-paper prices (FOEX/Fastmarkets PIX, EUWID) are paid data and therefore not shown.</p>
 </div></footer>
 
@@ -309,8 +403,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261106b"></script>
-<script src="assets/carbon.js?v=20261106b"></script>
+<script src="assets/side.js?v=20261106c"></script>
+<script src="assets/carbon.js?v=20261106c"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -323,16 +417,31 @@
   const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
   const EARLIEST = "2019-01";
   const DEFAULT_CMP = ["ppi_tissue", "pulp_nbsk_eu", "rcp_export_eu", "power_de_spot", "ppi_pulp", "us_recovered_paper", "gas_ttf"];
-  const state = { gran: "auto", tab: "cmp", area: RadarSide.area(), sel: new Set(), cmp: [] };
+  const state = { gran: "auto", tab: "glance", area: "all", q: "all", sel: new Set(), cmp: [] };
+  // The four questions (config/market.json "questions"); every indicator belongs to one
+  let QUESTIONS = { cost: { label: "What does tissue cost us?", title: "What does tissue cost us right now?", tab: "cost", link: "Open cost index" },
+    market: { label: "How is our market doing?", title: "How is our market doing?", tab: "industry", link: "Open industry" },
+    grid: { label: "How green is our power?", title: "How green is the power we buy?", tab: "grid", link: "Open grid" },
+    env: { label: "Industry & environment", title: "Where does the industry stand on environment?", tab: "industry", link: "Open industry profile" } };
+  const QDEF = { grid: "grid", powermix: "grid", market_de: "market", profile: "env" };
+  const questionOf = (i) => i.question || QDEF[i.group] || "cost";
+  const Q_ICON = {
+    all: '<circle cx="8" cy="8" r="5.5"/><path d="M2.5 8h11M8 2.5c1.8 1.7 1.8 9.3 0 11M8 2.5c-1.8 1.7-1.8 9.3 0 11"/>',
+    cost: '<circle cx="8" cy="8" r="5.5"/><path d="M9.8 5.8a2.4 2.4 0 1 0 0 4.4M5 7.2h3.6M5 8.8h3.6"/>',
+    market: '<path d="M2 13.5h12"/><path d="M4 11V8M7 11V5.5M10 11V7M13 11V3.5"/>',
+    grid: '<path d="M9 1.8L4 9h4l-1 5.2L12 7H8Z"/>',
+    env: '<path d="M3 13c0-6 4-9.5 10-10-.3 6-3.8 10-10 10Z"/><path d="M3 13l5-5"/>',
+  };
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
   // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
-    { id: "cost", label: "Cost index", groups: [], lead: "Tissue cost driver index: pulp, recovered paper, gas and electricity in one line, set against the producer price index for tissue." },
-    { id: "industry", label: "Industry", groups: [], lead: "The paper industry around WEPA: German production and sales by grade (monthly), recovered paper use by grade and the European picture (yearly)." },
-    { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history and what it means for WEPA." },
+    { id: "cost", label: "Cost index", groups: [], lead: "How the main input costs add up to the tissue cost driver index, set against the producer price index for tissue." },
+    { id: "industry", label: "Industry", groups: [], lead: "WEPA's market month by month (production, demand, trade), and below a yearly environmental profile of the German paper industry as a yardstick." },
+    { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "Where German power comes from, and the CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history." },
   ];
+  const GLANCE_LEAD = "Four questions behind tissue costs and demand, answered from public statistics. The signal compares the latest value with a year earlier: headwind or tailwind for WEPA. Click a row for details.";
   let TABS = [];
-  const ui = { open: false, exp: new Set() };
+  const ui = { open: false, exp: new Set(), indOpen: false, indQ: "" };
   const colorOf = {};
   let M = null, side = null, ETS = null;
   const START_HASH = location.hash;
@@ -345,7 +454,8 @@
   const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const fmtMonth = (s) => MON[+s.slice(5, 7) - 1] + " " + s.slice(0, 4);
   const fmtDay = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); };
-  const fmtDate = (s, ind) => (s.length > 7 ? fmtDay(s) : ind && ind.freq === "half-yearly" ? (s.slice(5, 7) === "01" ? "H1 " : "H2 ") + s.slice(0, 4) : fmtMonth(s));
+  const fmtDate = (s, ind) => (s.length > 7 ? fmtDay(s) : ind && ind.freq === "half-yearly" ? (s.slice(5, 7) === "01" ? "H1 " : "H2 ") + s.slice(0, 4)
+    : ind && ind.freq === "quarterly" ? "Q" + (Math.floor((+s.slice(5, 7) - 1) / 3) + 1) + " " + s.slice(0, 4) : ind && ind.freq === "yearly" ? s.slice(0, 4) : fmtMonth(s));
   function fmtVal(v, unit) {
     if (v == null) return "–";
     if (unit === "€/kWh") return v.toLocaleString("en-GB", { minimumFractionDigits: 3, maximumFractionDigits: 3 });
@@ -354,6 +464,7 @@
     if (unit === "€/t") return Math.round(v).toLocaleString("en-GB");
     if (unit === "€/MWh") return v.toLocaleString("en-GB", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
     if (unit === "%" || unit === "index") return v.toLocaleString("en-GB", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    if (unit === "kt" || unit === "TJ" || unit === "€ m" || unit === "million m³") return v.toLocaleString("en-GB", { maximumFractionDigits: Math.abs(v) >= 100 ? 0 : 1 });
     return v.toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
   const unitLabel = (u) => (u === "index" ? "index" : u);
@@ -398,22 +509,24 @@
     if (p.get("cmp") != null) state.cmp = p.get("cmp").split(",").filter(Boolean);
     if (["auto", "year", "quarter", "month"].includes(p.get("gran"))) state.gran = p.get("gran");
     if (p.get("tab") && TABS.some((t) => t.id === p.get("tab"))) state.tab = p.get("tab");
+    else if (p.has("cmp") || p.has("add")) state.tab = "cmp"; // links from the Overview page open the Trends chart
+    if (p.get("q") && QUESTIONS[p.get("q")]) state.q = p.get("q");
   }
   function writeHash() {
     const p = new URLSearchParams();
-    if (state.tab !== "cmp") p.set("tab", state.tab);
+    p.set("tab", state.tab);
+    if (state.q !== "all") p.set("q", state.q);
     if (state.gran !== "auto") p.set("gran", state.gran);
-    if (state.area !== "all") p.set("area", state.area);
     const def = preset("36"); const same = def.size === state.sel.size && [...def].every((m) => state.sel.has(m));
     if (!same) p.set("months", encodeSel());
     p.set("cmp", state.cmp.join(","));
     history.replaceState(null, "", "#" + p.toString());
-    RadarSide.setArea(state.area);
   }
 
   const hasData = (i) => i.series && i.series.length > 0;
-  const chartable = (i) => hasData(i) && i.source !== "manual" && i.series.length > 1;
-  const visible = () => M.indicators.filter((i) => state.area === "all" || (i.areas || []).includes(state.area));
+  const chartable = (i) => hasData(i) && i.source !== "manual" && i.series.length > 1 && i.group !== "profile";
+  // the question filter applies on "At a glance" and "Trends"; the other tabs always show everything
+  const visible = () => M.indicators.filter((i) => state.q === "all" || !["glance", "cmp"].includes(state.tab) || questionOf(i) === state.q);
 
   let wasMulti = false;
   function assignColors() {
@@ -437,14 +550,13 @@
   // ---------- sidebar ----------
   function sideGroups() {
     const counts = { all: M.indicators.length };
-    const avail = [];
-    M.indicators.forEach((i) => (i.areas || []).forEach((a) => { counts[a] = (counts[a] || 0) + 1; if (!avail.includes(a)) avail.push(a); }));
-    return [
-      { id: "area", title: "Area", selected: state.area, items: RadarSide.areaItems(avail, counts) },
-    ];
+    M.indicators.forEach((i) => { const q = questionOf(i); counts[q] = (counts[q] || 0) + 1; });
+    const items = [{ key: "all", label: "All questions", icon: Q_ICON.all, count: counts.all }]
+      .concat(Object.entries(QUESTIONS).map(([k, q]) => ({ key: k, label: q.label, icon: Q_ICON[k], count: counts[k] || 0, disabled: !counts[k] })));
+    return [{ id: "q", title: "Question", selected: state.q, items }];
   }
   function onSide(group, key) {
-    if (group === "area") { state.area = key; state.cmp = defaultCmp(); }
+    if (group === "q") { state.q = key; if (!["glance", "cmp"].includes(state.tab)) { state.tab = "glance"; window.scrollTo({ top: 0 }); } }
     renderAll();
   }
 
@@ -733,7 +845,7 @@
   function niceStep(raw) { const p = Math.pow(10, Math.floor(Math.log10(raw || 1))); const f = raw / p; return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p; }
   const trunc = (s, n) => (s.length > n ? s.slice(0, Math.max(4, n - 1)) + "…" : s);
   function shortName(i) {
-    return { ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", pulp_nbsk_eu: "Pulp NBSK (EU imp.)", pulp_bhkp_eu: "Pulp BHKP (EU imp.)", rcp_export_eu: "Recovered paper (EU exp.)", power_de_spot: "Power DE spot", rcp_occ_exp: "OCC (EU exp.)", rcp_white_exp: "White grades (EU exp.)", rcp_news_exp: "News & PAMS (EU exp.)", rcp_mixed_exp: "Mixed papers (EU exp.)", rcp_occ_intra: "OCC (intra-EU)", rcp_white_intra: "White grades (intra-EU)", de_rcp_102: "DE 1.02 mixed", de_rcp_104: "DE 1.04 packaging", de_rcp_403: "DE 4.03 kraft corrugated", de_rcp_111: "DE 1.11 deinking", ppi_corrugated: "Corrugated PPI (EU)", us_recycled_board: "Recycled board (US)", us_corrugated_boxes: "Corrugated boxes (US)", gas_ttf: "Gas TTF", elec_de: "Electricity DE", gas_de: "Gas DE", res_share_de: "Renewables DE", eua: "EUA", eurusd: "EUR/USD" }[i.id] || (i.country ? "Grid " + i.country : i.label);
+    return { ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", pulp_nbsk_eu: "Pulp NBSK (EU imp.)", pulp_bhkp_eu: "Pulp BHKP (EU imp.)", rcp_export_eu: "Recovered paper (EU exp.)", power_de_spot: "Power DE spot", rcp_occ_exp: "OCC (EU exp.)", rcp_white_exp: "White grades (EU exp.)", rcp_news_exp: "News & PAMS (EU exp.)", rcp_mixed_exp: "Mixed papers (EU exp.)", rcp_occ_intra: "OCC (intra-EU)", rcp_white_intra: "White grades (intra-EU)", de_rcp_102: "DE 1.02 mixed", de_rcp_104: "DE 1.04 packaging", de_rcp_403: "DE 4.03 kraft corrugated", de_rcp_111: "DE 1.11 deinking", ppi_corrugated: "Corrugated PPI (EU)", us_recycled_board: "Recycled board (US)", us_corrugated_boxes: "Corrugated boxes (US)", gas_ttf: "Gas TTF", elec_de: "Electricity DE", gas_de: "Gas DE", res_share_de: "Renewables DE", eua: "EUA", eurusd: "EUR/USD", de_ppi_pulp: "Pulp PPI (DE)", de_ppi_tissue: "Tissue PPI (DE)", de_ppi_gas: "Gas for industry (DE)", de_ppi_power: "Power for industry (DE)", de_ppi_diesel: "Diesel (DE)", de_labour_paper: "Labour cost, paper (DE)", de_prod_paper: "Paper production (DE)", de_retail_drug: "Drugstore sales (DE)", de_retail_food: "Supermarket sales (DE)", de_imp_tissue: "Tissue imports (DE)", de_exp_tissue: "Tissue exports (DE)", de_imp_pulp: "Pulp imports (DE)", mix_wind: "Wind share (DE)", mix_solar: "Solar share (DE)", mix_biomass: "Biomass share (DE)", mix_hydro: "Hydro & other RE (DE)", mix_gas: "Gas share (DE)", mix_coal: "Coal share (DE)", mix_other: "Other conventional (DE)", prof_water: "Water use, paper", prof_waste: "Waste, paper", prof_envinv: "Environmental investment, paper", prof_energy_total: "Energy use, paper" }[i.id] || (i.country ? "Grid " + i.country : i.label);
   }
 
   function renderTable(lines) {
@@ -779,6 +891,7 @@
     t.addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target === t) openInd(ind); });
     if (sel) t.style.setProperty("--sel", colorOf[ind.id]);
     t.appendChild(el("div", "lbl", ind.label));
+    if (ind.esrs && !can) { t.classList.add("has-tag"); t.appendChild(el("span", "tag", ind.esrs)); }
     if (can) {
       const p = el("button", "pin", sel ? "✓" : ""); p.type = "button"; p.setAttribute("role", "checkbox"); p.setAttribute("aria-checked", String(sel));
       p.title = sel ? "Remove from the Trends chart" : "Add to the Trends chart"; p.setAttribute("aria-label", p.title + " – " + ind.label);
@@ -787,7 +900,7 @@
       t.appendChild(p);
     }
     if (!hasData(ind)) {
-      t.appendChild(el("div", "na", "No data yet – arrives with the next weekly run."));
+      t.appendChild(el("div", "na", "No data yet – arrives with the next data update."));
     } else {
       const last = ind.series[ind.series.length - 1];
       const v = el("div", "val"); v.append(el("b", null, fmtVal(last[1], ind.unit)), el("small", null, unitLabel(ind.unit) + " · " + fmtDate(last[0], ind)));
@@ -796,7 +909,7 @@
       if (c) {
         const up = c.pct > 0.05, dn = c.pct < -0.05;
         const ch = el("div", "chg");
-        ch.append(el("span", "a", up ? "▲" : dn ? "▼" : "▬"), document.createTextNode(ind.unit === "%" ? `${c.pp > 0 ? "+" : ""}${c.pp.toFixed(1)} pp vs. a year ago` : `${c.pct > 0 ? "+" : ""}${c.pct.toFixed(1)} % vs. a year ago`));
+        ch.append(el("span", "a", up ? "▲" : dn ? "▼" : "▬"), document.createTextNode((ind.unit === "%" ? `${c.pp > 0 ? "+" : ""}${c.pp.toFixed(1)} pp` : `${c.pct > 0 ? "+" : ""}${c.pct.toFixed(1)} %`) + (ind.freq === "yearly" ? " vs. previous year" : " vs. a year ago")));
         t.appendChild(ch);
       } else if (ind.source === "manual" && ind.notes && ind.notes.length) {
         t.appendChild(el("div", "note", ind.notes[ind.notes.length - 1].note || ""));
@@ -804,6 +917,7 @@
       if (ind.status === "stale") t.appendChild(el("div", "warn", "Last update failed – showing the previous values."));
       if (can) t.appendChild(spark(ind, sel ? colorOf[ind.id] : null));
     }
+    if (ind.short) { const w = el("div", "wepa"); w.title = ind.short; const sp = el("span"); sp.append(el("b", null, "For WEPA: "), document.createTextNode(ind.short)); w.appendChild(sp); if (!can || !hasData(ind)) w.style.marginTop = "auto"; t.appendChild(w); }
     const src = el("div", "src");
     src.appendChild(el("span", null, `${ind.attribution} · ${ind.freq}`));
     const a = el("a", null, "Source ↗"); a.href = (ind.source === "manual" && ind.notes && ind.notes.length && ind.notes[ind.notes.length - 1].url) || ind.link; a.target = "_blank"; a.rel = "noopener";
@@ -1073,22 +1187,22 @@
       const id = c.ids.find((x) => seriesMap(x)); if (!id) return { ...c, id: null, w: W[c.key] || 0 };
       let map = seriesMap(id);
       if (c.usd && fx) { const m2 = new Map(); map.forEach((v, k) => { const r = at(fx, k, 2); if (r) m2.set(k, v / r); }); map = m2; }
-      return { ...c, id, map, w: W[c.key] || 0, ind: M.indicators.find((x) => x.id === id) };
+      return { ...c, id, map, gap: c.gap || 2, w: W[c.key] || 0, ind: M.indicators.find((x) => x.id === id) };
     });
     const months = selSorted();
     const usable = comps.filter((c) => c.map && c.w > 0);
-    const base = months.find((m) => usable.every((c) => at(c.map, m, 2) != null));
+    const base = months.find((m) => usable.every((c) => at(c.map, m, c.gap) != null));
     if (!base) return { comps, W, rows: [] };
     const totalW = usable.reduce((a, c) => a + c.w, 0) + (W.other || 0);
     const ppi = seriesMap(COST.compare);
     const ppiBase = ppi ? at(ppi, base, 2) : null;
     const rows = [];
     months.filter((m) => m >= base).forEach((m) => {
-      const vals = usable.map((c) => at(c.map, m, 2));
+      const vals = usable.map((c) => at(c.map, m, c.gap));
       if (vals.some((v) => v == null)) return;
-      const idx = (usable.reduce((a, c, k) => a + c.w * (vals[k] / at(c.map, base, 2)), 0) + (W.other || 0)) / totalW * 100;
+      const idx = (usable.reduce((a, c, k) => a + c.w * (vals[k] / at(c.map, base, c.gap)), 0) + (W.other || 0)) / totalW * 100;
       const p = ppi && ppiBase ? at(ppi, m, 0) : null;
-      rows.push({ m, idx, ppi: p != null ? (p / ppiBase) * 100 : null, parts: usable.map((c, k) => ({ key: c.key, ratio: vals[k] / at(c.map, base, 2) })) });
+      rows.push({ m, idx, ppi: p != null ? (p / ppiBase) * 100 : null, parts: usable.map((c, k) => ({ key: c.key, ratio: vals[k] / at(c.map, base, c.gap) })) });
     });
     return { comps, usable, W, totalW, base, rows };
   }
@@ -1099,16 +1213,8 @@
     const h = el("div", "ind-h"); h.append(el("h3", null, "Tissue cost driver index"), el("span", null, R.base ? fmtMonth(R.base) + " = 100 · period from the side panel" : ""));
     sec.appendChild(h);
     if (!R.rows.length) { sec.appendChild(el("div", "empty", "Not enough data for this period – choose a longer period, or wait for the next data update.")); host.appendChild(sec); return; }
-    const last = R.rows[R.rows.length - 1], lastP = [...R.rows].reverse().find((r) => r.ppi != null);
-    const k = el("div", "gd-kpis");
-    const kp = (label, v, sub) => { const d = el("div"); d.append(document.createTextNode(label), el("b", null, v)); if (sub) d.appendChild(el("small", null, sub)); return d; };
-    k.appendChild(kp("Cost index · " + fmtMonth(last.m), last.idx.toFixed(1), (last.idx >= 100 ? "+" : "") + (last.idx - 100).toFixed(1) + " % since " + fmtMonth(R.base)));
-    if (lastP) {
-      k.appendChild(kp("Tissue price index · " + fmtMonth(lastP.m), lastP.ppi.toFixed(1), (lastP.ppi >= 100 ? "+" : "") + (lastP.ppi - 100).toFixed(1) + " % since " + fmtMonth(R.base)));
-      const gap = lastP.ppi - R.rows.find((r) => r.m === lastP.m).idx;
-      k.appendChild(kp("Price minus cost · " + fmtMonth(lastP.m), (gap > 0 ? "+" : "") + gap.toFixed(1) + " pts", gap >= 0 ? "prices ahead of costs – room for margin" : "costs ahead of prices – margin pressure"));
-    }
-    sec.appendChild(k);
+    const last = R.rows[R.rows.length - 1];
+    host.appendChild(costChain(R));
     // chart (same style as Trends)
     const box = el("div", "chart ind-chart"); sec.appendChild(box);
     const MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -1145,12 +1251,12 @@
       tb.appendChild(tr);
     });
     const tro = el("tr"); const wo = el("td"); wo.appendChild(winput("other", W.other));
-    tro.append(el("td", null, "Other costs (held constant)"), el("td", null, "labour, chemicals, packaging, logistics …"), wo, el("td", null, "0 %"), el("td", null, "0"));
+    tro.append(el("td", null, "Other costs (held constant)"), el("td", null, "chemicals, packaging, other …"), wo, el("td", null, "0 %"), el("td", null, "0"));
     tb.appendChild(tro);
     t.appendChild(tb); const tw = el("div"); tw.style.overflowX = "auto"; tw.appendChild(t); sec.appendChild(tw);
     const note = el("p", "ind-src");
     const reset = el("button", "link", "Reset to default weights"); reset.type = "button"; reset.addEventListener("click", () => { try { localStorage.removeItem(COST_KEY); } catch (e) {} renderTiles(); });
-    note.append(document.createTextNode("Weights are illustrative shares of cash cost (total " + Math.round(R.totalW) + ") and are saved only in your browser. Gas is converted to euro with EUR/USD; missing recent months are carried forward up to two months. "), reset);
+    note.append(document.createTextNode("Weights are illustrative shares of cash cost (total " + Math.round(R.totalW) + ") and are saved only in your browser. Gas is converted to euro with EUR/USD; missing recent months are carried forward up to two months (labour costs, published quarterly, up to five). "), reset);
     sec.appendChild(note);
     const ab = aboutOf(COST.about); if (ab) sec.appendChild(ab);
     host.appendChild(sec);
@@ -1162,11 +1268,21 @@
   function aboutOf(a) { if (!a) return null; return aboutBlock({ about: a, id: "" }); }
   function renderIndustry(host) {
     const draws = [];
-    if (!IND) { host.appendChild(el("div", "empty", "Industry figures are not available yet.")); return; }
+    const jump = el("div", "jump");
+    [["ind-month", "Every month · market"], ["ind-year", "Every year · environmental profile"]].forEach(([id, t]) => {
+      const b = el("button", null, t); b.type = "button"; b.addEventListener("click", () => { const x = $(id); if (x) x.scrollIntoView({ behavior: "smooth", block: "start" }); }); jump.appendChild(b);
+    });
+    host.appendChild(jump);
+    // 0) monthly market indicators (Destatis)
+    host.appendChild(secHead("ind-month", "Every month", "How is our market doing?"));
+    const mk = M.indicators.filter((i) => i.group === "market_de");
+    if (mk.length) { const g = el("div", "tiles"); mk.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
     const pct = (v) => (v > 0 ? "+" : v < 0 ? "−" : "±") + Math.abs(v).toFixed(1).replace(".0", "") + " %";
     const kt = (v) => Math.round(v).toLocaleString("en-GB");
+    if (!IND) host.appendChild(el("div", "empty", "Industry figures of DIE PAPIERINDUSTRIE are not available yet."));
+    const year = renderProfile(host);
     // 1) Germany, year-to-date by grade
-    const gm = IND.germanyMonthly;
+    const gm = IND && IND.germanyMonthly;
     if (gm) {
       const sec = el("section", "panel ind-sec");
       const h = el("div", "ind-h"); h.append(el("h3", null, "Germany · paper production and sales by grade"), el("span", null, gm.period + " vs. " + gm.periodPrev + " · " + gm.unit + (gm.auto ? " · updated automatically" : "")));
@@ -1195,10 +1311,10 @@
       if (gm.latestNote && !gm.auto) { const n = el("p", "ind-note"); n.append(document.createTextNode(gm.latestNote.text + " "), srcLink(gm.latestNote.source)); sec.appendChild(n); }
       const ab = aboutOf(gm.about); if (ab) sec.appendChild(ab);
       const f = el("p", "ind-src"); f.append("Source: ", srcLink(gm.source)); sec.appendChild(f);
-      host.appendChild(sec);
+      host.insertBefore(sec, year);
     }
     // 2) Recovered paper utilisation rate by grade
-    const rr = IND.germanyRecoveredRate;
+    const rr = IND && IND.germanyRecoveredRate;
     if (rr) {
       const sec = el("section", "panel ind-sec");
       const h = el("div", "ind-h"); h.append(el("h3", null, "Germany · recovered paper utilisation rate by grade"), el("span", null, "% of paper production · yearly " + rr.years[0] + "–" + rr.years[rr.years.length - 1]));
@@ -1224,7 +1340,7 @@
       host.appendChild(sec);
     }
     // 3) Europe
-    const eu = IND.europe;
+    const eu = IND && IND.europe;
     if (eu) {
       const sec = el("section", "panel ind-sec");
       const h = el("div", "ind-h"); h.append(el("h3", null, eu.label), el("span", null, "yearly"));
@@ -1238,8 +1354,202 @@
     }
     draws.forEach((f) => f());
   }
+
+  // ---------- signals: headwind / tailwind for WEPA (a judgement, so the only coloured element) ----------
+  function signal(ind) {
+    if (!ind.good || !hasData(ind)) return null;
+    const c = yoy(ind); if (!c) return null;
+    const pp = ind.unit === "%";
+    const v = pp ? c.pp : c.pct, band = ind.band != null ? ind.band : pp ? 1 : 3;
+    if (Math.abs(v) < band) return { cls: "flat", text: "Neutral" };
+    return (v > 0) === (ind.good === "up") ? { cls: "tail", text: "Tailwind" } : { cls: "head", text: "Headwind" };
+  }
+  function chgText(ind) {
+    const c = yoy(ind); if (!c) return "–";
+    const up = c.pct > 0.05, dn = c.pct < -0.05, a = up ? "▲ " : dn ? "▼ " : "▬ ";
+    return ind.unit === "%" ? a + (c.pp > 0 ? "+" : "") + c.pp.toFixed(1) + " pp" : a + (c.pct > 0 ? "+" : "") + c.pct.toFixed(1) + " %";
+  }
+  function goTab(id, anchor) {
+    state.tab = id; renderAll(); window.scrollTo({ top: 0 });
+    if (anchor) setTimeout(() => { const x = $(anchor); if (x) x.scrollIntoView({ block: "start" }); }, 30);
+  }
+  function summaryLine() {
+    const bits = [];
+    const R = COST ? computeCost() : null;
+    if (R && R.rows.length) {
+      const lastP = [...R.rows].reverse().find((r) => r.ppi != null);
+      if (lastP) {
+        const r = R.rows.find((x) => x.m === lastP.m), dc = r.idx - 100, dp = lastP.ppi - 100;
+        const w = (v) => (Math.abs(v) < 0.5 ? "flat" : (v > 0 ? "up " : "down ") + Math.abs(v).toFixed(0) + " %");
+        bits.push("Input costs are " + w(dc) + " since " + fmtMonth(R.base) + " while tissue prices are " + w(dp) + (lastP.ppi - r.idx < -1 ? ", so margins are under pressure." : lastP.ppi - r.idx > 1 ? ", so prices are ahead of costs." : ", so the gap is small."));
+      }
+    }
+    const hy = IND && IND.germanyMonthly && (IND.germanyMonthly.rows || []).find((r) => r.key === "hygiene");
+    if (hy && hy.production) bits.push("German tissue production " + IND.germanyMonthly.period + " is " + (hy.production[2] < 0 ? "down " : "up ") + Math.abs(hy.production[2]).toFixed(1) + " % on last year.");
+    const de = M.indicators.find((i) => i.id === "grid_de");
+    if (de && hasData(de)) { const a = avg12(de, 0), b = avg12(de, 12); if (a && b) bits.push("The German grid factor (12-month average) is " + Math.abs((a - b) / b * 100).toFixed(0) + " % " + (a < b ? "lower" : "higher") + " than a year earlier."); }
+    return bits.join(" ");
+  }
+  function renderGlance(host) {
+    const line = summaryLine();
+    if (line) { const b = el("section", "panel gl-sum"); b.append(el("p", "cap", "In one line"), el("p", null, line)); host.appendChild(b); }
+    Object.entries(QUESTIONS).forEach(([qk, q]) => {
+      if (state.q !== "all" && state.q !== qk) return;
+      if (qk === "env") {
+        const b = el("section", "panel gl-band"); const tx = el("div");
+        tx.append(el("h3", null, q.title), el("p", null, "Yearly yardstick: energy mix, water, waste and environmental investment of German paper mills."));
+        const go = el("button", "gl-go", (q.link || "Open") + " →"); go.type = "button"; go.addEventListener("click", () => goTab(q.tab, "ind-year"));
+        b.append(tx, go); host.appendChild(b); return;
+      }
+      const rows = M.indicators.filter((i) => i.glance && questionOf(i) === qk);
+      if (!rows.length) return;
+      const sec = el("section", "panel gl");
+      const sigs = rows.map(signal).filter(Boolean), cnt = (c) => sigs.filter((x) => x.cls === c).length;
+      const wait = rows.filter((i) => !hasData(i)).length;
+      const ans = sigs.length ? [cnt("head") + " headwind", cnt("tail") + " tailwind", cnt("flat") + " neutral"].join(" · ") + (wait ? " · " + wait + " waiting for first data" : "") : wait ? wait + " indicators waiting for first data" : "";
+      const h = el("div", "gl-h"); const tx = el("div"); tx.append(el("h3", null, q.title), el("p", null, ans));
+      const go = el("button", "gl-go", (q.link || "Open") + " →"); go.type = "button"; go.addEventListener("click", () => goTab(q.tab, qk === "market" ? "ind-month" : null));
+      h.append(tx, go); sec.appendChild(h);
+      const w = el("div", "gl-w"); const t = el("table", "gl-t");
+      const cg = el("colgroup"); ["c-n", "c-v", "c-c", "c-s", "c-g"].forEach((c) => cg.appendChild(el("col", c))); t.appendChild(cg);
+      const hr = el("tr"); ["Indicator · what it tells WEPA", "Latest", "vs. a year ago", "Last 36 months", "Signal for WEPA"].forEach((x) => hr.appendChild(el("th", null, x)));
+      const th = el("thead"); th.appendChild(hr); t.appendChild(th);
+      const tb = el("tbody");
+      rows.forEach((i) => {
+        const tr = el("tr"); tr.tabIndex = 0; tr.title = i.label + " – open details";
+        tr.addEventListener("click", () => openInd(i)); tr.addEventListener("keydown", (e) => { if (e.key === "Enter") openInd(i); });
+        const n = el("td", "gl-n"); n.append(el("b", null, shortName(i)), el("span", null, i.short || "")); tr.appendChild(n);
+        const v = el("td", "gl-v");
+        if (hasData(i)) { const last = i.series[i.series.length - 1]; v.append(el("b", null, fmtVal(last[1], i.unit) + (i.unit === "index" ? "" : " " + unitLabel(i.unit))), el("small", null, fmtDate(last[0], i) + (i.unit === "index" ? " · index" : ""))); }
+        else v.appendChild(el("span", "gl-wait", "Waiting for first data"));
+        tr.appendChild(v);
+        tr.appendChild(el("td", "num", hasData(i) ? chgText(i) : ""));
+        const sp = el("td"); if (hasData(i)) { const last = i.series[i.series.length - 1][0]; sp.appendChild(sparkVals(i.series.filter((p) => p[0].slice(0, 7) > monthsBack(last.slice(0, 7), 36)).map((p) => p[1]))); } tr.appendChild(sp);
+        const sg = signal(i); const g = el("td"); g.appendChild(el("span", "sig " + (sg ? sg.cls : "none"), sg ? sg.text : "–")); tr.appendChild(g);
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); w.appendChild(t); sec.appendChild(w); host.appendChild(sec);
+    });
+    host.appendChild(el("p", "gl-foot", "Signals are rule-based: a change of more than 3 % (1 pp for shares) against a year earlier, in the direction that helps or hurts WEPA. Price and volume moves themselves stay neutral."));
+  }
+  // Cost index: inputs → cost index vs. tissue price → margin signal
+  function costChain(R) {
+    const last = R.rows[R.rows.length - 1], lastP = [...R.rows].reverse().find((r) => r.ppi != null);
+    const sec = el("section", "panel ch");
+    const h = el("div", "ind-h"); h.append(el("h3", null, "How the inputs add up to our margin"), el("span", null, fmtMonth(R.base) + " = 100 · read left to right · click an input for its chart"));
+    sec.appendChild(h);
+    const row = el("div", "ch-row");
+    const ins = el("div", "ch-in");
+    const contrib = (c) => { const part = last.parts.find((p) => p.key === c.key); return part ? { ch: (part.ratio - 1) * 100, pts: (c.w * (part.ratio - 1) * 100) / R.totalW } : null; };
+    R.comps.forEach((c) => {
+      const x = contrib(c);
+      const b = el("button", "ch-i"); b.type = "button";
+      const nm = el("span"); nm.append(el("b", null, c.label + " · " + Math.round(c.w) + " %"), el("small", null, c.ind ? shortName(c.ind) + " · " + (c.ind.attribution || "").split(" (")[0].split(",")[0] : "no data yet"));
+      b.append(nm, el("span", "num", x ? (x.ch > 0 ? "+" : "") + x.ch.toFixed(1) + " %" : "–"), el("span", "num pts", x ? (x.pts > 0 ? "+" : "") + x.pts.toFixed(1) : "–"));
+      if (c.ind) b.addEventListener("click", () => openInd(c.ind)); else b.disabled = true;
+      ins.appendChild(b);
+    });
+    const lg = el("div", "ch-lg"); lg.append(el("span"), el("span", null, "change"), el("span", null, "index pts")); ins.appendChild(lg);
+    const arrow = () => { const a = el("div", "ch-arrow", "→"); a.setAttribute("aria-hidden", "true"); return a; };
+    const mid = el("div", "ch-mid");
+    const kb = (cls, label, v, sub) => { const d = el("div", "ch-k" + cls); d.append(el("span", null, label), el("b", null, v), el("small", null, sub)); return d; };
+    mid.appendChild(kb(" main", "Cost index", last.idx.toFixed(1), fmtMonth(last.m)));
+    if (lastP) mid.appendChild(kb("", "Tissue price index", lastP.ppi.toFixed(1), fmtMonth(lastP.m) + " · what producers charge"));
+    row.append(ins, arrow(), mid, arrow());
+    if (lastP) {
+      const gap = lastP.ppi - R.rows.find((r) => r.m === lastP.m).idx;
+      const out = el("div", "ch-out " + (gap < 0 ? "head" : "tail"));
+      const top = R.comps.map((c) => ({ c, x: contrib(c) })).filter((o) => o.x && o.x.pts > 0.05).sort((a, b) => b.x.pts - a.x.pts).slice(0, 2);
+      const drivers = top.length ? " " + top.map((o) => o.c.label.split(" (")[0].toLowerCase()).join(" and ") + " add the most (" + top.map((o) => "+" + o.x.pts.toFixed(1)).join(" and ") + " points)." : "";
+      out.append(el("span", null, "Margin signal · " + (gap < 0 ? "headwind" : "tailwind")), el("b", null, (gap > 0 ? "+" : "") + gap.toFixed(1) + " pts"),
+        el("p", null, (gap < 0 ? "Costs ran ahead of prices since " : "Prices are ahead of costs since ") + fmtMonth(R.base) + "." + (gap < 0 ? drivers.replace(/^ (\w)/, (m, a) => " " + a.toUpperCase()) : "")));
+      row.appendChild(out);
+    } else row.appendChild(el("div", "empty", "No tissue price index yet."));
+    sec.appendChild(row);
+    return sec;
+  }
+  function secHead(id, cap, title, tools) {
+    const h = el("div", "sec-h" + (id === "ind-year" ? " gap" : "")); h.id = id;
+    const tx = el("div"); tx.append(el("p", "cap", cap), el("h3", null, title)); h.appendChild(tx);
+    if (tools) h.appendChild(tools);
+    return h;
+  }
+  // stacked share bar: [{ name, v, color }]
+  function mixBar(parts) {
+    const tot = parts.reduce((a, p) => a + p.v, 0) || 1;
+    const bar = el("div", "mix"); bar.setAttribute("role", "img"); bar.setAttribute("aria-label", parts.map((p) => p.name + " " + (100 * p.v / tot).toFixed(0) + " %").join(", "));
+    const lg = el("div", "mix-lg");
+    parts.forEach((p) => {
+      const i = el("i"); i.style.width = (100 * p.v / tot) + "%"; i.style.background = p.color; i.title = p.name + ": " + (100 * p.v / tot).toFixed(1) + " %"; bar.appendChild(i);
+      const s = el("span"); const d = el("i"); d.style.background = p.color; s.append(d, document.createTextNode(p.name + " "), el("b", null, (100 * p.v / tot).toFixed(1) + " %")); if (p.extra) s.appendChild(el("small", null, " " + p.extra)); lg.appendChild(s);
+    });
+    return [bar, lg];
+  }
+  const MIX_COL = { mix_wind: "#33b09c", mix_solar: "#96d2dc", mix_biomass: "#1d7f6c", mix_hydro: "#0064aa", mix_gas: "#f4b49f", mix_coal: "#335777", mix_other: "#828282" };
+  function mixPanel() {
+    const items = M.indicators.filter((i) => i.stack === "powermix" && hasData(i));
+    const sec = el("section", "panel ind-sec");
+    const h = el("div", "ind-h"); sec.appendChild(h);
+    if (!items.length) { h.append(el("h3", null, "Power mix behind the German grid"), el("span", null, "SMARD (CC BY 4.0)")); sec.appendChild(el("div", "empty", "The power mix arrives with the next data update.")); return sec; }
+    const last = items.map((i) => i.series[i.series.length - 1][0]).sort()[0];
+    h.append(el("h3", null, "Power mix behind the German grid"), el("span", null, fmtMonth(last) + " · share of public net generation · Bundesnetzagentur | SMARD.de (CC BY 4.0)"));
+    const parts = items.map((i) => {
+      const p = i.series.find((x) => x[0] === last); const prev = i.series.find((x) => x[0] === monthsBack(last, 12));
+      const d = p && prev ? p[1] - prev[1] : null;
+      return { name: i.label.replace("German power mix · ", ""), v: p ? p[1] : 0, color: MIX_COL[i.id] || "#828282", extra: d == null ? "" : (d > 0.05 ? "▲ " : d < -0.05 ? "▼ " : "▬ ") + Math.abs(d).toFixed(1) + " pp" };
+    });
+    const [bar, lg] = mixBar(parts); sec.append(bar, lg);
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("explains why the German grid factor moves – more wind and solar lower the location-based Scope 2 of German sites, more coal raises it. Changes are against the same month a year earlier."));
+    sec.appendChild(w);
+    return sec;
+  }
+  // Industry tab, yearly part: energy mix + fact cards; returns the section head (monthly panels are inserted before it)
+  const ENERGY_COL = { prof_energy_gas: "#f4b49f", prof_energy_power: "#0064aa", prof_energy_renew: "#33b09c", prof_energy_coal: "#335777", prof_energy_oil: "#96d2dc" };
+  function renderProfile(host) {
+    const prof = M.indicators.filter((i) => i.group === "profile");
+    const withData = prof.filter(hasData);
+    const latest = withData.map((i) => i.series[i.series.length - 1][0].slice(0, 4)).sort().pop();
+    const tools = el("div", "sec-tools");
+    tools.appendChild(el("span", null, latest ? "Latest reporting year " + latest : "Waiting for the first Destatis data"));
+    const copy = el("button", "btn-o", "Copy as text"); copy.type = "button";
+    copy.addEventListener("click", () => {
+      const lines = ["German paper industry (WZ 17) · environmental profile"];
+      prof.filter((i) => hasData(i) && i.stack !== "energy").forEach((i) => { const l = i.series[i.series.length - 1]; lines.push("- " + i.label + ": " + fmtVal(l[1], i.unit) + " " + i.unit + " (" + fmtDate(l[0], i) + "). Source: " + i.attribution + "."); });
+      const em = energyParts(); if (em) lines.push("- Energy mix " + em.year + ": " + em.parts.map((p) => p.name + " " + (100 * p.v / em.tot).toFixed(0) + " %").join(", ") + ". Source: Destatis 43531.");
+      const rr = IND && IND.germanyRecoveredRate;
+      if (rr && rr.series && rr.series["Hygiene papers"]) { const v = rr.series["Hygiene papers"]; lines.push("- Recovered paper utilisation, hygiene papers: " + v[v.length - 1] + " % (" + rr.years[rr.years.length - 1] + "). Source: " + ((rr.source && rr.source.label) || "UBA") + "."); }
+      const txt = lines.join("\n");
+      const done = () => { copy.textContent = "Copied ✓"; setTimeout(() => { copy.textContent = "Copy as text"; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, () => window.prompt("Copy the text:", txt)); else window.prompt("Copy the text:", txt);
+    });
+    tools.appendChild(copy);
+    const head = secHead("ind-year", "Every year · industry profile", "Where does the industry stand on environment?", tools);
+    host.appendChild(head);
+    const sec = el("section", "panel ind-sec");
+    const h = el("div", "ind-h"); h.append(el("h3", null, "Energy mix of the paper industry"), el("span", null, "share of energy use · Destatis 43531")); sec.appendChild(h);
+    const em = energyParts();
+    if (em) { const [bar, lg] = mixBar(em.parts); h.lastChild.textContent = em.year + " · share of energy use · Destatis 43531"; sec.append(bar, lg); }
+    else sec.appendChild(el("div", "empty", "The energy mix arrives with the first Destatis data update."));
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("how gas-dependent the industry is and how far fuel switching has come – a yardstick for WEPA's transition plan (ESRS E1).")); sec.appendChild(w);
+    host.appendChild(sec);
+    const facts = prof.filter((i) => i.stack !== "energy").concat(prof.filter((i) => i.id === "prof_energy_total"));
+    if (facts.length) { const g = el("div", "tiles"); facts.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
+    return head;
+  }
+  function energyParts() {
+    const get = (id) => M.indicators.find((i) => i.id === id);
+    const tot = get("prof_energy_total");
+    const carriers = Object.keys(ENERGY_COL).map(get).filter((i) => i && hasData(i));
+    if (!carriers.length) return null;
+    const year = carriers.map((i) => i.series[i.series.length - 1][0]).sort().pop();
+    const val = (i) => { const p = i && (i.series || []).find((x) => x[0] === year); return p ? p[1] : null; };
+    const parts = carriers.map((i) => ({ name: i.label.replace("Energy use, paper industry · ", "").replace(/^\w/, (c) => c.toUpperCase()), v: val(i) || 0, color: ENERGY_COL[i.id] }));
+    const sum = parts.reduce((a, p) => a + p.v, 0), t = val(tot);
+    if (t && t > sum * 1.005) parts.push({ name: "Other", v: t - sum, color: "#828282" });
+    return { year: year.slice(0, 4), parts, tot: Math.max(t || 0, sum) || 1 };
+  }
   function buildTabs() {
-    TABS = [{ id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "industry" ? !!IND : t.id === "cost" ? !!COST : t.groups.some((g) => M.groups[g])))];
+    TABS = [{ id: "glance", label: "At a glance", groups: [], lead: GLANCE_LEAD }, { id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "cost" ? !!COST : t.id === "industry" ? true : t.groups.some((g) => M.groups[g])))];
   }
   function renderTabs() {
     $("tabs").replaceChildren(...TABS.map((t) => {
@@ -1265,7 +1575,7 @@
     if (state.tab !== "cmp") return;
     const vis = visible();
     Object.entries(M.groups).forEach(([g, label]) => {
-      if (g === "grid") return;
+      if (g === "grid" || g === "profile") return;
       const items = vis.filter((i) => i.group === g); if (!items.length) return;
       const sec = el("section", "group"); sec.appendChild(el("h3", "cap", label));
       const grid = el("div", "tiles"); items.forEach((i) => grid.appendChild(tile(i)));
@@ -1279,10 +1589,19 @@
     if (tab.lead) host.appendChild(el("p", "tab-lead", tab.lead));
     if (tab.id === "grid") {
       // (no "In the Trends chart" strip here – countries are added to the chart from their pop-up)
+      host.appendChild(mixPanel());
       const items = visible().filter((i) => i.group === "grid");
       const t = items.length ? gridTable(items) : null;
-      host.appendChild(t || el("div", "empty", items.length ? "Grid data arrives with the next weekly run (Ember)." : "No grid data for this area. Choose “All areas” in the side panel."));
+      if (t) {
+        t.classList.replace("gt", "ind-sec");
+        const gh = t.querySelector(".gt-head"), ih = el("div", "ind-h");
+        ih.append(el("h3", null, "CO₂ intensity of national power grids"), el("span", null, gh ? gh.textContent : ""));
+        if (gh) gh.replaceWith(ih); else t.prepend(ih);
+      }
+      host.appendChild(t || el("div", "empty", "Grid data arrives with the next data update (Ember)."));
+      if (t) { const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("electricity use × this factor gives the location-based Scope 2 of WEPA's sites in each country. Electrifying heat lowers emissions a lot in France, little in Poland.")); t.appendChild(w); }
     }
+    if (tab.id === "glance") renderGlance(host);
     if (tab.id === "industry") renderIndustry(host);
     if (tab.id === "cost") renderCost(host);
     if (tab.id === "carbon") {
@@ -1343,8 +1662,32 @@
     return wrap;
   }
   function indicatorNode() {
+    const wrap = el("div", "idd");
+    const all = visible().filter(chartable);
+    const dd = el("button", "ps-dd"); dd.type = "button"; dd.setAttribute("aria-expanded", String(ui.indOpen));
+    dd.append(el("span", null, state.cmp.length + " of " + all.length + " selected"), el("span", "chev" + (ui.indOpen ? " up" : "")));
+    dd.addEventListener("click", () => { ui.indOpen = !ui.indOpen; side.refresh(sideGroups()); });
+    wrap.appendChild(dd);
+    if (!ui.indOpen) { wrap.appendChild(el("p", "ind-note", "Picks what the Trends chart shows" + (state.q !== "all" ? " · list narrowed by the question above" : "") + ".")); return wrap; }
+    const tree = el("div", "ps-tree");
+    const q = el("input", "ind-q"); q.type = "search"; q.placeholder = "Find indicator"; q.setAttribute("aria-label", "Find indicator"); q.value = ui.indQ;
+    tree.appendChild(q);
+    const list = indicatorList(all); tree.appendChild(list); wrap.appendChild(tree);
+    const apply = () => {
+      const term = q.value.trim().toLowerCase(); ui.indQ = q.value;
+      let head = null, shown = 0;
+      [...list.children].forEach((n) => {
+        if (n.classList.contains("ind-grp")) { if (head) head.hidden = !shown; head = n; shown = 0; return; }
+        if (!n.classList.contains("ind")) return;
+        const hit = !term || (n.title + " " + n.textContent).toLowerCase().includes(term); n.hidden = !hit; if (hit) shown++;
+      });
+      if (head) head.hidden = !shown;
+    };
+    q.addEventListener("input", apply); apply();
+    return wrap;
+  }
+  function indicatorList(vis) {
     const box = el("div", "ind-list");
-    const vis = visible().filter(chartable);
     if (!vis.length) { box.appendChild(el("p", "ps-empty", "No chartable data yet.")); return box; }
     Object.entries(M.groups).forEach(([g, label]) => {
       const items = vis.filter((i) => i.group === g); if (!items.length) return;
@@ -1364,20 +1707,19 @@
         box.appendChild(b);
       });
     });
-    box.appendChild(el("p", "ind-note", state.cmp.length + " selected · up to " + MAX_LINES + " share one chart, more are shown as small charts"));
+    box.appendChild(el("p", "ind-note", "Up to " + MAX_LINES + " share one chart, more are shown as small charts"));
     return box;
   }
 
   function renderAll() {
     assignColors();
     side.refresh(sideGroups());
-    const a = RadarSide.AREAS[state.area];
-    $("title").textContent = "Market" + (a ? " · " + a.label : "");
+    $("title").textContent = "Market";
     renderTabs(); if (state.tab === "cmp") renderChart(); renderCmpTiles(); renderTiles(); writeHash();
   }
 
   $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });
-  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry") renderTiles(); }, 120); });
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry" || state.tab === "grid") renderTiles(); }, 120); });
 
   Promise.all([
     fetch("data/market.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
@@ -1386,10 +1728,25 @@
     fetch("data/industry.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
   ]).then(([data, ets, cfg, ind]) => {
     M = data; ETS = ets; IND = ind;
-    if (cfg) { (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; }); GRID_ABOUT = cfg.gridAbout || null; COST = cfg.costIndex || null; }
+    if (cfg) {
+      (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; });
+      GRID_ABOUT = cfg.gridAbout || null; COST = cfg.costIndex || null;
+      if (cfg.questions) QUESTIONS = cfg.questions;
+      if (cfg.groups) M.groups = Object.assign({}, cfg.groups, M.groups && Object.fromEntries(Object.entries(M.groups).filter(([g]) => !(g in cfg.groups))));
+      // config fields for the page (summary line, question, signal) and indicators not collected yet (shown as "waiting for data")
+      const byId = new Map(M.indicators.map((i) => [i.id, i]));
+      const order = [];
+      (cfg.indicators || []).forEach((c) => {
+        let i = byId.get(c.id);
+        if (!i) { i = { id: c.id, group: c.group, areas: c.areas, label: c.label, unit: c.unit, freq: c.freq, attribution: c.attribution, link: c.link, source: c.source, series: [], status: "missing" }; }
+        ["short", "good", "band", "glance", "question", "stack", "esrs", "label", "group"].forEach((k) => { if (c[k] != null) i[k] = c[k]; });
+        order.push(i); byId.delete(c.id);
+      });
+      M.indicators = order.concat([...byId.values()]);
+    }
     $("meta").textContent = data.updated ? "Updated " + fmtDay(data.updated) : "Not collected yet";
     side = RadarSide.build($("side"), {
-      toggleLabel: "Period, area & indicators", onChange: onSide,
+      toggleLabel: "Question, period & indicators", onChange: onSide,
       extra: [{ id: "period", title: "Period", node: periodNode, before: true, show: () => state.tab === "cmp" || state.tab === "cost" }, { id: "ind", title: "Indicators in chart", node: indicatorNode, show: () => state.tab === "cmp" }],
     });
     buildTabs();
@@ -1397,8 +1754,6 @@
     if (latestMonth()) ui.exp.add(latestMonth().slice(0, 4));
     readHash();
     document.addEventListener("click", (e) => { if (ui.open && !e.target.closest(".ps")) { ui.open = false; side.refresh(sideGroups()); } });
-    const avail = new Set(M.indicators.flatMap((i) => i.areas || []));
-    if (state.area !== "all" && !avail.has(state.area)) state.area = "all";
     state.cmp = state.cmp.filter((id) => M.indicators.some((i) => i.id === id && chartable(i))).slice(0, MAX_SEL);
     if (!new URLSearchParams(location.hash.slice(1)).has("cmp")) state.cmp = defaultCmp();
     // "Add to Trends chart" from the search window: market.html#add=<indicator id>
@@ -1415,7 +1770,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261106b" defer></script>
-<script src="assets/guide.js?v=20261106b" defer></script>
+<script src="assets/search.js?v=20261106c" defer></script>
+<script src="assets/guide.js?v=20261106c" defer></script>
 </body>
 </html>

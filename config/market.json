@@ -5,8 +5,12 @@
     "recovered": "Recovered paper",
     "packaging": "Packaging & board",
     "energy": "Energy",
+    "labour": "Labour & freight",
+    "carbon": "Carbon & currency",
+    "market_de": "German market & trade",
     "grid": "Grid carbon intensity",
-    "carbon": "Carbon & currency"
+    "powermix": "German power mix",
+    "profile": "Industry profile (yearly)"
   },
   "indicators": [
     {
@@ -51,7 +55,10 @@
         "what": "An index of the prices EU producers charge for household and sanitary paper products when they sell in their home market (NACE C17.22, 2021 = 100). It moves with list and contract price changes across the industry.",
         "wepa": "The closest public signal for the selling-price environment WEPA operates in. Put next to pulp, recovered paper and energy, it shows whether input costs are rising faster than market prices – a margin squeeze – or the other way round.",
         "limits": "Not WEPA's own prices, and not retail shelf prices. C17.22 also includes nappies and other hygiene products, and private-label contracts often follow with a delay. An index shows direction, not a price level."
-      }
+      },
+      "short": "What tissue makers can charge: flat prices while costs rise means margin pressure.",
+      "good": "up",
+      "glance": true
     },
     {
       "id": "ppi_pulp",
@@ -95,7 +102,9 @@
         "what": "An index of the prices EU pulp producers charge in their home market (NACE C17.11).",
         "wepa": "A rough indicator of the direction of European pulp prices – pulp is WEPA's largest raw material cost for fresh-fibre products.",
         "limits": "Mixes all pulp grades and includes integrated producers' internal sales. Eurostat publishes it irregularly and with gaps (some countries keep data confidential). For price levels in €/t, use the EU import prices for NBSK and BHKP."
-      }
+      },
+      "short": "Direction of European pulp prices, WEPA's largest raw material cost for fresh fibre.",
+      "good": "down"
     },
     {
       "id": "ppi_paper",
@@ -139,7 +148,8 @@
         "what": "An index of the prices EU producers charge for paper and paperboard (NACE C17.12), including tissue base paper (parent reels).",
         "wepa": "Shows the wider paper market climate. Relevant when WEPA buys or sells parent reels and as a cross-check for the tissue index.",
         "limits": "Dominated by packaging and graphic papers, which follow their own cycles. Says little about tissue-specific prices."
-      }
+      },
+      "short": "Wider paper market climate; a cross-check for the tissue price index."
     },
     {
       "id": "prod_paper",
@@ -186,7 +196,11 @@
         "what": "An index of production volume in the EU paper and paper products industry (NACE C17).",
         "wepa": "An activity signal: falling volumes point to weak demand or curtailments (often triggered by energy prices), rising volumes to a tightening market for fibre and energy.",
         "limits": "Volume, not price, and the whole paper industry rather than tissue. Tissue demand is much more stable than packaging or graphic paper demand."
-      }
+      },
+      "short": "EU paper output: falling volumes point to weak demand or energy-driven curtailments.",
+      "good": "up",
+      "glance": true,
+      "question": "market"
     },
     {
       "id": "us_recovered_paper",
@@ -206,7 +220,9 @@
         "what": "The US producer price index for recovered paper (waste paper), from the US Bureau of Labor Statistics.",
         "wepa": "A long, reliable series that shows the direction of the global recovered paper market, which also influences European prices through export flows.",
         "limits": "US market and US dollars, and dominated by brown grades (old corrugated containers). WEPA's recycled tissue needs deinking grades such as office paper, which can move differently. Use the EU export price for a European signal."
-      }
+      },
+      "short": "Long trend of the global recovered paper market, which also moves European prices.",
+      "good": "down"
     },
     {
       "id": "us_wood_pulp",
@@ -225,7 +241,9 @@
         "what": "The US producer price index for wood pulp, from the US Bureau of Labor Statistics.",
         "wepa": "Market pulp is traded globally in US dollars, so this index is a stable trend proxy for the pulp prices WEPA pays – together with EUR/USD.",
         "limits": "US domestic prices across several grades, as an index. It does not show the €/t level or the spread between softwood and hardwood pulp."
-      }
+      },
+      "short": "Global pulp price trend in US dollars; read it together with EUR/USD.",
+      "good": "down"
     },
     {
       "id": "pulp_nbsk_eu",
@@ -247,7 +265,10 @@
         "what": "The average price per tonne of bleached softwood kraft pulp (NBSK, CN 4703 21) that the EU imported from outside the EU, calculated as import value ÷ import volume from EU trade statistics.",
         "wepa": "Long-fibre pulp gives tissue its strength and is one of WEPA's biggest cost items. This series gives a real price level in €/t without paid price reports (FOEX, Fastmarkets).",
         "limits": "An average of all deliveries that month, including discounts and contracts agreed earlier, so it lags market quotes by one to three months. It excludes pulp from Sweden and Finland (trade inside the EU) and is not WEPA's purchase price."
-      }
+      },
+      "short": "Long-fibre pulp in €/t: one of WEPA's biggest cost items.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "pulp_bhkp_eu",
@@ -268,7 +289,10 @@
         "what": "The average price per tonne of bleached hardwood kraft pulp (CN 4703 29) imported into the EU from outside the EU – mostly eucalyptus pulp from Brazil, Uruguay and Chile.",
         "wepa": "Short-fibre pulp gives tissue its softness and is used in large volumes. Its price depends heavily on new mill capacity in South America, the Brazilian real and sea freight.",
         "limits": "Same caveats as NBSK: an average unit value that lags spot prices, excludes birch pulp from inside the EU, and is not a contract price."
-      }
+      },
+      "short": "Short-fibre pulp in €/t: gives tissue its softness and is used in large volumes.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "rcp_export_eu",
@@ -289,7 +313,9 @@
         "what": "The average price per tonne of recovered paper (HS 4707, all grades) exported from the EU to countries outside the EU, calculated from EU trade statistics.",
         "wepa": "When export prices rise, more European recovered paper leaves for Asia or Turkey and less is available for mills here – a signal for tighter supply and higher prices for WEPA's recycled-fibre products.",
         "limits": "Mixes all grades and is dominated by brown packaging grades. It is not what European mills pay, and the deinking grades WEPA needs can move differently."
-      }
+      },
+      "short": "Rising export prices pull recovered paper out of Europe and tighten supply here.",
+      "good": "down"
     },
     {
       "freq": "monthly",
@@ -309,7 +335,9 @@
         "what": "Average price per tonne of unbleached kraft and corrugated recovered paper (roughly grades 1.04/1.05, 'OCC') exported from the EU to countries outside the EU.",
         "wepa": "The brown grade behind WEPA's OCC-based products. Strong export demand (Asia, Turkey) pulls OCC out of Europe and pushes up the price WEPA pays.",
         "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code."
-      }
+      },
+      "short": "Brown grade behind OCC-based products; export demand pushes up what WEPA pays.",
+      "good": "down"
     },
     {
       "freq": "monthly",
@@ -329,7 +357,9 @@
         "what": "Average price per tonne of recovered paper made mainly of bleached chemical pulp – white and office grades, the deinking qualities for white recycled tissue – exported from the EU.",
         "wepa": "The most relevant recovered paper grade for white recycled tissue. It competes with fresh pulp: when pulp is cheap, these grades lose value, and vice versa.",
         "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code. Export volumes of white grades are small, so single months can jump."
-      }
+      },
+      "short": "Key grade for white recycled tissue; it competes with fresh pulp.",
+      "good": "down"
     },
     {
       "freq": "monthly",
@@ -349,7 +379,9 @@
         "what": "Average price per tonne of recovered newspapers, magazines and similar paper made mainly of mechanical pulp (roughly grade 1.11, news & PAMS) exported from the EU.",
         "wepa": "A deinking grade used for recycled tissue. Supply keeps shrinking as fewer newspapers and magazines are printed, which supports prices in the long run.",
         "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code."
-      }
+      },
+      "short": "Deinking grade for recycled tissue; supply shrinks as less is printed.",
+      "good": "down"
     },
     {
       "freq": "monthly",
@@ -369,7 +401,9 @@
         "what": "Average price per tonne of mixed and unsorted recovered paper (roughly grade 1.02) exported from the EU.",
         "wepa": "The cheapest grade and a sensitive gauge of overall recovered paper demand – it reacts first when markets tighten or ease.",
         "limits": "Monthly average of all export deals, about two months late. It is not what German mills pay, and it mixes sub-grades within the customs code."
-      }
+      },
+      "short": "Cheapest grade; it reacts first when recovered paper markets tighten or ease.",
+      "good": "down"
     },
     {
       "freq": "monthly",
@@ -397,7 +431,9 @@
       ],
       "partnerPrefix": [
         "INT"
-      ]
+      ],
+      "short": "Closer to what European mills pay for brown grades than the export price.",
+      "good": "down"
     },
     {
       "freq": "monthly",
@@ -425,7 +461,9 @@
       ],
       "partnerPrefix": [
         "INT"
-      ]
+      ],
+      "short": "European price signal for the deinking grades in white recycled tissue.",
+      "good": "down"
     },
     {
       "source": "destatis",
@@ -449,7 +487,9 @@
         "what": "Destatis index of the prices German recovered paper wholesalers charge for mixed papers and boards (grade 1.02), surveyed monthly.",
         "wepa": "The German market signal for the lowest grade. It reacts quickly to demand from packaging mills and to export flows.",
         "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ."
-      }
+      },
+      "short": "German price signal for the lowest grade; reacts fast to packaging demand.",
+      "good": "down"
     },
     {
       "source": "destatis",
@@ -474,7 +514,9 @@
         "what": "Destatis index for paper and board packaging from retail and commerce (grade 1.04, 'department-store' waste paper, close to OCC).",
         "wepa": "The closest German price signal for the brown grades behind WEPA's OCC-based products.",
         "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ."
-      }
+      },
+      "short": "Closest German price signal for the brown grades behind OCC-based products.",
+      "good": "down"
     },
     {
       "source": "destatis",
@@ -499,7 +541,9 @@
         "what": "Destatis index for used corrugated board with kraft liners (grade 4.03), a higher-quality brown grade.",
         "wepa": "A cleaner brown grade with longer fibres – relevant where WEPA needs strength from recycled brown fibre.",
         "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ."
-      }
+      },
+      "short": "Cleaner brown grade with longer fibres, where strength from recycled fibre matters.",
+      "good": "down"
     },
     {
       "source": "destatis",
@@ -523,7 +567,10 @@
         "what": "Destatis index for newspapers and magazines and sorted graphic paper for deinking (grades 1.08/1.09/1.11).",
         "wepa": "The German price signal for the deinking grades used in white recycled tissue.",
         "limits": "An index (2021 = 100): it shows how prices move, not the € level. Wholesalers' selling prices in Germany on the 5th of the month; contract prices of individual mills can differ. Combines several deinking grades, weighted by Destatis."
-      }
+      },
+      "short": "German price signal for the deinking grades used in white recycled tissue.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "ppi_corrugated",
@@ -567,7 +614,9 @@
         "what": "Index of the prices EU producers charge in their home market for corrugated paper and board and for paper and board packaging (NACE C17.21).",
         "wepa": "Two uses: it shows whether higher OCC prices are passed on in packaging markets (where OCC demand comes from), and it tracks the cost of WEPA's own cardboard packaging.",
         "limits": "Covers all corrugated and paper packaging in the EU; an index, not a price level. Says nothing about tissue prices."
-      }
+      },
+      "short": "Shows whether OCC costs pass into packaging prices; also the cost of WEPA's cartons.",
+      "good": "down"
     },
     {
       "id": "us_recycled_board",
@@ -586,7 +635,8 @@
         "what": "US producer price index for recycled paperboard – board made mainly from recovered paper.",
         "wepa": "Shows how prices for products made from recycled fibre develop when recovered paper prices change – a long, reliable trend series.",
         "limits": "US market and US dollars; recycled board, not tissue."
-      }
+      },
+      "short": "How prices of recycled-fibre products follow recovered paper prices."
     },
     {
       "id": "us_corrugated_boxes",
@@ -605,7 +655,8 @@
         "what": "US producer price index for corrugated shipping boxes.",
         "wepa": "A demand signal for OCC: box prices and volumes drive how much brown recovered paper the packaging industry absorbs.",
         "limits": "US market and US dollars; an index, not a price level."
-      }
+      },
+      "short": "Demand signal for brown recovered paper from the packaging industry."
     },
     {
       "id": "gas_ttf",
@@ -624,7 +675,10 @@
         "what": "The monthly average price of natural gas at the Dutch TTF hub, Europe's benchmark wholesale market (IMF data, in US dollars per million British thermal units).",
         "wepa": "Drying tissue on Yankee cylinders and hoods uses a lot of gas, and gas also feeds on-site power plants. TTF is the main driver of WEPA's energy costs and of electricity prices.",
         "limits": "A wholesale benchmark in US dollars. WEPA buys forward and hedges, so price moves reach its costs with a delay. Network fees, taxes and CO₂ costs come on top."
-      }
+      },
+      "short": "Main driver of WEPA's energy cost: drying tissue and on-site power run on gas.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "elec_de",
@@ -670,7 +724,10 @@
         "what": "The average price German industrial customers with 2,000–20,000 MWh a year pay for electricity, including network charges and levies but excluding VAT (Eurostat, half-yearly).",
         "wepa": "A reference for the full electricity bill of an industrial site in Germany, beyond the wholesale price.",
         "limits": "A smaller consumption band than WEPA's larger mills, and published half-yearly with a long delay. It does not reflect relief schemes WEPA may use, such as electricity price compensation or reduced levies."
-      }
+      },
+      "short": "Full industrial electricity bill in Germany, including grid charges and levies.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "power_de_spot",
@@ -690,7 +747,10 @@
         "what": "The monthly average day-ahead wholesale electricity price for Germany/Luxembourg, from the Bundesnetzagentur's SMARD platform.",
         "wepa": "The most current signal for the electricity market. It shows where prices for unhedged volumes and the next procurement rounds are heading, and often follows gas and CO₂ prices.",
         "limits": "Wholesale only – network charges, taxes and levies come on top. A monthly average hides very high and negative hours, and WEPA's actual cost depends on its contracts."
-      }
+      },
+      "short": "Most current power price signal for unhedged volumes and the next purchases.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "gas_de",
@@ -740,7 +800,9 @@
         "what": "The average price German industrial customers with 10,000–100,000 GJ a year pay for natural gas, including network charges but excluding VAT (Eurostat, half-yearly).",
         "wepa": "A reference for the full gas bill in Germany, including network costs, next to the TTF wholesale price.",
         "limits": "A smaller consumption band than WEPA's mills use, half-yearly and published late. Hedging and individual contracts are not reflected."
-      }
+      },
+      "short": "Full industrial gas bill in Germany, including network costs.",
+      "good": "down"
     },
     {
       "id": "res_share_de",
@@ -774,7 +836,11 @@
         "what": "The share of renewable sources (wind, solar, hydro, biomass and others) in Germany's public net electricity generation, from SMARD.",
         "wepa": "Explains much of the movement in the German grid carbon intensity – the location-based Scope 2 factor for German sites – and in power prices: more wind and solar means lower prices in those hours.",
         "limits": "Generation, not consumption (imports are excluded). It does not change WEPA's market-based Scope 2, which depends on its contracts and guarantees of origin."
-      }
+      },
+      "short": "More wind and solar lowers the German grid factor in Scope 2 and power prices.",
+      "good": "up",
+      "glance": true,
+      "question": "grid"
     },
     {
       "id": "grid_eu",
@@ -796,7 +862,10 @@
         "EU-27",
         "European Union",
         "EU27_2020"
-      ]
+      ],
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "grid_de",
@@ -812,7 +881,10 @@
       "area": "DEU",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down",
+      "glance": true
     },
     {
       "id": "grid_fr",
@@ -828,7 +900,9 @@
       "area": "FRA",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down"
     },
     {
       "id": "grid_it",
@@ -844,7 +918,9 @@
       "area": "ITA",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down"
     },
     {
       "id": "grid_pl",
@@ -860,7 +936,9 @@
       "area": "POL",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down"
     },
     {
       "id": "grid_nl",
@@ -876,7 +954,9 @@
       "area": "NLD",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down"
     },
     {
       "id": "grid_be",
@@ -892,7 +972,9 @@
       "area": "BEL",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down"
     },
     {
       "id": "grid_gb",
@@ -908,7 +990,9 @@
       "area": "GBR",
       "freq": "monthly",
       "attribution": "Ember (CC BY 4.0)",
-      "link": "https://ember-energy.org/data/monthly-electricity-data/"
+      "link": "https://ember-energy.org/data/monthly-electricity-data/",
+      "short": "Grid factor for the location-based Scope 2 of WEPA's sites in this country.",
+      "good": "down"
     },
     {
       "id": "eua",
@@ -934,7 +1018,9 @@
         "what": "The price of an EU emission allowance (EUA) under the EU Emissions Trading System, in € per tonne of CO₂, entered by hand from press and exchange reports.",
         "wepa": "WEPA's mills with combustion plants are in the EU ETS. The EUA price sets the cost of emissions not covered by free allocation and makes gas-based heat more expensive than low-carbon alternatives.",
         "limits": "A manually entered value, not a live exchange price. WEPA's actual cost depends on its free allocation and when allowances are bought."
-      }
+      },
+      "short": "Cost of CO₂ not covered by free allocation at WEPA's ETS mills.",
+      "good": "down"
     },
     {
       "id": "eurusd",
@@ -953,6 +1039,949 @@
         "what": "The monthly average exchange rate: how many US dollars one euro buys (Federal Reserve data).",
         "wepa": "Market pulp is priced in US dollars. A weaker euro makes the same dollar pulp price more expensive for WEPA, a stronger euro cheaper.",
         "limits": "A monthly average. WEPA's actual exchange rates depend on payment dates and hedging."
+      },
+      "short": "Pulp is priced in dollars: a stronger euro makes the same pulp cheaper for WEPA.",
+      "good": "up"
+    },
+    {
+      "id": "de_ppi_pulp",
+      "group": "fibre",
+      "areas": [
+        "forests"
+      ],
+      "label": "Producer prices · pulp, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "61241-0004",
+      "filter": {
+        "var": "GP2019|Güterverzeichnis|Güter",
+        "values": [
+          "^Holz- und Zellstoff$",
+          "^Zellstoff",
+          "Holz- und Zellstoff"
+        ]
+      },
+      "unit_match": "=100",
+      "good": "down",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "short": "German producer prices for pulp; a domestic check on the import prices.",
+      "about": {
+        "what": "Destatis producer price index for pulp sold by German producers (GP 17.11, 2021 = 100), monthly.",
+        "wepa": "A German view on fresh-fibre costs next to the EU import prices in €/t.",
+        "limits": "Few German producers sell market pulp, so the index can be volatile; it is an index, not a price level."
+      }
+    },
+    {
+      "id": "de_ppi_tissue",
+      "group": "fibre",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Producer prices · household & sanitary paper, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "61241-0004",
+      "filter": {
+        "var": "GP2019|Güterverzeichnis|Güter",
+        "values": [
+          "^Haushalts-, Hygiene- und Toilettenartikel",
+          "Haushalts-.*Hygiene",
+          "Toilettenpapier"
+        ]
+      },
+      "unit_match": "=100",
+      "good": "up",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "short": "What German producers get for household and sanitary paper.",
+      "about": {
+        "what": "Destatis producer price index for household, hygiene and toilet articles of paper (GP 17.22, 2021 = 100), sold in Germany, monthly.",
+        "wepa": "The German counterpart of the EU tissue price index: shows whether price increases reach the home market.",
+        "limits": "Includes other hygiene paper articles; not WEPA's own prices and not shelf prices."
+      }
+    },
+    {
+      "id": "de_ppi_gas",
+      "group": "energy",
+      "areas": [
+        "climate"
+      ],
+      "label": "Producer prices · natural gas for industry, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "61241-0004",
+      "filter": {
+        "var": "GP2019|Güterverzeichnis|Güter",
+        "values": [
+          "Erdgas, bei Abgabe an die Industrie",
+          "Erdgas.*Industrie"
+        ]
+      },
+      "unit_match": "=100",
+      "good": "down",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "short": "Gas price German industry pays, monthly; drives hood and CHP costs.",
+      "about": {
+        "what": "Destatis producer price index for natural gas supplied to industry (2021 = 100), monthly.",
+        "wepa": "More current than the half-yearly gas bill figures and closer to German contract prices than TTF.",
+        "limits": "An average over contract types and sizes; it does not include WEPA's own hedging."
+      }
+    },
+    {
+      "id": "de_ppi_power",
+      "group": "energy",
+      "areas": [
+        "climate"
+      ],
+      "label": "Producer prices · electricity for special-contract customers, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "61241-0004",
+      "filter": {
+        "var": "GP2019|Güterverzeichnis|Güter",
+        "values": [
+          "Elektrischer Strom, bei Abgabe an Sondervertragskunden",
+          "Strom.*Sondervertrag",
+          "Strom.*Industrie"
+        ]
+      },
+      "unit_match": "=100",
+      "good": "down",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "short": "Electricity price for German industrial customers on special contracts, monthly.",
+      "about": {
+        "what": "Destatis producer price index for electricity supplied to special-contract customers (mainly industry, 2021 = 100), monthly.",
+        "wepa": "Shows how fast wholesale price moves reach industrial contracts like those of WEPA's German mills.",
+        "limits": "An average over contracts; levies, grid charges and relief schemes differ by site."
+      }
+    },
+    {
+      "id": "de_ppi_diesel",
+      "group": "labour",
+      "areas": [
+        "people"
+      ],
+      "label": "Producer prices · diesel fuel, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "61241-0004",
+      "filter": {
+        "var": "GP2019|Güterverzeichnis|Güter",
+        "values": [
+          "^Dieselkraftstoff",
+          "Dieselkraftstoff",
+          "Diesel"
+        ]
+      },
+      "unit_match": "=100",
+      "good": "down",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61241-0004, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241/table/61241-0004",
+      "short": "Diesel price behind truck freight for raw materials and finished goods.",
+      "about": {
+        "what": "Destatis producer price index for diesel fuel (2021 = 100), monthly.",
+        "wepa": "A cost signal for inbound and outbound truck freight, a large share of logistics costs for bulky tissue.",
+        "limits": "Fuel only; tolls, driver wages and capacity also drive freight rates."
+      },
+      "glance": true
+    },
+    {
+      "id": "de_labour_paper",
+      "group": "labour",
+      "areas": [
+        "people"
+      ],
+      "label": "Labour cost index · paper industry, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "62421-*",
+      "tableMatch": "Quartal",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "match": [
+        "Arbeitskosten.*(kalender- und saison|X13)|(kalender- und saison|X13).*Arbeitskosten",
+        "kalender- und saison|X13",
+        "Arbeitskosten",
+        "."
+      ],
+      "unit_match": "=100",
+      "good": "down",
+      "freq": "quarterly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 62421, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/62421",
+      "short": "Labour cost trend in the German paper industry, the main cost not set by markets.",
+      "about": {
+        "what": "Destatis labour cost index per hour worked for the manufacture of paper and paper products (WZ 17, 2020 = 100), quarterly.",
+        "wepa": "Wages and social costs are a large part of a tissue mill's cost base. This shows the industry trend WEPA's wage rounds follow.",
+        "limits": "Industry average, not WEPA's wage agreements; published about three months after the quarter."
+      },
+      "glance": true
+    },
+    {
+      "id": "de_prod_paper",
+      "group": "market_de",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Production index · paper industry, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "42153-*",
+      "tableMatch": "Monat",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "match": [
+        "kalender- und saison|X13",
+        "kalenderbereinigt",
+        "."
+      ],
+      "unit_match": "=100",
+      "good": "up",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 42153, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/42153",
+      "short": "Monthly output of German paper mills: how busy the industry is.",
+      "about": {
+        "what": "Destatis production index for the manufacture of paper and paper products (WZ 17, 2021 = 100), calendar and seasonally adjusted where available, monthly.",
+        "wepa": "Shows the activity of WEPA's home industry month by month, earlier than the yearly figures.",
+        "limits": "All paper grades, not tissue alone; volume index, not tonnes."
+      },
+      "glance": true
+    },
+    {
+      "id": "de_retail_drug",
+      "group": "market_de",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Retail sales · drugstores, Germany (real)",
+      "unit": "index",
+      "source": "destatis",
+      "table": "45212-*",
+      "tableMatch": "Monat",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "Drogerie",
+          "47\\.75"
+        ]
+      },
+      "match": [
+        "(\\breal\\b|preisbereinigt|Preisen des).*(kalender- und saison|X13)|(kalender- und saison|X13).*(\\breal\\b|preisbereinigt|Preisen des)",
+        "\\breal\\b|preisbereinigt|Preisen des",
+        "."
+      ],
+      "unit_match": "=100",
+      "good": "up",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 45212, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/45212",
+      "short": "Real sales of drugstores, where consumers buy brands and private labels.",
+      "about": {
+        "what": "Destatis retail sales index for drugstores and cosmetics retail (WZ 47.75), in constant prices (real), monthly.",
+        "wepa": "A demand signal for consumer tissue in one of its main channels in Germany.",
+        "limits": "All drugstore goods, not tissue alone; online and discounter sales of tissue are partly elsewhere."
+      },
+      "glance": true
+    },
+    {
+      "id": "de_retail_food",
+      "group": "market_de",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Retail sales · supermarkets & food retail, Germany (real)",
+      "unit": "index",
+      "source": "destatis",
+      "table": "45212-*",
+      "tableMatch": "Monat",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "Hauptrichtung Nahrungs",
+          "47\\.11",
+          "Lebensmittel"
+        ]
+      },
+      "match": [
+        "(\\breal\\b|preisbereinigt|Preisen des).*(kalender- und saison|X13)|(kalender- und saison|X13).*(\\breal\\b|preisbereinigt|Preisen des)",
+        "\\breal\\b|preisbereinigt|Preisen des",
+        "."
+      ],
+      "unit_match": "=100",
+      "good": "up",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 45212, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/45212",
+      "short": "Real sales of supermarkets, the other main channel for tissue in Germany.",
+      "about": {
+        "what": "Destatis retail sales index for non-specialised stores with food predominating (supermarkets, discounters; WZ 47.11), in constant prices, monthly.",
+        "wepa": "Together with drugstores, the main channel for consumer tissue, private labels included.",
+        "limits": "All goods, not tissue alone."
+      },
+      "glance": true
+    },
+    {
+      "id": "de_imp_tissue",
+      "group": "market_de",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Imports · tissue paper & products, Germany",
+      "unit": "kt",
+      "source": "destatis",
+      "table": "51000-0014",
+      "filter": {
+        "var": "WA8|Warenverzeichnis|Ware",
+        "values": [
+          "^(WA)?(4803|481810|481820|481830)"
+        ],
+        "multi": true
+      },
+      "valueLabel": "Einfuhr.*Gewicht|Gewicht.*Einfuhr",
+      "sum": true,
+      "scale": 0.001,
+      "good": "down",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 51000-0014, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/51000/table/51000-0014",
+      "short": "Tissue imports into Germany: more imports mean more price pressure on German mills.",
+      "about": {
+        "what": "German imports of tissue base paper (CN 4803) and toilet paper, handkerchiefs, towels and napkins (CN 4818 10–30), in 1,000 tonnes, monthly (Destatis foreign trade).",
+        "wepa": "Rising imports mean more competition for German tissue mills, especially in private label.",
+        "limits": "Weight only; trade statistics are revised for months after first release."
+      },
+      "glance": true
+    },
+    {
+      "id": "de_exp_tissue",
+      "group": "market_de",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Exports · tissue paper & products, Germany",
+      "unit": "kt",
+      "source": "destatis",
+      "table": "51000-0014",
+      "filter": {
+        "var": "WA8|Warenverzeichnis|Ware",
+        "values": [
+          "^(WA)?(4803|481810|481820|481830)"
+        ],
+        "multi": true
+      },
+      "valueLabel": "Ausfuhr.*Gewicht|Gewicht.*Ausfuhr",
+      "sum": true,
+      "scale": 0.001,
+      "good": "up",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 51000-0014, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/51000/table/51000-0014",
+      "short": "Tissue exports from Germany: an outlet for German capacity.",
+      "about": {
+        "what": "German exports of tissue base paper (CN 4803) and toilet paper, handkerchiefs, towels and napkins (CN 4818 10–30), in 1,000 tonnes, monthly.",
+        "wepa": "Shows whether German tissue capacity finds buyers abroad.",
+        "limits": "Weight only; revised for months after first release."
+      },
+      "glance": true
+    },
+    {
+      "id": "de_imp_pulp",
+      "group": "market_de",
+      "areas": [
+        "forests"
+      ],
+      "label": "Imports · bleached chemical pulp, Germany",
+      "unit": "kt",
+      "source": "destatis",
+      "table": "51000-0014",
+      "filter": {
+        "var": "WA8|Warenverzeichnis|Ware",
+        "values": [
+          "^(WA)?47032"
+        ],
+        "multi": true
+      },
+      "valueLabel": "Einfuhr.*Gewicht|Gewicht.*Einfuhr",
+      "sum": true,
+      "scale": 0.001,
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 51000-0014, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/51000/table/51000-0014",
+      "short": "German pulp imports: how much fresh fibre the industry buys abroad.",
+      "about": {
+        "what": "German imports of bleached sulphate pulp, softwood and hardwood (CN 4703 21 and 4703 29), in 1,000 tonnes, monthly.",
+        "wepa": "A volume signal for the fresh-fibre market WEPA buys in.",
+        "limits": "Weight only; does not show prices or who imports."
+      }
+    },
+    {
+      "id": "mix_wind",
+      "group": "powermix",
+      "areas": [
+        "climate"
+      ],
+      "label": "German power mix · Wind",
+      "unit": "%",
+      "source": "smard_share",
+      "part": [
+        4067,
+        1225
+      ],
+      "total": [
+        4067,
+        1225,
+        4068,
+        4066,
+        1226,
+        1228,
+        1223,
+        4069,
+        1224,
+        4071,
+        4070,
+        1227
+      ],
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "short": "Share of wind in German public power generation.",
+      "stack": "powermix",
+      "good": "up"
+    },
+    {
+      "id": "mix_solar",
+      "group": "powermix",
+      "areas": [
+        "climate"
+      ],
+      "label": "German power mix · Solar",
+      "unit": "%",
+      "source": "smard_share",
+      "part": [
+        4068
+      ],
+      "total": [
+        4067,
+        1225,
+        4068,
+        4066,
+        1226,
+        1228,
+        1223,
+        4069,
+        1224,
+        4071,
+        4070,
+        1227
+      ],
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "short": "Share of solar in German public power generation.",
+      "stack": "powermix",
+      "good": "up"
+    },
+    {
+      "id": "mix_biomass",
+      "group": "powermix",
+      "areas": [
+        "climate"
+      ],
+      "label": "German power mix · Biomass",
+      "unit": "%",
+      "source": "smard_share",
+      "part": [
+        4066
+      ],
+      "total": [
+        4067,
+        1225,
+        4068,
+        4066,
+        1226,
+        1228,
+        1223,
+        4069,
+        1224,
+        4071,
+        4070,
+        1227
+      ],
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "short": "Share of biomass in German public power generation.",
+      "stack": "powermix"
+    },
+    {
+      "id": "mix_hydro",
+      "group": "powermix",
+      "areas": [
+        "climate"
+      ],
+      "label": "German power mix · Hydro & other renewables",
+      "unit": "%",
+      "source": "smard_share",
+      "part": [
+        1226,
+        1228
+      ],
+      "total": [
+        4067,
+        1225,
+        4068,
+        4066,
+        1226,
+        1228,
+        1223,
+        4069,
+        1224,
+        4071,
+        4070,
+        1227
+      ],
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "short": "Share of hydro & other renewables in German public power generation.",
+      "stack": "powermix"
+    },
+    {
+      "id": "mix_gas",
+      "group": "powermix",
+      "areas": [
+        "climate"
+      ],
+      "label": "German power mix · Natural gas",
+      "unit": "%",
+      "source": "smard_share",
+      "part": [
+        4071
+      ],
+      "total": [
+        4067,
+        1225,
+        4068,
+        4066,
+        1226,
+        1228,
+        1223,
+        4069,
+        1224,
+        4071,
+        4070,
+        1227
+      ],
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "short": "Share of natural gas in German public power generation.",
+      "stack": "powermix"
+    },
+    {
+      "id": "mix_coal",
+      "group": "powermix",
+      "areas": [
+        "climate"
+      ],
+      "label": "German power mix · Coal (lignite & hard coal)",
+      "unit": "%",
+      "source": "smard_share",
+      "part": [
+        1223,
+        4069
+      ],
+      "total": [
+        4067,
+        1225,
+        4068,
+        4066,
+        1226,
+        1228,
+        1223,
+        4069,
+        1224,
+        4071,
+        4070,
+        1227
+      ],
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "short": "Share of coal in German power generation: the main reason the grid factor rises.",
+      "stack": "powermix",
+      "good": "down",
+      "glance": true
+    },
+    {
+      "id": "mix_other",
+      "group": "powermix",
+      "areas": [
+        "climate"
+      ],
+      "label": "German power mix · Other conventional",
+      "unit": "%",
+      "source": "smard_share",
+      "part": [
+        1224,
+        4070,
+        1227
+      ],
+      "total": [
+        4067,
+        1225,
+        4068,
+        4066,
+        1226,
+        1228,
+        1223,
+        4069,
+        1224,
+        4071,
+        4070,
+        1227
+      ],
+      "freq": "monthly",
+      "attribution": "Bundesnetzagentur | SMARD.de (CC BY 4.0)",
+      "link": "https://www.smard.de/en",
+      "short": "Share of other conventional in German public power generation.",
+      "stack": "powermix"
+    },
+    {
+      "id": "prof_energy_total",
+      "group": "profile",
+      "areas": [
+        "climate"
+      ],
+      "label": "Energy use, paper industry · total",
+      "unit": "TJ",
+      "source": "destatis",
+      "table": "43531-*",
+      "match": [
+        "insgesamt"
+      ],
+      "sum": false,
+      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 43531, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/43531",
+      "short": "Energy use of German paper mills: total.",
+      "about": {
+        "what": "Energy use of German paper mills (WZ 17) by energy carrier, in terajoules, from the Destatis survey of energy use in manufacturing (yearly).",
+        "wepa": "Shows how gas-dependent the industry is and how far fuel switching has come: a yardstick for WEPA's transition plan.",
+        "limits": "All paper grades; yearly, about a year after the reporting year."
+      },
+      "stack": "energy",
+      "esrs": "ESRS E1"
+    },
+    {
+      "id": "prof_energy_gas",
+      "group": "profile",
+      "areas": [
+        "climate"
+      ],
+      "label": "Energy use, paper industry · natural gas",
+      "unit": "TJ",
+      "source": "destatis",
+      "table": "43531-*",
+      "match": [
+        "Erdgas"
+      ],
+      "sum": false,
+      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 43531, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/43531",
+      "short": "Energy use of German paper mills: natural gas.",
+      "about": {
+        "what": "Energy use of German paper mills (WZ 17) by energy carrier, in terajoules, from the Destatis survey of energy use in manufacturing (yearly).",
+        "wepa": "Shows how gas-dependent the industry is and how far fuel switching has come: a yardstick for WEPA's transition plan.",
+        "limits": "All paper grades; yearly, about a year after the reporting year."
+      },
+      "stack": "energy",
+      "esrs": "ESRS E1"
+    },
+    {
+      "id": "prof_energy_power",
+      "group": "profile",
+      "areas": [
+        "climate"
+      ],
+      "label": "Energy use, paper industry · electricity",
+      "unit": "TJ",
+      "source": "destatis",
+      "table": "43531-*",
+      "match": [
+        "\\bStrom\\b"
+      ],
+      "sum": false,
+      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 43531, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/43531",
+      "short": "Energy use of German paper mills: electricity.",
+      "about": {
+        "what": "Energy use of German paper mills (WZ 17) by energy carrier, in terajoules, from the Destatis survey of energy use in manufacturing (yearly).",
+        "wepa": "Shows how gas-dependent the industry is and how far fuel switching has come: a yardstick for WEPA's transition plan.",
+        "limits": "All paper grades; yearly, about a year after the reporting year."
+      },
+      "stack": "energy",
+      "esrs": "ESRS E1"
+    },
+    {
+      "id": "prof_energy_coal",
+      "group": "profile",
+      "areas": [
+        "climate"
+      ],
+      "label": "Energy use, paper industry · coal",
+      "unit": "TJ",
+      "source": "destatis",
+      "table": "43531-*",
+      "match": [
+        "Steinkohle|Braunkohle"
+      ],
+      "sum": true,
+      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 43531, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/43531",
+      "short": "Energy use of German paper mills: coal.",
+      "about": {
+        "what": "Energy use of German paper mills (WZ 17) by energy carrier, in terajoules, from the Destatis survey of energy use in manufacturing (yearly).",
+        "wepa": "Shows how gas-dependent the industry is and how far fuel switching has come: a yardstick for WEPA's transition plan.",
+        "limits": "All paper grades; yearly, about a year after the reporting year."
+      },
+      "stack": "energy",
+      "esrs": "ESRS E1"
+    },
+    {
+      "id": "prof_energy_oil",
+      "group": "profile",
+      "areas": [
+        "climate"
+      ],
+      "label": "Energy use, paper industry · oil",
+      "unit": "TJ",
+      "source": "destatis",
+      "table": "43531-*",
+      "match": [
+        "Heizöl|Mineralöl"
+      ],
+      "sum": true,
+      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 43531, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/43531",
+      "short": "Energy use of German paper mills: oil.",
+      "about": {
+        "what": "Energy use of German paper mills (WZ 17) by energy carrier, in terajoules, from the Destatis survey of energy use in manufacturing (yearly).",
+        "wepa": "Shows how gas-dependent the industry is and how far fuel switching has come: a yardstick for WEPA's transition plan.",
+        "limits": "All paper grades; yearly, about a year after the reporting year."
+      },
+      "stack": "energy",
+      "esrs": "ESRS E1"
+    },
+    {
+      "id": "prof_energy_renew",
+      "group": "profile",
+      "areas": [
+        "climate"
+      ],
+      "label": "Energy use, paper industry · renewables & biomass",
+      "unit": "TJ",
+      "source": "destatis",
+      "table": "43531-*",
+      "match": [
+        "Erneuerbar|Biomasse|Biogas|Holz|Klärschlamm"
+      ],
+      "sum": true,
+      "tableMatch": "Jahr.*(WZ|Wirtschaftszweig)|(WZ|Wirtschaftszweig).*Jahr|Energietr",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 43531, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/43531",
+      "short": "Energy use of German paper mills: renewables & biomass.",
+      "about": {
+        "what": "Energy use of German paper mills (WZ 17) by energy carrier, in terajoules, from the Destatis survey of energy use in manufacturing (yearly).",
+        "wepa": "Shows how gas-dependent the industry is and how far fuel switching has come: a yardstick for WEPA's transition plan.",
+        "limits": "All paper grades; yearly, about a year after the reporting year."
+      },
+      "stack": "energy",
+      "esrs": "ESRS E1"
+    },
+    {
+      "id": "prof_water",
+      "group": "profile",
+      "areas": [
+        "water"
+      ],
+      "label": "Water use, paper industry",
+      "unit": "million m³",
+      "source": "destatis",
+      "table": "32221-*",
+      "tableMatch": "Wirtschaftszweig|WZ",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "match": [
+        "Wassereinsatz insgesamt|Wasseraufkommen insgesamt",
+        "Wassereinsatz|Wasseraufkommen|Frischwasser",
+        "insgesamt",
+        "."
+      ],
+      "esrs": "ESRS E3",
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 32221, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32221",
+      "short": "Tissue mills are water-intensive: a benchmark for WEPA's water intake.",
+      "about": {
+        "what": "Water used by German paper mills (WZ 17), from the Destatis survey of non-public water supply (every three years).",
+        "wepa": "A yardstick for WEPA's own water intake, for ESRS E3 texts and customer questionnaires.",
+        "limits": "Every three years only; all paper grades; the unit follows the Destatis table."
+      }
+    },
+    {
+      "id": "prof_waste",
+      "group": "profile",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Waste generated, paper industry",
+      "unit": "kt",
+      "source": "destatis",
+      "table": "321*",
+      "tableMatch": "Abfall.*(Wirtschaftszweig|WZ)|(Wirtschaftszweig|WZ).*Abfall",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "match": [
+        "insgesamt",
+        "."
+      ],
+      "scale": 0.001,
+      "esrs": "ESRS E5",
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 321*, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/321*",
+      "short": "Sludge, rejects and ash: context for WEPA's landfill and recycling targets.",
+      "about": {
+        "what": "Waste generated by German paper mills (WZ 17), from Destatis waste statistics (yearly).",
+        "wepa": "Context for WEPA's targets on landfill and recycling of mill residues, for ESRS E5.",
+        "limits": "Yearly with a long delay; definitions follow the waste statistics."
+      }
+    },
+    {
+      "id": "prof_envinv",
+      "group": "profile",
+      "areas": [
+        "climate"
+      ],
+      "label": "Environmental protection investment, paper industry",
+      "unit": "€ m",
+      "source": "destatis",
+      "table": "32511-*",
+      "tableMatch": "Wirtschaftszweig|WZ",
+      "filter": {
+        "var": "WZ|Wirtschaftszweig",
+        "values": [
+          "^Herstellung von Papier, Pappe und Waren daraus$",
+          "Herstellung von Papier",
+          "^C?17$|WZ08-17$"
+        ]
+      },
+      "match": [
+        "Umweltbereiche insgesamt|insgesamt",
+        "."
+      ],
+      "scale": 0.001,
+      "esrs": "ESRS E1 · E3",
+      "freq": "yearly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 32511, dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32511",
+      "short": "Industry spending on climate, water and air protection: a yardstick for capex.",
+      "about": {
+        "what": "Investment of German paper mills (WZ 17) in environmental protection, all environmental areas, from Destatis (yearly).",
+        "wepa": "A benchmark for WEPA's own environmental capex in reports and customer talks.",
+        "limits": "Yearly; only investments reported as environmental protection."
       }
     }
   ],
@@ -963,9 +1992,9 @@
     "limits": "Based on generation, so electricity imports are not included. It is not the official factor WEPA uses in its report (often from the IEA, AIB or national agencies), and it does not affect market-based Scope 2, which depends on contracts and guarantees of origin."
   },
   "_comment_about": "'about' (what / wepa / limits) is shown when an indicator card is opened on the Market page. 'gridAbout' is used for all grid carbon intensity countries.",
-  "_comment_destatis": "Indicators with source 'destatis' need the GitHub secret DESTATIS_TOKEN (or DESTATIS_USER + DESTATIS_PASSWORD). 'match' = regular expressions for the series name in the GENESIS table; data/debug/destatis.json lists the names found. 'accumulate' keeps older months, because the table only holds the current and previous year.",
+  "_comment_destatis": "Indicators with source 'destatis' need the GitHub secret DESTATIS_TOKEN. 'table' is a GENESIS table code, or 'NNNNN-*' plus 'tableMatch' (regex on the table title) to pick a table of that statistic automatically. 'filter' narrows the download to one classifying variable ('var' regex on its name) and its values ('values': regexes tried in order; 'multi': all hits). 'unit_match' / 'valueLabel' keep only rows with that unit / value variable. 'match' = regexes for the series name in priority order; 'sum' adds all matching series; 'scale' multiplies. data/debug/destatis.json lists tables, variables, values and series found. 'accumulate' keeps older months.",
   "costIndex": {
-    "_comment": "Tissue cost driver index on the Market page ('Cost index' tab). Weights are ILLUSTRATIVE shares of a non-integrated tissue mill's cash cost, not WEPA figures – each user can change them in the browser; edit the defaults here. 'ids' = indicators in order of preference (the first one with data is used). 'usd': true converts a US-dollar price into euro with EUR/USD. 'other' = costs held constant (labour, chemicals, packaging, logistics …).",
+    "_comment": "Tissue cost driver index on the Market page ('Cost index' tab). Weights are ILLUSTRATIVE shares of a non-integrated tissue mill's cash cost, not WEPA figures – each user can change them in the browser; edit the defaults here. 'ids' = indicators in order of preference (the first one with data is used). 'usd': true converts a US-dollar price into euro with EUR/USD. 'gap' = months a value may be carried forward (default 2; quarterly data needs more). 'other' = costs held constant (chemicals, packaging, other …).",
     "components": [
       {
         "key": "nbsk",
@@ -1009,14 +2038,58 @@
         "ids": [
           "power_de_spot"
         ]
+      },
+      {
+        "key": "labour",
+        "label": "Labour (paper industry)",
+        "weight": 15,
+        "ids": [
+          "de_labour_paper"
+        ],
+        "gap": 5
+      },
+      {
+        "key": "freight",
+        "label": "Diesel / freight",
+        "weight": 5,
+        "ids": [
+          "de_ppi_diesel"
+        ]
       }
     ],
-    "other": 35,
+    "other": 15,
     "compare": "ppi_tissue",
     "about": {
       "what": "A single index of the main input costs of tissue making – pulp, recovered paper, gas and electricity – weighted by their typical share of cash cost. 100 = first month of the selected period. It is drawn next to the producer price index for tissue (what producers charge).",
       "wepa": "When the cost index rises faster than the tissue price index, margins come under pressure (the gap turns negative); when it falls faster, there is room. It shows at a glance which input drove the change.",
       "limits": "Illustrative weights, not WEPA's cost structure – adjust them to your own view (stored only in your browser). Uses public market prices, not WEPA's contract prices; hedging and purchase timing are not reflected. Costs outside the listed inputs are held constant."
+    }
+  },
+  "_comment_questions": "'question' puts an indicator under one of the four questions on the Market page (cost, market, grid, env; default from its group). 'short' is the one-line 'For WEPA' summary on cards and in 'At a glance'. 'glance': true lists it in 'At a glance'. 'good': 'up' or 'down' = which direction helps WEPA; it sets the headwind/tailwind signal (change vs. a year ago beyond 'band', default 3 % or 1 pp). No 'good' = no signal.",
+  "questions": {
+    "cost": {
+      "label": "What does tissue cost us?",
+      "title": "What does tissue cost us right now?",
+      "tab": "cost",
+      "link": "Open cost index"
+    },
+    "market": {
+      "label": "How is our market doing?",
+      "title": "How is our market doing?",
+      "tab": "industry",
+      "link": "Open industry"
+    },
+    "grid": {
+      "label": "How green is our power?",
+      "title": "How green is the power we buy?",
+      "tab": "grid",
+      "link": "Open grid"
+    },
+    "env": {
+      "label": "Industry & environment",
+      "title": "Where does the industry stand on environment?",
+      "tab": "industry",
+      "link": "Open industry profile"
     }
   }
 }

@@ -153,9 +153,10 @@
   }
   const PAGES = [
     ["Monthly round-up", "Overview · what changed in a month", "./", "summary digest month briefing"],
-    ["Trends", "Market · compare indicators as an index", "market.html", "compare chart"],
+    ["At a glance", "Market · four questions, headwind or tailwind for WEPA", "market.html#tab=glance", "summary signal headwind tailwind questions"],
+    ["Trends", "Market · compare indicators as an index", "market.html#tab=cmp", "compare chart"],
     ["Cost index", "Market · tissue cost drivers vs. tissue prices", "market.html#tab=cost", "margin cost drivers pulp gas electricity"],
-    ["Industry", "Market · German and European paper industry figures", "market.html#tab=industry", "production hygiene paper cepi recovered paper utilisation"],
+    ["Industry", "Market · German market, trade and yearly industry profile", "market.html#tab=industry", "production hygiene paper cepi recovered paper utilisation retail imports exports water waste energy mix"],
     ["Grid carbon intensity", "Market · CO₂ per kWh by country", "market.html#tab=grid", "scope 2 electricity emission factor"],
     ["EU ETS emissions", "Peers · verified emissions of EU sites", "peers.html#tab=ets", "emissions trading co2 sites"],
     ["Next deadlines", "Regulation · roadmap of upcoming dates", "regulation.html#view=roadmap", "deadline timeline milestones"],

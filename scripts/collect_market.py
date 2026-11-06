@@ -162,7 +162,12 @@ def fred(ind):
 
 
 # ---------- SMARD ----------
+_smard_cache = {}
+
+
 def smard_monthly(filter_id, region="DE"):
+    if (filter_id, region) in _smard_cache:
+        return _smard_cache[(filter_id, region)]
     base = f"https://www.smard.de/app/chart_data/{filter_id}/{region}"
     stamps = json.loads(get(f"{base}/index_month.json")).get("timestamps", [])
     out = {}
@@ -175,6 +180,7 @@ def smard_monthly(filter_id, region="DE"):
             d = datetime.fromtimestamp(t / 1000 + 3 * 3600, tz=timezone.utc)
             month = d.strftime("%Y-%m")
             out[month] = out.get(month, 0.0) + float(v)
+    _smard_cache[(filter_id, region)] = out
     return out
 
 
@@ -192,6 +198,21 @@ def smard(ind):
         total = ren[m] + conv[m]
         if total > 0 and START <= m < now_month:     # skip the running month (incomplete)
             series.append([m, round(100 * ren[m] / total, 1)])
+    if not series:
+        raise RuntimeError("no data")
+    return series, None
+
+
+def smard_share(ind):
+    """Share (%) of some generation types ('part', SMARD filter ids) in the total of 'total' (power mix)."""
+    part, tot = {}, {}
+    for fid in ind["total"]:
+        for m, v in smard_monthly(fid).items():
+            tot[m] = tot.get(m, 0.0) + v
+            if fid in ind["part"]:
+                part[m] = part.get(m, 0.0) + v
+    now_month = datetime.now(timezone.utc).strftime("%Y-%m")
+    series = [[m, round(100 * part.get(m, 0.0) / tot[m], 1)] for m in sorted(tot) if tot[m] > 0 and START <= m < now_month]
     if not series:
         raise RuntimeError("no data")
     return series, None
@@ -300,7 +321,9 @@ def comext(ind):
 # ---------- Destatis GENESIS (needs the GitHub secret DESTATIS_TOKEN, or DESTATIS_USER + DESTATIS_PASSWORD) ----------
 GENESIS = "https://genesis.destatis.de/genesisWS/rest/2020/"
 DESTATIS_DEBUG = ROOT / "data" / "debug" / "destatis.json"
-_destatis = {"tables": {}, "debug": {}}
+DESTATIS_BUDGET = 900      # seconds for all GENESIS calls of one run; later Destatis indicators keep their old values
+_destatis = {"tables": {}, "debug": {}, "meta": {}, "values": {}, "resolved": {}, "t0": None}
+_PERIOD = re.compile(r"(MONAT|QUART|HALBJ|HJAHR)\D*(\d{1,2})$")
 
 
 def _genesis_auth():
@@ -317,6 +340,11 @@ def _genesis_post(method, params, timeout=120):
     auth = _genesis_auth()
     if not auth:
         raise RuntimeError("GitHub secret DESTATIS_TOKEN is not set")
+    import time
+    if _destatis["t0"] is None:
+        _destatis["t0"] = time.monotonic()
+    if time.monotonic() - _destatis["t0"] > DESTATIS_BUDGET:
+        raise RuntimeError("time budget for Destatis used up in this run – tried again next run")
     body = urllib.parse.urlencode({"language": "de", **params}).encode("utf-8")
     req = urllib.request.Request(GENESIS + method, data=body, method="POST",
                                  headers={"User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded", **auth})
@@ -334,26 +362,131 @@ def _genesis_post(method, params, timeout=120):
     return raw.decode("utf-8", "replace")
 
 
+def _genesis_json(method, params, timeout=90):
+    text = _genesis_post(method, params, timeout)
+    try:
+        return json.loads(text)
+    except ValueError:
+        raise RuntimeError(f"GENESIS {method}: no JSON answer ({text[:80]!r})")
+
+
 def _num_de(v):
-    v = (v or "").strip().replace(".", "").replace(",", ".") if "," in (v or "") else (v or "").strip()
+    v = (v or "").strip()
+    if "," in v or re.fullmatch(r"-?\d{1,3}(\.\d{3})+", v):   # German format: dot = thousands separator
+        v = v.replace(".", "").replace(",", ".")
     try:
         return float(v)
     except ValueError:
         return None
 
 
-def _destatis_table(name):
-    """Download a GENESIS table as flat CSV (ffcsv) and return {series label: {YYYY-MM: value}}."""
-    if name in _destatis["tables"]:
-        return _destatis["tables"][name]
-    dbg = _destatis["debug"].setdefault(name, {})
+def _flat(s):
+    return re.sub(r"\s+", " ", s or "").strip()
+
+
+def _resolve_table(ind):
+    """'62421-*' + 'tableMatch' -> the first table of that statistic whose title matches (catalogue/tables)."""
+    name = ind["table"]
+    if "*" not in name:
+        return name
+    key = name + "|" + ind.get("tableMatch", "")
+    if key in _destatis["resolved"]:
+        return _destatis["resolved"][key]
+    info = _genesis_json("catalogue/tables", {"selection": name, "area": "all", "pagelength": "100"})
+    tables = [{"code": t.get("Code"), "content": _flat(t.get("Content"))} for t in (info.get("List") or [])]
+    _destatis["debug"].setdefault("catalogue", {})[name] = tables[:40]
+    pat = re.compile(ind.get("tableMatch", "."), re.I)
+    hit = next((t["code"] for t in tables if pat.search(t["content"])), None)
+    if not hit:
+        raise RuntimeError(f"no table {name} matches '{ind.get('tableMatch')}' – see data/debug/destatis.json (catalogue)")
+    _destatis["resolved"][key] = hit
+    return hit
+
+
+def _variables(table):
+    """Classifying variables of a table (metadata/table), as [{code, content}]."""
+    if table in _destatis["meta"]:
+        return _destatis["meta"][table]
+    info = _genesis_json("metadata/table", {"name": table, "area": "all"})
+    found, seen = [], set()
+
+    def walk(node):
+        if isinstance(node, dict):
+            code, content = node.get("Code"), node.get("Content")
+            if code and content and code != table and code not in seen and (node.get("Type") or "").lower() != "wert":
+                seen.add(code)
+                found.append({"code": code, "content": _flat(content)})
+            for v in node.values():
+                walk(v)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v)
+    walk(info.get("Object") or info)
+    _destatis["meta"][table] = found
+    _destatis["debug"].setdefault("variables", {})[table] = found[:30]
+    return found
+
+
+def _values(var):
+    if var in _destatis["values"]:
+        return _destatis["values"][var]
+    info = _genesis_json("catalogue/values2variable", {"name": var, "selection": "*", "area": "all", "pagelength": "10000"}, timeout=120)
+    vals = [{"code": v.get("Code"), "content": _flat(v.get("Content"))} for v in (info.get("List") or [])]
+    _destatis["values"][var] = vals
+    return vals
+
+
+def _classify(ind, table, dbg):
+    """'filter': {'var': regex, 'values': [regex, …], 'multi': bool} -> GENESIS classifying parameters.
+    Each value regex is tried in order against code and name; the shortest (most aggregated) code wins,
+    or all hits when 'multi' is set (e.g. several CN codes that are summed afterwards)."""
+    f = ind.get("filter")
+    if not f:
+        return {}
+    var = f.get("code")
+    if not var:
+        vp = re.compile(f["var"], re.I)
+        cands = [v for v in _variables(table) if vp.search(v["content"]) or vp.search(v["code"])]
+        if not cands:
+            raise RuntimeError(f"no variable matches '{f['var']}' in {table} – see data/debug/destatis.json (variables)")
+        var = cands[0]["code"]
+    keys = f.get("keys")
+    if not keys:
+        vals = _values(var)
+        dbg["valueCount"] = len(vals)
+        hits = []
+        for p in f.get("values", []):
+            rx = re.compile(p, re.I)
+            hits = [v for v in vals if rx.search(v["content"]) or rx.search(v["code"])]
+            if hits:
+                break
+        if not hits:
+            dbg["valueSample"] = vals[:25]
+            raise RuntimeError(f"no value of {var} matches {f.get('values')} – see data/debug/destatis.json")
+        hits.sort(key=lambda v: (len(v["code"]), v["code"]))
+        if not f.get("multi"):
+            hits = hits[:1]
+        keys = [v["code"] for v in hits[:40]]
+        dbg["values"] = hits[:40]
+    dbg["classify"] = {"var": var, "keys": keys}
+    return {"classifyingvariable1": var, "classifyingkey1": ",".join(keys)}
+
+
+def _destatis_table(name, extra=None):
+    """Download a GENESIS table as flat CSV (ffcsv) and return a list of rows
+    (label, value label, unit, period YYYY-MM, value). Months, quarters, half-years and years are understood."""
+    extra = extra or {}
+    key = name + "|" + json.dumps(extra, sort_keys=True)
+    if key in _destatis["tables"]:
+        return _destatis["tables"][key]
+    dbg = _destatis["debug"].setdefault(name if not extra else name + " · " + extra.get("classifyingkey1", "")[:60], {})
     year = datetime.now(timezone.utc).year
     text = _genesis_post("data/tablefile", {"name": name, "area": "all", "compress": "false", "transpose": "false",
-                                            "startyear": str(int(START[:4])), "endyear": str(year), "format": "ffcsv"})
+                                            "startyear": str(int(START[:4])), "endyear": str(year), "format": "ffcsv", **extra})
     if text.lstrip().startswith("{"):
         info = json.loads(text)
         dbg["answer"] = {k: info.get(k) for k in ("Status", "Ident") if k in info}
-        raise RuntimeError("GENESIS: " + json.dumps(info.get("Status") or info)[:180])
+        raise RuntimeError("GENESIS: " + json.dumps(info.get("Status") or info, ensure_ascii=False)[:180])
     dbg["raw"] = text[:600]
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     rows = [r for r in csv.reader(io.StringIO(text, newline=""), delimiter=";") if r]
@@ -364,55 +497,99 @@ def _destatis_table(name):
     dbg["columns"] = head
     dbg["sample"] = rows[1:4]
     low = [h.lower() for h in head]
-    # value column: 'value' (ffcsv) – else the last column whose content is numeric
     vcol = next((k for k, h in enumerate(low) if h == "value"), None)
     tcol = next((k for k, h in enumerate(low) if h in ("time", "zeit")), None)
-    # month column: an attribute code like MONAT01
-    mcol = None
+    ucol = next((k for k, h in enumerate(low) if h == "value_unit"), None)
+    lcol = next((k for k, h in enumerate(low) if h == "value_variable_label"), None)
+    # period column (months, quarters, half-years): an attribute code like MONAT01, QUART3, HALBJ2; none = yearly table
+    pcol = None
     for k in range(len(head)):
-        vals = {r[k] for r in rows[1:50] if len(r) > k}
-        if vals and all(re.fullmatch(r"MONAT\d\d", v or "") for v in vals):
-            mcol = k
+        vals = {r[k] for r in rows[1:60] if len(r) > k}
+        if vals and all(_PERIOD.fullmatch(v or "") for v in vals):
+            pcol = k
             break
-    label_cols = [k for k, h in enumerate(low) if h.endswith("attribute_label") and k != (mcol + 1 if mcol is not None else -1)]
-    label_cols = [k for k in label_cols if not any(re.fullmatch(r"(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)", r[k] or "") for r in rows[1:20] if len(r) > k)]
-    if vcol is None or tcol is None or mcol is None:
-        raise RuntimeError(f"unknown table layout (value={vcol}, time={tcol}, month={mcol}) – see data/debug/destatis.json")
-    out = {}
+    skip = {pcol + 1} if pcol is not None else set()
+    names = r"(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember|\d\. Quartal|\d\. Halbjahr|Quartal \d|Halbjahr \d)"
+    label_cols = [k for k, h in enumerate(low) if h.endswith("attribute_label") and k not in skip]
+    label_cols = [k for k in label_cols if not any(re.fullmatch(names, r[k] or "") for r in rows[1:20] if len(r) > k)]
+    if vcol is None or tcol is None:
+        raise RuntimeError(f"unknown table layout (value={vcol}, time={tcol}) – see data/debug/destatis.json")
+    out = []
     for r in rows[1:]:
-        if len(r) <= max(vcol, tcol, mcol):
+        if len(r) <= max(vcol, tcol):
             continue
         val = _num_de(r[vcol])
         if val is None:
             continue
+        yr = r[tcol].strip()[:4]
+        if not yr.isdigit():
+            continue
+        month = "01"
+        if pcol is not None and len(r) > pcol:
+            m = _PERIOD.match(r[pcol].strip())
+            if m:
+                n = int(m.group(2))
+                month = {"MONAT": n, "QUART": (n - 1) * 3 + 1}.get(m.group(1), 1 if n == 1 else 7)
+                month = f"{month:02d}"
         label = " · ".join(r[k].strip() for k in label_cols if len(r) > k and r[k].strip())
-        out.setdefault(label, {})[f"{r[tcol].strip()[:4]}-{r[mcol][-2:]}"] = val
-    dbg["series"] = sorted(out)[:80]
-    _destatis["tables"][name] = out
+        out.append((label, (r[lcol].strip() if lcol is not None and len(r) > lcol else ""),
+                    (r[ucol].strip() if ucol is not None and len(r) > ucol else ""), f"{yr}-{month}", val))
+    dbg["series"] = sorted({(l + (" | " + vl if vl else "") + (" [" + u + "]" if u else "")) for l, vl, u, _, _ in out})[:120]
+    dbg["periodColumn"] = head[pcol] if pcol is not None else "none (yearly)"
+    _destatis["tables"][key] = out
     return out
 
 
 def destatis(ind):
-    table = _destatis_table(ind["table"])
-    pats = [re.compile(p, re.I) for p in ind.get("match", [])]
-    # patterns in order of priority: the grade code first, the name only as a fallback
-    label = next((l for p in pats for l in table if p.search(l) and not re.search(r"\bohne\b", l, re.I)), None)
-    if not label:
+    """Options: table (code, or 'NNNNN-*' with tableMatch), filter (classifying variable, see _classify),
+    unit / valueLabel (regex on the value unit / value variable, e.g. index rows only, or 'Einfuhr: Gewicht'),
+    match (regexes for the series name in priority order), sum (add up all matching series), scale (factor)."""
+    table = _resolve_table(ind)
+    dbg = _destatis["debug"].setdefault("indicators", {}).setdefault(ind["id"], {"table": table})
+    extra = _classify(ind, table, dbg)
+    rows = _destatis_table(table, extra)
+    if ind.get("unit_match"):
+        ux = re.compile(ind["unit_match"], re.I)
+        rows = [r for r in rows if ux.search(r[2])]
+    if ind.get("valueLabel"):
+        vx = re.compile(ind["valueLabel"], re.I)
+        rows = [r for r in rows if vx.search(r[1])]
+    full = bool(ind.get("unit_match") or ind.get("valueLabel") or ind.get("sum"))
+    table_map = {}
+    for label, vlabel, unit, period, val in rows:
+        lab = label if not full else label + (" | " + vlabel if vlabel else "")
+        table_map.setdefault(lab, {})[period] = val       # later rows win (index after % changes)
+    pats = [re.compile(p, re.I) for p in ind.get("match", [])] or [re.compile(".")]
+    excl = re.compile(ind.get("exclude", r"\bohne\b"), re.I)
+    if ind.get("sum"):
+        labels = [l for l in table_map if any(p.search(l) for p in pats) and not excl.search(l)]
+    else:
+        lab = next((l for p in pats for l in table_map if p.search(l) and not excl.search(l)), None)
+        labels = [lab] if lab else []
+    if not labels:
+        dbg["seriesFound"] = sorted(table_map)[:60]
         raise RuntimeError("no series matches " + " / ".join(ind.get("match", [])) + " – see data/debug/destatis.json")
-    _destatis["debug"].setdefault("matched", {})[ind["id"]] = label
-    series = [[m, round(v, 2)] for m, v in sorted(table[label].items()) if m >= START]
+    dbg["matched"] = labels[:12]
+    _destatis["debug"].setdefault("matched", {})[ind["id"]] = labels[0] if len(labels) == 1 else f"{len(labels)} series (sum)"
+    merged = {}
+    for l in labels:
+        for m, v in table_map[l].items():
+            merged[m] = merged.get(m, 0.0) + v
+    scale = float(ind.get("scale", 1))
+    series = [[m, round(v * scale, 3 if abs(v * scale) < 10 else 2)] for m, v in sorted(merged.items()) if m >= START]
     if not series:
         raise RuntimeError("no data")
-    return series, {"series": label}
+    return series, {"series": labels[0] if len(labels) == 1 else f"{len(labels)} series", "table": table}
 
 
 def destatis_discover():
-    """Search GENESIS for further tables of interest; the result helps to configure new indicators."""
+    """Search GENESIS for tables of interest; the result helps to configure new indicators."""
     found = {}
-    for term in ("Toilettenpapier", "Hygienepapier", "Sondervertragskunden", "Erdgas Industrie", "Einfuhrpreise Zellstoff", "Verbraucherpreisindex Toilettenpapier"):
+    for term in ("Arbeitskostenindex", "Produktionsindex Papier", "Einzelhandel Umsatz", "Energieverwendung Verarbeitendes Gewerbe",
+                 "Wassereinsatz", "Umweltschutzinvestitionen", "Abfallerzeugung"):
         try:
             info = json.loads(_genesis_post("find/find", {"term": term, "category": "tables", "pagelength": "12"}, timeout=60))
-            found[term] = [{"code": t.get("Code"), "content": t.get("Content")} for t in (info.get("Tables") or [])][:12]
+            found[term] = [{"code": t.get("Code"), "content": _flat(t.get("Content"))} for t in (info.get("Tables") or [])][:12]
         except Exception as exc:  # noqa: BLE001
             found[term] = str(exc)[:160]
     _destatis["debug"]["search"] = found
@@ -546,7 +723,7 @@ def manual(ind):
     return [[v["date"], float(v["value"])] for v in vals], None
 
 
-FETCH = {"eurostat": eurostat, "fred": fred, "smard": smard, "smard_price": smard_price, "comext": comext, "destatis": destatis, "ember": ember, "manual": manual}
+FETCH = {"eurostat": eurostat, "fred": fred, "smard": smard, "smard_share": smard_share, "smard_price": smard_price, "comext": comext, "destatis": destatis, "ember": ember, "manual": manual}
 KEEP = ("id", "group", "areas", "label", "unit", "freq", "attribution", "link", "source", "country", "isUs")
 
 
