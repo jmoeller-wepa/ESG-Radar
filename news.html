@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261106c"></script>
+<script src="assets/theme.js?v=20261106d"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>News – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
@@ -157,7 +157,7 @@
   .vtl li.soon b { color: var(--red-text); }
 
   /* Toolbar */
-  .toolbar { position: sticky; top: 0; z-index: 5; background: var(--d-rgb250_250_251-bg, rgba(250, 250, 251, .94)); backdrop-filter: blur(6px); display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; padding: 10px 0; margin: -10px 0; }
+  .toolbar { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 94%, transparent); /* same colour as the page in both themes */ backdrop-filter: blur(6px); display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; padding: 10px 0; margin: -10px 0; }
   .spacer { flex: 1; }
   .rels { display: flex; gap: 4px; }
   .ib { width: 38px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--d-e5e7eb-border, #e5e7eb); border-radius: 8px; background: var(--d-fff-bg, #fff); cursor: pointer; padding: 0; }
@@ -286,6 +286,12 @@
   select[hidden] { display: none; }
   /* toolbar dropdowns are as wide as the chosen option (Chrome/Edge), so all filters fit on one line */
   .toolbar select { field-sizing: content; min-width: 0; }
+  /* select with a fixed prefix ("What it is:", "Affects:") inside the same box */
+  .fsel { position: relative; display: inline-flex; flex: none; }
+  .fsel .fl { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); font-size: 13.5px; color: var(--ink-3); pointer-events: none; }
+  .fsel select { padding-left: calc(var(--fl, 70px) + 15px); }
+  .fsel select optgroup { font-style: normal; font-weight: 600; color: var(--ink-3); }
+  .fsel select option { color: var(--ink); font-weight: 400; }
   @media (min-width: 1280px) { .toolbar:has(#tool[hidden]) { flex-wrap: nowrap; } .toolbar .tsearch { flex: 0 1 220px; min-width: 130px; } .toolbar .count-txt { flex: none; } }
   .cf .due { color: var(--red-text); font-weight: 600; }
   .cf .st { color: var(--ink-2); }
@@ -318,9 +324,9 @@
     .feat { flex-basis: 100%; }
   }
 </style>
-<script src="assets/status.js?v=20261106c" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261106c">
-<script src="assets/colresize.js?v=20261106c" defer></script>
+<script src="assets/status.js?v=20261106d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261106d">
+<script src="assets/colresize.js?v=20261106d" defer></script>
 </head>
 <body>
 <header>
@@ -414,24 +420,26 @@
         <option value="other">Other tools</option>
       </select>
       <!-- "What it is": kind of item; peer news can be narrowed to a topic -->
-      <select id="type" aria-label="What it is">
-        <option value="all">What it is: everything</option>
+      <label class="fsel"><span class="fl">What it is:</span><select id="type" aria-label="What it is">
+        <option value="all">everything</option>
         <option value="regulation">Regulation</option>
         <option value="tool">Tools &amp; updates</option>
         <option value="practice">Best practice</option>
-        <option value="peer">Peer news</option>
         <option value="monthly" id="opt-monthly">Monthly updates</option>
-      </select>
-      <!-- "Affects us": what it touches at WEPA -->
-      <select id="impact" aria-label="Affects us">
-        <option value="all">Affects us: anything</option>
-        <option value="reporting">Affects our reporting</option>
-        <option value="datamodel">Affects our data model &amp; KPIs</option>
-        <option value="suppliers">Affects suppliers &amp; sourcing</option>
-        <option value="products">Affects products &amp; packaging</option>
-        <option value="costs">Affects costs &amp; investments</option>
-        <option value="watch">Watch only</option>
-      </select>
+        <optgroup label="Peer news" id="grp-peer">
+          <option value="peer" data-short="All peer news" data-long="Peer news">All peer news</option>
+        </optgroup>
+      </select></label>
+      <!-- "Affects:": what it touches at WEPA -->
+      <label class="fsel"><span class="fl">Affects:</span><select id="impact" aria-label="Affects">
+        <option value="all">anything</option>
+        <option value="reporting">our reporting</option>
+        <option value="datamodel">our data model &amp; KPIs</option>
+        <option value="suppliers">our suppliers &amp; sourcing</option>
+        <option value="products">our products &amp; packaging</option>
+        <option value="costs">our costs &amp; investments</option>
+        <option value="watch">nothing yet (watch only)</option>
+      </select></label>
       <select id="rel" aria-label="Relevance">
         <option value="all">All relevance</option>
         <option value="high">High only</option>
@@ -732,7 +740,10 @@
     });
     // Filters above the cards
     // "What it is": value is a type, or "peer:<topic>" for peer news about one topic
-    PEER_TOPICS.slice().reverse().forEach((k) => { const o = document.createElement("option"); o.value = "peer:" + k; o.textContent = "Peer news · " + TOPICS[k].label; $("type").querySelector('[value="peer"]').after(o); });
+    // peer-news topics sit in the "Peer news" group of the list; the chosen one reads "Peer news · <topic>" in the closed box
+    PEER_TOPICS.forEach((k) => { const o = document.createElement("option"); o.value = "peer:" + k; o.dataset.short = TOPICS[k].label; o.dataset.long = "Peer news · " + TOPICS[k].label; o.textContent = o.dataset.short; $("grp-peer").appendChild(o); });
+    const fitPrefix = () => document.querySelectorAll(".fsel").forEach((f) => f.style.setProperty("--fl", f.querySelector(".fl").offsetWidth + "px"));
+    fitPrefix(); if (document.fonts) document.fonts.ready.then(fitPrefix);
     $("type").addEventListener("change", (ev) => { const [t, tp] = ev.target.value.split(":"); state.type = t; state.topic = tp || "all"; sync(); render(); });
     $("tool").addEventListener("change", (ev) => { state.tool = ev.target.value; refresh(); });
     window.addEventListener("resize", debounce(measureCards, 150));
@@ -786,7 +797,8 @@
     $("dl-next").hidden = !inData;
     const dv = currentDlView();
     document.querySelectorAll(".dl-panel [data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === dv)));
-    $("type").value = state.type === "peer" && state.topic !== "all" ? "peer:" + state.topic : state.type; $("rel").value = state.rel; $("impact").value = state.impact;
+    $("type").value = state.type === "peer" && state.topic !== "all" ? "peer:" + state.topic : state.type;
+    $("grp-peer").querySelectorAll("option").forEach((o) => { o.textContent = o.selected ? o.dataset.long : o.dataset.short; }); $("rel").value = state.rel; $("impact").value = state.impact;
     const only = $("only");
     only.hidden = !state.only;
     if (state.only) {
@@ -1339,7 +1351,7 @@
   function debounce(fn, ms) { let t; return () => { clearTimeout(t); t = setTimeout(fn, ms); }; }
 })();
 </script>
-<script src="assets/search.js?v=20261106c" defer></script>
-<script src="assets/guide.js?v=20261106c" defer></script>
+<script src="assets/search.js?v=20261106d" defer></script>
+<script src="assets/guide.js?v=20261106d" defer></script>
 </body>
 </html>

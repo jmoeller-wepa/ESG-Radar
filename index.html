@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261106c"></script>
+<script src="assets/theme.js?v=20261106d"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261106c" defer></script>
+<script src="assets/status.js?v=20261106d" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -55,7 +55,10 @@
   .ov-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
   .ov-top h2 { margin: 0; font-size: 22px; font-weight: 650; color: var(--blue-900); letter-spacing: -.01em; }
   .ov-top p { margin: 0; font-size: 13.5px; color: var(--ink-3); }
-  .ov-actions { margin-left: auto; display: flex; gap: 8px; }
+  .ov-actions { margin-left: auto; display: flex; gap: 8px; flex: none; }
+  /* Customize sits in the top right corner of the page, level with the greeting */
+  .brief { position: relative; }
+  @media (min-width: 721px) { .br-top .ov-actions { position: absolute; top: 0; right: 0; } .br-txt h2 { padding-right: 330px; } }
   .btn { font: inherit; font-size: 13.5px; border-radius: 10px; padding: 7px 14px; cursor: pointer; border: 1px solid var(--d-d5e2ec-border, #d5e2ec); background: var(--d-fff-bg, #fff); color: var(--d-0064aa-text, #0064aa); display: inline-flex; align-items: center; gap: 6px; }
   .btn:hover { border-color: var(--d-aac6dc-border, #aac6dc); }
   .btn.go { background: #009b82; border-color: #009b82; color: #fff; font-weight: 600; }
@@ -120,11 +123,11 @@
 
   /* briefing (B1): summary, key numbers, round-up + next 30 days */
   .brief { display: flex; flex-direction: column; gap: 16px; }
-  .br-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
+  .br-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
   .br-txt h2 { margin: 0; font-size: 24px; font-weight: 650; color: var(--blue-900); letter-spacing: -.01em; }
   .br-txt { flex: 1 1 100%; min-width: 0; }
   .br-txt p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
-  .kpi-h { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: -6px; }
+  .kpi-h { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 0; }
   .kpi-h h3 { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); font-weight: 600; }
   .kpi-h button { border: 0; background: none; font: inherit; font-size: 12.5px; color: var(--d-0064aa-text, #0064aa); cursor: pointer; padding: 4px 8px; border-radius: 8px; }
   .kpi-h button:hover { background: var(--d-f0f2f5-bg, #f0f2f5); }
@@ -205,8 +208,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261106c">
-<script src="assets/colresize.js?v=20261106c" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261106d">
+<script src="assets/colresize.js?v=20261106d" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -256,21 +259,22 @@
   <section class="brief" aria-labelledby="hello">
     <div class="br-top">
       <div class="br-txt"><h2 id="hello">Overview</h2><p id="summary">Loading the latest data …</p></div>
+      <!-- one Customize button for the whole page (key numbers and cards) -->
+      <div class="ov-actions">
+        <button type="button" class="btn" id="reset" hidden>↺ Reset</button>
+        <button type="button" class="btn" id="add" hidden>＋ Add cards</button>
+        <button type="button" class="btn" id="edit">✎ Customize</button>
+        <button type="button" class="btn go" id="done" hidden>Done</button>
+      </div>
     </div>
     <div class="kpi-box" id="kpi-box">
-      <div class="kpi-h"><h3 id="kpi-title">Key numbers</h3><button type="button" id="kpi-edit" title="Choose which indicators to show, or hide this row">✎ Edit</button></div>
+      <div class="kpi-h"><h3 id="kpi-title">Key numbers</h3></div>
       <div class="kpis" id="kpis" aria-labelledby="kpi-title"></div>
     </div>
   </section>
   <div class="ov-top">
     <h2 class="cards-h">Your cards</h2>
     <p id="since"></p>
-    <div class="ov-actions">
-      <button type="button" class="btn" id="reset" hidden>↺ Reset</button>
-      <button type="button" class="btn" id="add" hidden>＋ Add cards</button>
-      <button type="button" class="btn" id="edit">✎ Customize</button>
-      <button type="button" class="btn go" id="done" hidden>Done</button>
-    </div>
   </div>
   <section class="drawer" id="drawer" hidden aria-labelledby="dr-title">
     <h3 id="kpi-cfg-title">Key numbers</h3>
@@ -285,7 +289,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261106c"></script>
+<script src="assets/carbon.js?v=20261106d"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -748,7 +752,6 @@
     renderAll();
   }
   $("edit").addEventListener("click", () => { setEdit(true); $("drawer").hidden = false; renderCat(); renderKpiCfg(); });
-  $("kpi-edit").addEventListener("click", () => { setEdit(true); $("drawer").hidden = false; renderCat(); renderKpiCfg(); $("kpi-cfg-title").scrollIntoView({ behavior: "smooth", block: "center" }); });
   $("done").addEventListener("click", () => setEdit(false));
   $("add").addEventListener("click", () => { $("drawer").hidden = !$("drawer").hidden; renderCat(); });
   $("reset").addEventListener("click", () => { L = JSON.parse(JSON.stringify(DEFAULT)); L.intro = ["briefing"]; save(); renderAll(); renderCat(); renderKpiCfg(); renderBrief(); });
@@ -768,7 +771,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261106c" defer></script>
-<script src="assets/guide.js?v=20261106c" defer></script>
+<script src="assets/search.js?v=20261106d" defer></script>
+<script src="assets/guide.js?v=20261106d" defer></script>
 </body>
 </html>
