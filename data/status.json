@@ -3,76 +3,76 @@
   "feeds": {
    "label": "News feeds",
    "status": "ok",
-   "detail": "39 of 39 feeds · 6 new",
-   "at": "2026-11-09T09:18:01",
+   "detail": "39 of 39 feeds · 16 new",
+   "at": "2026-11-09T16:48:56",
    "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "ok",
    "detail": "12 open and relevant",
-   "at": "2026-11-09T09:18:52",
+   "at": "2026-11-09T16:49:44",
    "order": 20
   },
   "procedures": {
    "label": "Regulation status",
    "status": "ok",
    "detail": "8 of 8 procedures",
-   "at": "2026-11-09T09:19:17",
+   "at": "2026-11-09T16:50:23",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
-   "status": "ok",
-   "detail": "63 of 63 indicators",
-   "at": "2026-11-09T09:31:44",
-   "order": 30
+   "status": "warn",
+   "detail": "63 of 64 indicators · failed: cpi_toilet_de",
+   "at": "2026-11-09T17:00:51",
+   "order": 30,
+   "failingSince": "2026-11-09T17:00:51"
   },
   "ets": {
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
    "detail": "Already processed this file with the same mapping – nothing to do.",
-   "at": "2026-11-09T09:32:21",
+   "at": "2026-11-09T17:01:18",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
    "detail": "8 peers found · no changes",
-   "at": "2026-11-09T09:32:25",
+   "at": "2026-11-09T17:01:22",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
    "detail": "110 planned features",
-   "at": "2026-11-09T09:32:30",
+   "at": "2026-11-09T17:01:27",
    "order": 50
   },
   "peernews": {
    "label": "Peer news",
    "status": "ok",
    "detail": "45 headlines for 12 companies",
-   "at": "2026-11-09T09:32:28",
+   "at": "2026-11-09T17:01:26",
    "order": 46
   },
   "industry": {
    "label": "Industry statistics",
    "status": "ok",
    "detail": "Jan – Sep 2026: hygiene paper 990 kt (-1.9 %)",
-   "at": "2026-11-09T09:31:54",
+   "at": "2026-11-09T17:00:58",
    "order": 36
   },
   "water": {
    "label": "River levels & soil moisture",
-   "status": "warn",
-   "detail": "2 gauges · 5 sites · failed: leuna: station LEUNA-KREYPAU not found",
-   "at": "2026-11-09T09:32:20",
-   "order": 38,
-   "failingSince": "2026-11-09T09:32:20"
+   "status": "ok",
+   "detail": "3 gauges · 5 sites",
+   "at": "2026-11-09T17:01:17",
+   "order": 38
   }
  },
- "lastRun": "2026-11-09T09:32:30",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/42592276259",
+ "lastRun": "2026-11-09T17:01:27",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/42658475518",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }

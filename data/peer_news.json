@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T09:32:28",
+ "updated": "2026-11-09T17:01:26",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -30,31 +30,37 @@
   ],
   "essity": [
    {
+    "title": "Essity stock buyback reaches 216,335 Class B shares in week 45",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcm9KMGt6SUZQQ2djWVQ5R2ZtYmhMT2hETEtRdDBZclhFRUJic0RHOUtfbDA4dTM5Wm12UFVvMnVEUEgxRHBOX3BmeUdjbFIzQ2x0c3M0RkVYeW1qTF85LUU2azg5M184OTE0YTIzWWJiWGROaXdZcDgxekxXbTEtVHYwSTBuREwxZU8tVXU4VmRjMlJWYzE3T1ZSZF9BOXd0bkZ4b19HXzRKSFoyNmpsYk5LODNYdHlmRHIwWll6MFJrOEk?oc=5",
+    "date": "2026-11-09"
+   },
+   {
     "title": "Essity names new consumer tissue marketing director",
     "source": "Bdaily",
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOc015Rk5RU2NGV2dOc1NFbUFfM3V4VnVSZnBMRXJGR1ZMRkg1cndlMWNINzU4RE1pak4xTVIyeGFNOEM5WDM5RmE2UjRNMTJSeC02UnAwR29Ta2tUN1Z1eTNJVUc5N3loM2pnNEg1blN5UmdyX2JvakJrTWNpSmFhbEFRNmVnQ1NxQ29aZ01UMC1reWNuQXVj?oc=5",
     "date": "2026-11-08"
    },
    {
+    "title": "The Essity Inclusive Hygiene Report",
+    "source": "Yahoo News UK",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5xWWlGaEtRclp5TTkxb3MzSkxXTk96a19wS3Q2TFRaelhXcGd3YW8yS1BmR055Zk9CdnhpVjA2LWJady1sVC1RXzlkSFhxSDBSeG03aHR0MGl2bjdZcHByUUhtNXNSMjlTcnNMc3FEbzloT1hMRXV4T010eHE?oc=5",
+    "date": "2026-11-06"
+   },
+   {
     "title": "Essity AB (publ) (ESSITY-B.ST) Seasonal returns chart - Yahoo Finance",
     "source": "Yahoo Finance Singapore",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hZ2VHMmZlczA1N3JqTGFHcl9aeGdwZ1lYckFDTVFQYVBjUXFUWTJjdS1VcGlLcWNzNDJocWdDdEoweXBTemtOblZvVEUxdmN6SGhXSFBmLWUyaGZZalVESkJ3dmpWQVR0bGJj?oc=5",
     "date": "2026-11-05"
-   },
-   {
-    "title": "People: Arbtech; Law Distribution; BDO; Bruntwood; Essity; Cavendish; CarMoney",
-    "source": "TheBusinessDesk.com",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQlY0RlktOFZncTNZYm81cEtXYURvdnpwdTF0aE9EeFBkaVdGTjBkcmt0Q2djOElIdG5tVVh3NHhMRTJtSm43YkFTaXZja1BUMjZPQ0RnRlFBLThEMTJSNXNyZEwwSlZHWkFESzBHS3p0YzdJV2tXcjVDZ3F5SHpxM1hFOU1lbU5WcngyNlFXa2c3MlBjQ242MWV3ak80Z2g0QjZaOFlqeEt1dzNiM3c?oc=5",
-    "date": "2026-11-05"
-   },
-   {
-    "title": "Help the Essity truly sparkle and get the Nomads a record crowd!",
-    "source": "Grassroots North Wales",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTUo1ZGJ5T2dlWUY2dGJfVW5NZndpZERSNWxiclFyTlRTWGZLZlJaY2prdWNnbjZNVGRNd2lqMzBUTm5MT3VkTld3SEt1TWI3VVA1bTc0b01BcHNtOFl3ai01em5rLURjZFlaTGNJTFR5WmNySlh0YUsxME1FSFRFZEttR0pQTFZNSG9Ealg5Z3ZrS3NsN3JIZlhnUi1XUdIBowFBVV95cUxPNDFhcFNJVTVleHlUTm9BeHRVM2ktYVIwVmtTQjNPUl84cldVUVpCZHFxZjNHVnM5dUlDRnF4WktyQjZuZXE3cXpPR1NIYzB6U0hLZGZScE8wUEN1c1l0ZG52dWFMRGlWTk9OaVVGTFA4NmpWOHBJeG9ZdUhqV1FyR2ZOQ0x2NjdfS1hqMHdzRUFGY2RLUFNjRE1Jd0ctd3RXeGVz?oc=5",
-    "date": "2026-11-04"
    }
   ],
   "sofidel": [
+   {
+    "title": "Top Woman In Store Brands: Sofidel's Mounica Nakka",
+    "source": "Progressive Grocer",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNbmVuRjZVbWM5X0NDS3d2TVltUnE1bF92alROMlJYajExdS12RjBfaHhwazBTM3AxYlE4cUZ6bzZWQ2hScGJKalFrUHpsdkdrUnpTNFR4T2d1S0FGSm5hUlhfLXlVbmZpYmlCME5TMU5jVGJyODlFYmIwZDhjSEtmNg?oc=5",
+    "date": "2026-11-09"
+   },
    {
     "title": "Sofidel Integrated Report: Our Value Chain",
     "source": "Morningstar",
@@ -71,12 +77,6 @@
     "title": "Sofidel x Canal Park, 2026",
     "source": "Circleville Herald",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNR2VyVS00a2hwY2J2V2JMSTZvMGcwS0N2NmcwS3JJTDdva1dST093TXFBdWJRc0lXRDB2c2c1XzVKMmRFWmw1SzFUZk1WNTdLdS0xZWRQWnlTeTJWRlNWWFhLRVNJQzlHTll6WnM3aEN5bjc4SkU0TWVaaFpLQmVWMnpraUYtdFVHRnJWOVpjMXNpcXhfNktwMm1fQkJZS1Bqb2I0aHNraE4zSHlPVC14SzRB?oc=5",
-    "date": "2026-11-02"
-   },
-   {
-    "title": "Canal Park opens their new vault toilet",
-    "source": "Circleville Herald",
-    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMWQyLXRMVEcxdVgwUG5vNkM3Yk5nRE9nSVpkLXNYbWJVZ2JyTF9ZVGVTcmlwRnlCSEt0T3I4TmpjYmdtdUxnejJsaFRxRHF2NGkwU0d3N2JFVkdQUm0xWmtPZjdZOEw5XzlzaV9yZlVuNlI3THZtazRKZXpYTXVmbnFyQkRWd3JzMDlncWpVVW9lZWpDRmNRN3UwVkhvXzYyOFVuZ2dhbzdrbFRXbTRhSVppa2gwdEJ4cERfWFZFNjl3Vnp1YXZrSW5xLVFSdw?oc=5",
     "date": "2026-11-02"
    }
   ],
@@ -116,21 +116,9 @@
   ],
   "kimberly-clark": [
    {
-    "title": "Kimberly-Clark Corporation (KMB) Stock Price, News, Quote & History",
-    "source": "Yahoo! Finance Canada",
-    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBzTngwV3E0MFU5VjBUcUlkMDd6ejl3LXA3c1BTVXJVaXlaMGgxamgzMDBOZTUzUUo3TVBBMXZYejRKXy1tNlVrOWhBeG80cVFE?oc=5",
-    "date": "2026-11-07"
-   },
-   {
     "title": "Kimberly-Clark Third-Quarter Earnings Top Street Views Despite Macro Volatility",
     "source": "marketscreener.com",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUEV0Q2F6UXFyQXBYN3daTHUzTi1kRmdrejlhMzN0ZTU4T0pzcTQweEVsQ2NkTTFUU0R3ZzFQbVlEODJwNU5wLVJGS0FyOVBZVTZsRjlsMEdzaHlfRDYzTll2d2lzVHBCQTRKX3NhUmZRbkM5ZHRpb3JDOERxY19yTHZEMTRqaHJROVNNcWRpc1RCbGlxdnlpMHlyVmV4OGRTU0VwZ21VeEV4Mk13THctZnBLVDNuYmVPcFVsblBKVkt2eXBoclY2TjRTQlk?oc=5",
-    "date": "2026-11-05"
-   },
-   {
-    "title": "What Kimberly-Clark (KMB) Said on Its Q3 Earnings Call",
-    "source": "TradingView",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVmpLcTJaX3pDSWwwZ1NLX1FBX1d2azgwcVp5REdoNUZycDdaWXEtR3o2R0tzZWtSVmx2ZTAyVjRjYUNhb0RjQnR3c1pxNkJjVkM0Q0JnVTl4LUhfRElVUTZuZlRMQzZvVUg0dmJnd3NDSm1wRUEzQkVfNEhES0ZHdjRTUjNYRFlMSTA3eG9GT2lkaE03bFpSSUtFS1d0bloxWHpsRkN2anFJbVJNN2FfLXZmUQ?oc=5",
     "date": "2026-11-05"
    },
    {
@@ -138,6 +126,18 @@
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkJjQ3VyQTRFa2djWW1SU3NiRm95bXZiQS0tNTVKYy1vS2FibUEyeUE5eXA5M1pEWHpobllod3pZeEZHSFhFaUlaQm5KSVZMdUQ1cDB6TjRFZnZlVU1vdjg5WUI2WEp3MElHWlNBMGc4OEtmSjVnUzlLdi1fNnQ4NnJVcVk5cEZxbkZia09DY0VRSEt0VHNuWlF2WFRqZFI2LWlBbE4zSGJtN3JielpRemRHZk16ZTM2ZEo3X21JaGdGYVZTc2c?oc=5",
     "date": "2026-11-05"
+   },
+   {
+    "title": "Kimberly-Clark Mexico stock trades at 1.84 euros on Lang & Schwarz",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVGhJaEhaeGZndllkVUl6dGx3ZnZ2ZmU0ZWpPU3hXNlJ6SWItWWx1bGZCeUU2NDdlcTU4cHpfOEVsdGFyY3JlZU1mZklJVW14YUQ0d0xzTnNYWVBBcVlBOENkdjhrNlNqTmZaX0h6RG05dURtbjdDQVpEeHp3dFBoRDhGTThzMHlETS1wLVZMU1FNR0NVUmVhcmk4cHpaWHNSTjZ6c0N6azZFZEpkbDlGa0hDa0ppZktaelducWxmTWk4czF0TFE?oc=5",
+    "date": "2026-11-04"
+   },
+   {
+    "title": "Kimberly-Clark Mexico stock trades at 1.82 euros in Berlin morning",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSXc1aEZOWFRiR3VLVXFyRF9nN3E2NnY0dWktSi1IWjFId2NZNlR3TjdRbFQtay15MHFtZE9tZVdUc3lBa2xwejdNZERaVXpwTWlvTkt0QWdTZ1ZCcXFzeTJoTzRIUV9KQjBwWTBWUDNWUHk1RElOaDFRVFVyTEl1amdoYlJhZWctaS1JZF9iYW1FdEFUTUJTUzBZc0FXd1lPZm9vUmhYTVM3c0lONEpxVFFtTV8zaVVtMXJ6aWcyTTA5SC1CYm1uSg?oc=5",
+    "date": "2026-11-04"
    }
   ],
   "pg": [
@@ -160,10 +160,10 @@
     "date": "2026-10-26"
    },
    {
-    "title": "TD Cowen maintains Hold rating on Procter & Gamble, $166 price target",
-    "source": "TradingView",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcmlOQnM2Zld1ZUhFbTRjb2VtMzM5eVpFRlUtZmQ0RFB5UkVZbmNKeXhObFNpSEFUc3R6TWtXYkU5XzkwWUQwb0U4MHRQYTNCN0gwMlhTZnA1X3VRX1Q5ckFkOHJGN2JzaHZWR1dEcklpaU40NUZ3Smh1b0VBUlVteWczZldzbXNBdGFLdEs2bGxXRFVoN1ZnUGRwZ1F4X3dGUGg3d1dPdEhWQjc3RWhRbi1QM3lSVnM4SkdyblZhSzNrb3Y3OWc?oc=5",
-    "date": "2026-10-23"
+    "title": "What Procter & Gamble Shares Means For Shareholders",
+    "source": "Simply Wall St",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRzFTVnZKSUZVOVQ1Z2h3emliOC1FYkUzRHBfVE1ROHdqU29Sd0JuajFVa1VyTkFlRXRmRDViMzVBT1pyN3htd3lqRjBuT215WTg1bHpTTVJHT1Y4UmpVSHZhT3VTMHp4VVhkUnR1bHZWTEg2TWpfaUc4ZDNqYWJvVmVDal9zdEs1UGJKOGJhSGVXZjE2NkZrWU45N1V0cGhmRnZpc1BodXFya1AzdWdFUnVDdk41bXJtWHpv0gHAAUFVX3lxTE1XeUN0SkRHZWxZZV85M1N1TFJLR0NGU0hsY2xRS3h4cWlqVHNkVndac0kwM0xmLUVGS29UZDR0QW9LLUV4OUpkQjJJOTB4Mnh6OHBNRWRHRXhxRjZOdnlwLVFHRWN6STFUU0RrdWVEZGNYUGlpUFFsckFJQlBrNXNWc1hWRW1ZdXY0TEpmaXRyT3pTMXhhTVdZdXc5VEtQVG1USzhsSXdrT1NyWFJhcUQzcjhCXzBPUmprSHc5ZTV3VQ?oc=5",
+    "date": "2026-10-25"
    }
   ],
   "georgia-pacific": [
@@ -186,9 +186,9 @@
     "date": "2026-10-29"
    },
    {
-    "title": "Georgia-Pacific commits $150M to modernize tissue production at Palatka mill",
-    "source": "The Business Journals",
-    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQc2pORUhLMWVVc0NxcjFwV3NyYW5VS2RZRkt2UVRtSmktQVBSYUk2UzJJMXVibUJ3MHI2WWoxQVlKTkRiQXk2ejAwWUlEaXc5Y3FnRDNXTmx0c3V2ejRWcVdQcDg4UVNFcTJJWW9iNEJvVWwwVGtmVTd0ZV8xUm9reWNZNE9IOTZ1dDh1bXcydlduS1RkRlQ3ZmpkaHhIMnM?oc=5",
+    "title": "On a Roll: National paper giant to invest $150M into local plant",
+    "source": "St. Johns Citizen",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc1JzclpkXzJ1LUFuckRDdTA0aG5xUjBKdGFPWE9HWDZSdW9RaVZGSUJTNUs5TXRqbWxIN0FqamdvcXp0aDItN1JaQlpyS3JJSFJUd3pTVXpNd05oX3F3a3I2dmJiSk9RR2o0amVPRnVpUWt6TUNoZmhxLUpnbGY3R3lOaTI2SHhSNVNYdndB?oc=5",
     "date": "2026-10-28"
    }
   ],
@@ -272,6 +272,18 @@
   ],
   "kruger": [
    {
+    "title": "Kruger Big Assist Marks Seven Years of Helping More Canadian Kids Access Hockey",
+    "source": "Digital Journal",
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONmtIb245dU9nODF6YjRvd0x2aWdxbTYzQ1VCS2xWX0FfX1dlN21IQnhWbWt2TEJmcXRuV3ZuZVg3RGdDUUtvWXdiT1lHbktLY18xSVJzZkhRV1RENUp5NzNZS0NOaEpYbTBXZU84UF9YeTFjTnhWVlN3Vk1PT3lsRGY3R3MteWNWdWtxclFRdk85aC1CWjV4azY2Tkx3Q0k?oc=5",
+    "date": "2026-11-09"
+   },
+   {
+    "title": "Kruger Products launches upgraded SpongeTowels UltraPro in Canada",
+    "source": "Tissue Online North America",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWU5OWHhEbmJZRHJqR1hQVmVialpwTXVKVG9wZ0ZUeDlEUWxTR3lyd2tCQ0VwanpHZUhCa1phOGpUc1gxcUtYTWVxZS1PWDkxMmRQZjNmQnRaVXRha2dOc05BYm9rWXdQaWo2OUZQMFo4X0x5VGlIWUkxaVEwcHhiRnpEOXVFWkFzZGhhTl8yOWRNYXBIcGtEcmxzaVpoc3kydXZHd0xR?oc=5",
+    "date": "2026-11-09"
+   },
+   {
     "title": "Kruger Products’ Bonterra named Canada’s most environmentally responsible brand for second consecutive year",
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPbVgtR2tYVXl6d1R1TXp2RkpzQVBsRHd6U2VCeGpFYXlLU3h5bUEwa19Mazc5clNYODVCQ1k4UVV6UUl4UEk4N3YtY1ZUQUFtODdHaWxyb3EwMUlTakZ2bWgxcHpDTVFGNXNxZEVLM3lQSUEyNENpRDZ6QTNwVFlDaXNzdGpaVHVoUHVwYWg1TkxLWENXQ3lXVUR0TjFzSEd1LXRoa3EtcVd4LXJaekJ3OFFib3VvcTF5NnVTWXdBdlJJUW5weVN2RFNuT0ptejlSVU9NNDlQYUx1U3c?oc=5",
@@ -282,18 +294,6 @@
     "source": "Benefits Canada.com",
     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOMWNjcGRINFpVZm1BZEVxd2VGWFRwc2tLNk5HanlnVV9GS1lsN0Q4NE5NcjQ0U1Fjd295OS1ucTdJQzFpNTI3MTV6NXViTm5WQUNWSk50TGdiLWxpRmt3alI4TnZoeVRxTl9icnhoVkd2cDNtSmhBRHlZbWVwdm55X0NTWTZEX044VE9nNHBoUDF5ekVKd0plN2lobnJ2UVUxbnVfc2doVnU2R0ZHM1UzUlF2OVBmYkFzUnBVRUltdnp4d3NVTHc1RUkxM0ZlWGk4VHNDUms5UlB3TGVjRGlxYndRNGp0UQ?oc=5",
     "date": "2026-10-30"
-   },
-   {
-    "title": "Can KP Tissue Inc. (TSX:KPT) Keep Its Higher Dividend Rolling as Kruger Products Pushes Into the U.S.?",
-    "source": "kalkine.ca",
-    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUzN0QmRLM0Ztd1ZKc1c3ajRxWkZPN2kyczIzb3NNckhRU0c1dnZyX2pueVNGb3RaSUJTY0J6VzVQSm9iRjh4RUZUbmFZQnZ3b1ZtbVQ4MGJrV05VZHpwRG4zQmtyYU9wZllaOVgydFNLbUpUMGZXNmZjUTFFUmNGWWczVWlLQ2dpeTFsLVJ5aXdNWmFDdVM0dkhsMzdDZEpEWnVHa0d5bFZuT1g2ZnVXeWo0enFxYk5xaXdFWGtXbUdNU3hEdzNSUEJ6Y3MzbGpJ?oc=5",
-    "date": "2026-10-22"
-   },
-   {
-    "title": "KP Tissue on the TSX: Kruger Products' 25% EBITDA Surge Backs a Higher Quarterly Dividend",
-    "source": "kalkine.ca",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxONHRsV3kwendvLXNHaWVYaG5FM1E1ZzBhSkg2NHdTcjJxUjNWOG5zenI1bU1kbDV6X0Z2TG1hWkdZX1VjQThDYTU4UVI1M1hlRTNUOVRrem53U0pSdEZyVDJZNzZpZm1IQ1Z0THhGSFhMUi03WUtwZzNzclMzQm45MmdfNVR3N0JnaWhCMmpyelJzNF9EMUhiUTZULUJyTHJXVlE3Qy03YlVNMGowY3M2aGhWQlVnQ1lIcGtKc0hmdzhWQlpR?oc=5",
-    "date": "2026-10-22"
    }
   ]
  }

@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-09T09:17:50",
+    "lastFeedRun": "2026-11-09T16:48:42",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -7522,6 +7522,393 @@
       "nextDateLabel": null,
       "source": "Water policy & wastewater (via Google News)",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcm9MdjNIZXdxcTllcHFWS0c2WUxHYWEwMlhsZ04ydjlHcXRSTXBhcEVDTFZ1akpfbWRsM1ZRZUFoLTY4VzFCaHU3X1lEUFB3WVZNdEFXRkViZG1uYXl0QTJuZWhWVFdjSGpLOVpFdzZwalVoME1yYklqdmpYZU9vWVNHTEpvQUFWbGV6a0FxOHRfMWNJWjE4cEtzbm9IYVB4NEhKbXFyV0c0bWpMdmUxTmdjQ05zQ1hsUnBIaUNn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b3504f2d65",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [
+        "Scope 3"
+      ],
+      "title": "Credible Scope 3 Reporting Starts with Showing Your Work",
+      "summary": "Guest post by: Chris Winchurch, General Manager, Novisto Carbon Investors, lenders and customers are paying […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/credible-scope-3-reporting-starts-with-showing-your-work/?utm_source=rss&utm_medium=rss&utm_campaign=credible-scope-3-reporting-starts-with-showing-your-work",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-9cf08395dc",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG Opens Call for New Members to Join its Financial Reporting Technical Expert Group - EFRAG",
+      "summary": "EFRAG Opens Call for New Members to Join its Financial Reporting Technical Expert Group EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcmQ5a2oyVjEtU2ozODhvX3Q0N1FIS1QyeVBsR2R5OFdlcE9DdUhxOHFtXzVXdGFqc1FwQUJ0azBQQTVKUVBMX29OQnM2X2pvaktzelA0ckwxcVBybDFMdDlzOUxzVHJ1MXA2aXN1WExqU3VSS1U3S3k5YVo0VDlMam13eU9zYTZCaElkOThsSkZZU1RXT3JhaEdOU1g0bjczTFlHU0JudzZEalhpYU1NM0c5R0dNbndiWVl0QXhIbjFUUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-101d380512",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Environment Agency: Glaxosmithkline Environmental Permit Surrender SG1 2NY Approved - Wansom AI",
+      "summary": "Environment Agency: Glaxosmithkline Environmental Permit Surrender SG1 2NY Approved Wansom AI",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOalNaU1ViWlNEZkpfMkNrX2xKOTR1RldxR3BJUm9KYmRYeG5BWGtIaGR0WUo2SVF0cVJ6dm1VS2p0QlBoZWpwcmhwa1NkSjhpNXlwT0lwdFE4bmhPZUtRWU1IQWVaaUJ2QU9ldHNuQ3lfU0JUaktNTUtRZWtyNnR6UzJoUlh1MjQ3SzdQUlVSUm5rb3hxTlBlYk9DVGxiUmNmeEo4eF9YcHRhU2FNZHVDWjNBLUd4ME9GZzMwZFhKbTZDNDFC?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-fee419545f",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kaufland zieht Schlussstrich! Diese Eigenmarke verschwindet endgültig - DerWesten",
+      "summary": "Kaufland zieht Schlussstrich! Diese Eigenmarke verschwindet endgültig DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdEtPRFI1LVdKd0l3WmdUVkdBeEMxNGxIN1p4NTFmTWRPLXk2X3BtV1NybHQ5RnI0U0w5SHBpZWpHMmwwYlRwOE4ydUJXTTlQcHhCUXNEeVNGVFE5NDB3ZUJNeGdPc1FxaG5JSGVFTHBhTlZQQWFnU3AzYXItNGhtN2NuY0FFNmd4U2IzQzltQ2ZtSXYzY0JsandWMUVIS0g1RndHbGgzQWJhbjJFWUtsSWpPUDhHd2V5Z2E1VWxZRHJ5MWgwb0E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c65ddd9838",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Erkältungsprodukte von dm, Aldi und Co.: Diese bekannten Marken stecken dahinter - CHIP",
+      "summary": "Erkältungsprodukte von dm, Aldi und Co.: Diese bekannten Marken stecken dahinter CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPU2N2RG5UQWxRMm56WU5BS3JxVHBiWkpoR3dwNlM1bjNXNDA3UHZfbjFDVzJwM01MeldvblBiOWZ5dzQ0ZUUyZXNyT05pejZLaUpfUGlxY3hUV3JIbTVYQnc1WDVpcERLY1k5NXFoQ2NUWEpRWC15ckY1VWJnbmpua3J3SE1udlpNMXNKQUUwOUpEYnljd3U4cVB4OWd5OWlOUmdKZWprZm5RUzRLVEpEUDZ5R0F0SmIyb1BxdzRlM2V6bVMzTG5lZjhmTGFIQlVRempxNlBMa2dpc0gyZW5wd3lSZDVfWmNFaXdGMXl5U041VGlJcW9RUlNCR0owT3Rm?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a2addc2229",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Klimaschutz vorantreiben. - ALDI SÜD",
+      "summary": "Klimaschutz vorantreiben. ALDI SÜD",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9MbmZ0NkVDMlJPUzhDUENiaFY2U1Q5bFNLQm50VzBXQTkxblJseENNTzdLdExwZmhMMU1fb19Xc3MtUXJRcTN6VXRJM1dZSEQ0SU02SGN3d1F1QWdpQldpbnZpS0RVS1haSVRyVzduaEZDQlQwejA2T2lCSnI4Unc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ddd49b008a",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "\"Doppelter Betrug\": Edeka-Kunde geht wegen Bio-Frischkäse an die Decke - Watson.de",
+      "summary": "\"Doppelter Betrug\": Edeka-Kunde geht wegen Bio-Frischkäse an die Decke Watson.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdjJ1dWllZEo4NG1qbXlKZDZULXZ5Rm5kZUlWeEJrS1RsMkZ2MC1MXzNkMkI4YTc3UWZBZGxwM3pqRllnX2tDRVoyOVM0MFdFalhudTIyQTZaT3VIdWJqSDA5QkxWb2s3Ul9TQ1ZETXVoV1lja1c3d0NYV2VDR1NnRHJCWkRhR1dWNEpiMHM4dm5xX09MdDhCU0o2VjhvbXN3OUQzd3l3dE9RU0RnV3BPdWFaSlV2TVph?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-56c55ff425",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Schimmelpilzgift in Trockenobst von Edeka: Hersteller startet Rückruf - CHIP",
+      "summary": "Schimmelpilzgift in Trockenobst von Edeka: Hersteller startet Rückruf CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQa0w3TGtWRXB4blNtYmZTT0tkRERMUl93QzV3MjFZczZCWkhjOFoyQzdIRDZ3WjRJem5maDhFNnF3MTU3X2M0dG54QVpueWZtXzJhaENVd09ZZUxTVHh2XzAyUVBaSXh5Vzdkal85WjhuZmlMa2RtY3RyM05ZdzVibEdoNFcydUV2dllqbGhWZ0NlN19XNG5nYk9iQkhKYVJqVW5pOEp0V084ckdKaDNtM21uci1LQ3QzRTUwa0c3ZFg3S1M1N1dtWUptQzBISHlLd2hMWUt1TDU4Nk5MZV9CZTJ2anZ2SkhFUFo2MUphS0NQWW9X?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-30aed0501c",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Nach Kritik der Verbraucherzentrale: Rossmann ändert Verpackung von beliebtem Snack - desired.de",
+      "summary": "Nach Kritik der Verbraucherzentrale: Rossmann ändert Verpackung von beliebtem Snack desired.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUnJycFhTSXFOd2p1dmlfSE84RnMxVFFxeXl6a3hYeVdaVFpNOWFhbUUwaTdlbUpRZW1ZN24xRFpSZlhfOHFRTURBY0ljWmtvaEtMTXpSTWZ0WUdqdWcyZTNXalFkaDFXMG1DUXpudks2bWtzU2RoMzVSWE51dDFiaEJkRVdUVnJvd2k1WkFtZXlmY1U5cm5mRGF3Z1M2eXEwQWNZV3dKNk14Q2dSY20tcENuZk14eXAxRVJnb0ZTc0laeVFiQ3hMY3IzNk9EbVJ5ajlvTUw5ZFo1bk4zT1E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-fa68331328",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Intermarché : le panier moyen perd trois à quatre euros après le 20 du mois, selon son patron - Economie Matin",
+      "summary": "Intermarché : le panier moyen perd trois à quatre euros après le 20 du mois, selon son patron Economie Matin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQd080U3BTbGxoTVVWMzZlQksxbGxHUTNOUHlOMHZjUldfWlBRSUtNYkpPckF0eFg1Sk04bHJnZUtvbUloVTJOT1d3eXhid3JESnJkUzZGNTlZcGJfeG1hWDQwa0ZCemhxOXAxc3lvcDAxcVBrN0V0M2tWOGx1bzFmU2JIM180QUtQUEtmZWY2NGU5UQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ed9f32b225",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Customer claims Tesco Christmas item in £5.50 meal deal is 'misleading' - Somerset County Gazette",
+      "summary": "Customer claims Tesco Christmas item in £5.50 meal deal is 'misleading' Somerset County Gazette",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQendwQXZlc0pkUG9TY0psZ1ZzTXpjRXlYR1E0TkQtVkx6UlFaY2lGZzlvWW8zdWg5cHl0SVI5WGFJUU9BNkhhay14M1ZWSXNTeHVDbE5tczBXbk84bTFJS3Vic2RPbmNJRnRpbGxlT2xOTE8yVnZQY1Q2QVN6N0k0b3ppa2g4a0dSQ1dWcTNRUjB5S0J3RFV1R3lGNUJRVk15b2lGanRwMzN2M3YwUVdfcjd3Q2pNeWs?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-87260a7720",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers",
+        "customers"
+      ],
+      "tags": [],
+      "title": "WRC accuses Tesco and Intertek of hiding forced labour at Thai supplier - Just Style",
+      "summary": "WRC accuses Tesco and Intertek of hiding forced labour at Thai supplier Just Style",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9UWENycC1kSDZJbkdvVzVvUjlEclllbVBxVnpUUFQtdGJaa1czNGY2ZWpLNzdYRWxsRWRrdWpKOVhuWjdJbFN1VGZNcGlMME9manpyd1lnMmc0SUJXQ0xVeHltaHBsYTB4eFpYVw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-3cc248c203",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "ECB warns extreme water scarcity puts up to 24% of eurozone output at risk - Anadolu Ajansı",
+      "summary": "ECB warns extreme water scarcity puts up to 24% of eurozone output at risk Anadolu Ajansı",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOLThVeW5tYnZISUVKQ2JhTGNTTC14T294SGVUQ3RfR25ZVWgzVkNlSktjbGg5VzEtV2hvVm5fRjBaVzVVaU0xUjFlRXpzS1B2dGVST3FiclA0RlpXanV0TG9qVmNmMlZGdjV5eHdtb2hIejNleE9CUWI5S0ZpN3cwMXRtaDNydVJFU3Bicmlab3BaS25rZWxKOEZYSXBlLVJ2aGNtaUhJNjUwcXVpNHhLSDdBcXY?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0724f79a91",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "ECB warns extreme water scarcity could put 24% of euro area output at risk - www.irishsun.com",
+      "summary": "ECB warns extreme water scarcity could put 24% of euro area output at risk www.irishsun.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVzJBY1oxMTdMaTFpSDY3NUNwWjdfalhDbEdHblE3NG9pbTVBQzYyc0ZObldGVW92YXVaYVBrdTdHMXJaOE94SDhFVU85eWZGUURoRmo0MDdCeXFQaE03WlI4aHl5Rl85MjJpU2xHX19JUzRaaDZlcWl3d0xCbldwaTk1cnBKTFUyekRhMktJZUI0aWlnZFNTbHBaQ3NQTC1Xd2gwTzFjVHNWUi00eUhqWERaZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-01f2309c2e",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Commissioner Roswall discusses action plan to digitalise European water sector - https://environment.ec.europa.eu/index_en",
+      "summary": "Commissioner Roswall discusses action plan to digitalise European water sector https://environment.ec.europa.eu/index_en",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQYl9qakpxbE9XLTJ1eFlpVXNCRmJ1ZGhrOVY2bE13cldLMmhzdkxDNVVZaVVZRDNkTHctWGYzTUFDTldPbENvZFgzYTZ4UHduSVNPY203V212dEdKRWllODROSWZvbTQ0VUtYRHNfRk5hRXNSZW9RckRJX09ycXJvb25WXzc0VWtLejRGcEhJN1VRcko4NW4wbVRGcmw5N0FOaHQzWWZnazcxdWNJOXNGbXFaTDJiZUY0RGFvVVpHR21ya2FuWlE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-2502442f29",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Dürre trifft weltgrößten Nickellieferanten für Elektroauto-Akkus – Werk läuft nur noch mit 30 Prozent - Frankfurter Rundschau",
+      "summary": "Dürre trifft weltgrößten Nickellieferanten für Elektroauto-Akkus – Werk läuft nur noch mit 30 Prozent Frankfurter Rundschau",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVmQzdjQzWnhqcXJuSkh1RjY0TFozaC1ucmdQQTNoWEpSVEotZDNMN3BPR1E0U0tMbC0tdlR6T3NXWmoxZ2N5S0tRR2szdVM1bDNGMlZRTktabDA2N2FZSUw5eElSOGRuazNkVmFtU0NRUF9wQW9jN1Bwcm5jMU14ajlWTVR3TGFmMWFBLTg2TG5MWWxFS3hnZEpZdVJXSV9rUUQzcmdJMWpwdVJvMG1GN2ZOZzhWMS1zek9ULUljNzYxSG0yQzRodnAwZzlaV0t6dVVJZnpkQm0zeUN4eEhn?oc=5",
       "origin": "feed",
       "added": "2026-11-09"
     }
