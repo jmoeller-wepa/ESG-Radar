@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109m"></script>
-<script src="assets/look.js?v=20261109m"></script>
+<script src="assets/theme.js?v=20261109n"></script>
+<script src="assets/look.js?v=20261109n"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
-<link rel="stylesheet" href="assets/side.css?v=20261109m">
+<link rel="stylesheet" href="assets/side.css?v=20261109n">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -73,10 +73,9 @@
   .tbl-wrap.sc-r { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent); }
   .sc-hint { font-size: 12px; color: var(--ink-3); text-align: right; padding: 6px 12px 0; }
   #tbl thead th:first-child { z-index: 4; }
-  #tbl td.r-best { background: var(--d-d3eee8-bg, #d3eee8); } #tbl td.r-good { background: var(--d-eaf6f3-bg, #eaf6f3); } #tbl td.r-weak { background: var(--d-fbe9ec-bg, #fbe9ec); }
-  #tbl td .v::before { display: none; }
-  #tbl td .yr { padding-left: 0; }
-  #tbl td.r-best .v { font-weight: 700; color: var(--d-0b4f45-text, #0b4f45); }
+  /* ratings as a small dot + text colour (no filled cells); around the median = no dot */
+  #tbl .v.mid::before { background: transparent; }
+  #tbl .v.best { color: var(--d-0b4f45-text, #0b4f45); }
   tr.us td.co b { color: var(--wepa); }
   .peers-legend .sw, .legend .sw { display: inline-flex; align-items: center; gap: 6px; }
   .peers-legend .sw i, .legend .sw i { width: 14px; height: 14px; border-radius: 4px; border: 1px solid rgba(0, 0, 0, .06); }
@@ -244,10 +243,41 @@
   footer { border-top: 1px solid var(--line); padding: 16px 0 28px; font-size: 12.5px; color: var(--ink-3); }
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
+  /* ---- update-28: filter bar, company cell links, shorter EU ETS tab ---- */
+  .fbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 8px 10px; background: var(--d-fff-bg, #fff); border: 1px solid var(--d-eceff3-border, #eceff3); border-radius: 14px; box-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 4px 14px rgba(16, 24, 40, .05); }
+  .fbar .fb-sp { flex: 1; }
+  .fbar .seg button small { font-size: 11.5px; color: var(--ink-3); margin-left: 4px; font-weight: 400; }
+  :root[data-theme="dark"] .fbar { box-shadow: none; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fbar { box-shadow: none; } }
+  td.co .lk { display: flex; align-items: center; gap: 8px; margin-top: 3px; font-size: 12px; }
+  td.co .lk .nb { font-size: 11px; font-weight: 700; background: var(--d-e8f7f4-bg, #e8f7f4); color: var(--d-1d7f6c-text, #1d7f6c); border-radius: 10px; padding: 0 7px; }
+  td.co .lk button { border: 0; background: none; padding: 0; font: inherit; font-size: 12px; font-weight: 600; color: var(--blue-700); cursor: pointer; }
+  td.co .lk button:hover { text-decoration: underline; }
+  .compact #tbl td.co .lk { display: none; }
+  .caution.short { align-items: center; }
+  .caution.short b { display: inline; margin: 0 4px 0 0; font-size: 13.5px; }
+  .caution.short details { margin-top: 4px; }
+  .caution.short summary { cursor: pointer; font-weight: 600; font-size: 13px; width: max-content; }
+  .es-chips { display: inline-flex; flex-wrap: wrap; gap: 6px; margin-left: auto; }
+  .es-chips span { font-size: 12px; border-radius: 999px; padding: 1px 10px; background: var(--d-f3f5f8-bg, #f3f5f8); color: var(--ink-2); }
+  .es-chips .ok { background: var(--d-e8f7f4-bg, #e8f7f4); color: var(--d-1d7f6c-text, #1d7f6c); font-weight: 600; }
+  .es-chips .miss { background: var(--cau-bg, #fdf1e3); color: var(--cau-ink, #8a4b0f); font-weight: 600; }
+  .es-sec { border-top: 1px solid var(--line-2); padding-top: 10px; }
+  .es-sec > summary { cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--blue-900); }
+  .es-sec table { margin-top: 6px; }
+  .es-sec .cand2 { font-size: 12.5px; color: var(--ink-3); }
+  .es-sec .cand2 abbr { text-decoration: underline dotted; cursor: help; }
+  .es-chk { font-size: 11px; font-weight: 600; border-radius: 999px; padding: 0 7px; margin-left: 6px; background: var(--cau-bg, #fdf1e3); color: var(--cau-ink, #8a4b0f); cursor: help; }
+  /* filter dropdowns use a span.v too: no rating dot there */
+  .fdd .v { display: inline; padding: 0; white-space: nowrap; color: inherit; font-weight: inherit; }
+  .fdd .v::before { display: none !important; }
+  /* rating dot in the table also when the value wraps */
+  #tbl .v::before { display: inline-block; vertical-align: 1px; margin-right: 7px; }
+  #tbl .v.best::before { box-shadow: none; }
 </style>
-<script src="assets/status.js?v=20261109m" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109m">
-<script src="assets/colresize.js?v=20261109m" defer></script>
+<script src="assets/status.js?v=20261109n" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109n">
+<script src="assets/colresize.js?v=20261109n" defer></script>
 </head>
 <body>
 <header>
@@ -260,30 +290,30 @@
   </div>
 </header>
 
-<main class="wrap layout">
-  <aside class="side" id="side" aria-label="Peer group and area"></aside>
+<main class="wrap layout no-side">
   <div class="content">
-  <div class="intro">
-    <h2 id="title">Peers</h2>
-  </div>
   <div class="ptabs" role="tablist" id="tabs" aria-label="Peers sections">
     <button type="button" role="tab" data-tab="bench" aria-controls="tab-bench">Benchmark</button>
     <button type="button" role="tab" data-tab="ets" aria-controls="tab-ets">Emissions · EU ETS</button>
   </div>
 
+  <!-- one filter bar (as on News and Regulation): peer group, companies, KPI set, compact view -->
+  <div class="fbar" role="group" aria-label="Filters">
+    <div class="seg" role="group" aria-label="Peer group" id="grpseg"></div>
+    <span id="codd" class="fdd-row"></span>
+    <span id="kpidd" class="fdd-row"></span>
+    <span class="fb-sp"></span>
+    <label class="tgl" id="cmp-l"><input type="checkbox" id="compact"> Compact view</label>
+  </div>
+
   <div class="tabp" id="tab-bench" role="tabpanel">
-  <div class="lead-row"><label class="tgl" style="margin-left:auto"><input type="checkbox" id="compact"> Compact view</label></div>
   <section class="panel" aria-label="Comparison table">
     <div class="tbl-wrap"><table id="tbl"></table></div>
     <div class="legend">
-      <span class="sw"><i style="background:var(--d-d3eee8-bg, #d3eee8)"></i>Best</span><span class="sw"><i style="background:var(--d-eaf6f3-bg, #eaf6f3)"></i>Better than median</span><span class="sw"><i style="background:var(--d-fff-bg, #fff)"></i>Around median</span><span class="sw"><i style="background:var(--d-fbe9ec-bg, #fbe9ec)"></i>Below median</span><span class="na">– not found</span><span><b class="tr up" style="margin:0">↑</b> <b class="tr dn" style="margin:0">↓</b> change vs. previous year (hover for old value)</span>
+      <span class="v best">Best in group</span><span class="v good">Better than median</span><span class="v weak">Below median</span><span>No dot = around the median</span><span class="na">– not found</span><span><b class="tr up" style="margin:0">↑</b> <b class="tr dn" style="margin:0">↓</b> change vs. previous year (hover for old value)</span>
     </div>
   </section>
 
-  <section aria-labelledby="pr-title" style="display:flex;flex-direction:column;gap:10px">
-    <h2 class="cap" id="pr-title">Peer profiles</h2>
-    <div class="profiles" id="profiles"></div>
-  </section>
   </div>
 
   <div class="tabp" id="tab-ets" role="tabpanel" hidden>
@@ -307,7 +337,8 @@
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261109m"></script>
+<script src="assets/side.js?v=20261109n"></script>
+<script src="assets/filters.js?v=20261109n"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
@@ -317,7 +348,7 @@
   const state = { tab: "bench", group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1, hidden: new Set() };
   if (!AREA_SET[state.area]) state.area = "all";
   const setKey = () => AREA_SET[state.area] || "overview";
-  let P = null, E = null, PN = {}, news = [], side = null, SITES = null;
+  let P = null, E = null, PN = {}, news = [], SITES = null; const DD = {};
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const fmtDate = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); };
@@ -356,21 +387,19 @@
     $("meta").textContent = "";
     const box = el("div", "error");
     box.innerHTML = "<b>The peer data could not be loaded.</b><br>Open this page through GitHub Pages, or run <code>python -m http.server</code> in the folder and go to <code>http://localhost:8000/peers.html</code>.";
-    $("profiles").replaceChildren(box);
+    $("tbl").replaceChildren(box);
   });
 
   function build() {
-    const lg = document.querySelector(".legend");
-    lg.className = "side-legend peers-legend";
-    side = RadarSide.build($("side"), {
-      toggleLabel: "Peers & area",
-      extra: [{ id: "companies", title: "Companies", node: companyNode }, { id: "legend", title: "Legend", node: lg, show: () => state.tab === "bench" }],
-      onChange: (gid, key) => {
-        if (gid === "group") state.group = key;
-        else { state.area = key; state.sortKey = null; }
-        render();
-      }
-    });
+    // filter bar: Companies (WEPA always shown) and "KPIs for" (the KPI set; used to be the Area)
+    DD.co = RadarDD.multi({ label: "Companies", empty: "All companies", items: [], onChange: (keys) => {
+      const others = P.companies.filter((c) => inGroup(c) && !c.isUs);
+      state.hidden = new Set(keys.length ? others.filter((c) => !keys.includes(c.id)).map((c) => c.id) : []);
+      render(); } });
+    const AREAS = RadarSide.AREAS;
+    DD.kpi = RadarDD.single({ label: "KPIs for", value: state.area, items: Object.keys(AREA_SET).map((k) => ({ key: k, label: (P.kpiSets[AREA_SET[k]] || {}).label || (AREAS[k] ? AREAS[k].label : k) })),
+      onChange: (k) => { state.area = k; state.sortKey = null; render(); } });
+    $("codd").appendChild(DD.co.el); $("kpidd").appendChild(DD.kpi.el);
     document.querySelectorAll("#tabs button").forEach((b) => b.addEventListener("click", () => { state.tab = b.dataset.tab; render(); }));
     $("dlg-x").addEventListener("click", () => $("dlg").close());
     $("dlg").addEventListener("click", (ev) => { if (ev.target === $("dlg")) $("dlg").close(); });
@@ -396,24 +425,6 @@
   // WEPA (isUs) is always part of every peer group as the reference; unticked companies are hidden
   const inGroup = (c) => c.isUs || state.group === "all" || c.groups.includes(state.group);
   const companies = () => P.companies.filter((c) => inGroup(c) && !state.hidden.has(c.id));
-  function companyNode() {
-    const box = el("div", "co-list");
-    const list = P.companies.filter(inGroup);
-    const others = list.filter((c) => !c.isUs);
-    box.appendChild(RadarSide.bulkBar({ selected: list.filter((c) => !state.hidden.has(c.id)).length, total: list.length, noun: "shown", min: list.length - others.length,
-      onAll: () => { state.hidden.clear(); render(); }, onNone: () => { others.forEach((c) => state.hidden.add(c.id)); render(); },
-      allTitle: "Show every company of this group", noneTitle: "Hide all companies except WEPA" }));
-    list.forEach((c) => {
-      const on = !state.hidden.has(c.id);
-      const b = el("button", "co-item"); b.type = "button"; b.setAttribute("role", "checkbox"); b.setAttribute("aria-checked", String(on));
-      const cb = el("span", "cbx" + (on ? " on" : ""), on ? "✓" : ""); b.append(cb, el("span", null, c.name));
-      if (c.isUs) { b.disabled = true; b.title = "Always shown as the reference"; b.appendChild(el("small", null, "always")); }
-      else b.addEventListener("click", () => { on ? state.hidden.add(c.id) : state.hidden.delete(c.id); render(); });
-      box.appendChild(b);
-    });
-    return box;
-  }
-
   // Comparable score for a value (higher = better), or null
   function score(key, cell) {
     const def = P.kpis[key];
@@ -632,19 +643,24 @@
 
   function render() {
     const gCount = (g) => P.companies.filter((c) => c.isUs || g === "all" || c.groups.includes(g)).length;
-    const groups = [
-      { id: "group", title: "Peer group", selected: state.group,
-        items: Object.entries(P.groups).map(([k, label]) => ({ key: k, label: k === "all" ? "All peers" : label, count: gCount(k) })) }
-    ];
-    // The area only changes the benchmark KPIs, so it is shown on that tab only
-    if (state.tab === "bench") groups.push({ id: "area", title: "Area", selected: state.area, items: RadarSide.areaItems(Object.keys(AREA_SET).filter((k) => k !== "all")) });
-    side.refresh(groups);
+    const seg = $("grpseg"); seg.replaceChildren();
+    Object.entries(P.groups).forEach(([k, label]) => {
+      const b = el("button", null, k === "all" ? "All peers" : label); b.type = "button"; b.appendChild(el("small", null, String(gCount(k))));
+      b.setAttribute("aria-pressed", String(k === state.group));
+      b.addEventListener("click", () => { state.group = k; render(); });
+      seg.appendChild(b);
+    });
+    const inG = P.companies.filter((c) => inGroup(c) && !c.isUs);
+    const shown = inG.filter((c) => !state.hidden.has(c.id)).map((c) => c.id);
+    DD.co.update(inG.map((c) => ({ key: c.id, label: c.name })), shown.length === inG.length ? [] : shown);
+    DD.kpi.update(state.area);
+    // the KPI set and compact view only change the benchmark
+    $("kpidd").hidden = $("cmp-l").hidden = state.tab !== "bench";
     writeHash();
     document.querySelectorAll("#tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
     $("tab-bench").hidden = state.tab !== "bench";
     $("tab-ets").hidden = state.tab !== "ets";
     const set = P.kpiSets[setKey()];
-    $("pr-title").textContent = "Peer profiles";
     document.querySelector('#tabs [data-tab="bench"]').replaceChildren(document.createTextNode("Benchmark"), el("small", null, set.label));
     const keys = set.kpis;
     const list = sortList(companies());
@@ -672,11 +688,16 @@
     const tbody = el("tbody");
     list.forEach((c) => {
       const tr = el("tr", c.isUs ? "us" : "");
-      const td0 = el("td", "co"); td0.append(el("b", null, c.name), el("small", null, c.country + (c.isUs ? " · public data" : "")));
+      const td0 = el("td", "co"); td0.append(el("b", null, c.name), el("small", null, c.country + (c.isUs ? " · your company" : "")));
+      // news count + full profile (the profile cards below the table are gone)
+      const lk = el("span", "lk"), hits = newsOf(c);
+      if (hits.length) { const nb = el("span", "nb", hits.length + " news"); nb.title = "Latest " + (hits[0].date ? fmtShort(hits[0].date) : ""); lk.appendChild(nb); }
+      const pb = el("button", null, "Profile ›"); pb.type = "button"; pb.addEventListener("click", () => openProfile(c)); lk.appendChild(pb);
+      td0.appendChild(lk);
       tr.appendChild(td0);
       keys.forEach((k) => {
         const r = rate[k][c.id], cell = c.kpis[k];
-        const td = el("td", P.kpis[k].kind !== "text" && cell && cell.v != null && r && r !== "mid" ? "r-" + r : "");
+        const td = el("td");
         td.appendChild(valueNode(k, cell, r, true)); tr.appendChild(td);
       });
       tbody.appendChild(tr);
@@ -684,46 +705,6 @@
     $("tbl").replaceChildren(thead, tbody);
     requestAnimationFrame(scrollHints);
 
-    // Profiles
-    const oRate = {}; CARD_KPIS.forEach((k) => { oRate[k] = ratings(k, list); });
-    const ordered = [...list.filter((c) => c.isUs), ...list.filter((c) => !c.isUs)];
-    const cards = ordered.map((c) => {
-      const card = el("article", "pcard" + (c.isUs ? " us" : ""));
-      card.tabIndex = 0;
-      card.setAttribute("aria-label", c.name + " – open the full profile");
-      card.addEventListener("click", (ev) => { if (!ev.target.closest("a")) openProfile(c); });
-      card.addEventListener("keydown", (ev) => { if (ev.key === "Enter") openProfile(c); });
-      const ph = el("div", "ph");
-      if (c.isUs) ph.append(el("small", null, "Your company · " + c.country), el("b", null, c.name));
-      else ph.append(el("b", null, c.name), el("span", null, c.country));
-      card.appendChild(ph);
-
-      // Three status chips – the same for every company, so cards line up
-      const chips = el("div", "chips");
-      CARD_KPIS.forEach((k) => {
-        const cell = c.kpis[k];
-        if (!cell || cell.v == null) return;
-        // short value only (e.g. "Validated", "2040", "Gold"); details and sources are in the full profile
-        const r = (oRate[k] && oRate[k][c.id]) || "mid";
-        const chip = el("span", "v " + r, k === "sbti" ? String(cell.v).replace(/ validated$/i, "") : String(cell.v));
-        chip.prepend(el("i", null, P.kpis[k].label));
-        chip.title = display(k, cell) + (cell.y ? " · " + cell.y : "");
-        chips.appendChild(chip);
-      });
-      if (chips.children.length) card.appendChild(chips);
-      else card.appendChild(el("p", "muted", "No comparable KPIs found in public sources."));
-
-      const hits = newsOf(c);
-      const nw = el("div", "nw");
-      if (hits.length) nw.append(el("span", "badge", hits.length + (hits.length === 1 ? " news" : " news")), el("span", null, "latest " + (hits[0].date ? fmtShort(hits[0].date) : "")));
-      else nw.appendChild(el("span", null, "No recent news"));
-      const more = el("button", "more", "Full profile →"); more.type = "button";
-      nw.appendChild(more);
-      card.appendChild(nw);
-      return card;
-    });
-    if (ordered[0] && ordered[0].isUs && ordered.length > 1) cards.splice(1, 0, el("div", "pcap", "Peers"));
-    $("profiles").replaceChildren(...cards);
     renderEts(list);
   }
 
@@ -785,6 +766,15 @@
       (others.length ? " No EU ETS mapping for: " + others.map((c) => c.name).join(", ") + "." : "") + " Source: " + E.source.attribution + ", file " + E.source.year + ".";
   }
   // ---------- WEPA site coverage (config/peer_installations.json → companies.wepa.sites) ----------
+  // one line, the full explanation behind "Details"
+  function cautionShort(title, summary, lines) {
+    const box = el("div", "caution short"); box.setAttribute("role", "note");
+    box.innerHTML = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5L18 17H2Z"/><path d="M10 8v4.2" stroke-linecap="round"/><circle cx="10" cy="14.6" r=".9" fill="currentColor" stroke="none"/></svg>';
+    const tx = el("div"); const line = el("div"); line.append(el("b", null, title), document.createTextNode(summary)); tx.appendChild(line);
+    const d = el("details"); d.appendChild(el("summary", null, "Details"));
+    const ul = el("ul"); lines.forEach((l) => ul.appendChild(el("li", null, l))); d.appendChild(ul); tx.appendChild(d);
+    box.appendChild(tx); return box;
+  }
   function cautionBox(title, lines) {
     const box = el("div", "caution"); box.setAttribute("role", "note");
     box.innerHTML = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5L18 17H2Z"/><path d="M10 8v4.2" stroke-linecap="round"/><circle cx="10" cy="14.6" r=".9" fill="currentColor" stroke="none"/></svg>';
@@ -810,40 +800,63 @@
     const box = $("ets-sites");
     if (!SITES) { box.hidden = true; $("ets-caution").replaceChildren(cautionBox("Incomplete data – orders of magnitude only", ["Sites are matched by name, and only sites in the EU ETS are included (not the UK or Switzerland). Totals are not a company's full Scope 1."])); return; }
     const cv = coverage();
-    $("ets-caution").replaceChildren(cautionBox("Incomplete data – not WEPA's full Scope 1 and not a fair peer ranking", [
+    $("ets-caution").replaceChildren(cautionShort("Incomplete data:", `${cv.found.length} of ${cv.eu.length} WEPA EU sites found, peers matched by name. Not WEPA's full Scope 1 and not a fair ranking – use for trends only.`, [
       `WEPA: only ${cv.found.length} of ${cv.eu.length} EU production sites are found in the EU registry data. Missing: ${cv.missing.map((r) => r.site.name).join(", ") || "none"} (see the site list below).`,
       `${cv.uk.map((r) => r.site.name).join(" and ") || "UK sites"} report to the UK ETS since 2021 and are not in the EU registry. Offices are not covered by any ETS.`,
       "Peers are matched the same way, by name: sites under other company names, outside the EU or below the ETS threshold are missing for them too.",
       "Use the numbers for trends and orders of magnitude only – WEPA's reported Scope 1 comes from the internal GHG inventory, not from this page.",
     ]));
     box.hidden = false;
-    $("es-sub").textContent = `${cv.found.length} of ${cv.eu.length} EU production sites in the data · ${cv.uk.length} UK sites outside the EU ETS · production sites from wepa.eu`;
-    const hr = el("tr"); ["Site", "Country", "In the EU ETS data?", "Registry entry", `${last} · t CO₂e`].forEach((h, k) => hr.appendChild(el("th", k === 4 ? "num" : null, h)));
+    $("es-sub").replaceChildren();
+    const chips = el("span", "es-chips"); chips.append(el("span", "ok", cv.found.length + " found"));
+    if (cv.missing.length) chips.appendChild(el("span", "miss", cv.missing.length + " missing"));
+    if (cv.uk.length) chips.appendChild(el("span", null, cv.uk.length + " UK ETS"));
+    $("es-sub").appendChild(chips);
+    // found sites (and registry entries not linked to a site) as a normal table
+    const hr = el("tr"); ["Site", "Country", "Registry entry", `${last} · t CO₂e`].forEach((h, k) => hr.appendChild(el("th", k === 3 ? "num" : null, h)));
     const thead = el("thead"); thead.appendChild(hr);
     const tb = el("tbody");
-    const order = { eu: 0, uk: 1 };
-    [...cv.rows].sort((a, b) => (order[a.site.ets] ?? 2) - (order[b.site.ets] ?? 2) || (a.inst.length ? 0 : 1) - (b.inst.length ? 0 : 1)).forEach((r) => {
+    cv.found.forEach((r) => {
       const tr = el("tr");
-      const n = el("td"); n.append(el("b", null, r.site.name)); if (r.site.note) n.appendChild(el("small", null, r.site.note)); tr.appendChild(n);
+      const n = el("td"); n.append(el("b", null, r.site.name));
+      if (r.site.note) { const ck = el("span", "es-chk", "check"); ck.title = r.site.note; n.appendChild(ck); }
+      tr.appendChild(n);
       tr.appendChild(el("td", null, r.site.country === "GB" ? "UK" : r.site.country));
-      const st = el("td");
-      if (r.site.ets === "uk") st.appendChild(el("span", "es-pill out", "UK ETS – not covered"));
-      else if (r.inst.length) st.appendChild(el("span", "es-pill ok", "Yes"));
-      else {
-        st.appendChild(el("span", "es-pill miss", "Missing"));
-        r.cand.slice(0, 3).forEach((c) => st.appendChild(el("span", "cand", `Possible match: ${c.name} (${c.key}) – ${c.why}`)));
-      }
-      tr.appendChild(st);
-      tr.appendChild(el("td", null, r.inst.length ? r.inst.map((i) => i.key + " · " + i.name).join("; ") : "–"));
+      tr.appendChild(el("td", null, r.inst.map((i) => i.key + " · " + i.name).join("; ")));
       const v = r.inst.reduce((a, i) => (i.emissions[last] != null ? (a || 0) + i.emissions[last] : a), null);
-      tr.appendChild(el("td", "num", v != null ? tco2(v) : r.inst.length ? "not reported yet" : "–"));
+      tr.appendChild(el("td", "num", v != null ? tco2(v) : "not reported yet"));
       tb.appendChild(tr);
     });
     cv.other.forEach((i) => {
-      const tr = el("tr"); tr.append(el("td", null, "Not linked to a site"), el("td", null, i.country), el("td", null, ""), el("td", null, i.key + " · " + i.name), el("td", "num", i.emissions[last] != null ? tco2(i.emissions[last]) : "–"));
+      const tr = el("tr"); tr.append(el("td", null, "Not linked to a site"), el("td", null, i.country), el("td", null, i.key + " · " + i.name), el("td", "num", i.emissions[last] != null ? tco2(i.emissions[last]) : "–"));
       tb.appendChild(tr);
     });
     $("es-tbl").replaceChildren(thead, tb);
+    // missing EU sites and UK sites fold away, one short line each
+    box.querySelectorAll(".es-sec").forEach((n) => n.remove());
+    const foot = $("es-foot");
+    if (cv.missing.length) {
+      const withC = cv.missing.filter((r) => r.cand.length).length;
+      const d = el("details", "es-sec"); d.appendChild(el("summary", null, `${cv.missing.length} sites missing` + (withC ? ` · ${withC} with possible matches` : "")));
+      const t = el("table", "sites es-t"); const b2 = el("tbody");
+      cv.missing.forEach((r) => {
+        const tr = el("tr"); const n = el("td"); n.appendChild(el("b", null, r.site.name)); if (r.site.note) n.title = r.site.note; tr.appendChild(n);
+        tr.appendChild(el("td", null, r.site.country));
+        const c = el("td", "cand2");
+        if (r.cand.length) {
+          c.appendChild(document.createTextNode(r.cand.length + (r.cand.length === 1 ? " possible match: " : " possible matches: ")));
+          r.cand.slice(0, 3).forEach((x, k) => { if (k) c.appendChild(document.createTextNode(", ")); const ab = el("abbr", null, x.key); ab.title = x.name + " – " + x.why; c.appendChild(ab); });
+          if (r.cand.length > 3) c.appendChild(document.createTextNode(" and " + (r.cand.length - 3) + " more"));
+          c.appendChild(document.createTextNode(" – check if it is WEPA"));
+        } else c.textContent = "No match found";
+        tr.appendChild(c); b2.appendChild(tr);
+      });
+      t.appendChild(b2); d.appendChild(t); foot.before(d);
+    }
+    if (cv.uk.length) {
+      const d = el("details", "es-sec"); d.appendChild(el("summary", null, `${cv.uk.length} UK sites (${cv.uk.map((r) => r.site.name).join(", ")}) · not covered by the EU ETS`));
+      d.appendChild(el("p", "foot", "These sites report to the UK ETS since 2021 and are not in the EU registry.")); foot.before(d);
+    }
     $("es-foot").textContent = "Missing sites may be in the registry under an older company name, or may have no installation above the ETS threshold (20 MW combustion). Found the right entry? Add its code (e.g. DE-1234) to \"include\" and to the site's \"keys\" for WEPA in config/peer_installations.json – the next run picks it up. Possible matches are suggested after the next data run.";
   }
   function sparkSvg(vals) {
@@ -864,7 +877,7 @@
   }
 })();
 </script>
-<script src="assets/search.js?v=20261109m" defer></script>
-<script src="assets/guide.js?v=20261109m" defer></script>
+<script src="assets/search.js?v=20261109n" defer></script>
+<script src="assets/guide.js?v=20261109n" defer></script>
 </body>
 </html>

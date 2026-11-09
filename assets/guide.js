@@ -44,9 +44,10 @@
       title: "Peers",
       intro: "Public ESG figures of WEPA and its competitors, side by side.",
       items: [
-        ["Benchmark table", "One row per company. Cell colours: dark green = best in the group, light green = better than the median, pink = below the median. Hover a value for its definition, year and report page; click it to open the source. Click a column header to sort. “Compact view” shortens long values; drag a column edge to change its width."],
-        ["Profile cards", "Below the table: click a card for the full profile – targets, ratings, KPIs, the latest news and the company's EU ETS sites."],
-        ["Emissions · EU ETS", "Verified Scope 1 CO₂ emissions of each company’s EU sites from the EU emissions trading register. Click a company to see its sites."],
+        ["Filters", "The bar at the top picks the peer group (Tissue Europe, Global tissue, All peers), which companies to show (WEPA is always shown) and which KPIs the benchmark shows (“KPIs for”: Overview, Climate & Energy, Forests …)."],
+        ["Benchmark table", "One row per company. The dot before a value: dark green = best in the group, light green = better than the median, pink = below the median, no dot = around the median. Hover a value for its definition, year and report page; click it to open the source. Click a column header to sort. “Compact view” shortens long values; drag a column edge to change its width."],
+        ["Profiles", "“Profile ›” under a company name opens the full profile – targets, ratings, KPIs, the latest news and the company's EU ETS sites. The green badge shows how many news items were found."],
+        ["Emissions · EU ETS", "Verified Scope 1 CO₂ emissions of each company’s EU sites from the EU emissions trading register. Click a company to see its sites. Below, the WEPA site list shows which sites are in the data; missing sites and possible registry matches are folded away under “sites missing”."],
         ["Empty fields", "An empty field means the company does not publish that figure (or it was not found). It is not a zero."],
       ],
       caveat: "Companies define KPIs differently (scope, base year, group vs. tissue business). Compare with care and read the notes.",

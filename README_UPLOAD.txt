@@ -1,13 +1,28 @@
-ESG Radar – update-27-regulation-layout (builds on update-26, contains everything from update-19 to 26)
+ESG Radar – update-28-peers-layout (builds on update-27, contains everything from update-19 to 27)
 
 Upload to the repository ROOT folder:
   index.html, news.html, regulation.html, peers.html, market.html
 
 Upload to the folder assets/:
   theme.css, look.js, guide.js, views.js, side.js, filters.js
-  (guide.js changed in update-26 and 27; views.js, side.js and filters.js are unchanged from update-19; included so this zip works on its own)
+  (guide.js changed in update-26, 27 and 28; views.js, side.js and filters.js are unchanged from update-19; included so this zip works on its own)
 
 Nothing in data/ or config/ changes.
+
+What changed in update-28 (Peers page + one Regulation fix)
+- Peers: no side panel any more. One filter bar under the tabs: peer group switch (Tissue Europe /
+  Global tissue / All peers), Companies dropdown (WEPA always shown), "KPIs for" dropdown (was "Area";
+  Benchmark tab only) and Compact view.
+- Benchmark table: no more filled green/pink cells. A small dot before the value shows the rating
+  (best / better than median / below median, no dot = around the median); legend explains all of them.
+- Profile cards below the table are gone. Each company cell now shows the news count and "Profile ›".
+- Emissions · EU ETS: the warning is one line with "Details" to open the full explanation.
+  WEPA site list shows the found sites as a normal table with chips "8 found · 6 missing · 2 UK ETS";
+  missing sites (with possible registry matches as short codes, hover for the name) and the UK sites
+  are folded away below. Lille shows a small "check" label (hover for the note).
+- Regulation: "All on Have your say" link removed (each row has its own "Give feedback").
+- "?" guide for Peers updated.
+- Cache version 20261109n on all pages.
 
 What changed in update-27 (Regulation page)
 - No side panel any more. One filter bar on top (as on News): "Find a rule …" search, Area dropdown,
