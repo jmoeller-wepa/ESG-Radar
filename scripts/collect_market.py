@@ -322,7 +322,7 @@ def comext(ind):
 GENESIS = "https://genesis.destatis.de/genesisWS/rest/2020/"
 DESTATIS_DEBUG = ROOT / "data" / "debug" / "destatis.json"
 DESTATIS_BUDGET = 900      # seconds for all GENESIS calls of one run; later Destatis indicators keep their old values
-_destatis = {"tables": {}, "debug": {}, "meta": {}, "values": {}, "resolved": {}, "catalogue": {}, "t0": None}
+_destatis = {"tables": {}, "debug": {}, "meta": {}, "values": {}, "resolved": {}, "catalogue": {}, "varsearch": {}, "t0": None}
 _PERIOD = re.compile(r"(MONAT|QUART|HALBJ|HJAHR)\D*(\d{1,2})$")
 
 
@@ -456,13 +456,30 @@ def _classify(ind, table, dbg):
     else:
         vp = re.compile(f["var"], re.I)
         cands = [v["code"] for v in _variables(table) if vp.search(v["content"]) or vp.search(v["code"])]
+        if f.get("varSearch"):   # metadata can list only the first of several classifications (e.g. COICOP 2-Steller of 2-/…/10-Steller)
+            try:
+                if f["varSearch"] not in _destatis["varsearch"]:
+                    info = _genesis_json("catalogue/variables", {"selection": f["varSearch"], "area": "all", "pagelength": "200"})
+                    _destatis["varsearch"][f["varSearch"]] = [{"code": v.get("Code"), "content": _flat(v.get("Content"))} for v in (info.get("List") or [])]
+                found = _destatis["varsearch"][f["varSearch"]]
+                dbg["varSearch"] = [v["code"] + " " + v["content"] for v in found][:40]
+                more = [v["code"] for v in found if v["code"] not in cands and (vp.search(v["content"]) or vp.search(v["code"]))]
+                # most detailed first (10-Steller / Sonderpositionen before 5-, 4-, 3-Steller)
+                more.sort(key=lambda c: next((-int(m) for m in re.findall(r"(\d+)-Steller", next(v["content"] for v in found if v["code"] == c))), 0))
+                cands = more + cands
+            except Exception as exc:  # noqa: BLE001
+                dbg["varSearchError"] = str(exc)[:160]
         if not cands:
             raise RuntimeError(f"no variable matches '{f['var']}' in {table} – see data/debug/destatis.json (variables)")
     keys, var = f.get("keys"), cands[0]
     if not keys:
         hits, ex = [], re.compile(ind.get("exclude", r"\bohne\b"), re.I)
         for var in cands:
-            vals = _values(var)
+            try:
+                vals = _values(var)
+            except Exception as exc:  # noqa: BLE001
+                dbg.setdefault("valueErrors", {})[var] = str(exc)[:120]
+                continue
             for p in f.get("values", []):
                 rx = re.compile(p, re.I)
                 hits = [v for v in vals if (rx.search(v["content"]) or rx.search(v["code"])) and not ex.search(v["content"])]

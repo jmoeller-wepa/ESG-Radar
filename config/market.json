@@ -1501,6 +1501,7 @@
       ],
       "filter": {
         "var": "CC13|COICOP|Verwendungszweck|VZW",
+        "varSearch": "CC13*",
         "values": [
           "^Toilettenpapier",
           "Toilettenpapier",
