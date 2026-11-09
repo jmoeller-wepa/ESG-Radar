@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109n"></script>
-<script src="assets/look.js?v=20261109n"></script>
-<script src="assets/views.js?v=20261109n"></script>
+<script src="assets/theme.js?v=20261109o"></script>
+<script src="assets/look.js?v=20261109o"></script>
+<script src="assets/views.js?v=20261109o"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
-<script src="assets/status.js?v=20261109n" defer></script>
+<script src="assets/status.js?v=20261109o" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -220,9 +220,14 @@
   footer p { margin: 0 0 4px; }
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
+  /* one rhythm for the page: 18px between sections, 10px between a section label and its content */
+  .brief { gap: 18px; }
+  .kpi-box { display: flex; flex-direction: column; gap: 10px; }
+  .ov-top { margin-bottom: -8px; }
+  .kpi-h h3, .cards-h { font-size: 12px !important; line-height: 18px; }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261109n">
-<script src="assets/colresize.js?v=20261109n" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109o">
+<script src="assets/colresize.js?v=20261109o" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -240,7 +245,7 @@
     <a class="brand" href="./">
       <h1>ESG Radar<span class="brand-dot" aria-hidden="true">.</span></h1>
     </a>
-    <nav class="nav" aria-label="Pages"><a href="./" aria-current="page" data-page="overview">Overview</a><a href="news.html" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
+    <nav class="nav" aria-label="Pages"><a href="./" aria-current="page" data-page="overview">Overview</a><a href="news.html" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="costs.html" data-page="costs">Costs</a><a href="market.html" data-page="market">Market</a><a href="energy.html" data-page="energy">Energy &amp; climate</a></nav>
     <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
@@ -278,7 +283,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261109n"></script>
+<script src="assets/carbon.js?v=20261109o"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -337,13 +342,13 @@
   const short = (i) => ({ ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", gas_ttf: "Gas TTF", elec_de: "Electricity DE", gas_de: "Gas DE", res_share_de: "Renewables DE", eurusd: "EUR/USD" }[i.id] || (i.country ? "Grid " + i.country : i.label));
   function change(i) { // last value vs. previous value (month on month, or half-year on half-year)
     const s = i.series; const a = s[s.length - 2], b = s[s.length - 1];
-    if (!a || !b || !a[1]) return null;
+    if (!a || !b || !a[1] || a[1] < 0) return null; // no % change on a negative base
     return { pct: (100 * (b[1] - a[1])) / a[1], from: a[0], to: b[0], pp: i.unit === "%" ? b[1] - a[1] : null };
   }
 
   // ---------- widgets ----------
   const W = {
-    carbon: { off: true, title: "Carbon cost exposure", desc: "WEPA's EU ETS emissions × EUA price, with a price slider", wide: true, more: ["Market →", "market.html#carbon"],
+    carbon: { off: true, title: "Carbon cost exposure", desc: "WEPA's EU ETS emissions × EUA price, with a price slider", wide: true, more: ["Market →", "energy.html#tab=carbon"],
       render(b) { CarbonCost.render(b, D.ets, D.market, {}); } },
     roundup: { title: "Monthly round-up", desc: "What changed in a month: regulation, news, market moves, peers", wide: true, more: null,
       render(b) { renderRoundup(b); } },
@@ -525,8 +530,9 @@
     (D.market && D.market.indicators || []).forEach((i) => {
       if (!i.series || i.group === "grid" || i.source === "manual") return;
       const k = i.series.findIndex((p) => p[0].slice(0, 7) === m); if (k < 1) return;
-      const a = i.series[k - 1][1], v = i.series[k][1]; if (!a) return;
-      moves.push({ id: i.id, name: SHORT[i.id] || i.label, pct: (100 * (v - a)) / Math.abs(a), unit: i.unit });
+      const a = i.series[k - 1][1], v = i.series[k][1]; if (!a || a < 0) return;
+      const pct = (100 * (v - a)) / Math.abs(a); if (Math.abs(pct) >= 200) return; // tiny bases (some recovered-paper indices) give meaningless %
+      moves.push({ id: i.id, name: SHORT[i.id] || i.label, pct, unit: i.unit });
     });
     moves.sort((a, b) => Math.abs(b.pct) - Math.abs(a.pct));
     const names = Object.fromEntries((D.peers.companies || []).map((c) => [c.id, c.name]));
@@ -591,7 +597,7 @@
     const wk = up.filter((x) => days(x.date) <= 7).length;
     const part = (pre, strong, post) => { const f = document.createDocumentFragment(); if (pre) f.append(pre); f.append(el("b", null, strong)); if (post) f.append(post); return f; };
     bits.push(part("", wk ? wk + (wk === 1 ? " deadline" : " deadlines") : "no deadlines", " in the next 7 days"));
-    const recent = marketList().filter((i) => i.group !== "grid").map((i) => ({ i, c: change(i) })).filter((x) => x.c && x.c.to >= isoDay(new Date(today.getFullYear(), today.getMonth() - 3, 1)).slice(0, 7) && Math.abs(x.c.pct) >= 5)
+    const recent = marketList().filter((i) => i.group !== "grid").map((i) => ({ i, c: change(i) })).filter((x) => x.c && x.c.to >= isoDay(new Date(today.getFullYear(), today.getMonth() - 3, 1)).slice(0, 7) && Math.abs(x.c.pct) >= 5 && Math.abs(x.c.pct) < 200)
       .sort((a, b) => Math.abs(b.c.pct) - Math.abs(a.c.pct)).slice(0, 2);
     if (recent.length) { const f = document.createDocumentFragment(); f.append("biggest market moves: "); recent.forEach((x, k) => { if (k) f.append(", "); f.append(el("b", null, (SHORT[x.i.id] || short(x.i)) + " " + (x.c.pct > 0 ? "+" : "−") + Math.abs(x.c.pct).toFixed(1) + " %")); }); f.append(" on the month"); bits.push(f); }
     const lm = (() => { const t = today.getFullYear() * 12 + today.getMonth() - 1; return Math.floor(t / 12) + "-" + String((t % 12) + 1).padStart(2, "0"); })();
@@ -815,7 +821,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261109n" defer></script>
-<script src="assets/guide.js?v=20261109n" defer></script>
+<script src="assets/search.js?v=20261109o" defer></script>
+<script src="assets/guide.js?v=20261109o" defer></script>
 </body>
 </html>

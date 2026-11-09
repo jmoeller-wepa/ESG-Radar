@@ -52,19 +52,41 @@
       ],
       caveat: "Companies define KPIs differently (scope, base year, group vs. tissue business). Compare with care and read the notes.",
     },
-    market: {
-      title: "Market",
-      intro: "Public statistics behind tissue costs and demand, sorted by four questions: costs, market, power and the industry's environmental profile.",
+    costs: {
+      title: "Costs",
+      intro: "What tissue making costs right now, from public statistics: fibre, recovered paper, energy, carbon and labour. Prices only – demand sits on Market, power and climate on Energy & climate.",
       items: [
-        ["At a glance", "Four questions behind tissue costs and demand, answered from public statistics. One line per indicator with what it tells WEPA and a signal: headwind or tailwind compared with a year earlier. Click a row for details; use the question filter on the left to focus."],
-        ["Trends", "Open “Indicators in chart” on the left and tick what you want to compare. Up to 6 are shown in one chart as an index (first month of the period = 100); with more, each gets its own small chart. “Select all” adds a whole category, or use the box on a card. Every card says in one line what it means for WEPA; click it for details."],
-        ["Indicator details", "Click the name of an indicator for what it measures, what it does and does not tell you, and the source."],
-        ["Cost index", "How public input-cost statistics add up to an illustrative tissue cost driver index, set against the producer price index for tissue. Read left to right: each input's change and index points, the cost index against the tissue price index, and the margin signal. Click an input for its chart. The period follows the side panel. You can change the weights – they are saved in your browser only."],
-        ["Industry", "Every month: German production, retail sales and tissue trade. Every year: energy mix, water, waste and environmental investment of German paper mills as a yardstick – “Copy as text” for reports. Production figures update automatically."],
-        ["Grid carbon intensity", "The German power mix by source, and CO₂ per kWh by country as 12-month averages (they smooth out the seasons) – useful for location-based Scope 2. Click a country for its history."],
-        ["Water", "Rhine level at Kaub (barge bottleneck) and next to our mills, plus soil moisture around each German mill. Only the status pill is coloured: low water or dry. Updated every working day."],
+        ["At a glance", "The cost index result on top, then one card per topic. The card says in one word where costs are heading (rising, easing, mixed, stable) and names the biggest move. One dot per indicator: red = headwind, green = tailwind, grey = neutral. Click an indicator for details."],
+        ["Price trends", "Compare price indicators as an index (first month of the period = 100). Pick them under “In chart” in the bar, or with the box on a card; up to 6 share one chart, more get small charts each. Search and Topic narrow the cards."],
+        ["Cost index", "How public input-cost statistics add up to an illustrative tissue cost driver index, set against the producer price index for tissue. The three numbers on top: cost index, tissue price index and the margin signal (price minus cost). The table shows each input once: weight, change and index points – the largest contribution is marked. Weights are editable and saved in your browser only."],
+        ["What the cost index cannot do", "It uses only public prices, not WEPA's contracts, hedges or volumes, and holds other costs (chemicals, packaging …) constant. Use it for the direction of input costs, not to judge WEPA's margin or to plan budgets."],
+        ["Signals", "Headwind or tailwind compares the latest value with a year earlier: more than 3 % (1 pp for shares) in the direction that hurts or helps WEPA. For a few recovered-paper indices that can go negative the change is shown in points."],
       ],
       caveat: "Index lines show direction and size of changes, not price levels. Public price series are averages and lag behind contract prices.",
+    },
+    market: {
+      title: "Market",
+      intro: "How WEPA's market is doing: demand and trade in Germany, paper production, fibre supply and the yearly environmental profile of the paper industry.",
+      items: [
+        ["At a glance", "One card per topic: demand & trade, production and fibre supply, each with a one-word verdict, the biggest move and the key indicators. Click an indicator for details."],
+        ["Trends", "Compare market indicators as an index; pick them under “In chart” in the bar or with the box on a card."],
+        ["Industry", "Every month: German production, retail sales and tissue trade. Every year: energy mix, water, waste, recovered paper and environmental investment of German paper mills as a yardstick – “Copy as text” for reports."],
+        ["Fibre supply", "German pulp imports, and how much recovered paper goes into hygiene papers compared with all grades (Umweltbundesamt, yearly). Fibre prices are on the Costs page."],
+      ],
+      caveat: "Statistics are published with a delay of one to three months; industry figures yearly.",
+    },
+    energy: {
+      title: "Energy & climate",
+      intro: "Where our power comes from, what carbon costs, and the water situation at our mills.",
+      items: [
+        ["At a glance", "Cards for grid carbon intensity, the German power mix, the carbon price and water. One dot per indicator or site: red = headwind (e.g. more coal, low water), green = tailwind."],
+        ["Trends", "Compare grid and power-mix indicators as an index; pick them under “In chart” in the bar."],
+        ["Power grid", "The German power mix by source, and CO₂ per kWh by country as 12-month averages (they smooth out the seasons) – useful for location-based Scope 2. Click a country for its history."],
+        ["Carbon cost", "WEPA's verified EU ETS emissions × the EUA price, minus free allocation. Move the slider to see the net cost at another price. Incomplete: only the WEPA sites found in the EU registry."],
+        ["Water", "Rhine level at Kaub (barge bottleneck) and Mainz, side by side, plus soil moisture around each German mill. Only the status pill is coloured: low water or dry."],
+        ["Water terms", "GlW = equivalent low water, the level reached or undercut on about 20 ice-free days a year. MNW = mean low water, MW = mean water. The dashed lines in the charts mark GlW and our own surcharge threshold."],
+      ],
+      caveat: "EUA prices are entered manually from press reports (exchange prices are licensed). River and soil data come from PEGELONLINE and DWD and update every working day.",
     },
   };
   const g = G[page]; if (!g) return;

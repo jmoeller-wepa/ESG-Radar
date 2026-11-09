@@ -1,13 +1,43 @@
-ESG Radar – update-28-peers-layout (builds on update-27, contains everything from update-19 to 27)
+ESG Radar – update-29-costs-market-energy (builds on update-28, contains everything from update-19 to 28)
 
 Upload to the repository ROOT folder:
-  index.html, news.html, regulation.html, peers.html, market.html
+  index.html, news.html, regulation.html, peers.html, market.html,
+  costs.html (NEW), energy.html (NEW)
 
 Upload to the folder assets/:
-  theme.css, look.js, guide.js, views.js, side.js, filters.js
-  (guide.js changed in update-26, 27 and 28; views.js, side.js and filters.js are unchanged from update-19; included so this zip works on its own)
+  market.js (NEW), market.css (NEW), search.js, guide.js,
+  theme.css, look.js, views.js, side.js, filters.js
+  (views.js, side.js and filters.js are unchanged; included so this zip works on its own)
 
-Nothing in data/ or config/ changes.
+Nothing in data/ or config/ changes. No workflow change.
+
+What changed in update-29 (Market split into three pages)
+- The old Market page is now three pages in the top bar:
+    Costs            – At a glance · Price trends · Cost index
+    Market           – At a glance · Trends · Industry
+    Energy & climate – At a glance · Trends · Power grid · Carbon cost · Water
+  All three use the same code: market.html, costs.html and energy.html are short page files;
+  the logic is in assets/market.js and the styles in assets/market.css.
+- Old links keep working: market.html#tab=cost, #tab=water, #ind=gas_ttf etc. forward to the right page.
+- No side panel anywhere any more. Price trends / Trends get a filter bar: search, Topic,
+  "In chart" (pick indicators) and Period. Cost index has Period only.
+- At a glance: the summary sentence sits under the page title (same style as the Overview), without
+  the "In one line" label. Below it one card per topic with a one-word verdict, the biggest move,
+  one dot per indicator (red headwind / green tailwind / grey neutral) and the 3 key indicators.
+  Costs also shows the cost index result (cost index · tissue price · margin signal) on top.
+  Market has a new "Fibre supply" card (German pulp imports, recovered paper share in hygiene papers).
+- Cost index: one-line warning with "Details", the three result numbers above the chart, one table
+  with each input once (weight editable, largest contribution marked). The explanation moved to the "?" guide.
+- Carbon cost (Energy & climate): the existing carbon cost exposure tool (EU ETS emissions × EUA price,
+  with a price slider) is now visible as its own tab.
+- Water: the Kaub and Mainz river charts sit side by side; the GlW/MNW explanation is in the "?" guide.
+- Recovered-paper indices that can be negative now show their change in points instead of
+  meaningless percentages (e.g. "−300 %"); the Overview no longer lists such moves as biggest moves.
+- Peers › Emissions · EU ETS: the peer group switch is hidden there (EU ETS covers EU sites only).
+- Overview: same spacing above and below "Key numbers" and "Your cards" (18px between sections,
+  10px between a label and its content).
+- Search (Ctrl K) and "?" guides updated for the three pages.
+- Cache version 20261109o on all pages.
 
 What changed in update-28 (Peers page + one Regulation fix)
 - Peers: no side panel any more. One filter bar under the tabs: peer group switch (Tissue Europe /

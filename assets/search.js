@@ -155,19 +155,23 @@
   }
   const PAGES = [
     ["Monthly round-up", "Overview · what changed in a month", "./", "summary digest month briefing"],
-    ["At a glance", "Market · four questions, headwind or tailwind for WEPA", "market.html#tab=glance", "summary signal headwind tailwind questions"],
-    ["Trends", "Market · compare indicators as an index", "market.html#tab=cmp", "compare chart"],
-    ["Cost index", "Market · tissue cost drivers vs. tissue prices", "market.html#tab=cost", "margin cost drivers pulp gas electricity"],
+    ["Costs at a glance", "Costs · fibre, recovered paper, energy and labour: headwind or tailwind", "costs.html#tab=glance", "summary signal headwind tailwind cost prices"],
+    ["Price trends", "Costs · compare price indicators as an index", "costs.html#tab=cmp", "compare chart pulp recovered paper gas power"],
+    ["Cost index", "Costs · tissue cost drivers vs. tissue prices", "costs.html#tab=cost", "margin cost drivers pulp gas electricity"],
+    ["Market at a glance", "Market · demand, production and fibre supply", "market.html#tab=glance", "summary demand production fibre supply"],
+    ["Market trends", "Market · compare demand and trade indicators", "market.html#tab=cmp", "compare chart retail imports exports"],
     ["Industry · monthly", "Market · German market and trade, month by month", "market.html#tab=industry&view=month", "production hygiene paper retail imports exports monthly"],
     ["Industry · yearly", "Market · yearly industry profile: energy mix, water, waste, recovered paper, Europe", "market.html#tab=industry&view=year", "cepi recovered paper utilisation water waste energy mix environmental investment yearly"],
+    ["Energy & climate at a glance", "Energy & climate · grid, power mix, carbon price and water", "energy.html#tab=glance", "summary energy climate"],
+    ["Grid carbon intensity", "Energy & climate · power mix and CO₂ per kWh by country", "energy.html#tab=grid", "scope 2 electricity emission factor power mix"],
+    ["Carbon cost exposure", "Energy & climate · WEPA's EU ETS emissions × EUA price", "energy.html#tab=carbon", "eua carbon price ets cost slider allocation"],
+    ["Water", "Energy & climate · river levels and soil moisture at our mills", "energy.html#tab=water", "rhine kaub pegel low water niedrigwasser drought dürre soil moisture bodenfeuchte"],
     ["WEPA sites in the EU ETS", "Peers · which WEPA sites the emissions data covers", "peers.html#tab=ets", "ets sites coverage missing emissions scope 1 mills"],
-    ["Grid carbon intensity", "Market · CO₂ per kWh by country", "market.html#tab=grid", "scope 2 electricity emission factor"],
-    ["Water", "Market · river levels and soil moisture at our mills", "market.html#tab=water", "rhine kaub pegel low water niedrigwasser drought dürre soil moisture bodenfeuchte"],
     ["EU ETS emissions", "Peers · verified emissions of EU sites", "peers.html#tab=ets", "emissions trading co2 sites"],
     ["Next deadlines", "Regulation · roadmap of upcoming dates", "regulation.html#view=roadmap", "deadline timeline milestones"],
     ["Open consultations", "Regulation · EU “Have your say”", "regulation.html#show=consult", "have your say consultation"],
   ];
-  const QUICK = [[1, "Market"], [6, "Regulation"], [5, "Peers"], [0, "Overview"], [4, "Market"], [7, "Regulation"]];
+  const QUICK = [[1, "Costs"], [4, "Market"], [8, "Energy & climate"], [14, "Regulation"], [12, "Peers"], [0, "Overview"]];
 
   // ---------- recent searches ----------
   const RKEY = "radar.recentSearch";
@@ -291,7 +295,7 @@
       const ch = prev && prev[1] ? ((last[1] / prev[1] - 1) * 100) : null;
       pv.appendChild(facts([["Latest", fmtN(last[1]) + " " + (m.unit || "") + " · " + fmtD(last[0])], ["Change", ch == null ? "" : (ch >= 0 ? "▲ " : "▼ ") + Math.abs(ch).toFixed(1) + " % vs. " + fmtD(prev[0])], ["Source", m.attribution]]));
       if (it.about) p(it.about.what);
-      pv.appendChild(acts([["Add to Trends chart", "market.html#add=" + m.id], ["Open details", it.href]]));
+      pv.appendChild(acts([["Add to Trends chart", "costs.html#add=" + m.id], ["Open details", it.href]]));
     } else if (it.g === "reg") {
       if (it.c) {
         tag("EU consultation"); pv.appendChild(el("h4", null, it.c.title)); p(it.c.summary);
