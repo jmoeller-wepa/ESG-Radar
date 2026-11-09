@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-09T08:39:33",
+ "checked": "2026-11-09T09:19:17",
  "credentials": true,
  "indicators": {
   "de_rcp_102": {
@@ -862,92 +862,6 @@
    {
     "code": "43531-0002",
     "content": "Stromerzeugung, Strombezug, Stromabgabe, Stromverbrauch: Deutschland, Jahre, Wirtschaftszweige"
-   }
-  ],
-  "322*": [
-   {
-    "code": "32211-0001",
-    "content": "Wassergewinnung, Einwohner mit Anschluss an die öffentliche Wasserversorgung, Wasserabgabe: Bundesländer, Jahre"
-   },
-   {
-    "code": "32211-0002",
-    "content": "Wassergewinnung: Bundesländer, Jahre, Wasserarten"
-   },
-   {
-    "code": "32212-0001",
-    "content": "An öffentliche Kanalisation angeschlossene Einwohner, Schmutzwasser: Bundesländer, Jahre, Art der Abwasserentsorgung"
-   },
-   {
-    "code": "32213-0001",
-    "content": "Länge des Kanalnetzes, Abwasserbehandlungsanlagen, Angeschlossene Einwohnerwerte, Jahresabwassermenge, Schmutzwasser: Bundesländer, Jahre"
-   },
-   {
-    "code": "32213-0002",
-    "content": "Abwasserbehandlungsanlagen, Angeschlossene Einwohnerwerte, Jahresabwassermenge, Schmutzwasser: Bundesländer, Jahre, Art der Abwasserbehandlung"
-   },
-   {
-    "code": "32214-0001",
-    "content": "Entsorgter Klärschlamm aus der biologischen Abwasserbehandlung: Deutschland, Jahre, Entsorgungsarten des Klärschlamms"
-   },
-   {
-    "code": "32214-0002",
-    "content": "Entsorgter Klärschlamm aus der biologischen Abwasserbehandlung: Deutschland, Jahre, Ort der Klärschlammentsorgung"
-   },
-   {
-    "code": "32214-0003",
-    "content": "Eigenerzeugter Klärschlamm aus der biologischen Abwasserbehandlung: Deutschland, Jahre"
-   },
-   {
-    "code": "32214-0004",
-    "content": "Kläranlagen mit biologischer Abwasserbehandlung: Deutschland, Jahre, Angabe zur Klärschlammbehandlung"
-   },
-   {
-    "code": "32214-0005",
-    "content": "Kläranlagen mit biologischer Abwasserbehandlung: Deutschland, Jahre, Art der Klärschlammbehandlung"
-   },
-   {
-    "code": "32214-0010",
-    "content": "Entsorgter Klärschlamm aus der biologischen Abwasserbehandlung: Bundesländer, Jahre, Entsorgungsarten des Klärschlamms"
-   },
-   {
-    "code": "32214-0011",
-    "content": "Entsorgter Klärschlamm aus der biologischen Abwasserbehandlung: Bundesländer, Jahre, Ort der Klärschlammentsorgung"
-   },
-   {
-    "code": "32214-0012",
-    "content": "Eigenerzeugter Klärschlamm aus der biologischen Abwasserbehandlung: Bundesländer, Jahre"
-   },
-   {
-    "code": "32214-0013",
-    "content": "Kläranlagen mit biologischer Abwasserbehandlung: Bundesländer, Jahre, Angabe zur Klärschlammbehandlung"
-   },
-   {
-    "code": "32214-0014",
-    "content": "Kläranlagen mit biologischer Abwasserbehandlung: Bundesländer, Jahre, Art der Klärschlammbehandlung"
-   },
-   {
-    "code": "32221-0001",
-    "content": "Wasseraufkommen, Betriebe mit Wasseraufkommen: Bundesländer, Jahre (bis 2019), Wassergewinnung und -bezug"
-   },
-   {
-    "code": "32221-0002",
-    "content": "Wasseraufkommen: Bundesländer, Jahre (bis 2019), Eigengewinnung und Fremdbezug"
-   },
-   {
-    "code": "32221-0003",
-    "content": "Wasseraufkommen: Bundesländer, Jahre, Verwendungsarten"
-   },
-   {
-    "code": "32221-0004",
-    "content": "Frischwassereinsatz: Bundesländer, Jahre, Wassernutzung"
-   },
-   {
-    "code": "32221-0005",
-    "content": "Unbehandeltes Abwasser: Bundesländer, Jahre (bis 2019), Abwassereinleitungsarten"
-   },
-   {
-    "code": "32251-0001",
-    "content": "Einwohner mit Anschluss an die öffentliche Kanalisation, Einwohner mit Anschluss an zentrale Abwasserbehandlungsanlagen: Bundesländer, Jahre"
    }
   ],
   "32161-*": [
@@ -2919,57 +2833,7 @@
     "content": "Wasseraufkommen, Betriebe mit Wasseraufkommen: Bundesländer, Jahre (bis 2019), Wassergewinnung und -bezug"
    }
   ],
-  "Arbeitskosten Wirtschaftszweige": [
-   {
-    "code": "62411-0001",
-    "content": "Arbeitskosten je Vollzeiteinheit: Deutschland, Jahre, Unternehmensgrößenklassen, Wirtschaftszweige, Arbeitskostenarten"
-   },
-   {
-    "code": "62411-0002",
-    "content": "Bruttoarbeitskosten je Vollzeiteinheit, Nettoarbeitskosten je geleistete Stunde: Deutschland, Jahre, Unternehmensgrößenklassen, Wirtschaftszweige"
-   },
-   {
-    "code": "62411-0003",
-    "content": "Arbeitskosten je Vollzeiteinheit: Früheres Bundesgebiet/Neue Länder, Jahre, Unternehmensgrößenklassen, Wirtschaftszweige, Arbeitskostenarten"
-   },
-   {
-    "code": "62411-0004",
-    "content": "Bruttoarbeitskosten je Vollzeiteinheit, Nettoarbeitskosten je geleistete Stunde: Früheres Bundesgebiet/Neue Länder, Jahre, Unternehmensgrößenklassen, Wirtschaftszweige"
-   },
-   {
-    "code": "62411-0005",
-    "content": "Arbeitskosten je Vollzeiteinheit: Bundesländer, Jahre, Unternehmensgrößenklassen, Wirtschaftszweige, Arbeitskostenarten"
-   },
-   {
-    "code": "62411-0006",
-    "content": "Bruttoarbeitskosten je Vollzeiteinheit, Nettoarbeitskosten je geleistete Stunde: Bundesländer, Jahre, Unternehmensgrößenklassen, Wirtschaftszweige"
-   },
-   {
-    "code": "62421-0001",
-    "content": "Arbeitskostenindizes: Deutschland, Quartale, Wirtschaftsbereiche, Original- und bereinigte Daten"
-   },
-   {
-    "code": "62421-0010",
-    "content": "Gewichtung der Arbeitskostenindizes: Deutschland, Jahre, Wirtschaftsabschnitte"
-   },
-   {
-    "code": "62431-0001",
-    "content": "Arbeitskosten je geleistete Stunde (Jahresschätzung): Deutschland, Jahre, Wirtschaftsbereiche"
-   }
-  ],
-  "Abfallmenge Wirtschaftszweige": [
-   {
-    "code": "32151-0001",
-    "content": "Abfallerzeuger, Abfallmengen (gefährliche Abfälle): Deutschland, Jahre, Wirtschaftszweige, Abfallarten (EAV 2-Steller)"
-   },
-   {
-    "code": "32161-0002",
-    "content": "Betriebe, erzeugte Abfallmenge: Deutschland, Jahre, Wirtschaftszweige, Abfallarten"
-   },
-   {
-    "code": "32161-0003",
-    "content": "Betriebe, erzeugte Abfallmenge, Beschäftigte, Erfassungsgrad der Betriebe, Erfassungsgrad der Beschäftigten: Deutschland, Jahre, Wirtschaftszweige"
-   }
-  ]
+  "Arbeitskosten Wirtschaftszweige": "The read operation timed out",
+  "Abfallmenge Wirtschaftszweige": "The read operation timed out"
  }
 }

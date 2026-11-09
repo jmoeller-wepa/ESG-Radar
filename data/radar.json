@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-09T08:38:04",
+    "lastFeedRun": "2026-11-09T09:17:50",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -7378,6 +7378,150 @@
       "nextDateLabel": null,
       "source": "WEPA sites · France (via Google News)",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQVTNWbUp0UVZmZThkaWVZSFVtOEViZDd1Yk1hVExDX2swaUtJbms2TVZDOGJpaGZrTEwxZ29CZ1h2eVlld0V2cXYxNkpTZ3BoZ3UyNWhQdkFGNGplNWpjdnV0X19DV0Z3UDdwbUZzMnY3ZFpsRTRFVXJSMVBsTjFtTDlVV0pPVWZkdmdlcmctYlBiVGlUOGVVVldtYjlOVTd3SDNKLUZZelVHaHpJQkFsc0xUQTJ1N3lIRVd1VXVjWHBUYTJiMU14RThLLURsRTQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-445539f145",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Brussels Greenlights €319 Million for Infineon's Villach GaN Fab as AI Power Deals Stack Up - ad-hoc-news.de",
+      "summary": "Brussels Greenlights €319 Million for Infineon's Villach GaN Fab as AI Power Deals Stack Up ad-hoc-news.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNZHQ5cmNobTFHcnRSS0oydWJSVmpDSGNqMGlxTzJhd3ZoZGNaZTZDbVk4Z2U2VWRscHBfdFNjUmYtYV9aWVlWZE5oS3BGRjV5YXN1ZDFpQ01BWGt2MWtPT2pPcWEzeFc1eENDTnRZcGhGOXg5Ri1ON3JITFB1TlFnSC1QV24zdzQzYU9rYUdYMk1hZURldXVzNXVaT2pJS2FzSlhnbUNLZGpoSUZDNkJPU2JaYmpiMWpzc1loNTc2Q3lIeTVPbzJaa0xjZjFZZ2JRYkIxZEFmNTBuamhpNkpBZzNadGs0UGhsNDNVOWhLbXlfbWtT?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c1abb22c0b",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [],
+      "title": "SBTi seeks more input on net-zero electricity rules - Trellis Group",
+      "summary": "SBTi seeks more input on net-zero electricity rules Trellis Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYjhzTEI3SnVOOEtYMEVQak1PRXFGaEtNc1BoVDdPaGRzbDJ4NVZ5b0N3cmIzRFVIcDRzTTVzS1hiMTk1a2xXREVheGdtRXZWWkk0R0d4ei13SFRGbksxQVZjelVNejlsdXExMlYwSHp0Q3VIRHUtTGxIRWJrLWZKOFN1ZzFDZ28?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-619c443709",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Riecht wie Rituals – kostet nur 3 Euro: Diese günstige ALDI-Marke verspricht Luxus pur - wmn.de",
+      "summary": "Riecht wie Rituals – kostet nur 3 Euro: Diese günstige ALDI-Marke verspricht Luxus pur wmn.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTUR2aWE0Q2hNUGdramJpcE9FcGtRbU9aRy1YTHFJcEs3djU2Smd3SGlHMjRKU0JlZ3NXbzlGZHB2UmNORC1DSjNTREFkRWcwcFZRQVloczZLcmdVaUJkU1pkeThMY3ItMUtCdzBpdjdKOHhFem9iNkRDb1BxV25RTFhjVUloOWtKb2JFdDhMQnBmalA3SHhodkRVTDNRN093NTdXYldR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-3acd2f078c",
+      "date": "2026-11-08",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Luxus-Duft für 20 Euro? Diese Rossmann-Parfums überraschen dich garantiert - Myself",
+      "summary": "Luxus-Duft für 20 Euro? Diese Rossmann-Parfums überraschen dich garantiert Myself",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAyaFo2QXp5bUdpSUZZb3JlTGpmSmdOaWpoeURjWlRaZnNBNXczZUdjb1dBaHdIbmtOMHFxNVJWNWlTWFh3SFZlSEF2Z3pUbjJUazczNElQT2NaN3RNUzRBRUo1SGl3eFQyelNXcDdHeEFTLXlZT2trZkY4ck8?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b772e201f5",
+      "date": "2026-11-08",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Charles Leclerc reconnaît des tensions avec Hamilton chez Ferrari - f1i.autojournal.fr",
+      "summary": "Charles Leclerc reconnaît des tensions avec Hamilton chez Ferrari f1i.autojournal.fr",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOC1jdG52SjJwd0VNVVpjMExLc09UYXpaMHVuVzI2dldvLTk1U0JOaW1uRjFCTmNHdHV0TmE3TEYyUHFXNEZyV2stajhTUDJqaU1JREcyQ0N0eGVTS3NNWlRPN19XdGdiS01GU2pOdFY5ZENJVFZXNVlLSUh2OVVmY1RvQUtWQjIxUEpWbzRBQ0xxS25pRk95Ym80YnNQMEFq?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-4fa0bde3c0",
+      "date": "2026-11-08",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Drip Tape Market To 2035: Water Scarcity Drives Precision Irrigation Adoption - News and Statistics - IndexBox",
+      "summary": "Drip Tape Market To 2035: Water Scarcity Drives Precision Irrigation Adoption - News and Statistics IndexBox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcm9MdjNIZXdxcTllcHFWS0c2WUxHYWEwMlhsZ04ydjlHcXRSTXBhcEVDTFZ1akpfbWRsM1ZRZUFoLTY4VzFCaHU3X1lEUFB3WVZNdEFXRkViZG1uYXl0QTJuZWhWVFdjSGpLOVpFdzZwalVoME1yYklqdmpYZU9vWVNHTEpvQUFWbGV6a0FxOHRfMWNJWjE4cEtzbm9IYVB4NEhKbXFyV0c0bWpMdmUxTmdjQ05zQ1hsUnBIaUNn?oc=5",
       "origin": "feed",
       "added": "2026-11-09"
     }
