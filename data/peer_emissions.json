@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-03T13:41:56",
+ "updated": "2026-11-09T08:51:15",
  "source": {
   "year": 2025,
   "url": "https://climate.ec.europa.eu/document/download/53018483-62b3-499e-9ab9-b4a831cc44f4_en?filename=verified_emissions_2025_en.xlsx",
   "page": "https://climate.ec.europa.eu/areas-action/carbon-markets/eu-emissions-trading-system-eu-ets/union-registry_en",
   "attribution": "European Commission, Union Registry – verified emissions (CC BY 4.0)"
  },
- "configStamp": "[{\"essity\": {\"exclude\": [], \"include\": [], \"patterns\": [\"\\\\bEssity\\\\b\", \"SCA Hygiene\", \"SCA Tissue\"]}, \"lucart\": {\"exclude\": [], \"include\": [], \"patterns\": [\"\\\\bLucart\\\\b\"]}, \"metsa-tissue\": {\"exclude\": [], \"include\": [], \"patterns\": [\"Mets[\\u00e4a] Tissue\"]}, \"sofidel\": {\"exclude\": [], \"include\": [], \"patterns\": [\"\\\\bSofidel\\\\b\", \"\\\\bSoffass\\\\b\", \"Werra Papier\", \"Delitissue\"]}, \"wepa\": {\"exclude\": [\"AT-116\"], \"include\": [], \"patterns\": [\"\\\\bWEPA\\\\b\", \"P\\\\. ?Krengel\"]}}, 2019, [\"GB\"], \"v2-allocation\"]",
+ "configStamp": "[{\"essity\": {\"exclude\": [], \"include\": [], \"patterns\": [\"\\\\bEssity\\\\b\", \"SCA Hygiene\", \"SCA Tissue\"]}, \"lucart\": {\"exclude\": [], \"include\": [], \"patterns\": [\"\\\\bLucart\\\\b\"]}, \"metsa-tissue\": {\"exclude\": [], \"include\": [], \"patterns\": [\"Mets[\\u00e4a] Tissue\"]}, \"sofidel\": {\"exclude\": [], \"include\": [], \"patterns\": [\"\\\\bSofidel\\\\b\", \"\\\\bSoffass\\\\b\", \"Werra Papier\", \"Delitissue\"]}, \"wepa\": {\"_sites\": \"All WEPA production sites (from wepa.eu, offices left out). The Peers page uses this list to show which sites are in the EU ETS data and which are missing. 'keys' = known registry codes of the site. 'patterns' = names that identify the site in the registry: an installation in the same country whose name matches is added to WEPA automatically (only if it looks like a paper/pulp site and no other peer claims it). 'maybe' = town names that are too common (other paper mills nearby): matches are only listed as candidates in data/debug/ets_sites.json and on the Peers page \\u2013 copy a correct one to 'include' above. 'ets': 'eu' = should be in the EU registry, 'uk' = UK ETS since 2021 (not in the EU registry). 'note' is shown on the page.\", \"exclude\": [\"AT-116\"], \"include\": [], \"patterns\": [\"\\\\bWEPA\\\\b\", \"P\\\\. ?Krengel\"], \"sites\": [{\"country\": \"DE\", \"ets\": \"eu\", \"id\": \"arnsberg\", \"keys\": [], \"maybe\": [\"Arnsberg\"], \"name\": \"Arnsberg-M\\u00fcschede\", \"patterns\": [\"M[\\u00fcu]e?schede\", \"Krengel\"]}, {\"country\": \"DE\", \"ets\": \"eu\", \"id\": \"giershagen\", \"keys\": [\"DE-514\"], \"maybe\": [\"Marsberg\"], \"name\": \"Giershagen\", \"patterns\": [\"Giershagen\"]}, {\"country\": \"DE\", \"ets\": \"eu\", \"id\": \"kriebstein\", \"keys\": [], \"maybe\": [\"Waldheim\"], \"name\": \"Kriebstein\", \"patterns\": [\"Kriebstein\", \"Kriebethal\", \"K[\\u00fcu]e?bler\\\\s*(&|und)\\\\s*Niethammer\"]}, {\"country\": \"DE\", \"ets\": \"eu\", \"id\": \"mainz\", \"keys\": [], \"maybe\": [\"Mainz\"], \"name\": \"Mainz\", \"note\": \"Converting site? Only listed if a paper machine there is in the registry.\", \"patterns\": []}, {\"country\": \"DE\", \"ets\": \"eu\", \"id\": \"leuna\", \"keys\": [\"DE-618\"], \"maybe\": [], \"name\": \"Leuna\", \"patterns\": [\"Leuna\"]}, {\"country\": \"PL\", \"ets\": \"eu\", \"id\": \"piechowice\", \"keys\": [\"PL-626\"], \"maybe\": [\"Jelenia G[\\u00f3o]ra\"], \"name\": \"Piechowice\", \"patterns\": [\"Piechowice\"]}, {\"country\": \"FR\", \"ets\": \"eu\", \"id\": \"lille\", \"keys\": [\"FR-947\"], \"maybe\": [\"Lille\", \"Wervicq\"], \"name\": \"Lille (Bousbecque)\", \"note\": \"Registry name is only 'WEPA FRANCE'; assigned to Lille because Troyes and Ch\\u00e2teau-Thierry have their own entries \\u2013 please confirm.\", \"patterns\": [\"Bousbecque\"]}, {\"country\": \"FR\", \"ets\": \"eu\", \"id\": \"troyes\", \"keys\": [\"FR-246\"], \"maybe\": [\"Troyes\"], \"name\": \"Troyes (Torvilliers)\", \"patterns\": [\"Torvilliers\"]}, {\"country\": \"FR\", \"ets\": \"eu\", \"id\": \"chateau-thierry\", \"keys\": [\"FR-4\"], \"maybe\": [\"Ch[\\u00e2a]teau.?Thierry\"], \"name\": \"Ch\\u00e2teau-Thierry (Greenfield)\", \"patterns\": [\"Greenfield\"]}, {\"country\": \"FR\", \"ets\": \"eu\", \"id\": \"annonay\", \"keys\": [], \"maybe\": [\"Annonay\"], \"name\": \"Annonay (Dav\\u00e9zieux)\", \"patterns\": [\"Dav[\\u00e9e]zieux\"]}, {\"country\": \"IT\", \"ets\": \"eu\", \"id\": \"lucca-capannori\", \"keys\": [], \"maybe\": [\"Capannori\", \"Lunata\"], \"name\": \"Lucca \\u2013 Capannori\", \"patterns\": [\"Salanetti\"]}, {\"country\": \"IT\", \"ets\": \"eu\", \"id\": \"lucca-porcari\", \"keys\": [], \"maybe\": [\"Porcari\"], \"name\": \"Lucca \\u2013 Porcari\", \"patterns\": []}, {\"country\": \"IT\", \"ets\": \"eu\", \"id\": \"cassino\", \"keys\": [], \"maybe\": [\"Frosinone\"], \"name\": \"Cassino\", \"patterns\": [\"Cassino\"]}, {\"country\": \"NL\", \"ets\": \"eu\", \"id\": \"swalmen\", \"keys\": [], \"maybe\": [\"Roermond\"], \"name\": \"Swalmen\", \"patterns\": [\"Swalmen\"]}, {\"country\": \"GB\", \"ets\": \"uk\", \"id\": \"bridgend\", \"keys\": [], \"maybe\": [], \"name\": \"Bridgend\", \"patterns\": []}, {\"country\": \"GB\", \"ets\": \"uk\", \"id\": \"blackburn\", \"keys\": [], \"maybe\": [], \"name\": \"Blackburn\", \"patterns\": []}]}}, 2019, [\"GB\"], \"v3-sites\"]",
  "years": [
   "2019",
   "2020",
@@ -42,7 +42,37 @@
       "2023": 13640.0,
       "2024": 16785.0,
       "2025": 16141.0
-     }
+     },
+     "site": "piechowice",
+     "siteMatch": "key"
+    },
+    {
+     "key": "IT-452",
+     "country": "IT",
+     "name": "Stabilimento di Cassino",
+     "holder": null,
+     "city": null,
+     "activity": "Pulp, paper and board",
+     "emissions": {
+      "2019": 32749.0,
+      "2020": 32688.0,
+      "2021": 29891.0,
+      "2022": 31835.0,
+      "2023": 11841.0,
+      "2024": 9130.0,
+      "2025": 8530.0
+     },
+     "allocation": {
+      "2019": 14104.0,
+      "2020": 13813.0,
+      "2021": 14027.0,
+      "2022": 14027.0,
+      "2023": 14027.0,
+      "2024": 11559.0,
+      "2025": 7840.0
+     },
+     "site": "cassino",
+     "siteMatch": "pattern"
     },
     {
      "key": "FR-947",
@@ -68,7 +98,37 @@
       "2023": 21404.0,
       "2024": 21404.0,
       "2025": 21404.0
-     }
+     },
+     "site": "lille",
+     "siteMatch": "key"
+    },
+    {
+     "key": "DE-513",
+     "country": "DE",
+     "name": "Papierfabrik Arnsberg-Müschede",
+     "holder": null,
+     "city": null,
+     "activity": "Paper or cardboard production",
+     "emissions": {
+      "2019": 23563.0,
+      "2020": 23450.0,
+      "2021": 23839.0,
+      "2022": 24150.0,
+      "2023": 22750.0,
+      "2024": 23061.0,
+      "2025": 19066.0
+     },
+     "allocation": {
+      "2019": 20014.0,
+      "2020": 19601.0,
+      "2021": 17370.0,
+      "2022": 17370.0,
+      "2023": 16888.0,
+      "2024": 16763.0,
+      "2025": 16763.0
+     },
+     "site": "arnsberg",
+     "siteMatch": "pattern"
     },
     {
      "key": "DE-514",
@@ -94,7 +154,9 @@
       "2023": 31173.0,
       "2024": 30867.0,
       "2025": 31173.0
-     }
+     },
+     "site": "giershagen",
+     "siteMatch": "key"
     },
     {
      "key": "FR-4",
@@ -120,7 +182,36 @@
       "2023": 3530.0,
       "2024": 2986.0,
       "2025": 2986.0
-     }
+     },
+     "site": "chateau-thierry",
+     "siteMatch": "key"
+    },
+    {
+     "key": "FR-932",
+     "country": "FR",
+     "name": "AHLSTROM SPECIALTIES BOUSBECQUE",
+     "holder": null,
+     "city": null,
+     "activity": "Paper or cardboard production",
+     "emissions": {
+      "2019": 17229.0,
+      "2020": 16653.0,
+      "2021": 20606.0,
+      "2022": 16358.0,
+      "2023": 11953.0,
+      "2024": 5931.0
+     },
+     "allocation": {
+      "2019": 18377.0,
+      "2020": 17998.0,
+      "2021": 12288.0,
+      "2022": 13791.0,
+      "2023": 13791.0,
+      "2024": 6056.0,
+      "2025": 0.0
+     },
+     "site": "lille",
+     "siteMatch": "pattern"
     },
     {
      "key": "DE-618",
@@ -146,7 +237,9 @@
       "2023": 7265.0,
       "2024": 7265.0,
       "2025": 7265.0
-     }
+     },
+     "site": "leuna",
+     "siteMatch": "key"
     },
     {
      "key": "FR-246",
@@ -171,35 +264,209 @@
       "2023": 7705.0,
       "2024": 7705.0,
       "2025": 7705.0
-     }
+     },
+     "site": "troyes",
+     "siteMatch": "key"
     }
    ],
    "total": {
-    "2019": 126989.0,
-    "2020": 127287.0,
-    "2021": 117802.0,
-    "2022": 127270.0,
-    "2023": 120292.0,
-    "2024": 122689.0,
-    "2025": 80666.0
+    "2019": 200530.0,
+    "2020": 200078.0,
+    "2021": 192138.0,
+    "2022": 199613.0,
+    "2023": 166836.0,
+    "2024": 160811.0,
+    "2025": 108262.0
    },
    "reporting": {
-    "2019": 6,
-    "2020": 6,
-    "2021": 6,
-    "2022": 6,
-    "2023": 6,
-    "2024": 6,
-    "2025": 4
+    "2019": 9,
+    "2020": 9,
+    "2021": 9,
+    "2022": 9,
+    "2023": 9,
+    "2024": 9,
+    "2025": 6
    },
    "allocation": {
-    "2019": 74113.0,
-    "2020": 72461.0,
-    "2021": 93341.0,
-    "2022": 90473.0,
-    "2023": 84717.0,
-    "2024": 87012.0,
-    "2025": 86674.0
+    "2019": 126608.0,
+    "2020": 123873.0,
+    "2021": 137026.0,
+    "2022": 135661.0,
+    "2023": 129423.0,
+    "2024": 121390.0,
+    "2025": 111277.0
+   },
+   "siteCandidates": {
+    "mainz": [
+     {
+      "key": "DE-1779",
+      "name": "Anlage - Heizwerk 3/Universität Mainz",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "DE-362",
+      "name": "Brennanlage Werk Mainzlar",
+      "activity": "Ceramics",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "DE-771",
+      "name": "HW Lerchenberg Mainz",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "DE-847",
+      "name": "Heizzentrale Mainz",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "DE-1064",
+      "name": "Kraftwerk Mainz",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "DE-229",
+      "name": "RP 4-6034500 0010 Mainz",
+      "activity": "Glass",
+      "why": "same town – check if it is WEPA"
+     }
+    ],
+    "leuna": [
+     {
+      "key": "DE-1368",
+      "name": "GuD-Anlage Leuna",
+      "activity": "Combustion of fuels",
+      "why": "not a paper or pulp activity"
+     },
+     {
+      "key": "DE-202349",
+      "name": "Leuna SR 1,2",
+      "activity": "43",
+      "why": "not a paper or pulp activity"
+     },
+     {
+      "key": "DE-20",
+      "name": "Mineralölraffinerie Leuna",
+      "activity": "Refining of mineral oil",
+      "why": "not a paper or pulp activity"
+     },
+     {
+      "key": "DE-210619",
+      "name": "Polyethylen-Anlage / Train 4 in Leuna",
+      "activity": "42",
+      "why": "not a paper or pulp activity"
+     },
+     {
+      "key": "DE-210620",
+      "name": "Polyethylen-Anlage / Train 5 (Leuna)",
+      "activity": "42",
+      "why": "not a paper or pulp activity"
+     },
+     {
+      "key": "DE-1367",
+      "name": "Raffineriekraftwerk Leuna",
+      "activity": "Combustion of fuels",
+      "why": "not a paper or pulp activity"
+     },
+     {
+      "key": "DE-206057",
+      "name": "Werk 939,Leuna, Unit 824",
+      "activity": "43",
+      "why": "not a paper or pulp activity"
+     }
+    ],
+    "giershagen": [
+     {
+      "key": "DE-261",
+      "name": "Herstellung von Hohlglas Marsberg",
+      "activity": "Glass",
+      "why": "same town – check if it is WEPA"
+     }
+    ],
+    "arnsberg": [
+     {
+      "key": "DE-210526",
+      "name": "Spanplattenwerk Arnsberg",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     }
+    ],
+    "lille": [
+     {
+      "key": "FR-981",
+      "name": "CHR DE LILLE",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "FR-951",
+      "name": "TEREOS - Sucrerie de LILLERS",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "FR-969",
+      "name": "VILLAE - CHAUFFERIE CENTRALE DE LILLE EST",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     }
+    ],
+    "troyes": [
+     {
+      "key": "FR-251",
+      "name": "Cogénération Les Noës Près Troyes",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "FR-240",
+      "name": "Usine Michelin de Troyes",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     }
+    ],
+    "annonay": [
+     {
+      "key": "FR-209262",
+      "name": "MP HYGIENE - Papeterie d'Annonay",
+      "activity": "Pulp production",
+      "why": "same town – check if it is WEPA"
+     }
+    ],
+    "cassino": [
+     {
+      "key": "IT-207182",
+      "name": "CENTRALE DI CASSINO",
+      "activity": "Combustion of fuels",
+      "why": "not a paper or pulp activity"
+     }
+    ],
+    "lucca-porcari": [
+     {
+      "key": "IT-387",
+      "name": "PORCARI",
+      "activity": "Combustion of fuels",
+      "why": "same town – check if it is WEPA"
+     },
+     {
+      "key": "IT-384",
+      "name": "Stabilimento di Porcari",
+      "activity": "Pulp, paper and board",
+      "why": "same town – check if it is WEPA"
+     }
+    ],
+    "swalmen": [
+     {
+      "key": "NL-83",
+      "name": "Smurfit Westrock Roermond Paper B.V.",
+      "activity": "Paper or cardboard production",
+      "why": "same town – check if it is WEPA"
+     }
+    ]
    }
   },
   "essity": {

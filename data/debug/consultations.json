@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-09T06:25:46+00:00",
+ "fetched": "2026-11-09T08:38:18+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,13 +12,13 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
+     "last",
      "totalPages",
      "totalElements",
-     "last",
+     "sort",
      "numberOfElements",
      "size",
      "number",
-     "sort",
      "first",
      "empty"
     ]
@@ -39,12 +39,6 @@
       "feedbackStartDate": "2026/11/06 12:17:52",
       "feedbackEndDate": "2026/12/04 23:59:59",
       "isCurrent": true
-     }
-    ],
-    "topics": [
-     {
-      "code": "AGRI",
-      "label": "Agriculture and rural development"
      }
     ],
     "initiativeTranslations": [
@@ -167,6 +161,12 @@
       "value": "Tullkvoter – beräkning av referenskvantiteter",
       "language": "SV",
       "field": "SHORT_TITLE"
+     }
+    ],
+    "topics": [
+     {
+      "code": "AGRI",
+      "label": "Agriculture and rural development"
      }
     ]
    },

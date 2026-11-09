@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T06:25:46",
+ "updated": "2026-11-09T08:38:18",
  "consultations": [
   {
    "id": "19292.0",
@@ -725,7 +725,255 @@
    },
    "url": "https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0039%28COD%29",
    "changed": null
+  },
+  "ied": {
+   "ref": "2022/0104(COD)",
+   "title": "Amending Directive 2010/75/EU of the European Parliament and of the Council of 24 November 2010 on industrial emissions (integrated pollution prevention and control) and Council Directive 1999/31/EC of 26 April 1999 on the landfill of waste",
+   "steps": [
+    {
+     "date": "2022-05-02",
+     "label": "Plenary activity"
+    },
+    {
+     "date": "2022-05-02",
+     "label": "Referral"
+    },
+    {
+     "date": "2022-10-10",
+     "label": "Committee tabling opinion"
+    },
+    {
+     "date": "2022-11-07",
+     "label": "Committee tabling opinion"
+    },
+    {
+     "date": "2022-11-14",
+     "label": "Committee tabling report"
+    },
+    {
+     "date": "2023-03-28",
+     "label": "Committee adopting opinion"
+    },
+    {
+     "date": "2023-04-25",
+     "label": "Committee adopting opinion"
+    },
+    {
+     "date": "2023-05-24",
+     "label": "Committee adopting report"
+    },
+    {
+     "date": "2023-07-10",
+     "label": "Plenary debate"
+    },
+    {
+     "date": "2023-07-11",
+     "label": "Plenary amend"
+    },
+    {
+     "date": "2023-07-11",
+     "label": "Plenary refer committee interinstitutional negotiations"
+    },
+    {
+     "date": "2023-07-11",
+     "label": "Plenary vote"
+    },
+    {
+     "date": "2023-07-11",
+     "label": "Plenary vote results"
+    },
+    {
+     "date": "2024-01-11",
+     "label": "Committee approve provisional agreement"
+    },
+    {
+     "date": "2024-03-12",
+     "label": "Plenary amend proposal"
+    },
+    {
+     "date": "2024-03-12",
+     "label": "Plenary vote"
+    },
+    {
+     "date": "2024-03-12",
+     "label": "Plenary vote results"
+    },
+    {
+     "date": "2024-04-24",
+     "label": "Signature"
+    },
+    {
+     "date": "2024-07-15",
+     "label": "Publication official journal"
+    }
+   ],
+   "latest": {
+    "date": "2024-07-15",
+    "label": "Publication official journal"
+   },
+   "url": "https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0104%28COD%29",
+   "changed": null
+  },
+  "energy": {
+   "ref": "2021/0203(COD)",
+   "title": "Energy efficiency (recast)",
+   "steps": [
+    {
+     "date": "2021-09-13",
+     "label": "Plenary activity"
+    },
+    {
+     "date": "2021-09-13",
+     "label": "Referral"
+    },
+    {
+     "date": "2021-10-21",
+     "label": "Plenary activity"
+    },
+    {
+     "date": "2021-11-11",
+     "label": "Plenary activity"
+    },
+    {
+     "date": "2022-09-12",
+     "label": "Plenary activity"
+    },
+    {
+     "date": "2022-09-12",
+     "label": "Plenary debate"
+    },
+    {
+     "date": "2022-09-14",
+     "label": "Plenary amend"
+    },
+    {
+     "date": "2022-09-14",
+     "label": "Plenary refer committee interinstitutional negotiations"
+    },
+    {
+     "date": "2022-09-14",
+     "label": "Plenary vote"
+    },
+    {
+     "date": "2022-09-14",
+     "label": "Plenary vote results"
+    },
+    {
+     "date": "2023-07-10",
+     "label": "Plenary debate"
+    },
+    {
+     "date": "2023-07-11",
+     "label": "Plenary adopt position"
+    },
+    {
+     "date": "2023-07-11",
+     "label": "Plenary vote"
+    },
+    {
+     "date": "2023-07-11",
+     "label": "Plenary vote results"
+    },
+    {
+     "date": "2023-09-11",
+     "label": "Plenary activity"
+    },
+    {
+     "date": "2023-09-13",
+     "label": "Signature"
+    },
+    {
+     "date": "2023-09-20",
+     "label": "Publication official journal"
+    }
+   ],
+   "latest": {
+    "date": "2023-09-20",
+    "label": "Publication official journal"
+   },
+   "url": "https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference=2021/0203%28COD%29",
+   "changed": null
+  },
+  "water": {
+   "ref": "2022/0345(COD)",
+   "title": "Urban wastewater treatment (recast)",
+   "steps": [
+    {
+     "date": "2023-01-19",
+     "label": "Referral"
+    },
+    {
+     "date": "2023-03-27",
+     "label": "Committee tabling report"
+    },
+    {
+     "date": "2023-05-23",
+     "label": "Committee adopting opinion"
+    },
+    {
+     "date": "2023-09-07",
+     "label": "Committee adopting opinion"
+    },
+    {
+     "date": "2023-09-20",
+     "label": "Committee adopting report"
+    },
+    {
+     "date": "2023-09-26",
+     "label": "Tabling plenary"
+    },
+    {
+     "date": "2023-10-05",
+     "label": "Plenary amend"
+    },
+    {
+     "date": "2023-10-05",
+     "label": "Plenary debate"
+    },
+    {
+     "date": "2023-10-05",
+     "label": "Plenary refer committee interinstitutional negotiations"
+    },
+    {
+     "date": "2023-10-05",
+     "label": "Plenary vote"
+    },
+    {
+     "date": "2023-10-05",
+     "label": "Plenary vote results"
+    },
+    {
+     "date": "2024-03-11",
+     "label": "Committee approve provisional agreement"
+    },
+    {
+     "date": "2024-04-10",
+     "label": "Plenary amend proposal"
+    },
+    {
+     "date": "2024-04-10",
+     "label": "Plenary vote"
+    },
+    {
+     "date": "2024-04-10",
+     "label": "Plenary vote results"
+    },
+    {
+     "date": "2024-11-27",
+     "label": "Signature"
+    },
+    {
+     "date": "2024-12-12",
+     "label": "Publication official journal"
+    }
+   ],
+   "latest": {
+    "date": "2024-12-12",
+    "label": "Publication official journal"
+   },
+   "url": "https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference=2022/0345%28COD%29",
+   "changed": null
   }
  },
- "consultationsFetched": "2026-11-09T06:25:46"
+ "consultationsFetched": "2026-11-09T08:38:18"
 }

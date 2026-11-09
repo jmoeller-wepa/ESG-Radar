@@ -1,0 +1,197 @@
+{
+ "updated": "2026-11-09T08:51:15",
+ "file": "https://climate.ec.europa.eu/document/download/53018483-62b3-499e-9ab9-b4a831cc44f4_en?filename=verified_emissions_2025_en.xlsx",
+ "wepa": {
+  "matched": {
+   "PL-626": "piechowice",
+   "IT-452": "cassino",
+   "FR-947": "lille",
+   "DE-513": "arnsberg",
+   "DE-514": "giershagen",
+   "FR-4": "chateau-thierry",
+   "FR-932": "lille",
+   "DE-618": "leuna",
+   "FR-246": "troyes"
+  },
+  "missingEuSites": [
+   "Kriebstein",
+   "Mainz",
+   "Annonay (Davézieux)",
+   "Lucca – Capannori",
+   "Lucca – Porcari",
+   "Swalmen"
+  ],
+  "candidates": {
+   "mainz": [
+    {
+     "key": "DE-1779",
+     "name": "Anlage - Heizwerk 3/Universität Mainz",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "DE-362",
+     "name": "Brennanlage Werk Mainzlar",
+     "activity": "Ceramics",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "DE-771",
+     "name": "HW Lerchenberg Mainz",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "DE-847",
+     "name": "Heizzentrale Mainz",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "DE-1064",
+     "name": "Kraftwerk Mainz",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "DE-229",
+     "name": "RP 4-6034500 0010 Mainz",
+     "activity": "Glass",
+     "why": "same town – check if it is WEPA"
+    }
+   ],
+   "leuna": [
+    {
+     "key": "DE-1368",
+     "name": "GuD-Anlage Leuna",
+     "activity": "Combustion of fuels",
+     "why": "not a paper or pulp activity"
+    },
+    {
+     "key": "DE-202349",
+     "name": "Leuna SR 1,2",
+     "activity": "43",
+     "why": "not a paper or pulp activity"
+    },
+    {
+     "key": "DE-20",
+     "name": "Mineralölraffinerie Leuna",
+     "activity": "Refining of mineral oil",
+     "why": "not a paper or pulp activity"
+    },
+    {
+     "key": "DE-210619",
+     "name": "Polyethylen-Anlage / Train 4 in Leuna",
+     "activity": "42",
+     "why": "not a paper or pulp activity"
+    },
+    {
+     "key": "DE-210620",
+     "name": "Polyethylen-Anlage / Train 5 (Leuna)",
+     "activity": "42",
+     "why": "not a paper or pulp activity"
+    },
+    {
+     "key": "DE-1367",
+     "name": "Raffineriekraftwerk Leuna",
+     "activity": "Combustion of fuels",
+     "why": "not a paper or pulp activity"
+    },
+    {
+     "key": "DE-206057",
+     "name": "Werk 939,Leuna, Unit 824",
+     "activity": "43",
+     "why": "not a paper or pulp activity"
+    }
+   ],
+   "giershagen": [
+    {
+     "key": "DE-261",
+     "name": "Herstellung von Hohlglas Marsberg",
+     "activity": "Glass",
+     "why": "same town – check if it is WEPA"
+    }
+   ],
+   "arnsberg": [
+    {
+     "key": "DE-210526",
+     "name": "Spanplattenwerk Arnsberg",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    }
+   ],
+   "lille": [
+    {
+     "key": "FR-981",
+     "name": "CHR DE LILLE",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "FR-951",
+     "name": "TEREOS - Sucrerie de LILLERS",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "FR-969",
+     "name": "VILLAE - CHAUFFERIE CENTRALE DE LILLE EST",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    }
+   ],
+   "troyes": [
+    {
+     "key": "FR-251",
+     "name": "Cogénération Les Noës Près Troyes",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "FR-240",
+     "name": "Usine Michelin de Troyes",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    }
+   ],
+   "annonay": [
+    {
+     "key": "FR-209262",
+     "name": "MP HYGIENE - Papeterie d'Annonay",
+     "activity": "Pulp production",
+     "why": "same town – check if it is WEPA"
+    }
+   ],
+   "cassino": [
+    {
+     "key": "IT-207182",
+     "name": "CENTRALE DI CASSINO",
+     "activity": "Combustion of fuels",
+     "why": "not a paper or pulp activity"
+    }
+   ],
+   "lucca-porcari": [
+    {
+     "key": "IT-387",
+     "name": "PORCARI",
+     "activity": "Combustion of fuels",
+     "why": "same town – check if it is WEPA"
+    },
+    {
+     "key": "IT-384",
+     "name": "Stabilimento di Porcari",
+     "activity": "Pulp, paper and board",
+     "why": "same town – check if it is WEPA"
+    }
+   ],
+   "swalmen": [
+    {
+     "key": "NL-83",
+     "name": "Smurfit Westrock Roermond Paper B.V.",
+     "activity": "Paper or cardboard production",
+     "why": "same town – check if it is WEPA"
+    }
+   ]
+  }
+ }
+}

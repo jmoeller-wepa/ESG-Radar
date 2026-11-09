@@ -2,22 +2,47 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-09T06:25:41",
+    "lastFeedRun": "2026-11-09T08:38:04",
     "feedsSeen": [
       "Anthropic News",
+      "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "CDP & EcoVadis (via Google News)",
       "Claude Blog (Anthropic)",
+      "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
+      "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "Customers DE: dm, Rossmann (via Google News)",
+      "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
       "EFRAG (via Google News)",
       "ESG Dive",
       "ESG Today",
+      "EU energy & state aid for industry (via Google News)",
       "EUR-Lex · Official Journal",
+      "Ecolabels for tissue (via Google News)",
+      "Energy relief Germany (via Google News)",
+      "FSC & PEFC (via Google News)",
+      "GHG Protocol (via Google News)",
       "Google Gemini (via Google News)",
       "Harvard Law Forum on Corporate Governance",
+      "Industrial emissions & BAT (via Google News)",
+      "Industrieemissionen & BVT (via Google News)",
       "Microsoft 365 Blog",
       "Microsoft Fabric Blog",
       "Microsoft Foundry Blog",
+      "Niedrigwasser & Wasserentnahme (via Google News)",
       "OpenAI News",
       "Power BI Blog",
-      "SQLBI"
+      "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "SQLBI",
+      "WEPA sites · France (via Google News)",
+      "WEPA sites · Germany (via Google News)",
+      "WEPA sites · Italy (via Google News)",
+      "WEPA sites · Netherlands (via Google News)",
+      "WEPA sites · Poland (via Google News)",
+      "WEPA sites · UK (via Google News)",
+      "Water policy & wastewater (via Google News)"
     ]
   },
   "entries": [
@@ -3432,6 +3457,3927 @@
       "nextDateLabel": null,
       "source": "ESG Dive",
       "url": "https://www.esgdive.com/news/logitech-launches-supply-chain-decarbonization-program-chain-reaction/874003/",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-312cf653ca",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "climate",
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "LAT Water Technologies: revised Industrial Emissions Directive puts water efficiency into industrial permits - The National Law Review",
+      "summary": "LAT Water Technologies: revised Industrial Emissions Directive puts water efficiency into industrial permits The National Law Review",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQ3JvTk56M2VYRFFLS3lUYmlHNGZ4emZMNU9UNmlHY0R1aXo3TXRseUhJV2U0RkdNOTlVUWItbi1HUkQtUjJqaFliTk93cVpzLThxenNoLVBoclFWOUZReVd4SDJFbVFOYVRHeUY4UE5CZGNLM0k1REYxSWJjOHJwWFZ3QWxFMDlfN1BOaE5nRjNmOWx5c210bU5CMXpFVXJpd1pPMTBOUXJWREl3cGlSNm9n?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a6bb57fab1",
+      "date": "2026-10-18",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "How BREF for the Production of Batteries in Gigafactories is developed – Interview with Diogo Botelho Moniz - CEEnergynews",
+      "summary": "How BREF for the Production of Batteries in Gigafactories is developed – Interview with Diogo Botelho Moniz CEEnergynews",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNd3FLNDM0TlhNeFhWZThTMHBSQVVlTDdrQ2lFYWxHN1pSY3pFLTl0VllYSGZaeVFzZGZ4cUZGdlZ1dnZFOHNCbUk1Mi1EbktzaU5JLUV2UUJkcDd5a1ZCdDNCOW5wZkt1MGVaZWtTSC1lc1N5Z2dqZUFSdTFJUFkzRy1pNG55OU1pQ00w?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-570d4f49db",
+      "date": "2026-11-05",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Budget in brief | Budget 2026 - Canada.ca",
+      "summary": "Budget in brief | Budget 2026 Canada.ca",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBpbllUUlRFVTdMZUMwbXUtX3E0SkVaU3FINFJ4Z2k5bFZ3VUJGeG1jMG5iV0ZvR1hHa2xjZWliTU9BOGI4QTVHWTVGR2xfc016YW85SXk2bE15WjJ2QkhDcGIzOWhxdldzVURVX203c3Y?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-87b10d3513",
+      "date": "2026-10-15",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Environment Agency publishes updated permit guidance for intensive farms - National Pig Association",
+      "summary": "Environment Agency publishes updated permit guidance for intensive farms National Pig Association",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNENKYWlJWGFMeU13ZnZqMmNwaGlGQm1hcWR4a2ZXSTUyd1JCSFY4RURzWjFGeDZIMEowZENYZnhnYlFxdVUzeXlrVnpKeHVFbjd5QmFXRHJPaUc3SkVVT2FGR3p2RVppYmRoTFQ4bkQwb3RaSmhQMnh1SjJjUllsNEpfU3dCMlRxWWE1aWcweU1EM1kycGt4Qm8xZnJDaVhXZ19nNGRUYUhqdmdibEFR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b7a667d29e",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Regenerative Thermal Oxidisers: Reducing odour abatement costs in the UK water industry - Water Magazine",
+      "summary": "Regenerative Thermal Oxidisers: Reducing odour abatement costs in the UK water industry Water Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPNVJ4YkhfSzQ2NEdyRTk5NDY0X0hlVVRlVFdpYWl0OU9HbTBRWk9Xc1NBZjRTV2cxM0s1WTV1VFc4RFdkbGFDWFgzWW82cG1jejhRRE1SMlRISWpEZDVsZEJNU2RjUHlrTHItOFRzYnFRc0FPbkJwSUp0aTliaGtBRVZfSVVyOUVMZm9KQmEwNEd0M1U2VmhIRkNLMktUT2YzQWVBR0IyNmRHYUVVeWtKVTUtTXAzSm1WX2pYSEF4U2JXUG05ZmI1Z1Z3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-44f41953ed",
+      "date": "2026-10-31",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Up to 120 poultry farms may face new EU permit rules - Irish Farmers Journal",
+      "summary": "Up to 120 poultry farms may face new EU permit rules Irish Farmers Journal",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPeGo5TkpEa1RINGx5aTNMNGF3OXJycTVMbzVrQmI0SnlVZ3RuMG5YSWdRZVloNG5uZGFyTDZ4bzZabmlBdkZTSTFlMHNlLVEtTHB2cTk3aDZyMWRLVG41QmszQW1wcGlUaGI3UGd5VFpVc3RTb2xkckgzcFN4cFRCN1hYbkVpVFYtaFc1X3BZYVBocHFLNF90cWZBZ3FuQlM3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-9b3dfe068a",
+      "date": "2026-10-19",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Geflügelhaltung: Neue Vorgaben für Emissionen für Ställe - top agrar",
+      "summary": "Geflügelhaltung: Neue Vorgaben für Emissionen für Ställe top agrar",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrieemissionen & BVT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPNlJNc0xlZkpObzI5OVBDS1ZwTk9FWFNpalRfNU1qb253R3RVeW5ZbnU0bmNCNGFOdEhxWktkOEVKNGZsd0lBY2dOUEppTDNYUFVIM3ROLTRESTMyUHVhLXB6Rm15M3V1THQtN2hZd09WbzcwNDFBSlU0aGpsbmJDSXh4XzRiRWpJeV9YLVFoVEE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b1c8157a3d",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Methan und Ammoniak: DUH sieht Emissions-Hotspot in Weser-Ems - food-monitor",
+      "summary": "Methan und Ammoniak: DUH sieht Emissions-Hotspot in Weser-Ems food-monitor",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrieemissionen & BVT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeFB5bmFFTnljMk5SUDBSR0pWTEthdFhwaXFITzRzMkI5elRiX1Vzdllpd2JOTkhIcTNtSEkyejVnUXV3b2lfOWJpVFRLVHNDR3BueXlSajR4U1AwTnptVTBTTHR6aVRaV3hDNkt5SGZSUVd1TzAyM2xTOVltYnJNM1k2NnROcUstdXRDSEhISGs5dENHUmVhX3J6TjJFdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-820711c8c9",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Ausstoß von Methan und Ammoniak: Region Weser-Ems europaweit vorn - NDR.de",
+      "summary": "Ausstoß von Methan und Ammoniak: Region Weser-Ems europaweit vorn NDR.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrieemissionen & BVT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcGphQnpIQ2ZVdXAxMWF4WTJrWTMtNnVzd3BjNldZbS1zVXRZVFNOb2RRbzdKVzN5WmxFWDdJY0xWQ0FfdUpkTkRRMHZ5YnpIUVZraFJQZjBkY1BCZmRTWWx3SDhwbFBJWjFWZEpBNDhKckZMUnN6cnBKQW9reVVWcFlBYUNMUTlXS3pza21aZGwxNkN2aExPaUdrUHctWGxTcXFTZFU2a0pwSXZ0RWhfTFl0SDZvM3FwYkJjNVNoRi1mY1RrNmc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-9c587e5bc6",
+      "date": "2026-10-19",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "TA Luft - top agrar",
+      "summary": "TA Luft top agrar",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrieemissionen & BVT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBVakFnQUhHVWlJYXpxbnhvTXRZbHdHOHRrWmdMS2RaTVpGZ29ncW5iTzFtNTd4OFEtUUlGS3h0WFhHcGo4cUVsWV91aTRxVXJqOHBkRm8zMmxXNERPQUZDaldxUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-f5c1ce27e6",
+      "date": "2026-11-01",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Europa ändert seine Strategie und will die Ölraffinerien behalten. - Vietnam.vn",
+      "summary": "Europa ändert seine Strategie und will die Ölraffinerien behalten. Vietnam.vn",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrieemissionen & BVT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNc05ReTB1WlFGQkRKdWQ4U0x3SHF1eTNPRXN1V3FDRU8tNUlNenY3aldwYkE5YnlaSlVYOW5PYXhEbWtDVU93SV9vYXBGV3RvN1B6MFpNdmd6bUNLV20wLTVUbzU5a0JrblFmUE9ybG5TYjdyUThGOE1sakVESi0xeVFrZUUyb0M3ZENJOFBSSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-85cb5f9c5e",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Energiegesetze-Ticker: Welches Vorhaben wie weit ist - ZFK – Zeitung für kommunale Wirtschaft",
+      "summary": "Energiegesetze-Ticker: Welches Vorhaben wie weit ist ZFK – Zeitung für kommunale Wirtschaft",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVVlma0dHazV3ZDlTaVFndDB5dkc0WWZIdE45RzJVZW1rOGw0QWxzUVJ1bnlyMmJnS0dBaWxid3lmTVNGWXp6a1U4dDZXRnRrY2lKTHVHX29HcDlydHpyZVNUN3prQUw2Z0JleEphOGZVOGM0eFpreVl4YWgtSEdzS1A0YmdSZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6e646e3cad",
+      "date": "2026-10-14",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EnEfG: Praxisgerechte Entlastungen für Gartenbaubetriebe gefordert - Gabot.de",
+      "summary": "EnEfG: Praxisgerechte Entlastungen für Gartenbaubetriebe gefordert Gabot.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNWwwbWl5R2RKWVp1X2JCY0RCLTY5dkItcUtZa2g3ZlVkTWY2ZWZ0Z1g0c19QTDJSMWtYVkZXM3dURGFqSS10SUVFSXMtd0VPVUoycHhKSlpsNXVzdC1oNk9nZi1idVVQWUpnRm9Oczg5UHEwYXJhRmtncU9SSmdJaXFNc08tcFhBZ0NHbFFwdEM1dkhSLTRZSHpZaUZyYnMwVXdkUEZzQlhuS28?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-3c873db615",
+      "date": "2026-10-12",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Energiepolitik: Krisenfest und marktwirtschaftlich - Handelsblatt Live",
+      "summary": "Energiepolitik: Krisenfest und marktwirtschaftlich Handelsblatt Live",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbFozOWpQTHhHUGJBWFVDQklJdmZpZ0I3UngwSk5kRnNjRV9SeHBCR0Z3dDcxTWhlbG5WWGtfMTU5cjNUdVIzOFpuZzFXMjdaV1VlcEZNQ2hjMm9EZ1FqV0ZOZ2lRX3A2bkN0bjJVRFJUaTVkb2EtQjhmZmc0VEFhTDQ2RjJvbHc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-279ab718c7",
+      "date": "2026-10-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Ener­­gieeffizienzgesetz: Regierung will Energieregeln für Rechenzentren lockern - ComputerBase",
+      "summary": "Ener­­gieeffizienzgesetz: Regierung will Energieregeln für Rechenzentren lockern ComputerBase",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOV2RicDhycll0a25jRGhYdDNxYjNZWkViQjBzNjNEZVZ1ZVBhWjZvY2t1b2tKMGJpaTdEX0l0MUhVSlpSRy1JdndSaU83QnY2c21NaEtsb1FCZ1VlVnhZQ3I3bXJfX3ZqOUdvVmVSYlNsOXlldDNESE9vblcyemNwSGJjOGJEWkZJcl9DMFBDNDZURlduLWdrQ0FvSDVGbWNVejF6WXktSmRfRGRtMXBZLTlUUk5lNjZzWWdGX2szNlgxY01rdWpWTFl3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ef3d095c10",
+      "date": "2026-10-27",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Industriestrompreis - Bei Strom-Subvention droht 1,1-Milliarden-Euro-Hammer - Yahoo Nachrichten",
+      "summary": "Industriestrompreis - Bei Strom-Subvention droht 1,1-Milliarden-Euro-Hammer Yahoo Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOGZfdEdSa0w1YkkwbWRsYWV1SjQ3Q1NWZVEyRjFxSTZnQ0MxbHZxR0RXcnZxUTBRY0t2YnJEX3JJdW0xcWg4bWM3RjRDUUhFS3ZLQ0tSVzFzTE1VSm5ybklWLXRUUGlxUkpaYjcwekNMVWhQXzdNdmp4RzN2UUp0RU0zQ05nSWxPcUpXRlE3NzRDYms1TWs1ejhTbzZxbGN0alF3LQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0dc3c79ce4",
+      "date": "2026-10-14",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Österreichs Industriestrompreis: Warum die Papierindustrie vor Wettbewerbsnachteilen warnt - Industriemagazin",
+      "summary": "Österreichs Industriestrompreis: Warum die Papierindustrie vor Wettbewerbsnachteilen warnt Industriemagazin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaXI1ZDVrZEQ5ZDAwYy03VWFVMEdMV3hHTC1XVUdvVnUwTzdnNnlXOC05OTViWXhMRzQtYlF2ZXRWckgzSVpFbC0xUWdnVXFLSkpITVVrT3QwMVJERFg2OEFoajN1bzVlSnhJS3BOc1YyLTAtYTlKMXJ1VElNdTgxckdVQzZUVDNSRy1QdWJfLW1aQnZBcHNVMzlDNFVCX0ItSXNR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-794c0a30c4",
+      "date": "2026-10-27",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Energieverbrauchseffektivität von 1,2: Der Grenzwert des Energieeffizienzgesetzes gilt für Rechenzentren, die seit dem 1. Juli 2026 in Betrieb gehen - PresseBox",
+      "summary": "Energieverbrauchseffektivität von 1,2: Der Grenzwert des Energieeffizienzgesetzes gilt für Rechenzentren, die seit dem 1. Juli 2026 in Betrieb gehen PresseBox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQZDVYMGhXamgwb2IzUFJuTmZDRnBkcVU3OEVoMVh0Vk5xMVhwV05TcFJ5OEpDeC0zaW1QWWdNd1pyWVlOWVZ5a3RtLUFrOWZlWHg4V3RZLUFicWZjYm5XekxxUXpRVEJRQjdaNVpJNU1BZ1l6WUtFcEFyZElXYXZzX3dhYkphaG9VVHd4eEFpLU5yMUQ2ZTdETm10dWxyUWRpandGcmZINTVFZ3ZRRlNkeU9ld3lrUm5URkRuekJyb3R5LVE2Z1h0enRyM3dsRUdSR05BakJtaDIzVFpzZXRMN3JlRTZFVjVqTlBseUFXZTUxT1QwWE84cDJuTmxMeExMcUNGeHd2UkxtX1phTjhFQ3djVlFMdVlPZ2JSS05HSkxTN29lOTFLWk1FTHI0aXhXOTFMZGFSS3ZpVWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-284729d1dd",
+      "date": "2026-10-15",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Energieeffizienzgesetz: Neue Pflichten für energieintensive Betriebe möglich - wko.at",
+      "summary": "Energieeffizienzgesetz: Neue Pflichten für energieintensive Betriebe möglich wko.at",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOaWxJd1JGSFVUZkMtMi14c050U3RhTG9tVWp1OWVZRFd0MXJsbnVLTEdSUXd6OGNvbG16THJKOXpNVkN4NGQxZkhvYmVOVFFpREwya0NoT2k5OTJoUW1GYTE3RzRISVlxWVVUMnZTN3BSX0hIVVhPMGU3Ql9MTm9kY3RsS0E4ZG5EaXVxRjZIRGJ0V291?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-201225ccc7",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Industriestrompreis: IV-Niederösterreich fordert Einführung ab 2027 - Börse Express",
+      "summary": "Industriestrompreis: IV-Niederösterreich fordert Einführung ab 2027 Börse Express",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSm4xSFBoM012eE9wcVlsLXBITEJTUjVlcjFMR1NjVGVxajBEYWJZVHJ1bWFTbUdfRUdyTVZyYXJOQm8xaEV4ZUc3cU1HMGkzWjA1SlhBeGNrNFJoWnczbkpZcTNlc0lHd1VuX0RaNkdlS3NRRXhqUGVXQk9YV25YTW95enhiWm5wYzdwbHpZNVpFOGlBZ0VxTFRJNFhnNlNuSmdwSU5rQnJnaWdBRlc1WkhCeUx0WGdRTFk4ZA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-27c5db4b74",
+      "date": "2026-10-27",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Energieeffizienzgesetz-Novelle 2026 - wko.at",
+      "summary": "Energieeffizienzgesetz-Novelle 2026 wko.at",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBEMWVDMm1pdmFlLXpKbHN4V3hwa3RZLVU4cGw0dFZWUFdGRWdtYXdoc3JwWXBZc3gxMmlreWlLVXduNVAyS01oVnMyT1NJZW1qbk1Od1QzNkhVcjk5dDdxS2hUWHc3Uko1MmVmWkZYRThVOEg0UmtUbV9IQ0I?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-1afbe259e8",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "The EU finally has an electrification plan; can it go further to strengthen European industry? - Clean Air Task Force",
+      "summary": "The EU finally has an electrification plan; can it go further to strengthen European industry? Clean Air Task Force",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTkZieFVkXzFybmhzUFkxRUVERTU4NWFXMWpqZmxsdHlLb2lRQnRLTnpJTExFeEJaeXp2ckJYOXZhRWg3QUdfX09aRGdRSGszUndkREpONWF4ZEdnOWRCMjdIb0RCTW5EVU1xYTNUb0pJeVBjbDFNamNOSDd2aV83eVJzczRPeXNnZzd3WjBnNk9LeGxpb3pPUVV3N1o4ZTdqQ0x3bFhjU1YxcHdCQUw0cg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-cbb7f04353",
+      "date": "2026-11-06",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "REPowerEU - European Commission",
+      "summary": "REPowerEU European Commission",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tZkVmTXRzMVFiMVIyemJTNzdqT3BEcTFuYWVpY28zSTAtbnpjbEdiOHFCQ3hIN3JoVmNrUl9jeHg3emxkRGdabExzMlhjTkM0XzBUc3daSDJxZVV0dURtUzB4RGhyZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-3b9b7dd2c5",
+      "date": "2026-10-11",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Pittsfield schools say choice departures cost $6.48M - Berkshire Eagle",
+      "summary": "Pittsfield schools say choice departures cost $6.48M Berkshire Eagle",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTm1kZF9sYzh1alh1UHY4X2wwQ2RnUUFDdUxEM2N5YTJHV3Z5aFRIOXh5bk5PRUJrV0VuOWFmblA1RlFPTl9fNHB1cGhZNm5rR3lXbjVTa1BQaExZYnI3bk5TdDB6RFZscUxHTUpzZE1lNHg1ZXA2NVhZaDNnUUFZZTdURU41bzJ3WDgwNUJwdjRhb25XaWdoOWgwTHhjN0xwQnNKNUlFTUVkclBuN2FaVVFfaTFDRHVOd21RYUpmRkFMRFEzclpnN05ZYm5rbGc3anN0YmNOYW82dkU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-70ba9a4b53",
+      "date": "2026-10-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Poland earmarks over €1 billion to help heavy industry go green - TVP World",
+      "summary": "Poland earmarks over €1 billion to help heavy industry go green TVP World",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQX3NXaDZlei1SVHFjcU5kTVVXdVZtT3lka1liNG9OaFlvNzhUMzFfRHJsSkFJa3ZqVXFoSWY4ZDJlUWQtWnc3czRrX2lyYnNJa3BOak1PLU5pc0tJMXpwWTR4bFR6OEVWcTFnSkNyU3N2MUNtRVF6RlFyc1pjZUVjcE9sRHFNWHFodGRGU1JwMGhsVmR5ZnZvS1N2Z0Nhb1owanloZUh5OWE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b8c52d88d1",
+      "date": "2026-10-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Illinois Is Facing a 'Fiscal Crunch' As Chicago Demands More State Aid. Here's How It Might Affect the State's K-12 Market - Education Week",
+      "summary": "Illinois Is Facing a 'Fiscal Crunch' As Chicago Demands More State Aid. Here's How It Might Affect the State's K-12 Market Education Week",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPTkdya3RoSnFxbHUxMEVoQXppRmU2Tkc2RVJobm1Ra3lqV0JZS01HWHpFUHg5RENSQzJJZW9nUDhmYmlmYWMwMXVLeFhYNDlKNXVsSm5hVmhKSk9uUk1qVE1WTDFydUNxLW1wY2wyS01wdnhKQ0Q3aEZWbEhCdHR0Ujk4RDh3ckJTSGR1cnB4VkNEcVhldFRxNTZZV3dqV1RwSFVXOVZwVWxJLUVDYktqa2IzY0NBb2Q2bGp6VHpJRG9GMzlzdTRMMmhjLWRXRTZrR1lmVDNVUGtvU3FyOFRTNHdDUFV3T1ZXb283blVHZlgtN09HdS1ZYjVEZEhnWmI4YlR1cQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-970321f1d9",
+      "date": "2026-10-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Salesianum, Delaware State receive state aid as Delaware continues to invest in sports - WDEL",
+      "summary": "Salesianum, Delaware State receive state aid as Delaware continues to invest in sports WDEL",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQTWJTNFN5UGEwY3Fhemw1MWwxQVJMX21xNGp1OWhHMnlqZUNiM3BPVlFDV1VIelA1VmRBUnVUbERvczR1MWdpWFpKbThlTnN4Zlk5WVVLWnNnSGVacFNXdjNYajA3NGxnX1UtVXcyTHdmbUlvVHJZeHlVRHlCbEUxZ2xSc3ppZkpGbk1XendTSjBGUTltY0VfdjBrWVQ3QUdTNTNfVDYxZkF2Q3c1bVV2cWRzNTJxMF8zakR1UVFiSHA4V2JDZlJvS190djFCWGlNeTEzbnpobmZZWUlTQnRmNVhFdzB1SHB2Wkt4WjhrREh1UXFUVEE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-eebf040a3c",
+      "date": "2026-10-28",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU approves €319 million state aid to Austrian semiconductor factory - Euronews.com",
+      "summary": "EU approves €319 million state aid to Austrian semiconductor factory Euronews.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNa0xFQ1h3ekNRS3BnSlJwNDYxVmlpT2xiN3c1ek1xbHVRc0pPblBCcWtNTUFWSVlfbkpVcmFKNEtWNUxnMkU1WkI0aFpFZG9jWTBuTlctazE2dllDa3pqaEJveVMxUEhKRERrRFBpbmVKZzlxeVBzNGhNM09rWGZhQW5DbGRNVU0tMndEY25NSlllblExVUx4dXZSSDRqbFV3NHZ1Q2h2NmtRcUZyWEJJTkctSnU2S2xXYkNoU3p3a2Rha3Bf?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-529f6fe4c1",
+      "date": "2026-10-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU backs €60m aid plan for energy-intensive firms in Croatia - The Brussels Times",
+      "summary": "EU backs €60m aid plan for energy-intensive firms in Croatia The Brussels Times",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMWdaNlJWVnNfTUI0UFhNLTgyOU1OaFBvVFIxWmhaQWpqdWdvR1FCcThzdHRkSDdXTDFEYk5fYndyRXBfX29WRTZoSmh5dVhwN1lhVTQzaHpzN2pLU001eUJYZkprR3ZTeU1rbGJJSldiUU1DNjZvc3lZR0x2X1FIQTJCbS1XWDVrWXh2dDJxandxNDdxYS1qNVBvV3lVWUU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-39cf4a3a45",
+      "date": "2026-10-19",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Hillsborough Residents Urged To Weigh In On State School Funding Review - Patch",
+      "summary": "Hillsborough Residents Urged To Weigh In On State School Funding Review Patch",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQWMwUmRWdjRyeDcwUEtZc2dzSEtHSVdENEozNzVseVNjX3BaMVVTZzlISkotRTlyYWpvQnhrVHRFVHhtdjV1UmVHWm9FV3dOZlFFcTRJQ2dOWGdrQzJHbjlyOHRpOXIzZFVJR0l0NjRPZEljX2Q3SUFXX3lFQkpkTzBXaGljUWJtRG5nNDlEelB3bDF1ZmdkM0NJVEY1Nm5ObGZxTDFNQ0xHR2VtWk5CQ25PckxFVzlt?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-1cb5724f40",
+      "date": "2026-10-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Oberlander, Kelly Debate Taxes, Housing and State Aid in 36th District Race - The Greenwich Sentinel",
+      "summary": "Oberlander, Kelly Debate Taxes, Housing and State Aid in 36th District Race The Greenwich Sentinel",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNRWNHNXNBYlFxRmI5SlRzZVNmMHRCNEJFR1lMQ1Y3eDBuUkRFZklzNzVCZ2dUZEFDVTI0dzRnWVhucVJwMnJkcjVRcjlPTUVzTkFXYzJLeV9kX2RuLXNQR24yY1lISXJsRmd6Y0VKZGRsVUNwci1qYmlMUHQtcnNNVTdYbTVsb3RXWmo0NFhxYkY0Z3V0VVhJNnAzd3JkQTBnX2FWOF94a19QX1Y0OUQ1RzM2UHpXWmJEeldv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-4d5d5f377c",
+      "date": "2026-10-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "GHG Protocol to Push Back Stricter Scope 2 Reporting Rules After Corporate Objections - ESG Today",
+      "summary": "GHG Protocol to Push Back Stricter Scope 2 Reporting Rules After Corporate Objections ESG Today",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPOEVSNy1ReF85bWg4bXpDS0VOZ2tfT3JqbUVRb3I0a29tOWdkLTFUWDYxaXhUOW16YWdRZlNrVlhtZFBzRHNETjhlTy1Za3czb2lEZnZpelNxUW0wSWtTbFJ0Y0psaHFHYzJlNF9UWElLWlhKcERCRmhTclpkcVdIMGE4enhzMXNfWUJmT0hhU3Rsc1lMdjZJRk1nNFp3aDVfMlNoOHZfd1lpWWpKdVBlLQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-747fb52edf",
+      "date": "2026-10-22",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Scope 2 in Practice: How the Rules Are Changing and What to Do Now - Trellis Group",
+      "summary": "Scope 2 in Practice: How the Rules Are Changing and What to Do Now Trellis Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaTA1NWtkSUdET2lWSXM4S3Q5VDFqaFFEZVByTzRiTWxwbl9HX0N2WE9kSFdTV1J6U2dnT2ppOWhzOFNrSjBVQ2cwUGdMS184NXh4NzQ0NzRFaUE5V3pBbUk2QWlRNWhRSlZNZG1Pb2xqRkUzVE9tQklpdFV6MFd4YzVPYUpxNFROSzBQcDZFcw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c585562f00",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Where Is the Greenhouse Gas Protocol’s Missing Legacy Clause? - Corporate Energy Buyers Association",
+      "summary": "Where Is the Greenhouse Gas Protocol’s Missing Legacy Clause? Corporate Energy Buyers Association",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxONEJ3dW9zVjIwM282c0FjM0Rwa3MtU3A5VFYwcHgtMDZBazUxb2RVd0N2NXBBWmU5YTFBQjVzUFRRcVlJUkdRUko5dVBia0lGREYxTWRRWUN1cE1xekR4UWxkRHZzNG1zOU13VDFSQS1qZEM5VVdOSUlMREFHU2R4MDVpZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-7181868ee1",
+      "date": "2026-10-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "GHG Protocol Board Backs Two Scope 2 Methods, Phasing Companies Toward Hourly-Matched Claims - ESG News",
+      "summary": "GHG Protocol Board Backs Two Scope 2 Methods, Phasing Companies Toward Hourly-Matched Claims ESG News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1SaHd3Ykh1QW90VmtsTkI4Q2Z2OUlhc2Vvam5KaEh6cDNqZWZJZjdCcUlsTVhDV1BKQWdxbmVnc0cxeFppS1JKelpYcldhT3pXUnotNFQzZVBwcFJPMUZjZDVXaGx5dVBiWWR5ekNrUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0ff34a53c4",
+      "date": "2026-10-29",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "GHG Protocol Delays Tougher Scope 2 Rules After Corporate Pushback - CarbonCredits.com",
+      "summary": "GHG Protocol Delays Tougher Scope 2 Rules After Corporate Pushback CarbonCredits.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE01M1JVSTZzaFBTelp5b3pmSzBMOW5MbHFJSmJOMVByVkdRemJ2TjF5Z1phdl9nWHRvRnB1d3Q0ZlJtWlZTWkItZW8wTzNYTFNsSFlkMWc1YXFzRmxTaUo3Z2ZvN29INTNjQ1FKOEEtM3Z4UlV5V1dtRTNPY2k?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-54900caaac",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "The GHG Protocol Forestry Controversy Threatening CDR — with Danny Cullenward - Kleinman Center for Energy Policy",
+      "summary": "The GHG Protocol Forestry Controversy Threatening CDR — with Danny Cullenward Kleinman Center for Energy Policy",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMlBPbnNGZFZ2eEZ5dU5qU2FBSU1FVW1BMU5MWlY4cE5BU2RUS0ZLcmRTRFhpUU14WU1abVZMcTM3RThuc19PUjdQRHhJY1AxU2JvVGUzZWV0ZW9NcjdTVDJDNk4wbFlLc1V3VjFzMF9sazhkeDVDMHBUUnNkdXlMRkJuQlBuUFpCQWFwNElJalhJSjY0QU5sTDYxRlE5YWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-be18e3e496",
+      "date": "2026-10-27",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "GHG Protocol Delays Reporting Rules - ESG News.earth",
+      "summary": "GHG Protocol Delays Reporting Rules ESG News.earth",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQTZxU25ZYzd5TFA5ZkZPWjBDUDNyNk9pMmRvNnBLMlFhTzV4aG9ObjBQdTZhUGFma2pvSjVrZTR6RmdQZVN4X2tWZVBEWk5hYXNBUW9EQ2NKem5xSGtreUJzQ05iVVlmRXFLMmg3Wi1JM2xEeE9fc2huSHB6ZUJqdWF4c0htNFRGY2tuTg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-4a7a3408e6",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Sustainability leadership moves (2026) - Trellis Group",
+      "summary": "Sustainability leadership moves (2026) Trellis Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pdkxGM2ZBTWxNTUIzSldKcDNwZUNobFQ0R2lYbVRQaHE2V3ZtN1NIdm5SRml2bXZxbnZtNjlUa0FRMXV3SUV2WlhxekpRNU0yWVU2MFVIa3JxRVlieWFNR01wYkIwMFZXYVhyVQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c13a22a591",
+      "date": "2026-11-08",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "4 steps for conducting a greenhouse gas inventory according to international standards. - Vietnam.vn",
+      "summary": "4 steps for conducting a greenhouse gas inventory according to international standards. Vietnam.vn",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1QVXZndFdoUlBtYUVKNnB5T3dDZndrR0VtNGhkUG1GLUtMMnNBWDhZUGU0eExOUmlMSzRTdDlKTlhySEhqVExZbmVLOGNFOW4td0RXUGQ0SzVtSUtHTFFKWTFIc3FUdEpTRWx1V2JxcktfWVdXVlE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-20f37d5271",
+      "date": "2026-11-02",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Best carbon management software for UK businesses in 2026 - London Daily News",
+      "summary": "Best carbon management software for UK businesses in 2026 London Daily News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQNXhHYmFJbUpodGo4Q3BvSDNMX2R0ZEJxOFRDRnBmWXpWUV9Sb1o0ZGVvcllfSWprWGlhcU11aUljRG5KUEp3UzcyZk9sZzVKbl9HVTZaRFlQdnJ6OEMyR1gwelg2Y1BsYjh5d3JWdHZxU3ZVSlJTNzdmRGtVR2tzMExfUDRmc21zb1lsN0VEcW0?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-d3b58c7d3e",
+      "date": "2026-10-30",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Arkema’s product carbon footprint calculation methodology certification by TÜV RHEINLAND is renewed and extended - Arkema Global",
+      "summary": "Arkema’s product carbon footprint calculation methodology certification by TÜV RHEINLAND is renewed and extended Arkema Global",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPY1NuazJBN1ZWM2trWmtoNy1jdERKR2dRMGdmR1E4eGx6eTZXX1gwcmtlUWU0cjhISmowM3BJQ2cxVGJvNVYweUkwRW5UeFRnVURxSV9kSXVBVHh2VGtPanp0ZlFya2RCLVNvOW1oQ0ZLZl9lRkFJV09uMjZBV1BMaWczOHVTRUM1TFctX0pKYXVkWTlrS181QndpZk8xZThiZTAxaGpGU2ZLYnNZdjdQSW1PN2s0SWVMNEdsY09VZDM?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-9951125c55",
+      "date": "2026-10-23",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Catena-X for SMEs: a practical route to getting started - Automotive News",
+      "summary": "Catena-X for SMEs: a practical route to getting started Automotive News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObTFnZ0g0RVJ3OTUxNy02bVRRTlo0bFJ4WjhlQWdMTW5VeHJIVDF0QTVybUVTX1VvMV9NQTgwRFo4cXJabHMwZkg3WExKd0JydjRUYWF6V29wNzNPNllEV2hCR0pUaWF4Nk9kRWhLYmY0YjljYXpPNXdrRWZmSXhBOFZlZ3prazFheTQzeVpwNmxiZDhKenI5d0JTUnFyU2NmcWlpMkhJVTUwZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-473d1dcf2c",
+      "date": "2026-10-26",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "GNT Advances Transparency in Natural Food Colours with ISO 14067-Verified Carbon Footprint Methodology - NUFFOODS Spectrum ASIA",
+      "summary": "GNT Advances Transparency in Natural Food Colours with ISO 14067-Verified Carbon Footprint Methodology NUFFOODS Spectrum ASIA",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPd2ttQk41dVQzLTQ5Q0Vjei02cGlQSExnSUg3M2wzTVYwNnFmU1dPYVVnRU41d3RVeldiLXYzZXcwZmZ5d3dyUmhmS2UwNTVQcTh5UmpHVU4tYjJBYzVSOGRyTFJHLV9LMVlEVl91MXhCQV9TeEsyUVl4MDQwN3pSOGM5YzZfbl9SaTRDMGwwbHJ1ZGJkM0RvdEhJdlQ4QVZNaVBsbjI0OURmT3E5UXI1OUlqUDJ2YnVOamI5aTQwWlRMTldDQ2s3ejliRjVQVFBFSzIxQTdYeW5GcVEzQS16RjZXODNoMnVkN29yYg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-23068216e8",
+      "date": "2026-10-12",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Catena-X: The automotive data network every Global supplier needs to understand - Automotive News",
+      "summary": "Catena-X: The automotive data network every Global supplier needs to understand Automotive News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOeGp1ZEtfaEVtWEJySTc0UWxjSGw3QWlLcGw2VzZFa0llUUJ4Y1VEX3lqd1FFN0VObUMzOV9nVEdQUEJWY1pYQWU1eFc1TDFaMzlhVzhZbkdOc0ZibGVnWVVsNmhOU19rdjlxN2F4djM4aXpZd00tc09qTGdCRnZ6cHNlbC1SN3NQWHJWNFV5Q3R4NFJrT1NIcjJzX2xWNnY2STh0aXlFUFh4Q2ctR1ZNUVdKMHh5YlZtcTN1UUY4THRjZlU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-dc8ec18fb1",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Asahi Kasei Secures Top-Tier Carbon Verification for Acrylonitrile - ChemAnalyst",
+      "summary": "Asahi Kasei Secures Top-Tier Carbon Verification for Acrylonitrile ChemAnalyst",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcG9HckRvaWxUdFFSRjFHRm1sLVpEVFJJUEpuNm5UUW10ODdUXzFzeHotRlF4WndONHBFU1BwYUdqU0hXem44b25CblljN25UNlFjbTN0NmxnNW13QWJYcllvOGR0QVBOS1FWRTJFN2dQZHZaOE9qUmVVSmd1cnprRXFqSzE0ZkE5SDlRZHFhX3hBcEJkNjVRbUNKdmtQcjB3Zk1fMTQtb0lRVmM?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-1f75574f89",
+      "date": "2026-11-03",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Sinopec and BASF align carbon footprint methods to boost green transformation - Indian Chemical News",
+      "summary": "Sinopec and BASF align carbon footprint methods to boost green transformation Indian Chemical News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxORUJSaS1hd0hTLVNGNVY1VmU3M0NaZUtyVnQ2ZGVJU2VZNGJxMFdPQ3JDRlVNZXpBcmotT2pyekYxWjZmaDR2NlNleW1EdDFlRzFiWUtWUE4wX0NFc2EyNHZrTWExZXZOSWdmOHBWcFZlR21TLTVSRE9hQlNrbW9idFhKeGYtendocXVOZmhPWjR0aE9SVkR5ZEZ3S1Jsa0duMThPY0VXcjlaYzU2VlpjbVAyeVFRdndiaW5hNERiY2VTZkRWd0VTam9sWVRNd9IB1AFBVV95cUxOTXc5NUxBRWZCY1M4OFZvcXhXbGNZTVR3Q0RmUlJ6Zm1VYmpuSHpfaFlVd25pcVZ5NVRxTFpSWkYtU2lPMkh0VUdwRk8wQ0g3dERtblZlQ1RDbzdqaDFxam42Si1LWGRQaWpIemxzNDNFU0pSSEMtNDJsOEtGSWNXUllEZGYtbDF1VldZR3NEemJiTlJDWGZOTjAtZXFLNGNvc0hpSW9lTTkzRFBka1ZtV0V4VW1jeWsxamJ4WklsTFk4Z3A1X09JUm82WUFPMEJyOTBXZA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-2d26a97233",
+      "date": "2026-10-30",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers",
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Smarter, Greener, More Resilient: How ABB Robotics and Scanfil are Turning Supply Chain Disruption into a Sustainability Advantage - STT Info",
+      "summary": "Smarter, Greener, More Resilient: How ABB Robotics and Scanfil are Turning Supply Chain Disruption into a Sustainability Advantage STT Info",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxOUE8yZkxCbU9uRHpQMC16SGVHQWlpSWtwOG9qay1oTGw1dkU5UXA2dVNYeWxkM3NCa0lrQ3JSMno3ZzJHLU1RT1B0YVRmNUVtUkZFcDgydXBtWldhWVoyX1pNSWRobnpJVkZ6TTJBaGNnRDV0TmpUSHN0OG9qTW94RVE5djNWSlFrdldEQ1ZzVUdmZkptQjd2VWpiZFB4UXRsdnowbEpFMnhodUZWNjJlWDg3RTFsMDJtdHpsbHNJMGE1ZDRrMzZJOVkxeE5nUXdJWlZ2a1B4SEtWVkQ3TlM0ODhhRWI5WDBmcjBtTEh0WERZOE1GU25tLW16WDlFTnZXZzdrY0dUUDE2eXdkUHNqRFc4WXlwYVhmOGJSeG0xRnJTUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-53cea12916",
+      "date": "2026-10-22",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "South Korea's Tongsuh secures carbon footprint verification - ALCHEMPro",
+      "summary": "South Korea's Tongsuh secures carbon footprint verification ALCHEMPro",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMUhpRWNDMWQ2S2JTNExlalBqcGw1TWx6N1VLRzVxdEo5aVJldERwVjdNVG56STNSTjhnWTc2aldTd1lhenpLd0VYVlhpbWZqbFlRZGJSUEhGWElGWkd2dlhBYXc1RldyMDd0LXJPQ1hfbXlmLWpZUF90UnRjWTBTNnl4MmlFWGo5TmpBTVZzYmtnSlNMS1F6MjVqY0RRTE5nVERGd1FGUUphcmJkUnRqaS1VRGNueGNDMjFDZ2pOcEN3X09qeHRr?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-bff59e6487",
+      "date": "2026-10-23",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "EU Ecolabel: consumer confidence meets the new anti-greenwashing rules - Materia Rinnovabile | Renewable Matter",
+      "summary": "EU Ecolabel: consumer confidence meets the new anti-greenwashing rules Materia Rinnovabile | Renewable Matter",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNaWhuNDY5em9EN1dDeE53ZnJsUWM3MHVXbVhISjdOaTBwX3oxdVRPZjhrenJGNlJFZERZcm1JRm15OVIyLUxxT0JWMTN2OTdJTmFuQU1OQkYyNVBFbzZsWHVqTzMxemR6bS1MSG9TWkV0cjFHZXdsRmxqZ2VhbURucEZ6LXUyTmRhRFNsTUJQekVmM3RqcUtfNFZib3RfSUI3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-2d54c57cac",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "Eurobarometer Survey Reveals Growing Consumer Trust in EU Ecolabel - HKTDC Research",
+      "summary": "Eurobarometer Survey Reveals Growing Consumer Trust in EU Ecolabel HKTDC Research",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9UR1VxVjlEX1FwcU9kVXI0S3U1alE3QTBtQjdsRFlMS0M1ZHA2VEpENC1MN051SkEtQXpROHVibWdySV9nN3IzMVVBazlmVm1rcHdHUVc2SWhuQnNNbVFKS1F3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c795a1d25f",
+      "date": "2026-11-08",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Blue Angels pilot Scott Laux booted from elite Navy flight team for ‘failing to uphold standards’ - New York Post",
+      "summary": "Blue Angels pilot Scott Laux booted from elite Navy flight team for ‘failing to uphold standards’ New York Post",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQWlo5V2FPS1ZMcUZwZ1I2bjlCZURMT0Nmc0ptdVVST3ZhZHhDZ0dwMXZwUUM1dUJ0T2g0V2UzbFNXSEF0TmR6dTd1aEg1dmk5LVFnc20xcVJEOVJHV3BocUZfSC0wOE9iajlJU1RlVkw1aGpnMEctWlhaVXdmYS1EUk5rT1RJVTdWYnlhY2xULTFPV2J2TmZFS2VBZTJCWWJ4dTliMWp2cS1YNnAzN25zOE9UdnlFUF9lS2d1UkZCSzhqNVdvaGxSZkNMQ3o?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6aeb4dd148",
+      "date": "2026-11-07",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Fans reflect on a successful Blue Angels Homecoming Airshow in Pensacola - WKRG",
+      "summary": "Fans reflect on a successful Blue Angels Homecoming Airshow in Pensacola WKRG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQcEhsSFRsc1hMaWNvM1oyNEswY3B6QTBDbkhXTHRReEVQNmU0S0Vkd0ZBMW1TRjdta3hCZDA5d1hud1BZWElzU2Y2THFZT016cWw1UUpmQWd6M3lUaHhKZzdCT0ZUbUpmZEl6UEx6cnhhelNzLUxtOWxkSWlCZjFjWndpRVdtd2NrZ0VjTGZIMElNZzBkeHUzOWdPRS1jQV9tQmZoOTRya1NQWU9kVGVOUEFSRjJza1HSAbcBQVVfeXFMUHBIbEhUbHNYTGljbzNaMjRLMGNwekEwQ25IV0x0UXhFUDZlNEtFZHdGQTFtU0Y3bWt4QmQwOXdYbndQWVhJc1NmNkxxWU9NenFsNVFKZkFnejN5VGh4Smc3Qk9GVG1KZmRJelBMenJ4YXpTcy1MbTlsZElpQmYxY1p3aUVXbXdja2dFY0xmSDBJTWcwZHh1MzlnT0UtY0FfbUJmaDk0cmtTUFlPZFRlTlBBUkYyc2tR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c9f16d2b30",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Circular economy claims need evidence of what actually changes - Innovation News Network",
+      "summary": "Circular economy claims need evidence of what actually changes Innovation News Network",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOdE5haDZvTC1FWXUzVHF1SGZyVGFfbDVPSkx4MlVuanc4bF9DSnVocnpXQlJqWDB5UXRsVnRhNnJzaHRhQmhJekZITHFNSm9LYWFVVG9XLURVMUliVlpubFJndWluUm96cFY4ZEVHWE9RXzRSTVZucDZnTHdab3NfbkVCRHdSa3JvNEJVOG9zWW5vTnl0?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-316c932c5d",
+      "date": "2026-11-05",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Heimar hf.: Interim Financial Statements - TradingView",
+      "summary": "Heimar hf.: Interim Financial Statements TradingView",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQmlHQWdDVURqT0NnekwwLVYtQ05qSlVBVGc1a2hESVB5SFc4aWt6NkFmV3ZxX3NfUFpqUVoydUxYTnEyMTNXVDl1LVp5U2xUNjZYNGF0d1EyQ0pVX3k5bTluemluYnEwN0dVRE5MaElqUXp5RWtzb1l5S2pZQnl2SlhYU3FucGRaNmRtSHpGNHUzZWR4QTYtSWh2YURJODh1YkFuVnp0aw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a0cfb87eb0",
+      "date": "2026-10-30",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "ULPGC film screening: The Blue Angel on 30 October 2026 - Teneriffa News",
+      "summary": "ULPGC film screening: The Blue Angel on 30 October 2026 Teneriffa News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPem5SSUg4aGFXcmhGSzlxandYcXR4Vk1OYmhydEZoWXBLcDdVOERQdTliMlRiZTdGajFyVTEzREYzZDBaeGxWSHE1T0Q5LXRkMU8xcTNmeVRyMVhQMlVsa09WYWZZeS1IdS1EOFN4dUVrWkVvOUt4dFl6YnMtcGh6cjRMSTE5WXM1Z3ROSkZJYjd0VXA5YWNj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-dbeb1ffb8e",
+      "date": "2026-10-14",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "Premium Packaging with Character: YESTAR Chooses Premium Recycled Paperby Koehler Paper - www.ctiweb.co.jp",
+      "summary": "Premium Packaging with Character: YESTAR Chooses Premium Recycled Paperby Koehler Paper www.ctiweb.co.jp",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVVVDaEhfOUJwaGx0cndpbENHM0dTbWo3eUhiSEthMmVZeWxDNFBaZkFZem1OenIwRVctNTR2WHNmWkRZQkM4TzJRRV9VcENrLTAycnV0c1NMX2ZDS1hLNUZ3X0RVT09ydldjeEtYVnllZE1OSjBDZmdYTXhxdUR2WHdiZnhiQWpWcGxsaGxBUmxzZ3FTdkdSUkRiZXB5Q2RfM19IYTVIUHJ5MF9abXNESUU4ZkpjZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-d53eef46ee",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Einsatz von Blauer-Engel-Papier in Marburg-Biedenkopf auf Spitzenniveau - Mittelhessen",
+      "summary": "Einsatz von Blauer-Engel-Papier in Marburg-Biedenkopf auf Spitzenniveau Mittelhessen",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQbjhEemFnUmZBSWJidzBHNUtDczVDOTY5MlRMMFlseWV6YkRUczhMd3dsMjRIMHIweG96dzRUNm1mWXBsaFhra2xZV3hsMXRiUU1KY0pOX28xcWFMMS1zZnBLR0JUd2Z5eEVQTU1TenRpX180d1RvdnpSZG9QNWlINnQ1UWdNazZkSmdrQlY1STBOa3VEMUlVM0Qyb2NGNUp0bGE3TWlaS3lWYU5JNWxwOFF4ZkFQOEdjZmk3b3RsczZBUmFKSm5WT0w1VmtZWTFuS2pGT1pQVEZvOVZmMk5HRmRJNUw4WWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-187ac6eaed",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Stadt erhält Ehrung für Papierrecycling - H@llAnzeiger",
+      "summary": "Stadt erhält Ehrung für Papierrecycling H@llAnzeiger",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUTRwekYzSHNhNXpwdlZBZGJJazVJa21DUDZPMDVRUjVRMjVXUlJXLWpDU1o1VzRxM1ZTbjdTRjFGdFZGWWRfazA0amJlRkhkOERxdXpqVmozbnJPb05uaWJqdzFaTE4wVG5rUjNVRG1GWjhMQkZhQ3JiOGRIZ2FjVnNVdnVmbHpYZEREVTh3T0lpM1FJaVpYeVRTLXFHNmFEV0FscnBLM0UycTVl?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-e3dc44fd47",
+      "date": "2026-10-12",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Kreis Viersen spart mit Recyclingpapier Ressourcen - Westdeutsche Zeitung",
+      "summary": "Kreis Viersen spart mit Recyclingpapier Ressourcen Westdeutsche Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQcnd6am9UcDJXczRqYjU1dThMdk52bmExLUR0VmFxR2EzVWY5U1hJeUNGcjlsb2lRVmVaeV9jNjFBM3ZneU9BYXI5QnpDRVF1aTFFa0c0dDZGMk5WeWpkWl9aUzFWUnp4VmdsUFpsX0hIem9vYzg5WGphSnRUZFc0aFpOaXdUUmx2dl9SZ05jQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b309f4da08",
+      "date": "2026-10-12",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Euskirchen ist »Aufsteiger des Jahres« - Wochenspiegel",
+      "summary": "Euskirchen ist »Aufsteiger des Jahres« Wochenspiegel",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNM2tTLW1GMWlGdElySE9QSDZsS3BWR1E2ZUNabjRBTnZGcy1XU0ItRTZmVF9ES19OLS03UGtnMFJmTkItSi1NbkNlUG00RnU3Y2lJRWpDam1iTUVXWllCdnE5N3ZSQmU0TXBGLXFaekNRT1Y2Vkpsd2FEZFZMc3o1VlBfLVQ2NkZ1NDVjMUl3bWEwLW5pNnBEUjZ3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a3521ea741",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kokett-Toilettenpapier von Aldi: Welcher Hersteller steckt dahinter? - Giga",
+      "summary": "Kokett-Toilettenpapier von Aldi: Welcher Hersteller steckt dahinter? Giga",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPajQ2TUFLS1VndmpPWFdDa0U2ZzFHMUZ5S2prYlA0LUhsM3F5S2ZISENSWnZ3R2xYY2JBSXJSRXhhczVkUFc2SFJfbXl4SllKeVRLbjkwNmVrV1Uxdy1rWjNhQVNKZGRCeEpQOS1lY0NUYW1TaW93MFFzSWRnNGxaQ2NUNWZUX2JhRkJaT3FqRU12T1FSTzZ0SUVpeW11bDJFZ1pDSHA3Q3BFbHh0dmpGTDA1VjNsdkh0RlVv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-09e888dce8",
+      "date": "2026-10-14",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Test: Der beste Badreiniger - FAZ",
+      "summary": "Test: Der beste Badreiniger FAZ",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5OMGdvc1h0SFp2N2FmeFBwdlhPeEs0Vm1laHZpNzc2NFRHeWVpQTRXZS10cGdVTmNKZ0VrTzVMSVd3WEk0aU9jQnJxcHd6NVRoMF9CdnJyTk8yR0FwbzBLbWc2OXg4cm1VV2VB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-4de9d836b4",
+      "date": "2026-10-23",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "suppliers",
+        "products"
+      ],
+      "tags": [],
+      "title": "Updated ASI assessment shows FSC’s alignment with the EU Deforestation Regulation - Forest Stewardship Council (FSC)",
+      "summary": "Updated ASI assessment shows FSC’s alignment with the EU Deforestation Regulation Forest Stewardship Council (FSC)",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNM0JKSDJGZXdyLUlBbmVUbTRFX2dpdkoxdmREenR6ZTU5Q3A2dkxIZlBfc2ZsRlFDSTVueVBoaENFajdKYVRZWEFTUlZmRERpNkFLc0ZLVE4ySFBlVGZodFpJTHIzdndzOGEtcXZKMU5JQ2o5UXg2dzA1OTY5M0x3RjVOb04tVUx0UnJLU1YxSkNFOTJ3NTVOUUNrZXFWcThOYVhUdEdaQVJ1clZyX1EtbWVKZWFKUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-cce30ea2ea",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Tree-mendous defeat for greenwashing - The Ecologist",
+      "summary": "Tree-mendous defeat for greenwashing The Ecologist",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9hazY2U3R6aTJGMFNrcGl5ZFdMeUVLUmtCX19Wc0Z3NzNtdW1vajIzanVuV0huNk5GZk11STBzUnBOVGdiV3JoUzc0RFZORzRHZW5ITkhmZ1JjVEJ3TmdqalNtbXQ5aHNfai12TGNwMnFoTWEzVVZweg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-94fa22a086",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "Advance Lumber & Pallet Achieves PEFC Chain Of Custody Certification - Wood Business",
+      "summary": "Advance Lumber & Pallet Achieves PEFC Chain Of Custody Certification Wood Business",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcm8tbnpZSnlXZHROZGEySkFlRV9tMlNMY1RhLUxrd2ZNdlh2TkFPN0lKMXotWVNZZUVDRWxMa3lxNmxmV01tRUdoazNtYTBGVXBDYll4aGl6UUdnRXhRVnBla2hncEF5Q1ZFNWphdi1KcnlWMDJKdkFxZ20xLXFwbFh0bXhuZnFwNkNVdjk0SnRiaWJsUnRBMlhkWQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c502603b24",
+      "date": "2026-11-03",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Why One Line in NZ Timber Specs Narrows Certified Wood Supply - Wood Central",
+      "summary": "Why One Line in NZ Timber Specs Narrows Certified Wood Supply Wood Central",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA5ZHJXNmFRX1JmZlRiOEdOQmdiZzdVRVVsMVhIakFDVFRRVDBqN0NseVN6VHJ1Q2ZDTWN1alhZZU5VbEs1dXdTcnQzMzlZMi1ZOWgxeDc2TzZrMnZzaUpGUTdkN2tISmwy?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-2655761a66",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "PEFC rejects certification allegations after ASA complaint - Forestry Journal",
+      "summary": "PEFC rejects certification allegations after ASA complaint Forestry Journal",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOWXhIZXh5NlJOTkJhVXpoZ2pqLUd4QXR4YW5lZGJwMHRLT1BKU1lqcGN6SVZRTktsQ3FWYllvWHE2ZWdSM1JkeFFOaTFSTnFWMURSZk1Yd2FSQ1I5VnZyTjZHdkxfdWk2RTgzcExSblVydWNISDhqeEh3Z2dUeThhaGF1RnFCamdjOFpzalYzaHd5bHlXcDItdQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-74b0bfdbf8",
+      "date": "2026-11-03",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Sustainability of Timber: Is Wood Truly an Eco-Friendly Building Material? - HR News",
+      "summary": "Sustainability of Timber: Is Wood Truly an Eco-Friendly Building Material? HR News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONjhjamY3bGxkM3ljZUNFeEdXNDJkOENYT1R0N3ZFQWliTjE1dVhuMjZWNnQyU0kwZWU4bXp1YUFFaTVSa2hnWlJmeGVlMGhKR2plRUQ5OUE4UWVrSjhZeFplQVRlNEV4M2VEWXZ5bmlXYjhUQ0RsUlVEaTdHbGdnbkdDNUFsa25fTnlQUEVESUpxR25lLVBQY1l3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-75d62e530e",
+      "date": "2026-10-14",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "FSC International addresses forest management concerns in Romania and across Europe - Forest Stewardship Council (FSC)",
+      "summary": "FSC International addresses forest management concerns in Romania and across Europe Forest Stewardship Council (FSC)",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYjlKWlVITE5wVEw1UFNCLVBSOTZqY0ZRWF9KYkZKREhDNnBDWkt4TXZPemZ4WjZISE5uaFpzTUZlcEU3Slh3djBPT0wxNElMWV81eFVxNG4xR2kxZUIxWnZNbHNTLXhRaGFOb0FBRkhWdkttUk03ZmZna05mcUFoMGNxN0FEYVBGNEJYSTJQQ3lwZWhtbFJsQ0RhWlk4Q3dFYnk5SjZadmRIZ0RILU9SMm9iQXYzMEd3N3Y0djVIRVA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-d8020db542",
+      "date": "2026-10-13",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "PEFC Urges the UN to Help Build Demand for Sustainable Timber - Wood Central",
+      "summary": "PEFC Urges the UN to Help Build Demand for Sustainable Timber Wood Central",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1XOGdYTVMxXzh1OWdzSmMtX210MHc5ci1aUmEtckIwLTd2cGZIejh1VDhRbUNPZGRXUng4MGJ5RTU3ZE9SemJKMGFhYlBnektCbzZLU1RvOUpUenQzMTF6RW5XTksxOEw1QVE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-83413cadfa",
+      "date": "2026-10-14",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Mass Timber Is Booming. What Does That Mean For Canada's Forests? - Wood Business",
+      "summary": "Mass Timber Is Booming. What Does That Mean For Canada's Forests? Wood Business",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcVhoYXBZdURxYnFSMnlpSTZkbm5ycE10b0xpT1F1UUJzVnlVc3JPOUIzUkNwLUhySWRpbVVpRGJuNUtOMlpQZm9KX0xtbHJVWk04Z25xb0hpVElIdFMydmZBZXlGUmZhSzl0WGc4aGlRTHBhU09rOVJ5RE5udGt1dm1lMFY1bGM2YzFLVG5MR3A0SUFyZ0E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0fb557b98e",
+      "date": "2026-10-28",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "‘More flexible’ UKWAS rules offer relief over game-release pens - Forestry Journal",
+      "summary": "‘More flexible’ UKWAS rules offer relief over game-release pens Forestry Journal",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONTdNX2xFRzFNbkJBOXdwdzVMU0lVYjZfNnI5UnJwdTk4RlJ3c2JNbVJQV3lTdmpEZlZLNkRiZWp1cndyOFNjVWUydGFLZjBxb3QtOV9uanFnS1k4eEZibWVYZEV1dEpaY283ckt3ZklTM1N2NkczT3R1MGdMcW4xVjdQYnFZOHZoUzNqZ0NNWDJJNDd4akJhMl94ajBDRnh5UERqeEFn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-918df2a0f9",
+      "date": "2026-10-12",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl-Eigenmarken: Diese bekannten Markenhersteller stecken wirklich hinter Milbona, Dulano & Co. - CHIP",
+      "summary": "Lidl-Eigenmarken: Diese bekannten Markenhersteller stecken wirklich hinter Milbona, Dulano & Co. CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPMjJnaGZpYUFZalRnRGw0N1dWYmpMQ0V6ZnRwbEx3MThfcEd2T2JmRVVtQzdYY19FVXNSRlg5YjM5amEtNnI0Y2ZSTzN5QVFYUnd1Y1JDZUdIa1ZZNXF4SER6WFVwUGpJOWY1V3V4U2VUVXpBVHIxdUJvN2Jfc1c1VUEtaG5FdkpxWDVrZ1Njd2lJYVNMTnRSNTlIU2hNSU9EdUtoMUpERGt5MmdYYkVWLUl0OE83enhwckptQUtaS05DRXdMbDFDT2phLXhVYVpua1NHbUNidnloNG44aG9RQWJyYUtpdDVwejRXUDIwMEdsUDA3Yk0yanRyNmZpVFBhVXF4UWc3ZmZ2QVlOMzk1T3dR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-e0ffb9a750",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi Eigenmarken: DIESE Hersteller stecken hinter den Discounter-Produkten! - DerWesten",
+      "summary": "Aldi Eigenmarken: DIESE Hersteller stecken hinter den Discounter-Produkten! DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWlVTUmFXMFd6NEk0NkY5NklNbkxpS0Y0dDFxdWFiam03dUZoTmZWTy03ZG81empYZ0t6OHJnR0JmYVRWQWVhT084MzlLOTAtdnNLSnA1WFBqNzhDVlctTnVVWUNDV0hxbDhIVHpoVjdsLVJoc2h2QU9TQzBPWTMwWWZXUVdKUmk0ZG1SX0VNVjlUdDh2cVI0bDMtdUZkbmdyUEp6WFJHR1J0dmh5REdoaWM0RmU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0200316c41",
+      "date": "2026-10-27",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Diese bekannte Buttermarke steckt hinter der Aldi-Butter - Freundin",
+      "summary": "Diese bekannte Buttermarke steckt hinter der Aldi-Butter Freundin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNOUtuZGlhWDk5dFJaVjh4eDlaRlpTSEhxVjVLNFViMkJRVDN2TXpqa2QwZkdZM2J0Q2JvMDRTNjZ4S01RMV9BTkZINkZ5S1pETmYtY21tai1HSUM2SzBrVWZCMXBaQ1ZnY3RLXzNtWXJUMUJtcFZQbjE3c0FHTU5jelZTZzBTVENvOGZlLW5kR21aWUdxemhndVJsSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-56a4d0940c",
+      "date": "2026-10-14",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl in Deutschland: 5. Nachhaltigkeitsbericht veröffentlicht - Gabot.de",
+      "summary": "Lidl in Deutschland: 5. Nachhaltigkeitsbericht veröffentlicht Gabot.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOSWhSUjdIS1V6THJjRTlEM3FCNnNTNDMzSnllX1VXdXFuQzFlTlVGS2ZmRnJkSl9HbHFleUV2RWp6SFJ0NWp6STU4TnpaSlFkNXRxaEZ3Yy10UUttQUNsOF9OZV9ZUC1ORTNiZUtleWYwdG1SelJhNXlPMVNKZURScEVrV3BCOW82WmNOVmlvNkJXZF9qTllCZXBMMGQ2b1U0TUg4?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-8379edc73b",
+      "date": "2026-10-12",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Änderung bei Aldi, Lidl & Co: Was sie für Kunden bedeutet - inside digital",
+      "summary": "Änderung bei Aldi, Lidl & Co: Was sie für Kunden bedeutet inside digital",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNN3NRb1hEY09oMXVsXzRhcURrTFRzc05wUEx2RGRpTDh2b2c3ZHd1VklmOGdmR2ZzaEJOaUZBbHJ0TnFyQWRLZ2NMaUVnNDR4Z2d0ZDZ1a0hvellrMmtsdDNnX1RaU3NCN3lacko0aHEyNmxkU0NTT3QwWTN5cV84bVBBVVBJNFHSAYwBQVVfeXFMTWlEci1aZ01mcXhDdVZQaGNSalJWY1ViUUU3MjNjSjdrOVRMd3duUkdpNllMVUVJWHlaejVFTkd6OGplZDdtUWl2eVBGQTJEMm90TnNrRE91c2ZfYnlBV1F6MUxPV05mZ201RC1HTlZwaG1mazJ4N1BJN3pTTTdmakZ5LWF1OE52Qm52RnQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6b36f34b4c",
+      "date": "2026-10-20",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tiefkühlprodukte, Brot und mehr: Diese bekannten Marken stecken hinter Kauflands Eigenmarke K-Classic - Giga",
+      "summary": "Tiefkühlprodukte, Brot und mehr: Diese bekannten Marken stecken hinter Kauflands Eigenmarke K-Classic Giga",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNN0hOZmZEVHpoUVpwXzdoTWhtcUxqTlZ4NERrYTVSelNFY2d0Szd3TXAyS0NiRjJoSVprckNQOERYdXdrTGlWTnYyMjFETzV4bVAtb1V4bjQ5MFRnME1pM1JUaUk4N1R5ekZpZ3RyVWxlclJETU81T1NKNVVDbFZPTGllMFpjNmlxMFp0RnBTeE5uaVQ2R1huRTZtU19wRUgzSWxzcE82QkY2MDNTNGdtWS1rZ3BPaElYR2htN0ZIU3d2V2FLWndmek4zMWRWV084eTFjT3RJa1ZBUmdfOTg3djctQXRnbUlG?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-3bac9f3fd3",
+      "date": "2026-10-31",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Workzone bei Aldi: Diese bekannten Hersteller stecken wirklich hinter der Heimwerker-Eigenmarke - Netzwelt",
+      "summary": "Workzone bei Aldi: Diese bekannten Hersteller stecken wirklich hinter der Heimwerker-Eigenmarke Netzwelt",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQN0g0UTJuM1VlWTJ3YXNWM3JGdHBQRzRoQlhXQzBJWDc2MW1xc3M4clFmcTdIb0JyXy1EYjBxWkhJNUhjUDhJU0Z4cS11bVVBUVRsVTZ4VnhuSzJjTi1CRkQzRzJlOEdNT2ZtTkJEdHZTMVBreDNOTDdNbzBHb2tlRU5YdjJhV0JaYzJvRWtxbmVDQ191cXc1MVhCT05SODlkUF9NMzYzS3lmVnVGdXhCbTI0anQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a3f7ae46f7",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi Nord stoppt kurzfristig Zusammenarbeit mit Naturland – Rückschlag für deutsche Bio-Landwirte - agrarheute.com",
+      "summary": "Aldi Nord stoppt kurzfristig Zusammenarbeit mit Naturland – Rückschlag für deutsche Bio-Landwirte agrarheute.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRjZwNUNXZV9jdkVXcDBLVG1kUEdSaDdCT2hreTVJLXhpb0lhd2VQMzRmMnlncEhQVDdkRENaUkpZazI2Y1VjMDZyckVlaWNPUm1TRGpIR1dHcGVZVkhqdFFyeFpvbGNSWjhRdGtpOUJ5OG45NWpiTkkzZmRYZnNFeVZzWHFRek9ISzhyaC1wdklud1MxdVBQM05McS1RczU5Zk9PZnBYSVgwejVQbXdEeUd0WkJCejBfZTJzeFN3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-062fc47951",
+      "date": "2026-10-16",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Parkside von LIDL: Hinter diesen Discounter-Werkzeugen stecken überraschend große Namen - Merkur",
+      "summary": "Parkside von LIDL: Hinter diesen Discounter-Werkzeugen stecken überraschend große Namen Merkur",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSVE1ekVpdW0tc0RZSXExZEV3a2Vra3U5bGV5anp2NmdVNm05UFFzU25ibDlaN1NxSkVMZHhXRXhIMml4R3hVOFpCU1dBN2dGcVpSRFdia2d1a1FYZzZ1czA5SVBTNTNuR3g0cmFRTkhreVM2dmNrUlB5Y1lXMFRiRW1hN29MWHhhODF0NHMxT1B6Si1aMC1GQ0FjMkg1X0ViZmFEZ2U3SjdKQkh1eWc2T20zd3pQTGhqaEFiZG5xUk1xaGs?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-90073ca7ef",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi, Lidl & Co.: Welche namhaften Hersteller sich wirklich hinter den günstigen Kaffeemarken verbergen - CHIP",
+      "summary": "Aldi, Lidl & Co.: Welche namhaften Hersteller sich wirklich hinter den günstigen Kaffeemarken verbergen CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNczQwbnJQOUpaMzA4TVJDZDAzams5Ym5fYnIyRUc4cFhaSENhZWtqSlJGRHdjTzNFZW91R3FOVmIwOXllNktkek1UcGlxemJYNHQ3aDEzVjVJRjUwVE05WFZabkl5eWE4MEI3U0RZNF9kLVU1WVBnMWxHbV9xZm9YS29FLXE4NW5HV2NQVnMyRkxqM3c2ZVFLOXJ3c0o4b2M0bkFCM2RnRURfaHhRR3pXRnVJQ1BlU1BQLUpqWmluM0lZaEtKMjFzcXRjMDRTc1Z3bF9KbmU3RnJKSlZhal9WZmRnYTZBYUlJUGVCQWdQVDRvNFpzMFFBZ2pTeXNxUW95SlFXOF9RZWhlY2pvR3JxR2lxNmVDQnZmcVRUZA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-69b40ea91e",
+      "date": "2026-10-18",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Edeka-Eigenmarke \"Gut & Günstig\" aus einer Markenfabrik: Schnäppchen oder Mogelpackung? - DerWesten",
+      "summary": "Edeka-Eigenmarke \"Gut & Günstig\" aus einer Markenfabrik: Schnäppchen oder Mogelpackung? DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPU3ZHZ2tyLXh5Z2l4cjN6X2dYSTdlQU5vN2Q5bXVRM1hkUE9YVnFFVkg2VDU3TVNhc09zSTdXbEFLbEk0UkNpQUJIUnN2RzlKMmRickxGSDc3eHkySWZ6NHBGdktyc2Ywc0lTNDR2bm1adk9PeHdBLTZLcUFZQWF5bndpalItTTRDYXM4QlRKTkpyVlVmbGE1Z0g0alRiRG9uazZmdA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-65716bbe25",
+      "date": "2026-10-30",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Amazonas-Regenwald ist keine CO2-Senke mehr - Bild der Wissenschaft",
+      "summary": "Amazonas-Regenwald ist keine CO2-Senke mehr Bild der Wissenschaft",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMjRKVWFXdU5VTHJPOS05cFpST0hCNUFMMTl3c2NEZkI2ZlJfaV9pZ2VKRjZYS0g0WmNEUktZUnE4eFduRmIxOFhaTlBQbXJuUEZJaE5VNGJEYjFtZ3dwbHRRV2NEQ2taY2JVNGdpWnl0ek5XNXNfNVA5WmxUUUdRaQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-21fe7b4a0d",
+      "date": "2026-10-26",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Markenpartnerschaft: Edeka holt Sternekoch Johann Lafer für Eigenmarke Herzstücke - Lebensmittel Zeitung",
+      "summary": "Markenpartnerschaft: Edeka holt Sternekoch Johann Lafer für Eigenmarke Herzstücke Lebensmittel Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPeXFtUUVsUm1DckdaOXlnZVJ1Ul90MGFYZWdUaXNCTUlDUnl0R0xxQ2g1Snl0Z3l0dEZ2bVh5dHZVWUJkNU1EaXcyeXZoeU5FWWNBZWRNTTBiaFZGdTA2NC1tdFdJTnhuYzI5aTJXeWdBci1wVHBDX09mX1VUaG15MV9melVtMkM1LW96LW9HZ1lKaHh4al9iNmFzejVhZWFwWjBFVkJ6U1BDc2d1cVZVdmduX1g5SldRVmswTUk2STloZmtPN1dBd2lmMXdlZl9QcE1nSmdWcEk4Nzlj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-06050558b2",
+      "date": "2026-10-27",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Akute Lebensmittelwarnung - Glasstücke in Tiefkühl-Beeren möglich: Jütro ruft Edeka-Eigenmarke zurück - Yahoo Nachrichten",
+      "summary": "Akute Lebensmittelwarnung - Glasstücke in Tiefkühl-Beeren möglich: Jütro ruft Edeka-Eigenmarke zurück Yahoo Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUHY4VWpaNkxtUnpFTnJzOTcwSWNvVmIweUNTMUZ5SVNGUHhJdk1BRjVoY2FKTExwQnFvN0ZfWkJMM2c5UDlJaDUwSUZ6R2M5d1BEcVNqUWVfdVBxak9OVjhMUVZPUHpyV0ItSjk4VUpXXzJmY3lMR2dDV21yeTFWQ2J6VXpQcTM0TlE2Y05SSEc1SXZIbEdRR0tTaUllMThhS3BHNWw1ajFXUGlROWtydlNzNA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-f85fca9c88",
+      "date": "2026-10-19",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Handelsinnovation zur Vorweihnachtszeit: Eigenmarken-Adventskalender von Netto Marken-Discount - Presseportal",
+      "summary": "Handelsinnovation zur Vorweihnachtszeit: Eigenmarken-Adventskalender von Netto Marken-Discount Presseportal",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9fdnktZERWa3lHSWpCa19SZmdqdmlVOEM0VTFGWXBxWFp6eXM4WHhRd2pjTmlsYUNFSGs3WGZ4aHBzRGZQem9EclQtczNaT09USEtQMmpXTQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-4508d95aea",
+      "date": "2026-11-03",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Ergänzung zu \"Gut&Günstig\": Edeka stellt neue Eigenmarke \"Schlecht&Teuer\" vor - Der Postillon",
+      "summary": "Ergänzung zu \"Gut&Günstig\": Edeka stellt neue Eigenmarke \"Schlecht&Teuer\" vor Der Postillon",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBmdk04SGt3ODlSSFNlNEotSG1DV3hFdW8ta0FpbzBNdFZYSW1ISjItanN1N2tHckd6MWt0cENPR1JWTk5BRHFQaEdmaUF0ZlJaaHJrN1RKbkJ2STVKX1NURnV0aElMRzY2T0lYS3BB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-31374aae96",
+      "date": "2026-10-29",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Edeka baut Eigenmarke Herzstücke mit Johann Lafer aus - markenartikel-magazin.de",
+      "summary": "Edeka baut Eigenmarke Herzstücke mit Johann Lafer aus markenartikel-magazin.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbm1UQWFFUDBWc1JsNzNFa3dKQmFvbG5NVm9sbmNIN0x0TmRzLVNZQ2ZVT2VWMjByeDlpSjZoQVNJOEQwLXFCb3doWVpwMFhqemFFYlhrcUZTQ3NLV0hWNnV1ZF80M2syZk90dWNMdFZrRnBjUTRxV3pQLWpzb19TWDlJM1g3ZXZFOGc5VXJWT3MwSkJt?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-aa49d56978",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rewe im Test: So viel spare ich beim Griff zur Eigenmarke – der Unterschied ist enorm - DerWesten",
+      "summary": "Rewe im Test: So viel spare ich beim Griff zur Eigenmarke – der Unterschied ist enorm DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTUFnR1Zkbnl4SXdoVldUQ2RON1ExbVJCWElORVBvd3luYkFQQ0syX0F5ZWVXMkxzMzR2SjRFS3N6ckpiWlBSblRGM25jajVRUVg1MW5oVDBPdGNtTDNqbFVja3BEd3Nma2luMjJYRldzb2pfcTQxRU05M3d3NjdlbkhOaURGMk5PZ1B1SUtBVEJ2cllpTnZCWW5XR2pOV1dnYU5pUkk2SmkzbkVoV0NPQ2xKOXlWUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-03026083f2",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Netto-Null bis 2030? Basel bleibt hinter Erwartungen zurück - SRF",
+      "summary": "Netto-Null bis 2030? Basel bleibt hinter Erwartungen zurück SRF",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPalJIOXY4eW1mTGxud19FNldHaHFPR19JN0JXYWV5aHQzZU0zcldLd3o0Sm9WOGNucFpsM3c2VFFtNGlpdHo1T3BLOVVWMzNjNmctMVpRbUFOYk1Eb19hbEhzZ3IyUlJtN0FvRGg1MFctcEc0eFg4Tzg5cnppN1JGTkZCRWRSNnFjcjlIZTQ0SlZxYV9VWm53d2JkcWlfemdydkFaWGtiOFo?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-706d5d7b89",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Smart Stores: Edeka gibt 35 Teo-Märkte weiter - Lebensmittel Zeitung",
+      "summary": "Smart Stores: Edeka gibt 35 Teo-Märkte weiter Lebensmittel Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcHljRVpwOVRtczc0NEh3Y1dNclQxN3hrci0wX2JNNVpKMTRXMGFIbmZIUF9TR0dKUXI0N3lqSDlSYnY2OXRwS1Rad2VVczhDVWtiX0RoVV9UTFRRSmJwVlFCaWNqMFVNMG9WQUx0TzlPUnRMZlhEazh2akN3NURNYmc4elcydGxzak13YlRNVnJoallrT05yd0NvQmNZa0pmTXZDMDhJSE0yU2M?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-682c2e9adf",
+      "date": "2026-10-28",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Isana von Rossmann: Wer steckt wirklich hinter der beliebten Eigenmarke? - desired.de",
+      "summary": "Isana von Rossmann: Wer steckt wirklich hinter der beliebten Eigenmarke? desired.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOcV9aMTlvVjZwWTJ6cGhCN215bUsyOTlQRUR0Z0NTdUJiRkI1MUJ1NjNJcTBlOGUxTWRrTjVtME93M1o1MURveHZIZC1LR3hrcmpXOGJVRGZoV1ktN0xNQWhSMGNHbTFmbkM5VVVVakNmN3FIYkxYbjFuNmQ3ZEhmdVBycGxjQS1RbHVpVF9uNDNNVEs0WE5NRzNlMnNuLVcwQnI5YUNJMHdkaUdlQVhWQ3NnV01mV2g5eEc5NFR1ZzVIRHdzeGl3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6355e2875f",
+      "date": "2026-11-07",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann-Apotheke: Isana-Insulin und Babydream-Zäpfchen - Apotheke Adhoc",
+      "summary": "Rossmann-Apotheke: Isana-Insulin und Babydream-Zäpfchen Apotheke Adhoc",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUFB0TlR1dUhIeFkzeVdrVjZYS3B6d1BKVFliOXBuWFpRTDBxSW5PS25Ta0pseUJpc1IwY1hMaWZ6NmtSdzhra01RczNWaW1Db0FlMW94b3pqTnVyOEwxVEt3Y3FFZFVUTzJiTUhObFhjVkFwYVBrLXJpZmFFTEtKM0lFTTFseTdEbXNWLTZVZXBGbi1aTmZLaXoyNi1aaC1BbUluSkhXTXpKd1puMTBfSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-4b44762f73",
+      "date": "2026-10-24",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann überrascht mit K-Beauty: Diese koreanische Hautpflege gibt es jetzt günstig - ELLE",
+      "summary": "Rossmann überrascht mit K-Beauty: Diese koreanische Hautpflege gibt es jetzt günstig ELLE",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMkRhUjNwSGY1dXNNOHBqSklBaWtZWFRrREEtSktPSGZsSS1lVW05ZlJZdkVQeFlPRUhPYzBMQTRyYjlvZkJwSGM3SXdOYnJnQ0diMmpGNFNva2w1aVZPWmpqYklRdW9ONUMzdjB0UEZSMnAyX3g4QTE2TDRYeEdUSS1rZ3VVbEIxaTNVaFlobGgzNXVOeXNJTHQtMGlzdlpROTZyRGZDQ1dWTTlOZXc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-9ed1702c5a",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann in Rietberg: Drogeriemarkt feiert Wiedereröffnung nach Modernisierung - Die Glocke",
+      "summary": "Rossmann in Rietberg: Drogeriemarkt feiert Wiedereröffnung nach Modernisierung Die Glocke",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPSTNDSjBuMnhPaXNQMzFlVEFXRkMtUnBBZFFUT0gzUW04R2VBTmVlNVFVMUs4VVpydUxTRE1HQlZyRHFxT04xb1dWOEEyaHNoZ0ZXeHlnaWVreGQ2YnhmU2pkZ0xwYmRCcUp2UHpCUlpfTVd4OVkyQVlSanJBbnlTQmtmYklCS1NLY3dTZV9pLW5Ed1ljdzNNN2c2ekJ4OTZLRGtSMVl2a083VU5nZHR2cHBsUGtBUkNKeGFPZzgtZHhNXzU3R1pmMkwwUlA1cWU1WnpqUHN6blgxWWxVRGplaUhsVQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-378d424d38",
+      "date": "2026-10-26",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Die \"Ideenwelt\" von Rossmann: Top oder Flop? - NDR.de",
+      "summary": "Die \"Ideenwelt\" von Rossmann: Top oder Flop? NDR.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbzR1aXM1aUxqeXNrWEl1cmhveTNiY2hCVUxDZElzd004WW15V1h2V21VbUhkdV9yclBPLW9fOVhOdWNCU2pJREpXN0RfMzU3WEhHeWtTR01vYkZOZVhQanpLa1J0TjYwbDQwMVJESGJDTnd0aUVrVTZ0RUtfTFVrVVRodENJZUJ4SlJzUDBJNXlUT0ZOcnJrWWxNeUIyTThhZGc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-cd0e8ef6cb",
+      "date": "2026-10-22",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Nach Pitch: Omnicom-Tochter UM gewinnt Mediaetat von Rossmann - Horizont.net",
+      "summary": "Nach Pitch: Omnicom-Tochter UM gewinnt Mediaetat von Rossmann Horizont.net",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdmRZUFdyNzZfWEhLRXJ5bmN0bC1qT0lwOWNPcVlMb2pqZVFUaHJwbFEtLUU5VnRmMUx0MHdiRDFTbG1DMnMwNmZXM25aeVkzUk9WUlNaYXJxSlVxb2ZjVGFoNmxYejJqbHM1cDlhLWdkNjlqa0NaVkg1T0dIYmtBYlJhd01ESFpzS3FPLWNmZW9sbW5Cd0V0MHhsMlBibVNTZHRpdjFPeE5QWkVSUDdKUVZoTzk?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-e0333384bc",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Nach Ärger um Pistazien: Rossmann reagiert - Watson.de",
+      "summary": "Nach Ärger um Pistazien: Rossmann reagiert Watson.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNLTlnbDRZWUs1V2s5cThsTWJvYmVuMFFBNjVWeHNqdVQ3QU9NVWdSVk1QLXBQOEpiYklDSnh0Mk1CenZPUmFLYW9sQWE5dl9wd211dVhXNkhmLTE5WFVtNHJRdEhXanltbjJzMGNNY1d0N0ZNekUyUHJ4UzIzRVltcklyNGhWRzhZTmprNFpzbmp3LUhWTmc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-bdaddaef69",
+      "date": "2026-10-16",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Künstliche Intelligenz - Rossmann lässt Beschäftigte per Chatbot auf Unternehmensdaten zugreifen - Lebensmittelpraxis.de",
+      "summary": "Künstliche Intelligenz - Rossmann lässt Beschäftigte per Chatbot auf Unternehmensdaten zugreifen Lebensmittelpraxis.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOQ1pFdzBaSmNVZGFXeUpza3JGSURPbUtDNndhQWViOERwNVJNNFE5VEJxZHB4U2FFRi1TWGNnNmhmclNrdU9tNVVrZ0dXeEtzdUE2ZGh2eEdfUElkQXdacHlrNWtha1dwalJvTmczUVhqZzkwWlp1RmNRaDU5MkhIMEtPMlQ0TU9fZE5kelNDOW80NGYwV0l4ckR1NWcyZS1LZFR2T2xlWndUVmxrcUIxUUlMSnYzUlZaSXlBazhVY1lJZkx6Y2U4Zm9WYUNFUUNlZDRMMjQ4eDhUU192TGg1RjJlSlNrdVJS?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-8e0bc7aceb",
+      "date": "2026-11-02",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Stiftung Warentest: Nur drei Vollwaschmittel reinigen „sehr gut“ – Lidl, dm, Rossmann schlagen Marken - Saarbrücker Zeitung",
+      "summary": "Stiftung Warentest: Nur drei Vollwaschmittel reinigen „sehr gut“ – Lidl, dm, Rossmann schlagen Marken Saarbrücker Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQS05sSE9Bb3RvQ2N6ODlmZnBnbWQ1XzdPQk9kVDZZVlU3UkppRHMwU1kxRG5yZG9mUzhMYUg2cEZzcjZWNmlSbE9ubFJnSUI4UktUUnhaUS1ZYk5FRzdxQmtKRUdxT1c4alFINWlnRHNMMjNSeWFyM28zN2UzN2pnOXRHTEZWVUk4N194YXIzY1pPcTNFcFlaRGxvcTQ1R2RSVGFCUm1tUnkzdDhYOVp3SmlFMjZ5aGoyNlRkMUJBZG5UTnRvTmgxVjZ0TmRjLTBaZ2psaXFjUEFlbG03MVRHWURpdkcxaUFId0wtSkNIakI4TTdPNFZ2NElyUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-91e1130296",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Öko-Test überrascht: Diese Spülmaschinentabs schneiden besser ab als Finish und Somat - Freundin",
+      "summary": "Öko-Test überrascht: Diese Spülmaschinentabs schneiden besser ab als Finish und Somat Freundin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMGRLYmZBeURYVDFxZG92eWZiaFFMckprbEF4YjJQVEg0STN1YWl0djVVUlliRkZvRGpTZnQ0OTl5Qm9fcTFCUnNEVEI1NXpHRjYtM3NnRzJ2VVFMNHZlVnJkRmtKWUM2U2pHUnBwRlBfN1lLajJVWU83cVFWVDJsVDVPYXlCa1FaSWhpemZHX2I0M1dlMnh4bUFUYTVhdUg3OUx6UmN2clViM0ZjWk5HSUtnalY5TGNiMzZTclltbGhBRjNJ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b3ca6ecb79",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "de la politique RSE Carrefour - Carrefour Group",
+      "summary": "de la politique RSE Carrefour Carrefour Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9LU1hYb3VQTklWRy1PcUd0SDZZM3NBRkhBSlE4YkMwemctWGZVbXBOV1dOUWFjYVh4M2JIRzZrQ1BQNEtGQ05LRUt4SUF5eDZRZ1pvSjliTzdEUDZU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-76672e7672",
+      "date": "2026-10-20",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "« Le made in France est associé à cher » : comment E. Leclerc joue la carte du textile français avec sa marque propre Tissaia - LSA conso",
+      "summary": "« Le made in France est associé à cher » : comment E. Leclerc joue la carte du textile français avec sa marque propre Tissaia LSA conso",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPQlFwOU9SMWdZRTJ0SVlZTjNnc2xidldta2VxV042OVBCNG1CT09ZcW5VYVNYRFg0LTkwSWg0Njl5RmZMVTY3UTRnbkZqNUpjX1luU091enBnOTRmdzRoMGE4MUI5ZVJaX1VwUUZVVTBtVTVqc0hlRE9XSUltMTl6VVpTS0ZRZW41YzU0QjNITTBoQWNHcng0ampCZEVhek5hcllCYWxzTmNjeG9LZzRielcyV2Y2VGJ1WWxPSHRaakxPTjdHSzA0YzUzcGk5bHFHNm4zSXY1YlVSMm90QjhuLU9TRmxpV2RHbWFuN3pZN2RfbGNUVDhwTEo4dlBIV1pJS1VBTVFhN3NIMnBoNi01QldFankzTjNYVTZIdDdKOGxQRU1SMmppZWRvWUFteENrZldjMWlTdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ad8791457a",
+      "date": "2026-10-29",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Carrefour rappelle des bonbons qui contiennent des sulfites non indiqués sur l’emballage, pouvant causer des allergies - Ouest-France",
+      "summary": "Carrefour rappelle des bonbons qui contiennent des sulfites non indiqués sur l’emballage, pouvant causer des allergies Ouest-France",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxNbGJWVllBdWxHNGlFbk1QTHh3b2FWVC04dmxuT2l3bWNwYnd5RVhjM1RxQnJYX2VuU3o4T1B5cEI3Z09tUnVZUFpCazd5T0VFbW9QZW5naXV6LTNXQl9ESmRXaENLSFNKbW45NGRRQWFHN2R5V1BNdFRCdjdLX0MxRFBnOFF2cjF2OFowaU5sRS1NR254R0FOUDNWMDdCM0laeXltdFVfaEhkVG1MWUZKS29Ta05uQVc4MnhmaDktdXFqeC05bjJkMTY1MjFvRjNkeEhSLWxvUmtGcEhNdDgtRlQ3YmVVbUVlVEdZa2tYYmEwclVQcGF4Ulp1eXZOTXVhNDdmb1ZaMmcxV1lNT2hVZDBrVTJOU2c2ZUVBbVI5c09NQWdYV3VucU9ESVJ2YTNLUkN1ak5KSklkY2tXNmhZ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a6d66566bc",
+      "date": "2026-11-07",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Grenoble: l'événement Au Carrefour des patrimoines remis à 2027 - Place Gre'net",
+      "summary": "Grenoble: l'événement Au Carrefour des patrimoines remis à 2027 Place Gre'net",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQSVFQamRiZkdmZ2VUOXlFYm1BbFo1QjJEOVFHU0ZLTmlLdUJjMHpCamlVNUlkR0t2dW9EVlRobWhqcG9STzlrdW4xQmVaQzNBWjRSR3VqS2Vydjl3V3h1ZUMzVHU2R2lqT0p4S2cxeFJoRlJ6WHhmQnNGdWF5N3NLb1ljU0RpSS1OQ09ETXFiZ2hIVU1oVVhFak1UX0dQcHREQ2V3cFRVUnZFMktrR3hYTmZBdkVIWFJfakFCeXVadW96MHdYT044cFRBNjJCdU54cHhyLThuM1BJeTh2Q2RxR3JEY05lSTdoZVVHSFY3VWVHdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-d25767724b",
+      "date": "2026-10-14",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "«Nos industriels ont des coûts qui ont beaucoup augmenté» : Michel-Édouard Leclerc prévoit une hausse des prix pouvant atteindre 4% - Europe 1",
+      "summary": "«Nos industriels ont des coûts qui ont beaucoup augmenté» : Michel-Édouard Leclerc prévoit une hausse des prix pouvant atteindre 4% Europe 1",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPZkcwTnFDVU53N0tVZVlUaHJQWE9yZnJHNkRVZkNpVmJtcVNhQVFzTjNZa3IySGIybHQzLXFKMnZyaEZBY0U3MGZIbktYTVBuWi1fNkY1MXBqVVZZaWs4V1k1QTF4cm9fSGh5Q1pUMXJGMmJHR3kzSmo4Unc5MVBHWGlTTm12VmJkc1FTbEpSYm1Gb2NIcloyLWpDMWNlbkVXbmYwakhQVkpOZjFWNG1zbGpVUVNHYkFTS0h4YmZ5b3JQUHdOY3JjaFF1TEpvZHEtTTFienVLR1EwaFUyQWVmRTRmRjZCT19oTHNfZ3ZpbzJ1SDVNMUw1VtIB_gFBVV95cUxQQnhkbU1JRzVBVmR5VGZ2U296MTNPUk1kU3pHdzlxRkpHQkJVN0JSZ0M3Wm51bk0yT1VUbHR5WGNTbVhLWldGMmNaZmdUb1Q1d2l5enc2UDBScHpWY1hUQVdreldpMklHcTdUa1FOWWliSDItSEJMNWlVdndhYXJneUFxMnB5Zm1yLVBlLXc3ckM0NHhkX1FrQlJZbDFleHBNYlNveU1JU0FCTFNQQ09pb3QxaFdzaUF1RXBOMmJvQ2k0ZC0zUm1WbVE4SDBNTTVyUnI5TjZneVJveVVlYm9MODVaNTBTdWJZODduZFZaa3RnbE5wQnNsRFB4dnhIQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c6f1679a46",
+      "date": "2026-10-22",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Carrefour en profit warning après les manifestations : ce que franchisés, fournisseurs et actionnaires doivent vérifier - Kohen Avocats",
+      "summary": "Carrefour en profit warning après les manifestations : ce que franchisés, fournisseurs et actionnaires doivent vérifier Kohen Avocats",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcVRHbmVuaEZob3FXYm9jQlB1MWYtOWxCQllFV0NTbklTcVlLbFV4dVpRYm1MVmUwSmxQX2FzZlhqSERlWmh5SVZkVnlUMF83MlJmNXdCQ1YyOGxLMnhrV0JnaDNUbGtwWGRzWUpERWVLZ1FlY1V2RnIwM3JqSTd0MkpHQWdHaC1BYlBLOW83UmViQzFaSUo3UmVaYnlEa1MwMGNMUXJPd0RCVUJvZlFPTGhHQURqOE4wYXkxZW5KeXI?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-025ed3b406",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "\"Ce genre de montant en caisse n'existe pas\" : comment des magasins Carrefour sont soupçonnés de détourner l'argent des promotions - franceinfo",
+      "summary": "\"Ce genre de montant en caisse n'existe pas\" : comment des magasins Carrefour sont soupçonnés de détourner l'argent des promotions franceinfo",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNdW15ZUlqNE55MGJHRElKOTFpbjFTWWhLQkVGYlVmVVdacGdpcGJYcWRLYlJoNC0xcms5UVplWTA3eEJrcHVDUEkzQ1FUTUEzeGJFUHlrczF0Zjd1QkV2M2FEcDBOQWZSY3pRQ3ZMSFM2SWpHcEc4WDRsY21Id2JyUVIyQzl0UDY0VjVnR1F4ZU00djRVV0tJYjQwY0N1bjdXOW5ZY2NrZkp6YURMcU83REx2SHN1SGZCeDBxSTZob0RDcmlVZ0RLMFFiZFlUQVNKLS1GUUVHQ2hnTXR6S1ZIdG5tcGhkOTN2YUVMTUZ2VzZveHVEVTF5amg2cU9OcjFWV0ZpRUxCNllUclZ2NFJBeEtyRjNLQWJrdDhz?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-dae4633152",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "À Reims, des militants L214 dénoncent « l’élevage intensif » chez les fournisseurs de l’enseigne E. Leclerc - L'Union",
+      "summary": "À Reims, des militants L214 dénoncent « l’élevage intensif » chez les fournisseurs de l’enseigne E. Leclerc L'Union",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOeE9NZHNMZ2VSbmZobjhoSGRoTVhrYkM3R3NkNDhsZDVoNXIzamNXdEtITkltTk8wSXU0Wm5KUlVMODloazJxTFdMN0tpdTd6RGhUYm9BLWxycnZxTVdPc3ZyRXFrT2hDRXZocTNyRmlXejU4Qk5XdFI3WjVINTk5eWpRdDgzMmxwaldpM08wM0FWWlVNM1RqcHg3Skd2a0lFUDFBZExUSDEwVVVRaktRenhjc0R6TC1EUFN3d0J1UHVzZkNmT0E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a95616f9ad",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "France/ Carrefour : des ventes fictives soupçonnées de détourner les remises destinées aux clients - Anadolu Ajansı",
+      "summary": "France/ Carrefour : des ventes fictives soupçonnées de détourner les remises destinées aux clients Anadolu Ajansı",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPSVZTX1g0elR6bFp4Y25ITXk5UWxvejBwRE9Oam1qLVBUNHNZWXZaaUJsSVpGWWd2NHVHZEtDU19FV1pPWUNab0JnLWw1NzFNd0lhN0FiV0NycGxwb1lsZHNzVnFzOVNzRVU5ekNDYVF4NG45dDNhTDEyY0VzQUJScE5qTk9qdF9aUENmaWxfRUxHelV4dDktbkJSSHR0LVBDXzg1a2NabHgtbEd5UFJoR0JZNHJVbjRTVkhKdkVqOS1oajk5dUdFcE9GTy11UWdBSTdDbWhseklvWFc5WVVZcS1IVy0?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c7185f6569",
+      "date": "2026-10-22",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "L'alliance Carrefour-Coopérative U se renforce dans la publicité - Les Echos",
+      "summary": "L'alliance Carrefour-Coopérative U se renforce dans la publicité Les Echos",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNcWVyNllpeE9hQllqRW4xUjBBQ2QtZUtXRGFTM1QyS1BNQ0FmQ0dGcVMxbW1HOWNEMnRRc2cyeTdLY3BfOWVGQUh2Yk5TSW9aYVphWlpMcTNxUGlyNUNQc0w4SEVuMUlHelFYeENNNUNnZ2tHVjNuRHY3QnJfOVBKZU9MX09yMER0TDE1RTJ4RnNEWFlVdm53R3JfaUFsekV4VDNYM0NfVGxUVzdhUW4wRmJlR0JfYV8xdkZfcnRkTEptUVQwMnhiTWJnZ1R4Zw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-05f14a9f10",
+      "date": "2026-10-20",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Three in 10 Tesco own-label products contain ‘high-risk’ additives despite crackdown - The Grocer",
+      "summary": "Three in 10 Tesco own-label products contain ‘high-risk’ additives despite crackdown The Grocer",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNaHVVdGh5aF85NmhmWlRrb1BoU3pDWlROdkg5MFJWTUVlUlBYdVFEcC1YcVllZmx5Y09LeWVYZDc0ZXVfRUZwTjR5Q1BBRGk4QWM0a3MzTTFfSkhDek03RDZhZkpXNU5KcDFNWU1YNDBlSjV1bmFMUkwxNlFCTzVfeVRreGRwc3A2YkVFZ2Zac1Y0M29aRUdYMnpiMDdLX3NUOXN0NzlOOFNaMk9JNTB3dGt2aWVSMThOTTh6YWtMNXZkNkJjV040YU1n?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-cca6ef3449",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Packaging error leads to recall of Skinny Crunch bars at Sainsbury’s & Asda - Packaging News",
+      "summary": "Packaging error leads to recall of Skinny Crunch bars at Sainsbury’s & Asda Packaging News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQSnFlUzlEV1FxN180X1pKRXI1X0IxcnFQUGhjX1NVb2NoSUNOckRmejdubWhIVTFTMGdEUUw4QUozQmhUVm1SdFJDZTZrMjYxWG5ienhNRHZneFFaaTAxeU51UnhTenpLaFVpTEdqR3MxbzRyOThSekJTUjVxWTlrT0lDQ2hkZGxtb200QWVXOEJrdUE3SHhWbS1GZ2pzZk1Jam1UNERHZGw2eThYUDVRT2JTa3Z3aGJycDlXZXpjdF9FTmdqaElza3ZDcFRHanc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-67a77b4016",
+      "date": "2026-10-23",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Co-op and Circana extend strategic partnership - Co-operative Group",
+      "summary": "Co-op and Circana extend strategic partnership Co-operative Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcWhHbmRRU0tQTVhVWk5VZUphX2dibjAtRWhmU0tNeXg3TU5TVUE4cElLVDhSTEhhaDVBVnEwY1dUaks0RGRodHU4ZWlVejhnS2xrc1NhYXAzZDZXS2daQnJyOWxsSDVPcEV0OXBvSTRkelRoaDJlUDhxdDkyYThRbWdNZ0lPOTExd3ZsXzVaNUEyWTVEYTZuQlB4OFQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-bde851d765",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Avengers assemble on Morrisons’ fruit packaging - Fruitnet",
+      "summary": "Avengers assemble on Morrisons’ fruit packaging Fruitnet",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOdDBBT1ExVHdtOHpKM05vb01UVDU4a1NXanZmVGRQQkJPV0N4dEZWVk9GWmF5Z3JYb3FjaVR6eWMtZWZnMC13QlMxYlNCWnQtSHpLY1V4Wk5PV2JNZDZuNms3cXFrajByQmxsbnhYNWtkaWlTMldabDA4QjJ0YUVraTRHcW94dU9QU1NCV0xRTUhJajVXSkpZV3c3LUJ2Y1dqWlpBbHlVVzdWcUpt?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-fc9adbdd57",
+      "date": "2026-10-20",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Major UK alcohol supplier stocked in Tesco & Co-op collapses into administration - The Sun",
+      "summary": "Major UK alcohol supplier stocked in Tesco & Co-op collapses into administration The Sun",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRGtSaXUyc3kxQlAtOGNNYTZBS1l4dWtlSUkwT1NLVW9vZWZ3eU5PbmN1X3hXLTNvem1Vemt1TUtNVEN0MTVyQS1POHRQLVViOGtuMDBZX2c4dllSUS1CYXJibGtySDZlbkV3Tl95ek9uY0hta0RHMFZ5X0JKYXNDVXRqV2Vuc1U?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-8ad0063bd9",
+      "date": "2026-10-16",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Asda launches own-label no and low wine range - Grocery Gazette",
+      "summary": "Asda launches own-label no and low wine range Grocery Gazette",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQN0VxRkZQeDh6WEVqWTdsUnBvN0tYemlXb1paSjR0V2d0Uk1vbzZGekgxVWZzNnI1U2NBNGhvSW9sSUwyWExmQk9QbmZNazFXOEc1X19wd2tpeDRLZ2owM0VZZWd4V0xvZjJQT0JYUGpORG4yTjFDSXkyT1NxQ2x5R0NJbHdOZnl3clJUUnQ0SmNseXVh?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a5be1fbe35",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Major alcohol supplier stocked in Tesco enters administration with 27 jobs lost - The Herald",
+      "summary": "Major alcohol supplier stocked in Tesco enters administration with 27 jobs lost The Herald",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWExNOUVLYWtpMmFNOF82dkFyNFFEc1hiQTd3MzNKNUlPUU93MHAxcmdPUGFNYTcwcTdTbXZaRHVkWUhnUzI2T29tcm1wTUpfdFdSc2F6aTlSY2IyM0ZEaGtTSERrX0ZCSHUxR3V3aU1jYXUyUllQUDJUX0JKNkh1WDE1dnotY0VZdVU1TzQwd2tRVHJWTkE5MmhzS0s3S0RIVzN2TzNja1VnSDNneFpodGtGRQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-5de726efbf",
+      "date": "2026-11-07",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Asda launches Welsh Supplier Development Programme with Food and Drink Wales - Herald.Wales",
+      "summary": "Asda launches Welsh Supplier Development Programme with Food and Drink Wales Herald.Wales",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTDM0SGtfWHlPa2R6cjBKYjVRbzAtR1NRbHUtSFNBMmpsU2tZd0tvZVZGN1VQdEpxaVc1OWFUSy1CblBPbjNOSHU3bFRBbUEwemJ4MERwOTE3c2ZRT3BVVkxFR0dSWkROYjlhRkRrY1Z5ZzFkYTUzOTd5cVVYU2dJMEd3ei1hRFVuMzRWQjI2N21aSkZfTzFTeGhQcElhcWpJUVFHUldLcllmYzF3bG1mOFdR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-5d0fec6113",
+      "date": "2026-10-22",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Major drinks supplier to Tesco and Asda enters administration after 27 years - Devon Live",
+      "summary": "Major drinks supplier to Tesco and Asda enters administration after 27 years Devon Live",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPQzk3dy0xeXhmajIxdWladUEwWUY0UHVVMXE3eklBVHl6RG9nLUdubFBLcXA0OTA4U2lMRHRGODlTeG1qdmQyXzZ4andDWkprWGJ1RkJJaHo1d2ZDdy1Zck51NVdUMlI5cWJoRHdfVmdnaEpEaGVYcElDc1BTdDg3SUVaMGVMMDBTQXlHMUFWZW3SAZYBQVVfeXFMUDEyc1VnVUlsb2hBQUZGSTh5YzRvRFNCclZoblo0ZEdvbzAxSDlYeldOVi1mQklpd2hSQkdXSVBkOVM2dy00d0xUNDkta2x3TFRXRGNSUEpiUlg2Z2s5bnpoZDdGRVMwTHQxRlIzelBpSUUzMjZRRmREX2kzYnhJZDdDMGhFSk5PM3I0aEtIYUc3ZjdKWUVn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-8efb9d90cc",
+      "date": "2026-11-05",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tesco Accused of Concealing Forced Labor at Thai Factory as UK Lawsuit Advances - WWD",
+      "summary": "Tesco Accused of Concealing Forced Labor at Thai Factory as UK Lawsuit Advances WWD",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQklDNGJYNTFpY1ZjSUsydUVaQW5mOGxXaTJrNkYxaXBrOHFBTVBDU3JtUXBwSHp0S2hhTWhhY1JidFhWRVFpeHpZdGVYT2lqd3JsenNkZmxsZTRxZDZxQzRQUFlQZFFrdmw5X0UyRkVxWlpYTmFvT0RyZFJDSGZLZURRUkZEdkNEckRvNDFrakRZeGRHaTBuazl5cmh5UzRVQ1BhLUxuNWpGX1pleFdJZkhfd3Y?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-8818b04039",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Ahold Delhaize subsidiary Hannaford latest company to be hit with civil suit over seafood sustainability claims - SeafoodSource",
+      "summary": "Ahold Delhaize subsidiary Hannaford latest company to be hit with civil suit over seafood sustainability claims SeafoodSource",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPb0hWdUhOdXBTbFp5RVMwMEZLaUoyTVR0cHNIN0JwTTVQZ2hLQ1o5bTA2RWJMdkZLRkhqQk5xNU0xdWhkOHJ0R0ZmNHdXWEpaVWpGZ05Gdm9MaHhYVjhyeGxIVjZOcjdjUDJSQTUtem5ieFE1bUFmczNuRVZ4a2VucXhsRUwtOGJVcHN1OFd5VmU0VGtYdkgxZjk1aU1RdzhUekdVS3J2d2hST3NYX1JVYktNQU0yZ2ttSjljN0FtNng5V0pfRFhyMjZpM2ZCVngzVU54WGZVRU9MVlhsclhr?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a6019931e8",
+      "date": "2026-11-02",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Jeronimo Martins SGPS SA (JRONF) (Q3 2026) Earnings Call Highlights: Sales Rise 4. ... - Yahoo Finance",
+      "summary": "Jeronimo Martins SGPS SA (JRONF) (Q3 2026) Earnings Call Highlights: Sales Rise 4. ... Yahoo Finance",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOUFFhcE5iY3R6U0ZoSWtYV2xZMmp4empBOVZKdFcwZmlzZjJaa2dmN2NQcEFCdEwzc21yQW9JRGRidWFUSXcwY1pZZDQtekd5VjBKaE9xTWl4b0U5d2I3ckNGVFp4b0NvUmtSODNUMkxQbVRENDRPUHZvRlpXTGdoUUtNdHVFVTAtbkpkbWlXamhDYzhaTnJsaVFmRQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0aa22ed2f1",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Jerónimo Martins: The Glass Is Half Full - Seeking Alpha",
+      "summary": "Jerónimo Martins: The Glass Is Half Full Seeking Alpha",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUkNlZmFXeVp5aUQ5cTlnTlYtSHRObUVZTVFpMWFZODFsM05RSnktWllZcks4Wkd2VE1kaDVZZUI3alVlRGZYUkxGR3BONkI1WnU3Q3ZMU0VhcXdqY3JiaVlJYXBRUkhUQlNnazN5VjRfdTNkSEZLUU5VOEszM0oteHRCdW92Vms?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-20e19f5222",
+      "date": "2026-10-29",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Jeronimo Martins shares drop 1% after results - Investing.com",
+      "summary": "Jeronimo Martins shares drop 1% after results Investing.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQb01ZeHZ2cy1ad2VwamZtUkhHNEs5dXYzRXFwanNlUWFnTnJBalBrbDA5b0FBZ3ZfUjE2Y29fYnFCZU5iQ2pLSnY2bjhwTnlNZ1E5dTc0LXFyWEVVZ0VtbjhlU3pPQXdSeFFLZmV0eFA1T2YtZG1BOHVoSUVOenFCQTBtU0JqSVBheHZ2bk5CN0lqMS13NDRGYzlDSDFHQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-bbc784a967",
+      "date": "2026-11-05",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Coop Italia store fridges hit in latest cyber attacks - Co-operative News",
+      "summary": "Coop Italia store fridges hit in latest cyber attacks Co-operative News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPOVF0b2hucXRaOHhONk1lYTJuU2hHamtTc2xVeFBuSjBhY0ZhcjBYWHI4NmVSLUpmdVBZT256WUE0M1RYWnUtWG41QzNRY0VFY2l5UlNBNGJQNEVPNGNUWGZuYi1RWTdsUFBDcXluWEIxaWs3ZWgtU1duUWZVMk5tclJMdmZLZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-5bcc2f8a27",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Biedronka And Warsaw University Launch Lab Bridging Research And Retail - ESM Magazine",
+      "summary": "Biedronka And Warsaw University Launch Lab Bridging Research And Retail ESM Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPa3pRbTlIdUlscDllMVJZQjk1ejVtWkpacVhjbHFiZHVwTjJZTlFGdWgtbXQ4NV9VNU12Vy1jOHRlZzdKdmFDZmFtd0R2TkYxTDVDbExwUnVzbG91SmpJYllvbWlpN2JnbjBycWJSZDBvSGszcGZHT0lBMVY1Z3dLcmRrSHo2VHhON00wWTZTRUdlSURkWjFRS2F2VGN6eUttaTBpT0t2YlBUNS04MFlqX1JUTQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0badab4761",
+      "date": "2026-10-29",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Jerónimo Martins: EBITDA margin up over nine months, net profit down 14.5% - Idéal Investisseur",
+      "summary": "Jerónimo Martins: EBITDA margin up over nine months, net profit down 14.5% Idéal Investisseur",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcUoyMk5HRy00WnczSFVQT05NTU96SjNEZDBsZ0paZXAxenZuc001Nk1MTk5nMkdvWS1JXzZpYXdUajkyaGdWNnV1ZlBvLWZYdnR3UDRIRk9zeEZSbG81OEh3RkU3Wi1VM3dCRFpEMi1Cd09aUXNhWUF5RFk1NkhDZ1dhZG1Ra0dQREZqQWFGa2xKbmxDaVJCNjU2NE1ZT1NvdzhGQnFLSE53SXJObThYUEEyNVZyQUUzVjJZQ0lYelN4Zi1LNDRHbGV3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-021d4dd62d",
+      "date": "2026-11-03",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Coop Italia, Origin Italia Back Certified Italian Produce In New Partnership - ESM Magazine",
+      "summary": "Coop Italia, Origin Italia Back Certified Italian Produce In New Partnership ESM Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeFhhT1dEMGRyN3pOc2IyMnJfME9ScWlieXA5MW9DWjVnMmN0ZHNTeWhwZm5HZURBdWVHb01ON0E0MXlXUWtMVTlndUU4UU90NHVxVzRMRWFpc1hVZGtoRDRxQjJIT3VxWWF6NE94djlIS1c5ZTJ3akdnQ2F4YVZLQXVOSXZJc3Y2NVlTT2Y4Vktlc19hOFRlblRQbUtYTHV5dzVwVTBhMkZWbTUtNVZ6Q3FHdXExVHJyYzFpZjRvdHdLUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-de8238a969",
+      "date": "2026-10-22",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "From ‘weird’ to crucial: Sherry Madera on CDP’s 25-year climate data revolution - Reuters",
+      "summary": "From ‘weird’ to crucial: Sherry Madera on CDP’s 25-year climate data revolution Reuters",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPN1RzajB5OG9mbXNiWkx6NmcyYmlrUHRzMzNTc09ROW9MWmVhTjdwRDMtWFM3R2k4SGFzd2tHYWpJZGt1YlVZcHNxdHpoWmNlc1lOQ0FVc2twNHpRbHlJQXl1X1BNa1FkZGVMSDNKR2w3QUVDejdBQUNudjB6XzNMOTRRQ2VrOGhEQmlSYWtLVW1NTmtFSjMxYTRSclFvWFh0bUlVRER0MHBPRWpOeTVXM0NvQ1luSDEwNGhxZnMxa0k5VlFhYWZrb1laMEdzVG9IUjRHVVJMYXRFTDFiZDI0NlpENEI3cHc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-f5aa37fc06",
+      "date": "2026-10-16",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "CDP Japan Report 2026 - CDP disclosure",
+      "summary": "CDP Japan Report 2026 CDP disclosure",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9jeEN6SzMzVVlDTTc3Tkk3SlVvWWs3MlBwdmRzWk1vTnNXTk9FQktzMjVVQWZTdTJrdUxOWlNyTHYyUFNMRzFYLU1oRkF2Wm9LbUxEc3hQSnRNa1JpNG12TWVhOA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-317be8d0d1",
+      "date": "2026-10-13",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Dayco Makes Strategic Hires in Supply Chain, Sales and Product Management - Engine Builder Magazine",
+      "summary": "Dayco Makes Strategic Hires in Supply Chain, Sales and Product Management Engine Builder Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNamxiM0NhaVh4SXVwQTVvSVpCd29Jei1CejFHUVVTbEM0bk5mNWY4TFBhTXUwY2ZsWjVveTZOVkRwcjVRcHhCV0tScDQ1Mms0ZWh0S3pwbjNWOE9nN2F3bWNBbnFlb2FpWFlFcDl0OFlTUVU2RzMxdDNUbExhaWt0UEhMdkE3N242dmxjSWZldTB0dk9RN3FCZ0NVZ0Q1QzJaMkVKTnZ5Zm9DOFBnNTJIYjJfZzk?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b2987ad5fd",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "In-House Research, Engagement Overtake ESG Ratings as Investors’ Top Sustainability Tools: Survey - ESG Today",
+      "summary": "In-House Research, Engagement Overtake ESG Ratings as Investors’ Top Sustainability Tools: Survey ESG Today",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQbE53LVBZMzNSVXBpUlQ1dHlRWEFQYVpPN2xfN1NqbjVKcllMU1ZmVU5GeER5THAxVUJ0OG9yUUJDTnFjVjhiS2ItRjF3VmtuZWVBaklvNUdVdzF1d0RIZmliR0ZhMFlNZTJHU1JvTDFLQzMwa1RKLU5WOFFDaURrU0dyMW5CZURrcWhwcjBQNHlaZVVRd1I5aXdDd1VVYzA0cmRWTkF3OXB6ZTluUWVqR2h0WTFwUUtlbzFPVDI5ekItcFY4ZGM2bFNyM2VKM0xYYWoxTklDclVNcVVHLXg4?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-2b01586905",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "climate",
+        "people"
+      ],
+      "impacts": [
+        "suppliers",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Sofidel marks 60th anniversary with investments in renewable energy and supply chain decarbonization - Tissue Online North America",
+      "summary": "Sofidel marks 60th anniversary with investments in renewable energy and supply chain decarbonization Tissue Online North America",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZXZoVHJzMmJ5aUFINEV6bXd6V0ttaER3MHlnSVhaMzZmdkltMjRfdUp0UTkybjJrZmhJaUJOeWNHdzJadk5PS0w4a2NDRkRWZG92UlFUckYxdlhyQjdFY2hLQTVEeE8xMnctWFNqZm5IbEctWEROeXNjcjRyRW1Zd1hveFZTWHduZ25hSXRoLXQxNl8xR2ZxaWpJZ0ZiZUd1SFFrQkJVRXJ1WEVYUGZMWXAtb3l6YlhLMVBzVkdQSEJGTkNac2x3aE45RGM0UVFKR3hLUA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ef6ac6c04d",
+      "date": "2026-10-15",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Italian Ministry of Foreign Affairs, CDP and World Bank roll out the Global Coffee Initiative for the future of coffee - Comunicaffe International",
+      "summary": "Italian Ministry of Foreign Affairs, CDP and World Bank roll out the Global Coffee Initiative for the future of coffee Comunicaffe International",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNeXFLNGdEQ2UxS1Jpc1dzRnF1d1ZvUVFqUEJvR0JEdHducWNsMHpUcGN2cjNLN0YtYTZRSGt6QlJZZkg5MENHdEhDWkNZUGZLMTh6T09jbUNhdTRqZHNnNUFvZ0N4ZUxRa2x4RW9abXVZTjhWR0J1VWJ2ZzJDZnJCQzE3ZExtd0Y2SEVqUWN0cWt2U2xlY2pCa0dkTmNtMGZYV2dUT2IwWkFDclkzNkZqd01CRkNzeDgyckllT3h0QWY5Y2VXRjhLMmh4SWFEZEhqbng5WU9xMmZwbEZK?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b054dcbbc6",
+      "date": "2026-10-19",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Trilantic Europe, CDP Equity agree sale of agritech firm Diagram to BF International - PEI Private Equity",
+      "summary": "Trilantic Europe, CDP Equity agree sale of agritech firm Diagram to BF International PEI Private Equity",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOMWJDWk1NMWdGX2xWZnplUlRpUUh3emhfS1VjZnBUUFdjam9iU2ppS2wxUU5FcGYzYlQ3Rm51V1lXbEZnY2VqLWNzVUJRTEFuQ2NNUm1ydG1mc0g5ZGhyUm5qOVI5NDd0Q01pQnhaQktCdGoycjMxSXlhUXk1eXJ0SlBNZXFmN1pwT283VVVNc3VZaWZlZVNaVm51aGx2c0trdE9DQ2QzNUUwRDUzb0dnWDIyQTdnZENRUzVmcWhvUTg4ZzNzN1E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-fbeff0a7b0",
+      "date": "2026-11-05",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Updated: Sustainability tools to use in 2026 - Trellis Group",
+      "summary": "Updated: Sustainability tools to use in 2026 Trellis Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE50WWZlTms5Y05DMTZaUVBjYlFBSjhoSG9hcndCZ3BuMDBYUDJZeGhlZ1RJMHhseXJpSnNWYUZqUmd0U0VScGxKYmlkbldLTHZHOVRPUlhIQng2bjFqWUJLLVdlcV8wUWt4Q2xhY3Fab05nTGtq?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-57f0763887",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "2027 Third-Party Logistics Study Finds AI Data Gaps - Fleet Equipment Magazine",
+      "summary": "2027 Third-Party Logistics Study Finds AI Data Gaps Fleet Equipment Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPUXpfeHFqd1JZNDVTVE1YOUdyTWRRMWkxZERBUmlxUzlFckNJSk9YTlRkUDFDTndDNVY2SkU1MDlzWkE4OVZrXzdiUDVTaTJ3V1kyenllYVhHU2IxSzRqbVcwUncyMi1Gb2ZtUlFlbXFtLXU4cDdYb1p0RkRDcUowU09oZFlvWmozb1AzckdEbmQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-fa01024479",
+      "date": "2026-11-07",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Turkcell to showcase green technology investments at COP31 | Daily Sabah - Daily Sabah",
+      "summary": "Turkcell to showcase green technology investments at COP31 | Daily Sabah Daily Sabah",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNXRhQy1GM3VWTWVIRWo5cXNLRmloUGthZ2wyRS1LU1lSM1ctVzdXM2xJM2wwSkpoRjBkSE9CWGx5bU03T093aTNuemM2YVhBaktIT0lsUzBLSWNSTDJsTUxocVpGVGJxQk5RYVNZZGhIWVlBSzdEVHhZb21kdXVnblYtWkNRMHE2OHM1NThucHIyZVMzeTVQajZHN1RkRnRraEZwOGZB0gGmAUFVX3lxTFA1dGFDLUYzdVZNZUhFajlxc0tGaWhQa2FnbDJFLUtTWVIzVy1XN1czbEkzbDBKSmhGMGRIT0JYbHltTTdPT3dpM256YzZhWEFqS0hPSWxTMEtJY1JMMmxNTGhxWkZUYnFCTlFhU1lkaEhZWUFLN0RUeFlvbWR1dWduVi1aQ1EwcTY4czU1OG5wcjJlUzN5NVBqNkc3VGRGdGtoRnA4ZkE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-11e160a445",
+      "date": "2026-10-29",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "European water resilience strategy: objective and impact - Moeve Global",
+      "summary": "European water resilience strategy: objective and impact Moeve Global",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOWWpZdEJFdWttNmNLQThXOGFMX3JubDJfWlBkb0RsLW0wMXVIVjRyZ2FEbTlud2pEblMycVRDSEdOZS1PX2lTZmR4QTBUaWFZdzlncHNmYVE3UDdZdFE4SDdndTh1cUJZS2xVZENSc2FUMndUY1BZSGxZMENnVUJQTHNvMFVyemxXZ05rMTBLVW52dw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0134c6589f",
+      "date": "2026-10-14",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU Water Resilience Investment Accelerator: Supporting financing for water-related projects - https://environment.ec.europa.eu/index_en",
+      "summary": "EU Water Resilience Investment Accelerator: Supporting financing for water-related projects https://environment.ec.europa.eu/index_en",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeHdWVl9UNFFUMWN5T1VqMXptRnMtS1kwSnNXVE5LOEV6VmR5UXE5aWFseUY4QVB6YlJXZGpLNGpOZTFMZy1RZVRuTlJIUGFld0o3R2o0RnZlZGZxWUN1ZU9xOC1XZmJFYXM1MnNFTmhEQUtqSEg0TlJuQlNfYWpKMHByX0NtWDNzM1RUQXo3YmVrYzBpeEpEb0JBRmpZNEVtamNvSk5BSGJJdnFWbmZpaA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-880a725040",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "climate",
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Corpus Christi Approves Water Charges for Industrial Giants as Landslide Election Rocks Texas - Inside Climate News",
+      "summary": "Corpus Christi Approves Water Charges for Industrial Giants as Landslide Election Rocks Texas Inside Climate News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObXhLVkE5LXNZd3NETFl6Wnhuc0NJS0J5aTVwZWpEbVlLeXQwVFlJRlJvblFxalJRLU5laEMwNzEzSzNtaU5tVDR4Q1ZzeEw3V2phRklORkpSeWdYSmt1UU0wMFZoSloyUHV1SUFSdmJ3dkd5eEszbkZ3RE1nSlFILXVEU1k1S0RhUkk3ZmlSQzZ1Rjk0RFE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ba6a26ff52",
+      "date": "2026-10-19",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "How Proposition B could change how industry pays for water - kiiitv.com",
+      "summary": "How Proposition B could change how industry pays for water kiiitv.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxORFNJNnhlSkF5d2tDOVBLTzNFcUdWd3FfNlpGeG51RE4xS1FieUViSk13eENVNXByd1A3Y2NSazhaYXBKVXJuSE91U0o1dXhyNnRzdzVDV0RGOXZsX1MycjE3dlpzVDdkZEh4Um53QVFNNnZ1Y3c5Nm5MOER3VGRsV29XY1pCeTJyUVVMUTQ4OW1ma292QW91bXA2MjFTNTRjWHFNRzZBQ2h4czZpSTRBSWloTDJYSVdJXzJvTl9mU0RkYkg4OGxVOFEtOHlNRlZaZklkODN5Ylc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-c9a3253e41",
+      "date": "2026-11-06",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU wastewater directive deadline nears as quaternary funding faces court challenge - Smart Water Magazine",
+      "summary": "EU wastewater directive deadline nears as quaternary funding faces court challenge Smart Water Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSFZTdUdKUnJjTm1kQmppWVVYSWNQVURWbkxFdTZvRzBjYkQ2YnFMOUlMVHhGLWhSZkN1dGUxaVJNSERRdHl0VG5HR0c4dVpHZ3FwQ1U5N0FTR1RaWURsQlVrQjcybkN2b25wU2wxUlB6MmVDZHNpeHdOM2tVWnYxSVUzbHZ2b0hlR05nUE4teWYwRUFvQVlzdkhlNzE4VzIxSkVKZ0Q0ODBrLV80LWtuQ2lHNXEwa1VIakFteTFpdzJZM2pqc3c?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-cd2656cd77",
+      "date": "2026-11-03",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Sweco buys Finland's Teollisuuden Vesi to deepen industrial water play - Dealroom",
+      "summary": "Sweco buys Finland's Teollisuuden Vesi to deepen industrial water play Dealroom",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOEtOWE9WRUxfUVZWelotRk1jcUluM2NvWGpmYklXLTJ1bjRRQXBhTGRnZ2ZNRUVpV1BKZU5rRnJzZmlmMEFlWVJFLVpNdm5qR2duQWYzZ0JDeVQ2OFZLTUNoYUIxbHBMMUtPdHR2NnBIYUd1OHFNbkprYzA3cF9SWWZCT3hnZzBTSFhzNFZVdG10QlJyMzZYeXNKZTdZLWtPZFdaWFJwZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0838411bdf",
+      "date": "2026-10-15",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Why landlocked countries struggle to make healthy food affordable - Euronews.com",
+      "summary": "Why landlocked countries struggle to make healthy food affordable Euronews.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZnl3eTQxV0tiRU5JcDNNT2txMXRpcXdROEdKSVQzUTlvaVZUdXdoVlprRGhITkFLMS1Cc3RvbHYxRFA3SHpVbnpDWU9Cb09NOGlmUm0yak9IRmFxaVNrTTVYQzlRQ3dxUnJJZWZfd1JlWkJxVGM5c0ZqVUxVRXdheGFWdVlIUmNZdHktaTJWTFh0NzRxc002QmhBb0lVYXpLVDg4U2gzWkRoVlF5N3dWODhfbGwtdjQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-2ed821ad15",
+      "date": "2026-11-07",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Agricultural Irrigation Pipes Market Forecast to Expand Through 2035, Driven by Water Scarcity and Precision Farming Adoption - IndexBox",
+      "summary": "Agricultural Irrigation Pipes Market Forecast to Expand Through 2035, Driven by Water Scarcity and Precision Farming Adoption IndexBox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPLWFhSU9PWUQzZUVWdXhmUmlfV0pFUHpuUzZsNHlxWVJVa3Itd1BJOWlUTFJ6bnNySDhQNkxsY2FsX3JHb3dTLVFBRWVWa05iYW92aDZZUEdaZWs1TGxMWk14ZG9QSThTZEZmVFhGVWVVQkU4dGswMGFUV2JxMThPZG1SeFZxUUlPMTdaMnRqRVhEUlFWMFZjS2daUWdHSXRCY29XZjBVS3FnMzRjQUFnbXhPUWZhVVlpZG1Rd29mOV9FTlVDamhUcDRtWklZSFh4NDdaWmpsYUhzRkRzRm9jeVhxOWFHcjNrX3c?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6a69537d8b",
+      "date": "2026-11-04",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Proposition to end drought benefit for industry passes in election - Corpus Christi Caller-Times",
+      "summary": "Proposition to end drought benefit for industry passes in election Corpus Christi Caller-Times",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOOVJ3YXhLZEVpeDVCWTZhNTBEZ0thYWV5U1g2emZmNVkzdjlaem52ZTJSQ0pmU2JERlJ2SFZjXzJJMVhGTmFJaUpXTmF1aHZ0UURLaWh3RXlfdXhJWU1aaVFkeWNDcTJabm5LMWRZMWd2dWdzeEZCRXdiRzVXWGNITkJhS2xobmljTzZoY245YnRFd2F5bWZfcVI5QkptZG9HUmlDNGkyRGMybkg3bVZMT1RDWnB1VXBxWWhrNkJ3azBmbDFhdDllZlMzbDBGRU9Y?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6c1a668018",
+      "date": "2026-10-19",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Commissioner & Belgium commit to stronger EU water laws implementation - https://environment.ec.europa.eu/index_en",
+      "summary": "Commissioner & Belgium commit to stronger EU water laws implementation https://environment.ec.europa.eu/index_en",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQdzM2bG9JWWtFdnBXOEdjUE9TaTVseVgtemthVGF3ZjRzYVVqazM5RXpoTWxMd2dyYW9hLXNaQ19yTkNPTjJOTUlWeFBwa1owN3NJN2JXcm5kUkdyaVBBdHhjMXFtRTYzcEx1c0xyZG8yWWwydUVSLTZ1N1pDczg2dzdKT3FHOEUxUXU3WmM0T1Y4RVBjRE5zOGh2Yk5IQ1R3X09tcDJ5Nkt3eE9PSkZiWTBsQW5xOGNj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-44a3a824a0",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Wirtschaftswachstum: Produktion in deutscher Industrie wächst trotz erwarteter Dämpfer - DIE ZEIT",
+      "summary": "Wirtschaftswachstum: Produktion in deutscher Industrie wächst trotz erwarteter Dämpfer DIE ZEIT",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWDdjeE10WHNhSzBEMWluTmNyTWJ0bUpOWXBseV9JaG5Ua3VlVV8waDUxOEVzbU5iQVBvY09HaUtoenpNMnUyZkRodmZwbEZmdzZpcm1IVkNfbG9nSTdubTQwNk5yQmxFdjZuTWpDMkJkZjhNSzBuTkpqWi1jMnRnS3Z3Q1pZZzdrWmxEeURZeUxDakNrdmNNTUE4SkpNZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a6db2ffec4",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Deutsche Industrie im September überraschend gewachsen - RND.de",
+      "summary": "Deutsche Industrie im September überraschend gewachsen RND.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVkVhWFNtUGlVRkx3VXNNSk9xbFZkdXVVd1RLY0cybTBaZGE1X1pFTTFRLW9PRl8waHJ6QzN4dlFOaG5oVDJES1dvcDl6cXZDQU12azlOVlpWQnFncl9BYWdQRmhCcFRUZ3BMaDJGZWpQbWZpczdEV2pXRGgwdEhOUUdEUHc3aUlQcnQwMkx0d2ltbFJQQ0dDQV9XSEhOOW01NzNNU3VYdTcwdGxpU2h6dEJqUV9qSHZfNW9PN0FabDljdkRxRGZmaUp5T0RGZ0U?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0bd762b358",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Konjunktur: Industrieproduktion in Deutschland wächst überraschend - WirtschaftsWoche",
+      "summary": "Konjunktur: Industrieproduktion in Deutschland wächst überraschend WirtschaftsWoche",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWV83azRLLXhiSXNqNWNsbFRKYTZVQWJQV2ZwVmhXcVNDOFZhUm5SVEYyVUpoMy1NZ284bTVKMWIyWlA3N1FIcDZmMmFQZEh1ZTROSVpCMkxvTG9nOGo3WWtOUURSQXRfOS1NYXFlMWVEMG55cGhLWVI4RXdwalhHR185N3NRZ01KZkJzTGV1bW9PNWluMDhPOGtITnFWTlU4UWlqbVowNzJHUTlSVDcyenpnb08?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6920e14e3e",
+      "date": "2026-10-30",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Wachstum trotz Niedrigwasser: Deutsche Wirtschaft wächst überraschend - Lebensmittel Zeitung",
+      "summary": "Wachstum trotz Niedrigwasser: Deutsche Wirtschaft wächst überraschend Lebensmittel Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZFVTNWdqOUtpQmZFMllpNUNEVW9YR2RJWUtUbjE1NF9rSmlweVhYS1RFUXNzVlpsSUpVeEdueWhacUdBUkstSFVObFY4R3docUNVZ0JQdGhGWWdzd0NubWt6UVlEbXVKdFJFdVZWLUVISmlxVEhxTVVkYWZ4OE5YcFA2SlBmTFBleG4xVndzMXdEeV8yZlRwNkx6dHhzZnRBdTVuRWlqVTBFOFpIc2hMVXI2RkhrM0s1MVFLVGEwYmpuZjhYOFV5ZmRWSFBoNG9n?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-60a9f8c07c",
+      "date": "2026-11-03",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Chinas Industrie für Elektrofahrzeugbatterien wird durch die Dürre in Indonesien beeinträchtigt. - Vietnam.vn",
+      "summary": "Chinas Industrie für Elektrofahrzeugbatterien wird durch die Dürre in Indonesien beeinträchtigt. Vietnam.vn",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQ2NWTnU4akhpb0xaWnZNaElrZVk1MWc5NWdUT3pfM0pfYTJpU25Zd0c2cGVXcElPZ0hxekxGYnMxTXlWT0U5bFJ0UURmZ0hJZi03T0FldldzUXZveHJyQ3dTODEyM3IzNVpvd2RXTUFrYXhvOFl5RnRKX3dYTDRnMG01Q2kzQUZNbHFscEVnUE0?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-987157619f",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "„Deutsche Wirtschaftsleistung stagniert“: Merz kassiert am Tag nach dem Investoren-Gipfel den nächsten Nackenschlag - Merkur",
+      "summary": "„Deutsche Wirtschaftsleistung stagniert“: Merz kassiert am Tag nach dem Investoren-Gipfel den nächsten Nackenschlag Merkur",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYVNWUzRNMDlIdWdFQ3lzZDFhZG5UdkpJdGRaMGktblF5R1g2MzlFMHlmSG85SGtfTGRaVmlabEpvTWtPVV9leXV2b29KdGE0d012SjRjOUx3c19URkszUUNJcnBHclN4WjREMDJxT2h2ZVl6S2pVejI0b29nMUVoWmYxOFlLaDExYTZlTEd6WklJQlgxUGw3SWRteXI3OEktU0tkb0wtNDlHcUxlOHBR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ab94a9dbc5",
+      "date": "2026-11-04",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Das Ministerium für Industrie und Handel entwickelt proaktiv Pläne für den Betrieb von Wasserkraftspeichern, um die Stromversorgung während der Trockenzeit 2026-2027 sicherzustellen. - Vietnam.vn",
+      "summary": "Das Ministerium für Industrie und Handel entwickelt proaktiv Pläne für den Betrieb von Wasserkraftspeichern, um die Stromversorgung während der Trockenzeit 2026-2027 sicherzustellen. Vietnam.vn",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQTHF3NU9nbTRySF81b1ZBeHB6UTY1R3FyV2NHRnlSbE5NMXM3cV9qTldHWnpPd2swTTlDSERNUnU3WjdpZHlCa1FfVE41R19ILUtQODZvN1g3cGEwSkFGbnh4THJHbUlQQTk3OGVlZko0ZFQzbzBOSk8zdFlfeV96ZWlRYzlBU0lDbmtPRnJwcmpoeFNKNnVtM3NwMS1QSnk5enRid1ZXcV95c3BjVnc2WnFVZVE2VE4xUTV0d0lvRVppY2ox?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-b637b87aae",
+      "date": "2026-11-06",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Europaweit erste Fabrik ihrer Art: Was Wepa in Kriebstein ab 2028 herstellen will - Freie Presse",
+      "summary": "Europaweit erste Fabrik ihrer Art: Was Wepa in Kriebstein ab 2028 herstellen will Freie Presse",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQQjlISHFPVE9KRGFoVjIydU5sYWtTZzlrd0VMR284TU13Y2pwcEJ3QmFkLXhXY0xQRC1lLUVuVUhzbXZaeVNaRXZaVjRuRHowWlRZemlDN01rc2pfZFEzd0tWYnlweThKWjV5ZlpvZ04yM1pMYlVqa3BoM2xLNDJqbkpHR2tBLUZ3cHdxMG5KWi1wbXFLT1VWTWU2cFdVR0s5THh4bjd6OWllSF9tNUxUMC04OUVPZHlzRzVFUzA2UXdYOV9JYm03dndwMmJwTHgxanBTZTl6RTdBSXZlWjFWdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-f07a105a33",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Wepa investiert in Faserplatten aus recyceltem Material - EUWID Recycling und Entsorgung",
+      "summary": "Wepa investiert in Faserplatten aus recyceltem Material EUWID Recycling und Entsorgung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOTNnd2FfTnZRLTlFMXUwWTNIalcycGxBNzgzWEhXaXNCaGRiVExHQ2RYQzVuRnJ3S3dBd3Y3T1U4RXJVa2JibFROeDR2S3pMM2d3dXBJX2ppeHZxbFVuLTJlSDVtQjE4Q1ppRmdGRy02R1hlT21ZY0toM0dmSTAwMUhBZ2pQSW5rUDdjbTlBbkNBN19NNnJUVzJXcWJ2VVF6T3NPYVc2QlJwUnNuS2FV?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-732d5552e5",
+      "date": "2026-10-14",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Après la vente du site Ahlstrom à WEPA, quel visage pour l’entrée de ville de Bousbecque ? - La Voix du Nord",
+      "summary": "Après la vente du site Ahlstrom à WEPA, quel visage pour l’entrée de ville de Bousbecque ? La Voix du Nord",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · France (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOU1hJMjVmVTY5Z1lxeGdWWFFZaHl3TVF1SV9PbGNPYmVkZEEtOTR0bE1aMlp0bV8wdWhpV2dfc3JrSVFlU040WWJET3hENGdlNXM4cmlVMG1PRWRYVmtuZzN6NWpaRWhXRExPaTBnaWtxM1lKMnh4Slp3bmJwc1NBV21XS3docmNnMDNyOURzZnc4YzRxdUtVdXRtMlphTFRVTk44QTNVYVVwcEZKNEtJZ1lPaUNSNXVpTDhXcDIxWTJfYkM1Unprbg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-a2abdeb09a",
+      "date": "2026-10-21",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Rachat du site Ahlstrom par WEPA : « cet achat garantit l’accès à l’approvisionnement en eau du site - La Voix du Nord",
+      "summary": "Rachat du site Ahlstrom par WEPA : « cet achat garantit l’accès à l’approvisionnement en eau du site La Voix du Nord",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · France (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQVTNWbUp0UVZmZThkaWVZSFVtOEViZDd1Yk1hVExDX2swaUtJbms2TVZDOGJpaGZrTEwxZ29CZ1h2eVlld0V2cXYxNkpTZ3BoZ3UyNWhQdkFGNGplNWpjdnV0X19DV0Z3UDdwbUZzMnY3ZFpsRTRFVXJSMVBsTjFtTDlVV0pPVWZkdmdlcmctYlBiVGlUOGVVVldtYjlOVTd3SDNKLUZZelVHaHpJQkFsc0xUQTJ1N3lIRVd1VXVjWHBUYTJiMU14RThLLURsRTQ?oc=5",
       "origin": "feed",
       "added": "2026-11-09"
     }
