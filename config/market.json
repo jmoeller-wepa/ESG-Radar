@@ -1056,11 +1056,12 @@
       "filter": {
         "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
-          "^GP19-1711$",
-          "^Holz- und Zellstoff$",
-          "Holz.*Zellstoff",
-          "^Zellstoff"
-        ]
+          "Halbstoff.*Sulfat.*gebl|Sulfat.*Halbstoff.*gebl",
+          "Halbstoff.*(Natron|Sulfat)",
+          "Halbstoff.*Holz|Holz.*Halbstoff",
+          "Zellstoff(?!watte)"
+        ],
+        "peek": "Halbstoff|Zellstoff|Holzstoff"
       },
       "unit_match": "=100",
       "good": "down",
@@ -1074,11 +1075,10 @@
         "limits": "Few German producers sell market pulp, so the index can be volatile; it is an index, not a price level."
       },
       "tableMatch": [
-        "Monate.*9-Steller",
-        "Monate.*Sonderpos",
-        "Monate.*(6-Steller|5-Steller|4-Steller)",
-        "Monate"
-      ]
+        "Monate, Güterverzeichnis \\(GP2019 2-6-Steller",
+        "Monate, Güterverzeichnis"
+      ],
+      "exclude": "\\bohne\\b|Eisen|Stahl|Kunststoff|\\bBio"
     },
     {
       "id": "de_ppi_tissue",
@@ -1093,10 +1093,11 @@
       "filter": {
         "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
-          "^GP19-1722$",
-          "^Haushalts-, Hygiene- und Toilettenartikel",
-          "Haushalt.*Hygiene|Hygiene.*Toilett"
-        ]
+          "Toilettenpapier",
+          "Taschent.*Handt|Haushalts.*Hygiene.*Papier|Hygiene.*a(us|\\.) ?Papier",
+          "Toilett.*Papier|Papier.*Toilett"
+        ],
+        "peek": "Toilett|Hygien|Taschent|Servietten|Handt"
       },
       "unit_match": "=100",
       "good": "up",
@@ -1110,11 +1111,10 @@
         "limits": "Includes other hygiene paper articles; not WEPA's own prices and not shelf prices."
       },
       "tableMatch": [
-        "Monate.*9-Steller",
-        "Monate.*Sonderpos",
-        "Monate.*(6-Steller|5-Steller|4-Steller)",
-        "Monate"
-      ]
+        "Monate, Güterverzeichnis \\(GP2019 2-6-Steller",
+        "Monate, Güterverzeichnis"
+      ],
+      "exclude": "\\bohne\\b|Eisen|Stahl|Kunststoff|\\bBio"
     },
     {
       "id": "de_ppi_gas",
@@ -1130,9 +1130,9 @@
         "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
           "Erdgas,? bei Abgabe an (die )?Industrie",
-          "Erdgas.*Industrie",
-          "Erdgas.*Ind\\b|Erdgas.*Ind\\."
-        ]
+          "Erdgas.*Industrie"
+        ],
+        "peek": "Erdgas"
       },
       "unit_match": "=100",
       "good": "down",
@@ -1146,11 +1146,10 @@
         "limits": "An average over contract types and sizes; it does not include WEPA's own hedging."
       },
       "tableMatch": [
-        "Monate.*9-Steller",
-        "Monate.*Sonderpos",
-        "Monate.*(6-Steller|5-Steller|4-Steller)",
-        "Monate"
-      ]
+        "Monate, Güterverzeichnis \\(GP2019 2-6-Steller",
+        "Monate, Güterverzeichnis"
+      ],
+      "exclude": "\\bohne\\b|Eisen|Stahl|Kunststoff|\\bBio"
     },
     {
       "id": "de_ppi_power",
@@ -1165,10 +1164,12 @@
       "filter": {
         "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
-          "Elektrischer Strom,? bei Abgabe an Sondervertragskunden",
+          "Strom.*Sondervertr.*Mittel",
+          "Strom.*Sondervertr.*Hoch",
           "Strom.*Sondervertr",
           "Strom.*Industrie"
-        ]
+        ],
+        "peek": "Strom"
       },
       "unit_match": "=100",
       "good": "down",
@@ -1177,16 +1178,15 @@
       "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61241",
       "short": "Electricity price for German industrial customers on special contracts, monthly.",
       "about": {
-        "what": "Destatis producer price index for electricity supplied to special-contract customers (mainly industry, 2021 = 100), monthly.",
+        "what": "Destatis producer price index for electricity supplied to special-contract customers (business and industry, 2021 = 100), monthly.",
         "wepa": "Shows how fast wholesale price moves reach industrial contracts like those of WEPA's German mills.",
         "limits": "An average over contracts; levies, grid charges and relief schemes differ by site."
       },
       "tableMatch": [
-        "Monate.*9-Steller",
-        "Monate.*Sonderpos",
-        "Monate.*(6-Steller|5-Steller|4-Steller)",
-        "Monate"
-      ]
+        "Monate, Güterverzeichnis \\(GP2019 2-6-Steller",
+        "Monate, Güterverzeichnis"
+      ],
+      "exclude": "\\bohne\\b|Eisen|Stahl|Kunststoff|\\bBio"
     },
     {
       "id": "de_ppi_diesel",
@@ -1201,10 +1201,12 @@
       "filter": {
         "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
-          "^Dieselkraftstoff$",
           "^Dieselkraftstoff",
-          "Dieselkraftstoff|Diesel"
-        ]
+          "^(?!.*Bio).*Dieselkraftst",
+          "^(?!.*Bio).*Diesel",
+          "Gasöl"
+        ],
+        "peek": "Diesel|Gasöl|Heizöl"
       },
       "unit_match": "=100",
       "good": "down",
@@ -1219,11 +1221,10 @@
       },
       "glance": true,
       "tableMatch": [
-        "Monate.*9-Steller",
-        "Monate.*Sonderpos",
-        "Monate.*(6-Steller|5-Steller|4-Steller)",
-        "Monate"
-      ]
+        "Monate, Güterverzeichnis \\(GP2019 2-6-Steller",
+        "Monate, Güterverzeichnis"
+      ],
+      "exclude": "\\bohne\\b|Eisen|Stahl|Kunststoff|\\bBio"
     },
     {
       "id": "de_labour_paper",
@@ -2009,7 +2010,7 @@
       "areas": [
         "circularity"
       ],
-      "label": "Waste generated, paper industry",
+      "label": "Waste generated, paper and printing industry",
       "unit": "kt",
       "source": "destatis",
       "table": "32161-*",
@@ -2038,9 +2039,9 @@
       "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32161",
       "short": "Sludge, rejects and ash: context for WEPA's landfill and recycling targets.",
       "about": {
-        "what": "Waste generated by German paper mills (WZ 17), from Destatis waste statistics (yearly).",
+        "what": "Waste generated by the German paper and printing industry (WZ 17–18), in 1,000 tonnes, from the Destatis waste generation survey 32161 (every few years).",
         "wepa": "Context for WEPA's targets on landfill and recycling of mill residues, for ESRS E5.",
-        "limits": "Yearly with a long delay; definitions follow the waste statistics."
+        "limits": "Destatis publishes waste generation only for paper and printing together; surveyed every few years with a long delay."
       },
       "valueLabel": "Abfallmenge",
       "toUnit": "kt"
@@ -2070,7 +2071,6 @@
         ]
       },
       "match": [
-        "insgesamt",
         "."
       ],
       "esrs": "ESRS E1 · E3",
@@ -2079,12 +2079,13 @@
       "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32511",
       "short": "Industry spending on climate, water and air protection: a yardstick for capex.",
       "about": {
-        "what": "Investment of German paper mills (WZ 17) in environmental protection, all environmental areas, from Destatis (yearly).",
+        "what": "Investment of German paper mills (WZ 17) in environmental protection: tangible assets, newly leased assets and intangibles added up, from Destatis 32511 (yearly).",
         "wepa": "A benchmark for WEPA's own environmental capex in reports and customer talks.",
         "limits": "Yearly; only investments reported as environmental protection."
       },
       "valueLabel": "^Investitionen",
-      "toUnit": "€ m"
+      "toUnit": "€ m",
+      "sum": true
     }
   ],
   "gridNote": "Countries with WEPA sites. 'isUs' marks them in the table; the EU average is the reference line. Edit the list freely (area = ISO 3 code from the Ember file, or 'EU').",

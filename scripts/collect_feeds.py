@@ -111,6 +111,13 @@ def main():
 
     impact_matchers = {k: matcher(v) for k, v in config.get("impactKeywords", {}).items()}
 
+    def with_feed_impacts(feed, found):
+        """A feed may name impacts that always apply (e.g. the retailer feeds → 'customers')."""
+        extra = [i for i in feed.get("impacts", []) if i not in found]
+        if not extra:
+            return found
+        return [i for i in found if i != "watch"] + extra
+
     def impacts_for(text):
         found = [k for k, m in impact_matchers.items() if m and m(text)]
         return found[:2] or ["watch"]
@@ -179,7 +186,7 @@ def main():
                 "date": (published or now).date().isoformat(),
                 "type": feed.get("type", "tool"),
                 "areas": areas_for(feed, text),
-                "impacts": impacts_for(text),
+                "impacts": with_feed_impacts(feed, impacts_for(text)),
                 "tags": tags,
                 "title": title,
                 "summary": summary,

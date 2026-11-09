@@ -34,7 +34,22 @@
     toggle.addEventListener("click", () => { const o = aside.classList.toggle("open"); toggle.setAttribute("aria-expanded", String(o)); });
     aside.append(toggle, body);
     const api = { refresh };
+    // Scroll positions survive a refresh: the page, the panel and every scrolling list inside it
+    const SCROLLERS = ".ps-tree, .co-list, .ind-list, [data-keep-scroll]";
+    function keepScroll() {
+      const lists = {};
+      body.querySelectorAll(SCROLLERS).forEach((n) => { (lists[n.className] = lists[n.className] || []).push(n.scrollTop); });
+      return { y: window.scrollY, aside: aside.scrollTop, body: body.scrollTop, lists };
+    }
+    function restoreScroll(k) {
+      const seen = {};
+      body.querySelectorAll(SCROLLERS).forEach((n) => { const i = seen[n.className] = (seen[n.className] || 0) + 1; const v = (k.lists[n.className] || [])[i - 1]; if (v) n.scrollTop = v; });
+      if (k.aside) aside.scrollTop = k.aside;
+      if (k.body) body.scrollTop = k.body;
+      if (Math.abs(window.scrollY - k.y) > 1) window.scrollTo({ top: k.y });
+    }
     function refresh(groups) {
+      const kept = keepScroll();
       body.replaceChildren();
       const sums = [];
       groups.forEach((g) => {
@@ -63,8 +78,20 @@
         if (x.before) body.insertBefore(wrap, body.firstChild); else body.appendChild(wrap);
       });
       sum.textContent = sums.join(" · ");
+      restoreScroll(kept);
     }
     return api;
+  }
+
+  // Same bar on top of every multi-select list: "3 of 12 selected · Select all · Deselect all"
+  function bulkBar(o) {
+    const bar = el("div", "ms-bar");
+    bar.appendChild(el("span", "ms-count", o.selected + " of " + o.total + " " + (o.noun || "selected")));
+    const btn = (label, off, fn, title) => { const b = el("button", null, label); b.type = "button"; b.disabled = off; if (title) b.title = title; b.addEventListener("click", (e) => { e.stopPropagation(); fn(); }); return b; };
+    const acts = el("span", "ms-acts");
+    acts.append(btn("Select all", o.selected >= (o.max || o.total), o.onAll, o.allTitle), btn("Deselect all", o.selected <= (o.min || 0), o.onNone, o.noneTitle));
+    bar.appendChild(acts);
+    return bar;
   }
 
   function areaItems(available, counts) {
@@ -91,5 +118,5 @@
     });
   }
 
-  window.RadarSide = { AREAS, build, areaItems, area, setArea };
+  window.RadarSide = { AREAS, build, areaItems, area, setArea, bulkBar };
 })();

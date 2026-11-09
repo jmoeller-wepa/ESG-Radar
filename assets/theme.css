@@ -441,3 +441,13 @@ header .th-btn svg { width: 17px; height: 17px; }
 }
 @media (max-width: 960px) { .side-min-btn { display: none; } }
 @media (prefers-reduced-motion: reduce) { main.layout { transition: none; } }
+
+/* Empty states (RadarEmpty in theme.js): icon, one sentence why it is empty, one useful action */
+.r-empty { display: flex; gap: 12px; align-items: flex-start; padding: 14px 4px; color: var(--ink-3); font-size: 13.5px; line-height: 1.45; }
+.r-empty > svg { flex: none; margin-top: 1px; color: var(--ink-3); opacity: .8; }
+.r-empty-done > svg { color: #33b09c; opacity: 1; }
+.r-empty-t { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.r-empty-a { align-self: flex-start; font: inherit; font-size: 13px; font-weight: 600; color: var(--blue-700); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: none; }
+.r-empty-a:hover { text-decoration: underline; }
+.r-empty.box { justify-content: center; padding: 32px 20px; border: 1px dashed var(--line); border-radius: var(--r-card); background: var(--d-fff-bg, #fff); }
+

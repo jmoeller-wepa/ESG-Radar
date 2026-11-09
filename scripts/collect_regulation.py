@@ -264,6 +264,10 @@ def main():
     # 2 procedures
     radar = json.loads(RADAR.read_text(encoding="utf-8")) if RADAR.exists() else None
     roadmap = json.loads(ROADMAP.read_text(encoding="utf-8")) if ROADMAP.exists() else {"rows": []}
+    extra = ROOT / "config" / "roadmap_add.json"
+    if extra.exists():
+        have = {r.get("id") for r in roadmap.get("rows", [])}
+        roadmap.setdefault("rows", []).extend(r for r in json.loads(extra.read_text(encoding="utf-8")).get("rows", []) if r.get("id") not in have)
     rows = {r["id"]: r for r in roadmap.get("rows", [])}
     failed, cache, new_steps = [], {}, []
     for row_id, ref in cfg.get("procedures", {}).items():

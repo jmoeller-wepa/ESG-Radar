@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261106e"></script>
+<script src="assets/theme.js?v=20261107b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261106e">
+<link rel="stylesheet" href="assets/side.css?v=20261107b">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -323,6 +323,15 @@
   .mix-lg span { display: inline-flex; align-items: center; gap: 6px; }
   .mix-lg i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
   .mix-lg b { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .w-g { display: flex; flex-direction: column; gap: 8px; padding-top: 6px; border-top: 1px solid var(--line-2); }
+  .w-gh { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+  .w-gh b { font-size: 14px; color: var(--blue-900); } .w-gh span { font-size: 12.5px; color: var(--ink-3); }
+  .w-chart svg { height: 220px; }
+  .w-tw { overflow-x: auto; }
+  .w-t td small { display: block; color: var(--ink-3); font-size: 11.5px; }
+  .w-t td, .w-t th { text-align: left !important; vertical-align: middle; white-space: nowrap; }
+  .w-sp { width: 160px; } .w-sp svg { width: 150px; height: 30px; display: block; }
+  .gd-kpis small .sig { margin-left: 2px; }
   .wepa-l { margin: 0; font-size: 13px; line-height: 1.5; color: var(--d-374151-text, #374151); }
   .wepa-l b { color: var(--blue-900); }
   /* Indicator dropdown in the side panel */
@@ -335,9 +344,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261106e" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261106e">
-<script src="assets/colresize.js?v=20261106e" defer></script>
+<script src="assets/status.js?v=20261107b" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261107b">
+<script src="assets/colresize.js?v=20261107b" defer></script>
 </head>
 <body>
 <header>
@@ -400,7 +409,7 @@
   </div>
 </main>
 <footer><div class="wrap">
-  <p>Sources: Eurostat (producer prices, production, energy prices) · Eurostat Comext (EU trade: unit values = value ÷ volume, a market signal, not a contract price) · Destatis, GENESIS-Online (wholesale prices for recovered paper; Datenlizenz Deutschland – Namensnennung 2.0) · U.S. Bureau of Labor Statistics, IMF and Federal Reserve via FRED · Bundesnetzagentur | SMARD.de (CC BY 4.0) · Ember (CC BY 4.0) · Destatis (producer prices, labour costs, production, retail sales, foreign trade, energy use, water, waste and environmental investment) · DIE PAPIERINDUSTRIE e.V., Umweltbundesamt and Cepi (industry figures) · EU carbon price entered manually from press reports (exchange prices are licensed).</p>
+  <p>Sources: Eurostat (producer prices, production, energy prices) · Eurostat Comext (EU trade: unit values = value ÷ volume, a market signal, not a contract price) · Destatis, GENESIS-Online (wholesale prices for recovered paper; Datenlizenz Deutschland – Namensnennung 2.0) · U.S. Bureau of Labor Statistics, IMF and Federal Reserve via FRED · Bundesnetzagentur | SMARD.de (CC BY 4.0) · Ember (CC BY 4.0) · Destatis (producer prices, labour costs, production, retail sales, foreign trade, energy use, water, waste and environmental investment) · DIE PAPIERINDUSTRIE e.V., Umweltbundesamt and Cepi (industry figures) · EU carbon price entered manually from press reports (exchange prices are licensed). · PEGELONLINE, Federal Waterways and Shipping Administration (river levels, DL-DE→Zero-2.0) · Deutscher Wetterdienst, Climate Data Center (soil moisture, CC BY 4.0)</p>
   <p>Updated by the scheduled GitHub Action; most statistics are published monthly with a delay of one to three months, energy prices half-yearly, industry figures yearly. Indices are for trend orientation only. Exchange-quoted pulp and recovered-paper prices (FOEX/Fastmarkets PIX, EUWID) are paid data and therefore not shown.</p>
 </div></footer>
 
@@ -408,8 +417,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261106e"></script>
-<script src="assets/carbon.js?v=20261106e"></script>
+<script src="assets/side.js?v=20261107b"></script>
+<script src="assets/carbon.js?v=20261107b"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -443,12 +452,13 @@
     { id: "cost", label: "Cost index", groups: [], lead: "How the main input costs add up to the tissue cost driver index, set against the producer price index for tissue." },
     { id: "industry", label: "Industry", groups: [], lead: "WEPA's market month by month (production, demand, trade), and below a yearly environmental profile of the German paper industry as a yardstick." },
     { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "Where German power comes from, and the CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history." },
+    { id: "water", label: "Water", groups: [], lead: "River levels at the Rhine bottleneck and next to our mills, and how dry the soil is around each German mill. Updated every working day from public sources." },
   ];
   const GLANCE_LEAD = "Four questions behind tissue costs and demand, answered from public statistics. The signal compares the latest value with a year earlier: headwind or tailwind for WEPA. Click a row for details.";
   let TABS = [];
   const ui = { open: false, exp: new Set(), indOpen: false, indQ: "" };
   const colorOf = {};
-  let M = null, side = null, ETS = null;
+  let M = null, side = null, ETS = null, WATER = null;
   const START_HASH = location.hash;
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
@@ -863,7 +873,7 @@
   function niceStep(raw) { const p = Math.pow(10, Math.floor(Math.log10(raw || 1))); const f = raw / p; return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p; }
   const trunc = (s, n) => (s.length > n ? s.slice(0, Math.max(4, n - 1)) + "…" : s);
   function shortName(i) {
-    return { ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", pulp_nbsk_eu: "Pulp NBSK (EU imp.)", pulp_bhkp_eu: "Pulp BHKP (EU imp.)", rcp_export_eu: "Recovered paper (EU exp.)", power_de_spot: "Power DE spot", rcp_occ_exp: "OCC (EU exp.)", rcp_white_exp: "White grades (EU exp.)", rcp_news_exp: "News & PAMS (EU exp.)", rcp_mixed_exp: "Mixed papers (EU exp.)", rcp_occ_intra: "OCC (intra-EU)", rcp_white_intra: "White grades (intra-EU)", de_rcp_102: "DE 1.02 mixed", de_rcp_104: "DE 1.04 packaging", de_rcp_403: "DE 4.03 kraft corrugated", de_rcp_111: "DE 1.11 deinking", ppi_corrugated: "Corrugated PPI (EU)", us_recycled_board: "Recycled board (US)", us_corrugated_boxes: "Corrugated boxes (US)", gas_ttf: "Gas TTF", elec_de: "Electricity DE", gas_de: "Gas DE", res_share_de: "Renewables DE", eua: "EUA", eurusd: "EUR/USD", de_ppi_pulp: "Pulp PPI (DE)", de_ppi_tissue: "Tissue PPI (DE)", de_ppi_gas: "Gas for industry (DE)", de_ppi_power: "Power for industry (DE)", de_ppi_diesel: "Diesel (DE)", de_labour_paper: "Labour cost, manuf. (DE)", de_prod_paper: "Paper production (DE)", de_retail_drug: "Drugstore sales (DE)", de_retail_food: "Supermarket sales (DE)", de_imp_tissue: "Tissue imports (DE)", de_exp_tissue: "Tissue exports (DE)", de_imp_pulp: "Pulp imports (DE)", mix_wind: "Wind share (DE)", mix_solar: "Solar share (DE)", mix_biomass: "Biomass share (DE)", mix_hydro: "Hydro & other RE (DE)", mix_gas: "Gas share (DE)", mix_coal: "Coal share (DE)", mix_other: "Other conventional (DE)", prof_water: "Water use, paper", prof_waste: "Waste, paper", prof_envinv: "Environmental investment, paper", prof_energy_total: "Energy use, paper" }[i.id] || (i.country ? "Grid " + i.country : i.label);
+    return { ppi_tissue: "Tissue PPI", ppi_pulp: "Pulp PPI", ppi_paper: "Paper PPI", prod_paper: "Paper output", us_recovered_paper: "Recovered paper (US)", us_wood_pulp: "Wood pulp (US)", pulp_nbsk_eu: "Pulp NBSK (EU imp.)", pulp_bhkp_eu: "Pulp BHKP (EU imp.)", rcp_export_eu: "Recovered paper (EU exp.)", power_de_spot: "Power DE spot", rcp_occ_exp: "OCC (EU exp.)", rcp_white_exp: "White grades (EU exp.)", rcp_news_exp: "News & PAMS (EU exp.)", rcp_mixed_exp: "Mixed papers (EU exp.)", rcp_occ_intra: "OCC (intra-EU)", rcp_white_intra: "White grades (intra-EU)", de_rcp_102: "DE 1.02 mixed", de_rcp_104: "DE 1.04 packaging", de_rcp_403: "DE 4.03 kraft corrugated", de_rcp_111: "DE 1.11 deinking", ppi_corrugated: "Corrugated PPI (EU)", us_recycled_board: "Recycled board (US)", us_corrugated_boxes: "Corrugated boxes (US)", gas_ttf: "Gas TTF", elec_de: "Electricity DE", gas_de: "Gas DE", res_share_de: "Renewables DE", eua: "EUA", eurusd: "EUR/USD", de_ppi_pulp: "Pulp PPI (DE)", de_ppi_tissue: "Tissue PPI (DE)", de_ppi_gas: "Gas for industry (DE)", de_ppi_power: "Power for industry (DE)", de_ppi_diesel: "Diesel (DE)", de_labour_paper: "Labour cost, manuf. (DE)", de_prod_paper: "Paper production (DE)", de_retail_drug: "Drugstore sales (DE)", de_retail_food: "Supermarket sales (DE)", de_imp_tissue: "Tissue imports (DE)", de_exp_tissue: "Tissue exports (DE)", de_imp_pulp: "Pulp imports (DE)", mix_wind: "Wind share (DE)", mix_solar: "Solar share (DE)", mix_biomass: "Biomass share (DE)", mix_hydro: "Hydro & other RE (DE)", mix_gas: "Gas share (DE)", mix_coal: "Coal share (DE)", mix_other: "Other conventional (DE)", prof_water: "Water use, paper", prof_waste: "Waste, paper & print", prof_envinv: "Environmental investment, paper", prof_energy_total: "Energy use, paper" }[i.id] || (i.country ? "Grid " + i.country : i.label);
   }
 
   function renderTable(lines) {
@@ -1284,6 +1294,149 @@
   // ---------- Industry tab ----------
   function srcLink(src) { const a = el("a", null, (src && src.label) || "Source"); if (src && src.url) { a.href = src.url; a.target = "_blank"; a.rel = "noopener"; } return a; }
   function aboutOf(a) { if (!a) return null; return aboutBlock({ about: a, id: "" }); }
+  // ---------- Water tab: river levels (PEGELONLINE) + soil moisture at the German mills (DWD) ----------
+  // Levels and moisture are shown neutrally; only the status pill is coloured, because it is a judgement (low water / dry).
+  const W_COL = "var(--d-0064aa-text, #0064aa)";
+  const dayKey = (d) => d.slice(0, 10);
+  function addDays(iso, n) { const [y, m, d] = iso.split("-").map(Number); const t = new Date(Date.UTC(y, m - 1, d + n)); return t.toISOString().slice(0, 10); }
+  function valueAgo(series, days) {
+    if (!series.length) return null;
+    const target = addDays(series[series.length - 1][0], -days);
+    let best = null; series.forEach((p) => { if (p[0] <= target) best = p; });
+    return best;
+  }
+  function gaugeStatus(g, v) {
+    const c = g.characteristic || {};
+    if (c.GlW != null && v < c.GlW) return { cls: "head", text: "Low water" };
+    const th = (g.thresholds || []).slice().sort((a, b) => b.v - a.v).find((t) => v < t.v);
+    if (th) return { cls: "head", text: "Below " + th.v + " cm" };
+    if (c.MNW != null && v < c.MNW) return { cls: "head", text: "Below mean low water" };
+    return { cls: "flat", text: "Normal" };
+  }
+  function soilStatus(v) {
+    const S = (WATER && WATER.soil) || {}; const dry = S.dry != null ? S.dry : 50, very = S.veryDry != null ? S.veryDry : 30;
+    if (v < very) return { cls: "head", text: "Very dry" };
+    if (v < dry) return { cls: "head", text: "Dry" };
+    return { cls: "flat", text: "Normal" };
+  }
+  const arrow = (d, unit, digits) => (d == null ? "" : (d > 0 ? "▲ " : d < 0 ? "▼ " : "▬ ") + Math.abs(d).toFixed(digits) + " " + unit);
+  function dailyChart(box, series, o) {
+    const MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const keys = series.map((p) => p[0]);
+    let shownYear = false;
+    trendChart(box, {
+      label: o.label, keys, height: o.height || 220, lo: o.lo, hi: o.hi,
+      series: [{ name: o.name, color: W_COL, vals: series.map((p) => p[1]), end: (v) => Math.round(v) + " " + o.unit }],
+      refs: o.refs || [],
+      yFmt: (v) => String(Math.round(v)),
+      sep: (key, k) => k > 0 && key.slice(0, 7) !== keys[k - 1].slice(0, 7) && key.slice(5, 7) === "01",
+      xLabel: (key, k, every) => {
+        const first = k === 0 || key.slice(0, 7) !== keys[k - 1].slice(0, 7);
+        if (!first) return null;
+        if (k === 0) { const nx = keys.findIndex((x) => x.slice(0, 7) !== key.slice(0, 7)); if (nx > 0 && nx < keys.length * 0.12) return null; }
+        const m = +key.slice(5, 7);
+        const step = keys.length > 400 ? 3 : keys.length > 200 ? 2 : 1;
+        if (k > 0 && (m - 1) % step) return null;
+        const withY = m === 1 || !shownYear; shownYear = true;
+        return MONS[m - 1] + (withY ? " ’" + key.slice(2, 4) : "");
+      },
+      thin: false,
+      tipTitle: (key) => fmtDay(key),
+      tipVal: (sr, v) => v.toFixed(0) + " " + o.unit,
+    });
+  }
+  function renderWater(host) {
+    const draws = [];
+    if (!WATER || (!(WATER.gauges || []).length && !(WATER.sites || []).length)) {
+      const sec = el("section", "panel ind-sec");
+      sec.appendChild(el("div", "empty", "Water data arrives with the next data update (scripts/collect_water.py)."));
+      host.appendChild(sec); return;
+    }
+    // 1) river levels
+    const gauges = (WATER.gauges || []).filter((g) => (g.series || []).length);
+    if (gauges.length) {
+      const sec = el("section", "panel ind-sec");
+      const h = el("div", "ind-h"); h.append(el("h3", null, "River levels"), el("span", null, "daily mean in cm · PEGELONLINE (WSV, DL-DE→Zero-2.0)"));
+      sec.appendChild(h);
+      const k = el("div", "gd-kpis ind-k");
+      gauges.forEach((g) => {
+        const last = g.series[g.series.length - 1], wk = valueAgo(g.series, 7);
+        const v = g.latest && g.latest.v != null ? g.latest.v : last[1];
+        const st = gaugeStatus(g, v);
+        const d = el("div"); d.append(document.createTextNode(g.label), el("b", null, Math.round(v) + " cm"));
+        const sm = el("small", null, (wk ? arrow(v - wk[1], "cm", 0) + " vs. a week ago · " : "") + (g.latest && g.latest.t ? fmtDay(g.latest.t) : fmtDay(last[0])) + " ");
+        sm.appendChild(el("span", "sig " + st.cls, st.text)); d.appendChild(sm); k.appendChild(d);
+      });
+      sec.appendChild(k);
+      gauges.forEach((g) => {
+        const wrap = el("div", "w-g");
+        const c = g.characteristic || {};
+        const refs = [];
+        (g.thresholds || []).forEach((t) => refs.push({ v: t.v, label: t.v + " cm " + (t.short || "surcharges"), color: "var(--d-b45309-text, #b45309)" }));
+        if (c.GlW != null) refs.push({ v: c.GlW, label: c.GlW + " cm GlW", color: "var(--d-8a4a33-text, #8a4a33)" });
+        else if (c.MNW != null) refs.push({ v: c.MNW, label: c.MNW + " cm MNW", color: "var(--d-8a4a33-text, #8a4a33)" });
+        const hh = el("div", "w-gh"); hh.append(el("b", null, g.label), el("span", null, g.series.length + " days" + (g.station ? " · gauge " + g.station : "")));
+        wrap.appendChild(hh);
+        const box = el("div", "chart ind-chart w-chart"); wrap.appendChild(box);
+        draws.push(() => dailyChart(box, g.series, { label: "Water level " + g.label, name: g.label, unit: "cm", refs }));
+        if (g.why) { const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode(g.why)); wrap.appendChild(w); }
+        const legend = [];
+        if (c.GlW != null) legend.push("GlW = equivalent low water (the level reached or undercut on about 20 ice-free days a year)");
+        if (c.MNW != null) legend.push("MNW = mean low water " + c.MNW + " cm");
+        if (c.MW != null) legend.push("MW = mean water " + c.MW + " cm");
+        (g.thresholds || []).forEach((t) => legend.push(t.v + " cm: " + t.label));
+        if (legend.length) wrap.appendChild(el("p", "ind-src", legend.join(" · ")));
+        sec.appendChild(wrap);
+      });
+      const f = el("p", "ind-src"); f.append("Source: ");
+      const a = el("a", null, "PEGELONLINE (WSV) ↗"); a.href = "https://www.pegelonline.wsv.de/"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a);
+      f.appendChild(document.createTextNode(" · the history grows by one day with every data update."));
+      sec.appendChild(f);
+      host.appendChild(sec);
+    }
+    // 2) soil moisture at the mills
+    const sites = (WATER.sites || []).filter((s) => (s.series || []).length);
+    const sec = el("section", "panel ind-sec");
+    const h = el("div", "ind-h"); h.append(el("h3", null, "Soil moisture around our German mills"), el("span", null, "% of usable field capacity (nFK), 0–60 cm under grass · Deutscher Wetterdienst (CC BY 4.0)"));
+    sec.appendChild(h);
+    if (!sites.length) { sec.appendChild(el("div", "empty", "Soil moisture arrives with the next data update.")); host.appendChild(sec); draws.forEach((f) => f()); return; }
+    const tw = el("div", "w-tw"); const t = el("table", "gd-yr w-t");
+    const hr = el("tr"); ["Mill", "Soil moisture", "vs. 30 days ago", "Status", "Last 12 months", "DWD station"].forEach((x) => hr.appendChild(el("th", null, x)));
+    const th = el("thead"); th.appendChild(hr); t.appendChild(th);
+    const tb = el("tbody");
+    const S = WATER.soil || {}; const dry = S.dry != null ? S.dry : 50;
+    sites.forEach((s) => {
+      const last = s.series[s.series.length - 1], ago = valueAgo(s.series, 30), st = soilStatus(last[1]);
+      const tr = el("tr");
+      const td0 = el("td"); td0.appendChild(el("b", null, s.name)); td0.appendChild(el("small", null, s.district)); tr.appendChild(td0);
+      const td1 = el("td"); td1.appendChild(el("b", null, Math.round(last[1]) + " %")); td1.appendChild(el("small", null, fmtDay(last[0]))); tr.appendChild(td1);
+      tr.appendChild(el("td", null, ago ? arrow(last[1] - ago[1], "pp", 0) : "–"));
+      const td3 = el("td"); td3.appendChild(el("span", "sig " + st.cls, st.text)); tr.appendChild(td3);
+      const td4 = el("td", "w-sp");
+      const pts = s.series.filter((p) => p[0] >= addDays(last[0], -365));
+      const svg = svgEl("svg", { class: "spark", viewBox: "0 0 200 34", "aria-label": "Soil moisture, last 12 months", role: "img" });
+      if (pts.length > 1) {
+        const hi = Math.max(110, ...pts.map((p) => p[1]));
+        const sp = pts.map((p, k) => [(k / (pts.length - 1)) * 198 + 1, 31 - (Math.max(0, p[1]) / hi) * 28]);
+        const yd = 31 - (dry / hi) * 28;
+        svg.appendChild(svgEl("line", { x1: 0, x2: 200, y1: yd, y2: yd, stroke: "var(--d-b45309-text, #b45309)", "stroke-dasharray": "3 3", "stroke-width": 1, "vector-effect": "non-scaling-stroke" }));
+        RadarViz.area(svg, sp, 34, W_COL, 0.28);
+        svg.appendChild(svgEl("path", { d: RadarViz.path(sp), fill: "none", stroke: W_COL, "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
+      }
+      td4.appendChild(svg); tr.appendChild(td4);
+      const td5 = el("td"); td5.appendChild(document.createTextNode(s.station ? s.station.name || String(s.station.id) : "–")); if (s.station) td5.appendChild(el("small", null, s.station.km + " km away")); tr.appendChild(td5);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb); tw.appendChild(t); sec.appendChild(tw);
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("long dry spells come before low river levels, stricter limits on water abstraction and warmer cooling water. Below " + dry + " % plants start to suffer; dashed line in the mini charts."));
+    sec.appendChild(w);
+    const f = el("p", "ind-src"); f.append("Source: ");
+    const a = el("a", null, "DWD Climate Data Center ↗"); a.href = "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a);
+    f.appendChild(document.createTextNode(" · modelled soil moisture at the nearest DWD station to each mill · mill sites from wepa.eu."));
+    sec.appendChild(f);
+    host.appendChild(sec);
+    draws.forEach((f2) => f2());
+  }
   function renderIndustry(host) {
     const draws = [];
     const jump = el("div", "jump");
@@ -1567,7 +1720,7 @@
     return { year: year.slice(0, 4), parts, tot: Math.max(t || 0, sum) || 1 };
   }
   function buildTabs() {
-    TABS = [{ id: "glance", label: "At a glance", groups: [], lead: GLANCE_LEAD }, { id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "cost" ? !!COST : t.id === "industry" ? true : t.groups.some((g) => M.groups[g])))];
+    TABS = [{ id: "glance", label: "At a glance", groups: [], lead: GLANCE_LEAD }, { id: "cmp", label: "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "cost" ? !!COST : t.id === "industry" || t.id === "water" ? true : t.groups.some((g) => M.groups[g])))];
   }
   function renderTabs() {
     $("tabs").replaceChildren(...TABS.map((t) => {
@@ -1587,13 +1740,13 @@
     if (state.cmp.length) { const go = el("button", "cs-go", "Open Trends →"); go.type = "button"; go.addEventListener("click", () => { state.tab = "cmp"; renderAll(); window.scrollTo({ top: 0 }); }); box.appendChild(go); }
     return box;
   }
-  // Compare tab: indicator tiles by topic below the chart (grid countries live on their own tab)
+  // Compare tab: indicator tiles by topic below the chart (grid countries too, the profile stays on Industry)
   function renderCmpTiles() {
     const host = $("cmp-tiles"); host.replaceChildren();
     if (state.tab !== "cmp") return;
     const vis = visible();
     Object.entries(M.groups).forEach(([g, label]) => {
-      if (g === "grid" || g === "profile") return;
+      if (g === "profile") return;
       const items = vis.filter((i) => i.group === g); if (!items.length) return;
       const sec = el("section", "group"); sec.appendChild(el("h3", "cap", label));
       const grid = el("div", "tiles"); items.forEach((i) => grid.appendChild(tile(i)));
@@ -1622,6 +1775,7 @@
     if (tab.id === "glance") renderGlance(host);
     if (tab.id === "industry") renderIndustry(host);
     if (tab.id === "cost") renderCost(host);
+    if (tab.id === "water") renderWater(host);
     if (tab.id === "carbon") {
       const panel = el("div", "panel cc-panel"); panel.id = "carbon";
       const hd = el("div", "cc-head"); hd.append(el("h4", null, "Carbon cost exposure · WEPA EU ETS sites"), el("span", null, "verified emissions × EUA price"));
@@ -1688,6 +1842,9 @@
     wrap.appendChild(dd);
     if (!ui.indOpen) { wrap.appendChild(el("p", "ind-note", "Picks what the Trends chart shows" + (state.q !== "all" ? " · list narrowed by the question above" : "") + ".")); return wrap; }
     const tree = el("div", "ps-tree");
+    tree.appendChild(RadarSide.bulkBar({ selected: state.cmp.length, total: all.length, max: Math.min(all.length, MAX_SEL),
+      onAll: () => { all.forEach((i) => { if (!state.cmp.includes(i.id) && state.cmp.length < MAX_SEL) state.cmp.push(i.id); }); renderAll(); },
+      onNone: () => { state.cmp = []; renderAll(); }, allTitle: "Add every listed indicator to the chart", noneTitle: "Empty the Trends chart" }));
     const q = el("input", "ind-q"); q.type = "search"; q.placeholder = "Find indicator"; q.setAttribute("aria-label", "Find indicator"); q.value = ui.indQ;
     tree.appendChild(q);
     const list = indicatorList(all); tree.appendChild(list); wrap.appendChild(tree);
@@ -1711,7 +1868,7 @@
       const items = vis.filter((i) => i.group === g); if (!items.length) return;
       const head = el("div", "ind-grp"); head.appendChild(el("span", null, label));
       const ids = items.map((i) => i.id); const allOn = ids.every((id) => state.cmp.includes(id));
-      const ga = el("button", "ind-all", allOn ? "Clear" : "Select all"); ga.type = "button";
+      const ga = el("button", "ind-all", allOn ? "Deselect all" : "Select all"); ga.type = "button";
       ga.title = (allOn ? "Remove all " : "Add all ") + label + " indicators" + (allOn ? " from" : " to") + " the chart";
       ga.addEventListener("click", () => toggleGroup(ids));
       head.appendChild(ga); box.appendChild(head);
@@ -1737,15 +1894,16 @@
   }
 
   $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });
-  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry" || state.tab === "grid") renderTiles(); }, 120); });
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry" || state.tab === "grid" || state.tab === "water") renderTiles(); }, 120); });
 
   Promise.all([
     fetch("data/market.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
     fetch("data/peer_emissions.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("config/market.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/industry.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-  ]).then(([data, ets, cfg, ind]) => {
-    M = data; ETS = ets; IND = ind;
+    fetch("data/water.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  ]).then(([data, ets, cfg, ind, water]) => {
+    M = data; ETS = ets; IND = ind; WATER = water;
     if (cfg) {
       (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; });
       GRID_ABOUT = cfg.gridAbout || null; COST = cfg.costIndex || null;
@@ -1788,7 +1946,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261106e" defer></script>
-<script src="assets/guide.js?v=20261106e" defer></script>
+<script src="assets/search.js?v=20261107b" defer></script>
+<script src="assets/guide.js?v=20261107b" defer></script>
 </body>
 </html>

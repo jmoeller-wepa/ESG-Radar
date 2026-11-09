@@ -1,0 +1,46 @@
+{
+  "_comment": "Settings for scripts/collect_water.py (Market page, tab 'Water'). 'gauges': river gauges from PEGELONLINE (Federal Waterways and Shipping Administration, free API, licence DL-DE->Zero-2.0); 'station' is the PEGELONLINE short name, 'match' is used when the short name is not found (part of the long name). Characteristic values (GlW, MNW, MW) come from PEGELONLINE itself; 'thresholds' adds your own lines (e.g. where barge low-water surcharges start in WEPA's contracts). 'sites': WEPA mills in Germany (public addresses); the collector picks the nearest DWD station that has daily soil-moisture data (Deutscher Wetterdienst, CC BY 4.0). Only public data, nothing internal.",
+  "historyDays": 1095,
+  "gauges": [
+    {
+      "id": "kaub",
+      "station": "KAUB",
+      "label": "Rhine · Kaub",
+      "river": "Rhine",
+      "why": "The bottleneck gauge for Rhine barges. Low water means lighter loads, surcharges and slower deliveries of pulp, recovered paper and chemicals.",
+      "thresholds": [
+        { "v": 135, "label": "Low-water surcharges usually start (adjust to our contracts)" }
+      ]
+    },
+    {
+      "id": "mainz",
+      "station": "MAINZ",
+      "label": "Rhine · Mainz",
+      "river": "Rhine",
+      "why": "Gauge next to the Mainz mill: river level for water intake, cooling and logistics.",
+      "thresholds": []
+    },
+    {
+      "id": "leuna",
+      "station": "LEUNA-KREYPAU",
+      "match": "KREYPAU",
+      "label": "Saale · Leuna-Kreypau",
+      "river": "Saale",
+      "why": "Gauge next to the Leuna mill.",
+      "thresholds": []
+    }
+  ],
+  "sites": [
+    { "id": "arnsberg", "name": "Arnsberg-Müschede", "district": "Hochsauerlandkreis", "lat": 51.405, "lon": 8.003 },
+    { "id": "giershagen", "name": "Giershagen (Marsberg)", "district": "Hochsauerlandkreis", "lat": 51.418, "lon": 8.737 },
+    { "id": "kriebstein", "name": "Kriebstein", "district": "Mittelsachsen", "lat": 51.047, "lon": 13.010 },
+    { "id": "mainz", "name": "Mainz", "district": "Mainz", "lat": 50.000, "lon": 8.271 },
+    { "id": "leuna", "name": "Leuna", "district": "Saalekreis", "lat": 51.318, "lon": 12.016 }
+  ],
+  "soil": {
+    "_comment": "Soil moisture in % of usable field capacity (nFK), 0-60 cm under grass. Below 50 % plants start to suffer, below 30 % is drought stress (DWD/agronomy convention). The first matching column is used.",
+    "columns": ["bfgl_ag", "bfgl", "bfgsl", "bfgs_ag", "bfgs", "bfgls"],
+    "dry": 50,
+    "veryDry": 30
+  }
+}

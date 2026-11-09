@@ -460,14 +460,17 @@ def _classify(ind, table, dbg):
             raise RuntimeError(f"no variable matches '{f['var']}' in {table} – see data/debug/destatis.json (variables)")
     keys, var = f.get("keys"), cands[0]
     if not keys:
-        hits = []
+        hits, ex = [], re.compile(ind.get("exclude", r"\bohne\b"), re.I)
         for var in cands:
             vals = _values(var)
             for p in f.get("values", []):
                 rx = re.compile(p, re.I)
-                hits = [v for v in vals if rx.search(v["content"]) or rx.search(v["code"])]
+                hits = [v for v in vals if (rx.search(v["content"]) or rx.search(v["code"])) and not ex.search(v["content"])]
                 if hits:
                     break
+            if f.get("peek"):   # all candidate values, to check the choice in data/debug/destatis.json
+                px = re.compile(f["peek"], re.I)
+                dbg.setdefault("peek", {})[var] = [v["code"] + " " + v["content"] for v in vals if px.search(v["content"])][:60]
             if hits:
                 dbg["valueCount"] = len(vals)
                 break

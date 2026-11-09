@@ -1,5 +1,5 @@
 {
-  "_comment": "Settings for scripts/collect_regulation.py (Regulation page). 'procedures' links each roadmap row (id in data/roadmap.json) to its official EU procedure number, as shown in the European Parliament's Legislative Observatory (e.g. 2022/0396(COD)). The page shows the latest official step for each. Leave a row out (or set null) if it has no EU legislative procedure, e.g. SBTi or delegated acts. Check numbers on https://oeil.secure.europarl.europa.eu – the run summary prints the title the Parliament has for each number, so a wrong number is easy to spot.",
+  "_comment": "Settings for scripts/collect_regulation.py (Regulation page). 'procedures' links each roadmap row (id in data/roadmap.json or config/roadmap_add.json) to its official EU procedure number, as shown in the European Parliament's Legislative Observatory (e.g. 2022/0396(COD)). The page shows the latest official step for each. Leave a row out (or set null) if it has no EU legislative procedure, e.g. SBTi or delegated acts. Check numbers on https://oeil.secure.europarl.europa.eu – the run summary prints the title the Parliament has for each number, so a wrong number is easy to spot.",
   "procedures": {
     "csrd": "2025/0045(COD)",
     "csddd": "2025/0045(COD)",
@@ -13,7 +13,10 @@
     "sbti": null,
     "espr": null,
     "aiact": null,
-    "dataact": null
+    "dataact": null,
+    "ied": "2022/0104(COD)",
+    "energy": "2021/0203(COD)",
+    "water": "2022/0345(COD)"
   },
   "consultations": {
     "_comment": "Open consultations on the Commission's 'Have your say' portal are kept when their title or summary matches one of these keywords (case-insensitive). Areas are assigned with the areaKeywords from config/feeds.json.",
@@ -65,7 +68,15 @@
       "Data Act",
       "data sharing",
       "digital omnibus",
-      "unsold"
+      "unsold",
+      "wastewater",
+      "water resilience",
+      "drought",
+      "BAT conclusions",
+      "best available techniques",
+      "state aid",
+      "electricity price",
+      "energy-intensive"
     ],
     "maxPages": 6
   },
@@ -125,6 +136,26 @@
       "Data Act",
       "data sharing",
       "cloud switching"
+    ],
+    "ied": [
+      "industrial emissions",
+      "BAT conclusions",
+      "best available techniques",
+      "BREF",
+      "IED"
+    ],
+    "energy": [
+      "energy efficiency",
+      "state aid",
+      "electricity price",
+      "energy-intensive",
+      "CISAF"
+    ],
+    "water": [
+      "wastewater",
+      "water resilience",
+      "water reuse",
+      "drought"
     ]
   }
 }

@@ -1,5 +1,5 @@
 {
- "_comment": "Feeds the daily GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only). A feed added later reads back 'lookbackDaysFirstRun' days on its first run.",
+ "_comment": "Feeds the daily GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only). A feed added later reads back 'lookbackDaysFirstRun' days on its first run. A feed's optional 'impacts' list is always added (used for the customer feeds → 'customers').",
  "lookbackDaysFirstRun": 60,
  "archiveFeedItemsAfterDays": 365,
  "monthlySummaryPattern": "feature summary",
@@ -22,7 +22,15 @@
    "carbon price",
    "cbam",
    "renewable energy",
-   "energy efficiency"
+   "energy efficiency",
+   "strompreiskompensation",
+   "industriestrompreis",
+   "becv",
+   "enefg",
+   "energieeffizienz",
+   "product carbon footprint",
+   "pcf",
+   "iso 14067"
   ],
   "forests": [
    "eudr",
@@ -37,7 +45,8 @@
    "pulp",
    "wood",
    "fibre",
-   "fiber"
+   "fiber",
+   "forest stewardship council"
   ],
   "circularity": [
    "ppwr",
@@ -54,7 +63,12 @@
    "epr",
    "green claims",
    "digital product passport",
-   "product passport"
+   "product passport",
+   "ecolabel",
+   "eu ecolabel",
+   "blauer engel",
+   "blue angel",
+   "nordic swan"
   ],
   "water": [
    "water",
@@ -63,7 +77,19 @@
    "chemicals",
    "pfas",
    "ied",
-   "industrial emissions"
+   "industrial emissions",
+   "water resilience",
+   "water scarcity",
+   "drought",
+   "low water",
+   "niedrigwasser",
+   "dürre",
+   "abwasser",
+   "wasserentnahme",
+   "kaub",
+   "bat conclusions",
+   "bref",
+   "industrial emissions directive"
   ],
   "people": [
    "csddd",
@@ -573,6 +599,366 @@
     "VSME",
     "consultation"
    ]
+  },
+  {
+   "name": "Industrial emissions & BAT (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22Industrial+Emissions+Directive%22+OR+%22IED+2.0%22+OR+%22BAT+conclusions%22+OR+%22best+available+techniques%22+OR+BREF%29+%28paper+OR+pulp+OR+industry+OR+permit%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "regulation",
+   "defaultArea": "water",
+   "maxItems": 10,
+   "defaultRelevance": "medium",
+   "_comment": "Topic 1: IED 2.0 transposition and the review of the pulp & paper BAT reference document.",
+   "keywords": [],
+   "highKeywords": [
+    "pulp",
+    "paper",
+    "BAT conclusions",
+    "BREF",
+    "transposition"
+   ]
+  },
+  {
+   "name": "Industrieemissionen & BVT (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Industrieemissionsrichtlinie+OR+%22IED-Umsetzung%22+OR+%22BVT-Schlussfolgerungen%22+OR+%22BVT-Merkblatt%22%29++when%3A30d&hl=de&gl=DE&ceid=DE:de",
+   "type": "regulation",
+   "defaultArea": "water",
+   "maxItems": 10,
+   "defaultRelevance": "medium",
+   "_comment": "Topic 1, German sources: national IED transposition (BImSchG) and BAT documents.",
+   "keywords": [],
+   "highKeywords": [
+    "Papier",
+    "Zellstoff",
+    "BImSchG",
+    "Umsetzung"
+   ]
+  },
+  {
+   "name": "Energy relief Germany (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Strompreiskompensation+OR+Industriestrompreis+OR+BECV+OR+%22Carbon-Leakage-Verordnung%22+OR+Energieeffizienzgesetz+OR+EnEfG+OR+%22Netzentgelte+Industrie%22%29+when%3A30d&hl=de&gl=DE&ceid=DE:de",
+   "type": "regulation",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "medium",
+   "_comment": "Topic 2: German relief for energy-intensive industry and EnEfG duties (DEHSt, BMWE, BAFA).",
+   "keywords": [],
+   "highKeywords": [
+    "Strompreiskompensation",
+    "Industriestrompreis",
+    "BECV",
+    "Papierindustrie",
+    "DEHSt",
+    "Antrag",
+    "Frist"
+   ]
+  },
+  {
+   "name": "EU energy & state aid for industry (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22Energy+Efficiency+Directive%22+OR+%22Clean+Industrial+Deal%22+OR+CISAF+OR+%22state+aid%22+OR+%22Affordable+Energy+Action+Plan%22%29+%28energy-intensive+OR+industry+OR+paper%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "regulation",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 2, EU level: energy efficiency rules and state-aid framework for energy-intensive industry.",
+   "keywords": [],
+   "highKeywords": [
+    "energy-intensive",
+    "paper",
+    "pulp",
+    "CISAF",
+    "Energy Efficiency Directive"
+   ]
+  },
+  {
+   "name": "GHG Protocol (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%22GHG+Protocol%22+%28standard+OR+revision+OR+%22scope+2%22+OR+%22scope+3%22+OR+consultation+OR+%22product+standard%22%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "regulation",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "medium",
+   "_comment": "Topic 3: revision of the GHG Protocol Corporate, Scope 2 and Scope 3 standards.",
+   "keywords": [],
+   "highKeywords": [
+    "scope 2",
+    "scope 3",
+    "market-based",
+    "revision",
+    "consultation",
+    "final"
+   ]
+  },
+  {
+   "name": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22product+carbon+footprint%22+OR+%22PACT+methodology%22+OR+%22Partnership+for+Carbon+Transparency%22+OR+%22ISO+14067%22+OR+%22Catena-X%22+PCF%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 3: common rules and data exchange for product footprints that customers ask for.",
+   "keywords": [],
+   "highKeywords": [
+    "PACT",
+    "ISO 14067",
+    "retailer",
+    "tissue",
+    "paper",
+    "consumer goods"
+   ],
+   "impacts": [
+    "customers",
+    "reporting"
+   ]
+  },
+  {
+   "name": "Ecolabels for tissue (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22EU+Ecolabel%22+OR+%22Blauer+Engel%22+OR+%22Blue+Angel%22+OR+%22Nordic+Swan%22+OR+%22Svanemerket%22+OR+%22Svanen%22%29+%28tissue+OR+paper+OR+hygiene+OR+criteria+OR+Kriterien+OR+Hygienepapier%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "practice",
+   "defaultArea": "circularity",
+   "maxItems": 10,
+   "defaultRelevance": "medium",
+   "_comment": "Topic 4: criteria revisions of the labels our private-label products carry.",
+   "keywords": [],
+   "highKeywords": [
+    "tissue",
+    "hygiene",
+    "criteria",
+    "Kriterien",
+    "Hygienepapier",
+    "revision"
+   ]
+  },
+  {
+   "name": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22Blauer+Engel%22+OR+%22EU+Ecolabel%22+OR+%22EU-Umweltzeichen%22%29+%28Papier+OR+Hygienepapier+OR+Toilettenpapier+OR+Kriterien+OR+Vergabekriterien%29+when%3A30d&hl=de&gl=DE&ceid=DE:de",
+   "type": "practice",
+   "defaultArea": "circularity",
+   "maxItems": 10,
+   "defaultRelevance": "medium",
+   "_comment": "Topic 4, German sources: DE-UZ 5 (recycled hygiene paper) and EU Ecolabel criteria.",
+   "keywords": [],
+   "highKeywords": [
+    "DE-UZ 5",
+    "Vergabekriterien",
+    "Hygienepapier",
+    "Toilettenpapier"
+   ]
+  },
+  {
+   "name": "FSC & PEFC (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22Forest+Stewardship+Council%22+OR+PEFC%29+%28standard+OR+%22chain+of+custody%22+OR+certification+OR+EUDR+OR+revision%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "practice",
+   "defaultArea": "forests",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 4: certification rules for certified fibre (chain of custody, EUDR alignment).",
+   "keywords": [],
+   "highKeywords": [
+    "chain of custody",
+    "standard",
+    "EUDR",
+    "revision",
+    "pulp",
+    "paper"
+   ]
+  },
+  {
+   "name": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Lidl+OR+Kaufland+OR+%22Schwarz+Gruppe%22+OR+Aldi%29+%28Lieferanten+OR+Klimaziel+OR+Klimaschutz+OR+Nachhaltigkeit+OR+Verpackung+OR+Eigenmarke+OR+CO2+OR+%22Scope+3%22%29+when%3A30d&hl=de&gl=DE&ceid=DE:de",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 5: sustainability and supplier requirements of our retail customers.",
+   "keywords": [],
+   "highKeywords": [
+    "Lieferanten",
+    "Eigenmarke",
+    "Verpackung",
+    "Klimaziel",
+    "Toilettenpapier",
+    "Hygienepapier",
+    "Scope 3"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Rewe+OR+Edeka+OR+Netto+OR+Penny%29+%28Lieferanten+OR+Klimaziel+OR+Klimaschutz+OR+Nachhaltigkeit+OR+Verpackung+OR+Eigenmarke+OR+CO2+OR+%22Scope+3%22%29+when%3A30d&hl=de&gl=DE&ceid=DE:de",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 5: sustainability and supplier requirements of our retail customers.",
+   "keywords": [],
+   "highKeywords": [
+    "Lieferanten",
+    "Eigenmarke",
+    "Verpackung",
+    "Klimaziel",
+    "Toilettenpapier",
+    "Hygienepapier",
+    "Scope 3"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "Customers DE: dm, Rossmann (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22dm-drogerie+markt%22+OR+Rossmann%29+%28Lieferanten+OR+Klimaziel+OR+Klimaschutz+OR+Nachhaltigkeit+OR+Verpackung+OR+Eigenmarke+OR+CO2+OR+%22Scope+3%22%29+when%3A30d&hl=de&gl=DE&ceid=DE:de",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 5: drugstore chains (own brands Balea, Bebe, Isana, ...).",
+   "keywords": [],
+   "highKeywords": [
+    "Lieferanten",
+    "Eigenmarke",
+    "Verpackung",
+    "Klimaziel",
+    "Toilettenpapier",
+    "Hygienepapier"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Carrefour+OR+Leclerc+OR+Intermarch%C3%A9+OR+Auchan+OR+%22Syst%C3%A8me+U%22%29+%28fournisseurs+OR+climat+OR+%22marque+propre%22+OR+%22marques+de+distributeur%22+OR+emballage+OR+%22scope+3%22%29+when%3A30d&hl=fr&gl=FR&ceid=FR:fr",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 5: French retail customers.",
+   "keywords": [],
+   "highKeywords": [
+    "fournisseurs",
+    "marque",
+    "emballage",
+    "climat",
+    "papier toilette"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Tesco+OR+%22Sainsbury%27s%22+OR+Asda+OR+Morrisons+OR+%22Co-op%22%29+%28suppliers+OR+%22supplier%22+OR+climate+OR+%22net+zero%22+OR+sustainability+OR+packaging+OR+%22own+brand%22+OR+%22own-label%22+OR+%22scope+3%22%29+when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 5: UK retail customers.",
+   "keywords": [],
+   "highKeywords": [
+    "suppliers",
+    "own brand",
+    "own-label",
+    "packaging",
+    "scope 3",
+    "toilet roll"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22Ahold+Delhaize%22+OR+%22Albert+Heijn%22+OR+Jumbo+OR+Colruyt+OR+Delhaize%29+%28suppliers+OR+%22supplier%22+OR+climate+OR+%22net+zero%22+OR+sustainability+OR+packaging+OR+%22own+brand%22+OR+%22own-label%22+OR+%22scope+3%22%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 5: Benelux retail customers.",
+   "keywords": [],
+   "highKeywords": [
+    "suppliers",
+    "own brand",
+    "packaging",
+    "scope 3"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Conad+OR+%22Coop+Italia%22+OR+Esselunga+OR+Biedronka+OR+%22Jer%C3%B3nimo+Martins%22%29+%28suppliers+OR+fornitori+OR+sostenibilit%C3%A0+OR+%22private+label%22+OR+packaging+OR+climate%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "practice",
+   "defaultArea": "climate",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 5: Italian and Polish retail customers.",
+   "keywords": [],
+   "highKeywords": [
+    "suppliers",
+    "fornitori",
+    "private label",
+    "packaging"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "CDP & EcoVadis (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28CDP+%22supply+chain%22+OR+EcoVadis+OR+%22CDP+disclosure%22+OR+%22CDP+scores%22%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "practice",
+   "defaultArea": "reporting",
+   "maxItems": 10,
+   "defaultRelevance": "medium",
+   "_comment": "Topic 5: the ratings retailers use to judge suppliers.",
+   "keywords": [],
+   "highKeywords": [
+    "EcoVadis",
+    "supply chain",
+    "methodology",
+    "scores",
+    "deadline"
+   ],
+   "impacts": [
+    "customers"
+   ]
+  },
+  {
+   "name": "Water policy & wastewater (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28%22Water+Resilience+Strategy%22+OR+%22Urban+Wastewater+Treatment+Directive%22+OR+%22water+scarcity%22+OR+%22water+abstraction%22+OR+%22industrial+water%22%29+%28EU+OR+Europe+OR+industry%29+when%3A30d&hl=en-US&gl=US&ceid=US:en",
+   "type": "regulation",
+   "defaultArea": "water",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 8: EU water policy affecting mills (wastewater, abstraction, water efficiency).",
+   "keywords": [],
+   "highKeywords": [
+    "Water Resilience Strategy",
+    "wastewater",
+    "industry",
+    "paper",
+    "abstraction"
+   ]
+  },
+  {
+   "name": "Niedrigwasser & Wasserentnahme (via Google News)",
+   "url": "https://news.google.com/rss/search?q=%28Niedrigwasser+OR+%22Pegel+Kaub%22+OR+Wasserentnahmeentgelt+OR+%22Wasserentnahme+Industrie%22+OR+Abwasserabgabe+OR+D%C3%BCrre+Industrie%29+when%3A30d&hl=de&gl=DE&ceid=DE:de",
+   "type": "practice",
+   "defaultArea": "water",
+   "maxItems": 10,
+   "defaultRelevance": "low",
+   "_comment": "Topic 8: low water on the Rhine, water abstraction fees and drought in Germany.",
+   "keywords": [],
+   "highKeywords": [
+    "Kaub",
+    "Rhein",
+    "Wasserentnahmeentgelt",
+    "Abwasserabgabe",
+    "Papierfabrik",
+    "Industrie"
+   ]
   }
  ],
  "impactKeywords": {
@@ -586,7 +972,11 @@
    "omnibus",
    "sustainability reporting",
    "vsme",
-   "sbti"
+   "sbti",
+   "ghg protocol",
+   "scope 2",
+   "scope 3",
+   "product carbon footprint"
   ],
   "datamodel": [
    "fabric",
@@ -597,7 +987,9 @@
    "xbrl",
    "onelake",
    "dax",
-   "data model"
+   "data model",
+   "ghg protocol",
+   "pcf"
   ],
   "suppliers": [
    "eudr",
@@ -619,7 +1011,14 @@
    "ecodesign",
    "espr",
    "label",
-   "recyclable"
+   "recyclable",
+   "ecolabel",
+   "blauer engel",
+   "blue angel",
+   "nordic swan",
+   "fsc",
+   "pefc",
+   "forest stewardship council"
   ],
   "costs": [
    "ets",
@@ -627,7 +1026,52 @@
    "carbon price",
    "cbam",
    "energy price",
-   "free allocation"
+   "free allocation",
+   "strompreiskompensation",
+   "industriestrompreis",
+   "becv",
+   "state aid",
+   "beihilfe",
+   "low water",
+   "niedrigwasser",
+   "wasserentnahmeentgelt",
+   "abwasserabgabe",
+   "energy efficiency directive"
+  ],
+  "customers": [
+   "lidl",
+   "kaufland",
+   "aldi",
+   "rewe",
+   "edeka",
+   "dm-drogerie markt",
+   "rossmann",
+   "carrefour",
+   "leclerc",
+   "intermarché",
+   "auchan",
+   "tesco",
+   "sainsbury's",
+   "asda",
+   "morrisons",
+   "ahold delhaize",
+   "albert heijn",
+   "colruyt",
+   "delhaize",
+   "conad",
+   "esselunga",
+   "biedronka",
+   "ecovadis",
+   "cdp supply chain",
+   "private label",
+   "own brand",
+   "own-label",
+   "eigenmarke",
+   "retailer",
+   "retailers",
+   "händler",
+   "supplier engagement",
+   "product carbon footprint"
   ]
  }
 }

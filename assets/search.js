@@ -133,7 +133,9 @@
     loading = Promise.all([
       get("data/radar.json", { entries: [] }), get("data/peer_news.json", null), get("data/peers.json", null), get("data/roadmap.json", { rows: [] }),
       get("data/regulation.json", null), get("data/market.json", null), get("config/market.json", null), get("data/fabric_roadmap.json", null),
-    ]).then(([radar, pn, peers, roadmap, reg, market, mcfg, fabric]) => {
+      get("config/roadmap_add.json", { rows: [] }),
+    ]).then(([radar, pn, peers, roadmap, reg, market, mcfg, fabric, radd]) => {
+      { const have = new Set((roadmap.rows || []).map((r) => r.id)); roadmap.rows = (roadmap.rows || []).concat((radd.rows || []).filter((r) => r && r.id && !have.has(r.id))); }
       const items = [];
       const add = (o, extra) => { o.text = (o.title + " " + (o.sub || "") + " " + (extra || "")).toLowerCase(); items.push(o); };
       const news = radar.entries || [];
@@ -158,6 +160,7 @@
     ["Cost index", "Market · tissue cost drivers vs. tissue prices", "market.html#tab=cost", "margin cost drivers pulp gas electricity"],
     ["Industry", "Market · German market, trade and yearly industry profile", "market.html#tab=industry", "production hygiene paper cepi recovered paper utilisation retail imports exports water waste energy mix"],
     ["Grid carbon intensity", "Market · CO₂ per kWh by country", "market.html#tab=grid", "scope 2 electricity emission factor"],
+    ["Water", "Market · river levels and soil moisture at our mills", "market.html#tab=water", "rhine kaub pegel low water niedrigwasser drought dürre soil moisture bodenfeuchte"],
     ["EU ETS emissions", "Peers · verified emissions of EU sites", "peers.html#tab=ets", "emissions trading co2 sites"],
     ["Next deadlines", "Regulation · roadmap of upcoming dates", "regulation.html#view=roadmap", "deadline timeline milestones"],
     ["Open consultations", "Regulation · EU “Have your say”", "regulation.html#show=consult", "have your say consultation"],

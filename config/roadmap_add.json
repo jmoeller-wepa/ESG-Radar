@@ -1,0 +1,100 @@
+{
+  "_comment": "Extra rows for the regulation tracker and roadmap, added on top of data/roadmap.json (same format; a row whose id already exists in data/roadmap.json is ignored). Kept in config/ so the daily data update never touches it. 'why' is the one-line 'Why WEPA' shown in the tracker. Procedure numbers for automatic status: config/regulation.json → procedures. Dates checked 2026-11-07; edit here when rules change.",
+  "rows": [
+    {
+      "id": "ied",
+      "label": "IED 2.0 + pulp & paper BAT (BREF)",
+      "area": "water",
+      "why": "Mill permits; new pulp & paper BAT limits for energy, water and emissions.",
+      "entries": [],
+      "phases": [
+        {
+          "from": "2024-01-01",
+          "to": "2026-07-01",
+          "status": "adopted",
+          "label": "In force · transposition until Jul 2026"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2030-12-31",
+          "status": "applies",
+          "label": "Applies via national law · BAT review"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2024-08-04",
+          "label": "Directive (EU) 2024/1785 in force"
+        },
+        {
+          "date": "2026-07-01",
+          "label": "Transposition deadline (national law)"
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "label": "Energy efficiency & cost relief (EED, EnEfG, SPK, BECV)",
+      "area": "climate",
+      "why": "Energy audit duties; electricity price compensation and BECV relief are money every year.",
+      "entries": [],
+      "phases": [
+        {
+          "from": "2024-01-01",
+          "to": "2025-10-11",
+          "status": "adopted",
+          "label": "EED recast in force · transposition"
+        },
+        {
+          "from": "2025-10-11",
+          "to": "2030-12-31",
+          "status": "applies",
+          "label": "Applies · EnEfG duties in Germany"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2027-06-30",
+          "label": "DEHSt: applications for electricity price compensation and BECV relief (yearly, 30 Jun)"
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "label": "Urban wastewater & water resilience",
+      "area": "water",
+      "why": "Water use and discharge at the mills; wastewater rules and fees may tighten.",
+      "entries": [],
+      "phases": [
+        {
+          "from": "2024-01-01",
+          "to": "2025-01-01",
+          "status": "proposal",
+          "label": "Negotiation · adopted Nov 2024"
+        },
+        {
+          "from": "2025-01-01",
+          "to": "2027-07-31",
+          "status": "adopted",
+          "label": "In force · transposition until Jul 2027"
+        },
+        {
+          "from": "2027-07-31",
+          "to": "2030-12-31",
+          "status": "applies",
+          "label": "Applies via national law"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-06-04",
+          "label": "EU Water Resilience Strategy published"
+        },
+        {
+          "date": "2027-07-31",
+          "label": "Transposition deadline (national law)"
+        }
+      ]
+    }
+  ]
+}

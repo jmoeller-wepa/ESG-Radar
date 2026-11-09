@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261106d"></script>
+<script src="assets/theme.js?v=20261107b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Regulation – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261106d">
-<script src="assets/status.js?v=20261106d" defer></script>
+<link rel="stylesheet" href="assets/side.css?v=20261107b">
+<script src="assets/status.js?v=20261107b" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -67,6 +67,16 @@
   .left { font-size: 12.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
   .left.soon { color: var(--red-text); font-weight: 600; }
   .cc a { font-size: 13px; color: var(--blue-700); white-space: nowrap; }
+  .cc .stg { display: flex; flex-direction: column; gap: 5px; }
+  .cc .stg-b { display: flex; gap: 3px; }
+  .cc .stg-b i { height: 4px; flex: 1; border-radius: 2px; background: var(--line); }
+  .cc .stg-b i.on { background: var(--blue-700); }
+  .cc .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .cc .ach { font-size: 11.5px; font-weight: 600; color: var(--d-0b4f45-text, #0b4f45); background: var(--d-eaf6f3-bg, #eaf6f3); border-radius: 999px; padding: 1px 8px; }
+  .cc .lowc { font-size: 11.5px; color: var(--ink-3); background: var(--d-f3f5f8-bg, #f3f5f8); border-radius: 999px; padding: 1px 8px; }
+  .cc.low { border-top-color: var(--line); opacity: .7; }
+  .cc.low:hover { opacity: 1; }
+  .low-tg { justify-self: start; grid-column: 1 / -1; border: 1px dashed var(--line); background: none; border-radius: 10px; padding: 9px 14px; font: inherit; font-size: 13px; font-weight: 600; color: var(--blue-700); cursor: pointer; text-align: left; }
   .empty { padding: 22px 18px; color: var(--ink-3); font-size: 13.5px; background: var(--d-fff-bg, #fff); border: 1px dashed var(--line); border-radius: 12px; }
 
   /* Tracker */
@@ -84,6 +94,8 @@
   .tk tbody tr:last-child td { border-bottom: 0; }
   .tk td b { color: var(--ink); font-weight: 600; }
   .tk small { display: block; font-size: 12px; color: var(--ink-3); margin-top: 1px; }
+  .tk small.why { color: var(--ink-2); max-width: 46ch; margin-top: 3px; line-height: 1.4; }
+  .why-p { margin: 8px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--ink-2); } .why-p b { color: var(--ink); }
   .new { font-size: 10.5px; font-weight: 700; color: #fff; background: var(--blue-900); border-radius: 4px; padding: 0 5px; margin-left: 6px; vertical-align: 1px; }
   .chip { font-size: 11px; font-weight: 600; border-radius: 4px; padding: 1px 6px; background: var(--green-50); color: var(--green-text); white-space: nowrap; margin-left: 6px; vertical-align: 1px; }
   .steps { display: flex; align-items: center; }
@@ -136,8 +148,8 @@
   button:focus-visible, a:focus-visible, tr:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261106d">
-<script src="assets/colresize.js?v=20261106d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261107b">
+<script src="assets/colresize.js?v=20261107b" defer></script>
 </head>
 <body>
 <header>
@@ -200,11 +212,11 @@
 </dialog>
 
 <footer><div class="wrap">
-  <p>Sources: official procedure steps from the European Parliament's Legislative Observatory (Open Data, CC BY 4.0) · consultations from the European Commission's "Have your say" portal · phases and key dates are curated in <code>data/roadmap.json</code> (quarterly prompt).</p>
+  <p>Sources: official procedure steps from the European Parliament's Legislative Observatory (Open Data, CC BY 4.0) · consultations from the European Commission's "Have your say" portal · phases and key dates are curated in <code>data/roadmap.json</code> and <code>config/roadmap_add.json</code> (quarterly prompt).</p>
   <p>Updated weekly. Summaries are aids, not legal advice – always check the linked source.</p>
 </div></footer>
 
-<script src="assets/side.js?v=20261106d"></script>
+<script src="assets/side.js?v=20261107b"></script>
 <script>
 (function () {
   const STAGES = ["Proposal", "Negotiation", "Adopted", "Applies"];
@@ -253,6 +265,7 @@
   }
   const inArea = (r) => state.area === "all" || r.area === state.area;
   const rowsShown = () => R.rows.filter(inArea).filter((r) => state.show === "all" || (state.show === "changed" ? changedRecently(r) : consFor(r).length));
+  let showLow = false; // consultations with little link to our topics are folded away
   const consShown = () => REG.consultations.filter((c) => (c.end || "") >= todayIso && (state.area === "all" || (c.areas || []).includes(state.area)));
 
   // ---------- links ----------
@@ -292,25 +305,47 @@
   }
 
   function renderCons() {
-    const list = consShown();
+    const all = consShown(), Rc = window.RadarCons;
+    const list = Rc ? all.filter(Rc.relevant) : all, low = Rc ? all.filter((c) => !Rc.relevant(c)) : [];
     $("cons-title").textContent = "Open for feedback · " + list.length;
-    if (!list.length) {
-      $("cons").replaceChildren(el("div", "empty", REG.consultationsFetched || REG.consultations.length
-        ? "No open EU consultation matches our topics" + (state.area !== "all" ? " in this area" : "") + " right now."
-        : "Consultations arrive with the next weekly run of the GitHub Action."));
+    if (!all.length) {
+      const fetched = REG.consultationsFetched || REG.consultations.length;
+      $("cons").replaceChildren(window.RadarEmpty
+        ? RadarEmpty(fetched ? "No open EU consultation matches our topics" + (state.area !== "all" ? " in this area" : "") + " right now." : "Consultations arrive with the next data update.",
+            fetched && state.area !== "all" ? { label: "Show all areas", onClick: () => { state.area = "all"; render(); } } : null, fetched ? "done" : "wait")
+        : el("div", "empty", "No open EU consultation right now."));
+      if ($("cons").firstChild.classList) $("cons").firstChild.classList.add("box");
       return;
     }
     const grid = el("div", "cons");
-    list.forEach((c) => {
-      const card = el("article", "cc");
-      card.appendChild(el("p", "m", [c.type, c.dg].filter(Boolean).join(" · ")));
+    const cardOf = (c, isLow) => {
+      const card = el("article", "cc" + (isLow ? " low" : ""));
+      const st = Rc ? Rc.stage(c.type) : { step: 0, label: c.type };
+      const sg = el("div", "stg");
+      const lab = el("p", "m", st.step ? st.label + " · step " + st.step + " of 4" : st.label); if (st.help) lab.title = st.help;
+      sg.appendChild(lab);
+      if (st.step) { const b = el("div", "stg-b"); b.setAttribute("aria-hidden", "true"); for (let k = 1; k <= 4; k++) b.appendChild(el("i", k <= st.step ? "on" : "")); sg.appendChild(b); }
+      card.appendChild(sg);
       const t = el("p", "t", c.title); t.title = c.summary || c.title; card.appendChild(t);
+      const ch = el("div", "chips");
+      if (isLow) ch.appendChild(el("span", "lowc", "Little link to tissue"));
+      else (c.areas || []).forEach((a) => { if (AREAS[a]) ch.appendChild(el("span", "ach", AREAS[a].label)); });
+      if (ch.children.length) card.appendChild(ch);
       const f = el("div", "f");
-      f.appendChild(el("span", "left" + (days(c.end) <= 14 ? " soon" : ""), left(c.end)));
+      f.appendChild(el("span", "left" + (days(c.end) <= 14 && !isLow ? " soon" : ""), left(c.end)));
       const a = el("a", null, "Give feedback ↗"); a.href = c.url; a.target = "_blank"; a.rel = "noopener";
       f.appendChild(a); card.appendChild(f);
-      grid.appendChild(card);
-    });
+      return card;
+    };
+    list.forEach((c) => grid.appendChild(cardOf(c, false)));
+    if (!list.length) grid.appendChild((window.RadarEmpty ? RadarEmpty("No open consultation on our topics right now – only ones with little link to tissue.", null, "done") : el("div", "empty", "No open consultation on our topics.")));
+    if (low.length) {
+      const tg = el("button", "low-tg", showLow ? "Hide the " + low.length + " consultations with little link to tissue" : "Show " + low.length + " more with little link to tissue (e.g. road transport, fisheries)");
+      tg.type = "button"; tg.setAttribute("aria-expanded", String(showLow));
+      tg.addEventListener("click", () => { showLow = !showLow; renderCons(); });
+      grid.appendChild(tg);
+      if (showLow) low.forEach((c) => grid.appendChild(cardOf(c, true)));
+    }
     $("cons").replaceChildren(grid);
   }
 
@@ -329,7 +364,11 @@
   function renderTracker() {
     const host = $("trk");
     const rows = rowsShown();
-    if (!rows.length) { host.replaceChildren(el("p", "muted", state.show === "all" ? "No topics in this area." : "No topics match this view.")); return; }
+    if (!rows.length) {
+      const msg = state.show === "changed" ? "No official step in the last 30 days" + (state.area !== "all" ? " in this area" : "") + "." : state.show === "consult" ? "No topic with an open consultation" + (state.area !== "all" ? " in this area" : "") + "." : "No topics in this area.";
+      const e = window.RadarEmpty ? RadarEmpty(msg, { label: "Show all topics", onClick: () => { state.show = "all"; state.area = "all"; render(); } }, state.show === "all" ? "filter" : "done") : el("p", "muted", msg);
+      e.classList && e.classList.add("box"); host.replaceChildren(e); return;
+    }
     if (state.view === "roadmap") { host.replaceChildren(roadmapView(rows)); return; }
     const wrap = el("div", "tw"); const t = el("table", "tk");
     const hr = el("tr"); ["Topic", "Stage", "Latest step", "Next date"].forEach((h) => hr.appendChild(el("th", null, h)));
@@ -342,6 +381,7 @@
       if (changedRecently(r)) td0.appendChild(el("span", "new", "NEW STEP"));
       const nc = consFor(r).length; if (nc) td0.appendChild(el("span", "chip", nc + (nc === 1 ? " consultation" : " consultations")));
       td0.appendChild(el("small", null, AREAS[r.area] ? AREAS[r.area].label : ""));
+      if (r.why) td0.appendChild(el("small", "why", "Why WEPA: " + r.why));
       tr.appendChild(td0);
       const td1 = el("td"); td1.appendChild(stepper(stageOf(r))); tr.appendChild(td1);
       const ls = latestStep(r); const td2 = el("td");
@@ -396,6 +436,7 @@
     const body = $("dlg-body"); body.replaceChildren();
     const top = el("div"); top.appendChild(stepper(stageOf(r))); body.appendChild(top);
     if (p && p.title) body.appendChild(el("p", "muted", p.title));
+    if (r.why) { const w = el("p", "why-p"); w.append(el("b", null, "Why WEPA: "), document.createTextNode(r.why)); body.appendChild(w); }
     // key dates
     const upcoming = [];
     (r.milestones || []).forEach((m) => { if (m.date >= todayIso) upcoming.push([m.date, m.label]); });
@@ -428,8 +469,11 @@
 
   // ---------- start ----------
   const getJSON = (path, fb) => fetch(path, { cache: "no-store" }).then((r) => (r.ok ? r.json() : fb)).catch(() => fb);
-  Promise.all([getJSON("data/roadmap.json", null), getJSON("data/regulation.json", { consultations: [], procedures: {} }), getJSON("data/radar.json", { entries: [] })]).then(([rm, reg, radar]) => {
+  Promise.all([getJSON("data/roadmap.json", null), getJSON("data/regulation.json", { consultations: [], procedures: {} }), getJSON("data/radar.json", { entries: [] }), getJSON("config/roadmap_add.json", { rows: [] })]).then(([rm, reg, radar, add]) => {
     if (!rm || !rm.rows) throw new Error("roadmap");
+    // extra rows kept in config/roadmap_add.json (the daily data update never touches config/)
+    const have = new Set(rm.rows.map((r) => r.id));
+    (add.rows || []).forEach((r) => { if (r && r.id && !have.has(r.id)) rm.rows.push(r); });
     R = rm; REG = { consultations: [], procedures: {}, ...reg }; NEWS = (radar.entries || []).filter((e) => e && e.title && e.url);
     side = RadarSide.build($("side"), { toggleLabel: "Topics & area", onChange: (g, k) => { state[g] = k; render(); } });
     const topic = readHash();
@@ -444,7 +488,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261106d" defer></script>
-<script src="assets/guide.js?v=20261106d" defer></script>
+<script src="assets/search.js?v=20261107b" defer></script>
+<script src="assets/guide.js?v=20261107b" defer></script>
 </body>
 </html>

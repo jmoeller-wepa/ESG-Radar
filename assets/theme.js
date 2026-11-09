@@ -145,3 +145,48 @@ window.RadarViz = (function () {
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();
+
+/* Empty states shared by all pages: RadarEmpty(text, action, kind) → <div class="r-empty">
+   action = { label, href } or { label, onClick }; kind = "done" (all seen), "filter" (filters hide everything), "wait" (data not there yet, default) */
+window.RadarEmpty = function (text, action, kind) {
+  const IC = {
+    done: '<path d="M8 12.5l2.6 2.6L16 9.6"/><circle cx="12" cy="12" r="9"/>',
+    filter: '<path d="M4 5h16l-6 7.5V19l-4-2v-4.5z"/>',
+    wait: '<circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/>',
+  };
+  const box = document.createElement("div"); box.className = "r-empty r-empty-" + (kind || "wait");
+  box.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (IC[kind] || IC.wait) + "</svg>";
+  const t = document.createElement("div"); t.className = "r-empty-t";
+  const p = document.createElement("span"); p.textContent = text; t.appendChild(p);
+  if (action && action.label) {
+    const a = document.createElement(action.href ? "a" : "button"); a.className = "r-empty-a"; a.textContent = action.label;
+    if (action.href) a.href = action.href; else { a.type = "button"; a.addEventListener("click", action.onClick); }
+    t.appendChild(a);
+  }
+  box.appendChild(t);
+  return box;
+};
+
+/* EU consultations ("Have your say"): plain-language stage and a simple relevance check, used on Regulation and Overview.
+   The collector matches broad keywords, so road transport or fisheries files can slip in. Edit the two lists below to tune it. */
+window.RadarCons = (function () {
+  // Commission workflow names → steps a reader understands (step k of 4)
+  const STAGE = {
+    "planning workflow": [1, "Early idea", "The Commission asks for evidence before drafting anything"],
+    "opc launched": [2, "Public consultation", "Questionnaire open to everyone"],
+    "isc workflow": [3, "Draft text", "Feedback on the Commission's draft act"],
+    "adoption workflow": [4, "Proposal adopted", "Feedback on the proposal now with Parliament and Council"],
+  };
+  // words in the title that mean "not about tissue, energy, packaging or reporting"
+  const OFF_TOPIC = /road transport|tachograph|maritime|fisher|aquaculture|aviation|corsia|public (passenger )?transport|\brail|methane|vehicle|shipping|airport|railway/i;
+  // keywords too broad to count as a match on their own
+  const WEAK = new Set(["simplification", "omnibus"]);
+  function stage(type) { const s = STAGE[(type || "").toLowerCase()]; return s ? { step: s[0], label: s[1], help: s[2] } : { step: 0, label: type || "", help: "" }; }
+  function relevant(c) {
+    if (OFF_TOPIC.test(c.title || "")) return false;
+    if ((c.topics || []).length) return true;
+    const kw = (c.keywords || []).map((k) => k.toLowerCase());
+    return !kw.length || kw.some((k) => !WEAK.has(k));
+  }
+  return { stage, relevant };
+})();

@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261106d"></script>
+<script src="assets/theme.js?v=20261107b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261106d">
+<link rel="stylesheet" href="assets/side.css?v=20261107b">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -63,6 +63,11 @@
   /* benchmark table: header row and company column stay in place; cells tinted by rating (heatmap) */
   #tab-bench .tbl-wrap { max-height: calc(100vh - 150px); overflow: auto; border-radius: 12px 12px 0 0; }
   #tbl thead th { position: sticky; top: 0; z-index: 3; }
+  /* long values wrap inside a column instead of making the table very wide; a soft fade shows when more columns sit to the right */
+  #tab-bench:not(.compact) #tbl td:not(.co) { min-width: 190px; }
+  #tab-bench:not(.compact) #tbl td:not(.co) .v { display: inline-block; max-width: 270px; white-space: normal; }
+  .tbl-wrap.sc-r { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 56px), transparent); }
+  .sc-hint { font-size: 12px; color: var(--ink-3); text-align: right; padding: 6px 12px 0; }
   #tbl thead th:first-child { z-index: 4; }
   #tbl td.r-best { background: var(--d-d3eee8-bg, #d3eee8); } #tbl td.r-good { background: var(--d-eaf6f3-bg, #eaf6f3); } #tbl td.r-weak { background: var(--d-fbe9ec-bg, #fbe9ec); }
   #tbl td .v::before { display: none; }
@@ -223,9 +228,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
-<script src="assets/status.js?v=20261106d" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261106d">
-<script src="assets/colresize.js?v=20261106d" defer></script>
+<script src="assets/status.js?v=20261107b" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261107b">
+<script src="assets/colresize.js?v=20261107b" defer></script>
 </head>
 <body>
 <header>
@@ -307,7 +312,7 @@
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261106d"></script>
+<script src="assets/side.js?v=20261107b"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
@@ -380,12 +385,28 @@
     cmpBox.addEventListener("change", () => { $("tab-bench").classList.toggle("compact", cmpBox.checked); try { localStorage.setItem("radar.peersCompact", cmpBox.checked ? "1" : "0"); } catch (e) {} });
   }
 
+  // Wide tables: fade the right edge and show a hint while more columns are hidden to the right
+  function scrollHints() {
+    document.querySelectorAll(".tbl-wrap").forEach((w) => {
+      if (!w.dataset.sc) { w.dataset.sc = "1"; w.addEventListener("scroll", () => scrollHints(), { passive: true }); }
+      const more = w.scrollWidth - w.clientWidth - w.scrollLeft > 4;
+      w.classList.toggle("sc-r", more);
+      let h = w.previousElementSibling && w.previousElementSibling.classList.contains("sc-hint") ? w.previousElementSibling : null;
+      if (w.scrollWidth - w.clientWidth > 4) { if (!h) { h = el("div", "sc-hint", "More columns to the right – scroll sideways or use Shift + mouse wheel →"); w.before(h); } h.hidden = !more; }
+      else if (h) h.hidden = true;
+    });
+  }
+  window.addEventListener("resize", () => scrollHints());
   // WEPA (isUs) is always part of every peer group as the reference; unticked companies are hidden
   const inGroup = (c) => c.isUs || state.group === "all" || c.groups.includes(state.group);
   const companies = () => P.companies.filter((c) => inGroup(c) && !state.hidden.has(c.id));
   function companyNode() {
     const box = el("div", "co-list");
     const list = P.companies.filter(inGroup);
+    const others = list.filter((c) => !c.isUs);
+    box.appendChild(RadarSide.bulkBar({ selected: list.filter((c) => !state.hidden.has(c.id)).length, total: list.length, noun: "shown", min: list.length - others.length,
+      onAll: () => { state.hidden.clear(); render(); }, onNone: () => { others.forEach((c) => state.hidden.add(c.id)); render(); },
+      allTitle: "Show every company of this group", noneTitle: "Hide all companies except WEPA" }));
     list.forEach((c) => {
       const on = !state.hidden.has(c.id);
       const b = el("button", "co-item"); b.type = "button"; b.setAttribute("role", "checkbox"); b.setAttribute("aria-checked", String(on));
@@ -394,11 +415,6 @@
       else b.addEventListener("click", () => { on ? state.hidden.add(c.id) : state.hidden.delete(c.id); render(); });
       box.appendChild(b);
     });
-    const shown = list.filter((c) => !state.hidden.has(c.id)).length;
-    const foot = el("div", "co-foot");
-    foot.appendChild(el("span", null, shown + " of " + list.length + " shown"));
-    if (state.hidden.size) { const r = el("button", null, "Show all"); r.type = "button"; r.addEventListener("click", () => { state.hidden.clear(); render(); }); foot.appendChild(r); }
-    box.appendChild(foot);
     return box;
   }
 
@@ -668,6 +684,7 @@
       tbody.appendChild(tr);
     });
     $("tbl").replaceChildren(thead, tbody);
+    requestAnimationFrame(scrollHints);
 
     // Profiles
     const oRate = {}; CARD_KPIS.forEach((k) => { oRate[k] = ratings(k, list); });
@@ -781,7 +798,7 @@
   }
 })();
 </script>
-<script src="assets/search.js?v=20261106d" defer></script>
-<script src="assets/guide.js?v=20261106d" defer></script>
+<script src="assets/search.js?v=20261107b" defer></script>
+<script src="assets/guide.js?v=20261107b" defer></script>
 </body>
 </html>

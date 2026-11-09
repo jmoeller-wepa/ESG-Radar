@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261106d"></script>
+<script src="assets/theme.js?v=20261107b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261106d" defer></script>
+<script src="assets/status.js?v=20261107b" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -74,6 +74,11 @@
   .w > .wb { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; }
   .editing .w > .wb { overflow-y: auto; }
   @media (max-width: 720px) { .w { height: auto; } .w > .wb { overflow: visible; } }
+  /* Viewing (not customizing): each card is as tall as its content; cards stack up in their column without gaps (pack() in the script) */
+  @media (min-width: 721px) {
+    .ov-grid:not(.editing) { grid-auto-rows: 4px; row-gap: 0; align-items: start; }
+    .ov-grid:not(.editing) > .w { height: auto; max-height: 640px; }
+  }
 
   .wh { display: flex; align-items: center; gap: 8px; min-height: 24px; }
   .wh h3 { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); font-weight: 600; }
@@ -162,9 +167,6 @@
   .br-story .rm-sec h4 .rm-n { font-weight: 400; color: var(--d-8a94a3-text, #8a94a3); text-transform: none; letter-spacing: 0; }
   .br-story .rm-items .li:first-of-type { padding-top: 2px; }
   .br-story .rm-items > .empty { padding-top: 2px; }
-  .rm-chips { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 2px; }
-  .rm-chips a { font-size: 13px; background: var(--d-f4f5f7-bg, #f4f5f7); border-radius: 8px; padding: 3px 10px; color: var(--ink); text-decoration: none; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .rm-chips a:hover { background: var(--d-e8edf3-bg, #e8edf3); }
   @media (max-width: 600px) { .br-story .rm-sec { grid-template-columns: minmax(0, 1fr); } }
   .nx-then { margin: 4px 0 0; font-size: 12.5px; color: var(--d-6b7280-text, #6b7280); }
   .cards-h { font-size: 13px !important; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280) !important; font-weight: 600 !important; }
@@ -175,13 +177,19 @@
   .rm-bar b { font-size: 15px; color: var(--d-002d55-text, #002d55); min-width: 150px; text-align: center; }
   .rm-nav { border: 1px solid var(--d-dfe4ea-border, #dfe4ea); background: var(--d-fff-bg, #fff); border-radius: 8px; width: 28px; height: 28px; cursor: pointer; font-size: 15px; color: var(--d-374151-text, #374151); }
   .rm-nav:disabled { opacity: .35; cursor: default; }
-  .rm-copy { margin-left: auto; border: 1px solid var(--d-dfe4ea-border, #dfe4ea); background: var(--d-fff-bg, #fff); border-radius: 8px; padding: 4px 12px; font: inherit; font-size: 13px; color: var(--d-0064aa-text, #0064aa); cursor: pointer; }
-  .rm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 14px 18px; }
+  .rm-gone { font-size: 12.5px; color: var(--d-8a94a3-text, #8a94a3); margin-left: 6px; }
+  .rm-grid { display: grid; grid-template-columns: repeat(var(--rm-n, 4), minmax(0, 1fr)); gap: 14px 22px; }
+  @media (max-width: 1100px) { .rm-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { .rm-grid { grid-template-columns: minmax(0, 1fr); } }
   .rm-sec h4 { margin: 0 0 4px; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); display: flex; gap: 6px; align-items: baseline; }
   .rm-n { font-size: 12px; font-weight: 700; color: var(--d-33b09c-text, #33b09c); letter-spacing: 0; }
   .rm-types { margin: 0 0 4px; font-size: 12px; color: var(--d-8a94a3-text, #8a94a3); }
-  .rm-mv { display: flex; justify-content: space-between; gap: 8px; }
-  .rm-mv b { color: var(--d-374151-text, #374151); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .rm-mv { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 7px 0; border-top: 1px solid var(--d-f0f2f5-border, #f0f2f5); font-size: 13.5px; color: var(--ink); text-decoration: none; line-height: 1.3; }
+  .rm-mv:first-child { border-top: 0; padding-top: 2px; }
+  .rm-mv span { min-width: 0; }
+  .rm-mv small { display: block; font-size: 11.5px; color: var(--d-8a94a3-text, #8a94a3); margin-top: 1px; }
+  .rm-mv b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  a.rm-mv:hover span { color: var(--d-0064aa-text, #0064aa); }
 
   /* edit mode */
   .editing .w { cursor: grab; outline: 2px dashed var(--d-b9d3e8-border, #b9d3e8); outline-offset: -2px; }
@@ -208,8 +216,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261106d">
-<script src="assets/colresize.js?v=20261106d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261107b">
+<script src="assets/colresize.js?v=20261107b" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -289,7 +297,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261106d"></script>
+<script src="assets/carbon.js?v=20261107b"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -323,6 +331,16 @@
   let editing = false, D = {};
 
   // ---------- helpers ----------
+  // empty states: shared component from theme.js (icon + why it is empty + one useful action)
+  const emptyState = (t, a, k) => (window.RadarEmpty ? window.RadarEmpty(t, a, k) : el("p", "empty", t));
+  const nextRun = () => { // the data update runs Mon–Fri at 05:17 UTC
+    const n = new Date(); const d = new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate(), 5, 17));
+    while (d <= n || d.getUTCDay() === 0 || d.getUTCDay() === 6) d.setUTCDate(d.getUTCDate() + 1);
+    const days = Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(n.getFullYear(), n.getMonth(), n.getDate())) / 864e5);
+    return days === 0 ? "this morning" : days === 1 ? "tomorrow morning" : d.toLocaleDateString("en-GB", { weekday: "long" }) + " morning";
+  };
+  // open EU consultations without the ones that have little link to tissue (rule in theme.js → RadarCons)
+  const relCons = () => (D.reg.consultations || []).filter((c) => !window.RadarCons || RadarCons.relevant(c));
   const li = (href, cls) => { const a = el(href ? "a" : "div", "li" + (cls ? " " + cls : "")); if (href) { a.href = href; if (/^https?:/.test(href)) { a.target = "_blank"; a.rel = "noopener"; } } return a; };
   const tx = (title, sub) => { const t = el("div", "t", title); if (sub) t.appendChild(el("small", null, sub)); return t; };
   const dd = (iso) => { const d = parse(iso); const x = el("div", "dd"); x.append(el("b", null, String(d.getDate())), el("span", null, MON[d.getMonth()])); return x; };
@@ -347,7 +365,7 @@
   const W = {
     carbon: { off: true, title: "Carbon cost exposure", desc: "WEPA's EU ETS emissions × EUA price, with a price slider", wide: true, more: ["Market →", "market.html#carbon"],
       render(b) { CarbonCost.render(b, D.ets, D.market, {}); } },
-    roundup: { title: "Monthly round-up", desc: "What changed in a month: regulation, news, market moves, peers – copy it for Teams or e-mail", wide: true, more: null,
+    roundup: { title: "Monthly round-up", desc: "What changed in a month: regulation, news, market moves, peers", wide: true, more: null,
       render(b) { renderRoundup(b); } },
     next30: { title: "Next 30 days", desc: "Deadlines and consultations closing soon", more: ["All deadlines →", "regulation.html#view=roadmap"],
       render(b) { renderNext30(b); } },
@@ -362,8 +380,8 @@
           lab.append(document.createTextNode("Alert when an indicator moves at least"), inp, document.createTextNode("% vs. the previous value"));
           cfg.appendChild(lab); b.appendChild(cfg);
         }
-        if (!marketList().length) { b.appendChild(el("p", "empty", "Market data arrives with the next weekly run.")); return; }
-        if (!hits.length) { b.appendChild(el("p", "empty", `No indicator moved more than ${th}% in its latest period.`)); return; }
+        if (!marketList().length) { b.appendChild(emptyState("Market data arrives with the next data update.")); return; }
+        if (!hits.length) { b.appendChild(emptyState(`No indicator moved more than ${th} % in its latest period.`, editing ? null : { label: "Change the threshold", onClick: () => $("edit").click() }, "done")); return; }
         hits.slice(0, 6).forEach(({ i, c }) => {
           const r = li("market.html#cmp=" + i.id);
           const ch = el("span", "chg " + (c.pct > 0 ? "up" : "dn"), (c.pct > 0 ? "▲ " : "▼ ") + Math.abs(c.pct).toFixed(1) + "%");
@@ -376,7 +394,7 @@
       render(b, w) {
         const wepa = (D.peers && D.peers.companies || []).find((c) => c.isUs);
         const t = wepa && wepa.targets2030;
-        if (!t) { b.appendChild(el("p", "empty", "No target data yet (data/peers.json → targets2030).")); return; }
+        if (!t) { b.appendChild(emptyState("No target data yet (data/peers.json → targets2030).")); return; }
         if (t.src) { const a = w.querySelector("a.more"); if (a) a.href = t.src; }
         const cols = ["#33b09c", "#f4b49f", "#0064aa", "#96d2dc", "#335777"];
         t.items.forEach((x, k) => {
@@ -391,16 +409,16 @@
       render(b) {
         const list = [];
         (D.radar.entries || []).forEach((e) => { if (e.nextDate && e.nextDate >= todayIso) list.push({ date: e.nextDate, title: e.nextDateLabel || e.title, sub: e.title, href: "news.html#" + e.id }); });
-        (D.reg.consultations || []).forEach((c) => { if (c.end >= todayIso) list.push({ date: c.end, title: "Consultation closes: " + c.title, sub: "Have your say", href: c.url }); });
+        relCons().forEach((c) => { if (c.end >= todayIso) list.push({ date: c.end, title: "Consultation closes: " + c.title, sub: "Have your say", href: c.url }); });
         list.sort((a, b) => a.date.localeCompare(b.date));
-        if (!list.length) { b.appendChild(el("p", "empty", "No upcoming deadlines recorded.")); return; }
+        if (!list.length) { b.appendChild(emptyState("No upcoming deadlines recorded.", { label: "Open the roadmap", href: "regulation.html#view=roadmap" }, "done")); return; }
         list.slice(0, 5).forEach((x) => { const r = li(x.href); const d = days(x.date); r.append(dd(x.date), tx(x.title, x.sub !== x.title ? x.sub : null), el("span", "r " + (d <= 60 ? "soon" : "later"), d <= 0 ? "today" : d + " d")); b.appendChild(r); });
       } },
     newsince: { title: "New since your last visit", desc: "Incl. EUR-Lex, EFRAG and status updates", more: ["News →", "news.html#view=new"],
       render(b, w) {
         const list = (D.radar.entries || []).filter((e) => (e.added || e.date || "") > base).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
         w.querySelector("h3").textContent = "New since your last visit · " + list.length;
-        if (!list.length) { b.appendChild(el("p", "empty", "Nothing new since " + fmt(base) + ".")); return; }
+        if (!list.length) { b.appendChild(emptyState("You are up to date: nothing new since " + fmt(base) + ". Next data update " + nextRun() + ".", { label: "Browse all news", href: "news.html" }, "done")); return; }
         list.slice(0, 5).forEach((e) => { const r = li(e.url); const tg = el("span", "tag", (e.source || "").replace(/ \(via.*\)/, "").slice(0, 18)); const t = tx(e.title, (e.date ? fmtShort(e.date) : "")); t.prepend(tg); r.append(t); b.appendChild(r); });
       } },
     peernews: { title: "Peer news", desc: "Latest headlines per peer company", more: ["Peers →", "peers.html"],
@@ -408,26 +426,26 @@
         const names = Object.fromEntries((D.peers.companies || []).map((c) => [c.id, c.name]));
         const all = []; Object.entries((D.pnews && D.pnews.companies) || {}).forEach(([id, list]) => (list || []).forEach((n) => all.push({ ...n, co: names[id] || id })));
         all.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-        if (!all.length) { b.appendChild(el("p", "empty", "Peer news arrives with the next weekly run.")); return; }
+        if (!all.length) { b.appendChild(emptyState("Peer news arrives with the next data update.")); return; }
         all.slice(0, 6).forEach((n) => { const r = li(n.url); r.append(tx(n.title, [n.co, n.date ? fmtShort(n.date) : "", n.source].filter(Boolean).join(" · "))); b.appendChild(r); });
       } },
     consult: { title: "Consultations closing", desc: "Open EU consultations on our topics", more: ["Regulation →", "regulation.html"],
       render(b) {
-        const list = (D.reg.consultations || []).filter((c) => c.end >= todayIso).sort((a, b) => a.end.localeCompare(b.end));
-        if (!list.length) { b.appendChild(el("p", "empty", "No open consultation on our topics right now.")); return; }
+        const list = relCons().filter((c) => c.end >= todayIso).sort((a, b) => a.end.localeCompare(b.end));
+        if (!list.length) { b.appendChild(emptyState("No open consultation on our topics right now.", { label: "All consultations", href: "regulation.html" }, "done")); return; }
         list.slice(0, 5).forEach((c) => { const r = li(c.url); const d = days(c.end); r.append(dd(c.end), tx(c.title, [c.type, c.dg].filter(Boolean).join(" · ")), el("span", "r " + (d <= 14 ? "soon" : "later"), d + " d")); b.appendChild(r); });
       } },
     regchanges: { title: "Regulation changes", desc: "Latest official steps in the tracker", more: ["Regulation →", "regulation.html"],
       render(b) {
         const rows = Object.fromEntries((D.roadmap.rows || []).map((r) => [r.id, r.label]));
         const list = Object.entries(D.reg.procedures || {}).filter(([, p]) => p.latest).map(([id, p]) => ({ id, p })).sort((a, b) => b.p.latest.date.localeCompare(a.p.latest.date));
-        if (!list.length) { b.appendChild(el("p", "empty", "Regulation status arrives with the next weekly run.")); return; }
+        if (!list.length) { b.appendChild(emptyState("Regulation status arrives with the next data update.")); return; }
         list.slice(0, 5).forEach(({ id, p }) => { const r = li("regulation.html#topic=" + id); const t = tx((rows[id] || id) + ": " + p.latest.label, fmt(p.latest.date)); if (p.changed && days(p.changed) >= -30) t.prepend(el("span", "tag", "NEW")); r.append(t); b.appendChild(r); });
       } },
     saved: { title: "Saved items", desc: "Cards you starred on the News page", more: ["News →", "news.html#view=saved"],
       render(b) {
         const list = (D.radar.entries || []).filter((e) => saved.has(e.id));
-        if (!list.length) { b.appendChild(el("p", "empty", "Nothing saved yet – use ☆ on a card on the News page.")); return; }
+        if (!list.length) { b.appendChild(emptyState("Nothing saved yet. Click the star on a news card to keep it here.", { label: "Go to News", href: "news.html" })); return; }
         list.slice(0, 6).forEach((e) => { const r = li(e.url); r.append(tx(e.title, [e.source, e.date ? fmtShort(e.date) : ""].filter(Boolean).join(" · "))); b.appendChild(r); });
       } },
     snapshot: { title: "Market snapshot", desc: "Your choice of market indicators", more: ["Market →", "market.html"],
@@ -441,7 +459,7 @@
           b.appendChild(cfg);
         }
         const list = L.snap.map((id) => all.find((i) => i.id === id)).filter(Boolean);
-        if (!list.length) { b.appendChild(el("p", "empty", all.length ? "Choose indicators in “Customize”." : "Market data arrives with the next weekly run.")); return; }
+        if (!list.length) { b.appendChild((all.length ? emptyState("No indicators chosen for this card.", editing ? null : { label: "Choose indicators", onClick: () => $("edit").click() }) : emptyState("Market data arrives with the next data update."))); return; }
         const g = el("div", "snap");
         list.forEach((i) => {
           const last = i.series[i.series.length - 1]; const ya = i.series.find((p) => p[0].slice(0, 7) === (Number(last[0].slice(0, 4)) - 1) + last[0].slice(4, 7));
@@ -469,13 +487,13 @@
           const mu = el("i", "m us"); mu.style.left = pos(us.v) + "%"; mu.title = "WEPA " + us.v; sc.appendChild(mu);
           row.appendChild(sc); box.appendChild(row);
         });
-        if (!box.children.length) { b.appendChild(el("p", "empty", "Not enough comparable values.")); return; }
+        if (!box.children.length) { b.appendChild(emptyState("Not enough comparable values.")); return; }
         b.appendChild(box); b.appendChild(el("p", "mut", "● WEPA  ○ median  · grey dots = other Tissue Europe peers"));
       } },
     status: { title: "Data status", desc: "Which sources updated in the last run", more: null,
       render(b) {
         const s = D.status && D.status.sources;
-        if (!s) { b.appendChild(el("p", "empty", "The weekly update has not run yet.")); return; }
+        if (!s) { b.appendChild(emptyState("The data update has not run yet.")); return; }
         Object.values(s).sort((a, c) => (a.order || 50) - (c.order || 50)).forEach((x) => { const r = el("div", "st-row"); const i = el("i", x.status === "ok" ? "" : x.status); r.append(i, el("b", null, x.label), el("span", null, x.detail)); r.querySelector("b").style.fontWeight = "500"; b.appendChild(r); });
       } },
   };
@@ -504,7 +522,7 @@
     const names = Object.fromEntries((D.peers.companies || []).map((c) => [c.id, c.name]));
     const pn = []; Object.entries((D.pnews && D.pnews.companies) || {}).forEach(([id, list]) => (list || []).forEach((n) => { if (inM(n.date)) pn.push({ ...n, co: names[id] || id }); }));
     const seenPn = new Set(); const pnU = pn.sort((a, b) => (b.date || "").localeCompare(a.date || "")).filter((n) => { const k = n.title.slice(0, 60).toLowerCase(); if (seenPn.has(k)) return false; seenPn.add(k); return true; });
-    const cons = (D.reg.consultations || []).filter((c) => inM(c.end));
+    const cons = relCons().filter((c) => inM(c.end));
     return { reg: regU, news, high, byType, moves, pn: pnU, cons };
   }
   function renderRoundup(b) {
@@ -515,29 +533,19 @@
     const bar = el("div", "rm-bar");
     const nav = (txt, d, dis) => { const x = el("button", "rm-nav", txt); x.type = "button"; x.disabled = dis; x.setAttribute("aria-label", d < 0 ? "Previous month" : "Next month"); x.addEventListener("click", () => { rmMonth = prevM(m, d); b.replaceChildren(); renderRoundup(b); }); return x; };
     bar.append(nav("‹", -1, false), el("b", null, label), nav("›", 1, m >= cur));
-    const copy = el("button", "rm-copy", "Copy as text"); copy.type = "button"; copy.title = "Copies a plain-text summary for Teams or e-mail";
-    copy.addEventListener("click", () => {
-      const lines = ["ESG Radar · Round-up " + label, ""];
-      lines.push("Regulation (" + R.reg.length + " official steps)"); R.reg.slice(0, 5).forEach((r) => lines.push("• " + r.t + " (" + fmtShort(r.d) + ")"));
-      if (R.cons.length) lines.push("• Consultations closing: " + R.cons.map((c) => c.title).slice(0, 3).join("; "));
-      lines.push("", "News (" + R.news.length + " new, " + R.high.length + " high relevance)"); R.high.slice(0, 5).forEach((e) => lines.push("• " + e.title));
-      lines.push("", "Market moves vs. previous month"); R.moves.slice(0, 5).forEach((x) => lines.push("• " + x.name + " " + (x.pct > 0 ? "+" : "") + x.pct.toFixed(1) + " %"));
-      lines.push("", "Peers (" + R.pn.length + " headlines)"); R.pn.slice(0, 4).forEach((n) => lines.push("• " + n.co + ": " + n.title));
-      lines.push("", location.href.replace(/[#?].*$/, ""));
-      const txt = lines.join("\n");
-      (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject()).then(() => { copy.textContent = "✓ Copied"; setTimeout(() => { copy.textContent = "Copy as text"; }, 1800); })
-        .catch(() => { window.prompt("Copy the summary:", txt); });
-    });
-    bar.appendChild(copy);
     b.appendChild(bar);
     const g = el("div", "rm-grid");
-    const sec = (title, n, items, empty) => { const s = el("div", "rm-sec"); const h = el("h4", null, title); if (n != null) h.appendChild(el("span", "rm-n", String(n))); const box = el("div", "rm-items"); s.append(h, box); if (!items.length) box.appendChild(el("p", "empty", empty)); items.forEach((x) => box.appendChild(x)); return s; };
+    const gone = [];
+    const sec = (title, n, items, empty) => { if (!items.length) { gone.push(empty); return null; } const s = el("div", "rm-sec"); const h = el("h4", null, title); if (n != null) h.appendChild(el("span", "rm-n", String(n))); const box = el("div", "rm-items"); s.append(h, box); items.forEach((x) => box.appendChild(x)); return s; };
     const item = (href, t, sub) => { const r = li(href); r.append(tx(t, sub)); return r; };
-    g.append(
-      sec("Regulation", R.reg.length + R.cons.length, R.reg.slice(0, 4).map((r) => item(r.href, r.t, fmtShort(r.d))).concat(R.cons.slice(0, 2).map((c) => item(c.url, "Consultation closed: " + c.title, fmtShort(c.end)))), "No official steps this month."),
-      sec("News", R.news.length, [el("p", "rm-types", Object.entries(R.byType).map(([t, n]) => n + " " + ({ regulation: "regulation", tool: "tools & updates", practice: "best practice" }[t] || t)).join(" · ") || "")].concat(R.high.slice(0, 4).map((e) => item("news.html#" + e.id, e.title, fmtShort(e.date) + " · high relevance"))), "No news this month."),
-      sec("Market moves", null, R.moves.length ? [(() => { const c = el("div", "rm-chips"); R.moves.slice(0, 6).forEach((x) => { const a = el("a", null, x.name + " " + (x.pct > 0 ? "▲ " : x.pct < 0 ? "▼ " : "▬ ") + Math.abs(x.pct).toFixed(1) + " %"); a.href = "market.html#ind=" + x.id; a.title = "vs. previous month"; c.appendChild(a); }); return c; })()] : [], "No monthly values for this month yet – statistics are published with a delay of 1–3 months."),
-      sec("Peers", R.pn.length, R.pn.filter((n, k, a) => a.findIndex((x) => x.co === n.co && x.date === n.date) === k).slice(0, 4).map((n) => item(n.url, n.title, n.co + " · " + fmtShort(n.date))), "No peer headlines this month."));
+    const move = (x) => { const a = el("a", "rm-mv"); a.href = "market.html#ind=" + x.id; a.title = "vs. previous month"; const k = x.name.lastIndexOf(" · "); const nm = el("span", null, k > 0 ? x.name.slice(k + 3) : x.name); if (k > 0) nm.appendChild(el("small", null, x.name.slice(0, k))); a.append(nm, el("b", null, (x.pct > 0 ? "▲ " : x.pct < 0 ? "▼ " : "▬ ") + Math.abs(x.pct).toFixed(1) + " %")); return a; };
+    [sec("Regulation", R.reg.length + R.cons.length, R.reg.slice(0, 4).map((r) => item(r.href, r.t, fmtShort(r.d))).concat(R.cons.slice(0, 2).map((c) => item(c.url, "Consultation closed: " + c.title, fmtShort(c.end)))), "no official regulation steps"),
+      sec("News", R.news.length, R.news.length ? [el("p", "rm-types", Object.entries(R.byType).map(([t, n]) => n + " " + ({ regulation: "regulation", tool: "tools & updates", practice: "best practice" }[t] || t)).join(" · ") || "")].concat(R.high.slice(0, 4).map((e) => item("news.html#" + e.id, e.title, fmtShort(e.date) + " · high relevance"))) : [], "no news"),
+      sec("Market moves", null, R.moves.slice(0, 6).map(move), "no monthly market values yet (statistics come 1–3 months late)"),
+      sec("Peers", R.pn.length, R.pn.filter((n, k, a) => a.findIndex((x) => x.co === n.co && x.date === n.date) === k).slice(0, 4).map((n) => item(n.url, n.title, n.co + " · " + fmtShort(n.date))), "no peer headlines")].forEach((x) => { if (x) g.appendChild(x); });
+    if (gone.length) bar.appendChild(el("span", "rm-gone", "In this month: " + gone.join(" · ") + "."));
+    if (!g.children.length) g.appendChild(emptyState("Nothing recorded for this month yet.", null));
+    g.style.setProperty("--rm-n", Math.max(1, g.children.length));
     b.appendChild(g);
   }
 
@@ -547,7 +555,7 @@
   function upcoming() {
     const list = [];
     (D.radar.entries || []).forEach((e) => { if (e.nextDate && e.nextDate >= todayIso) list.push({ date: e.nextDate, title: e.nextDateLabel || e.title, sub: e.title, href: "news.html#open=" + encodeURIComponent(e.id) }); });
-    (D.reg.consultations || []).forEach((c) => { if (c.end >= todayIso) list.push({ date: c.end, title: "Consultation closes: " + c.title, sub: "Have your say", href: c.url }); });
+    relCons().forEach((c) => { if (c.end >= todayIso) list.push({ date: c.end, title: "Consultation closes: " + c.title, sub: "Have your say", href: c.url }); });
     const seen = new Set();
     return list.sort((a, b) => a.date.localeCompare(b.date)).filter((x) => { const k = x.date + x.title; if (seen.has(k)) return false; seen.add(k); return true; });
   }
@@ -586,7 +594,7 @@
   function renderNext30(nx) {
     const up = upcoming();
     const soon = up.filter((x) => days(x.date) <= 30), show = (soon.length >= 3 ? soon : up).slice(0, 5);
-    if (!show.length) nx.appendChild(el("p", "empty", "No upcoming deadlines recorded."));
+    if (!show.length) nx.appendChild(emptyState("No deadlines in the next 30 days.", { label: "Open the roadmap", href: "regulation.html#view=roadmap" }, "done"));
     show.forEach((x) => { const r = li(x.href); const d = days(x.date); r.append(dd(x.date), tx(x.title, x.sub !== x.title ? x.sub : null), el("span", "r " + (d <= 7 ? "soon" : "later"), d <= 0 ? "today" : d + " d")); nx.appendChild(r); });
     const then = up.filter((x) => !show.includes(x) && x.date > (show.length ? show[show.length - 1].date : todayIso)).slice(0, 2);
     if (then.length) nx.appendChild(el("p", "nx-then", "Then: " + then.map((x) => { const t = x.title.replace(/^Consultation closes: /, ""); return (t.length > 48 ? t.slice(0, 46) + "…" : t) + " (" + fmtShort(x.date) + ")"; }).join(" · ")));
@@ -694,7 +702,31 @@
         grid.appendChild(sl);
       }
     }
-    if (!L.items.length) grid.appendChild(el("p", "empty", "No widgets – click “Customize” and add some."));
+    watchPack();
+    if (!L.items.length) grid.appendChild(emptyState("No cards on your overview.", { label: "Add cards", onClick: () => $("edit").click() }));
+  }
+  // Viewing: stack cards in their columns by their real height (CSS rows of 4px), so short cards leave no empty space
+  let packRO = null, packQ = 0;
+  function pack() {
+    const grid = $("grid"); if (!grid || editing || COLS < 2 || window.innerWidth <= 720) return;
+    const UNIT = 4, GAP = 16, colH = Array(COLS).fill(0);
+    [...grid.querySelectorAll(":scope > .w")]
+      .map((w) => ({ w, it: L.items.find((x) => x.id === w.dataset.id) })).filter((x) => x.it && x.it.at)
+      .sort((a, b) => a.it.at.r - b.it.at.r || a.it.at.c - b.it.at.c)
+      .forEach(({ w, it }) => {
+        const n = it.wide && COLS > 1 ? 2 : 1, c = Math.min(it.at.c, COLS - n);
+        let top = 0; for (let k = 0; k < n; k++) top = Math.max(top, colH[c + k]);
+        const span = Math.ceil((w.offsetHeight + GAP) / UNIT);
+        w.style.gridRow = (top + 1) + " / span " + span;
+        for (let k = 0; k < n; k++) colH[c + k] = top + span;
+      });
+  }
+  function watchPack() {
+    if (packRO) packRO.disconnect();
+    if (editing || !window.ResizeObserver) { pack(); return; }
+    packRO = new ResizeObserver(() => { cancelAnimationFrame(packQ); packQ = requestAnimationFrame(pack); });
+    $("grid").querySelectorAll(":scope > .w").forEach((w) => packRO.observe(w));
+    pack();
   }
   // Pin every widget to the cell it has now, so moving one does not reflow the others
   const freeze = () => L.items.forEach((x) => { if (x.at) x.pos = { c: x.at.c, r: x.at.r }; });
@@ -763,15 +795,17 @@
   Promise.all([
     getJSON("data/radar.json", { entries: [] }), getJSON("data/regulation.json", { consultations: [], procedures: {} }), getJSON("data/roadmap.json", { rows: [] }),
     getJSON("data/market.json", null), getJSON("data/peer_emissions.json", null), getJSON("data/peers.json", { companies: [], kpis: {} }),
-    getJSON("data/peer_news.json", null), getJSON("data/status.json", null),
-  ]).then(([radar, reg, roadmap, market, ets, peers, pnews, status]) => {
+    getJSON("data/peer_news.json", null), getJSON("data/status.json", null), getJSON("config/roadmap_add.json", { rows: [] }),
+  ]).then(([radar, reg, roadmap, market, ets, peers, pnews, status, add]) => {
+    // extra roadmap rows kept in config/roadmap_add.json
+    if (roadmap && Array.isArray(roadmap.rows)) { const have = new Set(roadmap.rows.map((r) => r.id)); (add.rows || []).forEach((r) => { if (r && r.id && !have.has(r.id)) roadmap.rows.push(r); }); }
     D = { radar, reg: { consultations: [], procedures: {}, ...reg }, roadmap, market, ets, peers, pnews, status };
     renderAll();
     try { renderBrief(); } catch (e) { console.error(e); }
   });
 })();
 </script>
-<script src="assets/search.js?v=20261106d" defer></script>
-<script src="assets/guide.js?v=20261106d" defer></script>
+<script src="assets/search.js?v=20261107b" defer></script>
+<script src="assets/guide.js?v=20261107b" defer></script>
 </body>
 </html>

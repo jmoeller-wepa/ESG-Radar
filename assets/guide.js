@@ -8,7 +8,7 @@
       intro: "A short briefing: one sentence on what matters now, five key numbers, the monthly round-up and the next 30 days. Your own cards follow below.",
       items: [
         ["Key numbers", "Five market indicators with their latest value, the change against the period before and a 12-month line. Click one for details; choose which five under “Customize”."],
-        ["Monthly round-up", "What changed in a month: regulation milestones, the most relevant news, the biggest market moves and peer headlines. Use ‹ › to switch months and “Copy as text” to paste it into an e-mail or Teams post."],
+        ["Monthly round-up", "What changed in a month: regulation milestones, the most relevant news, the biggest market moves and peer headlines. Use ‹ › to switch months."],
         ["Arrange the cards", "Click “Customize”, then drag a card to any free place or add and remove cards. The layout is saved in your browser only – colleagues keep their own. “↺ Reset” brings back the default."],
         ["Freshness", "The status line in the header shows when the data was last collected. Data is updated every weekday morning."],
       ],
@@ -21,6 +21,7 @@
         ["Filters", "Choose one or more areas in the side panel. Above the cards, “What it is” picks the kind of item (regulation, tools, best practice, peer news – peer news also by topic such as capacity or deals) and “Affects us” what it touches at WEPA. Filters are kept in the link, so you can share a filtered view."],
         ["Filter & search", "The box above the cards filters this page. The Search button in the header (Ctrl K) searches all pages at once."],
         ["Open a card", "Click a card for the full summary, why it matters for WEPA, the source and related entries."],
+        ["Cards or list", "The switch at the end of the filter bar shows the news as cards or as a compact list with one line per item. Each month first shows its latest items – “Show all” opens the rest."],
         ["Deadlines & coming next", "The side panel lists upcoming regulation deadlines. In the Data & AI area, “Coming next” shows planned Microsoft Fabric / Power BI features by quarter."],
         ["Archive", "Older months stay available – just scroll down. The toolbar shows which year you are in."],
       ],
@@ -32,7 +33,7 @@
       items: [
         ["Tracker", "One row per rule with its current status and the next milestone. Click a row for phases, dates and links to the official texts."],
         ["Roadmap", "The same rules on a time axis, so overlapping deadlines are easy to spot."],
-        ["Consultations", "Open EU “Have your say” consultations with their closing date."],
+        ["Consultations", "Open EU “Have your say” consultations with their closing date, the step the file has reached (early idea, public consultation, draft text, proposal adopted) and the area it touches. Consultations with little link to tissue (e.g. road transport, fisheries) are folded away below the cards."],
         ["What changed", "“Changed” shows only rules whose status or dates moved recently."],
       ],
       caveat: "This is a monitoring aid, not legal advice. Dates follow the official sources and can still shift.",
@@ -58,6 +59,7 @@
         ["Cost index", "Read left to right: each input's change and index points, the cost index against the tissue price index, and the margin signal. You can change the weights – they are saved in your browser only."],
         ["Industry", "Every month: German production, retail sales and tissue trade. Every year: energy mix, water, waste and environmental investment of German paper mills – “Copy as text” for reports."],
         ["Grid carbon intensity", "The German power mix by source, and CO₂ per kWh by country – useful for location-based Scope 2."],
+        ["Water", "Rhine level at Kaub (barge bottleneck) and next to our mills, plus soil moisture around each German mill. Only the status pill is coloured: low water or dry."],
       ],
       caveat: "Index lines show direction and size of changes, not price levels. Public price series are averages and lag behind contract prices.",
     },
