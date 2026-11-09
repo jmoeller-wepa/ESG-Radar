@@ -597,3 +597,12 @@ html[data-lk-d="airy"] .ov-grid { gap: 20px !important; }
 /* section icons */
 .lk-ic { display: inline-block; width: 14px !important; height: 14px !important; flex: none; vertical-align: -2px; margin-right: 7px; color: var(--d-6b7280-text, #6b7280); }
 html[data-lk-ic="off"] .lk-ic { display: none; }
+
+/* Overview: clear hover feedback (KPI tiles, cards, clickable rows) */
+.kpi { transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+.kpi:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(16, 24, 40, .12) !important; border-color: var(--acc-line, #9fd9cd); }
+.ov-grid:not(.editing) > .w { transition: box-shadow .15s ease; }
+.ov-grid:not(.editing) > .w:hover { box-shadow: 0 10px 28px rgba(16, 24, 40, .10) !important; }
+a.li, a.rm-mv { border-radius: 6px; transition: background-color .12s ease, box-shadow .12s ease; }
+a.li:hover, a.rm-mv:hover { background-color: var(--acc-tint, #e8f7f4); box-shadow: 0 0 0 6px var(--acc-tint, #e8f7f4); }
+@media (prefers-reduced-motion: reduce) { .kpi, .kpi:hover { transition: none; transform: none; } }

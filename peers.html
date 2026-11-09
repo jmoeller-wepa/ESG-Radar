@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109g"></script>
-<script src="assets/look.js?v=20261109g"></script>
+<script src="assets/theme.js?v=20261109h"></script>
+<script src="assets/look.js?v=20261109h"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
-<link rel="stylesheet" href="assets/side.css?v=20261109g">
+<link rel="stylesheet" href="assets/side.css?v=20261109h">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -245,9 +245,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
-<script src="assets/status.js?v=20261109g" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109g">
-<script src="assets/colresize.js?v=20261109g" defer></script>
+<script src="assets/status.js?v=20261109h" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109h">
+<script src="assets/colresize.js?v=20261109h" defer></script>
 </head>
 <body>
 <header>
@@ -265,7 +265,6 @@
   <div class="content">
   <div class="intro">
     <h2 id="title">Peers</h2>
-    <p>How WEPA compares with other tissue makers – public data only.</p>
   </div>
   <div class="ptabs" role="tablist" id="tabs" aria-label="Peers sections">
     <button type="button" role="tab" data-tab="bench" aria-controls="tab-bench">Benchmark</button>
@@ -273,8 +272,7 @@
   </div>
 
   <div class="tabp" id="tab-bench" role="tabpanel">
-  <div class="lead-row"><p class="tab-lead" id="bench-lead">Cell colours compare each value with the selected peer group. Click a value to open its source; click a column header to sort.</p>
-    <label class="tgl"><input type="checkbox" id="compact"> Compact view</label></div>
+  <div class="lead-row"><label class="tgl" style="margin-left:auto"><input type="checkbox" id="compact"> Compact view</label></div>
   <section class="panel" aria-label="Comparison table">
     <div class="tbl-wrap"><table id="tbl"></table></div>
     <div class="legend">
@@ -284,13 +282,11 @@
 
   <section aria-labelledby="pr-title" style="display:flex;flex-direction:column;gap:10px">
     <h2 class="cap" id="pr-title">Peer profiles</h2>
-    <p class="muted" style="margin:-4px 0 0">Click a profile for all KPIs, targets, news and EU ETS sites.</p>
     <div class="profiles" id="profiles"></div>
   </section>
   </div>
 
   <div class="tabp" id="tab-ets" role="tabpanel" hidden>
-  <p class="tab-lead">Scope 1 CO₂ of each company's EU sites, from the EU emissions registry. Click a company to see its sites.</p>
   <div id="ets-caution"></div>
   <section class="panel ets" id="ets" aria-labelledby="ets-title">
     <div class="ets-head"><h3 id="ets-title">EU ETS verified emissions</h3><span id="ets-sub"></span></div>
@@ -311,7 +307,7 @@
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261109g"></script>
+<script src="assets/side.js?v=20261109h"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
@@ -868,7 +864,7 @@
   }
 })();
 </script>
-<script src="assets/search.js?v=20261109g" defer></script>
-<script src="assets/guide.js?v=20261109g" defer></script>
+<script src="assets/search.js?v=20261109h" defer></script>
+<script src="assets/guide.js?v=20261109h" defer></script>
 </body>
 </html>
