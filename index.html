@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109d"></script>
-<script src="assets/views.js?v=20261109d"></script>
+<script src="assets/theme.js?v=20261109f"></script>
+<script src="assets/views.js?v=20261109f"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
-<link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261109d" defer></script>
+<link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
+<script src="assets/status.js?v=20261109f" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -28,7 +31,7 @@
     --line: var(--d-ebedf1-border, #ebedf1);
     --line-2: var(--d-f0f1f4-border, #f0f1f4);
     --bg: var(--d-fafafb-page, #fafafb);
-    --font: Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
+    --font: "Geist", Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
@@ -60,8 +63,8 @@
   /* Customize sits in the top right corner of the page, level with the greeting */
   .brief { position: relative; }
   @media (min-width: 721px) { .br-top .ov-actions { position: absolute; top: 0; right: 0; } .br-txt h2 { padding-right: 330px; } }
-  .btn { font: inherit; font-size: 13.5px; border-radius: 10px; padding: 7px 14px; cursor: pointer; border: 1px solid var(--d-d5e2ec-border, #d5e2ec); background: var(--d-fff-bg, #fff); color: var(--d-0064aa-text, #0064aa); display: inline-flex; align-items: center; gap: 6px; }
-  .btn:hover { border-color: var(--d-aac6dc-border, #aac6dc); }
+  .btn { font: inherit; font-size: 13.5px; border-radius: 10px; padding: 7px 14px; cursor: pointer; border: 1px solid var(--acc-line, #a8dccf); background: var(--d-fff-bg, #fff); color: var(--acc-ink, #00806b); display: inline-flex; align-items: center; gap: 6px; }
+  .btn:hover { border-color: var(--acc, #009b82); background: var(--acc-tint, #e8f7f4); }
   .btn.go { background: #009b82; border-color: #009b82; color: #fff; font-weight: 600; }
   .btn.go:hover { background: #00866f; }
   .btn[hidden] { display: none; }
@@ -135,7 +138,7 @@
   .br-txt p { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
   .kpi-h { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 0; }
   .kpi-h h3 { margin: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); font-weight: 600; }
-  .kpi-h button { border: 0; background: none; font: inherit; font-size: 12.5px; color: var(--d-0064aa-text, #0064aa); cursor: pointer; padding: 4px 8px; border-radius: 8px; }
+  .kpi-h button { border: 0; background: none; font: inherit; font-size: 12.5px; color: var(--acc-ink, #00806b); cursor: pointer; padding: 4px 8px; border-radius: 8px; }
   .kpi-h button:hover { background: var(--d-f0f2f5-bg, #f0f2f5); }
   .kpi-box[hidden] { display: none; }
   .kcfg { display: flex; flex-direction: column; gap: 10px; padding: 12px 14px; background: var(--d-f5f8fb-bg, #f5f8fb); border-radius: 10px; font-size: 13px; color: var(--d-374151-text, #374151); }
@@ -217,8 +220,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261109d">
-<script src="assets/colresize.js?v=20261109d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109f">
+<script src="assets/colresize.js?v=20261109f" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -234,31 +237,7 @@
 <header>
   <div class="wrap">
     <a class="brand" href="./">
-      <svg id="logo" viewBox="0 0 64 64" role="img" aria-label="ESG Radar logo">
-        <defs>
-          <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d3f0eb"/><stop offset=".5" stop-color="#99D7CD"/><stop offset="1" stop-color="#6fbcaf"/></linearGradient>
-          <linearGradient id="lg-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-          <linearGradient id="lg-sweep" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-40 .5 .5)"><stop offset="0" stop-color="#002d55" stop-opacity="0"/><stop offset="1" stop-color="#002d55" stop-opacity=".28"/></linearGradient>
-          <radialGradient id="lg-glow" cx=".25" cy=".8" r=".7"><stop offset="0" stop-color="#ffffff" stop-opacity=".45"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
-          <filter id="lg-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#ffffff" flood-opacity=".6"/></filter>
-        </defs>
-        <rect width="64" height="64" rx="14.5" fill="url(#lg-bg)"/>
-        <rect width="64" height="64" rx="14.5" fill="url(#lg-glow)"/>
-        <path d="M14 50V14a36 36 0 0 1 36 36Z" fill="#fff" fill-opacity=".22"/>
-        <path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="url(#lg-sweep)"/>
-        <g fill="none" stroke-linecap="round" filter="url(#lg-shadow)">
-          <path d="M14 50V13M14 50h37" stroke="#002d55" stroke-opacity=".35" stroke-width="2.2"/>
-          <path d="M14 38a12 12 0 0 1 12 12" stroke="#002d55" stroke-width="3.2" stroke-opacity=".9"/>
-          <path d="M14 26a24 24 0 0 1 24 24" stroke="#002d55" stroke-width="3.2" stroke-opacity=".7"/>
-          <path d="M14 14a36 36 0 0 1 36 36" stroke="#002d55" stroke-width="3.2" stroke-opacity=".5"/>
-          <path d="M14 50L32 18.8" stroke="#002d55" stroke-width="2.6"/>
-          <circle cx="14" cy="50" r="3.6" fill="#002d55" stroke="none"/>
-        </g>
-        <path d="M14.5 0h35A14.5 14.5 0 0 1 64 14.5V24C44 30 22 30 0 25V14.5A14.5 14.5 0 0 1 14.5 0Z" fill="url(#lg-gloss)"/>
-        <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.8" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
-      </svg>
-      <svg class="logo-w" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#fff" stroke-linecap="round"><path d="M14 50V13M14 50h37" stroke-opacity=".45" stroke-width="2.4"/><path d="M14 38a12 12 0 0 1 12 12" stroke-width="3.6"/><path d="M14 26a24 24 0 0 1 24 24" stroke-width="3.6" stroke-opacity=".8"/><path d="M14 14a36 36 0 0 1 36 36" stroke-width="3.6" stroke-opacity=".6"/><path d="M14 50L32 18.8" stroke-width="3"/></g><path d="M14 50L46.6 34.8A36 36 0 0 0 32 18.8Z" fill="#96d2dc" fill-opacity=".35"/><circle cx="14" cy="50" r="4" fill="#fff"/></svg>
-      <h1>ESG Radar</h1>
+      <h1>ESG Radar<span class="brand-dot" aria-hidden="true">.</span></h1>
     </a>
     <nav class="nav" aria-label="Pages"><a href="./" aria-current="page" data-page="overview">Overview</a><a href="news.html" data-page="radar">News</a><a href="regulation.html" data-page="regulation">Regulation</a><a href="peers.html" data-page="peers">Peers</a><a href="market.html" data-page="market">Market</a></nav>
     <span class="meta" id="meta">Loading…</span>
@@ -272,7 +251,7 @@
       <div class="ov-actions">
         <button type="button" class="btn" id="reset" hidden>↺ Reset</button>
         <button type="button" class="btn" id="add" hidden>＋ Add cards</button>
-        <button type="button" class="btn" id="edit">✎ Customize</button>
+        <button type="button" class="btn" id="edit"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4h7M12.5 4h1M2.5 8h2M7.5 8h6M2.5 12h5M10.5 12h3"/><circle cx="11" cy="4" r="1.5"/><circle cx="6" cy="8" r="1.5"/><circle cx="9" cy="12" r="1.5"/></svg>Customize</button>
         <button type="button" class="btn go" id="done" hidden>Done</button>
       </div>
     </div>
@@ -298,7 +277,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261109d"></script>
+<script src="assets/carbon.js?v=20261109f"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -307,7 +286,6 @@
   const svgEl = (tag, attrs) => { const n = document.createElementNS(NS, tag); Object.entries(attrs || {}).forEach(([k, v]) => n.setAttribute(k, v)); return n; };
   const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
   const sess = { get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} } };
-  try { $("favicon").href = "data:image/svg+xml," + encodeURIComponent(new XMLSerializer().serializeToString($("logo"))); } catch (e) {}
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const isoDay = (d) => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   const todayIso = isoDay(today);
@@ -837,7 +815,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261109d" defer></script>
-<script src="assets/guide.js?v=20261109d" defer></script>
+<script src="assets/search.js?v=20261109f" defer></script>
+<script src="assets/guide.js?v=20261109f" defer></script>
 </body>
 </html>

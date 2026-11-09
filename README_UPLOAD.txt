@@ -1,15 +1,18 @@
-ESG Radar – update 14: remove prof_water + Water tab workflow step
-Built on the repo as of 9 Nov 2026 (commit 8387837). Nothing in data/ is touched.
+ESG Radar – update-20-header-geist (builds on update-19, includes everything from it)
 
-1) Upload (GitHub -> Add file -> Upload files), folder config/:
-     market.json      (only change: indicator prof_water removed; Destatis has no water table by industry)
+Upload to the repository ROOT folder:
+  index.html, news.html, regulation.html, peers.html, market.html
 
-2) Edit .github/workflows/collect-feeds.yml on GitHub and insert this step directly after
-   "Collect industry statistics" (before "Collect EU ETS emissions of peers"):
+Upload to the folder assets/:
+  theme.css, views.js, side.js, filters.js
+  (views.js, side.js and filters.js are unchanged from update-19; they are included so
+   this zip also works if update-19 was not uploaded yet)
 
-      - name: Collect river levels & soil moisture
-        run: python scripts/collect_water.py
-        continue-on-error: true
+Nothing in data/ or config/ changes.
 
-3) Actions -> Daily data update -> Run workflow. Afterwards the Water tab shows data and
-   data/debug/water.json lists the DWD station per mill.
+What changed
+- Header: no logo symbol any more, only the wordmark "ESG Radar." with a green dot.
+- Title "ESG Radar" is 23px (was 18px).
+- Font: Geist on all pages (loaded from Google Fonts), Aptos/Segoe UI stay as fallback.
+- Browser tab icon (favicon): simple dark blue icon with three arcs, no gloss.
+- Cache version 20261109f on all pages.

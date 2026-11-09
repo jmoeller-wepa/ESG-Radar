@@ -1,5 +1,5 @@
 /* Shared sidebar for the Peers and Market pages (same look and areas as the Radar page).
-   RadarSide.build(container, { groups: [...], onChange }) renders the groups;
+   RadarSide.build(container, { groups: [...], onChange }) renders the groups (group.multi: several rows can be ticked);
    RadarSide.area() / RadarSide.setArea() keep the selected area in sync across pages. */
 (function () {
   const AREAS = {
@@ -56,13 +56,17 @@
         const wrap = el("div", "side-group"); wrap.setAttribute("role", "group");
         const cap = el("p", "cap", g.title); cap.id = "sg-" + g.id; wrap.setAttribute("aria-labelledby", cap.id);
         wrap.appendChild(cap);
+        // g.multi: selected is a list; "all" is the reset row, the other rows get a checkbox
+        const isOn = (k) => (g.multi ? (k === "all" ? !g.selected.length : g.selected.includes(k)) : k === g.selected);
         g.items.forEach((it) => {
           const b = el("button", "sitem"); b.type = "button";
-          if (it.icon) b.appendChild(icon(it.icon));
+          const on = isOn(it.key);
+          if (g.multi && it.key !== "all") { const c = el("span", "cbx" + (on ? " on" : "")); if (on) c.textContent = "✓"; b.appendChild(c); b.setAttribute("role", "checkbox"); b.setAttribute("aria-checked", String(on)); }
+          else if (it.icon) b.appendChild(icon(it.icon));
           b.appendChild(el("span", "lbl", it.label));
           b.appendChild(el("span", "count", it.count == null ? "" : String(it.count)));
-          b.setAttribute("aria-pressed", String(it.key === g.selected));
-          if (it.key === g.selected) sums.push(it.label);
+          if (!(g.multi && it.key !== "all")) b.setAttribute("aria-pressed", String(on));
+          if (on) sums.push(it.label);
           if (it.disabled) { b.disabled = true; b.title = it.title || "Nothing for this area on this page"; }
           b.addEventListener("click", () => { aside.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); opts.onChange(g.id, it.key); });
           wrap.appendChild(b);

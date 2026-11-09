@@ -28,9 +28,9 @@
 }
 header { background: var(--h-bg) !important; border-bottom: 0 !important; position: sticky; top: 0; z-index: 60; box-shadow: var(--h-shadow); }
 header .wrap { min-height: 60px; padding-top: 0 !important; padding-bottom: 0 !important; row-gap: 0 !important; }
-header .brand svg#logo { display: var(--logo-color); width: 32px; height: 32px; filter: none; }
-header .brand .logo-w { width: 32px; height: 32px; flex: none; display: var(--logo-white); }
-header .brand h1 { color: var(--h-brand) !important; }
+/* Wordmark only (no logo symbol in the header): "ESG Radar" + green dot, Geist 23px */
+header .brand h1 { color: var(--h-brand) !important; font-size: 23px !important; font-weight: 650 !important; letter-spacing: -.025em !important; line-height: 1; white-space: nowrap; }
+header .brand .brand-dot { color: #33b09c; margin-left: .02em; }
 header .nav { align-self: stretch; gap: 2px; }
 header .nav a { display: flex; align-items: center; height: 60px; padding: 0 14px; border-radius: 0; color: var(--h-nav); background: none !important; position: relative; font-size: 14.5px; }
 header .nav a:hover { color: var(--h-nav-hover); }
@@ -462,3 +462,52 @@ header .th-btn svg { width: 17px; height: 17px; }
 .caution p { margin: 0; }
 .caution ul { margin: 4px 0 0; padding-left: 18px; }
 .caution a { color: inherit; text-decoration: underline; }
+
+/* ---- Accent colour: WEPA green for every selection (checkboxes, ticked chips, Select all, focus, pressed buttons).
+   Text links and chart lines keep their blue. ---- */
+:root { --acc: #009b82; --acc-ink: #00806b; --acc-tint: #e8f7f4; --acc-line: #a8dccf; --blue-500: #009b82; }
+:root[data-theme="dark"] { --acc: #33b09c; --acc-ink: #6cc5b3; --acc-tint: #1d3a35; --acc-line: #2f5a52; --blue-500: #33b09c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --acc: #33b09c; --acc-ink: #6cc5b3; --acc-tint: #1d3a35; --acc-line: #2f5a52; --blue-500: #33b09c; } }
+.cbx { width: 15px; height: 15px; border-radius: 4px; border: 1.5px solid var(--d-c4ccd6-border, #c4ccd6); flex: none; display: grid; place-items: center; font-size: 10px; line-height: 1; color: #fff; box-sizing: border-box; }
+.cbx.on, .cbx.part { border: 0; background: var(--acc); }
+.cbx.part::after { content: ""; width: 7px; height: 2px; background: #fff; border-radius: 1px; }
+.ps-m.on { background: var(--acc) !important; color: #fff !important; }
+.ms-bar button, .ind-all, .co-foot button, .ps-qs button { color: var(--acc-ink) !important; }
+.ms-bar button:disabled { color: var(--d-b4bac4-text, #b4bac4) !important; }
+.ps-qs button { border-color: var(--acc-line) !important; }
+.ps-qs button:hover { background: var(--acc-tint) !important; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--acc); }
+.ib[aria-pressed="true"], .saved-btn[aria-pressed="true"] { border-color: var(--acc-line) !important; background: var(--acc-tint) !important; }
+.search:focus-within { box-shadow: 0 0 0 3px var(--acc-tint) !important; }
+
+/* ---- Filter dropdowns with checkboxes (assets/filters.js) – one look on every page ---- */
+.fdd { position: relative; display: inline-flex; align-items: center; gap: 7px; flex: none; }
+.fdd[hidden] { display: none; }
+.fdd .fl { font-size: 13px; color: var(--ink-3, #8a94a3); white-space: nowrap; }
+.fdd-b { display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px 0 11px; border: 1px solid var(--d-e5e7eb-border, #e5e7eb); border-radius: var(--r-ctl, 8px); background: var(--d-fff-bg, #fff); color: var(--ink, #1f2937); font: inherit; font-size: 13.5px; cursor: pointer; white-space: nowrap; }
+.fdd-b:hover { border-color: var(--d-c9d0d9-border, #c9d0d9); }
+.fdd-b.on { background: var(--acc-tint); border-color: var(--acc-line); }
+.fdd-b .n { min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 9px; background: var(--acc); color: #fff; font-size: 11px; font-weight: 700; display: inline-grid; place-items: center; font-variant-numeric: tabular-nums; }
+.fdd-b .chev { width: 7px; height: 7px; border-right: 1.6px solid #8a94a3; border-bottom: 1.6px solid #8a94a3; transform: rotate(45deg) translateY(-2px); flex: none; }
+.fdd-b[aria-expanded="true"] .chev { transform: rotate(225deg) translateY(-1px); }
+.fdd-p { position: absolute; top: calc(100% + 6px); left: 0; z-index: 40; width: 280px; max-width: calc(100vw - 32px); box-sizing: border-box; background: var(--d-fff-bg, #fff); border: 1px solid var(--d-e5e7eb-border, #e5e7eb); border-radius: 12px; box-shadow: 0 12px 32px rgba(0, 30, 60, .16), 0 2px 6px rgba(0, 30, 60, .08); padding: 6px; }
+.fdd-p.narrow { width: 210px; }
+.fdd-p.right { left: auto; right: 0; }
+.fdd-p .ms-bar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 0 4px; padding: 4px 8px 7px; border-bottom: 1px solid var(--d-f0f1f4-border, #f0f1f4); font-size: 11.5px; color: var(--d-9aa2ae-text, #9aa2ae); }
+.fdd-p .ms-acts { display: flex; gap: 10px; }
+.fdd-p .ms-bar button { border: 0; background: none; padding: 0; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.fdd-p .ms-bar button:hover:not(:disabled) { text-decoration: underline; }
+.fdd-p .ms-bar button:disabled { cursor: default; }
+.fdd-q { width: 100%; box-sizing: border-box; font: inherit; font-size: 13px; padding: 6px 9px; margin: 2px 0 6px; border: 1px solid var(--d-e1e5eb-border, #e1e5eb); border-radius: 8px; background: var(--d-fff-bg, #fff); color: var(--ink, #1f2937); }
+.fdd-list { max-height: min(340px, 60vh); overflow-y: auto; scrollbar-width: thin; }
+.fdd-r { width: 100%; display: flex; align-items: center; gap: 9px; border: 0; background: none; padding: 6px 8px; border-radius: 7px; font: inherit; font-size: 13px; color: var(--d-374151-text, #374151); cursor: pointer; text-align: left; }
+.fdd-r:hover { background: var(--d-f5f7f9-bg, #f5f7f9); }
+.fdd-r[hidden] { display: none; }
+.fdd-r .lbl { flex: 1; min-width: 0; }
+.fdd-r .c { font-size: 11.5px; color: var(--d-9aa2ae-text, #9aa2ae); font-variant-numeric: tabular-nums; }
+.fdd-r.grp { font-weight: 600; color: var(--d-111827-text, #111827); margin-top: 2px; }
+.fdd-r.sub { padding-left: 30px; }
+.fdd-r .tick { width: 15px; flex: none; text-align: center; font-weight: 700; color: var(--acc-ink); }
+.fdd-r.sel { font-weight: 600; color: var(--d-002d55-text, #002d55); }
+/* side-panel lists with several choices (e.g. Regulation › Show) */
+.sitem .cbx { margin: 0 1px; }

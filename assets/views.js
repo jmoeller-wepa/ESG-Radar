@@ -3,7 +3,12 @@
 (function () {
   const KEY = "radar.newsViews.v1";
   // every filter a view can hold; these values mean "no filter"
-  const BASE = { view: "all", areas: [], tool: "all", type: "all", topic: "all", impact: "all", rel: "all", sort: "date", q: "", layout: "cards" };
+  // tool, type, impact, rel and co can hold several values, comma-separated ("regulation,peer:deals"); "all" = no filter
+  const BASE = { view: "all", areas: [], tool: "all", type: "all", topic: "all", impact: "all", rel: "all", co: "all", sort: "date", q: "", layout: "cards" };
+  const list = (v) => (v && v !== "all" ? String(v).split(",").filter(Boolean) : []);
+  const join = (a) => (a && a.length ? a.join(",") : "all");
+  // "What it is" values: a type, "monthly", "peer" (all peer news) or "peer:<topic>"
+  const peerOn = (f) => list(f.type).some((t) => t === "peer" || t.startsWith("peer:"));
   // offered on first use; everything can be renamed, changed or deleted afterwards
   const STARTERS = [
     { id: "reporting", name: "Reporting", f: { areas: ["reporting"] } },
@@ -60,10 +65,17 @@
     return out;
   }
 
-  const norm = (f) => {
+  // old: true for views saved before filters took several values (rel "medium" meant "high & medium")
+  const norm = (f, old) => {
     const x = { ...BASE };
     Object.keys(BASE).forEach((k) => { if (f && f[k] != null && k !== "areas") x[k] = String(f[k]); });
     x.areas = f && Array.isArray(f.areas) ? f.areas.map(String) : [];
+    // one peer topic used to sit in its own field
+    if (x.topic !== "all") { if (x.type === "peer" || x.type === "all") x.type = "peer:" + x.topic; x.topic = "all"; }
+    // "All AI news" became the AI assistants group
+    if (list(x.tool).includes("ai")) x.tool = join([...new Set(list(x.tool).flatMap((t) => (t === "ai" ? TOOLS.ai.of : [t])))]);
+    if (old && x.rel === "medium") x.rel = "high,medium";
+    if (!peerOn(x)) x.co = "all";
     return x;
   };
   // which filters differ between two views (empty list = the same)
@@ -78,13 +90,17 @@
       if (f.view === "monthly" && !e.monthlySummary) return false;
     }
     if (f.areas.length && !areasOf(e).some((a) => f.areas.includes(a))) return false;
-    if (f.areas.length === 1 && f.areas[0] === "data" && f.tool !== "all" && !toolsOf(e).includes(f.tool)) return false;
-    if (f.impact !== "all" && !(e.impacts || ["watch"]).includes(f.impact)) return false;
+    const tools = list(f.tool), impacts = list(f.impact), types = list(f.type), rels = list(f.rel), cos = list(f.co);
+    if (f.areas.length === 1 && f.areas[0] === "data" && tools.length && !toolsOf(e).some((t) => tools.includes(t))) return false;
+    if (impacts.length && !(e.impacts || ["watch"]).some((i) => impacts.includes(i))) return false;
     if (f.topic !== "all" && !topicsOf(e).includes(f.topic)) return false;
-    if (f.type === "monthly") { if (!e.monthlySummary) return false; }
-    else if (f.type !== "all" && e.type !== f.type) return false;
-    if (f.rel === "high" && relOf(e) !== "high") return false;
-    if (f.rel === "medium" && relOf(e) === "low") return false;
+    if (types.length && !types.some((t) => t === "monthly" ? !!e.monthlySummary
+      : t === "peer" ? e.type === "peer"
+      : t.startsWith("peer:") ? e.type === "peer" && topicsOf(e).includes(t.slice(5))
+      : e.type === t)) return false;
+    if (rels.length && !rels.includes(relOf(e))) return false;
+    // companies narrow peer news only; other kinds of news pass
+    if (cos.length && peerOn(f) && e.type === "peer" && !(e.companies || []).some((c) => cos.includes(c))) return false;
     if (f.q && !opt.skipQ && ![e.title, e.summary, e.whyItMatters, e.source, (e.tags || []).join(" ")].join(" ").toLowerCase().includes(f.q)) return false;
     return true;
   }
@@ -93,13 +109,14 @@
     try {
       const x = JSON.parse(localStorage.getItem(KEY));
       if (x && Array.isArray(x.list)) {
-        const list = x.list.filter((v) => v && v.id && v.name).map((v) => ({ id: String(v.id), name: String(v.name).slice(0, 40), f: norm(v.f) }));
-        return { list, active: String(x.active || "all"), start: x.start ? String(x.start) : null };
+        const old = x.fv !== 2;
+        const views = x.list.filter((v) => v && v.id && v.name).map((v) => ({ id: String(v.id), name: String(v.name).slice(0, 40), f: norm(v.f, old) }));
+        return { list: views, active: String(x.active || "all"), start: x.start ? String(x.start) : null };
       }
     } catch (e) {}
     return { list: STARTERS.map((v) => ({ id: v.id, name: v.name, f: norm(v.f) })), active: "all", start: null };
   }
-  function save(s) { try { localStorage.setItem(KEY, JSON.stringify({ list: s.list, active: s.active, start: s.start || null })); } catch (e) {} }
+  function save(s) { try { localStorage.setItem(KEY, JSON.stringify({ fv: 2, list: s.list, active: s.active, start: s.start || null })); } catch (e) {} }
 
-  window.RadarViews = { KEY, BASE, STARTERS, TOPICS, PEER_TOPICS, TOOLS, topicsOf, toolsOf, areasOf, relOf, peerEntries, norm, diff, match, load, save };
+  window.RadarViews = { KEY, BASE, list, join, peerOn, STARTERS, TOPICS, PEER_TOPICS, TOOLS, topicsOf, toolsOf, areasOf, relOf, peerEntries, norm, diff, match, load, save };
 })();
