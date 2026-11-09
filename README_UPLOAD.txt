@@ -1,13 +1,26 @@
-ESG Radar – update-26-news-filter-bar (builds on update-25, contains everything from update-19 to 25)
+ESG Radar – update-27-regulation-layout (builds on update-26, contains everything from update-19 to 26)
 
 Upload to the repository ROOT folder:
   index.html, news.html, regulation.html, peers.html, market.html
 
 Upload to the folder assets/:
   theme.css, look.js, guide.js, views.js, side.js, filters.js
-  (guide.js changed in update-26; views.js, side.js and filters.js are unchanged from update-19; included so this zip works on its own)
+  (guide.js changed in update-26 and 27; views.js, side.js and filters.js are unchanged from update-19; included so this zip works on its own)
 
 Nothing in data/ or config/ changes.
+
+What changed in update-27 (Regulation page)
+- No side panel any more. One filter bar on top (as on News): "Find a rule …" search, Area dropdown,
+  and a switch All / Changed recently / Open consultation (with counts).
+- "Open for feedback" stays above "Where things stand", but as a short list: one line per consultation
+  with closing date, title, area, stage (step x of 4) and "Give feedback". The ones with little link to tissue
+  are still folded away at the end of the list.
+- Tracker rows are unchanged.
+- Roadmap: grouped by area, the line under each topic shows its next date, key dates are small diamonds
+  above the bar (grey once passed) instead of red lines through the text, the Today line is dashed and
+  labelled, short bars show their text on hover only.
+- "?" guide text for consultations updated.
+- Cache version 20261109m on all pages.
 
 What changed in update-26 (News page)
 - No side panel on News any more; the news use the full width.

@@ -35,7 +35,7 @@
       items: [
         ["Tracker", "One row per rule with its current status and the next milestone. Click a row for phases, dates and links to the official texts."],
         ["Roadmap", "The same rules on a time axis, so overlapping deadlines are easy to spot."],
-        ["Consultations", "Open EU “Have your say” consultations with their closing date, the step the file has reached (early idea, public consultation, draft text, proposal adopted) and the area it touches. Consultations with little link to tissue (e.g. road transport, fisheries) are folded away below the cards."],
+        ["Consultations", "Open EU “Have your say” consultations with their closing date, the step the file has reached (early idea, public consultation, draft text, proposal adopted) and the area it touches. Consultations with little link to tissue (e.g. road transport, fisheries) are folded away at the end of the list. Filter by area, “Changed recently” or “Open consultation” in the bar at the top; the search box finds a rule or consultation by name."],
         ["What changed", "“Changed” shows only rules whose status or dates moved recently."],
       ],
       caveat: "This is a monitoring aid, not legal advice. Dates follow the official sources and can still shift.",

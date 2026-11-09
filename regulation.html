@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109l"></script>
-<script src="assets/look.js?v=20261109l"></script>
+<script src="assets/theme.js?v=20261109m"></script>
+<script src="assets/look.js?v=20261109m"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Regulation – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
-<link rel="stylesheet" href="assets/side.css?v=20261109l">
-<script src="assets/status.js?v=20261109l" defer></script>
+<link rel="stylesheet" href="assets/side.css?v=20261109m">
+<script src="assets/status.js?v=20261109m" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -151,9 +151,45 @@
   footer p { margin: 0 0 4px; }
   button:focus-visible, a:focus-visible, tr:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } }
+
+  /* ---- update-27: filter bar, short consultation list, calmer roadmap ---- */
+  .fbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 8px 10px; background: var(--d-fff-bg, #fff); border: 1px solid var(--d-eceff3-border, #eceff3); border-radius: 14px; box-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 4px 14px rgba(16, 24, 40, .05); }
+  .fbar .search { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 10px; border: 1px solid var(--d-e5e7eb-border, #e5e7eb); border-radius: 8px; background: var(--d-fff-bg, #fff); flex: 0 1 240px; min-width: 160px; color: var(--ink-3); }
+  .fbar .search input { border: 0; outline: none; font: inherit; font-size: 14px; width: 100%; background: transparent; color: var(--ink); }
+  .fbar .search:focus-within { border-color: #33b09c; box-shadow: 0 0 0 3px rgba(51, 176, 156, .15); }
+  .fbar .seg button small { font-size: 11.5px; color: var(--ink-3); margin-left: 4px; font-weight: 400; }
+  :root[data-theme="dark"] .fbar { box-shadow: none; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fbar { box-shadow: none; } }
+  .cpanel { padding: 14px 18px 8px; display: flex; flex-direction: column; gap: 4px; }
+  .clist { display: flex; flex-direction: column; }
+  .cl { display: grid; grid-template-columns: 118px minmax(0, 1fr) 190px auto; gap: 6px 16px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line-2); font-size: 13.5px; }
+  .cl:first-child { border-top: 0; }
+  .cl .left { white-space: nowrap; }
+  .cl .ct { min-width: 0; }
+  .cl .ct b { display: block; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .cl .ct small { font-size: 12px; color: var(--ink-3); }
+  .cl .cs { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--ink-3); }
+  .cl .cs .stg-b { display: flex; gap: 3px; max-width: 120px; }
+  .cl .cs .stg-b i { height: 4px; flex: 1; border-radius: 2px; background: var(--line); }
+  .cl .cs .stg-b i.on { background: var(--blue-700); }
+  .cl a { font-size: 13px; color: var(--blue-700); white-space: nowrap; font-weight: 600; text-decoration: none; }
+  .cl a:hover { text-decoration: underline; }
+  .cl.low { opacity: .7; } .cl.low:hover { opacity: 1; }
+  .cpanel .low-tg { border: 0; padding: 8px 0 6px; border-top: 1px solid var(--line-2); border-radius: 0; font-weight: 500; }
+  .cpanel .empty, .cpanel .box { margin: 6px 0 8px; }
+  @media (max-width: 860px) { .cl { grid-template-columns: minmax(0, 1fr) auto; } .cl .left { grid-column: 1; } .cl .ct { grid-column: 1 / -1; grid-row: 2; } .cl .cs { grid-column: 1; } .cl .ct b { white-space: normal; } }
+  /* roadmap: area under each topic, grouped by area, key dates as diamonds above the bar, labelled Today line */
+  .rm-grp { grid-column: 1 / -1; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); padding: 14px 0 4px; }
+  .rm-lane { min-height: 52px; }
+  .rm-bar { top: 22px; }
+  .rm-dia { position: absolute; top: 7px; width: 10px; height: 10px; margin-left: -5px; transform: rotate(45deg); background: var(--d-fff-bg, #fff); border: 2px solid var(--red); border-radius: 2px; box-sizing: border-box; cursor: help; }
+  .rm-dia.past { border-color: var(--d-b6bdc8-border, #b6bdc8); }
+  .rm-today { width: 0; background: none; border-left: 1.5px dashed var(--red); opacity: .8; }
+  .rm-years .rm-tl { position: absolute; top: 2px; transform: translateX(-50%); font-size: 11px; font-weight: 600; color: var(--red-text); background: var(--d-fff-bg, #fff); padding: 0 4px; border: 0; height: auto; }
+  .rm-legend .dia { display: inline-block; width: 9px; height: 9px; transform: rotate(45deg); border: 2px solid var(--red); border-radius: 2px; margin-right: 8px; box-sizing: border-box; }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261109l">
-<script src="assets/colresize.js?v=20261109l" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109m">
+<script src="assets/colresize.js?v=20261109m" defer></script>
 </head>
 <body>
 <header>
@@ -165,13 +201,18 @@
     <span class="meta" id="meta">Loading…</span>
   </div>
 </header>
-<main class="wrap layout">
-  <aside class="side" id="side" aria-label="Topics and area"></aside>
+<main class="wrap layout no-side">
   <div class="content">
-    <div class="intro">
-      <h2 id="title">Regulation</h2>
+    <!-- one filter bar (as on News): search, Area, Show -->
+    <div class="fbar" role="group" aria-label="Filters">
+      <label class="search tsearch">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+        <input id="rq" type="search" placeholder="Find a rule …" aria-label="Find a rule or consultation">
+      </label>
+      <span id="areadd" class="fdd-row"></span>
+      <div class="seg" role="group" aria-label="Show" id="showseg"></div>
     </div>
-    <section aria-labelledby="cons-title" style="display:flex;flex-direction:column;gap:10px">
+    <section class="panel cpanel" aria-labelledby="cons-title">
       <div class="sec-h"><h3 class="cap" id="cons-title">Open for feedback</h3><a href="https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives_en" target="_blank" rel="noopener">All on Have your say ↗</a></div>
       <div id="cons"></div>
     </section>
@@ -195,12 +236,13 @@
   <p>Updated weekly. Summaries are aids, not legal advice – always check the linked source.</p>
 </div></footer>
 
-<script src="assets/side.js?v=20261109l"></script>
+<script src="assets/side.js?v=20261109m"></script>
+<script src="assets/filters.js?v=20261109m"></script>
 <script>
 (function () {
   const STAGES = ["Proposal", "Negotiation", "Adopted", "Applies"];
-  const state = { area: RadarSide.area(), show: [], view: "tracker" }; // show: [] = all topics, else "changed" and/or "consult"
-  let R = { rows: [] }, REG = { consultations: [], procedures: {} }, NEWS = [], side = null;
+  const state = { area: RadarSide.area(), show: [], view: "tracker", q: "" }; // show: [] = all topics, else "changed" and/or "consult"
+  let R = { rows: [] }, REG = { consultations: [], procedures: {} }, NEWS = [], areaDD = null;
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const parse = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d || 1); };
@@ -242,9 +284,10 @@
     return ph ? { label: ph.label || ph.status, date: ph.from, official: false } : null;
   }
   const inArea = (r) => state.area === "all" || r.area === state.area;
-  const rowsShown = () => R.rows.filter(inArea).filter((r) => !state.show.length || (state.show.includes("changed") && changedRecently(r)) || (state.show.includes("consult") && consFor(r).length > 0));
+  const qHit = (...t) => !state.q || t.join(" ").toLowerCase().includes(state.q);
+  const rowsShown = () => R.rows.filter(inArea).filter((r) => qHit(r.label, AREAS[r.area] ? AREAS[r.area].label : "", r.why || "")).filter((r) => !state.show.length || (state.show.includes("changed") && changedRecently(r)) || (state.show.includes("consult") && consFor(r).length > 0));
   let showLow = false; // consultations with little link to our topics are folded away
-  const consShown = () => REG.consultations.filter((c) => (c.end || "") >= todayIso && (state.area === "all" || (c.areas || []).includes(state.area)));
+  const consShown = () => REG.consultations.filter((c) => (c.end || "") >= todayIso && (state.area === "all" || (c.areas || []).includes(state.area)) && qHit(c.title, c.summary || ""));
 
   // ---------- links ----------
   function readHash() {
@@ -270,16 +313,19 @@
     const avail = Object.keys(counts).filter((k) => k !== "all");
     REG.consultations.forEach((c) => (c.areas || []).forEach((a) => { if (!avail.includes(a)) avail.push(a); }));
     const inA = R.rows.filter(inArea);
-    side.refresh([
-      { id: "show", title: "Show", multi: true, selected: state.show, items: [
-        { key: "all", label: "All topics", count: inA.length },
-        { key: "changed", label: "Changed in last 30 days", count: inA.filter(changedRecently).length },
-        { key: "consult", label: "With open consultation", count: inA.filter((r) => consFor(r).length).length } ] },
-      { id: "area", title: "Area", selected: state.area, items: RadarSide.areaItems(avail, counts) },
-    ]);
-    $("title").textContent = "Regulation" + (state.area !== "all" && AREAS[state.area] ? " · " + AREAS[state.area].label : "");
+    // filter bar: Area dropdown + Show switch
+    if (areaDD) areaDD.update(state.area);
+    const shows = [["all", "All", inA.length], ["changed", "Changed recently", inA.filter(changedRecently).length], ["consult", "Open consultation", inA.filter((r) => consFor(r).length).length]];
+    const seg = $("showseg"); seg.replaceChildren();
+    shows.forEach(([k, label, n]) => {
+      const b = el("button", null, label); b.type = "button"; b.appendChild(el("small", null, String(n)));
+      b.setAttribute("aria-pressed", String(k === "all" ? !state.show.length : state.show.length === 1 && state.show[0] === k));
+      b.title = k === "changed" ? "Topics with a new official step in the last 30 days" : k === "consult" ? "Topics with an open EU consultation" : "All topics";
+      b.addEventListener("click", () => { state.show = k === "all" ? [] : [k]; render(); });
+      seg.appendChild(b);
+    });
     renderCons(); renderTracker(); writeHash();
-    document.querySelectorAll("[data-v]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.view)));
+    document.querySelectorAll(".trk [data-v]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.view)));
   }
 
   function renderCons() {
@@ -295,36 +341,31 @@
       if ($("cons").firstChild.classList) $("cons").firstChild.classList.add("box");
       return;
     }
-    const grid = el("div", "cons");
-    const cardOf = (c, isLow) => {
-      const card = el("article", "cc" + (isLow ? " low" : ""));
+    const box = el("div", "clist");
+    const rowOf = (c, isLow) => {
+      const row = el("article", "cl" + (isLow ? " low" : ""));
+      row.appendChild(el("span", "left" + (days(c.end) <= 14 && !isLow ? " soon" : ""), left(c.end)));
+      const ct = el("div", "ct"); const t = el("b", null, c.title); t.title = c.summary || c.title; ct.appendChild(t);
+      ct.appendChild(el("small", null, isLow ? "Little link to tissue" : (c.areas || []).filter((a) => AREAS[a]).map((a) => AREAS[a].label).join(" · ")));
+      row.appendChild(ct);
       const st = Rc ? Rc.stage(c.type) : { step: 0, label: c.type };
-      const sg = el("div", "stg");
-      const lab = el("p", "m", st.step ? st.label + " · step " + st.step + " of 4" : st.label); if (st.help) lab.title = st.help;
-      sg.appendChild(lab);
-      if (st.step) { const b = el("div", "stg-b"); b.setAttribute("aria-hidden", "true"); for (let k = 1; k <= 4; k++) b.appendChild(el("i", k <= st.step ? "on" : "")); sg.appendChild(b); }
-      card.appendChild(sg);
-      const t = el("p", "t", c.title); t.title = c.summary || c.title; card.appendChild(t);
-      const ch = el("div", "chips");
-      if (isLow) ch.appendChild(el("span", "lowc", "Little link to tissue"));
-      else (c.areas || []).forEach((a) => { if (AREAS[a]) ch.appendChild(el("span", "ach", AREAS[a].label)); });
-      if (ch.children.length) card.appendChild(ch);
-      const f = el("div", "f");
-      f.appendChild(el("span", "left" + (days(c.end) <= 14 && !isLow ? " soon" : ""), left(c.end)));
-      const a = el("a", null, "Give feedback ↗"); a.href = c.url; a.target = "_blank"; a.rel = "noopener";
-      f.appendChild(a); card.appendChild(f);
-      return card;
+      const cs = el("div", "cs"); const lab = el("span", null, st.step ? st.label + " · step " + st.step + " of 4" : st.label); if (st.help) lab.title = st.help; cs.appendChild(lab);
+      if (st.step) { const b = el("div", "stg-b"); b.setAttribute("aria-hidden", "true"); for (let k = 1; k <= 4; k++) b.appendChild(el("i", k <= st.step ? "on" : "")); cs.appendChild(b); }
+      row.appendChild(cs);
+      const a = el("a", null, "Give feedback ↗"); a.href = c.url; a.target = "_blank"; a.rel = "noopener"; row.appendChild(a);
+      return row;
     };
-    list.forEach((c) => grid.appendChild(cardOf(c, false)));
-    if (!list.length) grid.appendChild((window.RadarEmpty ? RadarEmpty("No open consultation on our topics right now – only ones with little link to tissue.", null, "done") : el("div", "empty", "No open consultation on our topics.")));
+    list.forEach((c) => box.appendChild(rowOf(c, false)));
+    if (!list.length) box.appendChild(el("p", "muted", "No open consultation on our topics right now – only ones with little link to tissue."));
+    const frag = el("div"); frag.appendChild(box);
     if (low.length) {
       const tg = el("button", "low-tg", showLow ? "Hide the " + low.length + " consultations with little link to tissue" : "Show " + low.length + " more with little link to tissue (e.g. road transport, fisheries)");
       tg.type = "button"; tg.setAttribute("aria-expanded", String(showLow));
       tg.addEventListener("click", () => { showLow = !showLow; renderCons(); });
-      grid.appendChild(tg);
-      if (showLow) low.forEach((c) => grid.appendChild(cardOf(c, true)));
+      if (showLow) low.forEach((c) => box.appendChild(rowOf(c, true)));
+      frag.appendChild(tg);
     }
-    $("cons").replaceChildren(grid);
+    $("cons").replaceChildren(frag);
   }
 
   function stepper(stage) {
@@ -382,27 +423,33 @@
     grid.appendChild(el("div"));
     const yrs = el("div", "rm-years");
     for (let y = from.getFullYear(); y <= to.getFullYear(); y++) { const s = el("span", null, String(y)); s.style.left = pct(y + "-01-01") + "%"; yrs.appendChild(s); }
-    grid.appendChild(yrs);
     const todayPct = ((today - from) / span) * 100;
-    rows.forEach((r) => {
+    if (todayPct >= 0 && todayPct <= 100) { const tl = el("span", "rm-tl", "Today"); tl.style.left = todayPct + "%"; yrs.appendChild(tl); }
+    grid.appendChild(yrs);
+    // grouped by area (in the usual area order) when all areas are shown
+    const order = Object.keys(AREAS);
+    const sorted = rows.slice().sort((a, b) => order.indexOf(a.area) - order.indexOf(b.area));
+    let lastArea = null;
+    sorted.forEach((r) => {
+      if (state.area === "all" && r.area !== lastArea) { lastArea = r.area; grid.appendChild(el("div", "rm-grp", AREAS[r.area] ? AREAS[r.area].label : "Other")); }
       const lab = el("button", "rm-lab", r.label); lab.type = "button";
-      const ls = latestStep(r);
-      lab.appendChild(el("small", null, ls && ls.official ? ls.label + " · " + fmt(ls.date) : AREAS[r.area] ? AREAS[r.area].label : ""));
+      const nd = nextDate(r);
+      lab.appendChild(el("small", null, (state.area === "all" ? "" : (AREAS[r.area] ? AREAS[r.area].label + " · " : "")) + (nd ? "next " + fmt(nd.date) : "no date ahead")));
       lab.addEventListener("click", () => openTopic(r));
       const lane = el("div", "rm-lane");
       if (todayPct >= 0 && todayPct <= 100) { const t = el("div", "rm-today"); t.style.left = todayPct + "%"; lane.appendChild(t); }
       (r.phases || []).forEach((ph) => {
-        const b = el("div", "rm-bar " + ph.status, ph.label || "");
         const l = pct(ph.from), w = Math.max(0.8, pct(ph.to) - l);
+        const b = el("div", "rm-bar " + ph.status, w >= 9 ? ph.label || "" : ""); // short bars: text only on hover
         b.style.left = l + "%"; b.style.width = w + "%"; b.title = (ph.label || ph.status) + " · " + fmt(ph.from) + " – " + fmt(ph.to);
         lane.appendChild(b);
       });
-      (r.milestones || []).forEach((m) => { const p = pct(m.date); if (p <= 0 || p >= 100) return; const ms = el("div", "rm-ms"); ms.style.left = p + "%"; ms.title = m.label + " · " + fmt(m.date); lane.appendChild(ms); });
+      (r.milestones || []).forEach((m) => { const p = pct(m.date); if (p <= 0 || p >= 100) return; const ms = el("div", "rm-dia" + (m.date < todayIso ? " past" : "")); ms.style.left = p + "%"; ms.title = m.label + " · " + fmt(m.date); lane.appendChild(ms); });
       grid.append(lab, lane);
     });
     const lg = el("div", "rm-legend");
     [["#eef0f3", "Proposal / negotiation"], ["#dbe4ee", "Adopted, not yet applying"], ["#002d55", "Applies"]].forEach(([c, t]) => { const s = el("span"); const i = el("i"); i.style.background = c; s.append(i, document.createTextNode(t)); lg.appendChild(s); });
-    const ms = el("span"); const mi = el("i"); mi.style.cssText = "background:var(--red);width:3px;height:12px"; ms.append(mi, document.createTextNode("Key date (hover for details)")); lg.appendChild(ms);
+    const ms = el("span"); ms.append(el("i", "dia"), document.createTextNode("Key date (hover for details)")); lg.appendChild(ms);
     lg.appendChild(el("span", null, "Click a topic for details."));
     const frag = el("div"); frag.append(wrap, lg); return frag;
   }
@@ -453,13 +500,13 @@
     const have = new Set(rm.rows.map((r) => r.id));
     (add.rows || []).forEach((r) => { if (r && r.id && !have.has(r.id)) rm.rows.push(r); });
     R = rm; REG = { consultations: [], procedures: {}, ...reg }; NEWS = (radar.entries || []).filter((e) => e && e.title && e.url);
-    side = RadarSide.build($("side"), { toggleLabel: "Topics & area", onChange: (g, k) => {
-      if (g === "show") state.show = k === "all" ? [] : state.show.includes(k) ? state.show.filter((x) => x !== k) : [...state.show, k].sort();
-      else state[g] = k;
-      render(); } });
     const topic = readHash();
+    const avail = Object.keys(AREAS).filter((a) => R.rows.some((r) => r.area === a) || REG.consultations.some((c) => (c.areas || []).includes(a)));
+    areaDD = RadarDD.single({ label: "Area", value: state.area, items: [{ key: "all", label: "All areas" }].concat(avail.map((a) => ({ key: a, label: AREAS[a].label }))), onChange: (k) => { state.area = k; render(); } });
+    $("areadd").appendChild(areaDD.el);
+    $("rq").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); renderCons(); renderTracker(); });
     if (state.area !== "all" && !R.rows.some((r) => r.area === state.area) && !REG.consultations.some((c) => (c.areas || []).includes(state.area))) state.area = "all";
-    document.querySelectorAll("[data-v]").forEach((b) => b.addEventListener("click", () => { state.view = b.dataset.v; render(); }));
+    document.querySelectorAll(".trk [data-v]").forEach((b) => b.addEventListener("click", () => { state.view = b.dataset.v; render(); }));
     $("dlg-x").addEventListener("click", () => $("dlg").close());
     $("dlg").addEventListener("click", (e) => { if (e.target === $("dlg")) $("dlg").close(); });
     render();
@@ -469,7 +516,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261109l" defer></script>
-<script src="assets/guide.js?v=20261109l" defer></script>
+<script src="assets/search.js?v=20261109m" defer></script>
+<script src="assets/guide.js?v=20261109m" defer></script>
 </body>
 </html>
