@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109a"></script>
+<script src="assets/theme.js?v=20261109b"></script>
+<script src="assets/views.js?v=20261109b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261109a" defer></script>
+<script src="assets/status.js?v=20261109b" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -216,8 +217,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261109a">
-<script src="assets/colresize.js?v=20261109a" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109b">
+<script src="assets/colresize.js?v=20261109b" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -297,7 +298,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261109a"></script>
+<script src="assets/carbon.js?v=20261109b"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -497,6 +498,36 @@
         Object.values(s).sort((a, c) => (a.order || 50) - (c.order || 50)).forEach((x) => { const r = el("div", "st-row"); const i = el("i", x.status === "ok" ? "" : x.status); r.append(i, el("b", null, x.label), el("span", null, x.detail)); r.querySelector("b").style.fontWeight = "500"; b.appendChild(r); });
       } },
   };
+
+  // ---------- your News views as cards (views are saved on the News page, see assets/views.js) ----------
+  if (window.RadarViews) {
+    const VS = RadarViews.load();
+    const vctx = { isNew: (e) => (e.added || e.date || "") > base, isSaved: (e) => saved.has(e.id) };
+    let vpool = null;
+    const viewPool = () => vpool || (vpool = (() => {
+      const es = ((D.radar && D.radar.entries) || []).filter((e) => e && e.title && e.url);
+      const urls = new Set(es.map((e) => e.url));
+      return es.concat(RadarViews.peerEntries(D.pnews, D.peers).filter((e) => !urls.has(e.url)));
+    })());
+    VS.list.forEach((v) => {
+      const href = "news.html#v=" + encodeURIComponent(v.id);
+      W["view:" + v.id] = { title: v.name, desc: "Your News view: latest entries and what is new", more: ["Open view →", href],
+        render(b, w) {
+          if (!D.radar) return;
+          const list = viewPool().filter((e) => RadarViews.match(e, v.f, vctx))
+            .sort((a, c) => (vctx.isNew(c) - vctx.isNew(a)) || (c.date || "").localeCompare(a.date || ""));
+          const nn = list.filter(vctx.isNew).length;
+          w.querySelector("h3").textContent = v.name + (nn ? " · " + nn + " new" : "");
+          if (!list.length) { b.appendChild(emptyState("No news in this view yet. The next data update runs " + nextRun() + ".", { label: "Open the view", href }, "wait")); return; }
+          list.slice(0, 5).forEach((e) => {
+            const r = li(e.url); const t = tx(e.title, [(e.source || "").replace(/ \(via.*\)/, ""), e.date ? fmtShort(e.date) : ""].filter(Boolean).join(" · "));
+            if (vctx.isNew(e)) t.prepend(el("span", "tag", "NEW"));
+            r.append(t); b.appendChild(r);
+          });
+          if (list.length > 5) b.appendChild(el("p", "mut", list.length + " entries in this view" + (nn ? ", " + nn + " new since your last visit" : "")));
+        } };
+    });
+  }
 
   // ---------- Monthly round-up ----------
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -806,7 +837,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261109a" defer></script>
-<script src="assets/guide.js?v=20261109a" defer></script>
+<script src="assets/search.js?v=20261109b" defer></script>
+<script src="assets/guide.js?v=20261109b" defer></script>
 </body>
 </html>

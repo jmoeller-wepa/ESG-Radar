@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261107b"></script>
+<script src="assets/theme.js?v=20261109b"></script>
+<script src="assets/views.js?v=20261109b"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>News – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
@@ -175,6 +176,62 @@
   /* Layout: sidebar (views + areas) | content */
   main.layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 28px; align-items: start; }
   .content { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+  /* ---- saved views: tabs above the news ---- */
+  :root { --vw-warn-bg: #fdf1e3; --vw-warn: #b45309; }
+  :root[data-theme="dark"] { --vw-warn-bg: #3a2a18; --vw-warn: #f5b26b; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --vw-warn-bg: #3a2a18; --vw-warn: #f5b26b; } }
+  .vbar { position: relative; display: flex; flex-direction: column; gap: 10px; margin-bottom: -8px; }
+  .vtabs { align-items: center; }
+  .vtabs .vtab { display: inline-flex; align-items: center; gap: 2px; white-space: nowrap; }
+  .vtabs .vtab small { margin-left: 6px; }
+  .vtabs .vt-dot { width: 7px; height: 7px; border-radius: 50%; background: #d97706; margin-left: 7px; flex: none; }
+  .ptabs.vtabs .vt-more { padding: 0; width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; color: var(--d-6b7280-text, #6b7280); margin-left: -6px; }
+  .ptabs.vtabs .vt-more:hover { background: var(--d-f3f5f8-bg, #f3f5f8); color: var(--wepa-dark); }
+  .ptabs.vtabs .vt-add { padding: 0; width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; background: var(--wepa-green, #009b82); color: #fff; margin: 0 0 0 8px; }
+  .ptabs.vtabs .vt-add:hover { background: #007f6b; color: #fff; }
+  .vrecipe { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 12.5px; }
+  .vr-lbl { color: var(--d-6b7280-text, #6b7280); }
+  .vr-chips { display: contents; }
+  .vr-chip { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 3px 0 10px; border: 1px solid var(--d-e3e7ec-border, #e3e7ec); border-radius: 999px; background: var(--d-fff-bg, #fff); color: var(--ink); white-space: nowrap; }
+  .vr-chip i { font-style: normal; color: var(--d-6b7280-text, #6b7280); }
+  .vr-chip button { border: 0; background: none; width: 20px; height: 20px; border-radius: 50%; cursor: pointer; color: var(--d-6b7280-text, #6b7280); font-size: 14px; line-height: 1; padding: 0; }
+  .vr-chip button:hover { background: var(--d-e8edf3-bg, #e8edf3); color: var(--ink); }
+  .vr-chip.none { padding-right: 10px; color: var(--d-6b7280-text, #6b7280); }
+  .vr-chip.chg { border-color: #d97706; background: var(--vw-warn-bg); }
+  .vr-save { border: 0; background: none; color: var(--wepa-green, #009b82); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; padding: 3px 4px; }
+  .vr-save:hover { text-decoration: underline; }
+  .vdirty { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 7px 8px 7px 12px; border-radius: 10px; background: var(--vw-warn-bg); font-size: 13px; }
+  .vdirty[hidden] { display: none; }
+  .vdirty b { color: var(--vw-warn); }
+  .vdirty .spacer { flex: 1; }
+  .vd-btn { border: 1px solid var(--d-e3e7ec-border, #e3e7ec); background: var(--d-fff-bg, #fff); color: var(--ink); border-radius: 8px; height: 30px; padding: 0 12px; font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap; }
+  .vd-btn:hover { border-color: var(--d-9aa2ae-text, #9aa2ae); }
+  .vd-btn.pri { background: var(--wepa-dark, #002d55); border-color: var(--wepa-dark, #002d55); color: var(--d-fff-bg, #fff); font-weight: 600; }
+  .vd-btn.link { border: 0; background: none; color: var(--d-0064aa-text, #0064aa); text-decoration: underline; text-underline-offset: 2px; padding: 0 6px; }
+  .vd-btn.danger { background: #b42318; border-color: #b42318; color: #fff; }
+  .vmenu { position: absolute; z-index: 30; min-width: 230px; display: flex; flex-direction: column; padding: 5px; border-radius: 12px; background: var(--d-fff-bg, #fff); border: 1px solid var(--d-e3e7ec-border, #e3e7ec); box-shadow: 0 12px 32px rgba(0, 20, 50, .18); }
+  .vmenu[hidden] { display: none; }
+  .vmenu button { border: 0; background: none; text-align: left; font: inherit; font-size: 13.5px; color: var(--ink); padding: 7px 10px; border-radius: 8px; cursor: pointer; }
+  .vmenu button:hover, .vmenu button:focus-visible { background: var(--d-f3f5f8-bg, #f3f5f8); }
+  .vmenu button.del { color: #b42318; }
+  .vmenu hr { border: 0; border-top: 1px solid var(--d-e3e7ec-border, #e3e7ec); margin: 4px 0; }
+  dialog.dlg.vdlg { width: min(460px, calc(100vw - 32px)); background: var(--d-fff-bg, #fff); }
+  .vdlg form { display: flex; flex-direction: column; gap: 14px; padding: 20px 22px 18px; }
+  .vdlg .vd-head { display: flex; align-items: center; gap: 12px; }
+  .vdlg h3 { margin: 0; flex: 1; font-size: 17px; color: var(--wepa-dark); }
+  .vdlg .vd-body { display: flex; flex-direction: column; gap: 8px; }
+  .vdlg .vd-fld { font-size: 13px; font-weight: 600; }
+  .vdlg input[type="text"] { font: inherit; font-size: 14.5px; padding: 8px 11px; border-radius: 9px; border: 1px solid var(--d-e3e7ec-border, #e3e7ec); background: var(--d-fff-bg, #fff); color: var(--ink); }
+  .vdlg input[type="text"]:focus { outline: none; border-color: #33b09c; box-shadow: 0 0 0 3px rgba(51, 176, 156, .15); }
+  .vd-inc { border: 0; margin: 6px 0 2px; padding: 10px 12px; border-radius: 10px; background: var(--d-f5f7f9-bg, #f5f7f9); display: flex; flex-direction: column; gap: 6px; }
+  .vd-inc legend { float: left; width: 100%; padding: 0; margin-bottom: 2px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--d-6b7280-text, #6b7280); }
+  .vd-chk { display: flex; gap: 8px; align-items: flex-start; font-size: 13.5px; cursor: pointer; }
+  .vd-chk input { margin-top: 3px; accent-color: #33b09c; }
+  .vd-note { margin: 0; font-size: 13.5px; color: var(--d-6b7280-text, #6b7280); }
+  .vd-acts { display: flex; justify-content: flex-end; gap: 8px; }
+  .vtoast { position: fixed; left: 50%; bottom: max(20px, env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 90; background: var(--wepa-dark, #002d55); color: var(--d-fff-bg, #fff); padding: 8px 16px; border-radius: 10px; font-size: 13.5px; box-shadow: 0 8px 24px rgba(0, 20, 50, .2); }
+  .vtoast[hidden] { display: none; }
+
   .side { position: sticky; top: 16px; display: flex; flex-direction: column; gap: 4px; }
   .side-toggle { display: none; }
   .side-body { display: flex; flex-direction: column; gap: 22px; }
@@ -346,9 +403,9 @@
     .feat { flex-basis: 100%; }
   }
 </style>
-<script src="assets/status.js?v=20261107b" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261107b">
-<script src="assets/colresize.js?v=20261107b" defer></script>
+<script src="assets/status.js?v=20261109b" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109b">
+<script src="assets/colresize.js?v=20261109b" defer></script>
 </head>
 <body>
 <header>
@@ -405,6 +462,12 @@
   </aside>
 
   <div class="content">
+    <div class="vbar" id="vbar">
+      <div class="ptabs vtabs" role="tablist" id="vtabs" aria-label="My news views"></div>
+      <div class="vrecipe" id="vrecipe"></div>
+      <div class="vdirty" id="vdirty" hidden></div>
+      <div class="vmenu" id="vmenu" role="menu" aria-label="View options" hidden></div>
+    </div>
     <section class="panel dl-panel" aria-labelledby="dl-title">
       <div class="dl-head">
         <h2 class="cap" id="dl-title">What's ahead</h2>
@@ -461,6 +524,7 @@
         <option value="products">our products &amp; packaging</option>
         <option value="costs">our costs &amp; investments</option>
         <option value="customers">our customers</option>
+        <option value="sites">our sites</option>
         <option value="watch">nothing yet (watch only)</option>
       </select></label>
       <select id="rel" aria-label="Relevance">
@@ -495,6 +559,15 @@
   <div class="nd-foot" id="nd-foot"></div>
 </dialog>
 
+<dialog class="dlg vdlg" id="vdlg" aria-labelledby="vd-title">
+  <form id="vd-form" method="dialog">
+    <div class="vd-head"><h3 id="vd-title">Save as new view</h3><button type="button" class="dlg-x" id="vd-x" aria-label="Close">×</button></div>
+    <div class="vd-body" id="vd-body"></div>
+    <div class="vd-acts"><button type="button" class="vd-btn" id="vd-cancel">Cancel</button><button type="submit" class="vd-btn pri" id="vd-ok">Save view</button></div>
+  </form>
+</dialog>
+<div class="vtoast" id="vtoast" role="status" hidden></div>
+
 <footer>
   <div class="wrap">
     <span>News is collected automatically by the scheduled update. Summaries are aids, not legal advice.</span>
@@ -511,18 +584,8 @@
     monthly: '<rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/>'
   };
   const TYPE_LABEL = { regulation: "Regulation", tool: "Tools & updates", practice: "Best practice", peer: "Peer news" };
-  // Topics: assigned by keywords (English, German, Italian, Spanish headlines); an entry can have several
-  const TOPICS = {
-    capacity: { label: "Capacity & investment", re: /invest|expan|capacity|new (paper |tissue )?machine|new (plant|mill|factory|line)|production line|start-?up of|Werk|Fabrik|erweitert|Kapazit|Produktion|stabiliment|investiment|planta|nueva l[ií]nea/i },
-    deals: { label: "M&A & results", re: /acqui|merger|takeover|stake|divest|buys|sells|sale of|IPO|results|earnings|revenue|profit|quarter|\bQ[1-4]\b|Übernahme|übernimmt|Umsatz|Gewinn|Quartal|Bilanz|acquisizion|fatturato|utile|adquisici|resultados/i },
-    sustain: { label: "Sustainability & ESG", re: /sustainab|climate|\bCO2\b|CO₂|carbon|emission|\bESG\b|SBTi|net.?zero|recycl|renewable|\bFSC\b|EcoVadis|\bCDP\b|biodivers|water|Nachhaltig|Klima|Recycling|sostenib|riciclo|sustentab/i },
-    products: { label: "Products & brands", re: /launch|new product|brand|range|innovation|toilet paper|kitchen (roll|towel)|hand towel|facial tissue|napkin|packaging|Toilettenpapier|Klopapier|Küchenrolle|Taschentuch|Marke|Produkt|Verpackung|prodott|marchio|carta igienica|marca|papel higi/i },
-    markets: { label: "Prices & markets", re: /price|pulp|demand|market share|tariff|\bcost|inflation|private label|Preis|Zellstoff|Markt|Handelsmarke|prezz|cellulosa|precio|celulosa/i },
-    people: { label: "People & organisation", re: /\bCEO\b|\bCFO\b|appoint|names .* (chief|head|president)|board|management team|employees|jobs|layoff|strike|union|Vorstand|Geschäftsführ|Mitarbeiter|Stellen|Streik|nomina|amministratore|despid|nombra/i },
-    policy: { label: "Regulation & policy", re: /regulation|directive|\blaw\b|Commission|omnibus|\bCSRD\b|\bESRS\b|\bEUDR\b|\bPPWR\b|\bETS\b|\bCBAM\b|taxonomy|Gesetz|Verordnung|Richtlinie|normativ|regolament/i },
-  };
-  const PEER_TOPICS = ["capacity", "deals", "products", "markets", "people"]; // offered under "Peer news" in the "What it is" filter
-  const topicsOf = (e) => e._topics || (e._topics = Object.keys(TOPICS).filter((k) => TOPICS[k].re.test(e.title + " " + (e.summary || "") + " " + (e.tags || []).join(" "))));
+  // topics, tools and peer-news entries are shared with the Overview (assets/views.js)
+  const { TOPICS, PEER_TOPICS, topicsOf, TOOLS, toolsOf } = RadarViews;
   const AREAS = {
     climate: { label: "Climate & Energy", icon: '<path d="M10 9.5V3.5a2 2 0 1 0-4 0v6a3 3 0 1 0 4 0Z"/><path d="M8 6v5"/>' },
     forests: { label: "Forests & Biodiversity", icon: '<path d="M8 1.5L3.5 8h2L3 11.5h10L10.5 8h2Z"/><path d="M8 11.5V15"/>' },
@@ -541,7 +604,7 @@
   let pendingOpen = null;
   const state = { topic: "all", areas: new Set(), view: "all", type: "all", rel: "all", impact: "all", only: null, area: "all", tool: "all", q: "", sort: "date", dlView: "list", dlAll: false };
   let roadmap = { rows: [] }, events = [], fabric = { items: [] };
-  const IMPACTS = { reporting: 1, datamodel: 1, suppliers: 1, products: 1, costs: 1, customers: 1, watch: 1 };
+  const IMPACTS = { reporting: 1, datamodel: 1, suppliers: 1, products: 1, costs: 1, customers: 1, sites: 1, watch: 1 };
   let entries = [], archived = [];
   let saved = new Set();
   let newSince = null; // ISO date: entries added after this are "new"
@@ -580,23 +643,6 @@
   const isNew = (e) => newSince != null && (e.added || e.date || "") > newSince;
   const isSaved = (e) => saved.has(e.id);
   const pool = () => entries.concat(ui.archive ? archived : archived.filter(isSaved));
-  const TOOLS = {
-    fabric: { label: "Fabric", re: /\bfabric\b|onelake|data agent/i },
-    powerbi: { label: "Power BI", re: /power ?bi|semantic model|\bdax\b/i },
-    copilot: { label: "Copilot", re: /copilot/i },
-    claude: { label: "Claude", re: /\bclaude\b|anthropic/i },
-    chatgpt: { label: "ChatGPT", re: /chatgpt|openai|\bgpt\b|\bcodex\b/i },
-    gemini: { label: "Gemini", re: /\bgemini\b|deepmind/i },
-    ai: { label: "AI news", of: ["copilot", "claude", "chatgpt", "gemini"] },
-    other: { label: "Other" }
-  };
-  const toolsOf = (e) => {
-    if (e._tools) return e._tools;
-    const t = [e.title, e.summary, e.source, (e.tags || []).join(" ")].join(" ");
-    const found = Object.keys(TOOLS).filter((k) => TOOLS[k].re && TOOLS[k].re.test(t));
-    if (found.some((k) => TOOLS.ai.of.includes(k))) found.push("ai");
-    return (e._tools = found.length ? found : ["other"]);
-  };
   // several areas can be selected; none selected = all areas. state.area is the single area if exactly one is selected
   const syncArea = () => { state.area = state.areas.size === 1 ? [...state.areas][0] : "all"; };
   const inArea = (e) => (!state.areas.size || areasOf(e).some((a) => state.areas.has(a))) &&
@@ -618,12 +664,15 @@
   // Shareable view: #area=circularity&view=monthly (old links with #tab=… still work)
   function readHash() {
     const p = new URLSearchParams(location.hash.slice(1));
-    const savedArea = store.get("radar.area");
+    // saved views: #v=<id> opens that tab; no hash opens your start view (or the tab you used last);
+    // a link with other filters (search, other pages) opens on "All news" with those filters
+    const vid = p.get("v");
+    if (vid && viewById(vid).id === vid) VS.active = vid;
+    else if (!location.hash) VS.active = viewById(VS.start).id !== "all" ? VS.start : viewById(VS.active).id;
+    else VS.active = "all";
+    applyFilters(activeView().f);
     const fromHash = (p.get("area") || "").split(",").filter((a) => AREAS[a]);
-    const savedAreas = (store.get("radar.areas") || "").split(",").filter((a) => AREAS[a]);
     if (fromHash.length) state.areas = new Set(fromHash);
-    else if (!location.hash && savedAreas.length) state.areas = new Set(savedAreas);
-    else if (!location.hash && savedArea && AREAS[savedArea]) state.areas = new Set([savedArea]);
     syncArea();
     if (p.get("impact") && IMPACTS[p.get("impact")]) state.impact = p.get("impact");
     if (p.get("tool") && TOOLS[p.get("tool")]) state.tool = p.get("tool");
@@ -645,6 +694,7 @@
   }
   function writeHash() {
     const p = new URLSearchParams();
+    if (VS.active !== "all") p.set("v", VS.active);
     if (state.areas.size) p.set("area", [...state.areas].join(","));
     if (state.area === "data" && state.tool !== "all") p.set("tool", state.tool);
     if (state.view !== "all") p.set("view", state.view);
@@ -668,21 +718,7 @@
   const loadJSON = (path, fallback) => window.RADAR_DATA ? Promise.resolve(fallback) :
     fetch(path, { cache: "no-store" }).then((r) => (r.ok ? r.json() : fallback)).catch(() => fallback);
 
-  // Peer news (weekly Google News search per company) become entries of type "peer"
-  function peerEntries(pn, peers) {
-    const names = {}; ((peers && peers.companies) || []).forEach((c) => { names[c.id] = c.name; });
-    const out = [], seen = new Set();
-    Object.entries((pn && pn.companies) || {}).forEach(([cid, list]) => (list || []).forEach((n) => {
-      if (!n || !n.title || !n.url) return;
-      const key = n.title.toLowerCase().replace(/\s+-\s+[^-]+$/, "").slice(0, 80);
-      if (seen.has(key)) { const prev = out.find((x) => x._key === key); if (prev && !prev.companies.includes(names[cid] || cid)) prev.companies.push(names[cid] || cid); return; }
-      seen.add(key);
-      out.push({ id: "pn-" + cid + "-" + (n.date || "") + "-" + key.replace(/[^a-z0-9]+/g, "").slice(0, 24), _key: key, type: "peer", origin: "peer",
-        title: n.title, summary: "", source: n.source || "", url: n.url, date: n.date, added: n.date, relevance: "medium",
-        areas: [], companies: [names[cid] || cid], tags: [names[cid] || cid] });
-    }));
-    return out;
-  }
+  const peerEntries = RadarViews.peerEntries;
   Promise.all([load(), loadArchive(), loadJSON("data/roadmap.json", { rows: [] }), loadJSON("data/events.json", { events: [] }), loadJSON("data/fabric_roadmap.json", { items: [] }), loadJSON("data/peer_news.json", null), loadJSON("data/peers.json", null)]).then(([data, arch, rm, ev, fr, pn, peersData]) => {
     fabric = fr && Array.isArray(fr.items) ? fr : { items: [] };
     roadmap = rm && rm.rows ? rm : { rows: [] };
@@ -772,11 +808,11 @@
     PEER_TOPICS.forEach((k) => { const o = document.createElement("option"); o.value = "peer:" + k; o.dataset.short = TOPICS[k].label; o.dataset.long = "Peer news · " + TOPICS[k].label; o.textContent = o.dataset.short; $("grp-peer").appendChild(o); });
     const fitPrefix = () => document.querySelectorAll(".fsel").forEach((f) => f.style.setProperty("--fl", f.querySelector(".fl").offsetWidth + "px"));
     fitPrefix(); if (document.fonts) document.fonts.ready.then(fitPrefix);
-    $("type").addEventListener("change", (ev) => { const [t, tp] = ev.target.value.split(":"); state.type = t; state.topic = tp || "all"; sync(); render(); });
+    $("type").addEventListener("change", (ev) => { const [t, tp] = ev.target.value.split(":"); state.type = t; state.topic = tp || "all"; refresh(); });
     $("tool").addEventListener("change", (ev) => { state.tool = ev.target.value; refresh(); });
     window.addEventListener("resize", debounce(measureCards, 150));
-    $("rel").addEventListener("change", (ev) => { state.rel = ev.target.value; render(); syncCount(); });
-    $("impact").addEventListener("change", (ev) => { state.impact = ev.target.value; sync(); render(); });
+    $("rel").addEventListener("change", (ev) => { state.rel = ev.target.value; refresh(); });
+    $("impact").addEventListener("change", (ev) => { state.impact = ev.target.value; refresh(); });
     $("sort").addEventListener("change", (ev) => { state.sort = ev.target.value; render(); });
     $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); syncCount(); });
     // Footer legend
@@ -837,13 +873,14 @@
     }
     const areaLabel = !state.areas.size ? "All areas" : state.areas.size > 1 ? [...state.areas].map((a) => AREAS[a].label.split(" ")[0]).join(", ") : AREAS[state.area].label + (inData && state.tool !== "all" ? " · " + TOOLS[state.tool].label : "");
     $("side-sum").textContent = VIEWS[state.view] + " · " + areaLabel;
-    $("dl-title").textContent = "What's ahead" + (state.areas.size ? " · " + areaLabel : "");
+    $("dl-title").textContent = "What's ahead" + (VS.active !== "all" ? " · " + activeView().name : state.areas.size ? " · " + areaLabel : "");
     syncCount();
     writeHash();
   }
 
   function upcoming() {
-    return entries.filter((e) => e.nextDate && daysFrom(e.nextDate) >= 0 && inArea(e)).sort((a, b) => a.nextDate.localeCompare(b.nextDate));
+    const f = snap();
+    return entries.filter((e) => e.nextDate && daysFrom(e.nextDate) >= 0 && RadarViews.match(e, f, vctx, { skipView: true, skipQ: true })).sort((a, b) => a.nextDate.localeCompare(b.nextDate));
   }
 
   function jumpTo(id) {
@@ -871,7 +908,7 @@
     if (dv === "next") { body.replaceChildren(comingView()); return; }
     if (dv === "events") { body.replaceChildren(eventsView()); return; }
     const list = upcoming();
-    if (!list.length) { body.replaceChildren(el("p", "s", state.area === "all" ? "No upcoming deadlines recorded." : "No upcoming deadlines in this area.")); return; }
+    if (!list.length) { const f = snap(), narrowed = f.areas.length || f.type !== "all" || f.impact !== "all" || f.rel !== "all"; body.replaceChildren(el("p", "s", narrowed ? "No upcoming deadlines for these filters." : "No upcoming deadlines recorded.")); return; }
     body.replaceChildren(dv === "timeline" ? timeline(list) : listView(list));
   }
 
@@ -1113,15 +1150,9 @@
   }
 
   function filtered() {
-    let list = pool().filter((e) => inArea(e) && inView(e, state.view));
+    const f = snap(); // same filter rule as the tab counts and the Overview cards (assets/views.js)
+    let list = pool().filter((e) => RadarViews.match(e, f, vctx));
     if (state.only) list = list.filter((e) => state.only.ids.has(e.id));
-    if (state.impact !== "all") list = list.filter((e) => (e.impacts || ["watch"]).includes(state.impact));
-    if (state.topic !== "all") list = list.filter((e) => topicsOf(e).includes(state.topic));
-    if (state.type === "monthly") list = list.filter((e) => !!e.monthlySummary);
-    else if (state.type !== "all") list = list.filter((e) => e.type === state.type);
-    if (state.rel === "high") list = list.filter((e) => relOf(e) === "high");
-    if (state.rel === "medium") list = list.filter((e) => relOf(e) !== "low");
-    if (state.q) list = list.filter((e) => [e.title, e.summary, e.whyItMatters, e.source, (e.tags || []).join(" ")].join(" ").toLowerCase().includes(state.q));
     const key = (e) => (e.dateIsAdded ? "" : e.date || ""); // undated references go last
     const byDate = (a, b) => key(b).localeCompare(key(a));
     const TYPE_ORDER = { regulation: 0, tool: 1, practice: 2, peer: 3 };
@@ -1262,7 +1293,7 @@
     return [...map.entries()].sort((a, b) => (a[0] === "ref" ? 1 : b[0] === "ref" ? -1 : dir * b[0].localeCompare(a[0])));
   }
   // ---- Pop-up with the full content of one entry ----
-  const IMPACT_LABEL = { reporting: "Our reporting", datamodel: "Our data model & KPIs", suppliers: "Suppliers & sourcing", products: "Products & packaging", costs: "Costs & investments", customers: "Customer requirements", watch: "Watch only" };
+  const IMPACT_LABEL = { reporting: "Our reporting", datamodel: "Our data model & KPIs", suppliers: "Suppliers & sourcing", products: "Products & packaging", costs: "Costs & investments", customers: "Customer requirements", sites: "Our sites", watch: "Watch only" };
   function openNews(e) {
     const meta = $("nd-meta"); meta.replaceChildren();
     const ty = el("span", "ty", TYPE_LABEL[e.type] || e.type); ty.style.setProperty("--tc", `var(--t-${e.type === "practice" ? "practice" : e.type === "tool" ? "tool" : "regulation"})`);
@@ -1299,11 +1330,219 @@
   $("nd-x").addEventListener("click", () => $("ndlg").close());
   $("ndlg").addEventListener("click", (ev) => { if (ev.target === $("ndlg")) $("ndlg").close(); });
 
+  // ---------- Saved views: tabs above the news (assets/views.js; stored in this browser) ----------
+  const VS = RadarViews.load();
+  const ALL_VIEW = { id: "all", name: "All news", f: RadarViews.norm({}) };
+  const viewById = (id) => (id === "all" ? ALL_VIEW : VS.list.find((v) => v.id === id)) || ALL_VIEW;
+  const activeView = () => viewById(VS.active);
+  const vctx = { isNew: (e) => isNew(e), isSaved: (e) => isSaved(e) };
+  const AFFECTS = { reporting: "our reporting", datamodel: "our data model & KPIs", suppliers: "our suppliers & sourcing", products: "our products & packaging", costs: "our costs & investments", customers: "our customers", sites: "our sites", watch: "nothing yet (watch only)" };
+  const FILTER_NAME = { view: "View", areas: "Areas", tool: "Tool", type: "What it is", topic: "Peer topic", impact: "Affects", rel: "Relevance", sort: "Sort", q: "Text filter", layout: "Cards/List" };
+  const SORT_TXT = { oldest: "oldest first", relevance: "most relevant first", deadline: "next deadline first", type: "sorted by type", source: "sorted by source" };
+  const snap = () => RadarViews.norm({ view: state.view, areas: [...state.areas], tool: state.tool, type: state.type, topic: state.topic, impact: state.impact, rel: state.rel, sort: state.sort, q: state.q, layout: viewMode });
+  const changes = () => (VS.active === "all" ? [] : RadarViews.diff(activeView().f, snap()));
+  const saveViews = () => RadarViews.save(VS);
+  let menuFor = null, dlgMode = null;
+
+  function applyFilters(f) {
+    state.view = VIEWS[f.view] ? f.view : "all";
+    state.areas = new Set(f.areas.filter((a) => AREAS[a])); syncArea();
+    state.tool = TOOLS[f.tool] ? f.tool : "all";
+    state.type = f.type; state.topic = f.topic; state.impact = f.impact; state.rel = f.rel; state.sort = f.sort; state.q = f.q;
+    state.only = null; state.dlAll = false;
+    if ($("q")) $("q").value = f.q;
+    if ($("sort")) $("sort").value = f.sort;
+    if (f.layout !== viewMode) setViewMode(f.layout === "list" ? "list" : "cards");
+    ui.open.clear(); ui.months = 6;
+  }
+  function openView(id) {
+    VS.active = viewById(id).id; saveViews();
+    applyFilters(activeView().f); closeMenu(); refresh();
+  }
+
+  // the filters of the current tab as removable chips ("This view shows …")
+  function filterChips(f, dirty) {
+    const chips = [];
+    const add = (label, value, clear) => chips.push({ label, value, clear });
+    if (f.view !== "all") add("View", VIEWS[f.view], ["view"]);
+    f.areas.forEach((a) => AREAS[a] && add("Area", AREAS[a].label, ["areas", a]));
+    if (f.tool !== "all" && f.areas.length === 1 && f.areas[0] === "data") add("Tool", TOOLS[f.tool].label, ["tool"]);
+    if (f.type !== "all") add("What it is", f.type === "monthly" ? "Monthly updates" : (TYPE_LABEL[f.type] || f.type) + (f.topic !== "all" && TOPICS[f.topic] ? " · " + TOPICS[f.topic].label : ""), ["type"]);
+    if (f.impact !== "all") add("Affects", AFFECTS[f.impact] || f.impact, ["impact"]);
+    if (f.rel !== "all") add("Relevance", f.rel === "high" ? "high only" : "high & medium", ["rel"]);
+    if (f.q) add("Text", "“" + f.q + "”", ["q"]);
+    const wrap = el("div", "vr-chips");
+    chips.forEach((c) => {
+      const ch = el("span", "vr-chip" + (dirty.includes(c.clear[0]) || (c.clear[0] === "type" && dirty.includes("topic")) ? " chg" : ""));
+      ch.append(el("i", null, c.label + ":"), document.createTextNode(" " + c.value));
+      const x = el("button", null, "×"); x.type = "button"; x.setAttribute("aria-label", "Remove filter " + c.label + " " + c.value); x.title = "Remove this filter";
+      x.addEventListener("click", () => clearFilter(c.clear));
+      ch.appendChild(x); wrap.appendChild(ch);
+    });
+    if (!chips.length) wrap.appendChild(el("span", "vr-chip none", "all news, no filters"));
+    const extra = [SORT_TXT[f.sort], f.layout === "list" ? "as list" : ""].filter(Boolean);
+    if (extra.length) wrap.appendChild(el("span", "vr-lbl", "· " + extra.join(", ")));
+    return wrap;
+  }
+  function clearFilter([k, v]) {
+    if (k === "areas") { state.areas.delete(v); syncArea(); state.tool = "all"; if (state.area !== "data" && state.type === "monthly") state.type = "all"; }
+    else if (k === "type") { state.type = "all"; state.topic = "all"; }
+    else if (k === "q") { state.q = ""; $("q").value = ""; }
+    else state[k] = "all";
+    refresh();
+  }
+
+  function renderViews() {
+    const host = $("vtabs"); if (!host) return;
+    const p = pool(), dirty = changes();
+    host.replaceChildren();
+    [ALL_VIEW, ...VS.list].forEach((v) => {
+      const sel = v.id === VS.active;
+      const b = el("button", "vtab"); b.type = "button"; b.dataset.vid = v.id;
+      b.setAttribute("role", "tab"); b.setAttribute("aria-selected", String(sel)); b.tabIndex = sel ? 0 : -1;
+      b.appendChild(document.createTextNode(v.name));
+      const nn = p.filter((e) => isNew(e) && RadarViews.match(e, v.f, vctx, { skipView: true })).length;
+      if (nn) { const s = el("small", null, nn + " new"); s.title = nn + " new since your last visit"; b.appendChild(s); }
+      if (sel && dirty.length) { const d = el("span", "vt-dot"); d.title = "Changed, not saved yet"; b.appendChild(d); }
+      if (VS.start === v.id) b.title = "Opens first when you come to News";
+      b.addEventListener("click", () => { if (!sel) openView(v.id); });
+      host.appendChild(b);
+      if (sel && v.id !== "all") {
+        const m = el("button", "vt-more"); m.type = "button"; m.id = "vt-more"; m.setAttribute("aria-label", "Options for this view"); m.setAttribute("aria-haspopup", "menu"); m.title = "Rename, move or delete";
+        m.innerHTML = '<svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="3.5" cy="8" r="1.4" fill="currentColor"/><circle cx="8" cy="8" r="1.4" fill="currentColor"/><circle cx="12.5" cy="8" r="1.4" fill="currentColor"/></svg>';
+        m.addEventListener("click", (ev) => { ev.stopPropagation(); menuFor ? closeMenu() : openMenu(m); });
+        host.appendChild(m);
+      }
+    });
+    const add = el("button", "vt-add"); add.type = "button"; add.setAttribute("aria-label", "Save the current filters as a new view"); add.title = "New view from the current filters";
+    add.innerHTML = '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>';
+    add.addEventListener("click", () => openDlg("new"));
+    host.appendChild(add);
+    const cur = host.querySelector('[aria-selected="true"]'); // keep the open tab visible when the row scrolls (small screens)
+    if (cur && (cur.offsetLeft < host.scrollLeft || cur.offsetLeft + cur.offsetWidth > host.scrollLeft + host.clientWidth)) host.scrollLeft = Math.max(0, cur.offsetLeft - 16);
+    // "This view shows …"
+    const f = snap();
+    const r = $("vrecipe");
+    r.replaceChildren(el("span", "vr-lbl", VS.active === "all" ? "Showing" : "This view shows"), filterChips(f, dirty));
+    if (VS.active === "all" && RadarViews.diff(ALL_VIEW.f, f).some((k) => k !== "sort" && k !== "layout")) {
+      const s = el("button", "vr-save", "Save as view"); s.type = "button"; s.addEventListener("click", () => openDlg("new")); r.appendChild(s);
+    }
+    // unsaved changes
+    const d = $("vdirty");
+    d.hidden = !dirty.length;
+    if (dirty.length) {
+      const txt = el("span", "vd-txt"); txt.append(el("b", null, "Changed: "), document.createTextNode(dirty.filter((k) => !(k === "topic" && dirty.includes("type"))).map((k) => FILTER_NAME[k]).join(", ")));
+      const mk = (cls, label, fn) => { const b = el("button", cls, label); b.type = "button"; b.addEventListener("click", fn); return b; };
+      d.replaceChildren(txt, el("span", "spacer"),
+        mk("vd-btn pri", "Save", () => { activeView().f = snap(); saveViews(); renderViews(); toast("View “" + activeView().name + "” saved"); }),
+        mk("vd-btn", "Save as new view", () => openDlg("new")),
+        mk("vd-btn link", "Discard", () => { applyFilters(activeView().f); refresh(); }));
+    }
+  }
+
+  // ⋯ menu of the current view
+  function openMenu(anchor) {
+    const v = activeView(), i = VS.list.indexOf(v);
+    const m = $("vmenu"); m.replaceChildren();
+    const item = (label, fn, cls) => { const b = el("button", cls || null, label); b.type = "button"; b.setAttribute("role", "menuitem"); b.addEventListener("click", () => { closeMenu(); fn(); }); m.appendChild(b); };
+    item("Rename", () => openDlg("rename"));
+    item("Duplicate", () => { const c = { id: newId(), name: (v.name + " (copy)").slice(0, 40), f: snap() }; VS.list.splice(i + 1, 0, c); VS.active = c.id; saveViews(); refresh(); toast("View duplicated"); });
+    if (i > 0) item("Move left", () => { VS.list.splice(i, 1); VS.list.splice(i - 1, 0, v); saveViews(); renderViews(); });
+    if (i < VS.list.length - 1) item("Move right", () => { VS.list.splice(i, 1); VS.list.splice(i + 1, 0, v); saveViews(); renderViews(); });
+    item(VS.start === v.id ? "✓ Open first when I come to News" : "Open first when I come to News", () => { VS.start = VS.start === v.id ? null : v.id; saveViews(); renderViews(); toast(VS.start ? "“" + v.name + "” now opens first" : "News opens on the tab you used last"); });
+    m.appendChild(el("hr"));
+    item("Delete view", () => openDlg("delete"), "del");
+    m.hidden = false; menuFor = v.id;
+    const ar = anchor.getBoundingClientRect(), host = $("vbar").getBoundingClientRect();
+    m.style.top = (ar.bottom - host.top + 4) + "px";
+    m.style.left = Math.max(0, Math.min(ar.left - host.left, host.width - m.offsetWidth)) + "px";
+    m.querySelector("button").focus();
+  }
+  function closeMenu() { if ($("vmenu")) $("vmenu").hidden = true; menuFor = null; }
+  document.addEventListener("click", (ev) => { if (menuFor && !ev.target.closest("#vmenu")) closeMenu(); });
+  document.addEventListener("keydown", (ev) => { if (ev.key === "Escape" && menuFor) { closeMenu(); const b = $("vt-more"); if (b) b.focus(); } });
+  const newId = () => "v" + Date.now().toString(36);
+
+  // dialog: new view / rename / delete
+  function openDlg(mode) {
+    dlgMode = mode;
+    const v = activeView(), f = snap(), body = $("vd-body");
+    $("vd-title").textContent = mode === "new" ? "Save as new view" : mode === "rename" ? "Rename view" : "Delete “" + v.name + "”?";
+    $("vd-ok").textContent = mode === "new" ? "Save view" : mode === "rename" ? "Rename" : "Delete view";
+    $("vd-ok").classList.toggle("danger", mode === "delete");
+    body.replaceChildren();
+    if (mode === "delete") { body.appendChild(el("p", "vd-note", "The news stay where they are. Only this tab and its filters are removed.")); }
+    else {
+      const lab = el("label", "vd-fld"); lab.htmlFor = "vd-name"; lab.textContent = "Name";
+      const inp = document.createElement("input"); inp.type = "text"; inp.id = "vd-name"; inp.maxLength = 40; inp.required = true; inp.autocomplete = "off";
+      inp.value = mode === "rename" ? v.name : suggestName(f);
+      body.append(lab, inp);
+      if (mode === "new") {
+        const inc = el("fieldset", "vd-inc"); inc.appendChild(el("legend", null, "Included filters"));
+        const rows = [];
+        if (f.view !== "all") rows.push(["view", "View: " + VIEWS[f.view]]);
+        if (f.areas.length) rows.push(["areas", "Areas: " + f.areas.map((a) => AREAS[a] ? AREAS[a].label : a).join(", ")]);
+        if (f.tool !== "all" && f.areas.length === 1 && f.areas[0] === "data") rows.push(["tool", "Tool: " + TOOLS[f.tool].label]);
+        if (f.type !== "all") rows.push(["type", "What it is: " + (f.type === "monthly" ? "Monthly updates" : TYPE_LABEL[f.type] + (f.topic !== "all" && TOPICS[f.topic] ? " · " + TOPICS[f.topic].label : ""))]);
+        if (f.impact !== "all") rows.push(["impact", "Affects: " + (AFFECTS[f.impact] || f.impact)]);
+        if (f.rel !== "all") rows.push(["rel", "Relevance: " + (f.rel === "high" ? "high only" : "high & medium")]);
+        if (f.q) rows.push(["q", "Text: “" + f.q + "”"]);
+        if (f.sort !== "date") rows.push(["sort", "Sort: " + SORT_TXT[f.sort]]);
+        if (f.layout !== "cards") rows.push(["layout", "Show as list"]);
+        if (!rows.length) inc.appendChild(el("p", "vd-note", "No filters are set, so this view shows all news. Pick areas or filters first to make it more specific."));
+        rows.forEach(([k, label]) => { const l = el("label", "vd-chk"); const c = document.createElement("input"); c.type = "checkbox"; c.checked = true; c.dataset.inc = k; l.append(c, document.createTextNode(label)); inc.appendChild(l); });
+        const st = el("label", "vd-chk"); const sc = document.createElement("input"); sc.type = "checkbox"; sc.id = "vd-start"; st.append(sc, document.createTextNode("Open this view first when I come to News"));
+        body.append(inc, st);
+      }
+    }
+    $("vdlg").showModal();
+    const n = $("vd-name"); if (n) { n.focus(); n.select(); } else $("vd-cancel").focus();
+  }
+  function suggestName(f) {
+    if (f.areas.length === 1 && AREAS[f.areas[0]]) return AREAS[f.areas[0]].label;
+    if (f.impact !== "all") return "Affects " + (AFFECTS[f.impact] || f.impact);
+    if (f.type !== "all" && TYPE_LABEL[f.type]) return TYPE_LABEL[f.type];
+    return "My view";
+  }
+  $("vd-form").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const v = activeView();
+    if (dlgMode === "delete") {
+      VS.list = VS.list.filter((x) => x !== v); if (VS.start === v.id) VS.start = null;
+      $("vdlg").close(); openView("all"); toast("View deleted"); return;
+    }
+    const name = ($("vd-name").value || "").trim().slice(0, 40) || "My view";
+    if (dlgMode === "rename") { v.name = name; saveViews(); $("vdlg").close(); refresh(); return; }
+    const cur = snap(), f = RadarViews.norm({});
+    $("vd-body").querySelectorAll("[data-inc]").forEach((c) => { if (!c.checked) return; const k = c.dataset.inc; f[k] = k === "areas" ? cur.areas.slice() : cur[k]; if (k === "type") f.topic = cur.topic; if (k === "areas" && cur.tool !== "all") f.tool = cur.tool; });
+    const nv = { id: newId(), name, f };
+    VS.list.push(nv); VS.active = nv.id;
+    if ($("vd-start").checked) VS.start = nv.id;
+    saveViews(); $("vdlg").close();
+    applyFilters(f); refresh(); toast("View “" + name + "” saved");
+  });
+  $("vd-cancel").addEventListener("click", () => $("vdlg").close());
+  $("vd-x").addEventListener("click", () => $("vdlg").close());
+  $("vdlg").addEventListener("click", (ev) => { if (ev.target === $("vdlg")) $("vdlg").close(); });
+  // arrow keys move between tabs
+  $("vtabs").addEventListener("keydown", (ev) => {
+    if (!["ArrowLeft", "ArrowRight"].includes(ev.key) || !ev.target.classList.contains("vtab")) return;
+    const tabs = [...$("vtabs").querySelectorAll(".vtab")], i = tabs.indexOf(ev.target);
+    const t = tabs[(i + (ev.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
+    if (t) { openView(t.dataset.vid); const nt = $("vtabs").querySelector('[data-vid="' + t.dataset.vid + '"]'); if (nt) nt.focus(); }
+  });
+  let toastT;
+  function toast(t) {
+    const n = $("vtoast"); n.textContent = t; n.hidden = false;
+    clearTimeout(toastT); toastT = setTimeout(() => { n.hidden = true; }, 2400);
+  }
+
   function render() {
+    renderViews();
     const list = filtered();
     const host = $("grid");
     if (!list.length) {
-      const reset = { label: "Show all news", onClick: () => { state.view = "all"; state.type = "all"; state.topic = "all"; state.rel = "all"; state.impact = "all"; state.tool = "all"; state.only = null; state.q = ""; $("q").value = ""; state.areas = new Set(); ["type", "impact", "rel"].forEach((id) => { if ($(id)) $(id).value = "all"; }); if ($("tool")) $("tool").value = "all"; sync(); render(); } };
+      const reset = { label: "Show all news", onClick: () => { if (VS.active !== "all") { openView("all"); return; } state.view = "all"; state.type = "all"; state.topic = "all"; state.rel = "all"; state.impact = "all"; state.tool = "all"; state.only = null; state.q = ""; $("q").value = ""; state.areas = new Set(); ["type", "impact", "rel"].forEach((id) => { if ($(id)) $(id).value = "all"; }); if ($("tool")) $("tool").value = "all"; sync(); render(); } };
       const [msg, act, kind] = state.view === "saved" && !pool().some(isSaved) ? ["Nothing saved yet. Click the star on a card to keep it here.", reset, "wait"]
         : state.view === "new" ? ["You are up to date: nothing new since your last visit.", reset, "done"]
         : state.type === "monthly" ? ["No monthly feature summaries yet. They arrive with the next data update.", reset, "wait"]
@@ -1426,7 +1665,7 @@
   function debounce(fn, ms) { let t; return () => { clearTimeout(t); t = setTimeout(fn, ms); }; }
 })();
 </script>
-<script src="assets/search.js?v=20261107b" defer></script>
-<script src="assets/guide.js?v=20261107b" defer></script>
+<script src="assets/search.js?v=20261109b" defer></script>
+<script src="assets/guide.js?v=20261109b" defer></script>
 </body>
 </html>
