@@ -1,12 +1,15 @@
-ESG Radar – update-18-no-accent-bars (2026-11-09)
-Contains update-16 and update-17 (you can skip both). Cache version 20261109d on all pages. Nothing in data/ is touched.
+ESG Radar – update 14: remove prof_water + Water tab workflow step
+Built on the repo as of 9 Nov 2026 (commit 8387837). Nothing in data/ is touched.
 
-ROOT folder (same folder as index.html):
-- index.html       -> only the cache version changed (needed because theme.css changed)
-- news.html        -> labels next to the dropdowns; "+" for new views dashed without fill
-- regulation.html  -> consultation cards without the green top bar
-- peers.html       -> WEPA as its own row above the peers; WEPA row in the table without the blue side bar
-- market.html      -> selected indicator tiles tinted; no accent bar in the grid carbon table and the "About" boxes
+1) Upload (GitHub -> Add file -> Upload files), folder config/:
+     market.json      (only change: indicator prof_water removed; Destatis has no water table by industry)
 
-assets/ folder:
-- theme.css        -> warning boxes (caution) without the thick left bar, softer border
+2) Edit .github/workflows/collect-feeds.yml on GitHub and insert this step directly after
+   "Collect industry statistics" (before "Collect EU ETS emissions of peers"):
+
+      - name: Collect river levels & soil moisture
+        run: python scripts/collect_water.py
+        continue-on-error: true
+
+3) Actions -> Daily data update -> Run workflow. Afterwards the Water tab shows data and
+   data/debug/water.json lists the DWD station per mill.

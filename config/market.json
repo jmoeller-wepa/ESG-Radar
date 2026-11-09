@@ -1963,48 +1963,6 @@
       "toUnit": "TJ"
     },
     {
-      "id": "prof_water",
-      "group": "profile",
-      "areas": [
-        "water"
-      ],
-      "label": "Water use, paper industry",
-      "unit": "million m³",
-      "source": "destatis",
-      "table": "322*",
-      "tableMatch": [
-        "(Wassereinsatz|Wasseraufkommen|Frischwasser).*Wirtschaftszweig",
-        "Wasser.*Wirtschaftszweig"
-      ],
-      "filter": {
-        "var": "WZ|Wirtschaftszweig",
-        "values": [
-          "^WZ08-17$",
-          "^Herstellung von Papier, Pappe und Waren daraus$",
-          "^H\\.?\\s?v\\.? Papier, Pappe und Waren daraus",
-          "Herstellung von Papier",
-          "^WZ08-17-"
-        ]
-      },
-      "match": [
-        "Wassereinsatz insgesamt|Wasseraufkommen insgesamt",
-        "Wassereinsatz|Wasseraufkommen|Frischwasser",
-        "insgesamt",
-        "."
-      ],
-      "esrs": "ESRS E3",
-      "freq": "yearly",
-      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 322xx, dl-de/by-2-0",
-      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/32211",
-      "short": "Tissue mills are water-intensive: a benchmark for WEPA's water intake.",
-      "about": {
-        "what": "Water used by German paper mills (WZ 17), from the Destatis survey of non-public water supply (every three years).",
-        "wepa": "A yardstick for WEPA's own water intake, for ESRS E3 texts and customer questionnaires.",
-        "limits": "Every three years only; all paper grades; the unit follows the Destatis table."
-      },
-      "toUnit": "million m³"
-    },
-    {
       "id": "prof_waste",
       "group": "profile",
       "areas": [
