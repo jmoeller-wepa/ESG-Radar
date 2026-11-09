@@ -1,8 +1,20 @@
 {
- "updated": "2026-11-06T11:52:01",
+ "updated": "2026-11-09T06:36:51",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
+   {
+    "title": "Europaweit erste Fabrik ihrer Art: Was Wepa in Kriebstein ab 2028 herstellen will",
+    "source": "Freie Presse",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQQjlISHFPVE9KRGFoVjIydU5sYWtTZzlrd0VMR284TU13Y2pwcEJ3QmFkLXhXY0xQRC1lLUVuVUhzbXZaeVNaRXZaVjRuRHowWlRZemlDN01rc2pfZFEzd0tWYnlweThKWjV5ZlpvZ04yM1pMYlVqa3BoM2xLNDJqbkpHR2tBLUZ3cHdxMG5KWi1wbXFLT1VWTWU2cFdVR0s5THh4bjd6OWllSF9tNUxUMC04OUVPZHlzRzVFUzA2UXdYOV9JYm03dndwMmJwTHgxanBTZTl6RTdBSXZlWjFWdw?oc=5",
+    "date": "2026-11-06"
+   },
+   {
+    "title": "Kokett-Toilettenpapier von Aldi: Welcher Hersteller steckt dahinter?",
+    "source": "Giga",
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPajQ2TUFLS1VndmpPWFdDa0U2ZzFHMUZ5S2prYlA0LUhsM3F5S2ZISENSWnZ3R2xYY2JBSXJSRXhhczVkUFc2SFJfbXl4SllKeVRLbjkwNmVrV1Uxdy1rWjNhQVNKZGRCeEpQOS1lY0NUYW1TaW93MFFzSWRnNGxaQ2NUNWZUX2JhRkJaT3FqRU12T1FSTzZ0SUVpeW11bDJFZ1pDSHA3Q3BFbHh0dmpGTDA1VjNsdkh0RlVv?oc=5",
+    "date": "2026-11-04"
+   },
    {
     "title": "Aus Alt wird Neu! Klopapier-Hersteller erweitert seine Produktion",
     "source": "TAG24",
@@ -14,44 +26,32 @@
     "source": "EUWID Recycling und Entsorgung",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOTNnd2FfTnZRLTlFMXUwWTNIalcycGxBNzgzWEhXaXNCaGRiVExHQ2RYQzVuRnJ3S3dBd3Y3T1U4RXJVa2JibFROeDR2S3pMM2d3dXBJX2ppeHZxbFVuLTJlSDVtQjE4Q1ppRmdGRy02R1hlT21ZY0toM0dmSTAwMUhBZ2pQSW5rUDdjbTlBbkNBN19NNnJUVzJXcWJ2VVF6T3NPYVc2QlJwUnNuS2FV?oc=5",
     "date": "2026-10-21"
-   },
-   {
-    "title": "Kriebstein: 39 Millionen Euro für Europas erste Fabrik für Papierfaserplatten",
-    "source": "DNN - Dresdner Neueste Nachrichten",
-    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQaEotaHA0Z0dQU2VVVVVLRzhRbEM2Rm1Nems0ZVRoQnNJdDNRWTFKSDVSdG85b08wZGNlUGRUM2hQeWNkYTc4eG8wbFh3S0ZUM1NLUUdWeUJxSy0zWXdpUDdYVWVqM3VGM2VvcVpWeWdJZzhJUERTbFZIdGxkYTFrbF9fdTNVaGx6UlNBdkZaQWVqN0R6MXpJX2JDbkNGaHh6TEl3cmFPbnA5XzFEVHUtY3A1WG5FbFZGZ1JKYVFsZHNGRjlSZTZqYWY5bC1TdElHY2M5Qi02dHBQOUtLTkhqN204NFJoUdIBggJBVV95cUxQNXZxYUo1LTBPVGxmSDFEdjZkV0MwZ1VLbTN6R2xud09BTHVZSWNBck1yWmV6OE5vUmZMaGN2WVNnSkVaY3NQOW85dEYyQmZhczB2NEN6SURCeHFuNFFPalhZRW91YzlxdE8tLU9FNGFvRVNJRG5HeUxUTjZkWDZpNDUtRENiWTJneXJGUF81bFFGTGpnMkE4MkpxejRXRVdrc2JUZ1FzcjI0SmdYbHZod1Q5d2lyWHZSdk9IOWhyYXlMWTJWYzhhaVlTcHg3LUh1aEUyTzR6dlZmNkFLOTE3NTZIcGZaRXNCa3djZDFPcUlaTmRnV2drWHphZVc3NFVlbHc?oc=5",
-    "date": "2026-10-21"
-   },
-   {
-    "title": "Europa-Premiere in Kriebstein: Dieses völlig neue Produkt entsteht ab 2028 in der alten Papierfabrik",
-    "source": "MDR.de",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMWc4NkY2VWhaZ2kwcG9zNi1QUzdMS1ZVM0pyUzBackthSjQ2Y1IwNlRTaUVFNVhNZGZwME16cENaeVpENnY4TFlqSkxRVjVvZzBBWWxVYlhpaEM1X3VnaVN3TThmV0ZvUGhtTWJFN0NETjd2VmlsbmEwNkROSF9Jbk1lOGFZVmx6V0dXQ0kyeXBKWXlyeVRqSlFoZFZLREpNYklDa3BIS0dwbG5UUzFPN0ZjU05TbU5tYndOMWRqRG5ZQkpPQlhDOTV3?oc=5",
-    "date": "2026-10-20"
    }
   ],
   "essity": [
    {
-    "title": "Essity expands coreless technology to Lotus Just-1 toilet paper in France",
-    "source": "Tissue Online North America",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMGZFS3lqSzhwTlY4LUI1cE82R1hkaUVzaC1HOWJndXpWekp2VW9rVUR4dGVibEJOeFc0cUZYN01aMk04OGJDSGo1dk00bTViUm00SUxob2sxOFY0aC0yVlB0QmxIOVRiRUREU1pnR2NoaW02c1EzWV9VVWNGNHJ6VVF4aVU3ZEp1dG56VHpCbUZOOTRZT1VDYldRWmVvUlBjMHdWaXJxZ3N1c1VyTHNBTw?oc=5",
-    "date": "2026-11-06"
+    "title": "Essity names new consumer tissue marketing director",
+    "source": "Bdaily",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOc015Rk5RU2NGV2dOc1NFbUFfM3V4VnVSZnBMRXJGR1ZMRkg1cndlMWNINzU4RE1pak4xTVIyeGFNOEM5WDM5RmE2UjRNMTJSeC02UnAwR29Ta2tUN1Z1eTNJVUc5N3loM2pnNEg1blN5UmdyX2JvakJrTWNpSmFhbEFRNmVnQ1NxQ29aZ01UMC1reWNuQXVj?oc=5",
+    "date": "2026-11-08"
    },
    {
-    "title": "The Essity Inclusive Hygiene Report",
-    "source": "Yahoo News UK",
-    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5xWWlGaEtRclp5TTkxb3MzSkxXTk96a19wS3Q2TFRaelhXcGd3YW8yS1BmR055Zk9CdnhpVjA2LWJady1sVC1RXzlkSFhxSDBSeG03aHR0MGl2bjdZcHByUUhtNXNSMjlTcnNMc3FEbzloT1hMRXV4T010eHE?oc=5",
-    "date": "2026-11-06"
-   },
-   {
-    "title": "Essity stock in focus after board member buys 700,000 shares",
-    "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOeU5vUC1zTVBzdXVhT1M5dmY3dXlkZTNoNjl1d3lTQnJrSFlKc2MxM1lNSmFKSkhOemVqcVBlOWFwSGI2UVRNZVJsbXE1TGJ2dnZpWjJGa1drRWVWakZjNlZFVDM5MUhiX2hzODEySTB0UWRSZDk2S25OMms4VlVxSnhhNHRkbHhmNU5aOGw0aVFvckxDLXNrNEVtcHVBd0lid0ZlSDZmbkRza25rSDB2UkRueFZxY215NEhvX1htUkg?oc=5",
-    "date": "2026-11-06"
+    "title": "Essity AB (publ) (ESSITY-B.ST) Seasonal returns chart - Yahoo Finance",
+    "source": "Yahoo Finance Singapore",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hZ2VHMmZlczA1N3JqTGFHcl9aeGdwZ1lYckFDTVFQYVBjUXFUWTJjdS1VcGlLcWNzNDJocWdDdEoweXBTemtOblZvVEUxdmN6SGhXSFBmLWUyaGZZalVESkJ3dmpWQVR0bGJj?oc=5",
+    "date": "2026-11-05"
    },
    {
     "title": "People: Arbtech; Law Distribution; BDO; Bruntwood; Essity; Cavendish; CarMoney",
     "source": "TheBusinessDesk.com",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQlY0RlktOFZncTNZYm81cEtXYURvdnpwdTF0aE9EeFBkaVdGTjBkcmt0Q2djOElIdG5tVVh3NHhMRTJtSm43YkFTaXZja1BUMjZPQ0RnRlFBLThEMTJSNXNyZEwwSlZHWkFESzBHS3p0YzdJV2tXcjVDZ3F5SHpxM1hFOU1lbU5WcngyNlFXa2c3MlBjQ242MWV3ak80Z2g0QjZaOFlqeEt1dzNiM3c?oc=5",
     "date": "2026-11-05"
+   },
+   {
+    "title": "Help the Essity truly sparkle and get the Nomads a record crowd!",
+    "source": "Grassroots North Wales",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTUo1ZGJ5T2dlWUY2dGJfVW5NZndpZERSNWxiclFyTlRTWGZLZlJaY2prdWNnbjZNVGRNd2lqMzBUTm5MT3VkTld3SEt1TWI3VVA1bTc0b01BcHNtOFl3ai01em5rLURjZFlaTGNJTFR5WmNySlh0YUsxME1FSFRFZEttR0pQTFZNSG9Ealg5Z3ZrS3NsN3JIZlhnUi1XUdIBowFBVV95cUxPNDFhcFNJVTVleHlUTm9BeHRVM2ktYVIwVmtTQjNPUl84cldVUVpCZHFxZjNHVnM5dUlDRnF4WktyQjZuZXE3cXpPR1NIYzB6U0hLZGZScE8wUEN1c1l0ZG52dWFMRGlWTk9OaVVGTFA4NmpWOHBJeG9ZdUhqV1FyR2ZOQ0x2NjdfS1hqMHdzRUFGY2RLUFNjRE1Jd0ctd3RXeGVz?oc=5",
+    "date": "2026-11-04"
    }
   ],
   "sofidel": [
@@ -90,6 +90,12 @@
   ],
   "lucart": [
    {
+    "title": "In a Word / Printing Industry Talent: A Look at the Latest Appointments",
+    "source": "PrintIndustry.news",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQTC00Z3NZcTRiVmhGYkpRX2tHS3dlaldYaU1RTkJJOUQ5OF90NVFtZVJ0ZTJUUmtXcHpwYmtldVd6Ykx0Ti01amJRVHY4ODlDZFVja3NSQk5YQUw5SU94Xy1sSUJqUElsSHA2YzVVUDVMVHpHOFVlczYyRW9aWkF5TDhKaWV0eDkyQmhCd1lGZmdZbng1RkxPanhtblhadU1sM2pZ?oc=5",
+    "date": "2026-10-29"
+   },
+   {
     "title": "Lucart earns fifth consecutive EcoVadis Platinum rating with 93/100",
     "source": "Papnews",
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUkpfajdYOVAwU3FabkxzZjRpUWE3MmJzWksxbEd6RTBCSkNYVDdtMmlZZDV4RWtGX2ppSTh1MWEtSUdTeE84TW1ZNjFJU291Z0ctVnJuQVY4YjZzOXp2S3dxdkkzUldINkkyTFJXVEdSbEZncUUyMlhsUEtITVgxQThXblkxcWlPcEM2bmJ6TlowSUlsOC1j?oc=5",
@@ -106,15 +112,15 @@
     "source": "EUWID Pulp and Paper",
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYkNHU1lvUXBrS25GNXV3WUpzVlQ4ZEtLaUNETG5SVUJpWUUwQVg0a19MUjVydVppay1aNlZlYkR2M2c3Rzc4WHdFVTkxSFY5T0dMLXVNYzNQSUVZdXR4NVdhUHQ0cU54cy1qN2hpWTBHT29UbHhwSDJsajZFdXFhOEJRZ213NklMQk14TFJZQk13M3hVSXhYRTBVUE9aZw?oc=5",
     "date": "2026-10-01"
-   },
-   {
-    "title": "Toscotec to Supply Lucart with New Tissue Machine at Laval-sur-Vologne Mill in France",
-    "source": "Paper Industry News",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPYk1ZNndnOVdkaUdfNHBhZ1lIUHZzRW9yeGFzYm01N2UtTTNRcEZrMDk2MXY0cV81SFFyakZyU1RjX1JDQkI0ZE9UalVjVFhlQ1EwcDhVQ0l2Vm41Q1NadEs2eXNFUk8xRnRNRjR3cXJFSzk2aHpoOTdDTElZam5rWTdVdUVFRHJSS1JvTFdydklHZ3dzbDZqcmp6aExaYWxpV2lkbjVPaUdhNmhPOS1hbUlVRTQxbWZfdE1FRHNHbU8zQkI5RnJFQVJYZWFYNzA?oc=5",
-    "date": "2026-10-01"
    }
   ],
   "kimberly-clark": [
+   {
+    "title": "Kimberly-Clark Corporation (KMB) Stock Price, News, Quote & History",
+    "source": "Yahoo! Finance Canada",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBzTngwV3E0MFU5VjBUcUlkMDd6ejl3LXA3c1BTVXJVaXlaMGgxamgzMDBOZTUzUUo3TVBBMXZYejRKXy1tNlVrOWhBeG80cVFE?oc=5",
+    "date": "2026-11-07"
+   },
    {
     "title": "Kimberly-Clark Third-Quarter Earnings Top Street Views Despite Macro Volatility",
     "source": "marketscreener.com",
@@ -128,12 +134,6 @@
     "date": "2026-11-05"
    },
    {
-    "title": "Kimberly-Clark (KMB) Q3 Earnings Beat Expectations, Dividend Sus",
-    "source": "GuruFocus",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNM0lEbDFMdlVHajJpeDNYaV83Q2ZyOGdYQmFmMDJQQk5zcTFldnJFQ29NTnJnRWs3RUI3ajZpN1dUV1JPbVFqUXExbWRhTHBIZzdWQndGWjA0OHFmNTlUUF9JYVdTY1hUaFF0clkwZjM4U1dSUXZMRlRuLTgtWFA5N1pGMTc3dTVMd1lxdXZSaUwzSkFoa1FMcDF4STdHSTRpMjJqQkJ4YkJEc1hhMWJfSVhnZ0VnVUhtbS1B?oc=5",
-    "date": "2026-11-05"
-   },
-   {
     "title": "Kimberly-Clark completes acquisition of Kenvue, expanding global consumer health portfolio",
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkJjQ3VyQTRFa2djWW1SU3NiRm95bXZiQS0tNTVKYy1vS2FibUEyeUE5eXA5M1pEWHpobllod3pZeEZHSFhFaUlaQm5KSVZMdUQ1cDB6TjRFZnZlVU1vdjg5WUI2WEp3MElHWlNBMGc4OEtmSjVnUzlLdi1fNnQ4NnJVcVk5cEZxbkZia09DY0VRSEt0VHNuWlF2WFRqZFI2LWlBbE4zSGJtN3JielpRemRHZk16ZTM2ZEo3X21JaGdGYVZTc2c?oc=5",
@@ -142,16 +142,16 @@
   ],
   "pg": [
    {
+    "title": "What Does Procter & Gamble (PG) Mean By Raising $4 Billion In Debt?",
+    "source": "Yahoo Finance",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZVoyREc2cHZqOFJoUW5jakhpQkxNeWtnM01mZkFyREMwNUhVNnV6MFdsY01UTHRjVDV1WHdfYnhXT205Q2FydDJkWjdVNi10cHBTakMtbFpzSEFKTnRPN3NXTm43WXlqX1RCTEExUXJmeVhPSTd4NzZWaloyT2pUdDVULTVwZzVobnlGZGFtOVFOUUJJdmJv?oc=5",
+    "date": "2026-11-07"
+   },
+   {
     "title": "Procter & Gamble (NYSE:PG) Stock Forecast & Analyst Predictions",
     "source": "Simply Wall St",
     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBPMVJlcjRCN2RCWjBKRHBLd0IxbHEzVFJoT3IzTWJzUGZobFIzMkNXVGNyaTQ1bHIzSGV5VXNLTkhxcXd0dEN4MFdxVTdkczVmZzVHb29hSVcwTnZsNlhnY0RPQjZsZTVhRVpJVG5oZHUyXzJjclZmTW90SQ?oc=5",
     "date": "2026-11-02"
-   },
-   {
-    "title": "Major brands at risk of breaching EU deforestation law, investigation reveals",
-    "source": "ENDS Europe",
-    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNN25RVHVJa001SkpQWmljbXV5RjF0REMzdnlUY1o0SjZRZmxoSEJKWHU2Z2pVTnFZdlBzNzV4NEpKbVJ5X3hVQkRjSmNoV05EWkd4bnVGQnBaRHBXX2ZCWlI5Q3ctcko2ekJYeFFPaHNjWkJvSnlNNTUtYTJ6UzgyNmZvT1dQVDZVOVZlWFVDNHNOcHd3SzFEc3JGal9MVHJheUdKS3JwZHlxMG5jTHBfLXBXUQ?oc=5",
-    "date": "2026-10-30"
    },
    {
     "title": "From Scrap Wood to Steam: How Procter & Gamble is Using Renewable Energy to Make Toilet Paper",
@@ -160,19 +160,13 @@
     "date": "2026-10-26"
    },
    {
-    "title": "What Procter & Gamble Shares Means For Shareholders",
-    "source": "Simply Wall St",
-    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRzFTVnZKSUZVOVQ1Z2h3emliOC1FYkUzRHBfVE1ROHdqU29Sd0JuajFVa1VyTkFlRXRmRDViMzVBT1pyN3htd3lqRjBuT215WTg1bHpTTVJHT1Y4UmpVSHZhT3VTMHp4VVhkUnR1bHZWTEg2TWpfaUc4ZDNqYWJvVmVDal9zdEs1UGJKOGJhSGVXZjE2NkZrWU45N1V0cGhmRnZpc1BodXFya1AzdWdFUnVDdk41bXJtWHpv0gHAAUFVX3lxTE1XeUN0SkRHZWxZZV85M1N1TFJLR0NGU0hsY2xRS3h4cWlqVHNkVndac0kwM0xmLUVGS29UZDR0QW9LLUV4OUpkQjJJOTB4Mnh6OHBNRWRHRXhxRjZOdnlwLVFHRWN6STFUU0RrdWVEZGNYUGlpUFFsckFJQlBrNXNWc1hWRW1ZdXY0TEpmaXRyT3pTMXhhTVdZdXc5VEtQVG1USzhsSXdrT1NyWFJhcUQzcjhCXzBPUmprSHc5ZTV3VQ?oc=5",
-    "date": "2026-10-25"
+    "title": "TD Cowen maintains Hold rating on Procter & Gamble, $166 price target",
+    "source": "TradingView",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcmlOQnM2Zld1ZUhFbTRjb2VtMzM5eVpFRlUtZmQ0RFB5UkVZbmNKeXhObFNpSEFUc3R6TWtXYkU5XzkwWUQwb0U4MHRQYTNCN0gwMlhTZnA1X3VRX1Q5ckFkOHJGN2JzaHZWR1dEcklpaU40NUZ3Smh1b0VBUlVteWczZldzbXNBdGFLdEs2bGxXRFVoN1ZnUGRwZ1F4X3dGUGg3d1dPdEhWQjc3RWhRbi1QM3lSVnM4SkdyblZhSzNrb3Y3OWc?oc=5",
+    "date": "2026-10-23"
    }
   ],
   "georgia-pacific": [
-   {
-    "title": "Georgia-Pacific Investing Approximately $150 Million in Palatka, Florida, to Modernize Angel Soft® Bath Tissue Production",
-    "source": "Red Book Lumber Data",
-    "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNamVzOUpEY19tNjdDRnZSZ0hkUjM3TVBEcXZZcXV3dFNfYlIzc3pXT3FNcS1TQkhHaHZZRW1BTVhlaGU0S1A1UENMb2pfZm5fZ0QyMzU0cEdqdEJPdzNUZG9BTlB6VlFESks4NjRZUlJwRVItUmdXMVNXUkladHl6TV9WSEFQNEhnZ0lqNWY2LU45YlZzQUd5YWhIT0FZblRmVHh0cEdoS0JMNzRGMXJkV2pFcTgzQnFrNklvbWxkNGNkQWlSYVNvOW1VUmFYWXIzNUFleEdfU0c0U1k5cktPWUpWOXF4UEM3eXVSSmVUaUhoT1RGSlE?oc=5",
-    "date": "2026-11-02"
-   },
    {
     "title": "Georgia-Pacific invests $150 million in Palatka tissue rebuild",
     "source": "Papnews",
@@ -190,6 +184,12 @@
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOYWlaZ01iaERSdXFseW1JSm55ZXFQTUtDTUR1N250Y1VBRnhrQnVTdm5ibmtHb25YdF9NS3BFd3A4eG1FTkI5eHRPXzktaGlBWnpyUE5tbUtnQTFYMjlNQXRIUlV2Q0F1aHZZREFQTTV1cUdIRVdqY3g0SjJSX1duLTc4cHQ2c2tnV1J3MVJjY20tVm5NY2Q5bktJLXQ2RmVwYVd1bGZxSmJ0bFB5YXljTmc1N1NCLTlEaU1JVkY5bEY?oc=5",
     "date": "2026-10-29"
+   },
+   {
+    "title": "On a Roll: National paper giant to invest $150M into local plant",
+    "source": "St. Johns Citizen",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc1JzclpkXzJ1LUFuckRDdTA0aG5xUjBKdGFPWE9HWDZSdW9RaVZGSUJTNUs5TXRqbWxIN0FqamdvcXp0aDItN1JaQlpyS3JJSFJUd3pTVXpNd05oX3F3a3I2dmJiSk9RR2o0amVPRnVpUWt6TUNoZmhxLUpnbGY3R3lOaTI2SHhSNVNYdndB?oc=5",
+    "date": "2026-10-28"
    }
   ],
   "app": [
@@ -220,6 +220,18 @@
   ],
   "hengan": [
    {
+    "title": "Did Chairman And CEO Merger Just Shift Hengan's (SEHK:1044) Investment Narrative?",
+    "source": "Yahoo Finance Singapore",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOUzdNaGg5OXZCSzU5Mjg4RjNYM1VGVWNXdFdFY2NwblpKOWZmM0pTUlAyQ3ItOWoyYXkzNmU1X3ZLVDhOcEdtMXBFZlp1THl6bGZPQTh1TlhYM0pzV0JuYjAtSXowRUFJLXJDMHl0bUpGSUktSkNWcnJoS3dBX3RhQzdxWQ?oc=5",
+    "date": "2026-11-07"
+   },
+   {
+    "title": "How Investors Are Reacting To Hengan International Group (SEHK:1044) Combined Chairman CEO Role",
+    "source": "Simply Wall St",
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPNnBUSnM1ai1vR2NPS05hV1A4NFVWRW9EU3kyYl9jQXNtN0lVeEl3TnE2UGZ1Q203YWRRZ2F5WVY3VlI4a3dINXFYdDVOOGZsRE02Zks4ZkxwRTNacGtFVTBLUGpQbXdSVDY2YV9Fb3BrR0gzVGlrMHJqSGNZaFlLYlk3SmR0NF9EOWZfZkV6Rm11YWx5ODhqVkY3T3dVdkd5eElZdW9ncjZ5amw1SVRoLVMwT0JzVEU2eTg4SFhTOEZ4bmtoZXBpUEpTR0l5cHc0MGhPakQtNy1rc0RVcTFkcnhsMW91NDN4cWfSAeoBQVVfeXFMTzZwVEpzNWotb0djT0tOYVdQODRVVkVvRFN5MmJfY0FzbTdJVXhJd05xNlBmdUNtN2FkUWdheVlWN1ZSOGt3SDVxWHQ1TjhmbERNNmZLOGZMcEUzWnBrRVUwS1BqUG13UlQ2NmFfRW9wa0dIM1RpazByakhjWWhZS2JZN0pkdDRfRDlmX2ZFekZtdWFseTg4alZGN093VXZHeXhJWXVvZ3I2eWpsNUlUaC1TME9Cc1RFNnk4OEhYUzhGeG5raGVwaVBKU0dJeXB3NDBoT2pELTcta3NEVXExZHJ4bDFvdTQzeHFn?oc=5",
+    "date": "2026-11-07"
+   },
+   {
     "title": "Hengan International Group (SEHK:1044) Could Be 30% Below Fair Value On Leadership Shake Up",
     "source": "Simply Wall St",
     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOeTNIYzNEbndVaTBpOElQbHNIUGxTWkg5VzJrM0s4dEplTHppVjZodGNaOW4xTkYtQzlpZXh5N1RCcEZFRGM3U0VlQlNNdERuN0pLZDdITjBWeUU3Wlh0VVFhTUhYRnJJYWFTM0gxdm5wRnNySmM0WWRqLVhJQXFLMUxlZGx3bVhfbmF3LXhjOGxxMFE5Mkw3NlZNQzJRamc4bGFhRUI3eWJRME5fbUsta0lCT0lIck1aY09VZVFaQUNOWmRONDVZYkNWb1k5bGQ0MUdTMkwxU1JRenlycTFOVGpDMkPSAeoBQVVfeXFMTUtDUTJJeWN4M0JyLUdrT2tTRzJPWWtUaTlyQ0hwV2VWN3BPUENpVGZ4eThxV3N0MmFfZGJ0SjNaTlV5QldjcTZMU2xyaHlLOWVDUWQzdklHRVZkcFZteVFfNVRNREgtU1ZqQmdiOVE3WFR6YlQxaWZSdkFvazJBUUYzY0NNWVEzT2ZCQ3F5T0Q0M2U4bnJ2ZHY5cHQwNzY2QkZ4MUEtUXdKM0NTS1VVYkFIYm13Wnphb1FJVFYteTZLWF9LNmdaVlQ0aU15NHBrRlBHLURta0RrUl9INVdrUU1QWEVkRGR6d09n?oc=5",
@@ -234,27 +246,27 @@
   ],
   "softys": [
    {
-    "title": "CMPC: Higher sales volumes could not offset cost pressure: adjusted EBITDA fell 7% QoQ",
+    "title": "The Empresas CMPC S.A. (SNSE:CMPC) Third-Quarter Results Are Out And Analysts Have Published New Forecasts",
+    "source": "Simply Wall St",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNXzNRbjlJbUsteU82UkdCenQ5UjlVaHdhRG9pR0VPSXdKSHRXZ1R0dE1ZNDk0UmMycXJCZFBDa3RmbnZuS3lnUGpMMFA1ZTcxY1RBXzRDbjlROGZZYTZQVDVFLXBzRF9ndk1XXzBLY19aS0ZKLVBOcnk1dHF6ZDlpbVR1bWtGb1FQSWkxTjhkdDZMaHlsWTJ3QkNwWVRlRTFScTZqX1h3Y0ZadnRDMEhnTkNRSWg4T0llY2p0VnNjWk93NGVwTWxjZk5uLTBhZGcyNE9B0gHYAUFVX3lxTE9Ia0VNRHhCOVVWNGR6bk5DLTdvSVZHd3JSbDZWcmo3WktmUEVwZEVEWFUxa1RTWndhY3EwNHBpa0pKQ2hiazRnU2plYmhSRS1JNThHWXlaSU00YThQRGg3c0RtVnpoN28zOS1reEhxQUo0Z0ZXTkpnSjFEaGZBZVptVXFDc0NjOWNpZkVKaHhGZ2hXaHVZb0p2LXFsbnpnS0FPc3RDTktGVlBaTlRkNWI0OUlLZ0tFT1VCRnRmbjZrOFpROEhDSVZmcEM2WFEtODdNRnBZa0pUeQ?oc=5",
+    "date": "2026-11-08"
+   },
+   {
+    "title": "Empresas CMPC Q3 2026 Earnings Call Is Live",
     "source": "TradingView",
-    "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxObnhLbHlnSGZ2bVY1azZseVJyanMwT29IMzVVTFQxSWQyZUVOMkNEQ2NSMVR5cVNGOFFDRHIxWUdDWFZtaF9zN1RGWWh2S2xiV1RhN2NwNTdpU0M4QVlfb1AxRmRTXzZjRklwWF9WRkR1d2JGS2lRTTFWWlRvVy1fZVprRHQzVmlPRDQzR1RwVEVodG9HZF9kejA5M0paXy1lbTVQbTdoVDVrLUllMEw4RHNjZmtxUG1wb3o0R1R6QTJrbWQyUjg5eDgyb25PS2M2VzVnM29sSmVKRnZRa21ZNWlBYVIxaDN1QjhaYi00UlNjOVRsZk9yZXpYV2RaSFJsR0kzdVIxYkRINlZ2eG5rOVZ2Zw?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYTFpSks0ZnFHOEhvcVE1aGdpQm5Hc3VFVk1aNHQycUFZQXBEbzdXMXFSMzUwdE9TUzc5SmxLMnF2a2ZQLTVndVU0cG5ZUE9TeUNyTWhqRDBoRzhSb1RCczRwRTJJNkE0dk5xbjJUa1RxYzdxWjFTS0ljMWRNTXRzaE1KcGFjU1Bma0ZQd01vVXRXeE9yLVhKbDJpeXdwWFluM3BKdDZmOWtvUE1NdU42ckdB?oc=5",
     "date": "2026-11-06"
    },
    {
-    "title": "CMPC Q3 adjusted EBITDA falls 3% as pulp prices and diesel costs weigh",
-    "source": "Lesprom Network",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVDZEMkdKX0pCWWNvTHlVeklkM0lVbVhSaGVLREQtVS1LeGx3akVtZWI5UVBHUWRWNmFqTjB1end6aFNVdkQ2dUhrM2JtM0tGYzhyRmVCUFVEMVZlemtvN2N2aktzeE1iYjV6Z2YyMTNMOWlONTUxODE2SldwWlMzalJ6Mm1XM2NjVWU4bWQ5WDY4RnZjbDFENkp3eTdZem5nUmxDRm9va1lpN0RDZmc?oc=5",
+    "title": "Empresas CMPC (SNSE:CMPC) - Stock Analysis",
+    "source": "Simply Wall St",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1KWnNvekk5M2lidldZVGZWMnpfN2ZiLUZXVmZTMUNWUHNWS2VxVUtMdXFkcXJxTnVvYUdEdkhiUVZ2YkgyeElybHJtZGhHamJhQnNSd3lxMk8zN1JScUw0bnZpbW95ZEhHWTExMTBQck40dEhKN21iOHJaLWc?oc=5",
     "date": "2026-11-06"
    },
    {
     "title": "Earnings To Watch: Empresas CMPC SA (XSGO:CMPC) Q3 2026 -- GF Value Sees 83% Upside",
     "source": "Yahoo Finance",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQdl9id0dlaGpwVTktUnZtWlpYMWZRM0RuZTdDWDNfNjZDcm5nLWhkeC04SDBPN1doLUUxWHA1blIzcDY1TDVKZk5NdGR3RElYellkYzFJX3B1ME9TMmtDdXg5bUYzajEtREtQczdudjdOMGpSMnZhUGgzbDJXeExieklPbGVibDJVTDVudzNLcksyYUUwVWFKNWZkOEM?oc=5",
-    "date": "2026-11-05"
-   },
-   {
-    "title": "Earnings To Watch: Empresas CMPC SA (XSGO:CMPC) Q3 2026 -- GF Va",
-    "source": "GuruFocus",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZUtONjUtb2lPVkJuVDdNZFlJb1V3TmVHSUw4LWxuekZXVkZXU0E0UVFwdFl5cGxaMkpLUlVXb1FOX0JRTmJveGVPa3dSbmFLQS1EaHBaNnJlSGpwMHBxblpVSG00UnhuUEdiUHdGV3RtRmRjaW1pdzAxR3Vkd3BfZDB5dGNPSkZOSTBOYkpuM1BHLURaNy02MWwzY2VKSmo1ZkdOX3FjY2d6S2JfREttTFN4bHQ?oc=5",
     "date": "2026-11-05"
    }
   ],

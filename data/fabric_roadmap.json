@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T11:52:02",
+ "updated": "2026-11-09T06:36:52",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -377,16 +377,6 @@
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Use-OneLake-as-native-storage-for-Azure-Databricks-Generally/ba-p/5377939"
   },
   {
-   "id": "b99f2796-064f-f111-bec7-000d3a36696c",
-   "name": "OneLake malware scanning",
-   "product": "OneLake",
-   "tool": "fabric",
-   "type": "Preview",
-   "quarter": "Q4 2026",
-   "desc": "OneLake malware protection helps secure your data by automatically scanning files for malicious content when they're uploaded. It surfaces alerts and scan results for further action, providing built-in protection for enterprise data without",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/onelake-security-preview/5172529"
-  },
-  {
    "id": "e326538e-d31f-f111-8341-6045bd0a8ec1",
    "name": "Add to preset for Power BI visuals",
    "product": "Power BI",
@@ -545,16 +535,6 @@
    "quarter": "Q4 2026",
    "desc": "Private Link enables secure, private connectivity between your virtual network and Microsoft Fabric, eliminating exposure to the public internet. With Eventstream's integration with Workspace Private Link, you gain granular access control a",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Strengthening-data-security-with-workspace-level-private/ba-p/5377347"
-  },
-  {
-   "id": "afcd2c3d-5bb2-f111-aaab-70a8a5afd4dd",
-   "name": "Fuzzy string match is available across Microsoft SQL offerings",
-   "product": "SQL database",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "Fuzzy string match is now generally available across Microsoft SQL offerings, including Azure SQL Database, Azure SQL Managed Instanced, SQL database in Microsoft Fabric, and SQL Server 2025. You can compare strings based on how similar or ",
-   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/New-string-functions-and-operators-in-Fabric-Data-Warehouse/ba-p/5195232"
   },
   {
    "id": "009295f2-84b6-f111-aaab-7ced8d70bb60",
@@ -1055,6 +1035,16 @@
    "quarter": "Q1 2027",
    "desc": "Microsoft Fabric's outbound access protection blocks all outbound connections from a workspace by default and only allows approved external connections through managed private endpoints or data connection rules. It applies across workloads ",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/outbound-access-protection-for-data-factory-generally-available/5172006"
+  },
+  {
+   "id": "761be85d-2358-f111-bec7-6045bd00f798",
+   "name": "MLOps: model alias",
+   "product": "Data Science",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q2 2027",
+   "desc": "This feature is to offer a model alias that provides a stable, human-readable name pointing to a specific model version. This lets them switch, promote, or roll back model versions safely without breaking downstream integrations.",
+   "url": "https://www.fabric-gps.com/release/761be85d-2358-f111-bec7-6045bd00f798"
   },
   {
    "id": "50f83e60-1f40-f111-88b5-000d3a376137",

@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-06T11:40:56",
+ "checked": "2026-11-09T06:26:53",
  "credentials": true,
  "indicators": {
   "de_rcp_102": {
@@ -162,42 +162,18 @@
    ]
   },
   "de_retail_drug": {
-   "table": "45212-0005",
-   "valueCount": 68,
-   "values": [
-    {
-     "code": "WZ08-4775",
-     "content": "Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln"
-    }
-   ],
-   "classify": {
-    "var": "WZ08E5",
-    "keys": [
-     "WZ08-4775"
-    ]
-   },
-   "matched": [
-    "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex"
-   ]
+   "table": "45212-0014",
+   "tried": {
+    "45212-0005": "GENESIS: {\"Code\": 7000, \"Content\": \"Für die Teiltabelle mit der Metadatenkombination:\\nMonatsstatistik im Einzelhandel (45212)\\nUmsatzindex (UMS103)\\nDeutschland insgesamt (DINSG)\\nMonate (",
+    "45212-0004": "GENESIS: {\"Code\": 7000, \"Content\": \"Für die Teiltabelle mit der Metadatenkombination:\\nMonatsstatistik im Einzelhandel (45212)\\nUmsatzindex (UMS103)\\nDeutschland insgesamt (DINSG)\\nMonate ("
+   }
   },
   "de_retail_food": {
-   "table": "45212-0005",
-   "valueCount": 68,
-   "values": [
-    {
-     "code": "WZ08-4711",
-     "content": "Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw"
-    }
-   ],
-   "classify": {
-    "var": "WZ08E5",
-    "keys": [
-     "WZ08-4711"
-    ]
-   },
-   "matched": [
-    "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex"
-   ]
+   "table": "45212-0014",
+   "tried": {
+    "45212-0005": "GENESIS: {\"Code\": 7000, \"Content\": \"Für die Teiltabelle mit der Metadatenkombination:\\nMonatsstatistik im Einzelhandel (45212)\\nUmsatzindex (UMS103)\\nDeutschland insgesamt (DINSG)\\nMonate (",
+    "45212-0004": "GENESIS: {\"Code\": 7000, \"Content\": \"Für die Teiltabelle mit der Metadatenkombination:\\nMonatsstatistik im Einzelhandel (45212)\\nUmsatzindex (UMS103)\\nDeutschland insgesamt (DINSG)\\nMonate ("
+   }
   },
   "de_imp_tissue": {
    "table": "51000-0014",
@@ -258,19 +234,7 @@
      "WA48182099",
      "WA48183000"
     ]
-   },
-   "matched": [
-    "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Gewicht",
-    "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Gewicht",
-    "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Gewicht",
-    "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Gewicht",
-    "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Gewicht",
-    "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Gewicht",
-    "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Gewicht",
-    "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Gewicht",
-    "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Gewicht",
-    "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Gewicht"
-   ]
+   }
   },
   "de_exp_tissue": {
    "table": "51000-0014",
@@ -331,19 +295,7 @@
      "WA48182099",
      "WA48183000"
     ]
-   },
-   "matched": [
-    "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Gewicht",
-    "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Gewicht",
-    "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Gewicht",
-    "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Gewicht",
-    "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Gewicht",
-    "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Gewicht",
-    "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Gewicht",
-    "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Gewicht",
-    "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Gewicht",
-    "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Gewicht"
-   ]
+   }
   },
   "de_imp_pulp": {
    "table": "51000-0014",
@@ -364,11 +316,7 @@
      "WA47032100",
      "WA47032900"
     ]
-   },
-   "matched": [
-    "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Gewicht",
-    "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Gewicht"
-   ]
+   }
   },
   "prof_energy_total": {
    "table": "43531-0001",
@@ -558,7 +506,7 @@
   }
  },
  "61281-0006": {
-  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n61281;Index der Großhandelsverkaufspreise;JAHR;Jahr;2025;MONAT;Monate;MONAT04;April;DINSG;Deutschland insgesamt;DG;Deutschland;CP08P1;CPA 2008: Altpapier und Altmetalle;CPA08-381152-07;Sortiertes Büroaltpapier;18,0;%;PRE011;i",
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n61281;Index der Großhandelsverkaufspreise;JAHR;Jahr;2025;MONAT;Monate;MONAT04;April;DINSG;Deutschland insgesamt;DG;Deutschland;CP08P1;CPA 2008: Altpapier und Altmetalle;CPA08-381152-07;Sortiertes Büroaltpapier;87,2;2021=100;P",
   "columns": [
    "statistics_code",
    "statistics_label",
@@ -583,6 +531,29 @@
    "value_variable_label"
   ],
   "sample": [
+   [
+    "61281",
+    "Index der Großhandelsverkaufspreise",
+    "JAHR",
+    "Jahr",
+    "2025",
+    "MONAT",
+    "Monate",
+    "MONAT04",
+    "April",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "CP08P1",
+    "CPA 2008: Altpapier und Altmetalle",
+    "CPA08-381152-07",
+    "Sortiertes Büroaltpapier",
+    "87,2",
+    "2021=100",
+    "PRE011",
+    "Index der Großhandelsverkaufspreise"
+   ],
    [
     "61281",
     "Index der Großhandelsverkaufspreise",
@@ -628,29 +599,6 @@
     "%",
     "PRE011",
     "in"
-   ],
-   [
-    "61281",
-    "Index der Großhandelsverkaufspreise",
-    "JAHR",
-    "Jahr",
-    "2025",
-    "MONAT",
-    "Monate",
-    "MONAT04",
-    "April",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "CP08P1",
-    "CPA 2008: Altpapier und Altmetalle",
-    "CPA08-381152-07",
-    "Sortiertes Büroaltpapier",
-    "87,2",
-    "2021=100",
-    "PRE011",
-    "Index der Großhandelsverkaufspreise"
    ]
   ],
   "series": [
@@ -688,11 +636,6 @@
   "de_ppi_diesel": "Deutschland · Biodiesel und Biodieselmischungen | Erzeugerpreisindex gewerblicher Produkte",
   "de_labour_paper": "Deutschland · Verarbeitendes Gewerbe · X13 JDemetra+  kalender- und saisonbereinigt | Index der Arbeitskosten je geleistete Stunde",
   "de_prod_paper": "Deutschland · X13 JDemetra+  kalenderbereinigt · Herstellung von Papier, Pappe und Waren daraus | Produktionsindex",
-  "de_retail_drug": "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex",
-  "de_retail_food": "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex",
-  "de_imp_tissue": "10 series (sum)",
-  "de_exp_tissue": "10 series (sum)",
-  "de_imp_pulp": "2 series (sum)",
   "prof_energy_total": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Insgesamt",
   "prof_energy_gas": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
   "prof_energy_power": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
@@ -1159,6 +1102,62 @@
    {
     "code": "WZ08E5",
     "content": "WZ2008 (2- bis 4-Steller): Einzelhandel"
+   }
+  ],
+  "45212-0004": [
+   {
+    "code": "45212",
+    "content": "Monatsstatistik im Einzelhandel"
+   },
+   {
+    "code": "DINSG",
+    "content": "Deutschland insgesamt"
+   },
+   {
+    "code": "WERTE4",
+    "content": "Preisarten"
+   },
+   {
+    "code": "UMS103",
+    "content": "Umsatzindex"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   },
+   {
+    "code": "MONAT",
+    "content": "Monate"
+   },
+   {
+    "code": "WZ08E5",
+    "content": "WZ2008 (2- bis 4-Steller): Einzelhandel"
+   }
+  ],
+  "45212-0014": [
+   {
+    "code": "45212",
+    "content": "Monatsstatistik im Einzelhandel"
+   },
+   {
+    "code": "WERTE4",
+    "content": "Preisarten"
+   },
+   {
+    "code": "UMS103",
+    "content": "Umsatzindex"
+   },
+   {
+    "code": "JAHR",
+    "content": "Jahr"
+   },
+   {
+    "code": "MONAT",
+    "content": "Monate"
+   },
+   {
+    "code": "DLAND",
+    "content": "Bundesländer"
    }
   ],
   "51000-0014": [
@@ -1961,556 +1960,82 @@
   "periodColumn": "1_variable_attribute_code"
  },
  "45212-0005 · WZ08-4775": {
-  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;4_variable_code;4_variable_label;4_variable_attribute_code;4_variable_attribute_label;5_variable_code;5_variable_label;5_variable_attribute_code;5_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n45212;Monatsstatistik im Einzelhandel;JAHR;Jahr;2025;",
-  "columns": [
-   "statistics_code",
-   "statistics_label",
-   "time_code",
-   "time_label",
-   "time",
-   "1_variable_code",
-   "1_variable_label",
-   "1_variable_attribute_code",
-   "1_variable_attribute_label",
-   "2_variable_code",
-   "2_variable_label",
-   "2_variable_attribute_code",
-   "2_variable_attribute_label",
-   "3_variable_code",
-   "3_variable_label",
-   "3_variable_attribute_code",
-   "3_variable_attribute_label",
-   "4_variable_code",
-   "4_variable_label",
-   "4_variable_attribute_code",
-   "4_variable_attribute_label",
-   "5_variable_code",
-   "5_variable_label",
-   "5_variable_attribute_code",
-   "5_variable_attribute_label",
-   "value",
-   "value_unit",
-   "value_variable_code",
-   "value_variable_label"
-  ],
-  "sample": [
-   [
-    "45212",
-    "Monatsstatistik im Einzelhandel",
-    "JAHR",
-    "Jahr",
-    "2025",
-    "MONAT",
-    "Monate",
-    "MONAT09",
-    "September",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WERTE4",
-    "Preisarten",
-    "NOMINAL",
-    "in jeweiligen Preisen",
-    "WERT01",
-    "Original- und bereinigte Daten",
-    "WERTORG",
-    "Originalwerte",
-    "WZ08E5",
-    "WZ2008 (2- bis 4-Steller): Einzelhandel",
-    "WZ08-4775",
-    "Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln",
-    "136,7",
-    "2021=100",
-    "UMS103",
-    "Umsatzindex"
-   ],
-   [
-    "45212",
-    "Monatsstatistik im Einzelhandel",
-    "JAHR",
-    "Jahr",
-    "2019",
-    "MONAT",
-    "Monate",
-    "MONAT06",
-    "Juni",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WERTE4",
-    "Preisarten",
-    "NOMINAL",
-    "in jeweiligen Preisen",
-    "WERT01",
-    "Original- und bereinigte Daten",
-    "X13JDKSB",
-    "X13 JDemetra+  kalender- und saisonbereinigt",
-    "WZ08E5",
-    "WZ2008 (2- bis 4-Steller): Einzelhandel",
-    "WZ08-4775",
-    "Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln",
-    "97,4",
-    "2021=100",
-    "UMS103",
-    "Umsatzindex"
-   ],
-   [
-    "45212",
-    "Monatsstatistik im Einzelhandel",
-    "JAHR",
-    "Jahr",
-    "2023",
-    "MONAT",
-    "Monate",
-    "MONAT12",
-    "Dezember",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WERTE4",
-    "Preisarten",
-    "NOMINAL",
-    "in jeweiligen Preisen",
-    "WERT01",
-    "Original- und bereinigte Daten",
-    "X13JDKSB",
-    "X13 JDemetra+  kalender- und saisonbereinigt",
-    "WZ08E5",
-    "WZ2008 (2- bis 4-Steller): Einzelhandel",
-    "WZ08-4775",
-    "Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln",
-    "129,1",
-    "2021=100",
-    "UMS103",
-    "Umsatzindex"
-   ]
-  ],
-  "series": [
-   "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex [2021=100]",
-   "Deutschland · in jeweiligen Preisen · X13 JDemetra+  kalender- und saisonbereinigt · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex [2021=100]",
-   "Deutschland · in jeweiligen Preisen · X13 JDemetra+  kalenderbereinigt · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex [2021=100]",
-   "Deutschland · in konstanten Preisen · Originalwerte · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex [2021=100]",
-   "Deutschland · in konstanten Preisen · X13 JDemetra+  kalender- und saisonbereinigt · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex [2021=100]",
-   "Deutschland · in konstanten Preisen · X13 JDemetra+  kalenderbereinigt · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex [2021=100]"
-  ],
-  "periodColumn": "1_variable_attribute_code"
+  "answer": {
+   "Status": {
+    "Code": 7000,
+    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nMonatsstatistik im Einzelhandel (45212)\nUmsatzindex (UMS103)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nOriginal- und bereinigte Daten (WERT01)\nPreisarten (WERTE4)\nWZ2008 (2- bis 4-Steller): Einzelhandel (WZ08E5)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
+    "Type": "Information"
+   },
+   "Ident": {
+    "Service": "data",
+    "Method": "tablefile"
+   }
+  }
+ },
+ "45212-0004 · WZ08-4775": {
+  "answer": {
+   "Status": {
+    "Code": 7000,
+    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nMonatsstatistik im Einzelhandel (45212)\nUmsatzindex (UMS103)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nPreisarten (WERTE4)\nWZ2008 (2- bis 4-Steller): Einzelhandel (WZ08E5)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
+    "Type": "Information"
+   },
+   "Ident": {
+    "Service": "data",
+    "Method": "tablefile"
+   }
+  }
  },
  "45212-0005 · WZ08-4711": {
-  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;4_variable_code;4_variable_label;4_variable_attribute_code;4_variable_attribute_label;5_variable_code;5_variable_label;5_variable_attribute_code;5_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n45212;Monatsstatistik im Einzelhandel;JAHR;Jahr;2021;",
-  "columns": [
-   "statistics_code",
-   "statistics_label",
-   "time_code",
-   "time_label",
-   "time",
-   "1_variable_code",
-   "1_variable_label",
-   "1_variable_attribute_code",
-   "1_variable_attribute_label",
-   "2_variable_code",
-   "2_variable_label",
-   "2_variable_attribute_code",
-   "2_variable_attribute_label",
-   "3_variable_code",
-   "3_variable_label",
-   "3_variable_attribute_code",
-   "3_variable_attribute_label",
-   "4_variable_code",
-   "4_variable_label",
-   "4_variable_attribute_code",
-   "4_variable_attribute_label",
-   "5_variable_code",
-   "5_variable_label",
-   "5_variable_attribute_code",
-   "5_variable_attribute_label",
-   "value",
-   "value_unit",
-   "value_variable_code",
-   "value_variable_label"
-  ],
-  "sample": [
-   [
-    "45212",
-    "Monatsstatistik im Einzelhandel",
-    "JAHR",
-    "Jahr",
-    "2021",
-    "MONAT",
-    "Monate",
-    "MONAT09",
-    "September",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WERTE4",
-    "Preisarten",
-    "NOMINAL",
-    "in jeweiligen Preisen",
-    "WERT01",
-    "Original- und bereinigte Daten",
-    "WERTORG",
-    "Originalwerte",
-    "WZ08E5",
-    "WZ2008 (2- bis 4-Steller): Einzelhandel",
-    "WZ08-4711",
-    "Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw",
-    "92,8",
-    "2021=100",
-    "UMS103",
-    "Umsatzindex"
-   ],
-   [
-    "45212",
-    "Monatsstatistik im Einzelhandel",
-    "JAHR",
-    "Jahr",
-    "2025",
-    "MONAT",
-    "Monate",
-    "MONAT06",
-    "Juni",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WERTE4",
-    "Preisarten",
-    "REAL",
-    "in konstanten Preisen",
-    "WERT01",
-    "Original- und bereinigte Daten",
-    "X13JDKB",
-    "X13 JDemetra+  kalenderbereinigt",
-    "WZ08E5",
-    "WZ2008 (2- bis 4-Steller): Einzelhandel",
-    "WZ08-4711",
-    "Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw",
-    "95,6",
-    "2021=100",
-    "UMS103",
-    "Umsatzindex"
-   ],
-   [
-    "45212",
-    "Monatsstatistik im Einzelhandel",
-    "JAHR",
-    "Jahr",
-    "2019",
-    "MONAT",
-    "Monate",
-    "MONAT04",
-    "April",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WERTE4",
-    "Preisarten",
-    "REAL",
-    "in konstanten Preisen",
-    "WERT01",
-    "Original- und bereinigte Daten",
-    "X13JDKB",
-    "X13 JDemetra+  kalenderbereinigt",
-    "WZ08E5",
-    "WZ2008 (2- bis 4-Steller): Einzelhandel",
-    "WZ08-4711",
-    "Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw",
-    "96,5",
-    "2021=100",
-    "UMS103",
-    "Umsatzindex"
-   ]
-  ],
-  "series": [
-   "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex [2021=100]",
-   "Deutschland · in jeweiligen Preisen · X13 JDemetra+  kalender- und saisonbereinigt · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex [2021=100]",
-   "Deutschland · in jeweiligen Preisen · X13 JDemetra+  kalenderbereinigt · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex [2021=100]",
-   "Deutschland · in konstanten Preisen · Originalwerte · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex [2021=100]",
-   "Deutschland · in konstanten Preisen · X13 JDemetra+  kalender- und saisonbereinigt · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex [2021=100]",
-   "Deutschland · in konstanten Preisen · X13 JDemetra+  kalenderbereinigt · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex [2021=100]"
-  ],
-  "periodColumn": "1_variable_attribute_code"
+  "answer": {
+   "Status": {
+    "Code": 7000,
+    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nMonatsstatistik im Einzelhandel (45212)\nUmsatzindex (UMS103)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nOriginal- und bereinigte Daten (WERT01)\nPreisarten (WERTE4)\nWZ2008 (2- bis 4-Steller): Einzelhandel (WZ08E5)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
+    "Type": "Information"
+   },
+   "Ident": {
+    "Service": "data",
+    "Method": "tablefile"
+   }
+  }
+ },
+ "45212-0004 · WZ08-4711": {
+  "answer": {
+   "Status": {
+    "Code": 7000,
+    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nMonatsstatistik im Einzelhandel (45212)\nUmsatzindex (UMS103)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nPreisarten (WERTE4)\nWZ2008 (2- bis 4-Steller): Einzelhandel (WZ08E5)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
+    "Type": "Information"
+   },
+   "Ident": {
+    "Service": "data",
+    "Method": "tablefile"
+   }
+  }
  },
  "51000-0014 · WA48030010,WA48030031,WA48030039,WA48030090,WA48181010,WA481": {
-  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n51000;Außenhandel;JAHR;Jahr;2026;MONAT;Monate;MONAT07;Juli;DINSG;Deutschland insgesamt;DG;Deutschland;WAM8;Warenverzeichnis Außenhandelsstatistik (8-Steller);WA48181090;Toilettenpapier, qm-Gewicht über 25g;-;Anzahl;BMA;Ausfuh",
-  "columns": [
-   "statistics_code",
-   "statistics_label",
-   "time_code",
-   "time_label",
-   "time",
-   "1_variable_code",
-   "1_variable_label",
-   "1_variable_attribute_code",
-   "1_variable_attribute_label",
-   "2_variable_code",
-   "2_variable_label",
-   "2_variable_attribute_code",
-   "2_variable_attribute_label",
-   "3_variable_code",
-   "3_variable_label",
-   "3_variable_attribute_code",
-   "3_variable_attribute_label",
-   "value",
-   "value_unit",
-   "value_variable_code",
-   "value_variable_label"
-  ],
-  "sample": [
-   [
-    "51000",
-    "Außenhandel",
-    "JAHR",
-    "Jahr",
-    "2026",
-    "MONAT",
-    "Monate",
-    "MONAT07",
-    "Juli",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WAM8",
-    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
-    "WA48181090",
-    "Toilettenpapier, qm-Gewicht über 25g",
-    "-",
-    "Anzahl",
-    "BMA",
-    "Ausfuhr: Besondere Maßeinheit"
-   ],
-   [
-    "51000",
-    "Außenhandel",
-    "JAHR",
-    "Jahr",
-    "2026",
-    "MONAT",
-    "Monate",
-    "MONAT07",
-    "Juli",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WAM8",
-    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
-    "WA48181090",
-    "Toilettenpapier, qm-Gewicht über 25g",
-    "364,8",
-    "t",
-    "GEWA",
-    "Ausfuhr: Gewicht"
-   ],
-   [
-    "51000",
-    "Außenhandel",
-    "JAHR",
-    "Jahr",
-    "2026",
-    "MONAT",
-    "Monate",
-    "MONAT07",
-    "Juli",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WAM8",
-    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
-    "WA48181090",
-    "Toilettenpapier, qm-Gewicht über 25g",
-    "917",
-    "Tsd. US $",
-    "WERTAS",
-    "Ausfuhr: Wert (US-Dollar)"
-   ]
-  ],
-  "series": [
-   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Gewicht [t]",
-   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Gewicht [t]",
-   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Gekrepptes Papier für Haushalt, <=25g/m2 | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Gewicht [t]",
-   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Gewicht [t]",
-   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Gekrepptes Papier für Haushalt, >25g/m2 | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Gewicht [t]",
-   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Gewicht [t]",
-   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Handtücher, in Rollen, aus Papierhalbstoff | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Gewicht [t]",
-   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Gewicht [t]",
-   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Handtücher, nicht in Rollen, aus Papier | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Gewicht [t]",
-   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Gewicht [t]",
-   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Papiere, Herstellung von Toilettenpapier u.a. | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Gewicht [t]",
-   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Gewicht [t]",
-   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Taschentücher und Abschminktücher, aus Papier | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Gewicht [t]",
-   "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Tischtücher und Servietten, aus Papier | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Gewicht [t]",
-   "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Tischtücher und Servietten, aus Papier | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Gewicht [t]",
-   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Gewicht [t]",
-   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Toilettenpapier, qm-Gewicht bis 25g | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Gewicht [t]",
-   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Gewicht [t]",
-   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Toilettenpapier, qm-Gewicht über 25g | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Gewicht [t]",
-   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Gewicht [t]",
-   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Zellstoffwatte, in Rollen, ungefaltet | Einfuhr: Wert [Tsd. EUR]"
-  ],
-  "periodColumn": "1_variable_attribute_code"
+  "answer": {
+   "Status": {
+    "Code": 7000,
+    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nAußenhandel (51000)\nEinfuhr: Wert (US-Dollar) (WERTES)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nWarenverzeichnis Außenhandelsstatistik (8-Steller) (WAM8)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
+    "Type": "Information"
+   },
+   "Ident": {
+    "Service": "data",
+    "Method": "tablefile"
+   }
+  }
  },
  "51000-0014 · WA47032100,WA47032900": {
-  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n51000;Außenhandel;JAHR;Jahr;2023;MONAT;Monate;MONAT07;Juli;DINSG;Deutschland insgesamt;DG;Deutschland;WAM8;Warenverzeichnis Außenhandelsstatistik (8-Steller);WA47032900;Chemische Halbstoffe aus Holz, gebleicht   kgtr90%;11894",
-  "columns": [
-   "statistics_code",
-   "statistics_label",
-   "time_code",
-   "time_label",
-   "time",
-   "1_variable_code",
-   "1_variable_label",
-   "1_variable_attribute_code",
-   "1_variable_attribute_label",
-   "2_variable_code",
-   "2_variable_label",
-   "2_variable_attribute_code",
-   "2_variable_attribute_label",
-   "3_variable_code",
-   "3_variable_label",
-   "3_variable_attribute_code",
-   "3_variable_attribute_label",
-   "value",
-   "value_unit",
-   "value_variable_code",
-   "value_variable_label"
-  ],
-  "sample": [
-   [
-    "51000",
-    "Außenhandel",
-    "JAHR",
-    "Jahr",
-    "2023",
-    "MONAT",
-    "Monate",
-    "MONAT07",
-    "Juli",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WAM8",
-    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
-    "WA47032900",
-    "Chemische Halbstoffe aus Holz, gebleicht   kgtr90%",
-    "11894125",
-    "Anzahl",
-    "BMA",
-    "Ausfuhr: Besondere Maßeinheit"
-   ],
-   [
-    "51000",
-    "Außenhandel",
-    "JAHR",
-    "Jahr",
-    "2023",
-    "MONAT",
-    "Monate",
-    "MONAT07",
-    "Juli",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WAM8",
-    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
-    "WA47032900",
-    "Chemische Halbstoffe aus Holz, gebleicht   kgtr90%",
-    "12387,3",
-    "t",
-    "GEWA",
-    "Ausfuhr: Gewicht"
-   ],
-   [
-    "51000",
-    "Außenhandel",
-    "JAHR",
-    "Jahr",
-    "2023",
-    "MONAT",
-    "Monate",
-    "MONAT07",
-    "Juli",
-    "DINSG",
-    "Deutschland insgesamt",
-    "DG",
-    "Deutschland",
-    "WAM8",
-    "Warenverzeichnis Außenhandelsstatistik (8-Steller)",
-    "WA47032900",
-    "Chemische Halbstoffe aus Holz, gebleicht   kgtr90%",
-    "7564",
-    "Tsd. US $",
-    "WERTAS",
-    "Ausfuhr: Wert (US-Dollar)"
-   ]
-  ],
-  "series": [
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Besondere Maßeinheit [Anzahl]",
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Gewicht [t]",
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Besondere Maßeinheit [Anzahl]",
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Gewicht [t]",
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Chemische Halbstoffe aus Holz, gebleicht   kgtr90% | Einfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Besondere Maßeinheit [Anzahl]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Gewicht [t]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Ausfuhr: Wert [Tsd. EUR]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Besondere Maßeinheit [Anzahl]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Gewicht [t]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
-   "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Wert [Tsd. EUR]"
-  ],
-  "periodColumn": "1_variable_attribute_code"
+  "answer": {
+   "Status": {
+    "Code": 7000,
+    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nAußenhandel (51000)\nEinfuhr: Wert (US-Dollar) (WERTES)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nWarenverzeichnis Außenhandelsstatistik (8-Steller) (WAM8)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
+    "Type": "Information"
+   },
+   "Ident": {
+    "Service": "data",
+    "Method": "tablefile"
+   }
+  }
  },
  "43531-0001 · WZ08-17": {
   "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;4_variable_code;4_variable_label;4_variable_attribute_code;4_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n43531;Energieverwendung der Betriebe im Verarb. Gewerbe;JAHR;Jahr;2021;DINSG;Deutschland insgesamt;DG;Deutschland;ENRNZ1;Nutzung des Energi",
@@ -2660,7 +2185,7 @@
   "periodColumn": "none (yearly)"
  },
  "32161-0003 · WZ08-17-03": {
-  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n32161;Erhebung über die Abfallerzeugung;JAHR;Jahr;2022;DINSG;Deutschland insgesamt;DG;Deutschland;WZ08T1;WZ2008 (2-Steller): Abfallerzeugung;WZ08-17-03;Papier- und Druckgewerbe;9,2;Prozent;ERF001;Erfassungsgrad der Betriebe\n32161;Erhebung über die Abfallerzeugung;JAHR;Jahr;2022;DINSG;Deutschland insgesamt;DG;D",
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n32161;Erhebung über die Abfallerzeugung;JAHR;Jahr;2022;DINSG;Deutschland insgesamt;DG;Deutschland;WZ08T1;WZ2008 (2-Steller): Abfallerzeugung;WZ08-17-03;Papier- und Druckgewerbe;984;Anzahl;BETR01;Betriebe\n32161;Erhebung über die Abfallerzeugung;JAHR;Jahr;2022;DINSG;Deutschland insgesamt;DG;Deutschland;WZ08T1;WZ",
   "columns": [
    "statistics_code",
    "statistics_label",
@@ -2695,10 +2220,10 @@
     "WZ2008 (2-Steller): Abfallerzeugung",
     "WZ08-17-03",
     "Papier- und Druckgewerbe",
-    "9,2",
-    "Prozent",
-    "ERF001",
-    "Erfassungsgrad der Betriebe"
+    "984",
+    "Anzahl",
+    "BETR01",
+    "Betriebe"
    ],
    [
     "32161",
@@ -2733,10 +2258,10 @@
     "WZ2008 (2-Steller): Abfallerzeugung",
     "WZ08-17-03",
     "Papier- und Druckgewerbe",
-    "165,9",
-    "1000",
-    "ERW012",
-    "Beschäftigte"
+    "9,2",
+    "Prozent",
+    "ERF001",
+    "Erfassungsgrad der Betriebe"
    ]
   ],
   "series": [

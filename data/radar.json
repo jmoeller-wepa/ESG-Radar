@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-06T11:39:23",
+    "lastFeedRun": "2026-11-09T06:25:41",
     "feedsSeen": [
       "Anthropic News",
       "Claude Blog (Anthropic)",
@@ -3328,6 +3328,112 @@
       "url": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026D1948",
       "origin": "feed",
       "added": "2026-11-06"
+    },
+    {
+      "id": "feed-cfd4354afa",
+      "date": "2026-11-06",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agents"
+      ],
+      "title": "Measuring how AI agents handle everyday wet-lab science",
+      "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-6d6d9d6622",
+      "date": "2026-11-08",
+      "type": "regulation",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Human Rights"
+      ],
+      "title": "ESG Today: Week in Review",
+      "summary": "This week in ESG news: UK to introduce supply chain human rights due diligence law; […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-282/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-282",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-cf8872ee2f",
+      "date": "2026-11-05",
+      "type": "regulation",
+      "areas": [
+        "circularity",
+        "reporting"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [
+        "Green Claims"
+      ],
+      "title": "Deloitte Launches New Solution to Help Companies Avoid Greenwashing",
+      "summary": "Deloitte announced the launch of Green Claims Navigator, a new AI-powered solution aimed at enabling […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/deloitte-launches-new-solution-to-help-companies-avoid-greenwashing/?utm_source=rss&utm_medium=rss&utm_campaign=deloitte-launches-new-solution-to-help-companies-avoid-greenwashing",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-0fe48d54d7",
+      "date": "2026-11-06",
+      "type": "regulation",
+      "areas": [
+        "climate",
+        "people"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Supply Chain"
+      ],
+      "title": "Logitech launches supply chain decarbonization program",
+      "summary": "The computer peripheral manufacturer’s Chain Reaction initiative will start with 17 suppliers pooling purchasing power to collectively buy renewable electricity.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/logitech-launches-supply-chain-decarbonization-program-chain-reaction/874003/",
+      "origin": "feed",
+      "added": "2026-11-09"
     }
   ]
 }

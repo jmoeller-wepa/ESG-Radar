@@ -1,23 +1,6 @@
 {
- "updated": "2026-11-06T11:39:30",
+ "updated": "2026-11-09T06:25:46",
  "consultations": [
-  {
-   "id": "14450.0",
-   "title": "Implementing act on templates for reporting methane emissions",
-   "summary": "",
-   "type": "Isc workflow",
-   "dg": null,
-   "start": "2026-10-09",
-   "end": "2026-11-06",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14450.0_en",
-   "areas": [
-    "climate"
-   ],
-   "topics": [],
-   "keywords": [
-    "emission"
-   ]
-  },
   {
    "id": "19292.0",
    "title": "Articles 75c – 75d AI Act Implementing Act",
@@ -184,7 +167,7 @@
    "type": "Adoption workflow",
    "dg": null,
    "start": "2026-11-04",
-   "end": "2027-01-01",
+   "end": "2027-01-04",
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14770.0_en",
    "areas": [
     "climate"
@@ -744,5 +727,5 @@
    "changed": null
   }
  },
- "consultationsFetched": "2026-11-06T11:39:30"
+ "consultationsFetched": "2026-11-09T06:25:46"
 }
