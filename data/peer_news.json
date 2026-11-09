@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T17:01:26",
+ "updated": "2026-11-09T19:19:58",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -30,6 +30,12 @@
   ],
   "essity": [
    {
+    "title": "Essity stock adds 216,335-share buyback signal for investors",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUkl1NVYyRE80VUJBSVVoNmh3WGpSOF9JSUdOWHd3QWwtek9JbW5jdlU4TDB6WDZyWWNfZ0hVOUxWbVphVDJkMmxrd3FkUnJtVlJkam94dWxqYlVVUHdzUFFjN3ota2VLVmc3UlRPOGNYNGtLeWRyRXVZeldxaW90TUNfQnBDd1pQbGtMVHozTHRMR2VraEEzMkFGQmZXbUdHdUZTRVVWSndRQnEwVzU1QmY2QmNOMzJoQzFkVlRCM1g?oc=5",
+    "date": "2026-11-09"
+   },
+   {
     "title": "Essity stock buyback reaches 216,335 Class B shares in week 45",
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcm9KMGt6SUZQQ2djWVQ5R2ZtYmhMT2hETEtRdDBZclhFRUJic0RHOUtfbDA4dTM5Wm12UFVvMnVEUEgxRHBOX3BmeUdjbFIzQ2x0c3M0RkVYeW1qTF85LUU2azg5M184OTE0YTIzWWJiWGROaXdZcDgxekxXbTEtVHYwSTBuREwxZU8tVXU4VmRjMlJWYzE3T1ZSZF9BOXd0bkZ4b19HXzRKSFoyNmpsYk5LODNYdHlmRHIwWll6MFJrOEk?oc=5",
@@ -46,12 +52,6 @@
     "source": "Yahoo News UK",
     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5xWWlGaEtRclp5TTkxb3MzSkxXTk96a19wS3Q2TFRaelhXcGd3YW8yS1BmR055Zk9CdnhpVjA2LWJady1sVC1RXzlkSFhxSDBSeG03aHR0MGl2bjdZcHByUUhtNXNSMjlTcnNMc3FEbzloT1hMRXV4T010eHE?oc=5",
     "date": "2026-11-06"
-   },
-   {
-    "title": "Essity AB (publ) (ESSITY-B.ST) Seasonal returns chart - Yahoo Finance",
-    "source": "Yahoo Finance Singapore",
-    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9hZ2VHMmZlczA1N3JqTGFHcl9aeGdwZ1lYckFDTVFQYVBjUXFUWTJjdS1VcGlLcWNzNDJocWdDdEoweXBTemtOblZvVEUxdmN6SGhXSFBmLWUyaGZZalVESkJ3dmpWQVR0bGJj?oc=5",
-    "date": "2026-11-05"
    }
   ],
   "sofidel": [
@@ -122,6 +122,12 @@
     "date": "2026-11-05"
    },
    {
+    "title": "Kimberly-Clark's China diaper woes linger as it stands by annual outlook",
+    "source": "www.marketscreener.com",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOb2ZoU3h0ZE53c2hiUDJTM0tuQTNWQnRrZzVrSC03ZkEtQmtRRVZUZmp5MnRueUhnSnE0NzhwSnk2WXB5c2ZrWmJUcUpuTUdHTkx2NVktb2pVaEJWZGhsaTFEcjJUelV2akdoTEFTX2NmZVl0OWExcVNjZlRyeGpjcFFCNkZfbVo4MklXSEFnMGhIOW1iSGhFWmdoR2ZHUHpVeG1wVUUxSmFWWUtpRW1oYWhtdGZuS1hMUWs0V0R3aEhhUUk?oc=5",
+    "date": "2026-11-05"
+   },
+   {
     "title": "Kimberly-Clark completes acquisition of Kenvue, expanding global consumer health portfolio",
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkJjQ3VyQTRFa2djWW1SU3NiRm95bXZiQS0tNTVKYy1vS2FibUEyeUE5eXA5M1pEWHpobllod3pZeEZHSFhFaUlaQm5KSVZMdUQ1cDB6TjRFZnZlVU1vdjg5WUI2WEp3MElHWlNBMGc4OEtmSjVnUzlLdi1fNnQ4NnJVcVk5cEZxbkZia09DY0VRSEt0VHNuWlF2WFRqZFI2LWlBbE4zSGJtN3JielpRemRHZk16ZTM2ZEo3X21JaGdGYVZTc2c?oc=5",
@@ -132,21 +138,9 @@
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVGhJaEhaeGZndllkVUl6dGx3ZnZ2ZmU0ZWpPU3hXNlJ6SWItWWx1bGZCeUU2NDdlcTU4cHpfOEVsdGFyY3JlZU1mZklJVW14YUQ0d0xzTnNYWVBBcVlBOENkdjhrNlNqTmZaX0h6RG05dURtbjdDQVpEeHp3dFBoRDhGTThzMHlETS1wLVZMU1FNR0NVUmVhcmk4cHpaWHNSTjZ6c0N6azZFZEpkbDlGa0hDa0ppZktaelducWxmTWk4czF0TFE?oc=5",
     "date": "2026-11-04"
-   },
-   {
-    "title": "Kimberly-Clark Mexico stock trades at 1.82 euros in Berlin morning",
-    "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSXc1aEZOWFRiR3VLVXFyRF9nN3E2NnY0dWktSi1IWjFId2NZNlR3TjdRbFQtay15MHFtZE9tZVdUc3lBa2xwejdNZERaVXpwTWlvTkt0QWdTZ1ZCcXFzeTJoTzRIUV9KQjBwWTBWUDNWUHk1RElOaDFRVFVyTEl1amdoYlJhZWctaS1JZF9iYW1FdEFUTUJTUzBZc0FXd1lPZm9vUmhYTVM3c0lONEpxVFFtTV8zaVVtMXJ6aWcyTTA5SC1CYm1uSg?oc=5",
-    "date": "2026-11-04"
    }
   ],
   "pg": [
-   {
-    "title": "What Does Procter & Gamble (PG) Mean By Raising $4 Billion In Debt?",
-    "source": "Yahoo Finance",
-    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZVoyREc2cHZqOFJoUW5jakhpQkxNeWtnM01mZkFyREMwNUhVNnV6MFdsY01UTHRjVDV1WHdfYnhXT205Q2FydDJkWjdVNi10cHBTakMtbFpzSEFKTnRPN3NXTm43WXlqX1RCTEExUXJmeVhPSTd4NzZWaloyT2pUdDVULTVwZzVobnlGZGFtOVFOUUJJdmJv?oc=5",
-    "date": "2026-11-07"
-   },
    {
     "title": "Procter & Gamble (NYSE:PG) Stock Forecast & Analyst Predictions",
     "source": "Simply Wall St",
@@ -164,6 +158,12 @@
     "source": "Simply Wall St",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPRzFTVnZKSUZVOVQ1Z2h3emliOC1FYkUzRHBfVE1ROHdqU29Sd0JuajFVa1VyTkFlRXRmRDViMzVBT1pyN3htd3lqRjBuT215WTg1bHpTTVJHT1Y4UmpVSHZhT3VTMHp4VVhkUnR1bHZWTEg2TWpfaUc4ZDNqYWJvVmVDal9zdEs1UGJKOGJhSGVXZjE2NkZrWU45N1V0cGhmRnZpc1BodXFya1AzdWdFUnVDdk41bXJtWHpv0gHAAUFVX3lxTE1XeUN0SkRHZWxZZV85M1N1TFJLR0NGU0hsY2xRS3h4cWlqVHNkVndac0kwM0xmLUVGS29UZDR0QW9LLUV4OUpkQjJJOTB4Mnh6OHBNRWRHRXhxRjZOdnlwLVFHRWN6STFUU0RrdWVEZGNYUGlpUFFsckFJQlBrNXNWc1hWRW1ZdXY0TEpmaXRyT3pTMXhhTVdZdXc5VEtQVG1USzhsSXdrT1NyWFJhcUQzcjhCXzBPUmprSHc5ZTV3VQ?oc=5",
     "date": "2026-10-25"
+   },
+   {
+    "title": "TD Cowen maintains Hold rating on Procter & Gamble, $166 price target",
+    "source": "TradingView",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcmlOQnM2Zld1ZUhFbTRjb2VtMzM5eVpFRlUtZmQ0RFB5UkVZbmNKeXhObFNpSEFUc3R6TWtXYkU5XzkwWUQwb0U4MHRQYTNCN0gwMlhTZnA1X3VRX1Q5ckFkOHJGN2JzaHZWR1dEcklpaU40NUZ3Smh1b0VBUlVteWczZldzbXNBdGFLdEs2bGxXRFVoN1ZnUGRwZ1F4X3dGUGg3d1dPdEhWQjc3RWhRbi1QM3lSVnM4SkdyblZhSzNrb3Y3OWc?oc=5",
+    "date": "2026-10-23"
    }
   ],
   "georgia-pacific": [

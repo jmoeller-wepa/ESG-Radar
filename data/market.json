@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T16:50:23",
+ "updated": "2026-11-09T19:07:45",
  "groups": {
   "fibre": "Fibre & products",
   "recovered": "Recovered paper",
@@ -402,7 +402,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -577,7 +577,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -976,7 +976,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -1369,7 +1369,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRD",
@@ -1769,7 +1769,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "us_wood_pulp",
@@ -2160,7 +2160,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "pulp_nbsk_eu",
@@ -2548,7 +2548,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -2940,7 +2940,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -3331,7 +3331,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -3722,7 +3722,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4113,7 +4113,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4504,7 +4504,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4895,7 +4895,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -5282,7 +5282,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "INT_EU27_2020"
@@ -5669,7 +5669,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "INT_EU27_2020"
@@ -6064,7 +6064,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Gemischtes Altpapier",
     "table": "61281-0006"
@@ -6459,7 +6459,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Verpackungen aus Papier und Karton",
     "table": "61281-0006"
@@ -6854,7 +6854,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Gebrauchte Kraftwellpappe 2",
     "table": "61281-0006"
@@ -7249,7 +7249,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Zeitungen und Illustrierte, Deinkingware",
     "table": "61281-0006"
@@ -7644,7 +7644,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -8043,7 +8043,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "us_corrugated_boxes",
@@ -8434,7 +8434,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "gas_ttf",
@@ -8825,7 +8825,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "elec_de",
@@ -8904,7 +8904,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "MWH2000-19999",
@@ -9308,7 +9308,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "gas_de",
@@ -9387,7 +9387,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "GJ10000-99999",
@@ -9791,7 +9791,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_eu",
@@ -10186,7 +10186,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_de",
@@ -10581,7 +10581,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_fr",
@@ -10976,7 +10976,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_it",
@@ -11371,7 +11371,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_pl",
@@ -11766,7 +11766,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_nl",
@@ -12161,7 +12161,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_be",
@@ -12556,7 +12556,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "grid_gb",
@@ -12947,7 +12947,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "eua",
@@ -12977,7 +12977,7 @@
     ]
    ],
    "status": "manual",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "eurusd",
@@ -13372,7 +13372,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "de_ppi_pulp",
@@ -13763,7 +13763,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Chemische Halbstoffe aus Holz | Erzeugerpreisindex gewerblicher Produkte",
     "table": "61241-0006"
@@ -14158,7 +14158,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Toilettenpapier, Taschen-, Abschmink-, Handtücher | Erzeugerpreisindex gewerblicher Produkte",
     "table": "61241-0006"
@@ -14553,7 +14553,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Erdgas, bei Abgabe an die Industrie | Erzeugerpreisindex gewerblicher Produkte",
     "table": "61241-0006"
@@ -14948,7 +14948,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Elekt.Strom, b.Abgabe a.Sondervertragsk., Hochsp. | Erzeugerpreisindex gewerblicher Produkte",
     "table": "61241-0006"
@@ -15343,7 +15343,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Gasöl | Erzeugerpreisindex gewerblicher Produkte",
     "table": "61241-0006"
@@ -15486,7 +15486,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Verarbeitendes Gewerbe · X13 JDemetra+  kalender- und saisonbereinigt | Index der Arbeitskosten je geleistete Stunde",
     "table": "62421-0001"
@@ -15881,7 +15881,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · X13 JDemetra+  kalenderbereinigt · Herstellung von Papier, Pappe und Waren daraus | Produktionsindex",
     "table": "42153-0002"
@@ -16276,7 +16276,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex",
     "table": "45212-0005"
@@ -16671,7 +16671,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex",
     "table": "45212-0005"
@@ -17062,7 +17062,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "10 series",
     "table": "51000-0014"
@@ -17453,7 +17453,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "10 series",
     "table": "51000-0014"
@@ -17844,7 +17844,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "2 series",
     "table": "51000-0014"
@@ -17864,10 +17864,338 @@
    "source": "destatis",
    "country": null,
    "isUs": null,
-   "series": [],
-   "status": "missing",
-   "fetched": null,
-   "error": "no value of CC13A5 in 61111-0004 matches ['^Toilettenpapier', 'Toilettenpapier', 'Hygienepapier|Papiertaschent', 'Hygieneartikel aus Papier'] – see data/debug/destatis.json"
+   "series": [
+    [
+     "2020-01",
+     101.1
+    ],
+    [
+     "2020-02",
+     101.6
+    ],
+    [
+     "2020-03",
+     101.2
+    ],
+    [
+     "2020-04",
+     101.7
+    ],
+    [
+     "2020-05",
+     102.7
+    ],
+    [
+     "2020-06",
+     102.1
+    ],
+    [
+     "2020-07",
+     99.1
+    ],
+    [
+     "2020-08",
+     98.4
+    ],
+    [
+     "2020-09",
+     97.7
+    ],
+    [
+     "2020-10",
+     97.4
+    ],
+    [
+     "2020-11",
+     98.5
+    ],
+    [
+     "2020-12",
+     98.5
+    ],
+    [
+     "2021-01",
+     99.4
+    ],
+    [
+     "2021-02",
+     100.9
+    ],
+    [
+     "2021-03",
+     100.5
+    ],
+    [
+     "2021-04",
+     100.8
+    ],
+    [
+     "2021-05",
+     100.6
+    ],
+    [
+     "2021-06",
+     100.4
+    ],
+    [
+     "2021-07",
+     100.4
+    ],
+    [
+     "2021-08",
+     100.3
+    ],
+    [
+     "2021-09",
+     100.7
+    ],
+    [
+     "2021-10",
+     101.5
+    ],
+    [
+     "2021-11",
+     101.9
+    ],
+    [
+     "2021-12",
+     101.7
+    ],
+    [
+     "2022-01",
+     103.6
+    ],
+    [
+     "2022-02",
+     104.5
+    ],
+    [
+     "2022-03",
+     105.0
+    ],
+    [
+     "2022-04",
+     106.9
+    ],
+    [
+     "2022-05",
+     115.5
+    ],
+    [
+     "2022-06",
+     119.4
+    ],
+    [
+     "2022-07",
+     122.3
+    ],
+    [
+     "2022-08",
+     126.6
+    ],
+    [
+     "2022-09",
+     128.4
+    ],
+    [
+     "2022-10",
+     131.7
+    ],
+    [
+     "2022-11",
+     136.2
+    ],
+    [
+     "2022-12",
+     140.1
+    ],
+    [
+     "2023-01",
+     140.4
+    ],
+    [
+     "2023-02",
+     141.0
+    ],
+    [
+     "2023-03",
+     141.7
+    ],
+    [
+     "2023-04",
+     141.8
+    ],
+    [
+     "2023-05",
+     141.7
+    ],
+    [
+     "2023-06",
+     142.3
+    ],
+    [
+     "2023-07",
+     134.5
+    ],
+    [
+     "2023-08",
+     133.4
+    ],
+    [
+     "2023-09",
+     133.1
+    ],
+    [
+     "2023-10",
+     133.2
+    ],
+    [
+     "2023-11",
+     132.5
+    ],
+    [
+     "2023-12",
+     134.4
+    ],
+    [
+     "2024-01",
+     136.1
+    ],
+    [
+     "2024-02",
+     135.5
+    ],
+    [
+     "2024-03",
+     136.2
+    ],
+    [
+     "2024-04",
+     136.4
+    ],
+    [
+     "2024-05",
+     136.6
+    ],
+    [
+     "2024-06",
+     136.4
+    ],
+    [
+     "2024-07",
+     136.6
+    ],
+    [
+     "2024-08",
+     137.1
+    ],
+    [
+     "2024-09",
+     135.7
+    ],
+    [
+     "2024-10",
+     138.7
+    ],
+    [
+     "2024-11",
+     139.6
+    ],
+    [
+     "2024-12",
+     141.1
+    ],
+    [
+     "2025-01",
+     140.9
+    ],
+    [
+     "2025-02",
+     141.0
+    ],
+    [
+     "2025-03",
+     142.3
+    ],
+    [
+     "2025-04",
+     142.7
+    ],
+    [
+     "2025-05",
+     142.8
+    ],
+    [
+     "2025-06",
+     143.3
+    ],
+    [
+     "2025-07",
+     140.9
+    ],
+    [
+     "2025-08",
+     140.8
+    ],
+    [
+     "2025-09",
+     139.5
+    ],
+    [
+     "2025-10",
+     140.3
+    ],
+    [
+     "2025-11",
+     140.4
+    ],
+    [
+     "2025-12",
+     140.1
+    ],
+    [
+     "2026-01",
+     139.3
+    ],
+    [
+     "2026-02",
+     140.6
+    ],
+    [
+     "2026-03",
+     140.5
+    ],
+    [
+     "2026-04",
+     140.2
+    ],
+    [
+     "2026-05",
+     138.5
+    ],
+    [
+     "2026-06",
+     140.0
+    ],
+    [
+     "2026-07",
+     140.4
+    ],
+    [
+     "2026-08",
+     140.8
+    ],
+    [
+     "2026-09",
+     137.7
+    ]
+   ],
+   "status": "ok",
+   "fetched": "2026-11-09T19:07:45",
+   "usedParams": {
+    "series": "Deutschland · Toilettenpapier | Verbraucherpreisindex",
+    "table": "61111-0006"
+   }
   },
   {
    "id": "mix_wind",
@@ -18262,7 +18590,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "mix_solar",
@@ -18657,7 +18985,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "mix_biomass",
@@ -19052,7 +19380,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "mix_hydro",
@@ -19447,7 +19775,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "mix_gas",
@@ -19842,7 +20170,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "mix_coal",
@@ -20237,7 +20565,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "mix_other",
@@ -20632,7 +20960,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23"
+   "fetched": "2026-11-09T19:07:45"
   },
   {
    "id": "prof_energy_total",
@@ -20675,7 +21003,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Insgesamt",
     "table": "43531-0001"
@@ -20722,7 +21050,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
     "table": "43531-0001"
@@ -20769,7 +21097,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
     "table": "43531-0001"
@@ -20816,7 +21144,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "3 series",
     "table": "43531-0001"
@@ -20863,7 +21191,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "2 series",
     "table": "43531-0001"
@@ -20910,7 +21238,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "4 series",
     "table": "43531-0001"
@@ -20937,7 +21265,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "Deutschland · Papier- und Druckgewerbe | Erzeugte Abfallmenge",
     "table": "32161-0003"
@@ -20976,7 +21304,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-09T16:50:23",
+   "fetched": "2026-11-09T19:07:45",
    "usedParams": {
     "series": "3 series",
     "table": "32511-0003"

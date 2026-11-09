@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-09T16:50:23",
+ "checked": "2026-11-09T19:07:45",
  "credentials": true,
  "indicators": {
   "de_rcp_102": {
@@ -423,179 +423,42 @@
    ]
   },
   "cpi_toilet_de": {
-   "table": "61111-0004",
-   "tried": {
-    "61111-0006": "no value of CC13A2 in 61111-0006 matches ['^Toilettenpapier', 'Toilettenpapier', 'Hygienepapier|Papiertaschent', 'Hygieneartikel aus Papier'] – see data/debug/destatis.json"
-   },
+   "table": "61111-0006",
+   "varSearch": [
+    "CC13A2 Verwendungszwecke des Individualkonsums, 2-Steller",
+    "CC13A3 Verwendungszwecke des Individualkonsums, 3-Steller",
+    "CC13A4 Verwendungszwecke des Individualkonsums, 4-Steller",
+    "CC13A5 Verwendungszwecke des Individualkonsums, 5-Steller",
+    "CC13B1 Verwendungszw.d.Individualkonsums,Sonderpositionen",
+    "CC13Z1 Verwendungszwecke des Individualkonsums,10-Steller"
+   ],
    "peek": {
-    "CC13A5": [
-     "CC13-09541 Papierprodukte"
+    "CC13Z1": [
+     "CC13-0561211100 Filterpapier, Pappbecher oder Ähnliches",
+     "CC13-0954101100 Briefumschläge, Briefblock oder Briefpapier",
+     "CC13-0954109100 Druckerpapier",
+     "CC13-1213221100 Toilettenpapier",
+     "CC13-1213222100 Papiertaschentücher",
+     "CC13-1213229100 Tampons, Kosmetiktücher oder andere Hygieneartikel",
+     "CC13-1213231100 Eau de Toilette oder Parfüm"
     ]
    },
-   "valueSample": {
-    "CC13A5": [
-     {
-      "code": "CC13-01111",
-      "content": "Reis, einschließlich Reiszubereitungen"
-     },
-     {
-      "code": "CC13-01112",
-      "content": "Mehl und andere Getreideerzeugnisse"
-     },
-     {
-      "code": "CC13-01113",
-      "content": "Brot und Brötchen"
-     },
-     {
-      "code": "CC13-01114",
-      "content": "Andere Backwaren"
-     },
-     {
-      "code": "CC13-01115",
-      "content": "Pizza, Quiches oder Ähnliches"
-     },
-     {
-      "code": "CC13-01116",
-      "content": "Teigwaren"
-     },
-     {
-      "code": "CC13-01117",
-      "content": "Frühstückszubereitungen"
-     },
-     {
-      "code": "CC13-01118",
-      "content": "Andere Getreideprodukte"
-     },
-     {
-      "code": "CC13-01121",
-      "content": "Rind- und Kalbfleisch"
-     },
-     {
-      "code": "CC13-01122",
-      "content": "Schweinefleisch"
-     },
-     {
-      "code": "CC13-01123",
-      "content": "Lamm- und Schaffleisch, Ziegenfleisch"
-     },
-     {
-      "code": "CC13-01124",
-      "content": "Geflügelfleisch"
-     },
-     {
-      "code": "CC13-01125",
-      "content": "Andere Fleischprodukte"
-     },
-     {
-      "code": "CC13-01126",
-      "content": "Leber oder andere Innereien"
-     },
-     {
-      "code": "CC13-01127",
-      "content": "Fleisch- und Wurstwaren"
-     },
-     {
-      "code": "CC13-01128",
-      "content": "Anderes Fleisch, verarbeitet und zubereitet"
-     },
-     {
-      "code": "CC13-01131",
-      "content": "Fische und Fischfilets, frisch oder gekühlt"
-     },
-     {
-      "code": "CC13-01132",
-      "content": "Fische und Fischfilets, tiefgefroren"
-     },
-     {
-      "code": "CC13-01133",
-      "content": "Meeresfrüchte, frisch oder gekühlt"
-     },
-     {
-      "code": "CC13-01134",
-      "content": "Tiefgefrorene Meeresfrüchte"
-     },
-     {
-      "code": "CC13-01135",
-      "content": "Fisch, getrocknet, geräuchert oder gesalzen"
-     },
-     {
-      "code": "CC13-01136",
-      "content": "Konserven und andere Zubereitungen von Fisch"
-     },
-     {
-      "code": "CC13-01141",
-      "content": "Vollmilch"
-     },
-     {
-      "code": "CC13-01142",
-      "content": "Teilentrahmte Milch"
-     },
-     {
-      "code": "CC13-01143",
-      "content": "Kondensierte Milch"
-     },
-     {
-      "code": "CC13-01144",
-      "content": "Joghurt"
-     },
-     {
-      "code": "CC13-01145",
-      "content": "Käse und Quark"
-     },
-     {
-      "code": "CC13-01146",
-      "content": "Andere Milchprodukte"
-     },
-     {
-      "code": "CC13-01147",
-      "content": "Eier"
-     },
-     {
-      "code": "CC13-01151",
-      "content": "Butter"
-     },
-     {
-      "code": "CC13-01152",
-      "content": "Margarine oder Pflanzenfett"
-     },
-     {
-      "code": "CC13-01153",
-      "content": "Olivenöl"
-     },
-     {
-      "code": "CC13-01154",
-      "content": "Sonnenblumenöl, Rapsöl oder Ähnliches"
-     },
-     {
-      "code": "CC13-01155",
-      "content": "Schmalz oder anderes tierisches Speisefett"
-     },
-     {
-      "code": "CC13-01161",
-      "content": "Obst, frisch oder gekühlt"
-     },
-     {
-      "code": "CC13-01162",
-      "content": "Tiefgefrorenes Obst"
-     },
-     {
-      "code": "CC13-01163",
-      "content": "Trockenobst, Nüsse und Ähnliches"
-     },
-     {
-      "code": "CC13-01164",
-      "content": "Obstkonserven"
-     },
-     {
-      "code": "CC13-01171",
-      "content": "Gemüse (ohne Kartoffeln), frisch oder gekühlt"
-     },
-     {
-      "code": "CC13-01172",
-      "content": "Gemüse (ohne Kartoffeln), tiefgefroren"
-     }
+   "valueCount": 687,
+   "values": [
+    {
+     "code": "CC13-1213221100",
+     "content": "Toilettenpapier"
+    }
+   ],
+   "classify": {
+    "var": "CC13Z1",
+    "keys": [
+     "CC13-1213221100"
     ]
-   }
+   },
+   "matched": [
+    "Deutschland · Toilettenpapier | Verbraucherpreisindex"
+   ]
   },
   "prof_energy_total": {
    "table": "43531-0001",
@@ -923,6 +786,7 @@
   "de_imp_tissue": "10 series (sum)",
   "de_exp_tissue": "10 series (sum)",
   "de_imp_pulp": "2 series (sum)",
+  "cpi_toilet_de": "Deutschland · Toilettenpapier | Verbraucherpreisindex",
   "prof_energy_total": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Insgesamt",
   "prof_energy_gas": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
   "prof_energy_power": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
@@ -1329,32 +1193,6 @@
    {
     "code": "CC13A2",
     "content": "Verwendungszwecke des Individualkonsums, 2-Steller"
-   }
-  ],
-  "61111-0004": [
-   {
-    "code": "61111",
-    "content": "Verbraucherpreisindex für Deutschland"
-   },
-   {
-    "code": "DINSG",
-    "content": "Deutschland insgesamt"
-   },
-   {
-    "code": "PREIS1",
-    "content": "Verbraucherpreisindex"
-   },
-   {
-    "code": "JAHR",
-    "content": "Jahr"
-   },
-   {
-    "code": "MONAT",
-    "content": "Monate"
-   },
-   {
-    "code": "CC13A5",
-    "content": "Verwendungszwecke des Individualkonsums, 5-Steller"
    }
   ],
   "43531-0001": [
@@ -2753,6 +2591,107 @@
    "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Gewicht [t]",
    "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Wert (US-Dollar) [Tsd. US $]",
    "Deutschland · Chemische Halbstoffe, Nadelholz, gebleicht kgtr90% | Einfuhr: Wert [Tsd. EUR]"
+  ]
+ },
+ "61111-0006 · CC13-1213221100": {
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n61111;Verbraucherpreisindex für Deutschland;JAHR;Jahr;2026;MONAT;Monate;MONAT12;Dezember;DINSG;Deutschland insgesamt;DG;Deutschland;CC13Z1;Verwendungszwecke des Individualkonsums,10-Steller;CC13-1213221100;Toilettenpapier;...",
+  "columns": [
+   "statistics_code",
+   "statistics_label",
+   "time_code",
+   "time_label",
+   "time",
+   "1_variable_code",
+   "1_variable_label",
+   "1_variable_attribute_code",
+   "1_variable_attribute_label",
+   "2_variable_code",
+   "2_variable_label",
+   "2_variable_attribute_code",
+   "2_variable_attribute_label",
+   "3_variable_code",
+   "3_variable_label",
+   "3_variable_attribute_code",
+   "3_variable_attribute_label",
+   "value",
+   "value_unit",
+   "value_variable_code",
+   "value_variable_label"
+  ],
+  "sample": [
+   [
+    "61111",
+    "Verbraucherpreisindex für Deutschland",
+    "JAHR",
+    "Jahr",
+    "2026",
+    "MONAT",
+    "Monate",
+    "MONAT12",
+    "Dezember",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "CC13Z1",
+    "Verwendungszwecke des Individualkonsums,10-Steller",
+    "CC13-1213221100",
+    "Toilettenpapier",
+    "...",
+    "2020=100",
+    "PREIS1",
+    "Verbraucherpreisindex"
+   ],
+   [
+    "61111",
+    "Verbraucherpreisindex für Deutschland",
+    "JAHR",
+    "Jahr",
+    "2022",
+    "MONAT",
+    "Monate",
+    "MONAT08",
+    "August",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "CC13Z1",
+    "Verwendungszwecke des Individualkonsums,10-Steller",
+    "CC13-1213221100",
+    "Toilettenpapier",
+    "126,6",
+    "2020=100",
+    "PREIS1",
+    "Verbraucherpreisindex"
+   ],
+   [
+    "61111",
+    "Verbraucherpreisindex für Deutschland",
+    "JAHR",
+    "Jahr",
+    "2020",
+    "MONAT",
+    "Monate",
+    "MONAT05",
+    "Mai",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "CC13Z1",
+    "Verwendungszwecke des Individualkonsums,10-Steller",
+    "CC13-1213221100",
+    "Toilettenpapier",
+    "102,7",
+    "2020=100",
+    "PREIS1",
+    "Verbraucherpreisindex"
+   ]
+  ],
+  "periodColumn": "1_variable_attribute_code",
+  "series": [
+   "Deutschland · Toilettenpapier | Verbraucherpreisindex [2020=100]"
   ]
  },
  "43531-0001 · WZ08-17": {

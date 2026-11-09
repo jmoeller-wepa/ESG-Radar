@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-09T16:48:42",
+    "lastFeedRun": "2026-11-09T19:05:27",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -7909,6 +7909,228 @@
       "nextDateLabel": null,
       "source": "Niedrigwasser & Wasserentnahme (via Google News)",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVmQzdjQzWnhqcXJuSkh1RjY0TFozaC1ucmdQQTNoWEpSVEotZDNMN3BPR1E0U0tMbC0tdlR6T3NXWmoxZ2N5S0tRR2szdVM1bDNGMlZRTktabDA2N2FZSUw5eElSOGRuazNkVmFtU0NRUF9wQW9jN1Bwcm5jMU14ajlWTVR3TGFmMWFBLTg2TG5MWWxFS3hnZEpZdVJXSV9rUUQzcmdJMWpwdVJvMG1GN2ZOZzhWMS1zek9ULUljNzYxSG0yQzRodnAwZzlaV0t6dVVJZnpkQm0zeUN4eEhn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-9844e67723",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric"
+      ],
+      "title": "Securing and governing your medallion layers in Fabric Data Warehouse",
+      "summary": "Coauthor - Artur Vieira Part 4 of a series on medallion architecture with Fabric Data Warehouse Security should follow the layers, not fight them In Part 1 we chose the pattern, in Part 2 we built the layers, and in Part 3 we covered the operating practices that keep them healthy. Security is the natural next step, because a medallion architecture already gives you something most platforms do not: three clearly…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Power BI Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Securing-and-governing-your-medallion-layers-in-Fabric-Data/ba-p/5377539",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-5b90870be4",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [
+        "SBTI",
+        "Scope 2"
+      ],
+      "title": "SBTi looks to clarify scope 2 guidance",
+      "summary": "The clarifications to SBTi’s Corporate Net Zero Standard comes as the Greenhouse Gas Protocol makes ongoing updates to its own work on scope 2 emissions accounting.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/sbti-looks-to-clarify-scope-2-guidance/874133/",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-1abf259059",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "La Caraïbe en bref - Le Journal de Saint-Barth",
+      "summary": "La Caraïbe en bref Le Journal de Saint-Barth",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONGtUVDZmY09aTmxpOWVvY1VGYTJQdE9LRTV6ek1ScVNsUnkxaVFGcHo3WVdMNGRVU05ORWloSkVZeXFqR3A3VTZhZWstZ3VvNE5BT2wwNHdzZ2RyYmhrczhXZVFGanFVMFFYRWxGZjVGZVVvWi1DSlVDYUttcEd4dVctdFNETE1kUmYyZ01OMUNsX0tqVTctd1c4OWUtM2FT?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-e52082c8f8",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [],
+      "title": "SBTi looks to clarify scope 2 guidance - ESG Dive",
+      "summary": "SBTi looks to clarify scope 2 guidance ESG Dive",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeTBmV21ieDdPdUdBNTAtdWROUDRvZkFwUS0tTmgtZ2NJTFNXSEpiYUJOaG1TclVKSXhHNGJvWUpBQjFoMzFVOFNJSXFBcXhyQVpjODFYOEl1N1NkQWIwa2JmU2U3Zk1keXlzUGZrLUZGV2RJeTRtVjNxcUt6LVF6Sg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-7e4af3cca7",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl Weihnachtskampagne: Nico der Nussknacker auf Reise - werbewoche",
+      "summary": "Lidl Weihnachtskampagne: Nico der Nussknacker auf Reise werbewoche",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZlc0YTdvU3VGS21kZFhxaFhZekRHVlVwVGZ3MWdaNVdUbXI1VE1Wb1V6M1dCNWZIbTNMQl9xWTFyRlhGbE5tbVd2em9pVDRWNkVRd19zZ0VTS1M4NE92d2ZTZmZxQlVoUUVEYVJTNURTMGM3d1pDZWM5QVNiUmxmSEZzdURFSDM1dFRGR1pTM2ViSy10eXVSUk9QR0tYUU1icnJ2YXk1RUE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-f6b271ce06",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Customer claims Tesco Christmas item in £5.50 meal deal is 'misleading' - The Worcester News",
+      "summary": "Customer claims Tesco Christmas item in £5.50 meal deal is 'misleading' The Worcester News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUmlBRmtCdUhDcWFJUEQ3ZGhqakhWYW9jdnVMb05PcXlxV3llSjBBVW1ia3laampTNjI3X1djbFRhRlhyaUxPT2NCbTBNTjZaUnMzMnJlT0J1SEI1UEdBWFFSTmlSLVlwMkp2NjZhV3JDVno3WGFSeVd2QVJoSE8zemY3djJPb1YxZTBJRHhsV0M1aFFDNVc4N2FKRE9jdmoyeGlDMWJSekMyOXd5SlBz?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-2610cf7afc",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate",
+        "forests"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "First Financial Holding: From Disclosure to Action on Climate and Nature - CDP disclosure",
+      "summary": "First Financial Holding: From Disclosure to Action on Climate and Nature CDP disclosure",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE55T0NKODhDZUI5a19oR1RjOEZ2ZmpkZ0tObTAwN0NyRmhlX24wYlJqd3dXcXRFbUhaa3g4WmpZWkFqYXNxSXRVMU1iTGFLRVdvVnYwN3lpZElRVHJ5YTVlaWJnUDBPUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-918b3eff86",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "ECB warns extreme water scarcity puts up to 24% of eurozone output at risk - Anadolu Ajansı",
+      "summary": "ECB warns extreme water scarcity puts up to 24% of eurozone output at risk Anadolu Ajansı",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWmcyVGZacFN2cWxuczNXUlJMMzF6S1VsUE5GQnU5bjlsWTZObzQtUW5JSU5OT1RTZlJTSGw4Q2EzeXFlNjVLVXNVVTNUTkEtSl9PemhCUXh5WG9rUjkxSmhHd1RVeWRpVVNTSWVRRjB4THl5djczbzcybTZqU2RHcGlkLUpTM2tYVE9UVFJaSElmWnBYNWJCTnk4NXFWZjFqVGxQTmo4TS13WEY5UUhj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-09"
+    },
+    {
+      "id": "feed-54c3685646",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "ECB warns extreme water scarcity could put 24% of euro area output at risk - www.indiagazette.com",
+      "summary": "ECB warns extreme water scarcity could put 24% of euro area output at risk www.indiagazette.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOaE5HMzBnek41R0RyU3ZCenRna3RvdWg1SGY0NDA2SEtRSWVwMUdzUkdYbHg4cTJQYWptenFXVTloRHBoNE5NRXRidHRWeElleDV2LTZKYjdvRFhOZm8tQVp1dHhxdl9tN2JIRzIwVFo1a282VnBTUW1JZU1TbTN0ZmJ4ZEZMcXI4UHh0cWkzVUczUEJSNHN3dk5tWnpNWUtmNURuQUlRREFpZFpSRDc3QVdDblZ6YVI4?oc=5",
       "origin": "feed",
       "added": "2026-11-09"
     }

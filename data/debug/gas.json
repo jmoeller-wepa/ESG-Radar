@@ -1,0 +1,24 @@
+{
+ "at": "2026-11-09T19:19:17",
+ "failed": [],
+ "details": [
+  {
+   "area": "eu",
+   "query": {
+    "type": "eu"
+   },
+   "pages": 9,
+   "points": 2504,
+   "url": "https://agsi.gie.eu/api?type=eu&from=2020-01-01&to=2026-11-09&page=9&size=300"
+  },
+  {
+   "area": "de",
+   "query": {
+    "country": "de"
+   },
+   "pages": 9,
+   "points": 2504,
+   "url": "https://agsi.gie.eu/api?country=de&from=2020-01-01&to=2026-11-09&page=9&size=300"
+  }
+ ]
+}

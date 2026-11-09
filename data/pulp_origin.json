@@ -1,0 +1,1083 @@
+{
+ "_comment": "Written by scripts/collect_pulp_origin.py – do not edit by hand. Source: Eurostat Comext DS-045409.",
+ "source": {
+  "label": "Eurostat Comext",
+  "url": "https://ec.europa.eu/eurostat/comext/newxtweb/"
+ },
+ "products": {
+  "total": {
+   "from": "2025-08",
+   "to": "2026-07",
+   "totalKt": 15644,
+   "prevTotalKt": 16454,
+   "rows": [
+    {
+     "code": "BR",
+     "name": "Brazil",
+     "share": 27.7,
+     "kt": 4328.3,
+     "change": 2.5
+    },
+    {
+     "code": "SE",
+     "name": "Sweden",
+     "share": 14.0,
+     "kt": 2192.4,
+     "change": -0.8
+    },
+    {
+     "code": "FI",
+     "name": "Finland",
+     "share": 9.5,
+     "kt": 1484.1,
+     "change": -0.1
+    },
+    {
+     "code": "UY",
+     "name": "Uruguay",
+     "share": 9.1,
+     "kt": 1427.4,
+     "change": 0.3
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands",
+     "share": 7.0,
+     "kt": 1101.7,
+     "change": -0.8
+    },
+    {
+     "code": "PT",
+     "name": "Portugal",
+     "share": 5.2,
+     "kt": 811.6,
+     "change": -0.3
+    },
+    {
+     "code": "US",
+     "name": "USA",
+     "share": 5.2,
+     "kt": 806.0,
+     "change": -0.5
+    },
+    {
+     "code": "ES",
+     "name": "Spain",
+     "share": 4.8,
+     "kt": 752.5,
+     "change": 0.3
+    },
+    {
+     "code": "AT",
+     "name": "Austria",
+     "share": 4.3,
+     "kt": 678.6,
+     "change": 0.3
+    },
+    {
+     "code": "CL",
+     "name": "Chile",
+     "share": 3.2,
+     "kt": 497.8,
+     "change": 0.3
+    },
+    {
+     "code": "BE",
+     "name": "Belgium",
+     "share": 3.0,
+     "kt": 464.7,
+     "change": 0.3
+    },
+    {
+     "code": "DE",
+     "name": "Germany",
+     "share": 3.0,
+     "kt": 464.6,
+     "change": -0.3
+    },
+    {
+     "code": "IT",
+     "name": "Italy",
+     "share": 1.4,
+     "kt": 225.0,
+     "change": 0.1
+    },
+    {
+     "code": "FR",
+     "name": "France",
+     "share": 1.0,
+     "kt": 161.0,
+     "change": -0.4
+    },
+    {
+     "code": "PL",
+     "name": "Poland",
+     "share": 0.6,
+     "kt": 92.7,
+     "change": -0.0
+    },
+    {
+     "code": "EE",
+     "name": "Estonia",
+     "share": 0.3,
+     "kt": 41.3,
+     "change": -0.1
+    },
+    {
+     "code": "CA",
+     "name": "Canada",
+     "share": 0.2,
+     "kt": 27.0,
+     "change": 0.0
+    },
+    {
+     "code": "SK",
+     "name": "Slovakia",
+     "share": 0.2,
+     "kt": 33.3,
+     "change": 0.1
+    },
+    {
+     "code": "CY",
+     "name": "CY",
+     "share": 0.1,
+     "kt": 12.0,
+     "change": 0.0
+    },
+    {
+     "code": "CZ",
+     "name": "Czechia",
+     "share": 0.1,
+     "kt": 17.3,
+     "change": -0.2
+    },
+    {
+     "code": "AE",
+     "name": "AE",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "AR",
+     "name": "Argentina",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "BA",
+     "name": "BA",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "BG",
+     "name": "Bulgaria",
+     "share": 0.0,
+     "kt": 4.8,
+     "change": -0.1
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland",
+     "share": 0.0,
+     "kt": 0.2,
+     "change": 0.0
+    },
+    {
+     "code": "CN",
+     "name": "China",
+     "share": 0.0,
+     "kt": 0.9,
+     "change": 0.0
+    },
+    {
+     "code": "DK",
+     "name": "Denmark",
+     "share": 0.0,
+     "kt": 0.2,
+     "change": 0.0
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom",
+     "share": 0.0,
+     "kt": 0.6,
+     "change": -0.0
+    },
+    {
+     "code": "GH",
+     "name": "GH",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "GR",
+     "name": "Greece",
+     "share": 0.0,
+     "kt": 0.6,
+     "change": -0.0
+    },
+    {
+     "code": "HR",
+     "name": "Croatia",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "HU",
+     "name": "Hungary",
+     "share": 0.0,
+     "kt": 0.3,
+     "change": 0.0
+    },
+    {
+     "code": "ID",
+     "name": "Indonesia",
+     "share": 0.0,
+     "kt": 4.6,
+     "change": -0.1
+    },
+    {
+     "code": "IE",
+     "name": "Ireland",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "IN",
+     "name": "India",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "JP",
+     "name": "Japan",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": -0.0
+    },
+    {
+     "code": "KR",
+     "name": "KR",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "KW",
+     "name": "KW",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "LT",
+     "name": "Lithuania",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "LU",
+     "name": "LU",
+     "share": 0.0,
+     "kt": 2.6,
+     "change": -0.0
+    },
+    {
+     "code": "LV",
+     "name": "Latvia",
+     "share": 0.0,
+     "kt": 1.4,
+     "change": -0.1
+    },
+    {
+     "code": "MT",
+     "name": "MT",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "MY",
+     "name": "Malaysia",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "NO",
+     "name": "Norway",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand",
+     "share": 0.0,
+     "kt": 3.1,
+     "change": -0.0
+    },
+    {
+     "code": "PH",
+     "name": "PH",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "QV",
+     "name": "QV",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "QW",
+     "name": "QW",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "RO",
+     "name": "Romania",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": -0.0
+    },
+    {
+     "code": "SA",
+     "name": "SA",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "SI",
+     "name": "Slovenia",
+     "share": 0.0,
+     "kt": 3.6,
+     "change": 0.0
+    },
+    {
+     "code": "TH",
+     "name": "Thailand",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "TN",
+     "name": "TN",
+     "share": 0.0,
+     "kt": 0.7,
+     "change": 0.0
+    },
+    {
+     "code": "TR",
+     "name": "Türkiye",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "XS",
+     "name": "XS",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "ZA",
+     "name": "South Africa",
+     "share": 0.0,
+     "kt": 0.2,
+     "change": -0.2
+    }
+   ],
+   "hs": "4703",
+   "reporter": "EU27_2020"
+  },
+  "nbsk": {
+   "from": "2025-08",
+   "to": "2026-07",
+   "totalKt": 5105,
+   "prevTotalKt": 5693,
+   "rows": [
+    {
+     "code": "SE",
+     "name": "Sweden",
+     "share": 37.5,
+     "kt": 1913.3,
+     "change": 0.3
+    },
+    {
+     "code": "FI",
+     "name": "Finland",
+     "share": 18.3,
+     "kt": 932.0,
+     "change": -0.7
+    },
+    {
+     "code": "US",
+     "name": "USA",
+     "share": 15.2,
+     "kt": 778.4,
+     "change": 0.2
+    },
+    {
+     "code": "DE",
+     "name": "Germany",
+     "share": 7.9,
+     "kt": 401.6,
+     "change": -0.3
+    },
+    {
+     "code": "AT",
+     "name": "Austria",
+     "share": 4.7,
+     "kt": 240.0,
+     "change": 1.2
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands",
+     "share": 3.2,
+     "kt": 161.5,
+     "change": -0.9
+    },
+    {
+     "code": "BE",
+     "name": "Belgium",
+     "share": 2.6,
+     "kt": 132.7,
+     "change": 0.2
+    },
+    {
+     "code": "CL",
+     "name": "Chile",
+     "share": 2.1,
+     "kt": 106.9,
+     "change": 0.2
+    },
+    {
+     "code": "IT",
+     "name": "Italy",
+     "share": 2.1,
+     "kt": 106.6,
+     "change": 0.3
+    },
+    {
+     "code": "BR",
+     "name": "Brazil",
+     "share": 1.6,
+     "kt": 80.2,
+     "change": 0.5
+    },
+    {
+     "code": "PT",
+     "name": "Portugal",
+     "share": 1.1,
+     "kt": 55.3,
+     "change": 0.2
+    },
+    {
+     "code": "FR",
+     "name": "France",
+     "share": 1.0,
+     "kt": 52.6,
+     "change": -0.8
+    },
+    {
+     "code": "PL",
+     "name": "Poland",
+     "share": 0.9,
+     "kt": 48.3,
+     "change": 0.1
+    },
+    {
+     "code": "ES",
+     "name": "Spain",
+     "share": 0.8,
+     "kt": 39.8,
+     "change": 0.2
+    },
+    {
+     "code": "CA",
+     "name": "Canada",
+     "share": 0.4,
+     "kt": 22.5,
+     "change": 0.1
+    },
+    {
+     "code": "CZ",
+     "name": "Czechia",
+     "share": 0.3,
+     "kt": 13.0,
+     "change": -0.5
+    },
+    {
+     "code": "EE",
+     "name": "Estonia",
+     "share": 0.2,
+     "kt": 11.5,
+     "change": -0.0
+    },
+    {
+     "code": "SI",
+     "name": "Slovenia",
+     "share": 0.1,
+     "kt": 3.6,
+     "change": 0.1
+    },
+    {
+     "code": "AE",
+     "name": "AE",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "AR",
+     "name": "Argentina",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "BG",
+     "name": "Bulgaria",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "CN",
+     "name": "China",
+     "share": 0.0,
+     "kt": 0.4,
+     "change": 0.0
+    },
+    {
+     "code": "CY",
+     "name": "CY",
+     "share": 0.0,
+     "kt": 0.3,
+     "change": -0.0
+    },
+    {
+     "code": "DK",
+     "name": "Denmark",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "GR",
+     "name": "Greece",
+     "share": 0.0,
+     "kt": 0.2,
+     "change": 0.0
+    },
+    {
+     "code": "HR",
+     "name": "Croatia",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "HU",
+     "name": "Hungary",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "IE",
+     "name": "Ireland",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "JP",
+     "name": "Japan",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "KW",
+     "name": "KW",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "LT",
+     "name": "Lithuania",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "LU",
+     "name": "LU",
+     "share": 0.0,
+     "kt": 0.7,
+     "change": 0.0
+    },
+    {
+     "code": "LV",
+     "name": "Latvia",
+     "share": 0.0,
+     "kt": 1.0,
+     "change": -0.1
+    },
+    {
+     "code": "MT",
+     "name": "MT",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "MY",
+     "name": "Malaysia",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "NO",
+     "name": "Norway",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "QW",
+     "name": "QW",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "RO",
+     "name": "Romania",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "SK",
+     "name": "Slovakia",
+     "share": 0.0,
+     "kt": 0.7,
+     "change": 0.0
+    },
+    {
+     "code": "TN",
+     "name": "TN",
+     "share": 0.0,
+     "kt": 0.7,
+     "change": 0.0
+    },
+    {
+     "code": "TR",
+     "name": "Türkiye",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "XS",
+     "name": "XS",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "ZA",
+     "name": "South Africa",
+     "share": 0.0,
+     "kt": 0.2,
+     "change": 0.0
+    }
+   ],
+   "hs": "470321",
+   "reporter": "EU27_2020"
+  },
+  "bhkp": {
+   "from": "2025-08",
+   "to": "2026-07",
+   "totalKt": 10230,
+   "prevTotalKt": 10396,
+   "rows": [
+    {
+     "code": "BR",
+     "name": "Brazil",
+     "share": 41.4,
+     "kt": 4236.6,
+     "change": 2.2
+    },
+    {
+     "code": "UY",
+     "name": "Uruguay",
+     "share": 14.0,
+     "kt": 1427.4,
+     "change": 0.0
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands",
+     "share": 9.1,
+     "kt": 932.4,
+     "change": -1.0
+    },
+    {
+     "code": "PT",
+     "name": "Portugal",
+     "share": 7.3,
+     "kt": 750.6,
+     "change": -0.8
+    },
+    {
+     "code": "ES",
+     "name": "Spain",
+     "share": 6.9,
+     "kt": 707.1,
+     "change": 0.2
+    },
+    {
+     "code": "FI",
+     "name": "Finland",
+     "share": 4.6,
+     "kt": 468.2,
+     "change": 1.1
+    },
+    {
+     "code": "AT",
+     "name": "Austria",
+     "share": 4.0,
+     "kt": 408.1,
+     "change": -0.2
+    },
+    {
+     "code": "CL",
+     "name": "Chile",
+     "share": 3.7,
+     "kt": 383.1,
+     "change": 0.2
+    },
+    {
+     "code": "BE",
+     "name": "Belgium",
+     "share": 3.1,
+     "kt": 320.9,
+     "change": 0.3
+    },
+    {
+     "code": "SE",
+     "name": "Sweden",
+     "share": 1.7,
+     "kt": 178.6,
+     "change": -0.4
+    },
+    {
+     "code": "IT",
+     "name": "Italy",
+     "share": 1.1,
+     "kt": 116.9,
+     "change": 0.1
+    },
+    {
+     "code": "FR",
+     "name": "France",
+     "share": 0.9,
+     "kt": 91.1,
+     "change": -0.1
+    },
+    {
+     "code": "DE",
+     "name": "Germany",
+     "share": 0.6,
+     "kt": 57.6,
+     "change": -0.1
+    },
+    {
+     "code": "PL",
+     "name": "Poland",
+     "share": 0.4,
+     "kt": 43.8,
+     "change": -0.1
+    },
+    {
+     "code": "EE",
+     "name": "Estonia",
+     "share": 0.3,
+     "kt": 25.8,
+     "change": -0.1
+    },
+    {
+     "code": "SK",
+     "name": "Slovakia",
+     "share": 0.3,
+     "kt": 32.6,
+     "change": 0.1
+    },
+    {
+     "code": "US",
+     "name": "USA",
+     "share": 0.2,
+     "kt": 23.6,
+     "change": -0.5
+    },
+    {
+     "code": "CY",
+     "name": "CY",
+     "share": 0.1,
+     "kt": 7.8,
+     "change": 0.1
+    },
+    {
+     "code": "BA",
+     "name": "BA",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "BG",
+     "name": "Bulgaria",
+     "share": 0.0,
+     "kt": 4.8,
+     "change": -0.2
+    },
+    {
+     "code": "CA",
+     "name": "Canada",
+     "share": 0.0,
+     "kt": 0.6,
+     "change": -0.0
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "CN",
+     "name": "China",
+     "share": 0.0,
+     "kt": 0.5,
+     "change": 0.0
+    },
+    {
+     "code": "CZ",
+     "name": "Czechia",
+     "share": 0.0,
+     "kt": 4.3,
+     "change": 0.0
+    },
+    {
+     "code": "DK",
+     "name": "Denmark",
+     "share": 0.0,
+     "kt": 0.2,
+     "change": 0.0
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom",
+     "share": 0.0,
+     "kt": 0.5,
+     "change": -0.0
+    },
+    {
+     "code": "GR",
+     "name": "Greece",
+     "share": 0.0,
+     "kt": 0.4,
+     "change": -0.0
+    },
+    {
+     "code": "HR",
+     "name": "Croatia",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "HU",
+     "name": "Hungary",
+     "share": 0.0,
+     "kt": 0.3,
+     "change": 0.0
+    },
+    {
+     "code": "ID",
+     "name": "Indonesia",
+     "share": 0.0,
+     "kt": 4.6,
+     "change": -0.1
+    },
+    {
+     "code": "IE",
+     "name": "Ireland",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "IN",
+     "name": "India",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "JP",
+     "name": "Japan",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": -0.0
+    },
+    {
+     "code": "LT",
+     "name": "Lithuania",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "LU",
+     "name": "LU",
+     "share": 0.0,
+     "kt": 0.4,
+     "change": 0.0
+    },
+    {
+     "code": "LV",
+     "name": "Latvia",
+     "share": 0.0,
+     "kt": 0.4,
+     "change": -0.1
+    },
+    {
+     "code": "MT",
+     "name": "MT",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "NO",
+     "name": "Norway",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "PH",
+     "name": "PH",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "QV",
+     "name": "QV",
+     "share": 0.0,
+     "kt": 0.1,
+     "change": 0.0
+    },
+    {
+     "code": "RO",
+     "name": "Romania",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "SA",
+     "name": "SA",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "SI",
+     "name": "Slovenia",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
+    },
+    {
+     "code": "TH",
+     "name": "Thailand",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "TR",
+     "name": "Türkiye",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "XS",
+     "name": "XS",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
+    },
+    {
+     "code": "ZA",
+     "name": "South Africa",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.3
+    }
+   ],
+   "hs": "470329",
+   "reporter": "EU27_2020"
+  }
+ },
+ "updated": "2026-11-09T19:19:51"
+}

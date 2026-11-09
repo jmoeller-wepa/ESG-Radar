@@ -1,0 +1,65 @@
+{
+ "at": "2026-11-09T19:18:53",
+ "failed": [
+  "arnsberg: no recent observations"
+ ],
+ "details": [
+  {
+   "stations": 1386,
+   "recentFiles": 573
+  },
+  {
+   "site": "arnsberg",
+   "historical": "tageswerte_KL_13952_20090201_20251231_hist.zip",
+   "normalYears": null
+  },
+  {
+   "site": "giershagen",
+   "historical": "tageswerte_KL_06264_20040601_20251231_hist.zip",
+   "normalYears": 17
+  },
+  {
+   "site": "giershagen",
+   "station": 6264,
+   "name": "Brilon-Thülen",
+   "km": 6.0,
+   "last": "2026-11-08"
+  },
+  {
+   "site": "kriebstein",
+   "historical": "tageswerte_KL_00131_20041101_20251231_hist.zip",
+   "normalYears": 17
+  },
+  {
+   "site": "kriebstein",
+   "station": 131,
+   "name": "Geringswalde-Altgeringswalde",
+   "km": 7.1,
+   "last": "2026-11-08"
+  },
+  {
+   "site": "mainz",
+   "historical": "tageswerte_KL_03137_19480101_20251231_hist.zip",
+   "normalYears": 30
+  },
+  {
+   "site": "mainz",
+   "station": 3137,
+   "name": "Mainz-Lerchenberg (ZDF)",
+   "km": 6.1,
+   "last": "2026-11-08"
+  },
+  {
+   "site": "leuna",
+   "historical": "tageswerte_KL_02878_19470401_20251231_hist.zip",
+   "normalYears": 21
+  },
+  {
+   "site": "leuna",
+   "station": 2878,
+   "name": "Lauchstädt, Bad",
+   "km": 12.5,
+   "last": "2026-11-08"
+  }
+ ]
+}
