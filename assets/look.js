@@ -4,7 +4,7 @@
    (html[data-lk-*] attributes). The settings panel also takes over light/dark, so the separate theme button is hidden. */
 (function () {
   const KEY = "radar.look.v1", TKEY = "radar.theme";
-  const DEF = { bg: "aurora", gi: "s", card: "shadow", r: "l", d: "airy", ic: "on" };
+  const DEF = { bg: "off", gi: "s", card: "shadow", r: "l", d: "airy", ic: "on" };
   const root = document.documentElement;
   const load = () => { try { return Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { return Object.assign({}, DEF); } };
   let st = load();
@@ -84,6 +84,7 @@
     };
     render();
     pop.addEventListener("click", (e) => {
+      e.stopPropagation(); // the panel re-renders, so the clicked button leaves the page: keep the panel open
       const b = e.target.closest("button"); if (!b) return;
       if (b.classList.contains("lk-x")) { close(); btn.focus(); return; }
       if (b.classList.contains("lk-reset")) { st = Object.assign({}, DEF); save(); render(); return; }

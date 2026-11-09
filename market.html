@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109h"></script>
-<script src="assets/look.js?v=20261109h"></script>
+<script src="assets/theme.js?v=20261109j"></script>
+<script src="assets/look.js?v=20261109j"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
-<link rel="stylesheet" href="assets/side.css?v=20261109h">
+<link rel="stylesheet" href="assets/side.css?v=20261109j">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -186,13 +186,14 @@
   .ind-lg { margin: 2px 0 4px; justify-content: flex-start; } .ind-lg .lg { cursor: default; }
   .gd-chart svg { width: 100%; height: auto; display: block; }
   .gd-tip { position: absolute; pointer-events: none; background: var(--d-002d55-bg, #002d55); color: #fff; font-size: 12px; border-radius: 7px; padding: 5px 8px; white-space: nowrap; transform: translate(-50%, -110%); }
-  .gd-about { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-  .gd-about > div { border-radius: 10px; padding: 10px 12px; background: var(--d-f7f9fb-bg, #f7f9fb); }
-  .gd-about > .ab1 { border-top-color: #33b09c; background: var(--d-f1faf7-bg, #f1faf7); }
-  .gd-about > .ab2 { border-top-color: var(--d-f4b49f-border, #f4b49f); background: var(--d-fdf6f3-bg, #fdf6f3); }
-  .gd-about b { display: block; font-size: 12px; letter-spacing: .03em; color: var(--blue-900); margin-bottom: 4px; }
+  .gd-about { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--d-f0f1f4-border, #f0f1f4); padding-top: 12px; }
+  .gd-about > div { padding: 0 16px; border-left: 1px solid var(--d-f0f1f4-border, #f0f1f4); }
+  .gd-about > div:first-child { padding-left: 0; border-left: 0; }
+  .gd-about b { display: flex; align-items: center; gap: 6px; font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); margin-bottom: 4px; }
+  .gd-about b svg { width: 14px; height: 14px; flex: none; }
+  .gd-about > .ab1 b { color: var(--d-1d7f6c-text, #1d7f6c); }
   .gd-about p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--d-374151-text, #374151); }
-  @media (max-width: 760px) { .gd-about { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) { .gd-about { grid-template-columns: 1fr; gap: 10px; } .gd-about > div { padding: 0; border-left: 0; } }
   .gd-warn { margin: 0; font-size: 12.5px; color: var(--d-8a5a00-text, #8a5a00); background: var(--d-fff6e0-bg, #fff6e0); border-radius: 8px; padding: 6px 10px; }
   .tile { cursor: pointer; }
   .tile .pin { cursor: pointer; font: inherit; }
@@ -278,9 +279,9 @@
   .gl-band p { margin: 3px 0 0; font-size: 13px; color: var(--ink-2); }
   .gl-foot { margin: 0; font-size: 12.5px; color: var(--ink-3); }
   /* "For WEPA" line on cards: always three lines high, so cards in a row stay aligned */
-  .wepa { font-size: 12.5px; line-height: 1.45; color: var(--d-374151-text, #374151); background: var(--d-eef5fb-bg, #eef5fb); border-radius: 8px; padding: 7px 10px; height: calc(3 * 1.45em + 14px); box-sizing: border-box; }
-  .wepa > span { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .wepa b { color: var(--blue-900); font-weight: 600; }
+  .wepa { font-size: 12.5px; line-height: 1.45; color: var(--d-374151-text, #374151); border-top: 1px solid var(--d-f0f1f4-border, #f0f1f4); padding-top: 8px; display: flex; flex-direction: column; gap: 1px; }
+  .wepa > span { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: calc(3 * 1.45em); }
+  .wepa b, .wepa-l b { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--d-1d7f6c-text, #1d7f6c); }
   .tile .tag { position: absolute; top: 12px; right: 12px; }
   .tag { flex: none; font-size: 11px; font-weight: 600; background: var(--d-e6eef9-bg, #e6eef9); color: var(--blue-900); padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
   .tile.has-tag .lbl { padding-right: 76px; }
@@ -345,7 +346,7 @@
   .w-sp { width: 160px; } .w-sp svg { width: 150px; height: 30px; display: block; }
   .gd-kpis small .sig { margin-left: 2px; }
   .wepa-l { margin: 0; font-size: 13px; line-height: 1.5; color: var(--d-374151-text, #374151); }
-  .wepa-l b { color: var(--blue-900); }
+  .wepa-l { border-top: 1px solid var(--d-f0f1f4-border, #f0f1f4); padding-top: 8px; }
   /* Indicator dropdown in the side panel */
   .idd .ps-tree { padding: 8px 6px 6px; }
   .ind-q { width: 100%; box-sizing: border-box; font: inherit; font-size: 13px; padding: 6px 9px; margin: 0 0 8px; border: 1px solid var(--d-e1e5eb-border, #e1e5eb); border-radius: 8px; background: var(--d-fff-bg, #fff); color: var(--ink); }
@@ -356,9 +357,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261109h" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109h">
-<script src="assets/colresize.js?v=20261109h" defer></script>
+<script src="assets/status.js?v=20261109j" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109j">
+<script src="assets/colresize.js?v=20261109j" defer></script>
 </head>
 <body>
 <header>
@@ -403,8 +404,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261109h"></script>
-<script src="assets/carbon.js?v=20261109h"></script>
+<script src="assets/side.js?v=20261109j"></script>
+<script src="assets/carbon.js?v=20261109j"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -932,7 +933,7 @@
       if (ind.status === "stale") t.appendChild(el("div", "warn", "Last update failed – showing the previous values."));
       if (can) t.appendChild(spark(ind, sel ? colorOf[ind.id] : null));
     }
-    if (ind.short) { const w = el("div", "wepa"); w.title = ind.short; const sp = el("span"); sp.append(el("b", null, "For WEPA: "), document.createTextNode(ind.short)); w.appendChild(sp); if (!can || !hasData(ind)) w.style.marginTop = "auto"; t.appendChild(w); }
+    if (ind.short) { const w = el("div", "wepa"); w.title = ind.short; const sp = el("span", null, ind.short); w.append(el("b", null, "For WEPA"), sp); if (!can || !hasData(ind)) w.style.marginTop = "auto"; t.appendChild(w); }
     const src = el("div", "src");
     src.appendChild(el("span", null, `${ind.attribution} · ${ind.freq}`));
     const a = el("a", null, "Source ↗"); a.href = (ind.source === "manual" && ind.notes && ind.notes.length && ind.notes[ind.notes.length - 1].url) || ind.link; a.target = "_blank"; a.rel = "noopener";
@@ -999,8 +1000,10 @@
     const a = ind.group === "grid" ? GRID_ABOUT : ABOUT[ind.id] || ind.about;
     if (!a) return null;
     const box = el("div", "gd-about");
-    [["What it shows", a.what], ["What it means for WEPA", a.wepa], ["What it doesn't tell you", a.limits]].forEach(([h, t], n) => {
-      if (!t) return; const d = el("div", "ab" + n); d.append(el("b", null, h), el("p", null, t)); box.appendChild(d);
+    const ico = (d) => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + "</svg>";
+    const EYE = ico('<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>'), LIM = ico('<circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/>');
+    [["What it shows", a.what, EYE], ["For WEPA", a.wepa, ""], ["Limits", a.limits, LIM]].forEach(([h, t, icon], n) => {
+      if (!t) return; const d = el("div", "ab" + n); const hb = el("b"); hb.innerHTML = icon; hb.appendChild(document.createTextNode(h)); d.append(hb, el("p", null, t)); box.appendChild(d);
     });
     return box;
   }
@@ -1380,7 +1383,7 @@
         wrap.appendChild(hh);
         const box = el("div", "chart ind-chart w-chart"); wrap.appendChild(box);
         draws.push(() => dailyChart(box, g.series, { label: "Water level " + g.label, name: g.label, unit: "cm", refs }));
-        if (g.why) { const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode(g.why)); wrap.appendChild(w); }
+        if (g.why) { const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode(g.why.charAt(0).toUpperCase() + g.why.slice(1))); wrap.appendChild(w); }
         const legend = [];
         if (c.GlW != null) legend.push("GlW = equivalent low water (the level reached or undercut on about 20 ice-free days a year)");
         if (c.MNW != null) legend.push("MNW = mean low water " + c.MNW + " cm");
@@ -1429,7 +1432,7 @@
       tb.appendChild(tr);
     });
     t.appendChild(tb); tw.appendChild(t); sec.appendChild(tw);
-    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("long dry spells come before low river levels, stricter limits on water abstraction and warmer cooling water. Below " + dry + " % plants start to suffer; dashed line in the mini charts."));
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Long dry spells come before low river levels, stricter limits on water abstraction and warmer cooling water. Below " + dry + " % plants start to suffer; dashed line in the mini charts."));
     sec.appendChild(w);
     const f = el("p", "ind-src"); f.append("Source: ");
     const a = el("a", null, "DWD Climate Data Center ↗"); a.href = "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a);
@@ -1442,9 +1445,8 @@
     const draws = [];
     // two sub-pages: monthly market figures and the yearly industry profile
     const sub = el("div", "subnav"); sub.setAttribute("role", "tablist"); sub.setAttribute("aria-label", "Industry view");
-    [["month", "Monthly · market", "production, demand, trade"], ["year", "Yearly · industry profile", "environment, recovered paper, Europe"]].forEach(([id, t, hint]) => {
+    [["month", "Monthly market"], ["year", "Yearly industry profile"]].forEach(([id, t]) => {
       const b = el("button", null, t); b.type = "button"; b.setAttribute("role", "tab"); b.setAttribute("aria-selected", String(state.ind === id));
-      b.appendChild(el("small", null, hint));
       b.addEventListener("click", () => { if (state.ind === id) return; state.ind = id; renderAll(); window.scrollTo({ top: 0 }); });
       sub.appendChild(b);
     });
@@ -1682,7 +1684,7 @@
       return { name: i.label.replace("German power mix · ", ""), v: p ? p[1] : 0, color: MIX_COL[i.id] || "#828282", extra: d == null ? "" : (d > 0.05 ? "▲ " : d < -0.05 ? "▼ " : "▬ ") + Math.abs(d).toFixed(1) + " pp" };
     });
     const [bar, lg] = mixBar(parts); sec.append(bar, lg);
-    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("explains why the German grid factor moves – more wind and solar lower the location-based Scope 2 of German sites, more coal raises it. Changes are against the same month a year earlier."));
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Explains why the German grid factor moves – more wind and solar lower the location-based Scope 2 of German sites, more coal raises it. Changes are against the same month a year earlier."));
     sec.appendChild(w);
     return sec;
   }
@@ -1713,7 +1715,7 @@
     const em = energyParts();
     if (em) { const [bar, lg] = mixBar(em.parts); h.lastChild.textContent = em.year + " · share of energy use · Destatis 43531"; sec.append(bar, lg); }
     else sec.appendChild(el("div", "empty", "The energy mix arrives with the first Destatis data update."));
-    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("how gas-dependent the industry is and how far fuel switching has come – a yardstick for WEPA's transition plan (ESRS E1).")); sec.appendChild(w);
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("How gas-dependent the industry is and how far fuel switching has come – a yardstick for WEPA's transition plan (ESRS E1).")); sec.appendChild(w);
     host.appendChild(sec);
     const facts = prof.filter((i) => i.stack !== "energy").concat(prof.filter((i) => i.id === "prof_energy_total"));
     if (facts.length) { const g = el("div", "tiles"); facts.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
@@ -1782,7 +1784,7 @@
         if (gh) gh.replaceWith(ih); else t.prepend(ih);
       }
       host.appendChild(t || el("div", "empty", "Grid data arrives with the next data update (Ember)."));
-      if (t) { const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA: "), document.createTextNode("electricity use × this factor gives the location-based Scope 2 of WEPA's sites in each country. Electrifying heat lowers emissions a lot in France, little in Poland.")); t.appendChild(w); }
+      if (t) { const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Electricity use × this factor gives the location-based Scope 2 of WEPA's sites in each country. Electrifying heat lowers emissions a lot in France, little in Poland.")); t.appendChild(w); }
     }
     if (tab.id === "glance") renderGlance(host);
     if (tab.id === "industry") renderIndustry(host);
@@ -1958,7 +1960,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261109h" defer></script>
-<script src="assets/guide.js?v=20261109h" defer></script>
+<script src="assets/search.js?v=20261109j" defer></script>
+<script src="assets/guide.js?v=20261109j" defer></script>
 </body>
 </html>

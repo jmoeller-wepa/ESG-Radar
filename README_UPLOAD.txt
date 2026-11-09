@@ -1,4 +1,4 @@
-ESG Radar – update-22-guide-hover (builds on update-21, contains everything from update-19, 20 and 21)
+ESG Radar – update-24-wepa-notes (builds on update-23, contains everything from update-19 to 23)
 
 Upload to the repository ROOT folder:
   index.html, news.html, regulation.html, peers.html, market.html
@@ -9,6 +9,19 @@ Upload to the folder assets/:
 
 Nothing in data/ or config/ changes.
 
+What changed in update-24 (Market page)
+- "For WEPA" on tiles and under charts: no blue box any more; small green "FOR WEPA" label above
+  the text, separated by a thin line.
+- Explanation boxes under charts and in pop-ups: three columns without fill, thin dividers,
+  small labels "What it shows" (eye icon), "For WEPA" (green, no icon), "Limits" (info icon).
+- Cache version 20261109j on all pages.
+
+What changed in update-23
+- Settings panel stays open while you change options (closes with ×, Esc or a click outside).
+- Default page background is now "Off" (light grey). If you already changed a setting,
+  click "Reset to default" once in Settings.
+- Market › Industry: toggle labels are just "Monthly market" / "Yearly industry profile".
+
 What changed in update-22
 - Descriptive lines under headings removed; their content is now in the "?" guide of each page
   (Overview "Your cards" line, Market intro + tab descriptions, Peers intro + table/profile/ETS hints,
@@ -16,7 +29,6 @@ What changed in update-22
   Units, sources and the "illustrative, not WEPA figures" note stay on the page.
 - Overview hover: key-number tiles lift with a clear shadow, cards get a stronger shadow,
   news/peer/market rows get a light green highlight.
-- Cache version 20261109h on all pages.
 
 What changed in update-21
 - New look (default): cards with a soft shadow instead of a border, larger corners (18px),
