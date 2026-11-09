@@ -50,13 +50,23 @@ def find_station(stations, g):
     for s in stations:
         if m and m in (s.get("longname") or "").upper():
             return s
+    # not on PEGELONLINE (e.g. a gauge run by a federal state): nearest station on the same river
+    if g.get("lat") is not None and g.get("lon") is not None:
+        river = (g.get("water") or "").upper()
+        near = [(km((g["lat"], g["lon"]), (s["latitude"], s["longitude"])), s) for s in stations
+                if s.get("latitude") is not None and s.get("longitude") is not None
+                and (not river or ((s.get("water") or {}).get("shortname") or "").upper() == river)]
+        near = [x for x in near if x[0] <= float(g.get("maxKm", 60))]
+        if near:
+            d, s = min(near, key=lambda x: x[0])
+            return dict(s, _fallbackKm=round(d, 1))
     return None
 
 
 def collect_gauge(g, stations, prev, keep_from, dbg):
     st = find_station(stations, g)
     if not st:
-        raise RuntimeError(f"station {g.get('station')} not found")
+        raise RuntimeError(f"station {g.get('station')} not found" + (" (no PEGELONLINE gauge on that river within reach)" if g.get("lat") is not None else ""))
     uid = st["uuid"]
     detail = get_json(f"{PEGEL}/stations/{uid}.json?includeTimeseries=true&includeCharacteristicValues=true")
     ts = next((t for t in detail.get("timeseries", []) if t.get("shortname") == "W"), None)
@@ -76,10 +86,13 @@ def collect_gauge(g, stations, prev, keep_from, dbg):
     series = sorted((d, v) for d, v in series.items() if d >= keep_from)
     last = meas[-1] if meas else None
     dbg.append({"gauge": g["id"], "station": st.get("shortname"), "uuid": uid, "water": (st.get("water") or {}).get("longname"),
-                "characteristic": char, "points": len(meas)})
+                "characteristic": char, "points": len(meas), **({"fallbackKm": st["_fallbackKm"], "wanted": g.get("station")} if "_fallbackKm" in st else {})})
+    label = g.get("label") or st.get("longname")
+    if "_fallbackKm" in st:   # configured gauge missing: name the gauge actually used
+        label = f"{g.get('river') or (st.get('water') or {}).get('longname')} · {(st.get('longname') or '').title()}"
     keep = {k: char[k] for k in ("GlW", "MNW", "MW", "MHW", "HSW") if k in char}
     return {
-        "id": g["id"], "label": g.get("label") or st.get("longname"), "river": g.get("river") or (st.get("water") or {}).get("longname"),
+        "id": g["id"], "label": label, "river": g.get("river") or (st.get("water") or {}).get("longname"),
         "station": st.get("longname"), "unit": ts.get("unit") or "cm", "why": g.get("why", ""),
         "characteristic": keep, "thresholds": g.get("thresholds", []),
         "latest": {"t": last.get("timestamp"), "v": last.get("value")} if last else None,

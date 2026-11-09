@@ -1,5 +1,5 @@
 {
-  "_comment": "Settings for scripts/collect_water.py (Market page, tab 'Water'). 'gauges': river gauges from PEGELONLINE (Federal Waterways and Shipping Administration, free API, licence DL-DE->Zero-2.0); 'station' is the PEGELONLINE short name, 'match' is used when the short name is not found (part of the long name). Characteristic values (GlW, MNW, MW) come from PEGELONLINE itself; 'thresholds' adds your own lines (e.g. where barge low-water surcharges start in WEPA's contracts). 'sites': WEPA mills in Germany (public addresses); the collector picks the nearest DWD station that has daily soil-moisture data (Deutscher Wetterdienst, CC BY 4.0). Only public data, nothing internal.",
+  "_comment": "Settings for scripts/collect_water.py (Market page, tab 'Water'). 'gauges': river gauges from PEGELONLINE (Federal Waterways and Shipping Administration, free API, licence DL-DE->Zero-2.0); 'station' is the PEGELONLINE short name, 'match' is used when the short name is not found (part of the long name). If neither is on PEGELONLINE (gauges run by a federal state, e.g. Leuna-Kreypau), 'lat'/'lon' pick the nearest PEGELONLINE gauge on the river 'water' within 'maxKm'. Characteristic values (GlW, MNW, MW) come from PEGELONLINE itself; 'thresholds' adds your own lines (e.g. where barge low-water surcharges start in WEPA's contracts). 'sites': WEPA mills in Germany (public addresses); the collector picks the nearest DWD station that has daily soil-moisture data (Deutscher Wetterdienst, CC BY 4.0). Only public data, nothing internal.",
   "historyDays": 1095,
   "gauges": [
     {
@@ -24,6 +24,10 @@
       "id": "leuna",
       "station": "LEUNA-KREYPAU",
       "match": "KREYPAU",
+      "water": "SAALE",
+      "lat": 51.300,
+      "lon": 11.990,
+      "maxKm": 60,
       "label": "Saale · Leuna-Kreypau",
       "river": "Saale",
       "why": "Gauge next to the Leuna mill.",
