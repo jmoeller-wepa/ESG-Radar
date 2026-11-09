@@ -39,6 +39,10 @@ jobs:
         run: python scripts/collect_industry.py
         continue-on-error: true
 
+      - name: Collect river levels & soil moisture
+        run: python scripts/collect_water.py
+        continue-on-error: true
+        
       - name: Collect EU ETS emissions of peers
         run: python scripts/collect_ets.py
         continue-on-error: true   # yearly file; skipped automatically when nothing changed
