@@ -518,13 +518,49 @@ def _destatis_table(name, extra=None):
     if key in _destatis["tables"]:
         return _destatis["tables"][key]
     dbg = _destatis["debug"].setdefault(name if not extra else name + " · " + extra.get("classifyingkey1", "")[:60], {})
-    year = datetime.now(timezone.utc).year
+    first, year = int(START[:4]), datetime.now(timezone.utc).year
+    try:
+        out = _destatis_rows(name, extra, first, year, dbg)
+    except _NoCube as exc:
+        # GENESIS code 7000 "kein Datenquader gefunden": one empty time slice (e.g. while Destatis is loading
+        # new figures, or a year without data for one value variable) makes the whole request fail.
+        # Wait once and try again, then fall back to one request per year and keep the years that work.
+        import time
+        time.sleep(20)
+        try:
+            out = _destatis_rows(name, extra, first, year, dbg)
+            dbg["retry"] = "ok after 20 s"
+        except _NoCube:
+            out, empty = [], []
+            for y in range(first, year + 1):
+                try:
+                    out += _destatis_rows(name, extra, y, y, dbg)
+                except _NoCube:
+                    empty.append(y)
+            dbg["byYear"] = {"emptyYears": empty, "rows": len(out)}
+            if not out:
+                raise RuntimeError(str(exc)) from None
+    dbg["series"] = sorted({(l + (" | " + vl if vl else "") + (" [" + u + "]" if u else "")) for l, vl, u, _, _ in out})[:120]
+    _destatis["tables"][key] = out
+    return out
+
+
+class _NoCube(RuntimeError):
+    """GENESIS answered 'no data cube / time slice' (code 7000) instead of a table."""
+
+
+def _destatis_rows(name, extra, startyear, endyear, dbg):
     text = _genesis_post("data/tablefile", {"name": name, "area": "all", "compress": "false", "transpose": "false",
-                                            "startyear": str(int(START[:4])), "endyear": str(year), "format": "ffcsv", **extra})
+                                            "startyear": str(startyear), "endyear": str(endyear), "format": "ffcsv", **extra})
     if text.lstrip().startswith("{"):
         info = json.loads(text)
         dbg["answer"] = {k: info.get(k) for k in ("Status", "Ident") if k in info}
-        raise RuntimeError("GENESIS: " + json.dumps(info.get("Status") or info, ensure_ascii=False)[:180])
+        msg = "GENESIS: " + json.dumps(info.get("Status") or info, ensure_ascii=False)[:180]
+        st = info.get("Status") or {}
+        if str(st.get("Code")) == "7000" or "Datenquader" in str(st.get("Content", "")):
+            raise _NoCube(msg)
+        raise RuntimeError(msg)
+    dbg.pop("answer", None)
     dbg["raw"] = text[:600]
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     rows = [r for r in csv.reader(io.StringIO(text, newline=""), delimiter=";") if r]
@@ -572,9 +608,7 @@ def _destatis_table(name, extra=None):
         label = " · ".join(r[k].strip() for k in label_cols if len(r) > k and r[k].strip())
         out.append((label, (r[lcol].strip() if lcol is not None and len(r) > lcol else ""),
                     (r[ucol].strip() if ucol is not None and len(r) > ucol else ""), f"{yr}-{month}", val))
-    dbg["series"] = sorted({(l + (" | " + vl if vl else "") + (" [" + u + "]" if u else "")) for l, vl, u, _, _ in out})[:120]
     dbg["periodColumn"] = head[pcol] if pcol is not None else "none (yearly)"
-    _destatis["tables"][key] = out
     return out
 
 
@@ -830,7 +864,7 @@ def main():
     auto = [r for r in result if r.get("source") != "manual"]
     bad = [r["id"] for r in auto if r.get("status") in ("stale", "missing")]
     report_status("market", "Market indicators", "error" if auto and len(bad) == len(auto) else "warn" if bad else "ok",
-                  f"{len(auto) - len(bad)} of {len(auto)} indicators" + (" · failed: " + ", ".join(bad[:4]) if bad else ""), order=30)
+                  f"{len(auto) - len(bad)} of {len(auto)} indicators" + (" · failed: " + ", ".join(bad[:4]) + (f" +{len(bad) - 4} more" if len(bad) > 4 else "") if bad else ""), order=30)
     OUT.write_text(json.dumps({"updated": now, "groups": config.get("groups", {}), "indicators": result},
                               ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     text = "\n".join(["## Market indicators", "", "| Indicator | Status | Points | Latest |", "|---|---|---|---|", *report])

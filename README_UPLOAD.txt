@@ -1,25 +1,14 @@
-ESG Radar – update 12: new topics (IED/BAT, energy relief, water rules, GHG Protocol/PCF, ecolabels, retail customers, Water tab)
-Cumulative: also contains everything from update-9, -10 and -11. Nothing in data/ is touched.
+ESG Radar – update 13: Destatis refresh fix (market indicators)
+Built on the repo as of 9 Nov 2026 (incl. update-12). Nothing in data/ is touched.
 
-Upload folder by folder (GitHub → Add file → Upload files):
-
-Root folder (/):
-  index.html, market.html, news.html, peers.html, regulation.html
-
-assets/:
-  guide.js, search.js, side.css, side.js, theme.css, theme.js
-
-config/:
-  feeds.json, market.json, regulation.json, roadmap_add.json (new), water.json (new)
+Upload (GitHub -> Add file -> Upload files):
 
 scripts/:
-  collect_feeds.py, collect_market.py, collect_regulation.py, collect_water.py (new)
+  collect_market.py
 
-Workflow (.github/workflows/collect-feeds.yml) – edit on GitHub and add this step
-directly after "Collect industry statistics":
+What changed:
+- If GENESIS answers "kein Datenquader gefunden" (code 7000), the collector waits 20 s and tries again,
+  then fetches the table year by year and keeps every year that works.
+- The data status now says "+N more" when more than 4 indicators failed.
 
-      - name: Collect river levels & soil moisture
-        run: python scripts/collect_water.py
-        continue-on-error: true
-
-After the first run: data/debug/water.json shows which DWD station and column were used per mill.
+After the next run: data/debug/destatis.json shows "retry" or "byYear" (incl. empty years) for affected tables.
