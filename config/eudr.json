@@ -1,0 +1,21 @@
+{
+  "_comment": "EUDR country risk for Market › Fibre (pulp origin). Source: EU Commission country benchmarking under the EU Deforestation Regulation (Implementing Regulation (EU) 2025/1093). Every country not listed as 'low' or 'high' is 'standard' by default. Only the countries below are filled in; please check them against the official list and add missing ones (e.g. Uruguay, Chile, Norway) – a country without an entry shows no risk label. 'names' only gives display names for Comext partner codes.",
+  "source": { "label": "EU Commission, EUDR country benchmarking", "url": "https://green-business.ec.europa.eu/deforestation-regulation-implementation/country-classification-list_en" },
+  "risk": {
+    "AT": "low", "BE": "low", "BG": "low", "CY": "low", "CZ": "low", "DE": "low", "DK": "low", "EE": "low", "ES": "low", "FI": "low",
+    "FR": "low", "GR": "low", "HR": "low", "HU": "low", "IE": "low", "IT": "low", "LT": "low", "LU": "low", "LV": "low", "MT": "low",
+    "NL": "low", "PL": "low", "PT": "low", "RO": "low", "SE": "low", "SI": "low", "SK": "low",
+    "US": "low", "CA": "low", "CN": "low",
+    "BR": "standard", "ID": "standard",
+    "RU": "high", "BY": "high", "KP": "high", "MM": "high"
+  },
+  "names": {
+    "AT": "Austria", "BE": "Belgium", "BG": "Bulgaria", "CZ": "Czechia", "DE": "Germany", "DK": "Denmark", "EE": "Estonia", "ES": "Spain",
+    "FI": "Finland", "FR": "France", "GR": "Greece", "HR": "Croatia", "HU": "Hungary", "IE": "Ireland", "IT": "Italy", "LT": "Lithuania",
+    "LV": "Latvia", "NL": "Netherlands", "PL": "Poland", "PT": "Portugal", "RO": "Romania", "SE": "Sweden", "SI": "Slovenia", "SK": "Slovakia",
+    "US": "USA", "CA": "Canada", "CN": "China", "BR": "Brazil", "ID": "Indonesia", "UY": "Uruguay", "CL": "Chile", "NO": "Norway",
+    "GB": "United Kingdom", "CH": "Switzerland", "RU": "Russia", "BY": "Belarus", "ZA": "South Africa", "NZ": "New Zealand",
+    "JP": "Japan", "AU": "Australia", "AR": "Argentina", "MX": "Mexico", "TR": "Türkiye", "TH": "Thailand", "MY": "Malaysia",
+    "IN": "India", "UA": "Ukraine", "SZ": "Eswatini", "XI": "Northern Ireland"
+  }
+}

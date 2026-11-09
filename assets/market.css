@@ -408,3 +408,41 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outl
 /* summary sentence under the page title (same look as the Overview page) */
 .intro .pg-sum { flex: 0 0 100%; width: 100%; margin: 4px 0 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
 .intro .pg-sum b { color: var(--ink); font-weight: 600; }
+
+/* ---------- update-30: gas storage ---------- */
+.gas-chart svg.gas-svg { display: block; width: 100%; height: auto; }
+.gas-svg .g-ax { font-size: 11px; fill: var(--ink-3); }
+.gas-svg .g-warn { fill: var(--d-b45309-text, #b45309); }
+.gas-svg .g-now { font-size: 12.5px; font-weight: 600; fill: var(--d-0064aa-text, #0064aa); }
+.ind-h .gran { margin-left: auto; }
+
+/* ---------- update-30: pulp origin ---------- */
+.po-list { display: flex; flex-direction: column; }
+.po-r { display: grid; grid-template-columns: minmax(90px, 160px) minmax(0, 1fr) 60px 74px 104px; align-items: center; gap: 12px; padding: 7px 0; border-top: 1px solid var(--line-2); font-size: 13px; }
+.po-r:first-child { border-top: 0; }
+.po-r .n { color: var(--ink); font-weight: 600; }
+.po-r.other .n { color: var(--ink-3); font-weight: 400; }
+.po-bar { height: 12px; background: var(--d-f0f2f5-bg, #f0f2f5); border-radius: 4px; overflow: hidden; }
+.po-bar i { display: block; height: 100%; background: var(--d-96d2dc-bg, #96d2dc); border-radius: 4px; }
+.po-r.other .po-bar i { background: var(--d-d5dae1-bg, #d5dae1); }
+.po-r b { text-align: right; color: var(--blue-900); font-variant-numeric: tabular-nums; }
+.po-r .c { text-align: right; color: var(--ink-3); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.risk { justify-self: start; font-size: 11px; font-weight: 600; border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.risk.low { background: var(--d-e4f4f1-bg, #e4f4f1); color: var(--d-1d6b5e-text, #1d6b5e); }
+.risk.standard { background: var(--d-fdf3e3-bg, #fdf3e3); color: var(--d-b45309-text, #b45309); }
+.risk.high { background: var(--d-fdf0eb-bg, #fdf0eb); color: var(--d-8a4a33-text, #8a4a33); }
+.risk.none { color: var(--ink-3); font-weight: 400; padding-left: 0; }
+@media (max-width: 640px) { .po-r { grid-template-columns: minmax(0, 1fr) 54px 66px; } .po-r .po-bar, .po-r .risk { display: none; } }
+
+/* ---------- update-30: weather strip ---------- */
+.wk-strip { display: inline-flex; gap: 2px; white-space: nowrap; }
+.wk { display: inline-block; width: 10px; height: 16px; border-radius: 2px; background: var(--d-e5e7eb-bg, #e5e7eb); flex: none; }
+.wk.dryhot { background: #e08a6a; } .wk.dry { background: #f4b49f; } .wk.hot { background: #f2c94c; } .wk.na { background: transparent; border: 1px dashed var(--line-2); }
+.wk-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--ink-2); align-items: center; }
+.wk-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.wk-legend .pm { color: var(--ink-3); }
+.w-t td small { display: block; font-size: 11.5px; color: var(--ink-3); }
+
+/* summary sentence on top of At a glance (inside the tab, so the page does not jump between tabs) */
+.pg-sum { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; max-width: none; }
+.pg-sum b { color: var(--ink); font-weight: 600; }

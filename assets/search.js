@@ -162,16 +162,17 @@
     ["Market trends", "Market · compare demand and trade indicators", "market.html#tab=cmp", "compare chart retail imports exports"],
     ["Industry · monthly", "Market · German market and trade, month by month", "market.html#tab=industry&view=month", "production hygiene paper retail imports exports monthly"],
     ["Industry · yearly", "Market · yearly industry profile: energy mix, water, waste, recovered paper, Europe", "market.html#tab=industry&view=year", "cepi recovered paper utilisation water waste energy mix environmental investment yearly"],
-    ["Energy & climate at a glance", "Energy & climate · grid, power mix, carbon price and water", "energy.html#tab=glance", "summary energy climate"],
+    ["Energy & climate at a glance", "Energy & climate · grid, power mix, gas storage and water", "energy.html#tab=glance", "summary energy climate"],
     ["Grid carbon intensity", "Energy & climate · power mix and CO₂ per kWh by country", "energy.html#tab=grid", "scope 2 electricity emission factor power mix"],
-    ["Carbon cost exposure", "Energy & climate · WEPA's EU ETS emissions × EUA price", "energy.html#tab=carbon", "eua carbon price ets cost slider allocation"],
-    ["Water", "Energy & climate · river levels and soil moisture at our mills", "energy.html#tab=water", "rhine kaub pegel low water niedrigwasser drought dürre soil moisture bodenfeuchte"],
+    ["Water & weather", "Energy & climate · river levels, soil moisture, heat and rain at our mills", "energy.html#tab=water", "rhine kaub pegel low water niedrigwasser drought dürre soil moisture bodenfeuchte heat hot days hitze rain regen"],
+    ["Gas storage", "Energy & climate · EU and German gas storage vs. the last five years", "energy.html#tab=gas", "agsi gas storage füllstand speicher winter supply"],
     ["WEPA sites in the EU ETS", "Peers · which WEPA sites the emissions data covers", "peers.html#tab=ets", "ets sites coverage missing emissions scope 1 mills"],
     ["EU ETS emissions", "Peers · verified emissions of EU sites", "peers.html#tab=ets", "emissions trading co2 sites"],
     ["Next deadlines", "Regulation · roadmap of upcoming dates", "regulation.html#view=roadmap", "deadline timeline milestones"],
+    ["Fibre · pulp origin", "Market · where the EU's pulp comes from, with EUDR country risk", "market.html#tab=fibre", "pulp origin eudr deforestation nbsk bhkp brazil finland sweden imports zellstoff herkunft"],
     ["Open consultations", "Regulation · EU “Have your say”", "regulation.html#show=consult", "have your say consultation"],
   ];
-  const QUICK = [[1, "Costs"], [4, "Market"], [8, "Energy & climate"], [14, "Regulation"], [12, "Peers"], [0, "Overview"]];
+  const QUICK = [[1, "Costs"], [4, "Market"], [8, "Energy & climate"], [13, "Regulation"], [11, "Peers"], [0, "Overview"]];
 
   // ---------- recent searches ----------
   const RKEY = "radar.recentSearch";

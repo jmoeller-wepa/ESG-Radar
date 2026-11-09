@@ -56,7 +56,7 @@
       title: "Costs",
       intro: "What tissue making costs right now, from public statistics: fibre, recovered paper, energy, carbon and labour. Prices only – demand sits on Market, power and climate on Energy & climate.",
       items: [
-        ["At a glance", "The cost index result on top, then one card per topic. The card says in one word where costs are heading (rising, easing, mixed, stable) and names the biggest move. One dot per indicator: red = headwind, green = tailwind, grey = neutral. Click an indicator for details."],
+        ["At a glance", "One sentence that sums up the page, the cost index result, then one card per topic. The card says in one word where costs are heading (rising, easing, mixed, stable) and names the biggest move. One dot per indicator: red = headwind, green = tailwind, grey = neutral. Click an indicator for details."],
         ["Price trends", "Compare price indicators as an index (first month of the period = 100). Pick them under “In chart” in the bar, or with the box on a card; up to 6 share one chart, more get small charts each. Search and Topic narrow the cards."],
         ["Cost index", "How public input-cost statistics add up to an illustrative tissue cost driver index, set against the producer price index for tissue. The three numbers on top: cost index, tissue price index and the margin signal (price minus cost). The table shows each input once: weight, change and index points – the largest contribution is marked. Weights are editable and saved in your browser only."],
         ["What the cost index cannot do", "It uses only public prices, not WEPA's contracts, hedges or volumes, and holds other costs (chemicals, packaging …) constant. Use it for the direction of input costs, not to judge WEPA's margin or to plan budgets."],
@@ -68,25 +68,26 @@
       title: "Market",
       intro: "How WEPA's market is doing: demand and trade in Germany, paper production, fibre supply and the yearly environmental profile of the paper industry.",
       items: [
-        ["At a glance", "One card per topic: demand & trade, production and fibre supply, each with a one-word verdict, the biggest move and the key indicators. Click an indicator for details."],
+        ["At a glance", "One sentence that sums up the page, then one card per topic: demand & trade, production and fibre supply, each with a one-word verdict, the biggest move and the key indicators. Click an indicator for details."],
         ["Trends", "Compare market indicators as an index; pick them under “In chart” in the bar or with the box on a card."],
         ["Industry", "Every month: German production, retail sales and tissue trade. Every year: energy mix, water, waste, recovered paper and environmental investment of German paper mills as a yardstick – “Copy as text” for reports."],
-        ["Fibre supply", "German pulp imports, and how much recovered paper goes into hygiene papers compared with all grades (Umweltbundesamt, yearly). Fibre prices are on the Costs page."],
+        ["Shelf price vs. producer price", "On Industry › Monthly: the consumer price of toilet paper, the producer price of tissue and pulp import prices as lines, all indexed to the first month. Shows whether retail passes cost moves on, and how fast."],
+        ["Fibre", "Where the EU's chemical pulp comes from over the last 12 months (Eurostat Comext, HS 4703), as a share per country with the change against the year before. Switch between all pulp, softwood (NBSK) and hardwood (BHKP). The label is the EUDR country risk (low, standard, high) from the EU benchmarking. Below: German pulp imports and the recovered paper share in hygiene papers (Umweltbundesamt, yearly). Fibre prices are on the Costs page."],
       ],
       caveat: "Statistics are published with a delay of one to three months; industry figures yearly.",
     },
     energy: {
       title: "Energy & climate",
-      intro: "Where our power comes from, what carbon costs, and the water situation at our mills.",
+      intro: "Where our power comes from, how full gas storage is, and the water and weather situation at our mills.",
       items: [
-        ["At a glance", "Cards for grid carbon intensity, the German power mix, the carbon price and water. One dot per indicator or site: red = headwind (e.g. more coal, low water), green = tailwind."],
+        ["At a glance", "One sentence that sums up the page, then cards for grid carbon intensity, the German power mix, gas storage and water & weather. One dot per indicator or site: red = headwind (e.g. more coal, low water), green = tailwind."],
         ["Trends", "Compare grid and power-mix indicators as an index; pick them under “In chart” in the bar."],
         ["Power grid", "The German power mix by source, and CO₂ per kWh by country as 12-month averages (they smooth out the seasons) – useful for location-based Scope 2. Click a country for its history."],
-        ["Carbon cost", "WEPA's verified EU ETS emissions × the EUA price, minus free allocation. Move the slider to see the net cost at another price. Incomplete: only the WEPA sites found in the EU registry."],
-        ["Water", "Rhine level at Kaub (barge bottleneck) and Mainz, side by side, plus soil moisture around each German mill. Only the status pill is coloured: low water or dry."],
+        ["Gas storage", "How full EU and German gas storage is (GIE AGSI+, daily), drawn against the range of the last five years. The dashed line is the EU target of 90 % full by 1 November. Switch between EU and Germany."],
+        ["Water & weather", "Rhine level at Kaub (barge bottleneck) and Mainz, plus per German mill: soil moisture, hot days (≥ 30 °C) since 1 January against normal, rain in the last 30 days in % of normal (1991–2020), and a 12-week strip – each square is a week: dry, hot, dry and hot, or normal. Hover a square for its numbers."],
         ["Water terms", "GlW = equivalent low water, the level reached or undercut on about 20 ice-free days a year. MNW = mean low water, MW = mean water. The dashed lines in the charts mark GlW and our own surcharge threshold."],
       ],
-      caveat: "EUA prices are entered manually from press reports (exchange prices are licensed). River and soil data come from PEGELONLINE and DWD and update every working day.",
+      caveat: "River, soil and weather data come from PEGELONLINE and DWD (nearest weather station to each mill), gas storage from GIE AGSI+; all update every working day.",
     },
   };
   const g = G[page]; if (!g) return;

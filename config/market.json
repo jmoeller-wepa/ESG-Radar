@@ -1201,10 +1201,9 @@
       "filter": {
         "var": "GP2019|GP19|Güterverzeichnis|Güter",
         "values": [
-          "^Dieselkraftstoff",
-          "^(?!.*Bio).*Dieselkraftst",
-          "^(?!.*Bio).*Diesel",
-          "Gasöl"
+          "^Gasöl$",
+          "Dieselkraftst",
+          "^Gasöl"
         ],
         "peek": "Diesel|Gasöl|Heizöl"
       },
@@ -1224,7 +1223,8 @@
         "Monate, Güterverzeichnis \\(GP2019 2-6-Steller",
         "Monate, Güterverzeichnis"
       ],
-      "exclude": "\\bohne\\b|Eisen|Stahl|Kunststoff|\\bBio"
+      "exclude": "\\bohne\\b|Eisen|Stahl|Kunststoff|\\bBio",
+      "_note": "Diesel fuel is 'Gasöl' (GP19-192026) in the producer price list; earlier versions matched diesel engines by mistake."
     },
     {
       "id": "de_labour_paper",
@@ -1482,6 +1482,44 @@
         "wepa": "A volume signal for the fresh-fibre market WEPA buys in.",
         "limits": "Weight only; does not show prices or who imports."
       }
+    },
+    {
+      "id": "cpi_toilet_de",
+      "group": "market_de",
+      "areas": [
+        "circularity"
+      ],
+      "label": "Consumer prices · toilet paper, Germany",
+      "unit": "index",
+      "source": "destatis",
+      "table": "61111-*",
+      "tableMatch": [
+        "Monate.*10-Steller",
+        "10-Steller.*Monate",
+        "Monate.*Sonderpositionen",
+        "Monate.*(COICOP|Verwendungszweck)"
+      ],
+      "filter": {
+        "var": "CC13|COICOP|Verwendungszweck|VZW",
+        "values": [
+          "^Toilettenpapier",
+          "Toilettenpapier",
+          "Hygienepapier|Papiertaschent",
+          "Hygieneartikel aus Papier"
+        ],
+        "peek": "Toilett|Papier|Hygien|Taschent"
+      },
+      "unit_match": "=100",
+      "freq": "monthly",
+      "attribution": "Destatis (Statistisches Bundesamt), GENESIS 61111 (consumer price index), dl-de/by-2-0",
+      "link": "https://www-genesis.destatis.de/datenbank/online/statistic/61111",
+      "_note": "The detailed consumer price index (10-digit COICOP) has a single item for toilet paper. The table is found by its title; check data/debug/destatis.json after the first run.",
+      "about": {
+        "what": "Destatis consumer price index for toilet paper: what households in Germany pay on the shelf, surveyed monthly.",
+        "wepa": "Set against the producer price for tissue it shows whether retail passes price changes on, and who keeps the margin.",
+        "limits": "An index, not a € price; it mixes brands and private labels and includes promotions. It covers Germany only."
+      },
+      "short": "What German households pay on the shelf for toilet paper."
     },
     {
       "id": "mix_wind",

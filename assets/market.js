@@ -13,9 +13,9 @@
   const PAGE = ["costs", "energy"].includes(document.body.dataset.mpage) ? document.body.dataset.mpage : "market";
   // three pages share this script: which questions and tabs each one shows
   const PAGE_Q = { costs: ["cost"], market: ["market", "env"], energy: ["grid"] };
-  const PAGE_TABS = { costs: ["glance", "cmp", "cost"], market: ["glance", "cmp", "industry"], energy: ["glance", "cmp", "grid", "carbon", "water"] };
+  const PAGE_TABS = { costs: ["glance", "cmp", "cost"], market: ["glance", "cmp", "industry", "fibre"], energy: ["glance", "cmp", "grid", "gas", "water"] };
   const PAGE_FILE = { costs: "costs.html", market: "market.html", energy: "energy.html" };
-  const state = { gran: "auto", tab: "glance", ind: "month", area: "all", q: "all", topic: "all", find: "", sel: new Set(), cmp: [] };
+  const state = { gran: "auto", tab: "glance", ind: "month", area: "all", q: "all", topic: "all", find: "", gasArea: "eu", pulp: "total", sel: new Set(), cmp: [] };
   // The four questions (config/market.json "questions"); every indicator belongs to one
   let QUESTIONS = { cost: { label: "What does tissue cost us?", title: "What does tissue cost us right now?", tab: "cost", link: "Open cost index" },
     market: { label: "How is our market doing?", title: "How is our market doing?", tab: "industry", link: "Open industry" },
@@ -36,14 +36,15 @@
     { id: "cost", label: "Cost index", groups: [], lead: "How public input-cost statistics add up to an illustrative tissue cost driver index, set against the producer price index for tissue." },
     { id: "industry", label: "Industry", groups: [], lead: "Two views: WEPA's market month by month (production, demand, trade), and a yearly environmental profile of the German paper industry as a yardstick." },
     { id: "grid", label: "Power grid", groups: ["grid"], lead: "Where German power comes from, and the CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history." },
-    { id: "carbon", label: "Carbon cost", groups: [] },
-    { id: "water", label: "Water", groups: [], lead: "River levels at the Rhine bottleneck and next to our mills, and how dry the soil is around each German mill. Updated every working day from public sources." },
+    { id: "gas", label: "Gas storage", groups: [] },
+    { id: "fibre", label: "Fibre", groups: [] },
+    { id: "water", label: "Water & weather", groups: [], lead: "River levels at the Rhine bottleneck and next to our mills, and how dry the soil is around each German mill. Updated every working day from public sources." },
   ];
   const GLANCE_LEAD = "Four questions behind tissue costs and demand, answered from public statistics. The signal compares the latest value with a year earlier: headwind or tailwind for WEPA. Click a row for details.";
   let TABS = [];
   const ui = { open: false, exp: new Set(), indOpen: false, indQ: "" };
   const colorOf = {};
-  let M = null, side = null, ETS = null, WATER = null;
+  let M = null, side = null, ETS = null, WATER = null, GAS = null, WEATHER = null, PULP = null, EUDR = null;
   const START_HASH = location.hash;
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
@@ -1024,11 +1025,12 @@
     // 2) soil moisture at the mills
     const sites = (WATER.sites || []).filter((s) => (s.series || []).length);
     const sec = el("section", "panel ind-sec");
-    const h = el("div", "ind-h"); h.append(el("h3", null, "Soil moisture around our German mills"), el("span", null, "% of usable field capacity (nFK), 0–60 cm under grass · Deutscher Wetterdienst (CC BY 4.0)"));
+    const h = el("div", "ind-h"); h.append(el("h3", null, "Soil, heat and rain around our German mills"), el("span", null, "soil moisture in % of usable field capacity (nFK) · Deutscher Wetterdienst (CC BY 4.0)"));
     sec.appendChild(h);
     if (!sites.length) { sec.appendChild(el("div", "empty", "Soil moisture arrives with the next data update.")); host.appendChild(sec); draws.forEach((f) => f()); return; }
     const tw = el("div", "w-tw"); const t = el("table", "gd-yr w-t");
-    const hr = el("tr"); ["Mill", "Soil moisture", "vs. 30 days ago", "Status", "Last 12 months", "DWD station"].forEach((x) => hr.appendChild(el("th", null, x)));
+    const hasWx = !!(WEATHER && (WEATHER.sites || []).length);
+    const hr = el("tr"); ["Mill", "Soil moisture", "vs. 30 days ago", "Status", "Soil, last 12 months"].concat(hasWx ? ["Hot days ≥ 30 °C", "Rain, last 30 days", "Last 12 weeks"] : []).forEach((x) => hr.appendChild(el("th", null, x)));
     const th = el("thead"); th.appendChild(hr); t.appendChild(th);
     const tb = el("tbody");
     const S = WATER.soil || {}; const dry = S.dry != null ? S.dry : 50;
@@ -1051,19 +1053,210 @@
         svg.appendChild(svgEl("path", { d: RadarViz.path(sp), fill: "none", stroke: W_COL, "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
       }
       td4.appendChild(svg); tr.appendChild(td4);
-      const td5 = el("td"); td5.appendChild(document.createTextNode(s.station ? s.station.name || String(s.station.id) : "–")); if (s.station) td5.appendChild(el("small", null, s.station.km + " km away")); tr.appendChild(td5);
+      if (s.station) td0.title = "DWD soil station " + (s.station.name || s.station.id) + ", " + s.station.km + " km away";
+      if (hasWx) {
+        const wx = weatherOf(s.id);
+        const yr = wx ? wx.last.slice(0, 4) : "";
+        const th1 = el("td", "num"); if (wx) { th1.appendChild(el("b", null, String(wx.hotDays))); th1.appendChild(el("small", null, wx.hotNormal != null ? "normal " + Math.round(wx.hotNormal) + " by now · " + yr : yr)); } else th1.textContent = "–"; tr.appendChild(th1);
+        const th2 = el("td", "num"); if (wx && wx.rain30Pct != null) { th2.appendChild(el("b", null, wx.rain30Pct + " %")); th2.appendChild(el("small", null, "of normal · " + wx.rain30 + " mm")); } else th2.textContent = wx && wx.rain30 != null ? wx.rain30 + " mm" : "–"; tr.appendChild(th2);
+        const th3 = el("td"); if (wx) { th3.appendChild(weekStrip(wx)); th3.title = "DWD weather station " + wx.station.name + ", " + wx.station.km + " km away"; } tr.appendChild(th3);
+      }
       tb.appendChild(tr);
     });
     t.appendChild(tb); tw.appendChild(t); sec.appendChild(tw);
-    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Long dry spells come before low river levels, stricter limits on water abstraction and warmer cooling water. Below " + dry + " % plants start to suffer; dashed line in the mini charts."));
+    if (hasWx) {
+      const lg = el("div", "wk-legend"); [["dryhot", "Dry and hot"], ["dry", "Dry (less than a quarter of normal rain)"], ["hot", "Hot (a day ≥ 30 °C)"], ["ok", "Normal"]].forEach(([c, l]) => { const x = el("span"); x.append(el("i", "wk " + c), document.createTextNode(l)); lg.appendChild(x); });
+      lg.appendChild(el("span", "pm", "one square per week, oldest left · normals " + (WEATHER.normalPeriod || "1991–2020")));
+      sec.appendChild(lg);
+    }
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Heat and long dry spells come before low river levels, stricter limits on water abstraction and warmer cooling water. Below " + dry + " % soil moisture plants start to suffer; dashed line in the mini charts."));
     sec.appendChild(w);
     const f = el("p", "ind-src"); f.append("Source: ");
     const a = el("a", null, "DWD Climate Data Center ↗"); a.href = "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a);
-    f.appendChild(document.createTextNode(" · modelled soil moisture at the nearest DWD station to each mill · mill sites from wepa.eu."));
+    f.appendChild(document.createTextNode(" · modelled soil moisture and daily station observations (max temperature, rain) at the nearest DWD stations to each mill (hover a mill or strip for the station) · mill sites from wepa.eu."));
     sec.appendChild(f);
     host.appendChild(sec);
     draws.forEach((f2) => f2());
   }
+  // ---------- Gas storage (Energy & climate, GIE AGSI+) ----------
+  // this year's fill level against the min–max range and the average of the five years before
+  function gasStats(area) {
+    const s = (GAS && GAS.areas && GAS.areas[area] && GAS.areas[area].series) || [];
+    if (!s.length) return null;
+    const last = s[s.length - 1], year = +last[0].slice(0, 4);
+    const doy = (d) => { const t = Date.UTC(+d.slice(0, 4), +d.slice(5, 7) - 1, +d.slice(8, 10)) - Date.UTC(+d.slice(0, 4), 0, 1); return Math.min(364, Math.round(t / 864e5)); };
+    const by = {};
+    s.forEach(([d, v]) => { const y = +d.slice(0, 4); if (y >= year - 5 && y < year) (by[doy(d)] = by[doy(d)] || []).push(v); });
+    const band = [];
+    for (let k = 0; k < 365; k += 2) { const vs = [k, k + 1].flatMap((j) => by[j] || []); if (vs.length) band.push([k, Math.min(...vs), Math.max(...vs), vs.reduce((a, b) => a + b, 0) / vs.length]); }
+    const cur = s.filter((p) => +p[0].slice(0, 4) === year).map(([d, v]) => [doy(d), v]);
+    const near = (k) => band.reduce((b, x) => (Math.abs(x[0] - k) < Math.abs(b[0] - k) ? x : b), band[0] || [k, null, null, null]);
+    const lastYear = s.filter((p) => +p[0].slice(0, 4) === year - 1).map(([d, v]) => [doy(d), v]);
+    const ly = lastYear.reduce((b, x) => (Math.abs(x[0] - doy(last[0])) < Math.abs(b[0] - doy(last[0])) ? x : b), lastYear[0] || [0, null]);
+    const wk = s.find((p) => p[0] >= addDays(last[0], -7));
+    const n = near(doy(last[0]));
+    return { last, year, band, cur, avgNow: n[3], minNow: n[1], maxNow: n[2], lastYear: ly[1], week: wk ? last[1] - wk[1] : null, years: Object.keys(s.reduce((a, p) => ((+p[0].slice(0, 4) < year) && (a[p[0].slice(0, 4)] = 1), a), {})).length };
+  }
+  function gasChart(box, st) {
+    const W = Math.max(320, box.clientWidth || 800), H = 260, L = 38, R = 118, T = 12, B = 26;
+    const x = (k) => L + (k / 364) * (W - L - R), y = (v) => T + (1 - v / 100) * (H - T - B);
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img", "aria-label": "Gas storage fill level this year against the last five years", class: "gas-svg" });
+    [0, 25, 50, 75, 100].forEach((v) => {
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--line-2)" }));
+      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", class: "g-ax" }); t.textContent = v + " %"; svg.appendChild(t);
+    });
+    MON.forEach((m, k) => { const t = svgEl("text", { x: x(k * 30.4 + 15), y: H - 6, "text-anchor": "middle", class: "g-ax" }); t.textContent = m; svg.appendChild(t); });
+    if (st.band.length > 2) {
+      const up = st.band.map((b) => [x(b[0]), y(b[2])]), dn = st.band.map((b) => [x(b[0]), y(b[1])]).reverse();
+      svg.appendChild(svgEl("path", { d: RadarViz.path(up) + " L" + dn.map((p) => p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" L") + " Z", fill: "var(--d-e5e7eb-bg, #e5e7eb)", opacity: ".8" }));
+      svg.appendChild(svgEl("path", { d: RadarViz.path(st.band.map((b) => [x(b[0]), y(b[3])])), fill: "none", stroke: "var(--ink-3)", "stroke-dasharray": "3 3", "stroke-width": 1.2 }));
+      const lb = st.band[st.band.length - 1];
+      const t1 = svgEl("text", { x: W - R + 6, y: y(lb[3]) + 4, class: "g-ax" }); t1.textContent = "5-year average"; svg.appendChild(t1);
+      const t2 = svgEl("text", { x: W - R + 6, y: Math.max(T + 8, y(lb[2]) - 6), class: "g-ax" }); t2.textContent = "5-year range"; svg.appendChild(t2);
+    }
+    // 1 November: EU storage target of 90 % (Regulation (EU) 2022/1032, flexible since 2025)
+    const nov = 304;
+    svg.appendChild(svgEl("line", { x1: x(nov), x2: x(nov), y1: T, y2: H - B, stroke: "var(--d-b45309-text, #b45309)", "stroke-dasharray": "2 3" }));
+    svg.appendChild(svgEl("circle", { cx: x(nov), cy: y(90), r: 3, fill: "none", stroke: "var(--d-b45309-text, #b45309)" }));
+    const tt = svgEl("text", { x: x(nov) - 6, y: y(90) - 6, "text-anchor": "end", class: "g-ax g-warn" }); tt.textContent = "EU target 90 % · 1 Nov"; svg.appendChild(tt);
+    if (st.cur.length > 1) {
+      const pts = st.cur.map(([k, v]) => [x(k), y(v)]);
+      svg.appendChild(svgEl("path", { d: RadarViz.path(pts), fill: "none", stroke: W_COL, "stroke-width": 2.4, "stroke-linejoin": "round" }));
+      const lp = pts[pts.length - 1];
+      svg.appendChild(svgEl("circle", { cx: lp[0], cy: lp[1], r: 4, fill: W_COL }));
+      const t = svgEl("text", { x: lp[0] + 8, y: lp[1] + 4, class: "g-now" }); t.textContent = Math.round(st.last[1]) + " % " + st.year; svg.appendChild(t);
+    }
+    box.replaceChildren(svg);
+  }
+  function renderGas(host) {
+    const sec = el("section", "panel ind-sec");
+    if (!GAS || !GAS.areas || !Object.keys(GAS.areas).length) {
+      sec.append(el("h3", null, "Gas storage"), el("div", "empty", "Gas storage data arrives with the next data update. It needs the GitHub secret AGSI_KEY (a free key from agsi.gie.eu)."));
+      host.appendChild(sec); return;
+    }
+    const areas = Object.keys(GAS.areas);
+    if (!areas.includes(state.gasArea)) state.gasArea = areas[0];
+    const st = gasStats(state.gasArea);
+    const h = el("div", "ind-h"); h.append(el("h3", null, "Gas storage · " + GAS.areas[state.gasArea].label), el("span", null, "% full · daily · GIE AGSI+"));
+    const seg = el("span", "gran"); areas.forEach((a) => { const b = el("button", null, GAS.areas[a].label); b.type = "button"; b.setAttribute("aria-pressed", String(a === state.gasArea)); b.addEventListener("click", () => { state.gasArea = a; renderTiles(); }); seg.appendChild(b); });
+    h.appendChild(seg); sec.appendChild(h);
+    if (st) {
+      const k = el("div", "gd-kpis ind-k");
+      const kp = (label, v, sub) => { const d = el("div"); d.append(document.createTextNode(label), el("b", null, v)); if (sub) d.appendChild(el("small", null, sub)); return d; };
+      const pp = (v) => (v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "±") + Math.abs(v).toFixed(1) + " pp");
+      k.append(kp("Today · " + fmtDay(st.last[0]), st.last[1].toFixed(1) + " %", st.week != null ? arrow(st.week, "pp", 1) + " in a week" : ""),
+        kp("vs. same day last year", pp(st.lastYear != null ? st.last[1] - st.lastYear : null)),
+        kp("vs. 5-year average", pp(st.avgNow != null ? st.last[1] - st.avgNow : null), st.years < 5 ? "only " + st.years + " years of history so far" : ""));
+      sec.appendChild(k);
+      const box = el("div", "chart ind-chart gas-chart"); sec.appendChild(box); host.appendChild(sec);
+      gasChart(box, st);
+    } else host.appendChild(sec);
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Storage below the usual range going into winter usually means higher and more volatile gas prices – the biggest energy cost of drying tissue."));
+    sec.appendChild(w);
+    const f = el("p", "ind-src"); f.append("Source: "); const a = el("a", null, "GIE AGSI+ ↗"); a.href = "https://agsi.gie.eu"; a.target = "_blank"; a.rel = "noopener"; f.append(a, document.createTextNode(" · grey band = lowest to highest level of the five years before, dashed = their average."));
+    sec.appendChild(f);
+  }
+
+  // ---------- Fibre (Market): EU pulp imports by origin + EUDR country risk ----------
+  function renderFibre(host) {
+    const sec = el("section", "panel ind-sec");
+    const prods = (PULP && PULP.products) || {};
+    const keys = ["total", "bhkp", "nbsk"].filter((k) => prods[k] && (prods[k].rows || []).length);
+    if (!keys.length) { sec.append(el("h3", null, "Where the EU's pulp comes from"), el("div", "empty", "Pulp import data arrives with the next data update (scripts/collect_pulp_origin.py).")); host.appendChild(sec); }
+    else {
+      if (!keys.includes(state.pulp)) state.pulp = keys[0];
+      const P = prods[state.pulp];
+      const h = el("div", "ind-h"); h.append(el("h3", null, "Where the EU's pulp comes from"), el("span", null, "share of import volume · " + fmtMonth(P.from) + " – " + fmtMonth(P.to) + " · " + P.totalKt.toLocaleString("en-GB") + " kt · Eurostat Comext"));
+      const seg = el("span", "gran");
+      [["total", "All chemical pulp"], ["bhkp", "Short fibre (BHKP)"], ["nbsk", "Long fibre (NBSK)"]].filter(([k]) => keys.includes(k)).forEach(([k, l]) => { const b = el("button", null, l); b.type = "button"; b.setAttribute("aria-pressed", String(k === state.pulp)); b.addEventListener("click", () => { state.pulp = k; renderTiles(); }); seg.appendChild(b); });
+      h.appendChild(seg); sec.appendChild(h);
+      const risk = (EUDR && EUDR.risk) || {};
+      const top = P.rows.slice(0, 10), rest = P.rows.slice(10).reduce((a, r) => a + r.share, 0);
+      const max = Math.max(...top.map((r) => r.share), 1);
+      const list = el("div", "po-list");
+      top.concat(rest > 0.05 ? [{ name: "Other countries", share: Math.round(rest * 10) / 10, other: true }] : []).forEach((r) => {
+        const row = el("div", "po-r" + (r.other ? " other" : ""));
+        const bar = el("span", "po-bar"); const fill = el("i"); fill.style.width = (100 * r.share / max).toFixed(1) + "%"; bar.appendChild(fill);
+        const rk = risk[r.code];
+        row.append(el("span", "n", r.name), bar, el("b", null, r.share.toFixed(1).replace(".0", "") + " %"),
+          el("span", "c", r.change == null ? "" : (r.change > 0.05 ? "▲ +" : r.change < -0.05 ? "▼ −" : "▬ ") + Math.abs(r.change).toFixed(1) + " pp"),
+          rk ? el("span", "risk " + rk, rk === "low" ? "Low risk" : rk === "high" ? "High risk" : "Standard risk") : el("span", "risk none", r.other ? "" : "–"));
+        if (r.kt != null) row.title = r.name + ": " + r.kt.toLocaleString("en-GB") + " kt in 12 months";
+        list.appendChild(row);
+      });
+      sec.appendChild(list);
+      const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Shows how concentrated the EU's pulp supply is – South America for short fibre, the Nordics and North America for long fibre – and which origins need deforestation-free proof under the EUDR. EU imports overall, not WEPA's own suppliers."));
+      sec.appendChild(w);
+      const f = el("p", "ind-src"); f.append("Source: ", srcLink(PULP.source), document.createTextNode(" · HS " + P.hs + ", imports of all EU countries incl. trade inside the EU · change against the 12 months before · EUDR risk: "), srcLink((EUDR && EUDR.source) || { label: "EU Commission" }), document.createTextNode(" (– = not set in config/eudr.json)"));
+      sec.appendChild(f);
+      host.appendChild(sec);
+    }
+    // fibre supply in Germany: pulp imports + recovered paper share
+    const sup = el("section", "panel ind-sec");
+    sup.appendChild(el("div", "ind-h")).append(el("h3", null, "Fibre supply in Germany"));
+    const pi = M.indicators.find((i) => i.id === "de_imp_pulp");
+    const g = el("div", "tiles"); if (pi && hasData(pi)) g.appendChild(tile(pi)); sup.appendChild(g);
+    const rr = IND && IND.germanyRecoveredRate;
+    if (rr && rr.series) {
+      const t = el("table", "gd-yr"); const hr = el("tr"); ["Recovered paper share", ...rr.years.slice(-6).map(String)].forEach((x) => hr.appendChild(el("th", null, x)));
+      const th = el("thead"); th.appendChild(hr); t.appendChild(th); const tb = el("tbody");
+      ["Hygiene papers", "All paper & board"].forEach((k) => { const v = rr.series[k]; if (!v) return; const tr = el("tr", k === "Hygiene papers" ? "us" : ""); tr.appendChild(el("td", null, k)); v.slice(-6).forEach((x) => tr.appendChild(el("td", null, x + " %"))); tb.appendChild(tr); });
+      t.appendChild(tb); const tw = el("div"); tw.style.overflowX = "auto"; tw.appendChild(t); sup.appendChild(tw);
+      const f = el("p", "ind-src"); f.append("Source: ", srcLink(rr.source)); sup.appendChild(f);
+    }
+    host.appendChild(sup);
+  }
+
+  // ---------- Shelf price vs. producer price (Market › Industry › Monthly) ----------
+  function shelfPanel(draws) {
+    const cpi = M.indicators.find((i) => i.id === "cpi_toilet_de"), ppi = M.indicators.find((i) => i.id === "de_ppi_tissue");
+    const sec = el("section", "panel ind-sec");
+    const h = el("div", "ind-h"); h.append(el("h3", null, "Shelf price vs. producer price"));
+    sec.appendChild(h);
+    if (!cpi || !hasData(cpi) || !ppi || !hasData(ppi)) {
+      sec.appendChild(el("div", "empty", "The consumer price for toilet paper arrives with the next data update (Destatis)."));
+      return sec;
+    }
+    const R = COST ? computeCost() : null;
+    const cm = seriesMap("cpi_toilet_de"), pm = seriesMap("de_ppi_tissue");
+    const costBy = new Map(R && R.rows ? R.rows.map((r) => [r.m, r.idx]) : []);
+    const months = selSorted().filter((m) => cm.has(m) && pm.has(m));
+    if (months.length < 3) { sec.appendChild(el("div", "empty", "Not enough overlapping months yet.")); return sec; }
+    const b = months[0], cb = cm.get(b), pb = pm.get(b), kb = costBy.get(b);
+    h.appendChild(el("span", null, "index, " + fmtMonth(b) + " = 100 · Destatis"));
+    const box = el("div", "chart ind-chart"); sec.appendChild(box);
+    const MONS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const series = [
+      { name: "Shelf price (toilet paper)", color: "#f4b49f", vals: months.map((m) => (100 * cm.get(m)) / cb), end: (v) => Math.round(v) + " Shelf price" },
+      { name: "Producer price (tissue, DE)", color: "#33b09c", vals: months.map((m) => (100 * pm.get(m)) / pb), end: (v) => Math.round(v) + " Producer price" },
+    ];
+    if (kb) series.unshift({ name: "Input cost index", color: "#0064aa", vals: months.map((m) => (costBy.has(m) ? (100 * costBy.get(m)) / kb : null)), end: (v) => Math.round(v) + " Input costs" });
+    draws.push(() => trendChart(box, {
+      label: "Shelf price vs. producer price", keys: months, base: 100, series,
+      yFmt: (v) => String(Math.round(v)), sep: (key) => key.endsWith("-01"),
+      xLabel: (key, k, every) => (k % every ? null : (key.endsWith("-01") || k === 0 ? MONS[+key.slice(5, 7) - 1] + " ’" + key.slice(2, 4) : MONS[+key.slice(5, 7) - 1])),
+      tipTitle: (key) => fmtMonth(key), tipVal: (sr, v) => v.toFixed(1),
+    }));
+    const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("If shelf prices rise while producer prices stay flat, retail keeps the margin; if both lag behind input costs, the squeeze sits with producers."));
+    sec.appendChild(w);
+    const f = el("p", "ind-src"); f.append("Consumer price index, single item toilet paper, and producer price index for household & sanitary paper: Destatis (dl-de/by-2-0). Input cost index: the illustrative index from the Costs page. The period follows the 3 years shown on the page.");
+    sec.appendChild(f);
+    return sec;
+  }
+
+  // ---------- Weather at the mills (DWD): hot days, rain vs. normal, 12-week strip ----------
+  const WK_CLS = { dryhot: ["Dry and hot", "dryhot"], dry: ["Dry", "dry"], hot: ["Hot", "hot"], ok: ["Normal", "ok"], na: ["No data", "na"] };
+  function weatherOf(id) { return ((WEATHER && WEATHER.sites) || []).find((x) => x.id === id) || null; }
+  function weekStrip(wx) {
+    const box = el("span", "wk-strip");
+    (wx.weeks || []).forEach((w) => {
+      const c = WK_CLS[w.cls] || WK_CLS.na; const i = el("i", "wk " + c[1]);
+      i.title = "Week from " + fmtDay(w.start) + ": " + c[0] + (w.rain != null ? " · rain " + w.rain + " mm" + (w.rainNormal ? " (normal " + w.rainNormal + ")" : "") : "") + (w.tmax != null ? " · max " + Math.round(w.tmax) + " °C" : "");
+      box.appendChild(i);
+    });
+    return box;
+  }
+
   function renderIndustry(host) {
     const draws = [];
     // two sub-pages: monthly market figures and the yearly industry profile
@@ -1079,8 +1272,9 @@
     if (state.ind === "year") { renderIndustryYear(host, draws); return; }
     // 0) monthly market indicators (Destatis)
     host.appendChild(secHead("ind-month", "Every month", "How is our market doing?"));
-    const mk = M.indicators.filter((i) => i.group === "market_de");
+    const mk = M.indicators.filter((i) => i.group === "market_de" || i.group === "fibre_supply");
     if (mk.length) { const g = el("div", "tiles"); mk.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
+    const shelf = shelfPanel(draws); if (shelf) host.appendChild(shelf);
     if (!IND) host.appendChild(el("div", "empty", "Industry figures of DIE PAPIERINDUSTRIE are not available yet."));
     // 1) Germany, year-to-date by grade
     const gm = IND && IND.germanyMonthly;
@@ -1212,6 +1406,8 @@
     if (re && hasData(re)) bits.push("Renewables supply **" + fmtVal(re.series[re.series.length - 1][1], "%") + " %** of German power (" + fmtDate(re.series[re.series.length - 1][0], re) + ").");
     const gs = ((WATER && WATER.gauges) || []).filter((g) => (g.series || []).length).filter((g) => { const v = g.latest && g.latest.v != null ? g.latest.v : g.series[g.series.length - 1][1]; return gaugeStatus(g, v).cls === "head"; });
     if (gs.length) bits.push("**Low water** at " + gs.map((g) => g.label).join(" and ") + ".");
+    const gst = gasStats("eu");
+    if (gst) bits.push("EU gas storage is **" + gst.last[1].toFixed(0) + " % full**" + (gst.avgNow != null ? " (" + (gst.last[1] - gst.avgNow > 0 ? "+" : "−") + Math.abs(gst.last[1] - gst.avgNow).toFixed(0) + " pp vs. the 5-year average)" : "") + ".");
     return bits.join(" ");
   }
   // ---------- At a glance: one card per topic (verdict, signal dots, 3 key indicators) ----------
@@ -1225,13 +1421,13 @@
     market: [
       { key: "demand", label: "Demand & trade", ids: ["de_retail_drug", "de_retail_food", "de_imp_tissue", "de_exp_tissue"], tab: "industry", anchor: "ind-month", link: "Industry" },
       { key: "prod", label: "Production", ids: ["de_prod_paper", "prod_paper"], tab: "industry", anchor: "ind-month", link: "Industry" },
-      { key: "fibre", label: "Fibre supply", ids: ["de_imp_pulp"], fibre: true, tab: "industry", anchor: "ind-year", link: "Industry profile" },
+      { key: "fibre", label: "Fibre supply", ids: ["de_imp_pulp"], fibre: true, tab: "fibre", link: "Fibre" },
     ],
     energy: [
       { key: "grid", label: "Grid carbon intensity", groups: ["grid"], tab: "grid", link: "Power grid", pick: ["grid_de", "grid_eu", "grid_pl"] },
       { key: "mix", label: "German power mix", groups: ["powermix", "energy"], tab: "grid", link: "Power grid", pick: ["res_share_de", "mix_coal", "mix_wind"] },
-      { key: "carbon", label: "Carbon price", ids: ["eua"], any: true, tab: "carbon", link: "Carbon cost" },
-      { key: "water", label: "Water", water: true, tab: "water", link: "Water" },
+      { key: "gas", label: "Gas storage", gas: true, tab: "gas", link: "Gas storage" },
+      { key: "water", label: "Water & weather", water: true, tab: "water", link: "Water & weather" },
     ],
   };
   const topicInds = (t) => (t.any ? M.indicators : pageInds()).filter((i) => (t.ids ? t.ids.includes(i.id) : t.groups.includes(i.group)) && hasData(i));
@@ -1248,6 +1444,7 @@
     const go = el("button", "gl-go"); go.type = "button";
     if (t.water) return waterCard(card, head, go, t);
     if (t.fibre) return fibreCard(card, head, go, t);
+    if (t.gas) return gasCard(card, head, go, t);
     const inds = topicInds(t);
     if (!inds.length) { card.appendChild(el("p", "tc-v", "Waiting for first data.")); return card; }
     const sigs = inds.map((i) => ({ i, s: signal(i), c: yoy(i) }));
@@ -1289,11 +1486,33 @@
       v.appendChild(document.createTextNode(" · hygiene papers use " + hy[n] + " % recovered paper (" + rr.years[n] + "; " + hy[0] + " % in " + y0 + ")"));
     } else v.appendChild(el("b", null, "Fibre supply"));
     card.appendChild(v);
+    const po = PULP && PULP.products && PULP.products.total;
+    if (po && po.rows && po.rows.length) {
+      const r0 = po.rows[0], r1 = po.rows[1];
+      const d = el("div", "tc-r static"); d.append(el("span", "n", "Largest pulp origins (EU, 12 months)"), el("span", "v", r0.name + " " + Math.round(r0.share) + " %" + (r1 ? " · " + r1.name + " " + Math.round(r1.share) + " %" : "")), el("span"));
+      card.appendChild(d);
+    }
     inds.forEach((i) => card.appendChild(keyRow(i)));
     const yr = (label, arr) => { const n = arr.length - 1, d = arr[n] - arr[n - 1]; const r = el("div", "tc-r static"); r.append(el("span", "n", label), el("span", "v", arr[n] + " %"), el("span", "c", (d > 0 ? "▲ +" : d < 0 ? "▼ −" : "▬ ") + Math.abs(d) + " pp")); return r; };
     if (hy) card.appendChild(yr("Recovered paper share · hygiene (" + rr.years[rr.years.length - 1] + ")", hy));
     if (all) card.appendChild(yr("Recovered paper share · all grades", all));
     go.textContent = "Open " + t.link + " ›"; go.addEventListener("click", () => goTab(t.tab, t.anchor)); card.appendChild(go);
+    return card;
+  }
+  // Gas storage (Energy & climate): EU + German storage vs. the 5-year average
+  function gasCard(card, head, go, t) {
+    const eu = gasStats("eu"), de = gasStats("de");
+    const v = el("p", "tc-v");
+    const gap = eu && eu.avgNow != null ? eu.last[1] - eu.avgNow : null;
+    const cls = gap == null ? "flat" : gap < -5 ? "head" : gap > 5 ? "tail" : "flat";
+    head.appendChild(el("span", "sig " + cls, cls === "head" ? "Headwind" : cls === "tail" ? "Tailwind" : "Neutral"));
+    if (eu) { v.appendChild(el("b", null, gap == null ? "Storage " + Math.round(eu.last[1]) + " %" : gap < -5 ? "Below normal" : gap > 5 ? "Above normal" : "Normal")); v.appendChild(document.createTextNode(" · EU storage " + eu.last[1].toFixed(0) + " % full" + (gap != null ? ", " + Math.abs(gap).toFixed(0) + " pp " + (gap < 0 ? "below" : "above") + " the 5-year average" : ""))); }
+    else v.appendChild(el("b", null, "Gas storage data arrives with the next update"));
+    card.appendChild(v);
+    const row = (n, val, c) => { const d = el("div", "tc-r static"); d.append(el("span", "n", n), el("span", "v", val), el("span", "c", c || "")); return d; };
+    if (eu) card.appendChild(row("Gas storage EU", eu.last[1].toFixed(1) + " %", eu.week != null ? arrow(eu.week, "pp", 1) + " in a week" : ""));
+    if (de) card.appendChild(row("Gas storage Germany", de.last[1].toFixed(1) + " %", de.week != null ? arrow(de.week, "pp", 1) + " in a week" : ""));
+    go.textContent = "Open " + t.link + " ›"; go.addEventListener("click", () => goTab(t.tab)); card.appendChild(go);
     return card;
   }
   function waterCard(card, head, go, t) {
@@ -1303,10 +1522,12 @@
     const gs = gauges.map((g) => { const last = g.series[g.series.length - 1]; const v = g.latest && g.latest.v != null ? g.latest.v : last[1]; return { g, v, st: gaugeStatus(g, v) }; });
     const ss = sites.map((s) => { const last = s.series[s.series.length - 1]; return { s, v: last[1], st: soilStatus(last[1]) }; });
     const lowR = gs.filter((x) => x.st.cls === "head"), dry = ss.filter((x) => x.st.cls === "head");
+    const wxs = ((WEATHER && WEATHER.sites) || []);
+    const hotNow = wxs.filter((w) => { const lw = (w.weeks || []).slice(-2); return lw.some((x) => x.cls === "hot" || x.cls === "dryhot"); });
     const bad = lowR.length + dry.length;
     head.appendChild(el("span", "sig " + (bad ? "head" : "flat"), bad ? "Headwind" : "Neutral"));
     const v = el("p", "tc-v"); v.appendChild(el("b", null, lowR.length ? "Low water" : dry.length ? "Dry soil" : "Normal"));
-    v.appendChild(document.createTextNode(" · " + (lowR.length ? lowR.map((x) => x.g.label).join(", ") + " below normal" : "rivers normal") + (sites.length ? " · " + dry.length + " of " + sites.length + " mills dry" : "")));
+    v.appendChild(document.createTextNode(" · " + (lowR.length ? lowR.map((x) => x.g.label).join(", ") + " below normal" : "rivers normal") + (sites.length ? " · " + dry.length + " of " + sites.length + " mills dry" : "") + (wxs.length ? " · " + (hotNow.length ? hotNow.length + " with heat in the last 2 weeks" : "no heat in the last 2 weeks") : "")));
     card.appendChild(v);
     const dots = el("div", "tc-dots");
     gs.concat(ss).forEach((x) => { const d = el("i", x.st.cls === "head" ? "head" : ""); d.title = (x.g ? x.g.label : x.s.name) + ": " + x.st.text; dots.appendChild(d); });
@@ -1318,6 +1539,7 @@
     return card;
   }
   function renderGlance(host) {
+    const ln = lineNode(); if (ln) host.appendChild(ln);
     if (PAGE === "costs" && COST) {
       const R = computeCost();
       if (R.rows.length) {
@@ -1461,7 +1683,7 @@
     return { year: year.slice(0, 4), parts, tot: Math.max(t || 0, sum) || 1 };
   }
   function buildTabs() {
-    TABS = [{ id: "glance", label: "At a glance", groups: [], lead: GLANCE_LEAD }, { id: "cmp", label: PAGE === "costs" ? "Price trends" : "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "cost" ? !!COST : t.id === "industry" || t.id === "water" || t.id === "carbon" ? true : t.groups.some((g) => M.groups[g])))]
+    TABS = [{ id: "glance", label: "At a glance", groups: [], lead: GLANCE_LEAD }, { id: "cmp", label: PAGE === "costs" ? "Price trends" : "Trends", groups: [] }, ...TAB_DEF.filter((t) => (t.id === "cost" ? !!COST : ["industry", "water", "carbon", "gas", "fibre"].includes(t.id) ? true : t.groups.some((g) => M.groups[g])))]
       .filter((t) => PAGE_TABS[PAGE].includes(t.id)).sort((a, b) => PAGE_TABS[PAGE].indexOf(a.id) - PAGE_TABS[PAGE].indexOf(b.id));
   }
   function renderTabs() {
@@ -1520,6 +1742,8 @@
     if (tab.id === "industry") renderIndustry(host);
     if (tab.id === "cost") renderCost(host);
     if (tab.id === "water") renderWater(host);
+    if (tab.id === "gas") renderGas(host);
+    if (tab.id === "fibre") renderFibre(host);
     if (tab.id === "carbon") {
       const panel = el("div", "panel cc-panel"); panel.id = "carbon";
       const hd = el("div", "cc-head"); hd.append(el("h4", null, "Carbon cost exposure · WEPA EU ETS sites"), el("span", null, "verified emissions × EUA price"));
@@ -1630,21 +1854,20 @@
     return box;
   }
 
-  // the summary sentence sits under the page title, styled like the first sentence on the Overview page; key figures in bold
-  function renderLine() {
-    let p = $("gl-line");
-    if (!p) { p = el("p", "pg-sum"); p.id = "gl-line"; $("title").after(p); }
-    const line = state.tab === "glance" ? summaryLine() : "";
-    p.hidden = !line; p.replaceChildren();
+  // the summary sentence opens "At a glance" (below the tabs, so the tabs never move), styled like the Overview's first sentence
+  function lineNode() {
+    const p = el("p", "pg-sum"); const line = summaryLine();
+    if (!line) return null;
     line.replace(/ (%|pp|pts)/g, "\u00a0$1").split("**").forEach((t, k) => { if (t) p.appendChild(k % 2 ? el("b", null, t) : document.createTextNode(t)); });
+    return p;
   }
   function renderAll() {
-    assignColors(); renderLine();
+    assignColors();
     renderTabs(); renderBar(); if (state.tab === "cmp") renderChart(); renderCmpTiles(); renderTiles(); writeHash();
   }
 
   $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });
-  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry" || state.tab === "grid" || state.tab === "water") renderTiles(); }, 120); });
+  let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry" || state.tab === "grid" || state.tab === "water" || state.tab === "gas") renderTiles(); }, 120); });
 
   Promise.all([
     fetch("data/market.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
@@ -1652,8 +1875,12 @@
     fetch("config/market.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/industry.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
     fetch("data/water.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-  ]).then(([data, ets, cfg, ind, water]) => {
+    // new sources (update-30): missing files simply leave their views empty
+    ...(PAGE === "energy" ? ["data/gas.json", "data/weather.json"] : PAGE === "market" ? ["data/pulp_origin.json", "config/eudr.json"] : [])
+      .map((u) => fetch(u, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)),
+  ]).then(([data, ets, cfg, ind, water, x1, x2]) => {
     M = data; ETS = ets; IND = ind; WATER = water;
+    if (PAGE === "energy") { GAS = x1; WEATHER = x2; } else if (PAGE === "market") { PULP = x1; EUDR = x2; }
     if (cfg) {
       (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; });
       GRID_ABOUT = cfg.gridAbout || null; COST = cfg.costIndex || null;
