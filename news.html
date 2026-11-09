@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109j"></script>
-<script src="assets/look.js?v=20261109j"></script>
-<script src="assets/views.js?v=20261109j"></script>
-<script src="assets/filters.js?v=20261109j"></script>
+<script src="assets/theme.js?v=20261109l"></script>
+<script src="assets/look.js?v=20261109l"></script>
+<script src="assets/views.js?v=20261109l"></script>
+<script src="assets/filters.js?v=20261109l"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>News – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
@@ -403,10 +403,37 @@
     .hsearch { margin-left: 0; flex: 1 1 100%; order: 5; }
     .feat { flex-basis: 100%; }
   }
+
+  /* ---- update-26: one filter bar under the tabs, fixed-height "What's ahead" ---- */
+  .fbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 8px 10px; background: var(--d-fff-bg, #fff); border: 1px solid var(--d-eceff3-border, #eceff3); border-radius: 14px; box-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 4px 14px rgba(16, 24, 40, .05); margin-top: -8px; }
+  .fbar .tsearch { flex: 0 1 240px; min-width: 160px; }
+  .fbar .fb-sp { flex: 1; }
+  .fb-acts { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 13px; }
+  .fb-acts:empty { display: none; }
+  .fb-chg { display: inline-flex; align-items: center; gap: 6px; color: var(--d-6b7280-text, #6b7280); white-space: nowrap; }
+  .fb-chg i { width: 7px; height: 7px; border-radius: 50%; background: #d97706; }
+  .fb-link { border: 0; background: none; font: inherit; font-size: 13px; color: var(--d-6b7280-text, #6b7280); cursor: pointer; padding: 4px 6px; border-radius: 6px; white-space: nowrap; }
+  .fb-link:hover { color: var(--ink); background: var(--d-f3f5f8-bg, #f3f5f8); }
+  .fb-link.acc { color: var(--wepa-green, #009b82); font-weight: 600; }
+  @media (min-width: 961px) { .fbar { position: sticky; top: 68px; z-index: 30; } html { scroll-padding-top: 140px; } .yh, .mrow { scroll-margin-top: 140px; } }
+  :root[data-theme="dark"] .fbar { box-shadow: none; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fbar { box-shadow: none; } }
+  .vtabs .vt-sep { flex: none; width: 1px; height: 20px; background: var(--d-e3e7ec-border, #e3e7ec); margin: 0 6px; align-self: center; }
+  .toolbar.lhead { position: static; margin: 0; padding: 0; background: none; backdrop-filter: none; z-index: auto; }
+  .toolbar.lhead .yh { margin: 0; }
+  /* What's ahead keeps the same height for every view and filter, so nothing below it moves */
+  #dl-body { height: 212px; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; }
+  #dl-body > .nx { min-height: 100%; }
+  .dl-empty { height: 100%; min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; border: 1px dashed var(--line); border-radius: 12px; color: var(--ink-3); font-size: 13.5px; padding: 12px; }
+  .dl-empty b { color: var(--ink-2); font-weight: 600; font-size: 14px; }
+  .dl-empty button { border: 0; background: none; font: inherit; font-size: 13.5px; font-weight: 600; color: var(--wepa-green, #009b82); cursor: pointer; padding: 4px 6px; margin-top: 2px; }
+  .dl-empty button:hover { text-decoration: underline; }
+  .dl-all-note { display: flex; justify-content: flex-end; }
+  @media (max-width: 720px) { #dl-body { height: auto; max-height: 420px; } }
 </style>
-<script src="assets/status.js?v=20261109j" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109j">
-<script src="assets/colresize.js?v=20261109j" defer></script>
+<script src="assets/status.js?v=20261109l" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109l">
+<script src="assets/colresize.js?v=20261109l" defer></script>
 </head>
 <body>
 <header>
@@ -419,31 +446,21 @@
   </div>
 </header>
 
-<main class="wrap layout">
-  <aside class="side" id="side" aria-label="Views and areas">
-    <button type="button" class="side-toggle" id="side-toggle" aria-expanded="false" aria-controls="side-body">View &amp; area <span id="side-sum"></span></button>
-    <div class="side-body" id="side-body">
-      <div class="side-group" role="group" aria-labelledby="v-cap"><p class="cap" id="v-cap">View</p><div id="views"></div></div>
-      <div class="side-group" role="group" aria-labelledby="a-cap"><p class="cap" id="a-cap">Areas</p><div id="areas"></div></div>
-      <div class="side-group" role="group" aria-labelledby="j-cap" id="jump-group"><p class="cap" id="j-cap">Jump to</p><div id="jump"></div></div>
-      <div class="side-group" role="group" aria-labelledby="l-cap"><p class="cap" id="l-cap">Legend</p>
-        <div class="side-legend">
-          <div class="row"><span class="d" style="background:var(--t-regulation)"></span>Regulation</div>
-          <div class="row"><span class="d" style="background:var(--t-tool)"></span>Tools &amp; updates</div>
-          <div class="row"><span class="d" style="background:var(--t-practice)"></span>Best practice</div>
-          <div class="row"><span class="d" style="background:var(--t-peer)"></span>Peer news</div>
-          <div class="row rel-key" id="key-rel"></div>
-        </div>
-      </div>
-    </div>
-  </aside>
-
+<main class="wrap layout no-side">
   <div class="content">
     <div class="vbar" id="vbar">
       <div class="ptabs vtabs" role="tablist" id="vtabs" aria-label="My news views"></div>
-      <div class="vrecipe" id="vrecipe"></div>
-      <div class="vdirty" id="vdirty" hidden></div>
       <div class="vmenu" id="vmenu" role="menu" aria-label="View options" hidden></div>
+    </div>
+    <!-- one filter bar for everything (A): search, Areas, Tools (Data & AI only), What it is, Companies (peer news only), Affects, Relevance; Save/Undo when a view was changed -->
+    <div class="fbar" id="fbar" role="group" aria-label="Filters">
+      <label class="search tsearch">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
+        <input id="q" type="search" placeholder="Filter these cards …" aria-label="Filter news cards">
+      </label>
+      <span id="filters" class="fdd-row"></span>
+      <span class="fb-sp"></span>
+      <span class="fb-acts" id="fbacts"></span>
     </div>
     <section class="panel dl-panel" aria-labelledby="dl-title">
       <div class="dl-head">
@@ -458,16 +475,12 @@
       <div id="dl-body"></div>
     </section>
 
-    <div class="toolbar">
+    <div class="toolbar lhead">
       <span class="count-txt" id="count"></span>
+      <span id="jumpdd" class="fdd-row"></span>
       <span class="only-chip" id="only" hidden></span>
       <div class="spacer"></div>
-      <label class="search tsearch">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5L14 14"/></svg>
-        <input id="q" type="search" placeholder="Filter these cards …" aria-label="Filter news cards">
-      </label>
-      <!-- filter dropdowns with checkboxes (assets/filters.js): Tools (Data & AI only), What it is, Companies (peer news only), Affects, Relevance, Sort by -->
-      <span id="filters" class="fdd-row"></span>
+      <span id="sortdd" class="fdd-row"></span>
       <div class="vsw" role="group" aria-label="Show news as">
         <button type="button" id="v-cards" aria-pressed="true" title="Show as cards"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Cards</span></button>
         <button type="button" id="v-list" aria-pressed="false" title="Show as a compact list"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4h11M2.5 8h11M2.5 12h11"/></svg><span>List</span></button>
@@ -709,38 +722,15 @@
     b.appendChild(el("span", "count", ""));
     return b;
   }
-  function refresh() { sync(); renderDeadlines(); render(); }
+  function refresh() { state.dlIgnore = false; sync(); renderDeadlines(); render(); }
 
   function buildControls() {
-    // Views
-    Object.entries(VIEWS).forEach(([k, label]) => {
-      const b = sideItem("", iconSvg(VIEW_ICONS[k]), label);
-      b.dataset.view = k;
-      if (k === "new") b.querySelector(".count").className = "nb";
-      b.addEventListener("click", () => { state.view = k; closeSide(); refresh(); });
-      $("views").appendChild(b);
-    });
-    // Areas (+ Microsoft tools under Data & AI)
-    const all = sideItem("", iconSvg('<circle cx="8" cy="8" r="5.5"/><path d="M2.5 8h11M8 2.5c1.8 1.7 1.8 9.3 0 11M8 2.5c-1.8 1.7-1.8 9.3 0 11"/>'), "All areas");
-    all.dataset.area = "all";
-    $("areas").appendChild(all);
-    Object.entries(AREAS).forEach(([key, a]) => {
-      const b = sideItem("", areaIcon(key, 16), a.label);
-      b.dataset.area = key;
-      $("areas").appendChild(b);
-    });
-    $("areas").addEventListener("click", (ev) => {
-      const b = ev.target.closest("[data-area]");
-      if (!b) return;
-      const k = b.dataset.area;
-      if (k === "all") state.areas.clear();
-      else if (state.areas.has(k)) state.areas.delete(k);
-      else state.areas.add(k);
-      syncArea(); state.tool = "all"; state.dlAll = false;
+    // Filters above the cards: checkbox dropdowns (assets/filters.js); several values per filter, none = all
+    DD.areas = RadarDD.multi({ label: "Areas", empty: "All areas", items: [], onChange: (keys) => {
+      state.areas = new Set(keys); syncArea(); state.tool = "all"; state.dlAll = false;
       if (state.area !== "data") state.type = J(L(state.type).filter((t) => t !== "monthly"));
       refresh();
-    });
-    // Filters above the cards: checkbox dropdowns (assets/filters.js); several values per filter, none = all
+    } });
     const set = (k) => (keys) => { state[k] = J(keys); if (k === "type" && !peerOn()) state.co = "all"; refresh(); };
     DD.tool = RadarDD.multi({ label: "Tools", empty: "All tools", items: [], onChange: set("tool") });
     DD.type = RadarDD.multi({ label: "What it is", empty: "Everything", items: [], onChange: set("type") });
@@ -748,47 +738,25 @@
     DD.impact = RadarDD.multi({ label: "Affects", empty: "Anything", items: [], onChange: set("impact") });
     DD.rel = RadarDD.multi({ label: "Relevance", empty: "All", items: [], onChange: set("rel") });
     DD.sort = RadarDD.single({ label: "Sort by", value: state.sort, items: Object.entries(SORT_LABEL).map(([key, label]) => ({ key, label })), onChange: (v) => { state.sort = v; render(); } });
-    $("filters").append(DD.tool.el, DD.type.el, DD.co.el, DD.impact.el, DD.rel.el, DD.sort.el);
+    $("filters").append(DD.areas.el, DD.tool.el, DD.type.el, DD.co.el, DD.impact.el, DD.rel.el);
+    $("sortdd").appendChild(DD.sort.el);
     window.addEventListener("resize", debounce(measureCards, 150));
     $("q").addEventListener("input", (ev) => { state.q = ev.target.value.trim().toLowerCase(); render(); syncCount(); });
-    // Footer legend
-    const key = $("key-rel");
-    RELS.forEach((r) => { const row = el("div", "row"); row.append(relIcon(r), el("span", null, r[0].toUpperCase() + r.slice(1) + " relevance")); key.appendChild(row); });
     // Deadline view
     document.querySelectorAll("[data-view]").forEach((b) => {
       if (!b.closest(".dl-panel")) return;
       b.addEventListener("click", () => { state.dlView = b.dataset.view; store.set("radar.dlView", state.dlView); sync(); renderDeadlines(); });
     });
-    // Sidebar on small screens
-    $("side-toggle").addEventListener("click", () => {
-      const open = $("side").classList.toggle("open");
-      $("side-toggle").setAttribute("aria-expanded", String(open));
-    });
     window.addEventListener("resize", () => { if (currentDlView() === "timeline") renderDeadlines(); });
     window.addEventListener("hashchange", () => { readHash(); refresh(); });
     sync();
   }
-  function closeSide() { $("side").classList.remove("open"); $("side-toggle").setAttribute("aria-expanded", "false"); }
+  function closeSide() {}
 
   function syncCount() {
     // the entry count is no longer shown; the first year header takes its place (see render)
   }
   function sync() {
-    // View counts follow the selected area
-    const base = pool().filter(inArea);
-    document.querySelectorAll("#views [data-view]").forEach((b) => {
-      b.setAttribute("aria-pressed", String(b.dataset.view === state.view));
-      const n = base.filter((e) => inView(e, b.dataset.view)).length;
-      const c = b.querySelector(".count, .nb");
-      c.textContent = String(n);
-      if (b.dataset.view === "new") c.style.display = n ? "" : "none";
-    });
-    document.querySelectorAll("#areas [data-area]").forEach((b) => {
-      const k = b.dataset.area;
-      b.setAttribute("aria-pressed", String(k === "all" ? !state.areas.size : state.areas.has(k)));
-      b.title = k === "all" ? "Show all areas" : state.areas.has(k) ? "Remove this area" : "Add this area – you can select several";
-      b.querySelector(".count").textContent = String(k === "all" ? pool().length : pool().filter((e) => areasOf(e).includes(k)).length);
-    });
     // Data & AI only: tool filter and "Monthly updates" type
     const inData = state.area === "data";
     syncFilters(inData);
@@ -804,8 +772,7 @@
       only.appendChild(x);
     }
     const areaLabel = !state.areas.size ? "All areas" : state.areas.size > 1 ? [...state.areas].map((a) => AREAS[a].label.split(" ")[0]).join(", ") : AREAS[state.area].label + (inData && L(state.tool).length ? " · " + (L(state.tool).length === 1 ? TOOLS[L(state.tool)[0]].label : L(state.tool).length + " tools") : "");
-    $("side-sum").textContent = VIEWS[state.view] + " · " + areaLabel;
-    $("dl-title").textContent = "What's ahead" + (VS.active !== "all" ? " · " + activeView().name : state.areas.size ? " · " + areaLabel : "");
+    $("dl-title").textContent = "What's ahead" + (state.dlIgnore ? " · all deadlines" : VS.active !== "all" ? " · " + activeView().name : state.areas.size ? " · " + areaLabel : "");
     syncCount();
     writeHash();
   }
@@ -814,6 +781,7 @@
   const DD = {};
   function syncFilters(inData) {
     if (!DD.type) return;
+    DD.areas.update(Object.entries(AREAS).map(([k, a]) => ({ key: k, label: a.label, count: pool().filter((e) => areasOf(e).includes(k)).length })), [...state.areas]);
     const base = pool().filter((e) => !state.areas.size || areasOf(e).some((a) => state.areas.has(a)));
     const cnt = (fn) => base.filter(fn).length;
     DD.tool.show(inData);
@@ -834,8 +802,8 @@
     DD.sort.update(state.sort);
   }
 
-  function upcoming() {
-    const f = snap();
+  function upcoming(ignore) {
+    const f = ignore || state.dlIgnore ? RadarViews.norm({}) : snap();
     return entries.filter((e) => e.nextDate && daysFrom(e.nextDate) >= 0 && RadarViews.match(e, f, vctx, { skipView: true, skipQ: true })).sort((a, b) => a.nextDate.localeCompare(b.nextDate));
   }
 
@@ -864,10 +832,21 @@
     if (dv === "next") { body.replaceChildren(comingView()); return; }
     if (dv === "events") { body.replaceChildren(eventsView()); return; }
     const list = upcoming();
-    if (!list.length) { const f = snap(), narrowed = f.areas.length || f.type !== "all" || f.impact !== "all" || f.rel !== "all" || f.co !== "all"; body.replaceChildren(el("p", "s", narrowed ? "No upcoming deadlines for these filters." : "No upcoming deadlines recorded.")); return; }
+    if (!list.length) {
+      const all = upcoming(true).length;
+      body.replaceChildren(all ? dlEmpty("No deadlines in this view", "None of the upcoming deadlines matches these filters.", "Show all " + all + " deadlines", () => { state.dlIgnore = true; sync(); renderDeadlines(); })
+        : dlEmpty("No upcoming deadlines recorded", "New dates arrive with the next data update."));
+      return;
+    }
     body.replaceChildren(dv === "timeline" ? timeline(list) : listView(list));
   }
 
+  function dlEmpty(title, sub, label, fn) {
+    const box = el("div", "dl-empty");
+    box.append(el("b", null, title), el("span", null, sub));
+    if (label) { const b = el("button", null, label); b.type = "button"; b.addEventListener("click", fn); box.appendChild(b); }
+    return box;
+  }
   function listView(list) {
     const wrap = el("div", "nx");
     const first = list[0], d0 = daysFrom(first.nextDate);
@@ -1003,7 +982,7 @@
   const cleanText = (t) => new DOMParser().parseFromString(String(t || "").replace(/\*\*/g, ""), "text/html").documentElement.textContent.trim();
   function comingView() {
     const items = fabric.items.filter((i) => !L(state.tool).length || L(state.tool).includes(i.tool));
-    if (!items.length) return el("p", "s", fabric.items.length ? "No planned features for this tool." : "The Fabric roadmap arrives with the next run of the GitHub Action.");
+    if (!items.length) return fabric.items.length ? dlEmpty("No planned features for this tool", "Pick another tool in the filter bar.") : dlEmpty("No roadmap yet", "The Fabric roadmap arrives with the next run of the GitHub Action.");
     const order = (q) => (q === "Later" ? "9999" : q.slice(3) + q.slice(1, 2));
     const quarters = [...new Set(items.map((i) => i.quarter))].sort((a, b) => order(a).localeCompare(order(b))).slice(0, 4);
     const inQ = items.filter((i) => quarters.includes(i.quarter));
@@ -1086,7 +1065,7 @@
   function eventsView() {
     const list = events.filter((e) => daysFrom(e.end || e.date) >= 0 && (!state.areas.size || state.areas.has(e.area)))
       .sort((a, b) => a.date.localeCompare(b.date));
-    if (!list.length) return el("p", "s", state.area === "all" ? "No upcoming events recorded yet." : "No upcoming events in this area.");
+    if (!list.length) return state.area === "all" ? dlEmpty("No upcoming events recorded yet", "Events are added with the data updates.") : dlEmpty("No upcoming events in this area", "Clear the Areas filter to see all events.");
     const rows = el("div", "rows");
     list.forEach((e) => {
       const dt = parse(e.date);
@@ -1363,8 +1342,9 @@
     const host = $("vtabs"); if (!host) return;
     const p = pool(), dirty = changes();
     host.replaceChildren();
+    const quick = VS.active === "all" && (state.view === "new" || state.view === "saved") ? state.view : null;
     [ALL_VIEW, ...VS.list].forEach((v) => {
-      const sel = v.id === VS.active;
+      const sel = v.id === VS.active && !(v.id === "all" && quick);
       const b = el("button", "vtab"); b.type = "button"; b.dataset.vid = v.id;
       b.setAttribute("role", "tab"); b.setAttribute("aria-selected", String(sel)); b.tabIndex = sel ? 0 : -1;
       b.appendChild(document.createTextNode(v.name));
@@ -1372,7 +1352,7 @@
       if (nn) { const s = el("small", null, nn + " new"); s.title = nn + " new since your last visit"; b.appendChild(s); }
       if (sel && dirty.length) { const d = el("span", "vt-dot"); d.title = "Changed, not saved yet"; b.appendChild(d); }
       if (VS.start === v.id) b.title = "Opens first when you come to News";
-      b.addEventListener("click", () => { if (!sel) openView(v.id); });
+      b.addEventListener("click", () => { if (sel) return; if (v.id === "all" && VS.active === "all") { state.view = "all"; refresh(); } else openView(v.id); });
       host.appendChild(b);
       if (sel && v.id !== "all") {
         const m = el("button", "vt-more"); m.type = "button"; m.id = "vt-more"; m.setAttribute("aria-label", "Options for this view"); m.setAttribute("aria-haspopup", "menu"); m.title = "Rename, move or delete";
@@ -1381,29 +1361,39 @@
         host.appendChild(m);
       }
     });
+    // New since last visit / Saved: built-in tabs after your own views
+    host.appendChild(el("span", "vt-sep"));
+    [["new", "New"], ["saved", "Saved"]].forEach(([k, label]) => {
+      const sel = quick === k;
+      const b = el("button", "vtab quick"); b.type = "button"; b.dataset.q = k;
+      b.setAttribute("role", "tab"); b.setAttribute("aria-selected", String(sel)); b.tabIndex = sel ? 0 : -1;
+      b.appendChild(document.createTextNode(label));
+      const n = p.filter((e) => inView(e, k)).length;
+      if (n || k === "saved") { const s = el("small", null, String(n)); s.title = k === "new" ? n + " new since your last visit" : n + " saved"; b.appendChild(s); }
+      b.title = k === "new" ? "Everything added since your last visit" : "Items you starred";
+      b.addEventListener("click", () => { if (sel) return; if (VS.active !== "all") { VS.active = "all"; saveViews(); applyFilters(ALL_VIEW.f); } state.view = k; refresh(); });
+      host.appendChild(b);
+    });
     const add = el("button", "vt-add"); add.type = "button"; add.setAttribute("aria-label", "Save the current filters as a new view"); add.title = "New view from the current filters";
     add.innerHTML = '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg>';
     add.addEventListener("click", () => openDlg("new"));
     host.appendChild(add);
     const cur = host.querySelector('[aria-selected="true"]'); // keep the open tab visible when the row scrolls (small screens)
     if (cur && (cur.offsetLeft < host.scrollLeft || cur.offsetLeft + cur.offsetWidth > host.scrollLeft + host.clientWidth)) host.scrollLeft = Math.max(0, cur.offsetLeft - 16);
-    // "This view shows …"
-    const f = snap();
-    const r = $("vrecipe");
-    r.replaceChildren(el("span", "vr-lbl", VS.active === "all" ? "Showing" : "This view shows"), filterChips(f, dirty));
-    if (VS.active === "all" && RadarViews.diff(ALL_VIEW.f, f).some((k) => k !== "sort" && k !== "layout")) {
-      const s = el("button", "vr-save", "Save as view"); s.type = "button"; s.addEventListener("click", () => openDlg("new")); r.appendChild(s);
-    }
-    // unsaved changes
-    const d = $("vdirty");
-    d.hidden = !dirty.length;
+    // actions at the end of the filter bar: save a changed view, or save / clear filters on "All news"
+    const f = snap(), acts = $("fbacts");
+    const mk = (cls, label, fn) => { const b = el("button", cls, label); b.type = "button"; b.addEventListener("click", fn); return b; };
+    acts.replaceChildren();
     if (dirty.length) {
-      const txt = el("span", "vd-txt"); txt.append(el("b", null, "Changed: "), document.createTextNode(dirty.filter((k) => !(k === "topic" && dirty.includes("type"))).map((k) => FILTER_NAME[k]).join(", ")));
-      const mk = (cls, label, fn) => { const b = el("button", cls, label); b.type = "button"; b.addEventListener("click", fn); return b; };
-      d.replaceChildren(txt, el("span", "spacer"),
-        mk("vd-btn pri", "Save", () => { activeView().f = snap(); saveViews(); renderViews(); toast("View “" + activeView().name + "” saved"); }),
-        mk("vd-btn", "Save as new view", () => openDlg("new")),
-        mk("vd-btn link", "Discard", () => { applyFilters(activeView().f); refresh(); }));
+      const c = el("span", "fb-chg"); c.append(el("i"), document.createTextNode("Changed"));
+      c.title = "Changed: " + dirty.filter((k) => !(k === "topic" && dirty.includes("type"))).map((k) => FILTER_NAME[k]).join(", ");
+      acts.append(c,
+        mk("vd-btn pri", "Save view", () => { activeView().f = snap(); saveViews(); renderViews(); toast("View “" + activeView().name + "” saved"); }),
+        mk("fb-link", "Save as new", () => openDlg("new")),
+        mk("fb-link", "Undo", () => { applyFilters(activeView().f); refresh(); }));
+    } else if (VS.active === "all" && RadarViews.diff(ALL_VIEW.f, f).some((k) => !["sort", "layout", "view"].includes(k))) {
+      acts.append(mk("fb-link acc", "Save as view", () => openDlg("new")),
+        mk("fb-link", "Clear filters", () => { const v = state.view; applyFilters(ALL_VIEW.f); state.view = v; refresh(); }));
     }
   }
 
@@ -1494,6 +1484,7 @@
     if (!["ArrowLeft", "ArrowRight"].includes(ev.key) || !ev.target.classList.contains("vtab")) return;
     const tabs = [...$("vtabs").querySelectorAll(".vtab")], i = tabs.indexOf(ev.target);
     const t = tabs[(i + (ev.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
+    if (t && t.dataset.q) { t.click(); const nt = $("vtabs").querySelector('[data-q="' + t.dataset.q + '"]'); if (nt) nt.focus(); return; }
     if (t) { openView(t.dataset.vid); const nt = $("vtabs").querySelector('[data-vid="' + t.dataset.vid + '"]'); if (nt) nt.focus(); }
   });
   let toastT;
@@ -1581,40 +1572,28 @@
     }
     host.appendChild(box);
   }
-  // Side panel "Jump to": years and months with counts; clicking scrolls there (and renders it first if needed)
+  // "Jump to" dropdown next to the year: months with counts; picking one scrolls there (and renders it first if needed)
+  let jumpDD = null;
   function renderJump(gs) {
-    const box = $("jump");
-    $("jump-group").hidden = gs.length < 2;
-    let year = null;
-    const nodes = [];
-    gs.forEach(([k, items], i) => {
-      const y = k === "ref" ? "ref" : k.slice(0, 4);
-      if (y !== year) { year = y; nodes.push(el("div", "jy", y === "ref" ? "Other" : y)); }
-      const b = sideItem(null, null, k === "ref" ? "Reference" : monthName(k, true));
-      b.querySelector(".count").textContent = String(items.length);
-      b.dataset.month = k;
-      b.addEventListener("click", () => {
-        if (i >= ui.months) { ui.months = i + 1; render(); }
-        const t = document.getElementById("m-" + k);
-        if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
-        document.getElementById("side").classList.remove("open");
-      });
-      nodes.push(b);
-    });
-    box.replaceChildren(...nodes);
+    const box = $("jumpdd");
+    if (gs.length < 2) { box.replaceChildren(); jumpDD = null; return; }
+    const items = gs.map(([k, items]) => ({ key: k, label: (k === "ref" ? "Reference" : monthName(k, true) + " " + k.slice(0, 4)) + " · " + items.length }));
+    jumpDD = RadarDD.single({ label: "Jump to", value: gs[0][0], items, onChange: (k) => {
+      const i = gs.findIndex(([kk]) => kk === k);
+      if (i >= ui.months) { ui.months = i + 1; render(); }
+      const t = document.getElementById("m-" + k);
+      if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+    } });
+    box.replaceChildren(jumpDD.el);
     spy();
   }
-  // Highlight the month currently in view
+  // Keep "Jump to" on the month currently in view
   let spyObs = null;
   function spy() {
     if (spyObs) spyObs.disconnect();
     if (!("IntersectionObserver" in window)) return;
     spyObs = new IntersectionObserver((ents) => {
-      ents.forEach((en) => {
-        if (!en.isIntersecting) return;
-        const k = en.target.id.slice(2);
-        document.querySelectorAll("#jump .sitem").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.month === k)));
-      });
+      ents.forEach((en) => { if (en.isIntersecting && jumpDD) jumpDD.update(en.target.id.slice(2)); });
     }, { rootMargin: "-160px 0px -60% 0px" });
     document.querySelectorAll("#grid .mrow").forEach((r) => spyObs.observe(r));
   }
@@ -1630,7 +1609,7 @@
   function debounce(fn, ms) { let t; return () => { clearTimeout(t); t = setTimeout(fn, ms); }; }
 })();
 </script>
-<script src="assets/search.js?v=20261109j" defer></script>
-<script src="assets/guide.js?v=20261109j" defer></script>
+<script src="assets/search.js?v=20261109l" defer></script>
+<script src="assets/guide.js?v=20261109l" defer></script>
 </body>
 </html>

@@ -606,3 +606,7 @@ html[data-lk-ic="off"] .lk-ic { display: none; }
 a.li, a.rm-mv { border-radius: 6px; transition: background-color .12s ease, box-shadow .12s ease; }
 a.li:hover, a.rm-mv:hover { background-color: var(--acc-tint, #e8f7f4); box-shadow: 0 0 0 6px var(--acc-tint, #e8f7f4); }
 @media (prefers-reduced-motion: reduce) { .kpi, .kpi:hover { transition: none; transform: none; } }
+
+/* Market tabs without a side panel (Industry, Grid carbon intensity, Water): content uses the full width */
+main.layout.no-side { grid-template-columns: minmax(0, 1fr) !important; }
+main.layout.no-side > .side { display: none !important; }

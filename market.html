@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109j"></script>
-<script src="assets/look.js?v=20261109j"></script>
+<script src="assets/theme.js?v=20261109l"></script>
+<script src="assets/look.js?v=20261109l"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
-<link rel="stylesheet" href="assets/side.css?v=20261109j">
+<link rel="stylesheet" href="assets/side.css?v=20261109l">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -357,9 +357,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261109j" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109j">
-<script src="assets/colresize.js?v=20261109j" defer></script>
+<script src="assets/status.js?v=20261109l" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109l">
+<script src="assets/colresize.js?v=20261109l" defer></script>
 </head>
 <body>
 <header>
@@ -404,8 +404,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261109j"></script>
-<script src="assets/carbon.js?v=20261109j"></script>
+<script src="assets/side.js?v=20261109l"></script>
+<script src="assets/carbon.js?v=20261109l"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -1900,9 +1900,12 @@
     return box;
   }
 
+  // the question filter only fits "At a glance" and "Trends"; Cost index keeps the period, the other tabs need no side panel
+  const NO_SIDE = ["industry", "grid", "water"];
   function renderAll() {
     assignColors();
-    side.refresh(sideGroups());
+    document.querySelector("main").classList.toggle("no-side", NO_SIDE.includes(state.tab));
+    side.refresh(["glance", "cmp"].includes(state.tab) ? sideGroups() : []);
     $("title").textContent = "Market";
     renderTabs(); if (state.tab === "cmp") renderChart(); renderCmpTiles(); renderTiles(); writeHash();
   }
@@ -1960,7 +1963,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261109j" defer></script>
-<script src="assets/guide.js?v=20261109j" defer></script>
+<script src="assets/search.js?v=20261109l" defer></script>
+<script src="assets/guide.js?v=20261109l" defer></script>
 </body>
 </html>
