@@ -1,5 +1,5 @@
 {
- "_comment": "Feeds the daily GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only). A feed added later reads back 'lookbackDaysFirstRun' days on its first run. A feed's optional 'impacts' list is always added (used for the customer feeds → 'customers').",
+ "_comment": "Feeds the daily GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only). A feed added later reads back 'lookbackDaysFirstRun' days on its first run. A feed's optional 'impacts' list is always added (used for the customer feeds → 'customers'). Site feeds ('WEPA sites · …') carry the impact 'sites' (\"our sites\" on the News page).",
  "lookbackDaysFirstRun": 60,
  "archiveFeedItemsAfterDays": 365,
  "monthlySummaryPattern": "feature summary",
@@ -958,6 +958,135 @@
     "Abwasserabgabe",
     "Papierfabrik",
     "Industrie"
+   ]
+  },
+  {
+   "name": "WEPA sites · Germany (via Google News)",
+   "url": "https://news.google.com/rss/search?q=WEPA+%28Arnsberg+OR+M%C3%BCschede+OR+Giershagen+OR+Marsberg+OR+Kriebstein+OR+Mainz+OR+Leuna%29+when%3A30d&hl=de&gl=DE&ceid=DE%3Ade",
+   "type": "practice",
+   "defaultArea": "people",
+   "maxItems": 8,
+   "defaultRelevance": "medium",
+   "_comment": "Site news: local press about WEPA's own production sites (town names from wepa.eu). Only items that name WEPA are kept.",
+   "keywords": [
+    "WEPA"
+   ],
+   "highKeywords": [
+    "Papierfabrik",
+    "Werk",
+    "Standort",
+    "Investition",
+    "Stellen",
+    "Genehmigung",
+    "Kurzarbeit"
+   ],
+   "impacts": [
+    "sites"
+   ]
+  },
+  {
+   "name": "WEPA sites · France (via Google News)",
+   "url": "https://news.google.com/rss/search?q=WEPA+%28Bousbecque+OR+Lille+OR+Troyes+OR+Torvilliers+OR+%22Ch%C3%A2teau-Thierry%22+OR+Annonay+OR+Dav%C3%A9zieux%29+when%3A30d&hl=fr&gl=FR&ceid=FR%3Afr",
+   "type": "practice",
+   "defaultArea": "people",
+   "maxItems": 8,
+   "defaultRelevance": "medium",
+   "_comment": "Site news: local press about WEPA's own production sites (town names from wepa.eu). Only items that name WEPA are kept.",
+   "keywords": [
+    "WEPA"
+   ],
+   "highKeywords": [
+    "usine",
+    "papeterie",
+    "site",
+    "investissement",
+    "emplois"
+   ],
+   "impacts": [
+    "sites"
+   ]
+  },
+  {
+   "name": "WEPA sites · Italy (via Google News)",
+   "url": "https://news.google.com/rss/search?q=WEPA+%28Lucca+OR+Capannori+OR+Porcari+OR+Cassino%29+when%3A30d&hl=it&gl=IT&ceid=IT%3Ait",
+   "type": "practice",
+   "defaultArea": "people",
+   "maxItems": 8,
+   "defaultRelevance": "medium",
+   "_comment": "Site news: local press about WEPA's own production sites (town names from wepa.eu). Only items that name WEPA are kept.",
+   "keywords": [
+    "WEPA"
+   ],
+   "highKeywords": [
+    "cartiera",
+    "stabilimento",
+    "investimento",
+    "lavoratori",
+    "sindacati"
+   ],
+   "impacts": [
+    "sites"
+   ]
+  },
+  {
+   "name": "WEPA sites · Poland (via Google News)",
+   "url": "https://news.google.com/rss/search?q=WEPA+Piechowice+when%3A30d&hl=pl&gl=PL&ceid=PL%3Apl",
+   "type": "practice",
+   "defaultArea": "people",
+   "maxItems": 8,
+   "defaultRelevance": "medium",
+   "_comment": "Site news: local press about WEPA's own production sites (town names from wepa.eu). Only items that name WEPA are kept.",
+   "keywords": [
+    "WEPA"
+   ],
+   "highKeywords": [
+    "fabryka",
+    "zakład",
+    "inwestycja"
+   ],
+   "impacts": [
+    "sites"
+   ]
+  },
+  {
+   "name": "WEPA sites · Netherlands (via Google News)",
+   "url": "https://news.google.com/rss/search?q=WEPA+Swalmen+when%3A30d&hl=nl&gl=NL&ceid=NL%3Anl",
+   "type": "practice",
+   "defaultArea": "people",
+   "maxItems": 8,
+   "defaultRelevance": "medium",
+   "_comment": "Site news: local press about WEPA's own production sites (town names from wepa.eu). Only items that name WEPA are kept.",
+   "keywords": [
+    "WEPA"
+   ],
+   "highKeywords": [
+    "fabriek",
+    "papierfabriek",
+    "investering"
+   ],
+   "impacts": [
+    "sites"
+   ]
+  },
+  {
+   "name": "WEPA sites · UK (via Google News)",
+   "url": "https://news.google.com/rss/search?q=WEPA+%28Bridgend+OR+Blackburn%29+when%3A30d&hl=en-GB&gl=GB&ceid=GB%3Aen",
+   "type": "practice",
+   "defaultArea": "people",
+   "maxItems": 8,
+   "defaultRelevance": "medium",
+   "_comment": "Site news: local press about WEPA's own production sites (town names from wepa.eu). Only items that name WEPA are kept.",
+   "keywords": [
+    "WEPA"
+   ],
+   "highKeywords": [
+    "mill",
+    "factory",
+    "jobs",
+    "investment"
+   ],
+   "impacts": [
+    "sites"
    ]
   }
  ],

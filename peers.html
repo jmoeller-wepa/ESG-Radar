@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261107b"></script>
+<script src="assets/theme.js?v=20261109a"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261107b">
+<link rel="stylesheet" href="assets/side.css?v=20261109a">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -214,6 +214,14 @@
   .sites th, .sites td { padding: 7px 10px; border-bottom: 1px solid var(--line-2); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
   .sites th:first-child, .sites td:first-child { text-align: left; white-space: normal; min-width: 220px; }
   .sites td small { display: block; color: var(--ink-3); font-size: 11.5px; }
+  .es-t td, .es-t th { text-align: left !important; }
+  .es-t td.num { text-align: right !important; }
+  .es-pill { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+  .es-pill.ok { background: var(--d-e3f4ef-bg, #e3f4ef); color: var(--d-0b6b58-text, #0b6b58); }
+  .es-pill.miss { background: var(--cau-bg); color: var(--cau-ink); border: 1px solid var(--cau-line); }
+  .es-pill.out { background: var(--d-eef1f5-bg, #eef1f5); color: var(--ink-2); }
+  .es-t .cand { display: block; margin-top: 3px; color: var(--ink-3); font-size: 11.5px; white-space: normal; }
+  .ets-wrapc { display: flex; flex-direction: column; gap: 14px; }
   .sites tr.tot td { font-weight: 600; border-top: 1px solid var(--line); background: var(--d-fafbfc-bg, #fafbfc); }
   .co-list { display: flex; flex-direction: column; gap: 1px; padding: 0 2px; }
   .co-item { display: flex; align-items: center; gap: 9px; border: 0; background: none; padding: 5px 8px; border-radius: 7px; font: inherit; font-size: 13px; color: var(--d-374151-text, #374151); cursor: pointer; text-align: left; }
@@ -228,9 +236,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
-<script src="assets/status.js?v=20261107b" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261107b">
-<script src="assets/colresize.js?v=20261107b" defer></script>
+<script src="assets/status.js?v=20261109a" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109a">
+<script src="assets/colresize.js?v=20261109a" defer></script>
 </head>
 <body>
 <header>
@@ -298,10 +306,16 @@
 
   <div class="tabp" id="tab-ets" role="tabpanel" hidden>
   <p class="tab-lead">Scope 1 CO₂ of each company's EU sites, from the EU emissions registry. Click a company to see its sites.</p>
+  <div id="ets-caution"></div>
   <section class="panel ets" id="ets" aria-labelledby="ets-title">
     <div class="ets-head"><h3 id="ets-title">EU ETS verified emissions</h3><span id="ets-sub"></span></div>
     <div class="tbl-wrap"><table id="ets-tbl"></table></div>
     <p class="foot" id="ets-foot"></p>
+  </section>
+  <section class="panel ets" id="ets-sites" aria-labelledby="es-title" hidden>
+    <div class="ets-head"><h3 id="es-title">WEPA sites · what the EU ETS data covers</h3><span id="es-sub"></span></div>
+    <div class="tbl-wrap"><table class="sites es-t" id="es-tbl"></table></div>
+    <p class="foot" id="es-foot"></p>
   </section>
   </div>
   </div>
@@ -312,7 +326,7 @@
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261107b"></script>
+<script src="assets/side.js?v=20261109a"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
@@ -322,7 +336,7 @@
   const state = { tab: "bench", group: "europe", area: RadarSide.area(), sortKey: null, sortDir: -1, hidden: new Set() };
   if (!AREA_SET[state.area]) state.area = "all";
   const setKey = () => AREA_SET[state.area] || "overview";
-  let P = null, E = null, PN = {}, news = [], side = null;
+  let P = null, E = null, PN = {}, news = [], side = null, SITES = null;
   const $ = (id) => document.getElementById(id);
   const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const fmtDate = (s) => { const [y, m, d] = s.slice(0, 10).split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); };
@@ -344,9 +358,11 @@
     fetch("data/peers.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
     fetch("data/radar.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : { entries: [] })).catch(() => ({ entries: [] })),
     fetch("data/peer_emissions.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    fetch("data/peer_news.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)
-  ]).then(([peers, radar, ets, pnews]) => {
+    fetch("data/peer_news.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    fetch("config/peer_installations.json", { cache: "no-store" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)
+  ]).then(([peers, radar, ets, pnews, inst]) => {
     P = peers; E = ets; PN = (pnews && pnews.companies) || {};
+    SITES = inst && inst.companies && inst.companies.wepa && inst.companies.wepa.sites ? inst.companies.wepa.sites : null;
     news = (radar.entries || []).filter((e) => e && e.title && e.url);
     $("meta").textContent = "Updated " + fmtDate(P.meta.updated) + " · " + P.companies.length + " companies";
     $("note").textContent = (P.meta.note || "") + " ";
@@ -590,13 +606,15 @@
     if (!E || !E.companies) { body.appendChild(el("p", "muted", "EU ETS data arrives with the next run of the GitHub Action.")); return; }
     if (!d || !d.installations.length) { body.appendChild(el("p", "muted", "No EU ETS sites matched for " + c.name + ". Add them in config/peer_installations.json.")); return; }
     const years = E.years;
+    if (c.isUs && SITES) { const cv = coverage(); body.appendChild(cautionBox("Incomplete – not WEPA's full Scope 1", [`Only ${cv.found.length} of ${cv.eu.length} EU production sites are in the registry data. Missing: ${cv.missing.map((x) => x.site.name).join(", ") || "none"}. UK sites (UK ETS) are not covered. Details on the Emissions · EU ETS tab.`])); }
     body.appendChild(el("p", "muted", `${d.installations.length} site(s) · verified emissions in t CO₂e · ${E.source.attribution}`));
     const wrap = el("div", "tbl-wrap"); const t = el("table", "sites");
     const hr = el("tr"); hr.appendChild(el("th", null, "Site")); years.forEach((y) => hr.appendChild(el("th", null, y)));
     const thead = el("thead"); thead.appendChild(hr); t.appendChild(thead);
     const tb = el("tbody");
     d.installations.forEach((i) => {
-      const tr = el("tr"); const td = el("td"); td.append(document.createTextNode(i.name), el("small", null, [i.key, i.city, i.activity].filter(Boolean).join(" · ")));
+      const sn = c.isUs ? siteOf(i) : null;
+      const tr = el("tr"); const td = el("td"); td.append(document.createTextNode(i.name), el("small", null, [sn ? "Site " + sn.name : null, i.key, i.city, i.activity].filter(Boolean).join(" · ")));
       tr.appendChild(td);
       years.forEach((y) => tr.appendChild(el("td", null, i.emissions[y] != null ? tco2(i.emissions[y]) : "–")));
       tb.appendChild(tr);
@@ -736,6 +754,7 @@
       $("ets-sub").textContent = "Scope 1 CO₂ of EU sites, from the EU emissions registry";
       tbl.replaceChildren(Object.assign(el("caption", null, "Data arrives with the next run of the GitHub Action."), { style: "caption-side:top;text-align:left;padding:18px 0;color:#8a94a3;font-size:13.5px" }));
       $("ets-foot").textContent = "";
+      $("ets-caution").replaceChildren(cautionBox("Incomplete data", ["The EU ETS covers only part of each company's sites. Data arrives with the next run of the GitHub Action."]));
       return;
     }
     const years = E.years || [];
@@ -777,8 +796,71 @@
       tbody.appendChild(tr);
     });
     tbl.replaceChildren(thead, tbody);
+    renderCoverage(last);
     $("ets-foot").textContent = "Covers only sites in the EU ETS (EU, Norway, Iceland, Liechtenstein) – not the UK, Switzerland or other countries. Absolute values reflect size and energy setup (e.g. own power plants), not efficiency. * = not all sites reported that year." +
       (others.length ? " No EU ETS mapping for: " + others.map((c) => c.name).join(", ") + "." : "") + " Source: " + E.source.attribution + ", file " + E.source.year + ".";
+  }
+  // ---------- WEPA site coverage (config/peer_installations.json → companies.wepa.sites) ----------
+  function cautionBox(title, lines) {
+    const box = el("div", "caution"); box.setAttribute("role", "note");
+    box.innerHTML = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5L18 17H2Z"/><path d="M10 8v4.2" stroke-linecap="round"/><circle cx="10" cy="14.6" r=".9" fill="currentColor" stroke="none"/></svg>';
+    const tx = el("div"); tx.appendChild(el("b", null, title));
+    if (lines.length === 1) tx.appendChild(el("p", null, lines[0]));
+    else { const ul = el("ul"); lines.forEach((l) => ul.appendChild(el("li", null, l))); tx.appendChild(ul); }
+    box.appendChild(tx); return box;
+  }
+  function siteOf(i) {
+    if (!SITES) return null;
+    if (i.site) return SITES.find((s) => s.id === i.site) || null;
+    return SITES.find((s) => (s.keys || []).includes(i.key)) ||
+      SITES.find((s) => s.country === i.country && (s.patterns || []).some((p) => { try { return new RegExp(p, "i").test(i.name); } catch (e) { return false; } })) || null;
+  }
+  function coverage() {
+    const d = (E && E.companies && E.companies.wepa) || { installations: [] };
+    const rows = (SITES || []).map((site) => ({ site, inst: d.installations.filter((i) => siteOf(i) === site), cand: ((d.siteCandidates || {})[site.id]) || [] }));
+    const eu = rows.filter((r) => r.site.ets === "eu");
+    return { rows, eu, found: eu.filter((r) => r.inst.length), missing: eu.filter((r) => !r.inst.length), uk: rows.filter((r) => r.site.ets === "uk"),
+      other: d.installations.filter((i) => !siteOf(i)) };
+  }
+  function renderCoverage(last) {
+    const box = $("ets-sites");
+    if (!SITES) { box.hidden = true; $("ets-caution").replaceChildren(cautionBox("Incomplete data – orders of magnitude only", ["Sites are matched by name, and only sites in the EU ETS are included (not the UK or Switzerland). Totals are not a company's full Scope 1."])); return; }
+    const cv = coverage();
+    $("ets-caution").replaceChildren(cautionBox("Incomplete data – not WEPA's full Scope 1 and not a fair peer ranking", [
+      `WEPA: only ${cv.found.length} of ${cv.eu.length} EU production sites are found in the EU registry data. Missing: ${cv.missing.map((r) => r.site.name).join(", ") || "none"} (see the site list below).`,
+      `${cv.uk.map((r) => r.site.name).join(" and ") || "UK sites"} report to the UK ETS since 2021 and are not in the EU registry. Offices are not covered by any ETS.`,
+      "Peers are matched the same way, by name: sites under other company names, outside the EU or below the ETS threshold are missing for them too.",
+      "Use the numbers for trends and orders of magnitude only – WEPA's reported Scope 1 comes from the internal GHG inventory, not from this page.",
+    ]));
+    box.hidden = false;
+    $("es-sub").textContent = `${cv.found.length} of ${cv.eu.length} EU production sites in the data · ${cv.uk.length} UK sites outside the EU ETS · production sites from wepa.eu`;
+    const hr = el("tr"); ["Site", "Country", "In the EU ETS data?", "Registry entry", `${last} · t CO₂e`].forEach((h, k) => hr.appendChild(el("th", k === 4 ? "num" : null, h)));
+    const thead = el("thead"); thead.appendChild(hr);
+    const tb = el("tbody");
+    const order = { eu: 0, uk: 1 };
+    [...cv.rows].sort((a, b) => (order[a.site.ets] ?? 2) - (order[b.site.ets] ?? 2) || (a.inst.length ? 0 : 1) - (b.inst.length ? 0 : 1)).forEach((r) => {
+      const tr = el("tr");
+      const n = el("td"); n.append(el("b", null, r.site.name)); if (r.site.note) n.appendChild(el("small", null, r.site.note)); tr.appendChild(n);
+      tr.appendChild(el("td", null, r.site.country === "GB" ? "UK" : r.site.country));
+      const st = el("td");
+      if (r.site.ets === "uk") st.appendChild(el("span", "es-pill out", "UK ETS – not covered"));
+      else if (r.inst.length) st.appendChild(el("span", "es-pill ok", "Yes"));
+      else {
+        st.appendChild(el("span", "es-pill miss", "Missing"));
+        r.cand.slice(0, 3).forEach((c) => st.appendChild(el("span", "cand", `Possible match: ${c.name} (${c.key}) – ${c.why}`)));
+      }
+      tr.appendChild(st);
+      tr.appendChild(el("td", null, r.inst.length ? r.inst.map((i) => i.key + " · " + i.name).join("; ") : "–"));
+      const v = r.inst.reduce((a, i) => (i.emissions[last] != null ? (a || 0) + i.emissions[last] : a), null);
+      tr.appendChild(el("td", "num", v != null ? tco2(v) : r.inst.length ? "not reported yet" : "–"));
+      tb.appendChild(tr);
+    });
+    cv.other.forEach((i) => {
+      const tr = el("tr"); tr.append(el("td", null, "Not linked to a site"), el("td", null, i.country), el("td", null, ""), el("td", null, i.key + " · " + i.name), el("td", "num", i.emissions[last] != null ? tco2(i.emissions[last]) : "–"));
+      tb.appendChild(tr);
+    });
+    $("es-tbl").replaceChildren(thead, tb);
+    $("es-foot").textContent = "Missing sites may be in the registry under an older company name, or may have no installation above the ETS threshold (20 MW combustion). Found the right entry? Add its code (e.g. DE-1234) to \"include\" and to the site's \"keys\" for WEPA in config/peer_installations.json – the next run picks it up. Possible matches are suggested after the next data run.";
   }
   function sparkSvg(vals) {
     const NS = "http://www.w3.org/2000/svg";
@@ -798,7 +880,7 @@
   }
 })();
 </script>
-<script src="assets/search.js?v=20261107b" defer></script>
-<script src="assets/guide.js?v=20261107b" defer></script>
+<script src="assets/search.js?v=20261109a" defer></script>
+<script src="assets/guide.js?v=20261109a" defer></script>
 </body>
 </html>

@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261107b"></script>
+<script src="assets/theme.js?v=20261109a"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<script src="assets/status.js?v=20261107b" defer></script>
+<script src="assets/status.js?v=20261109a" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -74,9 +74,9 @@
   .w > .wb { flex: 1; min-height: 0; overflow-y: auto; scrollbar-width: thin; }
   .editing .w > .wb { overflow-y: auto; }
   @media (max-width: 720px) { .w { height: auto; } .w > .wb { overflow: visible; } }
-  /* Viewing (not customizing): each card is as tall as its content; cards stack up in their column without gaps (pack() in the script) */
+  /* Viewing (not customizing): cards in the same row share one height – the tallest card of the row sets it (max. 640px, longer cards scroll) */
   @media (min-width: 721px) {
-    .ov-grid:not(.editing) { grid-auto-rows: 4px; row-gap: 0; align-items: start; }
+    .ov-grid:not(.editing) { grid-auto-rows: minmax(260px, auto); align-items: stretch; }
     .ov-grid:not(.editing) > .w { height: auto; max-height: 640px; }
   }
 
@@ -216,8 +216,8 @@
   button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .ov-actions { margin-left: 0; } }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261107b">
-<script src="assets/colresize.js?v=20261107b" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109a">
+<script src="assets/colresize.js?v=20261109a" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -297,7 +297,7 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261107b"></script>
+<script src="assets/carbon.js?v=20261109a"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -723,6 +723,7 @@
   }
   function watchPack() {
     if (packRO) packRO.disconnect();
+    return; // rows now share one height (CSS grid rows), so no column packing
     if (editing || !window.ResizeObserver) { pack(); return; }
     packRO = new ResizeObserver(() => { cancelAnimationFrame(packQ); packQ = requestAnimationFrame(pack); });
     $("grid").querySelectorAll(":scope > .w").forEach((w) => packRO.observe(w));
@@ -805,7 +806,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261107b" defer></script>
-<script src="assets/guide.js?v=20261107b" defer></script>
+<script src="assets/search.js?v=20261109a" defer></script>
+<script src="assets/guide.js?v=20261109a" defer></script>
 </body>
 </html>

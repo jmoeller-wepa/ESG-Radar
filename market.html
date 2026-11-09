@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261107b"></script>
+<script src="assets/theme.js?v=20261109a"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261107b">
+<link rel="stylesheet" href="assets/side.css?v=20261109a">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -312,6 +312,12 @@
   .jump button:hover { border-color: var(--d-c9d0d9-border, #c9d0d9); color: var(--blue-900); }
   .sec-h { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 16px; scroll-margin-top: 16px; }
   .sec-h h3 { margin: 2px 0 0; font-size: 17px; color: var(--blue-900); }
+  .subnav { display: inline-flex; flex-wrap: wrap; align-self: flex-start; gap: 4px; padding: 4px; margin-top: -4px; border-radius: 12px; background: var(--d-eef1f5-bg, #eef1f5); }
+  .subnav button { border: 0; background: none; font: inherit; font-size: 13.5px; color: var(--ink-2); padding: 7px 14px; border-radius: 9px; cursor: pointer; }
+  .subnav button:hover { color: var(--wepa-dark); }
+  .subnav button[aria-selected="true"] { background: var(--d-fff-bg, #fff); color: var(--wepa-dark); font-weight: 600; box-shadow: 0 1px 3px rgba(0, 45, 85, .12); }
+  .subnav button small { font-size: 11.5px; font-weight: 400; color: var(--d-9aa2ae-text, #9aa2ae); margin-left: 7px; }
+  @media (max-width: 900px) { .subnav button small { display: none; } }
   .sec-h.gap { margin-top: 10px; padding-top: 22px; border-top: 1px solid var(--line); }
   .sec-tools { display: flex; align-items: center; gap: 12px; font-size: 12.5px; color: var(--ink-3); }
   .btn-o { border: 1px solid var(--d-cfd8e3-border, #cfd8e3); background: var(--d-fff-bg, #fff); border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 13px; color: var(--blue-900); cursor: pointer; }
@@ -344,9 +350,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261107b" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261107b">
-<script src="assets/colresize.js?v=20261107b" defer></script>
+<script src="assets/status.js?v=20261109a" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109a">
+<script src="assets/colresize.js?v=20261109a" defer></script>
 </head>
 <body>
 <header>
@@ -417,8 +423,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261107b"></script>
-<script src="assets/carbon.js?v=20261107b"></script>
+<script src="assets/side.js?v=20261109a"></script>
+<script src="assets/carbon.js?v=20261109a"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -431,7 +437,7 @@
   const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
   const EARLIEST = "2019-01";
   const DEFAULT_CMP = ["ppi_tissue", "pulp_nbsk_eu", "rcp_export_eu", "power_de_spot", "ppi_pulp", "us_recovered_paper", "gas_ttf"];
-  const state = { gran: "auto", tab: "glance", area: "all", q: "all", sel: new Set(), cmp: [] };
+  const state = { gran: "auto", tab: "glance", ind: "month", area: "all", q: "all", sel: new Set(), cmp: [] };
   // The four questions (config/market.json "questions"); every indicator belongs to one
   let QUESTIONS = { cost: { label: "What does tissue cost us?", title: "What does tissue cost us right now?", tab: "cost", link: "Open cost index" },
     market: { label: "How is our market doing?", title: "How is our market doing?", tab: "industry", link: "Open industry" },
@@ -449,8 +455,8 @@
   // Page tabs: Compare + one tab per topic (grid carbon intensity sits with energy)
   // Page tabs: Compare (chart + indicator tiles) · Grid (carbon intensity by country) · Carbon cost (exposure tool)
   const TAB_DEF = [
-    { id: "cost", label: "Cost index", groups: [], lead: "How the main input costs add up to the tissue cost driver index, set against the producer price index for tissue." },
-    { id: "industry", label: "Industry", groups: [], lead: "WEPA's market month by month (production, demand, trade), and below a yearly environmental profile of the German paper industry as a yardstick." },
+    { id: "cost", label: "Cost index", groups: [], lead: "How public input-cost statistics add up to an illustrative tissue cost driver index, set against the producer price index for tissue." },
+    { id: "industry", label: "Industry", groups: [], lead: "Two views: WEPA's market month by month (production, demand, trade), and a yearly environmental profile of the German paper industry as a yardstick." },
     { id: "grid", label: "Grid carbon intensity", groups: ["grid"], lead: "Where German power comes from, and the CO₂ intensity of national power grids – 12-month averages smooth out the seasons. Click a country for its history." },
     { id: "water", label: "Water", groups: [], lead: "River levels at the Rhine bottleneck and next to our mills, and how dry the soil is around each German mill. Updated every working day from public sources." },
   ];
@@ -526,10 +532,12 @@
     if (p.get("tab") && TABS.some((t) => t.id === p.get("tab"))) state.tab = p.get("tab");
     else if (p.has("cmp") || p.has("add")) state.tab = "cmp"; // links from the Overview page open the Trends chart
     if (p.get("q") && QUESTIONS[p.get("q")]) state.q = p.get("q");
+    if (p.get("view") === "year" || p.get("view") === "month") state.ind = p.get("view");
   }
   function writeHash() {
     const p = new URLSearchParams();
     p.set("tab", state.tab);
+    if (state.tab === "industry") p.set("view", state.ind);
     if (state.q !== "all") p.set("q", state.q);
     if (state.gran !== "auto") p.set("gran", state.gran);
     const def = preset("36"); const same = def.size === state.sel.size && [...def].every((m) => state.sel.has(m));
@@ -1234,7 +1242,21 @@
     });
     return { comps, usable, W, totalW, base, rows };
   }
+  // Caution banner (styles in theme.css): title + text or list items
+  function cautionBox(title, lines) {
+    const box = el("div", "caution"); box.setAttribute("role", "note");
+    box.innerHTML = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5L18 17H2Z"/><path d="M10 8v4.2" stroke-linecap="round"/><circle cx="10" cy="14.6" r=".9" fill="currentColor" stroke="none"/></svg>';
+    const tx = el("div"); tx.appendChild(el("b", null, title));
+    if (lines.length === 1) tx.appendChild(el("p", null, lines[0]));
+    else { const ul = el("ul"); lines.forEach((l) => ul.appendChild(el("li", null, l))); tx.appendChild(ul); }
+    box.appendChild(tx); return box;
+  }
   function renderCost(host) {
+    host.appendChild(cautionBox("Not WEPA's cost structure – public market data only", [
+      "The index is built only from public statistics (Eurostat, Destatis, FRED, SMARD). It contains no WEPA purchase prices, contracts, hedges or volumes.",
+      "The weights are illustrative shares of a typical non-integrated tissue mill, not WEPA's real cost split. Changing them only changes your browser view.",
+      "Use it to see the direction of input costs, not to judge WEPA's margin or to plan budgets.",
+    ]));
     const R = computeCost();
     const draws = [];
     const sec = el("section", "panel ind-sec");
@@ -1439,19 +1461,23 @@
   }
   function renderIndustry(host) {
     const draws = [];
-    const jump = el("div", "jump");
-    [["ind-month", "Every month · market"], ["ind-year", "Every year · environmental profile"]].forEach(([id, t]) => {
-      const b = el("button", null, t); b.type = "button"; b.addEventListener("click", () => { const x = $(id); if (x) x.scrollIntoView({ behavior: "smooth", block: "start" }); }); jump.appendChild(b);
+    // two sub-pages: monthly market figures and the yearly industry profile
+    const sub = el("div", "subnav"); sub.setAttribute("role", "tablist"); sub.setAttribute("aria-label", "Industry view");
+    [["month", "Monthly · market", "production, demand, trade"], ["year", "Yearly · industry profile", "environment, recovered paper, Europe"]].forEach(([id, t, hint]) => {
+      const b = el("button", null, t); b.type = "button"; b.setAttribute("role", "tab"); b.setAttribute("aria-selected", String(state.ind === id));
+      b.appendChild(el("small", null, hint));
+      b.addEventListener("click", () => { if (state.ind === id) return; state.ind = id; renderAll(); window.scrollTo({ top: 0 }); });
+      sub.appendChild(b);
     });
-    host.appendChild(jump);
+    host.appendChild(sub);
+    const pct = (v) => (v > 0 ? "+" : v < 0 ? "−" : "±") + Math.abs(v).toFixed(1).replace(".0", "") + " %";
+    const kt = (v) => Math.round(v).toLocaleString("en-GB");
+    if (state.ind === "year") { renderIndustryYear(host, draws); return; }
     // 0) monthly market indicators (Destatis)
     host.appendChild(secHead("ind-month", "Every month", "How is our market doing?"));
     const mk = M.indicators.filter((i) => i.group === "market_de");
     if (mk.length) { const g = el("div", "tiles"); mk.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
-    const pct = (v) => (v > 0 ? "+" : v < 0 ? "−" : "±") + Math.abs(v).toFixed(1).replace(".0", "") + " %";
-    const kt = (v) => Math.round(v).toLocaleString("en-GB");
     if (!IND) host.appendChild(el("div", "empty", "Industry figures of DIE PAPIERINDUSTRIE are not available yet."));
-    const year = renderProfile(host);
     // 1) Germany, year-to-date by grade
     const gm = IND && IND.germanyMonthly;
     if (gm) {
@@ -1482,8 +1508,13 @@
       if (gm.latestNote && !gm.auto) { const n = el("p", "ind-note"); n.append(document.createTextNode(gm.latestNote.text + " "), srcLink(gm.latestNote.source)); sec.appendChild(n); }
       const ab = aboutOf(gm.about); if (ab) sec.appendChild(ab);
       const f = el("p", "ind-src"); f.append("Source: ", srcLink(gm.source)); sec.appendChild(f);
-      host.insertBefore(sec, year);
+      host.appendChild(sec);
     }
+    draws.forEach((f) => f());
+  }
+  function renderIndustryYear(host, draws) {
+    if (!IND) host.appendChild(el("div", "empty", "Industry figures of DIE PAPIERINDUSTRIE are not available yet."));
+    renderProfile(host);
     // 2) Recovered paper utilisation rate by grade
     const rr = IND && IND.germanyRecoveredRate;
     if (rr) {
@@ -1541,7 +1572,9 @@
     return ind.unit === "%" ? a + (c.pp > 0 ? "+" : "") + c.pp.toFixed(1) + " pp" : a + (c.pct > 0 ? "+" : "") + c.pct.toFixed(1) + " %";
   }
   function goTab(id, anchor) {
-    state.tab = id; renderAll(); window.scrollTo({ top: 0 });
+    state.tab = id;
+    if (anchor === "ind-year") state.ind = "year"; else if (anchor === "ind-month") state.ind = "month";
+    renderAll(); window.scrollTo({ top: 0 });
     if (anchor) setTimeout(() => { const x = $(anchor); if (x) x.scrollIntoView({ block: "start" }); }, 30);
   }
   function summaryLine() {
@@ -1552,7 +1585,7 @@
       if (lastP) {
         const r = R.rows.find((x) => x.m === lastP.m), dc = r.idx - 100, dp = lastP.ppi - 100;
         const w = (v) => (Math.abs(v) < 0.5 ? "flat" : (v > 0 ? "up " : "down ") + Math.abs(v).toFixed(0) + " %");
-        bits.push("Input costs are " + w(dc) + " since " + fmtMonth(R.base) + " while tissue prices are " + w(dp) + (lastP.ppi - r.idx < -1 ? ", so margins are under pressure." : lastP.ppi - r.idx > 1 ? ", so prices are ahead of costs." : ", so the gap is small."));
+        bits.push("Public input-cost statistics are " + w(dc) + " since " + fmtMonth(R.base) + " while tissue prices are " + w(dp) + (lastP.ppi - r.idx < -1 ? ", so margins are under pressure." : lastP.ppi - r.idx > 1 ? ", so prices are ahead of costs." : ", so the gap is small."));
       }
     }
     const hy = IND && IND.germanyMonthly && (IND.germanyMonthly.rows || []).find((r) => r.key === "hygiene");
@@ -1607,7 +1640,7 @@
   function costChain(R) {
     const last = R.rows[R.rows.length - 1], lastP = [...R.rows].reverse().find((r) => r.ppi != null);
     const sec = el("section", "panel ch");
-    const h = el("div", "ind-h"); h.append(el("h3", null, "How the inputs add up to our margin"), el("span", null, fmtMonth(R.base) + " = 100 · read left to right · click an input for its chart"));
+    const h = el("div", "ind-h"); h.append(el("h3", null, "How public input costs add up · illustrative, not WEPA figures"), el("span", null, fmtMonth(R.base) + " = 100 · read left to right · click an input for its chart"));
     sec.appendChild(h);
     const row = el("div", "ch-row");
     const ins = el("div", "ch-in");
@@ -1640,7 +1673,7 @@
     return sec;
   }
   function secHead(id, cap, title, tools) {
-    const h = el("div", "sec-h" + (id === "ind-year" ? " gap" : "")); h.id = id;
+    const h = el("div", "sec-h"); h.id = id;
     const tx = el("div"); tx.append(el("p", "cap", cap), el("h3", null, title)); h.appendChild(tx);
     if (tools) h.appendChild(tools);
     return h;
@@ -1946,7 +1979,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261107b" defer></script>
-<script src="assets/guide.js?v=20261107b" defer></script>
+<script src="assets/search.js?v=20261109a" defer></script>
+<script src="assets/guide.js?v=20261109a" defer></script>
 </body>
 </html>

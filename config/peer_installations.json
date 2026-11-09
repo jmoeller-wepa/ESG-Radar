@@ -14,6 +14,222 @@
       "include": [],
       "exclude": [
         "AT-116"
+      ],
+      "_sites": "All WEPA production sites (from wepa.eu, offices left out). The Peers page uses this list to show which sites are in the EU ETS data and which are missing. 'keys' = known registry codes of the site. 'patterns' = names that identify the site in the registry: an installation in the same country whose name matches is added to WEPA automatically (only if it looks like a paper/pulp site and no other peer claims it). 'maybe' = town names that are too common (other paper mills nearby): matches are only listed as candidates in data/debug/ets_sites.json and on the Peers page – copy a correct one to 'include' above. 'ets': 'eu' = should be in the EU registry, 'uk' = UK ETS since 2021 (not in the EU registry). 'note' is shown on the page.",
+      "sites": [
+        {
+          "id": "arnsberg",
+          "name": "Arnsberg-Müschede",
+          "country": "DE",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [
+            "M[üu]e?schede",
+            "Krengel"
+          ],
+          "maybe": [
+            "Arnsberg"
+          ]
+        },
+        {
+          "id": "giershagen",
+          "name": "Giershagen",
+          "country": "DE",
+          "ets": "eu",
+          "keys": [
+            "DE-514"
+          ],
+          "patterns": [
+            "Giershagen"
+          ],
+          "maybe": [
+            "Marsberg"
+          ]
+        },
+        {
+          "id": "kriebstein",
+          "name": "Kriebstein",
+          "country": "DE",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [
+            "Kriebstein",
+            "Kriebethal",
+            "K[üu]e?bler\\s*(&|und)\\s*Niethammer"
+          ],
+          "maybe": [
+            "Waldheim"
+          ]
+        },
+        {
+          "id": "mainz",
+          "name": "Mainz",
+          "country": "DE",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [],
+          "maybe": [
+            "Mainz"
+          ],
+          "note": "Converting site? Only listed if a paper machine there is in the registry."
+        },
+        {
+          "id": "leuna",
+          "name": "Leuna",
+          "country": "DE",
+          "ets": "eu",
+          "keys": [
+            "DE-618"
+          ],
+          "patterns": [
+            "Leuna"
+          ],
+          "maybe": []
+        },
+        {
+          "id": "piechowice",
+          "name": "Piechowice",
+          "country": "PL",
+          "ets": "eu",
+          "keys": [
+            "PL-626"
+          ],
+          "patterns": [
+            "Piechowice"
+          ],
+          "maybe": [
+            "Jelenia G[óo]ra"
+          ]
+        },
+        {
+          "id": "lille",
+          "name": "Lille (Bousbecque)",
+          "country": "FR",
+          "ets": "eu",
+          "keys": [
+            "FR-947"
+          ],
+          "patterns": [
+            "Bousbecque"
+          ],
+          "maybe": [
+            "Lille",
+            "Wervicq"
+          ],
+          "note": "Registry name is only 'WEPA FRANCE'; assigned to Lille because Troyes and Château-Thierry have their own entries – please confirm."
+        },
+        {
+          "id": "troyes",
+          "name": "Troyes (Torvilliers)",
+          "country": "FR",
+          "ets": "eu",
+          "keys": [
+            "FR-246"
+          ],
+          "patterns": [
+            "Torvilliers"
+          ],
+          "maybe": [
+            "Troyes"
+          ]
+        },
+        {
+          "id": "chateau-thierry",
+          "name": "Château-Thierry (Greenfield)",
+          "country": "FR",
+          "ets": "eu",
+          "keys": [
+            "FR-4"
+          ],
+          "patterns": [
+            "Greenfield"
+          ],
+          "maybe": [
+            "Ch[âa]teau.?Thierry"
+          ]
+        },
+        {
+          "id": "annonay",
+          "name": "Annonay (Davézieux)",
+          "country": "FR",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [
+            "Dav[ée]zieux"
+          ],
+          "maybe": [
+            "Annonay"
+          ]
+        },
+        {
+          "id": "lucca-capannori",
+          "name": "Lucca – Capannori",
+          "country": "IT",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [
+            "Salanetti"
+          ],
+          "maybe": [
+            "Capannori",
+            "Lunata"
+          ]
+        },
+        {
+          "id": "lucca-porcari",
+          "name": "Lucca – Porcari",
+          "country": "IT",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [],
+          "maybe": [
+            "Porcari"
+          ]
+        },
+        {
+          "id": "cassino",
+          "name": "Cassino",
+          "country": "IT",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [
+            "Cassino"
+          ],
+          "maybe": [
+            "Frosinone"
+          ]
+        },
+        {
+          "id": "swalmen",
+          "name": "Swalmen",
+          "country": "NL",
+          "ets": "eu",
+          "keys": [],
+          "patterns": [
+            "Swalmen"
+          ],
+          "maybe": [
+            "Roermond"
+          ]
+        },
+        {
+          "id": "bridgend",
+          "name": "Bridgend",
+          "country": "GB",
+          "ets": "uk",
+          "keys": [],
+          "patterns": [],
+          "maybe": []
+        },
+        {
+          "id": "blackburn",
+          "name": "Blackburn",
+          "country": "GB",
+          "ets": "uk",
+          "keys": [],
+          "patterns": [],
+          "maybe": []
+        }
       ]
     },
     "essity": {

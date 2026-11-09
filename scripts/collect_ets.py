@@ -25,6 +25,9 @@ from status_util import report as report_status
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "peer_installations.json"
 OUT = ROOT / "data" / "peer_emissions.json"
+DEBUG = ROOT / "data" / "debug" / "ets_sites.json"
+PAPER_ACT = {"35", "36", "9"}
+PAPER_NAME = re.compile(r"papier|paper|carta|cartiera|papeterie|papeteries|tissue|hygi[eè]n|ouate|celul|pulp|zellstoff", re.IGNORECASE)
 UA = "Mozilla/5.0 (compatible; ESG-Radar/1.0)"
 
 # Activity codes used in the Union Registry (Phase III/IV), for display only
@@ -118,7 +121,7 @@ def main():
         year, url = (int(m.group(1)) if m else 0), src["fallback"]
         log.append(f"Page not readable ({str(exc)[:100]}); using the fallback link ({year})")
 
-    config_stamp = json.dumps([config["companies"], config.get("fromYear"), config.get("excludeRegistries"), "v2-allocation"], sort_keys=True)
+    config_stamp = json.dumps([config["companies"], config.get("fromYear"), config.get("excludeRegistries"), "v3-sites"], sort_keys=True)
     if old.get("source", {}).get("url") == url and old.get("configStamp") == config_stamp and old.get("companies"):
         log.append("Already processed this file with the same mapping – nothing to do.")
         return finish(log)
@@ -144,10 +147,31 @@ def main():
     holder_cols = [k for k in (rows[0] if rows else {}) if "ACCOUNT_HOLDER" in k and "NAME" in k]
 
     skip_registries = set(config.get("excludeRegistries", []))
-    companies = {}
+    all_pats = {cid: [re.compile(p, re.IGNORECASE) for p in rule.get("patterns", [])] for cid, rule in config["companies"].items()}
+    companies, site_debug = {}, {}
     for cid, rule in config["companies"].items():
-        pats = [re.compile(p, re.IGNORECASE) for p in rule.get("patterns", [])]
+        pats = all_pats[cid]
         include, exclude = set(rule.get("include", [])), set(rule.get("exclude", []))
+        sites = [dict(s, _p=[re.compile(p, re.IGNORECASE) for p in s.get("patterns", [])], _m=[re.compile(p, re.IGNORECASE) for p in s.get("maybe", [])])
+                 for s in rule.get("sites", [])]
+        others = [p for o, ps in all_pats.items() if o != cid for p in ps]
+        candidates = {}
+
+        def site_of(key, country, name, text, act):
+            """(site id, how) for an installation of this company's site list, or (None, None)."""
+            for st in sites:
+                if key in st.get("keys", []):
+                    return st["id"], "key"
+            for st in sites:
+                if st["country"] != country or not st["_p"] or not any(p.search(name) for p in st["_p"]):
+                    continue
+                if any(p.search(text) for p in others):
+                    candidates.setdefault(st["id"], []).append({"key": key, "name": name, "activity": ACTIVITY.get(act, act or None), "why": "name also matches another peer"})
+                    return None, None
+                if act in PAPER_ACT or PAPER_NAME.search(name):
+                    return st["id"], "pattern"
+                candidates.setdefault(st["id"], []).append({"key": key, "name": name, "activity": ACTIVITY.get(act, act or None), "why": "not a paper or pulp activity"})
+            return None, None
         found = []
         for r in rows:
             country = str(pick(r, "REGISTRY_CODE", "COUNTRY_CODE", "COUNTRY") or "").strip()
@@ -162,7 +186,14 @@ def main():
             text = f"{name} {holder}"
             if key in exclude:
                 continue
-            if key not in include and not any(p.search(text) for p in pats):
+            act = str(pick(r, "MAIN_ACTIVITY_TYPE_CODE", "ACTIVITY_TYPE_CODE", "MAIN_ACTIVITY_TYPE", "ACTIVITY_TYPE") or "").strip()
+            act = act[:-2] if act.endswith(".0") else act
+            site, how = site_of(key, country, name, text, act) if sites else (None, None)
+            if key not in include and not any(p.search(text) for p in pats) and not site:
+                # 'maybe' names: only list as candidates for a manual check
+                for st in sites if not any(p.search(text) for p in others) else []:
+                    if st["country"] == country and st["_m"] and any(p.search(name) for p in st["_m"]):
+                        candidates.setdefault(st["id"], []).append({"key": key, "name": name, "activity": ACTIVITY.get(act, act or None), "why": "same town – check if it is WEPA"})
                 continue
             em = {y: num(r.get(col)) for col, y in year_cols.items()}
             em = {y: v for y, v in em.items() if v is not None}
@@ -170,14 +201,13 @@ def main():
             al = {y: v for y, v in al.items() if v is not None}
             if not em:
                 continue
-            act = str(pick(r, "MAIN_ACTIVITY_TYPE_CODE", "ACTIVITY_TYPE_CODE", "MAIN_ACTIVITY_TYPE", "ACTIVITY_TYPE") or "").strip()
-            act = act[:-2] if act.endswith(".0") else act
             found.append({
                 "key": key, "country": country, "name": name, "holder": holder or None,
                 "city": (str(r.get("CITY") or "").strip() or None),
                 "activity": ACTIVITY.get(act, act or None),
                 "emissions": dict(sorted(em.items())),
                 "allocation": dict(sorted(al.items())),
+                **({"site": site, "siteMatch": how} if site else {}),
             })
         found.sort(key=lambda i: -max(i["emissions"].values()))
         totals, reporting, alloc = {}, {}, {}
@@ -190,7 +220,14 @@ def main():
         # reporting = how many of the matched installations have a value that year (gaps make totals jump)
         companies[cid] = {"installations": found, "total": dict(sorted(totals.items())), "reporting": dict(sorted(reporting.items())),
                           "allocation": dict(sorted(alloc.items()))}
-        log.append(f"{cid}: {len(found)} installation(s)")
+        if sites:
+            have = {i.get("site") for i in found}
+            companies[cid]["siteCandidates"] = {k: v[:8] for k, v in candidates.items()}
+            missing = [st["name"] for st in sites if st.get("ets") == "eu" and st["id"] not in have]
+            site_debug[cid] = {"matched": {i["key"]: i.get("site") for i in found}, "missingEuSites": missing, "candidates": candidates}
+            log.append(f"{cid}: {len(found)} installation(s); EU sites without data: {', '.join(missing) or 'none'}")
+        else:
+            log.append(f"{cid}: {len(found)} installation(s)")
 
     years = sorted({y for c in companies.values() for y in c["total"]})
     out = {
@@ -201,6 +238,11 @@ def main():
         "companies": companies,
     }
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    try:
+        DEBUG.parent.mkdir(parents=True, exist_ok=True)
+        DEBUG.write_text(json.dumps({"updated": now, "file": url, **site_debug}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    except OSError:
+        pass
     log.append(f"Written: {len(years)} year(s), {sum(len(c['installations']) for c in companies.values())} installations")
     return finish(log)
 

@@ -122,7 +122,7 @@
       t.appendChild(tb); const sc = el("div"); sc.style.overflowX = "auto"; sc.appendChild(t); wrap.appendChild(sc);
     }
     upd();
-    wrap.appendChild(el("p", "cc-note", "Indicative only: WEPA sites in the EU ETS (not the UK or non-EU sites) · verified emissions and free allocation from the EU Union Registry · EUA price entered manually (exchange prices are licensed). Free allocation falls over time (benchmark updates, CBAM phase-in)." + (d.years.some((y) => !d.complete(y)) ? " * not all sites reported that year – emissions are understated." : "")));
+    wrap.appendChild(el("p", "cc-note", "Incomplete and indicative only: covers just the WEPA sites found in the EU registry so far – several EU sites and the UK sites (UK ETS) are missing, see Peers › Emissions · EU ETS · verified emissions and free allocation from the EU Union Registry · EUA price entered manually (exchange prices are licensed). Free allocation falls over time (benchmark updates, CBAM phase-in)." + (d.years.some((y) => !d.complete(y)) ? " * not all sites reported that year – emissions are understated." : "")));
     box.appendChild(wrap);
   }
   window.CarbonCost = { render, inputs };
