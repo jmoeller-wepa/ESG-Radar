@@ -14,6 +14,7 @@ jobs:
     env:
       TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}   # optional; empty = no Teams post
       DESTATIS_TOKEN: ${{ secrets.DESTATIS_TOKEN }}         # GENESIS-Online API token (Destatis indicators)
+      AGSI_KEY: ${{ secrets.AGSI_KEY }}                     # free GIE AGSI+ API key (gas storage)
     steps:
       - uses: actions/checkout@v4
 
@@ -42,7 +43,19 @@ jobs:
       - name: Collect river levels & soil moisture
         run: python scripts/collect_water.py
         continue-on-error: true
-        
+
+      - name: Collect heat & rain at the mills (DWD)
+        run: python scripts/collect_weather.py
+        continue-on-error: true
+
+      - name: Collect gas storage (AGSI+)
+        run: python scripts/collect_gas.py
+        continue-on-error: true
+
+      - name: Collect pulp imports by origin (Comext)
+        run: python scripts/collect_pulp_origin.py
+        continue-on-error: true
+
       - name: Collect EU ETS emissions of peers
         run: python scripts/collect_ets.py
         continue-on-error: true   # yearly file; skipped automatically when nothing changed
