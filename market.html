@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109a"></script>
+<script src="assets/theme.js?v=20261109d"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Market – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261109a">
+<link rel="stylesheet" href="assets/side.css?v=20261109d">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -102,7 +102,8 @@
   .gtt tbody tr { cursor: pointer; }
   .gtt tbody tr:hover td { background: var(--d-f7f9fb-bg, #f7f9fb); }
   .gtt tr.ref td { color: var(--ink-3); font-style: italic; }
-  .gtt tr.sel td:first-child { box-shadow: inset 3px 0 0 var(--sel); font-weight: 600; }
+  .gtt tr.sel td { background: color-mix(in srgb, var(--sel) 7%, transparent); }
+  .gtt tr.sel td:first-child { font-weight: 600; }
   .gtt td:first-child { min-width: 120px; }
   .gbar { display: flex; align-items: center; gap: 10px; min-width: 230px; }
   .gbar b { min-width: 34px; font-weight: 600; text-align: right; }
@@ -182,7 +183,7 @@
   .gd-chart svg { width: 100%; height: auto; display: block; }
   .gd-tip { position: absolute; pointer-events: none; background: var(--d-002d55-bg, #002d55); color: #fff; font-size: 12px; border-radius: 7px; padding: 5px 8px; white-space: nowrap; transform: translate(-50%, -110%); }
   .gd-about { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-  .gd-about > div { border-radius: 10px; padding: 10px 12px; background: var(--d-f7f9fb-bg, #f7f9fb); border-top: 3px solid var(--d-96d2dc-border, #96d2dc); }
+  .gd-about > div { border-radius: 10px; padding: 10px 12px; background: var(--d-f7f9fb-bg, #f7f9fb); }
   .gd-about > .ab1 { border-top-color: #33b09c; background: var(--d-f1faf7-bg, #f1faf7); }
   .gd-about > .ab2 { border-top-color: var(--d-f4b49f-border, #f4b49f); background: var(--d-fdf6f3-bg, #fdf6f3); }
   .gd-about b { display: block; font-size: 12px; letter-spacing: .03em; color: var(--blue-900); margin-bottom: 4px; }
@@ -217,7 +218,8 @@
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
   .tile { position: relative; display: flex; flex-direction: column; gap: 6px; text-align: left; background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 12px; min-height: 178px; cursor: pointer; color: inherit; font: inherit; transition: border-color .15s, box-shadow .15s; }
   .tile:hover { border-color: var(--d-d5dae2-border, #d5dae2); box-shadow: 0 4px 14px rgba(0, 20, 50, .06); }
-  .tile.sel { border-color: var(--sel, var(--blue-900)); box-shadow: inset 0 3px 0 var(--sel, var(--blue-900)); }
+  /* selected: soft tint in the line colour instead of an accent bar */
+  .tile.sel { background: color-mix(in srgb, var(--sel, var(--blue-900)) 6%, var(--d-fff-bg, #fff)); border-color: color-mix(in srgb, var(--sel, var(--blue-900)) 40%, var(--line)); }
   .tile.static { cursor: default; }
   .tile .lbl { font-size: 13px; color: var(--ink-2); line-height: 1.35; padding-right: 26px; height: calc(3 * 1.35em); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; } /* fixed 3 lines: values line up across a row */
   .tile .pin { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid var(--d-d0d5dd-border, #d0d5dd); display: grid; place-items: center; font-size: 13px; line-height: 1; color: #fff; }
@@ -350,9 +352,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend { margin-left: 0; } .chart svg { height: 240px; } }
 </style>
-<script src="assets/status.js?v=20261109a" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109a">
-<script src="assets/colresize.js?v=20261109a" defer></script>
+<script src="assets/status.js?v=20261109d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109d">
+<script src="assets/colresize.js?v=20261109d" defer></script>
 </head>
 <body>
 <header>
@@ -423,8 +425,8 @@
   <div class="gd-head"><div><h3 id="gd-title"></h3><p id="gd-sub"></p></div><button type="button" class="gd-x" id="gd-x" aria-label="Close">×</button></div>
   <div class="gd-body" id="gd-body"></div>
 </dialog>
-<script src="assets/side.js?v=20261109a"></script>
-<script src="assets/carbon.js?v=20261109a"></script>
+<script src="assets/side.js?v=20261109d"></script>
+<script src="assets/carbon.js?v=20261109d"></script>
 <script>
 (function () {
   // WEPA line colours (palette "G2 + Pink"): light WEPA Grün, Mittelblau, WEPA Pink, WEPA blue #335777, Hellblau.
@@ -1979,7 +1981,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261109a" defer></script>
-<script src="assets/guide.js?v=20261109a" defer></script>
+<script src="assets/search.js?v=20261109d" defer></script>
+<script src="assets/guide.js?v=20261109d" defer></script>
 </body>
 </html>

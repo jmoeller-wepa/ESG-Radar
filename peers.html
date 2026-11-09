@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109a"></script>
+<script src="assets/theme.js?v=20261109d"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Peers – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
-<link rel="stylesheet" href="assets/side.css?v=20261109a">
+<link rel="stylesheet" href="assets/side.css?v=20261109d">
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -104,7 +104,6 @@
   td.co b { display: block; font-size: 14px; }
   td.co small { display: block; font-size: 12px; color: var(--ink-3); }
   tr.us td { background: var(--d-f5f8fb-bg, #f5f8fb); }
-  tr.us td.co { box-shadow: inset 3px 0 0 var(--wepa); }
   /* Option C: dot markers */
   .v { display: inline-flex; align-items: center; gap: 7px; padding: 3px 0; text-decoration: none; color: var(--d-111827-text, #111827); white-space: nowrap; font-variant-numeric: tabular-nums; }
   .v::before { content: ""; width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--d-e1e4e8-bg, #e1e4e8); }
@@ -130,7 +129,6 @@
   .pcard .news { margin-top: auto; padding-top: 4px; }
   main.wrap > * { min-width: 0; }
   .pcard { min-width: 0; overflow-wrap: anywhere; background: var(--d-fff-bg, #fff); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
-  .pcard.us { border-color: var(--d-cbd8e4-border, #cbd8e4); box-shadow: inset 3px 0 0 var(--wepa); }
   .ph { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
   .ph b { font-size: 16px; }
   .ph span { font-size: 12px; color: var(--ink-3); text-align: right; }
@@ -190,6 +188,13 @@
   .pcard .nw { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink-3); border-top: 1px solid var(--line-2); padding-top: 9px; margin-top: auto; }
   .pcard .badge { font-size: 11.5px; font-weight: 700; background: var(--d-e8f7f4-bg, #e8f7f4); color: var(--d-1d7f6c-text, #1d7f6c); border-radius: 10px; padding: 1px 8px; }
   .pcard .more { margin-left: auto; }
+  /* WEPA: own row above the peers instead of a highlighted card */
+  .pcard.us { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding: 12px 16px; }
+  .pcard.us .ph { flex-direction: column; align-items: flex-start; gap: 0; line-height: 1.25; min-width: 130px; }
+  .pcard.us .ph small { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+  .pcard.us .chips { flex: 1 1 260px; }
+  .pcard.us .nw { border-top: 0; padding-top: 0; margin-top: 0; flex: none; }
+  .profiles .pcap { grid-column: 1 / -1; margin: 4px 0 -6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
   .error { padding: 28px; border: 1px dashed var(--line); border-radius: 12px; background: var(--d-fff-bg, #fff); }
 
   .ets { padding: 18px 20px 14px; display: flex; flex-direction: column; gap: 10px; }
@@ -236,9 +241,9 @@
   button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
   @media (max-width: 720px) { .meta { margin-left: 0; width: 100%; } .legend .note { margin-left: 0; } }
 </style>
-<script src="assets/status.js?v=20261109a" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109a">
-<script src="assets/colresize.js?v=20261109a" defer></script>
+<script src="assets/status.js?v=20261109d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109d">
+<script src="assets/colresize.js?v=20261109d" defer></script>
 </head>
 <body>
 <header>
@@ -326,7 +331,7 @@
   <div class="dlg-body" id="dlg-body"></div>
 </dialog>
 
-<script src="assets/side.js?v=20261109a"></script>
+<script src="assets/side.js?v=20261109d"></script>
 <footer><div class="wrap"><span id="note"></span>Values are aids for orientation, not audited comparisons. KPI data is refreshed yearly with the prompt in <code>prompts/peers-update-prompt.md</code>; the SBTi column is updated weekly from the <a href="https://sciencebasedtargets.org/target-dashboard" target="_blank" rel="noopener">Science Based Targets initiative Target Dashboard</a>; news comes from the weekly feeds.</div></footer>
 
 <script>
@@ -706,14 +711,16 @@
 
     // Profiles
     const oRate = {}; CARD_KPIS.forEach((k) => { oRate[k] = ratings(k, list); });
-    $("profiles").replaceChildren(...list.map((c) => {
+    const ordered = [...list.filter((c) => c.isUs), ...list.filter((c) => !c.isUs)];
+    const cards = ordered.map((c) => {
       const card = el("article", "pcard" + (c.isUs ? " us" : ""));
       card.tabIndex = 0;
       card.setAttribute("aria-label", c.name + " – open the full profile");
       card.addEventListener("click", (ev) => { if (!ev.target.closest("a")) openProfile(c); });
       card.addEventListener("keydown", (ev) => { if (ev.key === "Enter") openProfile(c); });
       const ph = el("div", "ph");
-      ph.append(el("b", null, c.name), el("span", null, c.country));
+      if (c.isUs) ph.append(el("small", null, "Your company · " + c.country), el("b", null, c.name));
+      else ph.append(el("b", null, c.name), el("span", null, c.country));
       card.appendChild(ph);
 
       // Three status chips – the same for every company, so cards line up
@@ -739,7 +746,9 @@
       nw.appendChild(more);
       card.appendChild(nw);
       return card;
-    }));
+    });
+    if (ordered[0] && ordered[0].isUs && ordered.length > 1) cards.splice(1, 0, el("div", "pcap", "Peers"));
+    $("profiles").replaceChildren(...cards);
     renderEts(list);
   }
 
@@ -880,7 +889,7 @@
   }
 })();
 </script>
-<script src="assets/search.js?v=20261109a" defer></script>
-<script src="assets/guide.js?v=20261109a" defer></script>
+<script src="assets/search.js?v=20261109d" defer></script>
+<script src="assets/guide.js?v=20261109d" defer></script>
 </body>
 </html>

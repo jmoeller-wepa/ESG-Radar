@@ -1,20 +1,12 @@
-ESG Radar – update-15-news-views (09.11.2026)
-Baut auf update-14 auf (index.html enthält alle Änderungen aus update-14). Nichts in data/ enthalten.
+ESG Radar – update-18-no-accent-bars (2026-11-09)
+Contains update-16 and update-17 (you can skip both). Cache version 20261109d on all pages. Nothing in data/ is touched.
 
-Reihenfolge: zuerst update-14 hochladen (falls noch nicht geschehen), danach dieses Zip.
-Hochladen (Ordner für Ordner):
-  Hauptordner (/):  news.html, index.html
-  assets/:          views.js  (neu)
+ROOT folder (same folder as index.html):
+- index.html       -> only the cache version changed (needed because theme.css changed)
+- news.html        -> labels next to the dropdowns; "+" for new views dashed without fill
+- regulation.html  -> consultation cards without the green top bar
+- peers.html       -> WEPA as its own row above the peers; WEPA row in the table without the blue side bar
+- market.html      -> selected indicator tiles tinted; no accent bar in the grid carbon table and the "About" boxes
 
-Cache-Version news/index: 20261109b. Workflow bleibt unverändert.
-
-Was neu ist:
-- News: eigene Ansichten als Tabs über den News ("All news" + Reporting, Energy, Peer watch, Our sites).
-  Grünes + speichert die aktuellen Filter als neue Ansicht. ⋯ am offenen Tab: umbenennen, duplizieren,
-  verschieben, als Startansicht festlegen, löschen.
-- Zeile "This view shows …" zeigt alle Filter der Ansicht, jeder per × entfernbar.
-- Geänderte Ansicht: Punkt am Tab + Leiste "Save / Save as new view / Discard".
-- "What's ahead" folgt den Filtern der Ansicht (Bereich, Typ, Affects, Relevanz).
-- Neuer Filter "Affects: our sites" für die Standort-News aus update-14.
-- Overview: jede Ansicht ist unter "Customize" als Karte wählbar (neueste Einträge + Anzahl neu).
-- Ansichten liegen im Browser jeder Person (wie "Saved" und "Your cards").
+assets/ folder:
+- theme.css        -> warning boxes (caution) without the thick left bar, softer border

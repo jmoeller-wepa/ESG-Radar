@@ -456,7 +456,7 @@ header .th-btn svg { width: 17px; height: 17px; }
 :root { --cau-bg: #fff6df; --cau-line: #e3b341; --cau-ink: #5c4300; --cau-ic: #b07d00; }
 :root[data-theme="dark"] { --cau-bg: #2e2715; --cau-line: #a8822e; --cau-ink: #ead9a8; --cau-ic: #d9ad4f; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --cau-bg: #2e2715; --cau-line: #a8822e; --cau-ink: #ead9a8; --cau-ic: #d9ad4f; } }
-.caution { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; border: 1px solid var(--cau-line); border-left-width: 4px; border-radius: 10px; background: var(--cau-bg); color: var(--cau-ink); font-size: 13.5px; line-height: 1.5; }
+.caution { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; border: 1px solid color-mix(in srgb, var(--cau-line) 55%, var(--cau-bg)); border-radius: 10px; background: var(--cau-bg); color: var(--cau-ink); font-size: 13.5px; line-height: 1.5; }
 .caution svg { flex: none; width: 20px; height: 20px; margin-top: 1px; color: var(--cau-ic); }
 .caution b { display: block; font-size: 14px; margin-bottom: 2px; }
 .caution p { margin: 0; }

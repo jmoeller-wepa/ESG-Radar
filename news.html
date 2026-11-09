@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261109b"></script>
-<script src="assets/views.js?v=20261109b"></script>
+<script src="assets/theme.js?v=20261109d"></script>
+<script src="assets/views.js?v=20261109d"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>News – ESG Radar</title>
 <link rel="icon" id="favicon" href="data:,">
@@ -187,8 +187,8 @@
   .vtabs .vt-dot { width: 7px; height: 7px; border-radius: 50%; background: #d97706; margin-left: 7px; flex: none; }
   .ptabs.vtabs .vt-more { padding: 0; width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; color: var(--d-6b7280-text, #6b7280); margin-left: -6px; }
   .ptabs.vtabs .vt-more:hover { background: var(--d-f3f5f8-bg, #f3f5f8); color: var(--wepa-dark); }
-  .ptabs.vtabs .vt-add { padding: 0; width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; background: var(--wepa-green, #009b82); color: #fff; margin: 0 0 0 8px; }
-  .ptabs.vtabs .vt-add:hover { background: #007f6b; color: #fff; }
+  .ptabs.vtabs .vt-add { padding: 0; width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; background: none; border: 1.5px dashed var(--wepa-green, #009b82); color: var(--wepa-green, #009b82); margin: 0 0 0 8px; box-sizing: border-box; }
+  .ptabs.vtabs .vt-add:hover { background: color-mix(in srgb, var(--wepa-green, #009b82) 8%, transparent); border-style: solid; color: var(--wepa-green, #009b82); }
   .vrecipe { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 12.5px; }
   .vr-lbl { color: var(--d-6b7280-text, #6b7280); }
   .vr-chips { display: contents; }
@@ -344,10 +344,9 @@
   select[hidden] { display: none; }
   /* toolbar dropdowns are as wide as the chosen option (Chrome/Edge), so all filters fit on one line */
   .toolbar select { field-sizing: content; min-width: 0; }
-  /* select with a fixed prefix ("What it is:", "Affects:") inside the same box */
-  .fsel { position: relative; display: inline-flex; flex: none; }
-  .fsel .fl { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); font-size: 13.5px; color: var(--ink-3); pointer-events: none; }
-  .fsel select { padding-left: calc(var(--fl, 70px) + 15px); }
+  /* label sits next to the dropdown ("Sort by" [Newest first]), so the options stay short */
+  .fsel { display: inline-flex; align-items: center; gap: 7px; flex: none; }
+  .fsel .fl { font-size: 13px; color: var(--ink-3); white-space: nowrap; }
   .fsel select optgroup { font-style: normal; font-weight: 600; color: var(--ink-3); }
   .fsel select option { color: var(--ink); font-weight: 400; }
   @media (min-width: 1540px) { .toolbar:has(#tool[hidden]) { flex-wrap: nowrap; } .toolbar .tsearch { flex: 0 1 220px; min-width: 130px; } .toolbar .count-txt { flex: none; } }
@@ -403,9 +402,9 @@
     .feat { flex-basis: 100%; }
   }
 </style>
-<script src="assets/status.js?v=20261109b" defer></script>
-<link rel="stylesheet" href="assets/theme.css?v=20261109b">
-<script src="assets/colresize.js?v=20261109b" defer></script>
+<script src="assets/status.js?v=20261109d" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261109d">
+<script src="assets/colresize.js?v=20261109d" defer></script>
 </head>
 <body>
 <header>
@@ -505,8 +504,8 @@
         <option value="other">Other tools</option>
       </select>
       <!-- "What it is": kind of item; peer news can be narrowed to a topic -->
-      <label class="fsel"><span class="fl">What it is:</span><select id="type" aria-label="What it is">
-        <option value="all">everything</option>
+      <label class="fsel"><span class="fl">What it is</span><select id="type" aria-label="What it is">
+        <option value="all">Everything</option>
         <option value="regulation">Regulation</option>
         <option value="tool">Tools &amp; updates</option>
         <option value="practice">Best practice</option>
@@ -516,8 +515,8 @@
         </optgroup>
       </select></label>
       <!-- "Affects:": what it touches at WEPA -->
-      <label class="fsel"><span class="fl">Affects:</span><select id="impact" aria-label="Affects">
-        <option value="all">anything</option>
+      <label class="fsel"><span class="fl">Affects</span><select id="impact" aria-label="Affects">
+        <option value="all">Anything</option>
         <option value="reporting">our reporting</option>
         <option value="datamodel">our data model &amp; KPIs</option>
         <option value="suppliers">our suppliers &amp; sourcing</option>
@@ -532,14 +531,14 @@
         <option value="high">High only</option>
         <option value="medium">High &amp; medium</option>
       </select>
-      <select id="sort" aria-label="Sort by">
-        <option value="date">Sort by: Newest first</option>
-        <option value="oldest">Sort by: Oldest first</option>
-        <option value="relevance">Sort by: Most relevant</option>
-        <option value="deadline">Sort by: Next deadline</option>
-        <option value="type">Sort by: Type</option>
-        <option value="source">Sort by: Source A–Z</option>
-      </select>
+      <label class="fsel"><span class="fl">Sort by</span><select id="sort" aria-label="Sort by">
+        <option value="date">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="relevance">Most relevant</option>
+        <option value="deadline">Next deadline</option>
+        <option value="type">Type</option>
+        <option value="source">Source A–Z</option>
+      </select></label>
       <div class="vsw" role="group" aria-label="Show news as">
         <button type="button" id="v-cards" aria-pressed="true" title="Show as cards"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg><span>Cards</span></button>
         <button type="button" id="v-list" aria-pressed="false" title="Show as a compact list"><svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4h11M2.5 8h11M2.5 12h11"/></svg><span>List</span></button>
@@ -806,8 +805,6 @@
     // "What it is": value is a type, or "peer:<topic>" for peer news about one topic
     // peer-news topics sit in the "Peer news" group of the list; the chosen one reads "Peer news · <topic>" in the closed box
     PEER_TOPICS.forEach((k) => { const o = document.createElement("option"); o.value = "peer:" + k; o.dataset.short = TOPICS[k].label; o.dataset.long = "Peer news · " + TOPICS[k].label; o.textContent = o.dataset.short; $("grp-peer").appendChild(o); });
-    const fitPrefix = () => document.querySelectorAll(".fsel").forEach((f) => f.style.setProperty("--fl", f.querySelector(".fl").offsetWidth + "px"));
-    fitPrefix(); if (document.fonts) document.fonts.ready.then(fitPrefix);
     $("type").addEventListener("change", (ev) => { const [t, tp] = ev.target.value.split(":"); state.type = t; state.topic = tp || "all"; refresh(); });
     $("tool").addEventListener("change", (ev) => { state.tool = ev.target.value; refresh(); });
     window.addEventListener("resize", debounce(measureCards, 150));
@@ -1665,7 +1662,7 @@
   function debounce(fn, ms) { let t; return () => { clearTimeout(t); t = setTimeout(fn, ms); }; }
 })();
 </script>
-<script src="assets/search.js?v=20261109b" defer></script>
-<script src="assets/guide.js?v=20261109b" defer></script>
+<script src="assets/search.js?v=20261109d" defer></script>
+<script src="assets/guide.js?v=20261109d" defer></script>
 </body>
 </html>
