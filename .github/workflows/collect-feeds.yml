@@ -15,6 +15,7 @@ jobs:
       TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}   # optional; empty = no Teams post
       DESTATIS_TOKEN: ${{ secrets.DESTATIS_TOKEN }}         # GENESIS-Online API token (Destatis indicators)
       AGSI_KEY: ${{ secrets.AGSI_KEY }}                     # free GIE AGSI+ API key (gas storage)
+      CDS_KEY: ${{ secrets.CDS_KEY }}                       # free Copernicus Climate Data Store key (weather at the mills abroad)
     steps:
       - uses: actions/checkout@v4
 
@@ -23,7 +24,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install feedparser==6.0.11 openpyxl==3.1.5 pypdf==5.1.0
+        run: pip install feedparser==6.0.11 openpyxl==3.1.5 pypdf==5.1.0 "cdsapi>=0.7.4"
 
       - name: Collect new items
         run: python scripts/collect_feeds.py
@@ -55,6 +56,11 @@ jobs:
       - name: Collect pulp imports by origin (Comext)
         run: python scripts/collect_pulp_origin.py
         continue-on-error: true
+
+      - name: Collect weather & rivers at the mills abroad (ERA5-Land, national gauges)
+        run: python scripts/collect_sites_intl.py
+        continue-on-error: true
+        timeout-minutes: 40   # the first run loads 30 years per mill for the normals
 
       - name: Collect EU ETS emissions of peers
         run: python scripts/collect_ets.py
