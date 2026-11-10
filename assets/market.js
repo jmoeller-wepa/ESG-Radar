@@ -15,7 +15,7 @@
   const PAGE_Q = { costs: ["cost"], market: ["market", "env"], energy: ["grid"] };
   const PAGE_TABS = { costs: ["glance", "cmp", "cost"], market: ["glance", "cmp", "industry", "fibre"], energy: ["glance", "cmp", "grid", "gas", "water"] };
   const PAGE_FILE = { costs: "costs.html", market: "market.html", energy: "energy.html" };
-  const state = { gran: "auto", tab: "glance", ind: "month", area: "all", q: "all", topic: "all", find: "", gasArea: "eu", pulp: "total", sel: new Set(), cmp: [], lay: (() => { try { return localStorage.getItem("radar.trendsView") === "list" ? "list" : "cards"; } catch (e) { return "cards"; } })() };
+  const state = { gran: "auto", tab: "glance", ind: "month", area: "all", q: "all", topic: "all", find: "", gasArea: "eu", pulp: "total", sel: new Set(), cmp: [], wc: "all", lay: (() => { try { return localStorage.getItem("radar.trendsView") === "list" ? "list" : "cards"; } catch (e) { return "cards"; } })() };
   // The four questions (config/market.json "questions"); every indicator belongs to one
   let QUESTIONS = { cost: { label: "What does tissue cost us?", title: "What does tissue cost us right now?", tab: "cost", link: "Open cost index" },
     market: { label: "How is our market doing?", title: "How is our market doing?", tab: "industry", link: "Open industry" },
@@ -112,12 +112,14 @@
     else if (p.has("cmp") || p.has("add")) state.tab = "cmp"; // links from the Overview page open the Trends chart
     if (p.get("topic")) state.topic = p.get("topic");
     if (p.get("view") === "year" || p.get("view") === "month") state.ind = p.get("view");
+    if (p.get("country")) state.wc = p.get("country");
   }
   function writeHash() {
     const p = new URLSearchParams();
     p.set("tab", state.tab);
     if (state.tab === "industry") p.set("view", state.ind);
     if (state.tab === "cmp" && state.topic !== "all") p.set("topic", state.topic);
+    if (state.tab === "water" && state.wc !== "all") p.set("country", state.wc);
     if (state.gran !== "auto") p.set("gran", state.gran);
     const def = preset("36"); const same = def.size === state.sel.size && [...def].every((m) => state.sel.has(m));
     if (!same) p.set("months", encodeSel());
@@ -158,6 +160,14 @@
   let topicDD = null;
   function renderBar() {
     const bar = $("mbar"); if (!bar) return;
+    if (state.tab === "water") {
+      const cs = waterCountries();
+      if (cs.length < 2) { bar.hidden = true; bar.replaceChildren(); return; }
+      bar.hidden = false;
+      const dd = RadarDD.single({ label: "Country", value: state.wc, items: [{ key: "all", label: "All countries" }].concat(cs.map(([k, l]) => ({ key: k, label: l }))), onChange: (k) => { state.wc = k; writeHash(); renderTiles(); } });
+      bar.replaceChildren(dd.el, el("span", "fb-sp"));
+      return;
+    }
     const show = state.tab === "cmp" || state.tab === "cost";
     bar.hidden = !show; if (!show) { bar.replaceChildren(); return; }
     const keepFocus = document.activeElement && document.activeElement.id === "tq";
@@ -973,6 +983,8 @@
     const th = (g.thresholds || []).slice().sort((a, b) => b.v - a.v).find((t) => v < t.v);
     if (th) return { cls: "head", text: "Below " + th.v + " cm" };
     if (c.MNW != null && v < c.MNW) return { cls: "head", text: "Below mean low water" };
+    if (g.low != null) return v < g.low ? { cls: "head", text: "Below typical range" } : { cls: "flat", text: "Normal" };
+    if (g.abroad) return null;   // no reference value for this gauge: no judgement
     return { cls: "flat", text: "Normal" };
   }
   function soilStatus(v) {
@@ -1014,20 +1026,28 @@
       sec.appendChild(el("div", "empty", "Water data arrives with the next data update (scripts/collect_water.py)."));
       host.appendChild(sec); return;
     }
-    // 1) river levels
-    const gauges = (WATER.gauges || []).filter((g) => (g.series || []).length);
+    // 1) river levels: German federal waterways (PEGELONLINE) + the nearest public gauges to the mills abroad
+    const wc = state.wc;
+    const showDE = wc === "all" || wc === "DE";
+    const gauges = allGauges().filter((g) => wc === "all" || g.country === wc);
+    if (!gauges.length && wc !== "all") {
+      const sec = el("section", "panel ind-sec"); sec.appendChild(el("div", "ind-h")).appendChild(el("h3", null, "River levels"));
+      sec.appendChild(el("div", "empty", "No public river gauge data for " + (countryName(wc)) + " – " + (wc === "IT" ? "Italy has no free national gauge service." : "it arrives with the next data update.")));
+      host.appendChild(sec);
+    }
     if (gauges.length) {
       const sec = el("section", "panel ind-sec");
-      const h = el("div", "ind-h"); h.append(el("h3", null, "River levels"), el("span", null, "daily mean in cm · PEGELONLINE (WSV, DL-DE→Zero-2.0)"));
+      const anyAbroad = gauges.some((g) => g.abroad), anyDE = gauges.some((g) => !g.abroad);
+      const h = el("div", "ind-h"); h.append(el("h3", null, "River levels"), el("span", null, "daily mean · " + [anyDE ? "PEGELONLINE (WSV, DL-DE→Zero-2.0)" : "", anyAbroad ? "national gauge services abroad" : ""].filter(Boolean).join(" · ")));
       sec.appendChild(h);
       const k = el("div", "gd-kpis ind-k");
       gauges.forEach((g) => {
         const last = g.series[g.series.length - 1], wk = valueAgo(g.series, 7);
         const v = g.latest && g.latest.v != null ? g.latest.v : last[1];
         const st = gaugeStatus(g, v);
-        const d = el("div"); d.append(document.createTextNode(g.label), el("b", null, Math.round(v) + " cm"));
-        const sm = el("small", null, (wk ? arrow(v - wk[1], "cm", 0) + " vs. a week ago · " : "") + (g.latest && g.latest.t ? fmtDay(g.latest.t) : fmtDay(last[0])) + " ");
-        sm.appendChild(el("span", "sig " + st.cls, st.text)); d.appendChild(sm); k.appendChild(d);
+        const d = el("div"); d.append(document.createTextNode(g.label), el("b", null, Math.round(v) + " " + (g.unit || "cm")));
+        const sm = el("small", null, (wk && wk[0] !== last[0] ? arrow(v - wk[1], "cm", 0) + " vs. a week ago · " : "") + (g.latest && g.latest.t ? fmtDay(g.latest.t) : fmtDay(last[0])) + " ");
+        if (st) sm.appendChild(el("span", "sig " + st.cls, st.text)); d.appendChild(sm); k.appendChild(d);
       });
       sec.appendChild(k);
       const wg = el("div", "w-grid"); sec.appendChild(wg);
@@ -1038,10 +1058,12 @@
         (g.thresholds || []).forEach((t) => refs.push({ v: t.v, label: t.v + " cm " + (t.short || "surcharges"), color: "var(--d-b45309-text, #b45309)" }));
         if (c.GlW != null) refs.push({ v: c.GlW, label: c.GlW + " cm GlW", color: "var(--d-8a4a33-text, #8a4a33)" });
         else if (c.MNW != null) refs.push({ v: c.MNW, label: c.MNW + " cm MNW", color: "var(--d-8a4a33-text, #8a4a33)" });
-        const hh = el("div", "w-gh"); hh.append(el("b", null, g.label), el("span", null, g.series.length + " days" + (g.station ? " · gauge " + g.station : "")));
+        if (g.low != null) refs.push({ v: g.low, label: g.low + " cm typical low", color: "var(--d-8a4a33-text, #8a4a33)" });
+        const hh = el("div", "w-gh"); hh.append(el("b", null, g.label), el("span", null, [g.series.length + " day" + (g.series.length > 1 ? "s" : ""), g.station ? "gauge " + g.station : "", g.abroad ? g.source : ""].filter(Boolean).join(" · ")));
         wrap.appendChild(hh);
         const box = el("div", "chart ind-chart w-chart"); wrap.appendChild(box);
-        draws.push(() => dailyChart(box, g.series, { label: "Water level " + g.label, name: g.label, unit: "cm", refs }));
+        if (g.series.length > 1) draws.push(() => dailyChart(box, g.series, { label: "Water level " + g.label, name: g.label, unit: g.unit || "cm", refs }));
+        else box.replaceWith(el("div", "empty w-chart", "One reading so far (" + Math.round(g.series[0][1]) + " cm on " + fmtDay(g.series[0][0]) + ") – the chart grows with every data update."));
         if (g.why) { const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode(g.why.charAt(0).toUpperCase() + g.why.slice(1))); wrap.appendChild(w); }
         // GlW / MNW / MW are explained in the "?" guide; only our own thresholds are listed here
         const legend = (g.thresholds || []).map((t) => t.v + " cm: " + t.label);
@@ -1049,12 +1071,15 @@
         wg.appendChild(wrap);
       });
       const f = el("p", "ind-src"); f.append("Source: ");
-      const a = el("a", null, "PEGELONLINE (WSV) ↗"); a.href = "https://www.pegelonline.wsv.de/"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a);
-      f.appendChild(document.createTextNode(" · the history grows by one day with every data update."));
+      if (anyDE) { const a = el("a", null, "PEGELONLINE (WSV) ↗"); a.href = "https://www.pegelonline.wsv.de/"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a); }
+      const abroadSrc = [...new Map(gauges.filter((g) => g.abroad).map((g) => [g.source, g])).values()];
+      abroadSrc.forEach((g, n) => { if (anyDE || n) f.appendChild(document.createTextNode(" · ")); const a = el("a", null, g.source + " ↗"); a.href = g.link || "#"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a); });
+      f.appendChild(document.createTextNode(" · the history grows by one day with every data update" + (anyAbroad ? "; gauges abroad are the nearest public ones to each mill, compared with their own typical range where the service publishes one" : "") + "."));
       sec.appendChild(f);
       host.appendChild(sec);
     }
     // 2) soil moisture at the mills
+    if (!showDE) { host.appendChild(intlSection(wc)); draws.forEach((f2) => f2()); return; }
     const sites = (WATER.sites || []).filter((s) => (s.series || []).length);
     const sec = el("section", "panel ind-sec");
     const h = el("div", "ind-h"); h.append(el("h3", null, "Soil, heat and rain around our German mills"), el("span", null, "soil moisture in % of usable field capacity (nFK) · Deutscher Wetterdienst (CC BY 4.0)"));
@@ -1111,7 +1136,7 @@
     f.appendChild(document.createTextNode(" · modelled soil moisture and daily station observations (max temperature, rain) at the nearest DWD stations to each mill (click a mill for details and the stations used) · mill sites from wepa.eu."));
     sec.appendChild(f);
     host.appendChild(sec);
-    host.appendChild(intlSection());
+    if (wc === "all") host.appendChild(intlSection("all"));
     draws.forEach((f2) => f2());
   }
   // ---------- Gas storage (Energy & climate, GIE AGSI+) ----------
@@ -1418,11 +1443,26 @@
     const last = ser[ser.length - 1], ago = valueAgo(ser, days);
     return ago && ago[0] !== last[0] ? last[1] - ago[1] : null;
   }
-  function intlSection() {
+  function countryName(c) { return c === "DE" ? "Germany" : ((INTL && INTL.countries) || {})[c] || c; }
+  function allGauges() {
+    const de = ((WATER && WATER.gauges) || []).filter((g) => (g.series || []).length).map((g) => Object.assign({ country: "DE" }, g));
+    const ab = ((INTL && INTL.sites) || []).filter((s) => s.gauge && (s.gauge.series || []).length).map((s) => ({
+      label: [s.gauge.river, s.gauge.name].filter(Boolean).join(" · "), country: s.country, series: s.gauge.series, station: s.gauge.code, unit: s.gauge.unit || "cm",
+      low: s.gauge.low, abroad: true, source: s.gauge.source, link: s.gauge.link,
+      why: "Nearest public gauge to the " + s.name + " mill" + (s.gauge.km != null ? " (" + s.gauge.km + " km)" : "") + ": water for intake, cooling and the river's state in dry spells." }));
+    return de.concat(ab);
+  }
+  function waterCountries() {
+    const set = new Set();
+    if (WATER && ((WATER.gauges || []).length || (WATER.sites || []).length)) set.add("DE");
+    ((INTL && INTL.sites) || []).forEach((s) => { if (s.weather || s.gauge) set.add(s.country); });
+    return [...set].map((c) => [c, countryName(c)]).sort((a, b) => (a[0] === "DE" ? -1 : b[0] === "DE" ? 1 : a[1].localeCompare(b[1])));
+  }
+  function intlSection(wc) {
     const sec = el("section", "panel ind-sec");
-    const h = el("div", "ind-h"); h.append(el("h3", null, "Heat, rain, soil and rivers at our mills abroad"), el("span", null, "Copernicus ERA5-Land (CC BY 4.0) · national river gauges"));
+    const h = el("div", "ind-h"); h.append(el("h3", null, wc && wc !== "all" ? "Heat, rain, soil and rivers at our mills in " + countryName(wc) : "Heat, rain, soil and rivers at our mills abroad"), el("span", null, "Copernicus ERA5-Land (CC BY 4.0) · national river gauges"));
     sec.appendChild(h);
-    const sites = ((INTL && INTL.sites) || []).filter((x) => x.weather || x.gauge);
+    const sites = ((INTL && INTL.sites) || []).filter((x) => (x.weather || x.gauge) && (!wc || wc === "all" || x.country === wc));
     if (!sites.length) { sec.appendChild(el("div", "empty", "Weather and river data for the mills in France, Italy, Poland, the Netherlands and the UK arrive with the next data update (scripts/collect_sites_intl.py, needs the CDS_KEY secret).")); return sec; }
     const C = INTL.countries || {};
     const tw = el("div", "w-tw"); const t = el("table", "gd-yr w-t");
@@ -1431,7 +1471,7 @@
     const tb = el("tbody");
     let lastCountry = null;
     sites.slice().sort((a, b) => (C[a.country] || a.country).localeCompare(C[b.country] || b.country)).forEach((s) => {
-      if (s.country !== lastCountry) { lastCountry = s.country; const gr = el("tr", "w-grp"); gr.appendChild(el("td", null, C[s.country] || s.country)).colSpan = 7; tb.appendChild(gr); }
+      if (s.country !== lastCountry && (!wc || wc === "all")) { lastCountry = s.country; const gr = el("tr", "w-grp"); gr.appendChild(el("td", null, C[s.country] || s.country)).colSpan = 7; tb.appendChild(gr); }
       const wx = s.weather, soil = wx && (wx.soil || []).filter((p) => p[1] != null), sl = soil && soil.length ? soil[soil.length - 1] : null, st = intlSoilStatus(sl ? sl[1] : null);
       const tr = el("tr", "w-click"); tr.tabIndex = 0; tr.setAttribute("role", "button"); tr.setAttribute("aria-label", s.name + ": open details");
       tr.addEventListener("click", () => openIntl(s));
