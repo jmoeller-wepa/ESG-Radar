@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-09T19:05:27",
+    "lastFeedRun": "2026-11-10T06:10:42",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -8133,6 +8133,448 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOaE5HMzBnek41R0RyU3ZCenRna3RvdWg1SGY0NDA2SEtRSWVwMUdzUkdYbHg4cTJQYWptenFXVTloRHBoNE5NRXRidHRWeElleDV2LTZKYjdvRFhOZm8tQVp1dHhxdl9tN2JIRzIwVFo1a282VnBTUW1JZU1TbTN0ZmJ4ZEZMcXI4UHh0cWkzVUczUEJSNHN3dk5tWnpNWUtmNURuQUlRREFpZFpSRDc3QVdDblZ6YVI4?oc=5",
       "origin": "feed",
       "added": "2026-11-09"
+    },
+    {
+      "id": "feed-ce5ea4c264",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Claude can design electronic prototypes from start to finish",
+      "summary": "We asked Claude to design three electronic devices: a speakerphone, a voice-assistant hub, and a handheld virtual pet. The prototypes worked without any fixes to their circuitry.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://www.anthropic.com/research/claude-electronics-design",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-796a7f7ee3",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "summary": "Introducing Claude Fable 5.2 and Claude Mythos 5.2, our new models for the hardest technical challenges.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-99295a6a0d",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Which Claude model should you build with?",
+      "summary": "How to choose between Claude Fable 5.2, Opus 5.5, Sonnet 5.5, and Haiku 5.5 by task, cost, and effort level.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.dev/blog/which-claude-model-should-you-build-with/",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-f7c768a948",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Safely scaling multi-agent teams with Claude Fable 5.2",
+      "summary": "How a team of 1,000 agents running an early version of Claude Fable 5.2 reproduced a formal proof of Fermat's Last Theorem with general tools, a shared database, and layered safety controls.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.dev/blog/safely-scaling-multi-agent-teams-with-fable-5-2/",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-418fd0c9fe",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "JPMorganChase expands Claude Code to more employees across the firm",
+      "summary": "JPMorganChase expands Claude Code to more employees across the firm",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-9c331579e2",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt",
+        "Enterprise",
+        "Now Available"
+      ],
+      "title": "ChatGPT Enterprise now available in AWS Marketplace",
+      "summary": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-5d57e1aa08",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Introducing"
+      ],
+      "title": "Introducing Control Room: Human control over AI workloads",
+      "summary": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/introducing-control-room",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-23b94c6976",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Codex"
+      ],
+      "title": "CodeRabbit scales agentic software development and ships 20x more",
+      "summary": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/coderabbit-codex-daybreak",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-af23efeb52",
+      "date": "2026-11-09",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Codex"
+      ],
+      "title": "Build a retro handheld game with Codex and ModRetro Chromatic",
+      "summary": "Using the ModRetro Chromatic plugin for Codex, you can build any game you can imagine and play it on a ModRetro Chromatic.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://developers.openai.com/blog/build-a-game-with-modretro-chromatic",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-e0153be5a4",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Group Certification Could Open Overseas Markets to NZ Forest Owners - Wood Central",
+      "summary": "Group Certification Could Open Overseas Markets to NZ Forest Owners Wood Central",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBqYVV5cWxvbzU1RWkxeDJybnJ3V0Z2eHZOVl9abHI0MDNJME8wUExFQkRIeFpIbEJVTzhBc0JqUDF3bHBpQWdLbVZPOE5NaC0xR2VDNXpLNndyVUlHdWd4SWlhUHhPanhnaWI1MnQ3UWdZUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-dc7b458569",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Deutlich billiger – aber bietet Kauflands Eigenmarke K-Classic auch echte Qualität? - DerWesten",
+      "summary": "Deutlich billiger – aber bietet Kauflands Eigenmarke K-Classic auch echte Qualität? DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONHYwRDBnZFFvX3I1NExpTjdnNzRhazlkWFk1b0R3R28zZTVKSGdKYlBWMEFXdzd6ZG42dkxTa19uSUttcnJlb1Ztck9OZG5tUno1VWxycW5nS1QyZHdoSTJiMzJpblAzZndCVEg1YTVGSXg1LThNeElkRlhVQnZwS2o4Skt0QWc2OWhiXzRFMHVnZ3RKUXRsTHZFbExlTnF4SFZFWjhKQlVmNnlqaEdrRlpqVmhvYzVtTWdLc3NJeV9Sdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-5db8113252",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Riecht wie Rituals – kostet nur 3 Euro: Diese günstige ALDI-Marke verspricht Luxus pur - wmn.de",
+      "summary": "Riecht wie Rituals – kostet nur 3 Euro: Diese günstige ALDI-Marke verspricht Luxus pur wmn.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQTl1MmV4bG9UbEtjZGZoQ0E3QXV5WUc5V19ERmx0Nm5pTUZPTGxlY3dJZEpJY2hRdUJZTWJsTVZjUTFyV1RzeFZBem9jUzNNWVh0aWpWbFliY0dZSzdXc0dhVGtmcUJUZnZoWFl3b2c0Smg5bFVYR3o1NlBEZTNkRjQ1VDA1ZW9ndWp1MVROb0M0UGtEVHctaVNqc2duZGRwRUFHMFBB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-4519d65d7d",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Warum Edeka Luxusprodukte selbst verkauft, statt sie Markenherstellern zu überlassen - DerWesten",
+      "summary": "Warum Edeka Luxusprodukte selbst verkauft, statt sie Markenherstellern zu überlassen DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQX2Q5ODhtQ0ZvMmJjam85cW5JclduQXFkX0pIbkE5RTRqWTRjQmprRTB0Rl9Qek9lZ1VzWHl2NHg4ZVhsd29FUjJuLUp2aXZRSjY2cklNWkU3N1hnOXlpZkdmZV9yYUNaQWgxTDNmc2pqNC1KZ0FMa3pVb2g3emlCNDRIYWV6QndWWnk5dWJxcmstSHQ5MmwwSVZna2d6OVhjUjIxbVJMcjFxNFlWaEp6LTZ1ZUlpbm1WSnFSMVNXaEU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-5de3228bca",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tesco’s high-tech farm targets climate risk - The Star",
+      "summary": "Tesco’s high-tech farm targets climate risk The Star",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeXRCQnlMMUZxd211dnRhU2xKODZxQ052bzZPZlBLTnZaQm5tV3pRZWFJZ2xTb3ZaSVdueXJRR3JvWFV4QUVKUnlSa3AxUDhSOHNfbHJ5c2dxRFlEZV9pcFZnRm53bUpxUDFNRjVxem1KYThhN3AwUm1ucG1jVWhYQnBtTm9TSERkSkY3R2RJb0xFTkVaeUNuLVVEYUx6TjlfUnk2dXF3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-5aa797f809",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tesco’s high-tech farm targets climate risk - KLSE Screener",
+      "summary": "Tesco’s high-tech farm targets climate risk KLSE Screener",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUGdaM3l0UlZDY1lwNXloTDdnd2RaeVg2TjNuZ1o3QnJ6VndGdHhOcTRsOG1nZ0dwSzh5MkhiS0lFOEhwUndFYkx4SFo0WkxLLUVmSk9xeF9uYjNfTE1lSDdkSThONmZtbHZiREh1bmpqMDJORVZhUlZnN1RkM3d2T2thQXdJZDJjYm56SG1DcVVFclB4MkZTSw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-2fa43a4eff",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Mexico’s Food Industry Faces Staple Shortages and Trade Shifts - Mexico Business News",
+      "summary": "Mexico’s Food Industry Faces Staple Shortages and Trade Shifts Mexico Business News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQY29LdHhwNHVJSDhOY2tHSmd6dGJWYnBqU1FiWV9ZamprTm5ENjFyMllIVmNtLTE1eFowWFZWR0NHWWY1ZV9ONlppM3JpOEZRVDJRYWZ2VkN5VFEtZXk0NzdHejJXX2FCcmthbWxTS3ExN0pDazB4bUg0UnFkVmVvcDBKQ21jU0lOV3YxckRyNHlMTHJIbjRDQkhDT2pGN28yYjB6cGlEZVJvNXc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-591507b606",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "ECB warns extreme water scarcity puts eurozone output at risk - Hürriyet Daily News",
+      "summary": "ECB warns extreme water scarcity puts eurozone output at risk Hürriyet Daily News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTDRreGlpVjVkbk9oYmd3VS1jb1MzU25idkQ5aUsydDU1aFJMLUlwa21RZ1BBVkxUc09wN3JDSjhNLXVLNF9NQl9XcS12Y0F6LXZ5RlFXRk1VTzlGS1BVX1JicF83MmJkWjYxcFNZRTVfX2J4aGhrUzhiSHR4eVdUUXVKaTYtb3J3QmRTbEQySFVsT0lXUGRwczkyN2RNSHV1TWtldWJCcm1PUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-475f5eb9ac",
+      "date": "2026-11-09",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Water Scarcity Threatens 24% of Eurozone Economy - Sada Elbalad English",
+      "summary": "Water Scarcity Threatens 24% of Eurozone Economy Sada Elbalad English",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE41SWpGSF9RNk50ZjllelRORC1EQXUwSzNseVZWaFVpbDdCYmJmbmFuM2Uza1Y1Qy15bWFuZldQN0hBdktPaVJHbnhXT3dkNDNKTVZtZlVaVnFDd3ZBWmlURUxzdXNmVmNBYWxEVHBpZi1fQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
     }
   ]
 }

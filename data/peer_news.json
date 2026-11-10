@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T19:19:58",
+ "updated": "2026-11-10T06:24:05",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -122,12 +122,6 @@
     "date": "2026-11-05"
    },
    {
-    "title": "Kimberly-Clark's China diaper woes linger as it stands by annual outlook",
-    "source": "www.marketscreener.com",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOb2ZoU3h0ZE53c2hiUDJTM0tuQTNWQnRrZzVrSC03ZkEtQmtRRVZUZmp5MnRueUhnSnE0NzhwSnk2WXB5c2ZrWmJUcUpuTUdHTkx2NVktb2pVaEJWZGhsaTFEcjJUelV2akdoTEFTX2NmZVl0OWExcVNjZlRyeGpjcFFCNkZfbVo4MklXSEFnMGhIOW1iSGhFWmdoR2ZHUHpVeG1wVUUxSmFWWUtpRW1oYWhtdGZuS1hMUWs0V0R3aEhhUUk?oc=5",
-    "date": "2026-11-05"
-   },
-   {
     "title": "Kimberly-Clark completes acquisition of Kenvue, expanding global consumer health portfolio",
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZkJjQ3VyQTRFa2djWW1SU3NiRm95bXZiQS0tNTVKYy1vS2FibUEyeUE5eXA5M1pEWHpobllod3pZeEZHSFhFaUlaQm5KSVZMdUQ1cDB6TjRFZnZlVU1vdjg5WUI2WEp3MElHWlNBMGc4OEtmSjVnUzlLdi1fNnQ4NnJVcVk5cEZxbkZia09DY0VRSEt0VHNuWlF2WFRqZFI2LWlBbE4zSGJtN3JielpRemRHZk16ZTM2ZEo3X21JaGdGYVZTc2c?oc=5",
@@ -137,6 +131,12 @@
     "title": "Kimberly-Clark Mexico stock trades at 1.84 euros on Lang & Schwarz",
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVGhJaEhaeGZndllkVUl6dGx3ZnZ2ZmU0ZWpPU3hXNlJ6SWItWWx1bGZCeUU2NDdlcTU4cHpfOEVsdGFyY3JlZU1mZklJVW14YUQ0d0xzTnNYWVBBcVlBOENkdjhrNlNqTmZaX0h6RG05dURtbjdDQVpEeHp3dFBoRDhGTThzMHlETS1wLVZMU1FNR0NVUmVhcmk4cHpaWHNSTjZ6c0N6azZFZEpkbDlGa0hDa0ppZktaelducWxmTWk4czF0TFE?oc=5",
+    "date": "2026-11-04"
+   },
+   {
+    "title": "Kimberly-Clark Mexico stock trades at 1.82 euros in Berlin morning",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSXc1aEZOWFRiR3VLVXFyRF9nN3E2NnY0dWktSi1IWjFId2NZNlR3TjdRbFQtay15MHFtZE9tZVdUc3lBa2xwejdNZERaVXpwTWlvTkt0QWdTZ1ZCcXFzeTJoTzRIUV9KQjBwWTBWUDNWUHk1RElOaDFRVFVyTEl1amdoYlJhZWctaS1JZF9iYW1FdEFUTUJTUzBZc0FXd1lPZm9vUmhYTVM3c0lONEpxVFFtTV8zaVVtMXJ6aWcyTTA5SC1CYm1uSg?oc=5",
     "date": "2026-11-04"
    }
   ],
@@ -272,9 +272,21 @@
   ],
   "kruger": [
    {
+    "title": "Kruger’s Bonterra tissue recognized for environmental responsibility",
+    "source": "Pulp and Paper Canada",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNVpHRHBrMmowb0oweDBXcXM1aVRnT3pXV1JMSnNiZHJCUTlJbkprcjFCWEVUMzE3emwyM1JmT3VzMWNDeUN5ellNT2pjTVJtckJpekJrYVREaWdtR0E3S016V1FMbWRVSTN5V0F0MlU4eGNOdmJUdjVrcXJodFNYTjNVZnFGUS1NOVJDZlJmRXp0ZlMzaVVzMnVwak5pUUlTdTUxOGJB?oc=5",
+    "date": "2026-11-10"
+   },
+   {
     "title": "Kruger Big Assist Marks Seven Years of Helping More Canadian Kids Access Hockey",
     "source": "Digital Journal",
     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONmtIb245dU9nODF6YjRvd0x2aWdxbTYzQ1VCS2xWX0FfX1dlN21IQnhWbWt2TEJmcXRuV3ZuZVg3RGdDUUtvWXdiT1lHbktLY18xSVJzZkhRV1RENUp5NzNZS0NOaEpYbTBXZU84UF9YeTFjTnhWVlN3Vk1PT3lsRGY3R3MteWNWdWtxclFRdk85aC1CWjV4azY2Tkx3Q0k?oc=5",
+    "date": "2026-11-09"
+   },
+   {
+    "title": "Kruger Big Assist returns for 7th year with hockey stars as brand ambassadors",
+    "source": "Canadian Grocer",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSWFlV3JOWjB5Nkh5YmNsY0kxczZrcmFjUnNNcldlanJvQmxCeGxKcTVpWE00NThUMHRMNE9HeFpkQTdrdHl4NGZ4eWpLSFhtendabEJKUkdVNDlDNDhVcERwU0ltZkZfWlVNdHl1ZDdPbjRhNlJsdnhEZjRUUk5hUXBPZDFWQ0FNU3BmUlhKNWt3Nmk0N3FR?oc=5",
     "date": "2026-11-09"
    },
    {
@@ -282,18 +294,6 @@
     "source": "Tissue Online North America",
     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWU5OWHhEbmJZRHJqR1hQVmVialpwTXVKVG9wZ0ZUeDlEUWxTR3lyd2tCQ0VwanpHZUhCa1phOGpUc1gxcUtYTWVxZS1PWDkxMmRQZjNmQnRaVXRha2dOc05BYm9rWXdQaWo2OUZQMFo4X0x5VGlIWUkxaVEwcHhiRnpEOXVFWkFzZGhhTl8yOWRNYXBIcGtEcmxzaVpoc3kydXZHd0xR?oc=5",
     "date": "2026-11-09"
-   },
-   {
-    "title": "Kruger Products’ Bonterra named Canada’s most environmentally responsible brand for second consecutive year",
-    "source": "Tissue Online North America",
-    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPbVgtR2tYVXl6d1R1TXp2RkpzQVBsRHd6U2VCeGpFYXlLU3h5bUEwa19Mazc5clNYODVCQ1k4UVV6UUl4UEk4N3YtY1ZUQUFtODdHaWxyb3EwMUlTakZ2bWgxcHpDTVFGNXNxZEVLM3lQSUEyNENpRDZ6QTNwVFlDaXNzdGpaVHVoUHVwYWg1TkxLWENXQ3lXVUR0TjFzSEd1LXRoa3EtcVd4LXJaekJ3OFFib3VvcTF5NnVTWXdBdlJJUW5weVN2RFNuT0ptejlSVU9NNDlQYUx1U3c?oc=5",
-    "date": "2026-11-02"
-   },
-   {
-    "title": "How Kruger Products is supporting employees through breast cancer awareness, workplace benefits",
-    "source": "Benefits Canada.com",
-    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOMWNjcGRINFpVZm1BZEVxd2VGWFRwc2tLNk5HanlnVV9GS1lsN0Q4NE5NcjQ0U1Fjd295OS1ucTdJQzFpNTI3MTV6NXViTm5WQUNWSk50TGdiLWxpRmt3alI4TnZoeVRxTl9icnhoVkd2cDNtSmhBRHlZbWVwdm55X0NTWTZEX044VE9nNHBoUDF5ekVKd0plN2lobnJ2UVUxbnVfc2doVnU2R0ZHM1UzUlF2OVBmYkFzUnBVRUltdnp4d3NVTHc1RUkxM0ZlWGk4VHNDUms5UlB3TGVjRGlxYndRNGp0UQ?oc=5",
-    "date": "2026-10-30"
    }
   ]
  }

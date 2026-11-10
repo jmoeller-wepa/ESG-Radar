@@ -1,5 +1,5 @@
 {
- "at": "2026-11-09T19:18:53",
+ "at": "2026-11-10T06:23:53",
  "failed": [
   "arnsberg: no recent observations"
  ],
@@ -15,20 +15,10 @@
   },
   {
    "site": "giershagen",
-   "historical": "tageswerte_KL_06264_20040601_20251231_hist.zip",
-   "normalYears": 17
-  },
-  {
-   "site": "giershagen",
    "station": 6264,
    "name": "Brilon-Thülen",
    "km": 6.0,
    "last": "2026-11-08"
-  },
-  {
-   "site": "kriebstein",
-   "historical": "tageswerte_KL_00131_20041101_20251231_hist.zip",
-   "normalYears": 17
   },
   {
    "site": "kriebstein",
@@ -39,20 +29,10 @@
   },
   {
    "site": "mainz",
-   "historical": "tageswerte_KL_03137_19480101_20251231_hist.zip",
-   "normalYears": 30
-  },
-  {
-   "site": "mainz",
    "station": 3137,
    "name": "Mainz-Lerchenberg (ZDF)",
    "km": 6.1,
    "last": "2026-11-08"
-  },
-  {
-   "site": "leuna",
-   "historical": "tageswerte_KL_02878_19470401_20251231_hist.zip",
-   "normalYears": 21
   },
   {
    "site": "leuna",

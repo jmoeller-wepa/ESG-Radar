@@ -1,5 +1,5 @@
 {
- "at": "2026-11-09T19:19:17",
+ "at": "2026-11-10T06:23:54",
  "failed": [],
  "details": [
   {
@@ -7,18 +7,18 @@
    "query": {
     "type": "eu"
    },
-   "pages": 9,
-   "points": 2504,
-   "url": "https://agsi.gie.eu/api?type=eu&from=2020-01-01&to=2026-11-09&page=9&size=300"
+   "pages": 1,
+   "points": 59,
+   "url": "https://agsi.gie.eu/api?type=eu&from=2026-09-11&to=2026-11-10&page=1&size=300"
   },
   {
    "area": "de",
    "query": {
     "country": "de"
    },
-   "pages": 9,
-   "points": 2504,
-   "url": "https://agsi.gie.eu/api?country=de&from=2020-01-01&to=2026-11-09&page=9&size=300"
+   "pages": 1,
+   "points": 59,
+   "url": "https://agsi.gie.eu/api?country=de&from=2026-09-11&to=2026-11-10&page=1&size=300"
   }
  ]
 }
