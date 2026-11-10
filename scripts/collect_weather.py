@@ -175,9 +175,24 @@ def main():
         if not cand:
             bad.append(f"{s['id']}: no station")
             continue
-        dist, sid, info = cand[0]
+        # nearest station first; a station can list a recent file without temperature/rain values -> try the next one (max 30 km)
+        rec, tried = None, []
+        for dist, sid, info in [c for c in cand[:5] if c[0] <= 30] or cand[:1]:
+            try:
+                r = read_zip(get(BASE + "recent/" + recent[sid]))
+            except Exception as exc:  # noqa: BLE001
+                tried.append(f"{sid}: {str(exc)[:60]}")
+                continue
+            n = sum(1 for v in r.values() if v[0] is not None and v[1] is not None)
+            if n >= 60:
+                rec = r
+                break
+            tried.append(f"{sid} {info['name']}: only {n} days with temperature and rain")
+        if tried:
+            dbg.append({"site": s["id"], "skippedStations": tried})
         try:
-            rec = read_zip(get(BASE + "recent/" + recent[sid]))
+            if rec is None:
+                raise RuntimeError("no station with recent observations within 30 km")
             nkey = str(sid)
             norm = prev_norm.get(nkey)
             if not norm:

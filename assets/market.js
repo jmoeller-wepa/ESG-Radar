@@ -1053,13 +1053,16 @@
         svg.appendChild(svgEl("path", { d: RadarViz.path(sp), fill: "none", stroke: W_COL, "stroke-width": 2, "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round" }));
       }
       td4.appendChild(svg); tr.appendChild(td4);
-      if (s.station) td0.title = "DWD soil station " + (s.station.name || s.station.id) + ", " + s.station.km + " km away";
+      tr.classList.add("w-click"); tr.tabIndex = 0; tr.setAttribute("role", "button"); tr.setAttribute("aria-label", s.name + ": open details");
+      tr.addEventListener("click", () => openSite(s));
+      tr.addEventListener("keydown", (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); openSite(s); } });
+      td0.querySelector("b").appendChild(el("span", "w-more", " ›"));
       if (hasWx) {
         const wx = weatherOf(s.id);
         const yr = wx ? wx.last.slice(0, 4) : "";
         const th1 = el("td", "num"); if (wx) { th1.appendChild(el("b", null, String(wx.hotDays))); th1.appendChild(el("small", null, wx.hotNormal != null ? "normal " + Math.round(wx.hotNormal) + " by now · " + yr : yr)); } else th1.textContent = "–"; tr.appendChild(th1);
         const th2 = el("td", "num"); if (wx && wx.rain30Pct != null) { th2.appendChild(el("b", null, wx.rain30Pct + " %")); th2.appendChild(el("small", null, "of normal · " + wx.rain30 + " mm")); } else th2.textContent = wx && wx.rain30 != null ? wx.rain30 + " mm" : "–"; tr.appendChild(th2);
-        const th3 = el("td"); if (wx) { th3.appendChild(weekStrip(wx)); th3.title = "DWD weather station " + wx.station.name + ", " + wx.station.km + " km away"; } tr.appendChild(th3);
+        const th3 = el("td"); if (wx) th3.appendChild(weekStrip(wx)); tr.appendChild(th3);
       }
       tb.appendChild(tr);
     });
@@ -1073,7 +1076,7 @@
     sec.appendChild(w);
     const f = el("p", "ind-src"); f.append("Source: ");
     const a = el("a", null, "DWD Climate Data Center ↗"); a.href = "https://opendata.dwd.de/climate_environment/CDC/derived_germany/soil/daily/"; a.target = "_blank"; a.rel = "noopener"; f.appendChild(a);
-    f.appendChild(document.createTextNode(" · modelled soil moisture and daily station observations (max temperature, rain) at the nearest DWD stations to each mill (hover a mill or strip for the station) · mill sites from wepa.eu."));
+    f.appendChild(document.createTextNode(" · modelled soil moisture and daily station observations (max temperature, rain) at the nearest DWD stations to each mill (click a mill for details and the stations used) · mill sites from wepa.eu."));
     sec.appendChild(f);
     host.appendChild(sec);
     draws.forEach((f2) => f2());
@@ -1256,6 +1259,120 @@
     });
     return box;
   }
+
+  // ---- Pop-up for one mill: soil moisture over the full history, heat and rain, 12 weeks in detail ----
+  function openSite(s) {
+    const wx = weatherOf(s.id);
+    const S = WATER.soil || {}; const dry = S.dry != null ? S.dry : 50, very = S.veryDry != null ? S.veryDry : 30;
+    const ser = (s.series || []).filter((p) => p[1] != null);
+    const last = ser[ser.length - 1], ago = valueAgo(ser, 30), yAgo = valueAgo(ser, 365), st = soilStatus(last[1]);
+    $("gd-title").textContent = s.name + " · water & weather";
+    const sub = [s.district];
+    if (s.station) sub.push("soil: DWD station " + (s.station.name || s.station.id) + " (" + s.station.km + " km)");
+    if (wx && wx.station) sub.push("weather: DWD station " + wx.station.name + " (" + wx.station.km + " km)");
+    $("gd-sub").textContent = sub.join(" · ");
+    const body = $("gd-body"); body.replaceChildren();
+    // key numbers
+    const k = el("div", "gd-kpis");
+    const kp = (label, val, small, sig) => { const d = el("div"); d.append(document.createTextNode(label), el("b", null, val)); if (small || sig) { const sm = el("small", null, small || ""); if (sig) sm.appendChild(el("span", "sig " + sig.cls, sig.text)); d.appendChild(sm); } return d; };
+    const pp = (a, b) => { const v = Math.round(a - b); return (v > 0 ? "+" : "") + v + " pp"; };
+    k.appendChild(kp("Soil moisture · " + fmtDay(last[0]), Math.round(last[1]) + " %", "", st));
+    k.appendChild(kp("vs. 30 days ago", ago ? pp(last[1], ago[1]) : "–", yAgo ? "vs. a year ago " + pp(last[1], yAgo[1]) : ""));
+    if (wx) {
+      k.appendChild(kp("Hot days ≥ 30 °C in " + wx.last.slice(0, 4), String(wx.hotDays), wx.hotNormal != null ? "normal by now: " + Math.round(wx.hotNormal) : ""));
+      k.appendChild(kp("Rain, last 30 days", wx.rain30Pct != null ? wx.rain30Pct + " %" : wx.rain30 != null ? wx.rain30 + " mm" : "–", wx.rain30Pct != null ? "of normal · " + wx.rain30 + " of " + wx.rain30Normal + " mm" : ""));
+    }
+    body.appendChild(k);
+    // soil moisture chart
+    body.appendChild(el("h4", "gd-h", "Soil moisture, % of usable field capacity"));
+    const lg = el("div", "gd-lg");
+    const li = (c, t, dash) => { const x = el("span"); const i = el("i"); i.style.background = dash ? "repeating-linear-gradient(90deg," + c + " 0 4px,transparent 4px 7px)" : c; x.append(i, document.createTextNode(t)); return x; };
+    lg.append(li("#0064aa", "Daily value"), li("#b45309", "Dry (" + dry + " %)", true), li("#b91c1c", "Very dry (" + very + " %)", true));
+    if (yAgo) lg.appendChild(li("#8a94a3", "Same day a year earlier", true));
+    body.appendChild(lg);
+    const box = el("div", "gd-chart");
+    const narrow = window.innerWidth < 640;
+    const W = narrow ? 420 : 840, H = narrow ? 230 : 250, L = 34, R = 8, T = 10, B = 26;
+    const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Soil moisture at " + s.name });
+    const hi = Math.max(110, ...ser.map((p) => p[1])), lo = 0;
+    const x = (n) => L + (n / Math.max(1, ser.length - 1)) * (W - L - R);
+    const y = (v) => T + (1 - (Math.max(lo, v) - lo) / (hi - lo)) * (H - T - B);
+    const MUTED = "var(--d-8a94a3-text, #8a94a3)";
+    for (let v = 0; v <= hi; v += 25) {
+      svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: "var(--d-eef0f3-border, #eef0f3)" }));
+      const t = svgEl("text", { x: L - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: MUTED }); t.textContent = v; svg.appendChild(t);
+    }
+    const months = ser.length > 200;
+    ser.forEach((p, n) => {
+      if (p[0].slice(8) !== "01") return;
+      const mm = p[0].slice(5, 7); if (months && !["01", "04", "07", "10"].includes(mm)) return;
+      const lab = mm === "01" ? p[0].slice(0, 4) : new Date(p[0] + "T00:00:00Z").toLocaleString("en-GB", { month: "short", timeZone: "UTC" });
+      const t = svgEl("text", { x: x(n), y: H - 6, "text-anchor": "middle", "font-size": 11, fill: MUTED, "font-weight": mm === "01" ? 600 : 400 }); t.textContent = lab; svg.appendChild(t);
+      svg.appendChild(svgEl("line", { x1: x(n), x2: x(n), y1: T, y2: H - B, stroke: "var(--d-f3f4f6-border, #f3f4f6)" }));
+    });
+    [[dry, "var(--d-b45309-text, #b45309)"], [very, "var(--d-b91c1c-text, #b91c1c)"]].forEach(([v, c]) => svg.appendChild(svgEl("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: c, "stroke-dasharray": "5 4", "stroke-width": 1.2 })));
+    const byDay = new Map(ser.map((p) => [p[0], p[1]]));
+    const prevYear = ser.map((p, n) => { const v = byDay.get(addDays(p[0], -365)); return v == null ? null : [x(n), y(v)]; }).filter(Boolean);
+    if (prevYear.length > 1) svg.appendChild(svgEl("path", { d: RadarViz.path(prevYear), fill: "none", stroke: MUTED, "stroke-width": 1.4, "stroke-dasharray": "4 4" }));
+    const pts = ser.map((p, n) => [x(n), y(p[1])]);
+    RadarViz.area(svg, pts, H - B, W_COL, 0.22);
+    svg.appendChild(svgEl("path", { d: RadarViz.path(pts), fill: "none", stroke: W_COL, "stroke-width": 2.2, "stroke-linejoin": "round" }));
+    const hl = svgEl("line", { y1: T, y2: H - B, stroke: "var(--d-002d55-text, #002d55)", "stroke-width": 1, opacity: 0 }); svg.appendChild(hl);
+    const tip = el("div", "gd-tip"); tip.hidden = true;
+    svg.addEventListener("pointermove", (ev) => {
+      const rc = svg.getBoundingClientRect(); const px = ((ev.clientX - rc.left) / rc.width) * W;
+      const n = Math.max(0, Math.min(ser.length - 1, Math.round(((px - L) / (W - L - R)) * (ser.length - 1))));
+      hl.setAttribute("x1", x(n)); hl.setAttribute("x2", x(n)); hl.setAttribute("opacity", 1);
+      tip.hidden = false; tip.style.left = (x(n) / W) * 100 + "%"; tip.style.top = (y(ser[n][1]) / H) * 100 + "%";
+      const py = byDay.get(addDays(ser[n][0], -365));
+      tip.textContent = fmtDay(ser[n][0]) + ": " + Math.round(ser[n][1]) + " %" + (py != null ? " · a year earlier " + Math.round(py) + " %" : "");
+    });
+    svg.addEventListener("pointerleave", () => { hl.setAttribute("opacity", 0); tip.hidden = true; });
+    box.append(svg, tip); body.appendChild(box);
+    // last 12 weeks: rain per week against normal, heat on top
+    if (wx && (wx.weeks || []).length) {
+      body.appendChild(el("h4", "gd-h", "Last 12 weeks · rain and heat per week"));
+      const lg2 = el("div", "wk-legend");
+      [["dryhot", "Dry and hot"], ["dry", "Dry"], ["hot", "Hot"], ["ok", "Normal"]].forEach(([c, l]) => { const xx = el("span"); xx.append(el("i", "wk " + c), document.createTextNode(l)); lg2.appendChild(xx); });
+      const nl = el("span"); const ni = el("i", "wk-nm"); nl.append(ni, document.createTextNode("Normal rain for the week")); lg2.appendChild(nl);
+      body.appendChild(lg2);
+      const wb = el("div", "gd-chart");
+      const H2 = narrow ? 200 : 210, B2 = narrow ? 26 : 40, T2 = 22;
+      const sv = svgEl("svg", { viewBox: `0 0 ${W} ${H2}`, role: "img", "aria-label": "Rain and heat per week, last 12 weeks" });
+      const weeks = wx.weeks;
+      const top = Math.max(10, ...weeks.map((w) => Math.max(w.rain || 0, w.rainNormal || 0))) * 1.1;
+      const yy = (v) => T2 + (1 - v / top) * (H2 - T2 - B2);
+      const step = niceStep(top / 4);
+      for (let v = 0; v <= top; v += step) {
+        sv.appendChild(svgEl("line", { x1: L, x2: W - R, y1: yy(v), y2: yy(v), stroke: "var(--d-eef0f3-border, #eef0f3)" }));
+        const t = svgEl("text", { x: L - 6, y: yy(v) + 4, "text-anchor": "end", "font-size": 11, fill: MUTED }); t.textContent = Math.round(v); sv.appendChild(t);
+      }
+      const unit = svgEl("text", { x: L - 6, y: 12, "text-anchor": "end", "font-size": 11, fill: MUTED }); unit.textContent = "mm"; sv.appendChild(unit);
+      const cw = (W - L - R) / weeks.length, bw = Math.min(38, cw * 0.55);
+      const FILL = { dryhot: "#e08a6a", dry: "#f4b49f", hot: "#f2c94c", ok: "var(--d-e5e7eb-bg, #dde1e7)", na: "transparent" };
+      weeks.forEach((w, n) => {
+        const cx = L + cw * (n + 0.5);
+        const g = svgEl("g", {});
+        if (w.rain != null) g.appendChild(svgEl("rect", { x: cx - bw / 2, y: yy(w.rain), width: bw, height: Math.max(1, yy(0) - yy(w.rain)), rx: 3, fill: FILL[w.cls] || FILL.ok }));
+        if (w.rainNormal != null) g.appendChild(svgEl("line", { x1: cx - bw / 2 - 5, x2: cx + bw / 2 + 5, y1: yy(w.rainNormal), y2: yy(w.rainNormal), stroke: "var(--d-002d55-text, #002d55)", "stroke-width": 2 }));
+        if (w.tmax != null) { const t = svgEl("text", { x: cx, y: 13, "text-anchor": "middle", "font-size": narrow ? 10 : 11, fill: w.hotDays ? "var(--d-b45309-text, #b45309)" : MUTED, "font-weight": w.hotDays ? 600 : 400 }); t.textContent = Math.round(w.tmax) + "°"; g.appendChild(t); }
+        const d = svgEl("text", { x: cx, y: H2 - B2 + 16, "text-anchor": "middle", "font-size": narrow ? 10 : 11, fill: MUTED }); d.textContent = narrow ? w.start.slice(8).replace(/^0/, "") + "/" + w.start.slice(5, 7).replace(/^0/, "") : fmtShort(w.start); g.appendChild(d);
+        if (w.rain != null && !narrow) { const r = svgEl("text", { x: cx, y: H2 - B2 + 30, "text-anchor": "middle", "font-size": 10.5, fill: "var(--ink-2, #4b5563)" }); r.textContent = w.rain + " mm"; g.appendChild(r); }
+        const ttl = svgEl("title", {}); ttl.textContent = "Week from " + fmtDay(w.start) + ": " + (WK_CLS[w.cls] || WK_CLS.na)[0] + (w.rain != null ? " · rain " + w.rain + " mm" + (w.rainNormal ? " (normal " + w.rainNormal + " mm)" : "") : "") + (w.tmax != null ? " · max " + Math.round(w.tmax) + " °C" : "") + (w.hotDays ? " · " + w.hotDays + " hot day" + (w.hotDays > 1 ? "s" : "") : "");
+        g.appendChild(ttl); sv.appendChild(g);
+      });
+      wb.appendChild(sv); body.appendChild(wb);
+      body.appendChild(el("p", "gd-note", "Bars: rain per week, coloured by the week's class. Dark line: normal rain for that week (" + (WEATHER.normalPeriod || "1991–2020") + "). Numbers on top: the week's highest temperature."));
+    }
+    const ab = el("div", "gd-about two");
+    [["For WEPA", "Long dry spells and heat come before low river levels, stricter limits on water abstraction and warmer cooling water. Below " + dry + " % of usable field capacity plants start to suffer, below " + very + " % is drought stress."],
+     ["Limits", "Soil moisture is modelled by DWD for the nearest station (under grass, 0–60 cm), not measured at the mill. Weather is the nearest DWD station with daily data; normals use the years that station has between 1991 and 2020."]].forEach(([h2, t2], n) => { const d = el("div", "ab" + (n ? 2 : 1)); d.append(el("b", null, h2), el("p", null, t2)); ab.appendChild(d); });
+    body.appendChild(ab);
+    const foot = el("div", "gd-foot"); const sp = el("span", null, "Source: Deutscher Wetterdienst, Climate Data Center (CC BY 4.0) ");
+    const a = el("a", null, "open ↗"); a.href = "https://opendata.dwd.de/climate_environment/CDC/"; a.target = "_blank"; a.rel = "noopener"; sp.appendChild(a); foot.appendChild(sp); body.appendChild(foot);
+    $("gdlg").showModal();
+  }
+  function fmtShort(iso) { const d = new Date(iso + "T00:00:00Z"); return d.getUTCDate() + " " + d.toLocaleString("en-GB", { month: "short", timeZone: "UTC" }); }
 
   function renderIndustry(host) {
     const draws = [];

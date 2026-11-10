@@ -446,3 +446,14 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outl
 /* summary sentence on top of At a glance (inside the tab, so the page does not jump between tabs) */
 .pg-sum { margin: 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; max-width: none; }
 .pg-sum b { color: var(--ink); font-weight: 600; }
+
+/* site pop-up (Water & weather) */
+.w-t tr.w-click { cursor: pointer; }
+.w-t tr.w-click:hover td { background: var(--d-f5f8fb-bg, #f5f8fb); }
+.w-t tr.w-click:focus-visible { outline: 2px solid var(--d-0064aa-text, #0064aa); outline-offset: -2px; }
+.w-t .w-more { color: var(--ink-3); font-weight: 400; }
+.gd-h { margin: 6px 0 -4px; font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.gd-note { margin: -4px 0 0; font-size: 12px; color: var(--ink-3); }
+.gd-about.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .gd-about.two { grid-template-columns: 1fr; } }
+.wk-legend .wk-nm { display: inline-block; width: 16px; height: 2px; background: var(--d-002d55-text, #002d55); }
