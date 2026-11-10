@@ -1,0 +1,29 @@
+{
+  "_comment": "WEPA mills outside Germany for Energy & climate › Water & weather (scripts/collect_sites_intl.py). Coordinates are the town of each mill (public, approximate – the weather grid is 9 km anyway); correct them if you like. Weather and soil: Copernicus ERA5-Land time series (CC BY 4.0, free key as GitHub secret CDS_KEY). River gauges: 'gauge.source' = hubeau (France, Hub'Eau, Licence Ouverte), imgw (Poland, IMGW-PIB public data), rws (Netherlands, Rijkswaterstaat), ea (England, Environment Agency, Open Government Licence). The collector picks the nearest gauge within 'maxKm' (optionally only on 'river'), or the one whose name contains 'match'. Italy and Wales have no free national gauge service, so no gauge there.",
+  "sites": [
+    { "id": "piechowice", "name": "Piechowice", "country": "PL", "lat": 50.851, "lon": 15.597,
+      "gauge": { "source": "imgw", "match": "PIECHOWICE", "maxKm": 25 } },
+    { "id": "lille", "name": "Lille (Bousbecque)", "country": "FR", "lat": 50.771, "lon": 3.084,
+      "gauge": { "source": "hubeau", "river": "Lys", "maxKm": 20 } },
+    { "id": "chateau-thierry", "name": "Château-Thierry", "country": "FR", "lat": 49.046, "lon": 3.403,
+      "gauge": { "source": "hubeau", "river": "Marne", "maxKm": 20 } },
+    { "id": "troyes", "name": "Troyes (Torvilliers)", "country": "FR", "lat": 48.270, "lon": 3.976,
+      "gauge": { "source": "hubeau", "river": "Seine", "maxKm": 20 } },
+    { "id": "annonay", "name": "Annonay (Davézieux)", "country": "FR", "lat": 45.255, "lon": 4.705,
+      "gauge": { "source": "hubeau", "maxKm": 15 } },
+    { "id": "lucca-capannori", "name": "Lucca – Capannori", "country": "IT", "lat": 43.842, "lon": 10.572 },
+    { "id": "lucca-porcari", "name": "Lucca – Porcari", "country": "IT", "lat": 43.840, "lon": 10.617 },
+    { "id": "cassino", "name": "Cassino", "country": "IT", "lat": 41.490, "lon": 13.830 },
+    { "id": "swalmen", "name": "Swalmen", "country": "NL", "lat": 51.230, "lon": 6.036,
+      "gauge": { "source": "rws", "match": ["Roermond", "Venlo"], "maxKm": 25 } },
+    { "id": "bridgend", "name": "Bridgend", "country": "GB", "lat": 51.505, "lon": -3.577 },
+    { "id": "blackburn", "name": "Blackburn", "country": "GB", "lat": 53.748, "lon": -2.482,
+      "gauge": { "source": "ea", "maxKm": 10 } }
+  ],
+  "countries": { "PL": "Poland", "FR": "France", "IT": "Italy", "NL": "Netherlands", "GB": "United Kingdom" },
+  "soil": {
+    "_comment": "Soil moisture 0–100 cm from ERA5-Land, shown in % of the normal for the day of the year (1991–2020). Below 'dry' % of normal = dry, below 'veryDry' = very dry.",
+    "dry": 75,
+    "veryDry": 55
+  }
+}

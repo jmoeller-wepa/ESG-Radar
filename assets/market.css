@@ -497,3 +497,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outl
 .ir-na { grid-column: 3 / -1; font-size: 12.5px; color: var(--ink-3); }
 .irow svg.spark { width: 120px; height: 28px; display: block; }
 @media (max-width: 900px) { .irow { grid-template-columns: 20px minmax(0, 1fr) auto; } .ir-n b { white-space: normal; } .ir-v { display: flex; flex-direction: column; align-items: flex-end; } .ir-v small { font-size: 11px; } .irow > .sig, .irow > svg.spark, .irow > span:empty, .irow .ir-c { display: none; } .ir-v { text-align: right; } }
+/* mills abroad */
+.w-t tr.w-grp td { background: none !important; padding: 14px 10px 4px; font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); border-bottom: 0; }
+.w-t .w-ch { font-size: 12px; color: var(--ink-2); white-space: nowrap; }
