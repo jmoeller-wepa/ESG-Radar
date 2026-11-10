@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-10T06:10:42",
+    "lastFeedRun": "2026-11-10T08:27:08",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -8573,6 +8573,30 @@
       "nextDateLabel": null,
       "source": "Water policy & wastewater (via Google News)",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE41SWpGSF9RNk50ZjllelRORC1EQXUwSzNseVZWaFVpbDdCYmJmbmFuM2Uza1Y1Qy15bWFuZldQN0hBdktPaVJHbnhXT3dkNDNKTVZtZlVaVnFDd3ZBWmlURUxzdXNmVmNBYWxEVHBpZi1fQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-10"
+    },
+    {
+      "id": "feed-127726e187",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Forderung nach Optimierung: Niedrigwasser im Rhein: Droht der Industriekollaps? - Rhein-Zeitung",
+      "summary": "Forderung nach Optimierung: Niedrigwasser im Rhein: Droht der Industriekollaps? Rhein-Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObWN4cTVfaUt1U1BUamI4a1pONjR6QlpQdmhwQk9NdkJ0emw4UzNDQ1pvZlJhZUp1QmYtMXpHeXRYYkJaMkU2YXVhNW04QmFCV2VmOWVvZkx1U3lnY1FTSWZfX0p0bmE3RHdUX0pXM295ZUk1dG5JVldzak1uQ1c1WkxuNEdldGUzRXR6UjhDNnp0ejFlS3JhM2RaWVozZnBqZTdwSlVhRkJ1X1l1dENsbnBR?oc=5",
       "origin": "feed",
       "added": "2026-11-10"
     }

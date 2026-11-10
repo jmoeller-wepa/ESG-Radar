@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T06:24:06",
+ "updated": "2026-11-10T09:02:00",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -575,6 +575,16 @@
    "quarter": "Q1 2027",
    "desc": "Fabric Data Agent supports service principal (SPN) authentication, enabling agent-to-agent scenarios such as Microsoft Foundry calling a Data Agent using an SPN. However, SPN-based access is not currently supported with Row-Level Security (",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Service-Principal-Support-for-Data-Agents-in-Fabric-Preview/ba-p/5181634"
+  },
+  {
+   "id": "f5495e72-de01-f111-8406-6045bd00f798",
+   "name": "Environment - Support for Python Notebook",
+   "product": "Data Engineering",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "Python Notebooks now integrate with Environments, enabling users to upload and use custom libraries and packages.",
+   "url": "https://www.fabric-gps.com/release/f5495e72-de01-f111-8406-6045bd00f798"
   },
   {
    "id": "a3c892bc-d7b2-f111-aaab-70a8a59cbac4",

@@ -1,8 +1,6 @@
 {
- "at": "2026-11-10T06:23:53",
- "failed": [
-  "arnsberg: no recent observations"
- ],
+ "at": "2026-11-10T08:41:13",
+ "failed": [],
  "details": [
   {
    "stations": 1386,
@@ -10,8 +8,21 @@
   },
   {
    "site": "arnsberg",
-   "historical": "tageswerte_KL_13952_20090201_20251231_hist.zip",
-   "normalYears": null
+   "skippedStations": [
+    "13952 Arnsberg-Müschede: only 0 days with temperature and rain"
+   ]
+  },
+  {
+   "site": "arnsberg",
+   "historical": "tageswerte_KL_07330_20051001_20251231_hist.zip",
+   "normalYears": 16
+  },
+  {
+   "site": "arnsberg",
+   "station": 7330,
+   "name": "Arnsberg-Neheim",
+   "km": 6.7,
+   "last": "2026-11-08"
   },
   {
    "site": "giershagen",

@@ -143,7 +143,7 @@
    "wepa": "The size and direction of WEPA's home market for tissue. A falling production volume with stable demand means more imports – more competition for German mills.",
    "limits": "Machine production of tissue base paper, not converted products or WEPA's own volumes. Year-to-date totals, so early-year changes can swing. Covers German mills only."
   },
-  "fetched": "2026-11-10T06:23:24"
+  "fetched": "2026-11-10T08:40:20"
  },
  "germanyRecoveredRate": {
   "label": "Recovered paper utilisation rate by paper grade, Germany",
