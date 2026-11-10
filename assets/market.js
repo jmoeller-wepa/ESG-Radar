@@ -1979,10 +1979,14 @@
       const ms = [...new Set(items.flatMap((i) => i.series.filter((p) => p[0].startsWith(y)).map((p) => p[0])))];
       const parts2 = items.map((i) => { const v = i.series.filter((p) => p[0].startsWith(y)).map((p) => p[1]); return { id: i.id, name: i.label.replace("German power mix · ", ""), v: v.length ? v.reduce((a, b) => a + b, 0) / v.length : 0, color: MIX_COL[i.id] || "#828282" }; });
       const r = { year: y, parts: parts2, total: parts2.reduce((a, p) => a + p.v, 0) };
+      r.months = ms.slice().sort().map((m) => {
+        const mp = items.map((i) => { const pt = i.series.find((p) => p[0] === m); return { id: i.id, name: i.label.replace("German power mix · ", ""), v: pt ? pt[1] : 0, color: MIX_COL[i.id] || "#828282" }; });
+        return { year: fmtMonth(m).split(" ")[0], parts: mp, total: mp.reduce((a, p) => a + p.v, 0) };
+      }).filter((x) => x.total > 0);
       if (ms.length < 12) r.partial = y + ": " + fmtMonth(ms.sort()[0]) + " – " + fmtMonth(ms[ms.length - 1]) + " only.";
       return r;
     }).filter((r) => r.total > 0);
-    if (rows.length > 1) { sec.appendChild(el("h4", "gd-h", "By year · average of the months")); sec.appendChild(mixYears(rows)); }
+    if (rows.length > 1) { sec.appendChild(el("h4", "gd-h", "By year · average of the months · click a year for its months")); sec.appendChild(mixYears(rows)); }
     const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Explains why the German grid factor moves – more wind and solar lower the location-based Scope 2 of German sites, more coal raises it. Changes are against the same month a year earlier."));
     sec.appendChild(w);
     return sec;
@@ -2024,6 +2028,7 @@
     }).filter((r) => r.total > 0);
   }
   // 100 % stacked bar per year, newest on top; legend with the newest share and the change since the first year
+  const MIX_OPEN = new Set();   // years opened to months in the power mix (kept while the page is open)
   function mixYears(rows, opt) {
     opt = opt || {};
     const box = el("div", "myr");
@@ -2040,8 +2045,32 @@
     });
     box.appendChild(lg);
     const list = el("div", "myr-rows");
+    const barOf = (r) => {
+      const bar = el("div", "mix myr-bar"); bar.setAttribute("role", "img");
+      bar.setAttribute("aria-label", r.year + ": " + names.map((p) => p.name + " " + share(r, p.id).toFixed(0) + " %").join(", "));
+      names.forEach((p) => {
+        const v = share(r, p.id); if (v <= 0) return;
+        const i = el("i"); i.style.width = v + "%"; i.style.background = p.color; i.title = r.year + " · " + p.name + ": " + v.toFixed(1) + " %";
+        if (v >= 7) { i.textContent = Math.round(v) + "%"; if (["#96d2dc", "#f4b49f", "#33b09c"].includes(p.color)) i.classList.add("dk"); }
+        bar.appendChild(i);
+      });
+      return bar;
+    };
     rows.slice().reverse().forEach((r) => {
       const row = el("div", "myr-r");
+      if (r.months && r.months.length) {
+        const open = MIX_OPEN.has(r.year);
+        const b = el("button", "myr-y myr-tg", r.year + (r.partial ? " *" : "")); b.type = "button";
+        b.setAttribute("aria-expanded", String(open)); b.title = (open ? "Hide" : "Show") + " the months of " + r.year;
+        row.appendChild(b); row.appendChild(barOf(r));
+        if (opt.unit) row.appendChild(el("span", "myr-t", Math.round(r.total).toLocaleString("en-GB") + " " + opt.unit));
+        list.appendChild(row);
+        const mbox = el("div", "myr-months"); mbox.hidden = !open;
+        r.months.forEach((m) => { const mr = el("div", "myr-r myr-m"); mr.append(el("span", "myr-y", m.year), barOf(m)); mbox.appendChild(mr); });
+        list.appendChild(mbox);
+        b.addEventListener("click", () => { const o = mbox.hidden; mbox.hidden = !o; b.setAttribute("aria-expanded", String(o)); b.title = (o ? "Hide" : "Show") + " the months of " + r.year; if (o) MIX_OPEN.add(r.year); else MIX_OPEN.delete(r.year); });
+        return;
+      }
       row.appendChild(el("span", "myr-y", r.year + (r.partial ? " *" : "")));
       const bar = el("div", "mix myr-bar"); bar.setAttribute("role", "img");
       bar.setAttribute("aria-label", r.year + ": " + names.map((p) => p.name + " " + share(r, p.id).toFixed(0) + " %").join(", "));

@@ -82,7 +82,7 @@
       items: [
         ["At a glance", "One sentence that sums up the page, then cards for grid carbon intensity, the German power mix, gas storage and water & weather. One dot per indicator or site: red = headwind (e.g. more coal, low water), green = tailwind."],
         ["Trends", "Compare grid and power-mix indicators as an index; pick them under “In chart” in the bar."],
-        ["Power grid", "The German power mix by source for the latest month and year by year (average of the months), and CO₂ per kWh by country as 12-month averages (they smooth out the seasons) – useful for location-based Scope 2. Click a country for its history."],
+        ["Power grid", "The German power mix by source for the latest month and year by year (average of the months; click a year to open its months), and CO₂ per kWh by country as 12-month averages (they smooth out the seasons) – useful for location-based Scope 2. Click a country for its history."],
         ["Gas storage", "How full EU and German gas storage is (GIE AGSI+, daily), drawn against the range of the last five years. The dashed line is the EU target of 90 % full by 1 November. Switch between EU and Germany."],
         ["Water & weather", "Rhine level at Kaub (barge bottleneck) and Mainz, plus per German mill: soil moisture, hot days (≥ 30 °C) since 1 January against normal, rain in the last 30 days in % of normal (1991–2020), and a 12-week strip – each square is a week: dry, hot, dry and hot, or normal. Hover a square for its numbers."],
         ["Country filter", "The Country filter at the top of Water & weather shows the river gauges and mills of one country; “All countries” shows everything, Germany first."],
