@@ -15,7 +15,7 @@
   const PAGE_Q = { costs: ["cost"], market: ["market", "env"], energy: ["grid"] };
   const PAGE_TABS = { costs: ["glance", "cmp", "cost"], market: ["glance", "cmp", "industry", "fibre"], energy: ["glance", "cmp", "grid", "gas", "water"] };
   const PAGE_FILE = { costs: "costs.html", market: "market.html", energy: "energy.html" };
-  const state = { gran: "auto", tab: "glance", ind: "month", area: "all", q: "all", topic: "all", find: "", gasArea: "eu", pulp: "total", sel: new Set(), cmp: [] };
+  const state = { gran: "auto", tab: "glance", ind: "month", area: "all", q: "all", topic: "all", find: "", gasArea: "eu", pulp: "total", sel: new Set(), cmp: [], lay: (() => { try { return localStorage.getItem("radar.trendsView") === "list" ? "list" : "cards"; } catch (e) { return "cards"; } })() };
   // The four questions (config/market.json "questions"); every indicator belongs to one
   let QUESTIONS = { cost: { label: "What does tissue cost us?", title: "What does tissue cost us right now?", tab: "cost", link: "Open cost index" },
     market: { label: "How is our market doing?", title: "How is our market doing?", tab: "industry", link: "Open industry" },
@@ -171,6 +171,14 @@
       topicDD = RadarDD.single({ label: "Topic", value: state.topic, items: [{ key: "all", label: "All topics" }].concat(groups.map(([g, l]) => ({ key: g, label: l }))), onChange: (k) => { state.topic = k; renderCmpTiles(); writeHash(); } });
       nodes.push(topicDD.el);
       nodes.push(el("span", "fb-sp"));
+      const vs = el("div", "vsw"); vs.setAttribute("role", "group"); vs.setAttribute("aria-label", "Show indicators as");
+      [["cards", "Cards", '<rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/>'], ["list", "List", '<path d="M2.5 4h11M2.5 8h11M2.5 12h11" stroke-linecap="round"/>']].forEach(([k, t, ic]) => {
+        const b = el("button"); b.type = "button"; b.setAttribute("aria-pressed", String(state.lay === k)); b.title = k === "list" ? "Show as a compact list" : "Show as cards";
+        b.innerHTML = '<svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">' + ic + "</svg>"; b.appendChild(el("span", null, t));
+        b.addEventListener("click", () => { if (state.lay === k) return; state.lay = k; try { localStorage.setItem("radar.trendsView", k); } catch (e) {} [...vs.children].forEach((x) => x.setAttribute("aria-pressed", String(x === b))); renderCmpTiles(); });
+        vs.appendChild(b);
+      });
+      nodes.push(vs);
       const ib = el("div", "mb-pop mb-ind"); ib.appendChild(el("span", "fl", "In chart")); ib.appendChild(indicatorNode()); nodes.push(ib);
     } else nodes.push(el("span", "fb-sp"));
     const pb = el("div", "mb-pop"); pb.appendChild(el("span", "fl", "Period")); pb.appendChild(periodNode()); nodes.push(pb);
@@ -555,6 +563,30 @@
     const a = el("a", null, "Source ↗"); a.href = (ind.source === "manual" && ind.notes && ind.notes.length && ind.notes[ind.notes.length - 1].url) || ind.link; a.target = "_blank"; a.rel = "noopener";
     src.appendChild(a); t.appendChild(src);
     return t;
+  }
+  // compact list row (Trends › List view): pick for the chart, name, latest value, change, sparkline
+  function indRow(ind) {
+    const can = chartable(ind), sel = state.cmp.includes(ind.id);
+    const r = el("div", "irow" + (sel ? " sel" : ""));
+    r.tabIndex = 0; r.setAttribute("role", "button"); r.setAttribute("aria-label", ind.label + " – open details");
+    r.addEventListener("click", (e) => { if (!e.target.closest("a, .pin")) openInd(ind); });
+    r.addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target === r) openInd(ind); });
+    if (sel) r.style.setProperty("--sel", colorOf[ind.id]);
+    if (can) {
+      const p = el("button", "pin", sel ? "✓" : ""); p.type = "button"; p.setAttribute("role", "checkbox"); p.setAttribute("aria-checked", String(sel));
+      p.title = sel ? "Remove from the Trends chart" : "Add to the Trends chart"; p.setAttribute("aria-label", p.title + " – " + ind.label);
+      if (sel && LIGHT.has(colorOf[ind.id])) p.style.color = "var(--d-002d55-text, #002d55)";
+      p.addEventListener("click", (e) => { e.stopPropagation(); toggle(ind.id); });
+      r.appendChild(p);
+    } else r.appendChild(el("span", "pin off"));
+    const n = el("div", "ir-n"); n.append(el("b", null, ind.label), el("small", null, (ind.attribution || "").split(/[,(]/)[0].trim() + " · " + ind.freq)); r.appendChild(n);
+    if (!hasData(ind)) { r.appendChild(el("span", "ir-na", "No data yet")); return r; }
+    const last = ind.series[ind.series.length - 1];
+    const v = el("div", "ir-v"); v.append(el("b", null, fmtVal(last[1], ind.unit) + " "), el("small", null, unitLabel(ind.unit) + " · " + fmtDate(last[0], ind))); r.appendChild(v);
+    r.appendChild(el("span", "ir-c", yoy(ind) ? chgText(ind) : "–"));
+    const sg = signal(ind); r.appendChild(sg ? el("span", "sig " + sg.cls, sg.text) : el("span"));
+    r.appendChild(can ? spark(ind, sel ? colorOf[ind.id] : null) : el("span"));
+    return r;
   }
   function toggle(id) {
     if (state.cmp.includes(id)) state.cmp = state.cmp.filter((c) => c !== id);
@@ -1196,15 +1228,13 @@
     }
     // fibre supply in Germany: pulp imports + recovered paper share
     const sup = el("section", "panel ind-sec");
-    sup.appendChild(el("div", "ind-h")).append(el("h3", null, "Fibre supply in Germany"));
-    const pi = M.indicators.find((i) => i.id === "de_imp_pulp");
-    const g = el("div", "tiles"); if (pi && hasData(pi)) g.appendChild(tile(pi)); sup.appendChild(g);
     const rr = IND && IND.germanyRecoveredRate;
+    sup.appendChild(el("div", "ind-h")).append(el("h3", null, "Recovered paper share in Germany"), el("span", null, "% of fibre input · yearly"));
     if (rr && rr.series) {
-      const t = el("table", "gd-yr"); const hr = el("tr"); ["Recovered paper share", ...rr.years.slice(-6).map(String)].forEach((x) => hr.appendChild(el("th", null, x)));
+      const t = el("table", "gd-yr"); const hr = el("tr"); ["Grade", ...rr.years.slice(-6).map(String)].forEach((x) => hr.appendChild(el("th", null, x)));
       const th = el("thead"); th.appendChild(hr); t.appendChild(th); const tb = el("tbody");
       ["Hygiene papers", "All paper & board"].forEach((k) => { const v = rr.series[k]; if (!v) return; const tr = el("tr", k === "Hygiene papers" ? "us" : ""); tr.appendChild(el("td", null, k)); v.slice(-6).forEach((x) => tr.appendChild(el("td", null, x + " %"))); tb.appendChild(tr); });
-      t.appendChild(tb); const tw = el("div"); tw.style.overflowX = "auto"; tw.appendChild(t); sup.appendChild(tw);
+      t.classList.add("yr-t"); t.appendChild(tb); const tw = el("div", "tw-x"); tw.appendChild(t); sup.appendChild(tw);
       const f = el("p", "ind-src"); f.append("Source: ", srcLink(rr.source)); sup.appendChild(f);
     }
     host.appendChild(sup);
@@ -1389,8 +1419,6 @@
     if (state.ind === "year") { renderIndustryYear(host, draws); return; }
     // 0) monthly market indicators (Destatis)
     host.appendChild(secHead("ind-month", "Every month", "How is our market doing?"));
-    const mk = M.indicators.filter((i) => i.group === "market_de" || i.group === "fibre_supply");
-    if (mk.length) { const g = el("div", "tiles"); mk.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
     const shelf = shelfPanel(draws); if (shelf) host.appendChild(shelf);
     if (!IND) host.appendChild(el("div", "empty", "Industry figures of DIE PAPIERINDUSTRIE are not available yet."));
     // 1) Germany, year-to-date by grade
@@ -1749,7 +1777,18 @@
       const d = p && prev ? p[1] - prev[1] : null;
       return { name: i.label.replace("German power mix · ", ""), v: p ? p[1] : 0, color: MIX_COL[i.id] || "#828282", extra: d == null ? "" : (d > 0.05 ? "▲ " : d < -0.05 ? "▼ " : "▬ ") + Math.abs(d).toFixed(1) + " pp" };
     });
+    sec.appendChild(el("h4", "gd-h", fmtMonth(last)));
     const [bar, lg] = mixBar(parts); sec.append(bar, lg);
+    // development over the years: average share of the months of each calendar year
+    const ys = [...new Set(items.flatMap((i) => i.series.map((p) => p[0].slice(0, 4))))].sort();
+    const rows = ys.map((y) => {
+      const ms = [...new Set(items.flatMap((i) => i.series.filter((p) => p[0].startsWith(y)).map((p) => p[0])))];
+      const parts2 = items.map((i) => { const v = i.series.filter((p) => p[0].startsWith(y)).map((p) => p[1]); return { id: i.id, name: i.label.replace("German power mix · ", ""), v: v.length ? v.reduce((a, b) => a + b, 0) / v.length : 0, color: MIX_COL[i.id] || "#828282" }; });
+      const r = { year: y, parts: parts2, total: parts2.reduce((a, p) => a + p.v, 0) };
+      if (ms.length < 12) r.partial = y + ": " + fmtMonth(ms.sort()[0]) + " – " + fmtMonth(ms[ms.length - 1]) + " only.";
+      return r;
+    }).filter((r) => r.total > 0);
+    if (rows.length > 1) { sec.appendChild(el("h4", "gd-h", "By year · average of the months")); sec.appendChild(mixYears(rows)); }
     const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("Explains why the German grid factor moves – more wind and solar lower the location-based Scope 2 of German sites, more coal raises it. Changes are against the same month a year earlier."));
     sec.appendChild(w);
     return sec;
@@ -1762,30 +1801,69 @@
     const latest = withData.map((i) => i.series[i.series.length - 1][0].slice(0, 4)).sort().pop();
     const tools = el("div", "sec-tools");
     tools.appendChild(el("span", null, latest ? "Latest reporting year " + latest : "Waiting for the first Destatis data"));
-    const copy = el("button", "btn-o", "Copy as text"); copy.type = "button";
-    copy.addEventListener("click", () => {
-      const lines = ["German paper industry (WZ 17) · environmental profile"];
-      prof.filter((i) => hasData(i) && i.stack !== "energy").forEach((i) => { const l = i.series[i.series.length - 1]; lines.push("- " + i.label + ": " + fmtVal(l[1], i.unit) + " " + i.unit + " (" + fmtDate(l[0], i) + "). Source: " + i.attribution + "."); });
-      const em = energyParts(); if (em) lines.push("- Energy mix " + em.year + ": " + em.parts.map((p) => p.name + " " + (100 * p.v / em.tot).toFixed(0) + " %").join(", ") + ". Source: Destatis 43531.");
-      const rr = IND && IND.germanyRecoveredRate;
-      if (rr && rr.series && rr.series["Hygiene papers"]) { const v = rr.series["Hygiene papers"]; lines.push("- Recovered paper utilisation, hygiene papers: " + v[v.length - 1] + " % (" + rr.years[rr.years.length - 1] + "). Source: " + ((rr.source && rr.source.label) || "UBA") + "."); }
-      const txt = lines.join("\n");
-      const done = () => { copy.textContent = "Copied ✓"; setTimeout(() => { copy.textContent = "Copy as text"; }, 1800); };
-      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, () => window.prompt("Copy the text:", txt)); else window.prompt("Copy the text:", txt);
-    });
-    tools.appendChild(copy);
     const head = secHead("ind-year", "Every year · industry profile", "Where does the industry stand on environment?", tools);
     host.appendChild(head);
     const sec = el("section", "panel ind-sec");
     const h = el("div", "ind-h"); h.append(el("h3", null, "Energy mix of the paper industry"), el("span", null, "share of energy use · Destatis 43531")); sec.appendChild(h);
-    const em = energyParts();
-    if (em) { const [bar, lg] = mixBar(em.parts); h.lastChild.textContent = em.year + " · share of energy use · Destatis 43531"; sec.append(bar, lg); }
+    const years = energyYears();
+    if (years.length) { h.lastChild.textContent = "share of energy use · " + years[0].year + "–" + years[years.length - 1].year + " · Destatis 43531"; sec.appendChild(mixYears(years, { unit: "TJ" })); }
     else sec.appendChild(el("div", "empty", "The energy mix arrives with the first Destatis data update."));
     const w = el("p", "wepa-l"); w.append(el("b", null, "For WEPA"), document.createTextNode("How gas-dependent the industry is and how far fuel switching has come – a yardstick for WEPA's transition plan (ESRS E1).")); sec.appendChild(w);
     host.appendChild(sec);
     const facts = prof.filter((i) => i.stack !== "energy").concat(prof.filter((i) => i.id === "prof_energy_total"));
-    if (facts.length) { const g = el("div", "tiles"); facts.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
+    if (facts.length) { const g = el("div", "tiles fill"); facts.forEach((i) => g.appendChild(tile(i))); host.appendChild(g); }
     return head;
+  }
+  // energy mix per reporting year (absolute TJ per carrier + "Other" = total minus carriers)
+  function energyYears() {
+    const get = (id) => M.indicators.find((i) => i.id === id);
+    const tot = get("prof_energy_total");
+    const carriers = Object.keys(ENERGY_COL).map(get).filter((i) => i && hasData(i));
+    if (!carriers.length) return [];
+    const ys = [...new Set(carriers.flatMap((i) => i.series.map((p) => p[0])))].sort();
+    const val = (i, y) => { const p = i && (i.series || []).find((x) => x[0] === y); return p ? p[1] : null; };
+    return ys.map((y) => {
+      const parts = carriers.map((i) => ({ id: i.id, name: i.label.replace("Energy use, paper industry · ", "").replace(/^\w/, (c) => c.toUpperCase()), v: val(i, y) || 0, color: ENERGY_COL[i.id] }));
+      const sum = parts.reduce((a, p) => a + p.v, 0), t = val(tot, y);
+      parts.push({ id: "other", name: "Other", v: t && t > sum * 1.005 ? t - sum : 0, color: "#828282" });
+      return { year: y.slice(0, 4), parts, total: Math.max(t || 0, sum) };
+    }).filter((r) => r.total > 0);
+  }
+  // 100 % stacked bar per year, newest on top; legend with the newest share and the change since the first year
+  function mixYears(rows, opt) {
+    opt = opt || {};
+    const box = el("div", "myr");
+    const first = rows[0], last = rows[rows.length - 1];
+    const share = (r, id) => { const p = r.parts.find((x) => x.id === id); return p ? (100 * p.v) / r.total : 0; };
+    const names = last.parts.filter((p) => rows.some((r) => share(r, p.id) > 0.05));
+    const lg = el("div", "mix-lg");
+    names.forEach((p) => {
+      const sp = el("span"); const d = el("i"); d.style.background = p.color;
+      const a = share(last, p.id), b = share(first, p.id), dd = a - b;
+      sp.append(d, document.createTextNode(p.name + " "), el("b", null, a.toFixed(1) + " %"));
+      if (rows.length > 1) sp.appendChild(el("small", null, " " + (dd > 0.05 ? "▲ " : dd < -0.05 ? "▼ " : "▬ ") + Math.abs(dd).toFixed(1) + " pp since " + first.year));
+      lg.appendChild(sp);
+    });
+    box.appendChild(lg);
+    const list = el("div", "myr-rows");
+    rows.slice().reverse().forEach((r) => {
+      const row = el("div", "myr-r");
+      row.appendChild(el("span", "myr-y", r.year + (r.partial ? " *" : "")));
+      const bar = el("div", "mix myr-bar"); bar.setAttribute("role", "img");
+      bar.setAttribute("aria-label", r.year + ": " + names.map((p) => p.name + " " + share(r, p.id).toFixed(0) + " %").join(", "));
+      names.forEach((p) => {
+        const v = share(r, p.id); if (v <= 0) return;
+        const i = el("i"); i.style.width = v + "%"; i.style.background = p.color; i.title = r.year + " · " + p.name + ": " + v.toFixed(1) + " %";
+        if (v >= 7) { i.textContent = Math.round(v) + "%"; if (["#96d2dc", "#f4b49f", "#33b09c"].includes(p.color)) i.classList.add("dk"); }
+        bar.appendChild(i);
+      });
+      row.appendChild(bar);
+      if (opt.unit) row.appendChild(el("span", "myr-t", Math.round(r.total).toLocaleString("en-GB") + " " + opt.unit));
+      list.appendChild(row);
+    });
+    box.appendChild(list);
+    if (rows.some((r) => r.partial)) box.appendChild(el("p", "gd-note", "* " + rows.find((r) => r.partial).partial));
+    return box;
   }
   function energyParts() {
     const get = (id) => M.indicators.find((i) => i.id === id);
@@ -1832,7 +1910,8 @@
       if (g === "profile") return;
       const items = vis.filter((i) => i.group === g); if (!items.length) return;
       const sec = el("section", "group"); sec.appendChild(el("h3", "cap", label));
-      const grid = el("div", "tiles"); items.forEach((i) => grid.appendChild(tile(i)));
+      const grid = state.lay === "list" ? el("div", "ilist") : el("div", "tiles");
+      items.forEach((i) => grid.appendChild(state.lay === "list" ? indRow(i) : tile(i)));
       sec.appendChild(grid); host.appendChild(sec);
     });
   }

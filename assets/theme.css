@@ -610,3 +610,7 @@ a.li:hover, a.rm-mv:hover { background-color: var(--acc-tint, #e8f7f4); box-shad
 /* Market tabs without a side panel (Industry, Grid carbon intensity, Water): content uses the full width */
 main.layout.no-side { grid-template-columns: minmax(0, 1fr) !important; }
 main.layout.no-side > .side { display: none !important; }
+
+/* One hover for every card in the dashboard (overview, news, at-a-glance, indicator tiles) */
+.kpi, .tile, .card, .w, .panel.tc, .c-strip { transition: border-color .15s, box-shadow .15s; }
+:root .kpi:hover, :root .tile:hover, :root .card:hover, :root .ov-grid:not(.editing) > .w:hover, :root .panel.tc:hover, :root .c-strip:hover { border-color: var(--d-c9d6e3-border, #c9d6e3); box-shadow: 0 4px 16px rgba(0, 45, 85, .07); }
