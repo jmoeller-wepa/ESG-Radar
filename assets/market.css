@@ -513,3 +513,11 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--blue-500); outl
 .myr-m .myr-bar i { font-size: 10px; }
 .myr-months .myr-r { grid-template-columns: 46px minmax(0, 1fr); }
 .myr-months[hidden] { display: none; }
+/* At a glance → Overview pin */
+.tc-h { flex-wrap: wrap; }
+.tc-h h3 { flex: 1 1 auto; min-width: 0; }
+.gl-pin { flex: none; border: 1px solid var(--line-2); background: var(--d-fff-bg, #fff); border-radius: 999px; padding: 2px 10px; font: inherit; font-size: 12px; color: var(--ink-3); cursor: pointer; white-space: nowrap; }
+.gl-pin:hover { color: var(--d-0064aa-text, #0064aa); border-color: #c9d6e3; }
+.gl-pin.on { color: var(--d-0064aa-text, #0064aa); background: var(--d-eef5fb-bg, #eef5fb); border-color: transparent; }
+.tc-act { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+@media (max-width: 720px) { .tc-act { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; align-items: center; } }

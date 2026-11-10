@@ -10,7 +10,9 @@
   const PRESETS = [["12", "Last 12 months"], ["36", "3 years"], ["60", "5 years"], ["all", "All"]];
   const EARLIEST = "2019-01";
   const DEFAULT_CMP = document.body.dataset.mpage === "energy" ? ["grid_de", "res_share_de", "mix_coal"] : document.body.dataset.mpage !== "costs" ? ["de_prod_paper", "de_retail_drug", "de_imp_tissue"] : ["ppi_tissue", "pulp_nbsk_eu", "rcp_export_eu", "power_de_spot", "ppi_pulp", "us_recovered_paper", "gas_ttf"];
-  const PAGE = ["costs", "energy"].includes(document.body.dataset.mpage) ? document.body.dataset.mpage : "market";
+  // EMBED: loaded on the Overview (no data-mpage) – only renders At a glance cards on request (window.RadarGlance)
+  const EMBED = !document.body.dataset.mpage;
+  let PAGE = ["costs", "energy"].includes(document.body.dataset.mpage) ? document.body.dataset.mpage : "market";
   // three pages share this script: which questions and tabs each one shows
   const PAGE_Q = { costs: ["cost"], market: ["market", "env"], energy: ["grid"] };
   const PAGE_TABS = { costs: ["glance", "cmp", "cost"], market: ["glance", "cmp", "industry", "fibre"], energy: ["glance", "cmp", "grid", "gas", "water"] };
@@ -666,6 +668,7 @@
     return box;
   }
   function openInd(ind) {
+    if (EMBED) { location.href = PAGE_FILE[pageOf(ind)] + "#ind=" + encodeURIComponent(ind.id); return; }
     const isGrid = ind.group === "grid";
     const all = M.indicators;
     const s = (ind.series || []).filter((p) => p[1] != null);
@@ -843,8 +846,8 @@
     return svg;
   }
 
-  $("gd-x").addEventListener("click", () => $("gdlg").close());
-  $("gdlg").addEventListener("click", (ev) => { if (ev.target === $("gdlg")) $("gdlg").close(); });
+  if (!EMBED) $("gd-x").addEventListener("click", () => $("gdlg").close());
+  if (!EMBED) $("gdlg").addEventListener("click", (ev) => { if (ev.target === $("gdlg")) $("gdlg").close(); });
   // ---------- Cost driver index ----------
   const COST_KEY = "radar.costWeights";
   function costWeights() {
@@ -1710,6 +1713,12 @@
     return ind.unit === "%" ? a + (c.pp > 0 ? "+" : "") + c.pp.toFixed(1) + " pp" : a + (c.pct > 0 ? "+" : "") + c.pct.toFixed(1) + " %";
   }
   function goTab(id, anchor) {
+    if (EMBED) {
+      const p = new URLSearchParams(); p.set("tab", id);
+      if (anchor === "ind-year") p.set("view", "year"); else if (anchor === "ind-month") p.set("view", "month");
+      if (id === "cmp" && state.topic !== "all") p.set("topic", state.topic);
+      location.href = PAGE_FILE[PAGE] + "#" + p.toString(); return;
+    }
     state.tab = id;
     if (anchor === "ind-year") state.ind = "year"; else if (anchor === "ind-month") state.ind = "month";
     renderAll(); window.scrollTo({ top: 0 });
@@ -1877,6 +1886,27 @@
     go.textContent = "Open " + t.link + " ›"; go.addEventListener("click", () => goTab(t.tab)); card.appendChild(go);
     return card;
   }
+  // "＋ Overview": pins an At a glance card to the Overview ("Your cards"). The Overview layout lives in
+  // localStorage radar.overview.v1; before the Overview was ever customised, pins wait in radar.overview.add
+  const OV_KEY = "radar.overview.v1", OV_ADD = "radar.overview.add";
+  const ovRead = (k) => { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } };
+  const ovWrite = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+  const ovHas = (id) => { const L = ovRead(OV_KEY), q = ovRead(OV_ADD) || []; return !!(L && Array.isArray(L.items) && L.items.some((x) => x.id === id)) || q.includes(id); };
+  function ovToggle(id) {
+    const on = ovHas(id), L = ovRead(OV_KEY); let q = ovRead(OV_ADD) || [];
+    if (on) { q = q.filter((x) => x !== id); if (L && Array.isArray(L.items)) { L.items = L.items.filter((x) => x.id !== id); ovWrite(OV_KEY, L); } }
+    else if (L && Array.isArray(L.items)) { L.items.push({ id }); ovWrite(OV_KEY, L); }
+    else q.push(id);
+    ovWrite(OV_ADD, q);
+    return !on;
+  }
+  function pinBtn(key) {
+    const id = "gl:" + key, b = el("button", "gl-pin"); b.type = "button";
+    const show = (on) => { b.textContent = on ? "✓ On Overview" : "＋ Overview"; b.setAttribute("aria-pressed", String(on)); b.title = on ? "Shown on the Overview under Your cards – click to remove" : "Add this card to the Overview (Your cards)"; b.classList.toggle("on", on); };
+    show(ovHas(id));
+    b.addEventListener("click", (e) => { e.stopPropagation(); show(ovToggle(id)); });
+    return b;
+  }
   function renderGlance(host) {
     const ln = lineNode(); if (ln) host.appendChild(ln);
     if (PAGE === "costs" && COST) {
@@ -1884,12 +1914,13 @@
       if (R.rows.length) {
         const last = R.rows[R.rows.length - 1], lastP = [...R.rows].reverse().find((r) => r.ppi != null);
         const strip = costStrip(R, last, lastP); strip.classList.add("tc-strip");
-        const go = el("button", "gl-go", "Open Cost index ›"); go.type = "button"; go.addEventListener("click", () => goTab("cost")); strip.appendChild(go);
+        const go = el("button", "gl-go", "Open Cost index ›"); go.type = "button"; go.addEventListener("click", () => goTab("cost"));
+        const act = el("div", "tc-act"); act.append(go, pinBtn("costs:index")); strip.appendChild(act);
         host.appendChild(strip);
       }
     }
     const grid = el("div", "tc-grid");
-    TOPICS[PAGE].forEach((t) => grid.appendChild(glanceCard(t)));
+    TOPICS[PAGE].forEach((t) => { const c = glanceCard(t), h = c.querySelector(".tc-h"); if (h) h.appendChild(pinBtn(PAGE + ":" + t.key)); grid.appendChild(c); });
     host.appendChild(grid);
     host.appendChild(el("p", "gl-foot", "Signals are rule-based: a change of more than 3 % (1 pp for shares) against a year earlier, in the direction that helps or hurts WEPA. One dot per indicator. Click an indicator for details."));
   }
@@ -2285,21 +2316,22 @@
     renderTabs(); renderBar(); if (state.tab === "cmp") renderChart(); renderCmpTiles(); renderTiles(); writeHash();
   }
 
-  $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });
+  if (!EMBED) $("tbl-btn").addEventListener("click", () => { const t = $("dtable"); t.hidden = !t.hidden; $("tbl-btn").setAttribute("aria-expanded", String(!t.hidden)); $("tbl-btn").textContent = t.hidden ? "Show as table" : "Hide table"; });
   let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { if (state.tab === "cmp") renderChart(); else if (state.tab === "cost" || state.tab === "industry" || state.tab === "grid" || state.tab === "water" || state.tab === "gas") renderTiles(); }, 120); });
 
-  Promise.all([
+  const EXTRA = { energy: ["data/gas.json", "data/weather.json", "data/sites_intl.json"], market: ["data/pulp_origin.json", "config/eudr.json"], costs: [] };
+  const extraFiles = EMBED ? [...EXTRA.energy, ...EXTRA.market] : EXTRA[PAGE];
+  const getJ = (u) => fetch(u, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  const loaded = Promise.all([
     fetch("data/market.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
-    fetch("data/peer_emissions.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    fetch("config/market.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    fetch("data/industry.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
-    fetch("data/water.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    getJ("data/peer_emissions.json"), getJ("config/market.json"), getJ("data/industry.json"), getJ("data/water.json"),
     // new sources (update-30): missing files simply leave their views empty
-    ...(PAGE === "energy" ? ["data/gas.json", "data/weather.json", "data/sites_intl.json"] : PAGE === "market" ? ["data/pulp_origin.json", "config/eudr.json"] : [])
-      .map((u) => fetch(u, { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null)),
-  ]).then(([data, ets, cfg, ind, water, x1, x2, x3]) => {
+    ...extraFiles.map(getJ),
+  ]).then(([data, ets, cfg, ind, water, ...extra]) => {
     M = data; ETS = ets; IND = ind; WATER = water;
-    if (PAGE === "energy") { GAS = x1; WEATHER = x2; INTL = x3; } else if (PAGE === "market") { PULP = x1; EUDR = x2; }
+    const X = Object.fromEntries(extraFiles.map((u, k) => [u, extra[k]]));
+    GAS = X["data/gas.json"] || null; WEATHER = X["data/weather.json"] || null; INTL = X["data/sites_intl.json"] || null;
+    PULP = X["data/pulp_origin.json"] || null; EUDR = X["config/eudr.json"] || null;
     if (cfg) {
       (cfg.indicators || []).forEach((i) => { if (i.about) ABOUT[i.id] = i.about; });
       GRID_ABOUT = cfg.gridAbout || null; COST = cfg.costIndex || null;
@@ -2315,8 +2347,52 @@
         order.push(i); byId.delete(c.id);
       });
       M.indicators = order.concat([...byId.values()]);
-      if (PAGE === "market") { const pi = M.indicators.find((i) => i.id === "de_imp_pulp"); if (pi) { pi.group = "fibre_supply"; pi.question = "market"; M.groups.fibre_supply = "Fibre supply"; } }
+      if (PAGE === "market" || EMBED) { const pi = M.indicators.find((i) => i.id === "de_imp_pulp"); if (pi) { pi.group = "fibre_supply"; pi.question = "market"; M.groups.fibre_supply = "Fibre supply"; } }
     }
+    state.sel = preset("36");
+    return data;
+  });
+  // ---- Overview: At a glance cards as cards of "Your cards" ----
+  if (EMBED) {
+    const PAGE_LABEL = { costs: "Costs", market: "Market", energy: "Energy & climate" };
+    window.RadarGlance = {
+      ready: loaded,
+      list() {
+        const out = [{ key: "costs:index", page: "costs", label: "Cost index", desc: "Costs · cost index vs. tissue prices and the margin signal" }];
+        Object.entries(TOPICS).forEach(([pg, ts]) => ts.forEach((t) => out.push({ key: pg + ":" + t.key, page: pg, label: t.label, desc: PAGE_LABEL[pg] + " · At a glance card" })));
+        return out;
+      },
+      pageLabel: (pg) => PAGE_LABEL[pg],
+      link: (key) => PAGE_FILE[key.split(":")[0]] + "#tab=glance",
+      // renders the card into host; returns the signal pill (for the card header) or null
+      render(host, key) {
+        const [pg, tk] = key.split(":");
+        const prev = PAGE; PAGE = pg;
+        try {
+          const keep = (node) => { node.addEventListener("click", () => { PAGE = pg; }, true); return node; };   // links inside go to the right page
+          const box = keep(el("div", "gl-emb"));
+          if (tk === "index") {
+            const R = COST ? computeCost() : null;
+            if (!R || !R.rows.length) { box.appendChild(el("p", "tc-v", "Waiting for first data.")); host.appendChild(box); return null; }
+            const last = R.rows[R.rows.length - 1], lastP = [...R.rows].reverse().find((r) => r.ppi != null);
+            box.appendChild(costStrip(R, last, lastP));
+            const go = el("button", "gl-go", "Open Cost index ›"); go.type = "button"; go.addEventListener("click", () => goTab("cost")); box.appendChild(go);
+            host.appendChild(box); return null;
+          }
+          const t = (TOPICS[pg] || []).find((x) => x.key === tk);
+          if (!t) { box.appendChild(el("p", "tc-v", "This card is no longer available.")); host.appendChild(box); return null; }
+          const card = glanceCard(t);
+          const head = card.querySelector(".tc-h"); const pill = head && head.querySelector(".sig");
+          if (head) head.remove();
+          card.className = "tc";
+          box.appendChild(card); host.appendChild(box);
+          return pill || null;
+        } finally { PAGE = prev; }
+      },
+    };
+    return;
+  }
+  loaded.then((data) => {
     $("meta").textContent = data.updated ? "Updated " + fmtDay(data.updated) : "Not collected yet";
     // links to the other page's tabs or indicators (old Market links, Overview, search) are forwarded
     {

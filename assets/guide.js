@@ -10,6 +10,7 @@
         ["Key numbers", "Five market indicators with their latest value, the change against the period before and a 12-month line. Click one for details; choose which five under “Customize”."],
         ["Monthly round-up", "What changed in a month: regulation milestones, the most relevant news, the biggest market moves and peer headlines. Use ‹ › to switch months."],
         ["Arrange the cards", "Click “Customize”, then drag a card to any free place or add and remove cards. The layout is saved in your browser only – colleagues keep their own. “↺ Reset” brings back the default."],
+        ["Cards from At a glance", "The topic cards of Costs, Market and Energy & climate (and the cost index) can sit here too, with live data. Click “＋ Overview” on a card there, or add it under “Customize” › “From At a glance”."],
         ["Freshness", "The status line in the header shows when the data was last collected. Data is updated every weekday morning."],
       ],
       caveat: "All figures come from public sources. Nothing on this site uses internal WEPA data.",
@@ -56,7 +57,7 @@
       title: "Costs",
       intro: "What tissue making costs right now, from public statistics: fibre, recovered paper, energy, carbon and labour. Prices only – demand sits on Market, power and climate on Energy & climate.",
       items: [
-        ["At a glance", "One sentence that sums up the page, the cost index result, then one card per topic. The card says in one word where costs are heading (rising, easing, mixed, stable) and names the biggest move. One dot per indicator: red = headwind, green = tailwind, grey = neutral. Click an indicator for details."],
+        ["At a glance", "One sentence that sums up the page, the cost index result, then one card per topic. The card says in one word where costs are heading (rising, easing, mixed, stable) and names the biggest move. One dot per indicator: red = headwind, green = tailwind, grey = neutral. Click an indicator for details. “＋ Overview” puts a card on the Overview."],
         ["Price trends", "Compare price indicators as an index (first month of the period = 100). Pick them under “In chart” in the bar, or with the box on a card; up to 6 share one chart, more get small charts each. Search and Topic narrow the cards. “Cards / List” in the bar switches to a compact list – easier to scan when picking indicators."],
         ["Cost index", "How public input-cost statistics add up to an illustrative tissue cost driver index, set against the producer price index for tissue. The three numbers on top: cost index, tissue price index and the margin signal (price minus cost). The table shows each input once: weight, change and index points – the largest contribution is marked. Weights are editable and saved in your browser only."],
         ["What the cost index cannot do", "It uses only public prices, not WEPA's contracts, hedges or volumes, and holds other costs (chemicals, packaging …) constant. Use it for the direction of input costs, not to judge WEPA's margin or to plan budgets."],
@@ -68,7 +69,7 @@
       title: "Market",
       intro: "How WEPA's market is doing: demand and trade in Germany, paper production, fibre supply and the yearly environmental profile of the paper industry.",
       items: [
-        ["At a glance", "One sentence that sums up the page, then one card per topic: demand & trade, production and fibre supply, each with a one-word verdict, the biggest move and the key indicators. Click an indicator for details."],
+        ["At a glance", "One sentence that sums up the page, then one card per topic: demand & trade, production and fibre supply, each with a one-word verdict, the biggest move and the key indicators. Click an indicator for details. “＋ Overview” puts a card on the Overview."],
         ["Trends", "Compare market indicators as an index; pick them under “In chart” in the bar or with the box on a card. “Cards / List” switches to a compact list."],
         ["Industry", "Every month: German production and sales by grade, and shelf price vs. producer price. Every year: the energy mix of German paper mills year by year, waste, energy use, environmental investment, recovered paper and the European industry as a yardstick."],
         ["Shelf price vs. producer price", "On Industry › Monthly: the consumer price of toilet paper, the producer price of tissue and pulp import prices as lines, all indexed to the first month. Shows whether retail passes cost moves on, and how fast."],
@@ -80,7 +81,7 @@
       title: "Energy & climate",
       intro: "Where our power comes from, how full gas storage is, and the water and weather situation at our mills.",
       items: [
-        ["At a glance", "One sentence that sums up the page, then cards for grid carbon intensity, the German power mix, gas storage and water & weather. One dot per indicator or site: red = headwind (e.g. more coal, low water), green = tailwind."],
+        ["At a glance", "One sentence that sums up the page, then cards for grid carbon intensity, the German power mix, gas storage and water & weather. One dot per indicator or site: red = headwind (e.g. more coal, low water), green = tailwind. “＋ Overview” puts a card on the Overview."],
         ["Trends", "Compare grid and power-mix indicators as an index; pick them under “In chart” in the bar."],
         ["Power grid", "The German power mix by source for the latest month and year by year (average of the months; click a year to open its months), and CO₂ per kWh by country as 12-month averages (they smooth out the seasons) – useful for location-based Scope 2. Click a country for its history."],
         ["Gas storage", "How full EU and German gas storage is (GIE AGSI+, daily), drawn against the range of the last five years. The dashed line is the EU target of 90 % full by 1 November. Switch between EU and Germany."],

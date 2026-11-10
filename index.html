@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="assets/theme.js?v=20261110g"></script>
-<script src="assets/look.js?v=20261110g"></script>
-<script src="assets/views.js?v=20261110g"></script>
+<script src="assets/theme.js?v=20261110h"></script>
+<script src="assets/look.js?v=20261110h"></script>
+<script src="assets/views.js?v=20261110h"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ESG Radar</title>
 <link rel="icon" id="favicon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%23002d55%22/%3E%3Cg fill=%22none%22 stroke-linecap=%22round%22 stroke-width=%226%22%3E%3Cpath d=%22M13 39a12 12 0 0 1 12 12%22 stroke=%22%2333b09c%22/%3E%3Cpath d=%22M13 26a25 25 0 0 1 25 25%22 stroke=%22%2396d2dc%22/%3E%3Cpath d=%22M13 13a38 38 0 0 1 38 38%22 stroke=%22%23fff%22/%3E%3C/g%3E%3Ccircle cx=%2213%22 cy=%2251%22 r=%224.5%22 fill=%22%23fff%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap">
-<script src="assets/status.js?v=20261110g" defer></script>
+<script src="assets/status.js?v=20261110h" defer></script>
 <style>
   :root {
     --blue-900: var(--d-002d55-text, #002d55);
@@ -211,6 +211,7 @@
   .drawer[hidden] { display: none; }
   .drawer h3 { margin: 0; font-size: 14px; color: var(--d-002d55-text, #002d55); }
   .cat { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+  .cat-h { grid-column: 1 / -1; margin: 6px 0 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--d-6b7280-text, #6b7280); font-weight: 600; }
   .ci { border: 1px dashed var(--d-c9d3de-border, #c9d3de); border-radius: 10px; padding: 10px 12px; text-align: left; font: inherit; background: var(--d-fff-bg, #fff); cursor: pointer; display: flex; flex-direction: column; gap: 3px; }
   .ci b { font-size: 13.5px; color: var(--d-002d55-text, #002d55); }
   .ci small { font-size: 12px; color: var(--d-6b7280-text, #6b7280); }
@@ -226,8 +227,8 @@
   .ov-top { margin-bottom: -8px; }
   .kpi-h h3, .cards-h { font-size: 12px !important; line-height: 18px; }
 </style>
-<link rel="stylesheet" href="assets/theme.css?v=20261110g">
-<script src="assets/colresize.js?v=20261110g" defer></script>
+<link rel="stylesheet" href="assets/theme.css?v=20261110h">
+<script src="assets/colresize.js?v=20261110h" defer></script>
 <script>
   // Old links to the News page (…/#area=climate, #tab=monthly …) now live on news.html
   // (only for links from outside – clicking "Overview" inside the site never redirects)
@@ -283,7 +284,9 @@
   <p>Your overview is saved in this browser only (no login) – colleagues each have their own. Sources are listed on the individual pages.</p>
 </div></footer>
 
-<script src="assets/carbon.js?v=20261110g"></script>
+<script src="assets/carbon.js?v=20261110h"></script>
+<link rel="stylesheet" href="assets/glance.css?v=20261110h">
+<script src="assets/market.js?v=20261110h"></script>
 <script>
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -786,7 +789,11 @@
 
   function renderCat() {
     const cat = $("cat"); cat.replaceChildren();
-    Object.entries(W).filter(([, def]) => !def.off).forEach(([id, def]) => {
+    const ents = Object.entries(W).filter(([, def]) => !def.off);
+    ents.sort((a, b) => (!!a[1].glance) - (!!b[1].glance));
+    let glHead = false;
+    ents.forEach(([id, def]) => {
+      if (def.glance && !glHead) { glHead = true; cat.appendChild(el("p", "cat-h", "From At a glance · Costs, Market, Energy & climate")); }
       const on = L.items.some((x) => x.id === id);
       const b = el("button", "ci" + (on ? " on" : "")); b.type = "button"; b.setAttribute("aria-pressed", String(on));
       b.append(el("b", null, (on ? "✓ " : "＋ ") + def.title), el("small", null, def.desc));
@@ -805,6 +812,25 @@
   $("add").addEventListener("click", () => { $("drawer").hidden = !$("drawer").hidden; renderCat(); });
   $("reset").addEventListener("click", () => { L = JSON.parse(JSON.stringify(DEFAULT)); L.intro = ["briefing"]; save(); renderAll(); renderCat(); renderKpiCfg(); renderBrief(); });
 
+  // ---------- At a glance cards from Costs / Market / Energy & climate (assets/market.js → RadarGlance) ----------
+  const GL = window.RadarGlance;
+  if (GL) {
+    GL.list().forEach((g) => {
+      W["gl:" + g.key] = { title: g.label, desc: g.desc, more: [GL.pageLabel(g.page) + " →", GL.link(g.key)], glance: true,
+        render(b, w) {
+          GL.ready.then(() => {
+            const pill = GL.render(b, g.key);
+            if (pill) w.querySelector(".wh").insertBefore(pill, w.querySelector(".wh a.more") || w.querySelector(".wh .wctl"));
+          }).catch(() => b.appendChild(emptyState("Market data is not available yet. The next data update runs " + nextRun() + ".", { label: "Open " + GL.pageLabel(g.page), href: GL.link(g.key) }, "wait")));
+        } };
+    });
+  }
+  // cards pinned with "＋ Overview" on an At a glance page before this layout was saved
+  try {
+    const q = JSON.parse(store.get("radar.overview.add") || "[]");
+    if (Array.isArray(q) && q.length) { q.forEach((id) => { if (W[id] && !L.items.some((x) => x.id === id)) L.items.push({ id }); }); save(); store.set("radar.overview.add", "[]"); }
+  } catch (e) {}
+
   const h = new Date().getHours();
   $("hello").textContent = h < 11 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
 
@@ -821,7 +847,7 @@
   });
 })();
 </script>
-<script src="assets/search.js?v=20261110g" defer></script>
-<script src="assets/guide.js?v=20261110g" defer></script>
+<script src="assets/search.js?v=20261110h" defer></script>
+<script src="assets/guide.js?v=20261110h" defer></script>
 </body>
 </html>
