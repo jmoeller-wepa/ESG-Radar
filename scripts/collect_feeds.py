@@ -102,10 +102,17 @@ def main():
 
     area_matchers = {a: matcher(kws) for a, kws in config.get("areaKeywords", {}).items()}
 
+    # Strict feeds (the customer feeds): narrower keyword lists for some areas (e.g. 'climate'),
+    # and no fallback area, so off-topic retail news does not land in Climate & Energy.
+    strict_matchers = dict(area_matchers)
+    strict_matchers.update({a: matcher(kws) for a, kws in config.get("strictAreaKeywords", {}).items()})
+
     def areas_for(feed, text):
         default = feed.get("defaultArea", "reporting")
         if feed.get("onlyDefaultArea"):
             return [default]
+        if feed.get("strictAreas"):
+            return [a for a, m in strict_matchers.items() if m and m(text)][:3]
         found = [a for a, m in area_matchers.items() if m and m(text)]
         return found[:3] or [default]
 
@@ -127,7 +134,21 @@ def main():
         if not e.get("impacts"):
             e["impacts"] = STARTER_IMPACTS.get(e.get("id")) or impacts_for(" ".join(filter(None, [e.get("title"), e.get("summary")])))
     feeds_by_name = {f["name"]: f for f in config.get("feeds", [])}
+    # Re-tag items of strict feeds on every run, so a change of their keywords also fixes older items
+    retagged = 0
+    for e in radar["entries"] + archive:
+        feed = feeds_by_name.get(e.get("source"))
+        if feed and feed.get("strictAreas"):
+            areas = areas_for(feed, " ".join(filter(None, [e.get("title"), e.get("summary")])))
+            if areas != e.get("areas"):
+                e["areas"] = areas
+                retagged += 1
+    if retagged:
+        print(f"Re-tagged the areas of {retagged} customer item(s)")
     for e in radar["entries"]:
+        feed = feeds_by_name.get(e.get("source"))
+        if feed and feed.get("strictAreas"):
+            continue
         if not e.get("areas") and e.get("id") in STARTER_AREAS:
             e["areas"] = STARTER_AREAS[e["id"]]
         elif not e.get("areas"):

@@ -1,5 +1,5 @@
 {
- "_comment": "Feeds the daily GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only). A feed added later reads back 'lookbackDaysFirstRun' days on its first run. A feed's optional 'impacts' list is always added (used for the customer feeds → 'customers'). Site feeds ('WEPA sites · …') carry the impact 'sites' (\"our sites\" on the News page).",
+ "_comment": "Feeds the daily GitHub Action reads. An item is added if its title or summary contains at least one 'keywords' entry (whole words, any case); an empty keyword list takes every item. Relevance is set automatically: 'high' if a highKeywords entry matches, otherwise the feed's defaultRelevance. Items whose title matches 'monthlySummaryPattern' are tagged as monthly feature summaries and always rated high. Areas: every area whose 'areaKeywords' match is assigned; if none match, the feed's defaultArea is used. A feed with 'strictAreas': true (the customer feeds) gets no fallback area, and its 'climate' area uses the narrower 'strictAreaKeywords' list instead (real climate/energy terms only, not just the word 'climate'); its existing items are re-tagged on every run. 'type' must be regulation, tool or practice. Company names of the peers are in the ESG feeds' keywords so peer news reaches the profiles on the Peers page. Impact: every impact whose 'impactKeywords' match is assigned; if none match, the item is 'watch' (watch only). A feed added later reads back 'lookbackDaysFirstRun' days on its first run. A feed's optional 'impacts' list is always added (used for the customer feeds → 'customers'). Site feeds ('WEPA sites · …') carry the impact 'sites' (\"our sites\" on the News page).",
  "lookbackDaysFirstRun": 60,
  "archiveFeedItemsAfterDays": 365,
  "monthlySummaryPattern": "feature summary",
@@ -135,6 +135,64 @@
    "anthropic",
    "gemini",
    "llm"
+  ]
+ },
+ "strictAreaKeywords": {
+  "climate": [
+   "emissions",
+   "emission",
+   "emissionen",
+   "émissions",
+   "decarbonisation",
+   "decarbonization",
+   "dekarbonisierung",
+   "décarbonation",
+   "net zero",
+   "net-zero",
+   "netto-null",
+   "klimaneutral",
+   "klimaneutralität",
+   "neutralité carbone",
+   "bas carbone",
+   "low carbon",
+   "carbon neutral",
+   "carbon footprint",
+   "co2-fußabdruck",
+   "co2",
+   "treibhausgas",
+   "treibhausgase",
+   "greenhouse gas",
+   "sbti",
+   "science based targets",
+   "scope 1",
+   "scope 2",
+   "scope 3",
+   "klimaziel",
+   "klimaziele",
+   "klimaschutz",
+   "climate target",
+   "climate targets",
+   "climate goal",
+   "climate goals",
+   "climate action",
+   "climate plan",
+   "plan climat",
+   "renewable energy",
+   "renewable electricity",
+   "erneuerbare energie",
+   "erneuerbare energien",
+   "ökostrom",
+   "grünstrom",
+   "photovoltaik",
+   "solar",
+   "energy efficiency",
+   "energieeffizienz",
+   "energiekosten",
+   "strompreis",
+   "energy costs",
+   "cbam",
+   "product carbon footprint",
+   "pcf"
   ]
  },
  "feeds": [
@@ -781,7 +839,8 @@
    ],
    "impacts": [
     "customers"
-   ]
+   ],
+   "strictAreas": true
   },
   {
    "name": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
@@ -803,7 +862,8 @@
    ],
    "impacts": [
     "customers"
-   ]
+   ],
+   "strictAreas": true
   },
   {
    "name": "Customers DE: dm, Rossmann (via Google News)",
@@ -824,7 +884,8 @@
    ],
    "impacts": [
     "customers"
-   ]
+   ],
+   "strictAreas": true
   },
   {
    "name": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
@@ -844,7 +905,8 @@
    ],
    "impacts": [
     "customers"
-   ]
+   ],
+   "strictAreas": true
   },
   {
    "name": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
@@ -865,7 +927,8 @@
    ],
    "impacts": [
     "customers"
-   ]
+   ],
+   "strictAreas": true
   },
   {
    "name": "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
@@ -884,7 +947,8 @@
    ],
    "impacts": [
     "customers"
-   ]
+   ],
+   "strictAreas": true
   },
   {
    "name": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
@@ -903,7 +967,8 @@
    ],
    "impacts": [
     "customers"
-   ]
+   ],
+   "strictAreas": true
   },
   {
    "name": "CDP & EcoVadis (via Google News)",
