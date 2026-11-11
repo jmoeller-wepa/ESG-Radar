@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T09:02:00",
+ "updated": "2026-11-11T06:44:14",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -715,6 +715,16 @@
    "quarter": "Q1 2027",
    "desc": "We plan to introduce PowerPoint Presentations (PPTX) as a new data destination for Dataflow Gen2, enabling customers to turn data prepared in Microsoft Fabric into presentation files using the low-code Power Query experience.Designed for ci",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Dataflow-Gen2-and-Power-Query-innovations-at-Microsoft-Build-Low/ba-p/5189028"
+  },
+  {
+   "id": "a5261925-3edd-f111-84e8-00224809fcb6",
+   "name": "Mirroring - Google Big Query security role replication",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/mirroring-for-google-bigquery-in-microsoft-fabric-preview/5172584"
   },
   {
    "id": "89223235-516f-f111-ab0d-6045bd006301",

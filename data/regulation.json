@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T08:27:21",
+ "updated": "2026-11-11T06:16:51",
  "consultations": [
   {
    "id": "19220.0",
@@ -148,7 +148,7 @@
    "type": "Adoption workflow",
    "dg": null,
    "start": "2026-11-04",
-   "end": "2027-01-05",
+   "end": "2027-01-06",
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14770.0_en",
    "areas": [
     "climate"
@@ -956,5 +956,5 @@
    "changed": null
   }
  },
- "consultationsFetched": "2026-11-10T08:27:21"
+ "consultationsFetched": "2026-11-11T06:16:51"
 }

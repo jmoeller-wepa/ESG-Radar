@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-10T08:27:21+00:00",
+ "fetched": "2026-11-11T06:16:51+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,9 +12,9 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
-     "last",
      "totalPages",
      "totalElements",
+     "last",
      "sort",
      "numberOfElements",
      "size",
@@ -170,7 +170,7 @@
      }
     ]
    },
-   "openFound": 50,
+   "openFound": 49,
    "read": 300
   }
  ]

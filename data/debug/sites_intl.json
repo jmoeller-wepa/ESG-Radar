@@ -1,68 +1,63 @@
 {
- "at": "2026-11-10T09:01:53",
+ "at": "2026-11-11T06:44:00",
  "failed": [],
  "details": [
   {
    "site": "piechowice",
-   "recentDays": 425,
+   "recentDays": 424,
    "precipAccumulated": false,
-   "normalYears": 30,
    "gauge": {
     "picked": {
      "id_stacji": "150150050",
      "stacja": "Piechowice",
      "rzeka": "Kamienna",
-     "stan_wody": "62",
-     "stan_wody_data_pomiaru": "2026-11-10 08:20:00"
+     "stan_wody": "63",
+     "stan_wody_data_pomiaru": "2026-11-11 05:50:00"
     },
-    "points": 1
+    "points": 2
    }
   },
   {
    "site": "lille",
-   "recentDays": 425,
+   "recentDays": 424,
    "precipAccumulated": false,
-   "normalYears": 30,
    "gauge": {
     "candidates": [
      "E381126501 La Lys à Bousbecque (La Lys, 0.9 km)",
      "E381126601 La Lys [Lys] en Belgique [Menen - Menin] - Ropswalle (La Lys, 2.3 km)",
      "E367125002 La Lys à Armentières - Station partenaire VNF (La Lys, 15.7 km)"
     ],
-    "points": 31
+    "points": 32
    }
   },
   {
    "site": "chateau-thierry",
-   "recentDays": 425,
+   "recentDays": 424,
    "precipAccumulated": false,
-   "normalYears": 30,
    "gauge": {
     "candidates": [
      "F620000201 La Marne à Château-Thierry (La Marne, 0.2 km)",
      "F620000301 La Marne à Azy-sur-Marne - Barrage (amont) [VNF] (La Marne, 5.3 km)",
      "F620000302 La Marne à Azy-sur-Marne - Barrage (aval) [VNF] (La Marne, 5.4 km)"
     ],
-    "points": 31
+    "points": 32
    }
   },
   {
    "site": "troyes",
-   "recentDays": 425,
+   "recentDays": 424,
    "precipAccumulated": false,
-   "normalYears": 30,
    "gauge": {
     "candidates": [
      "H080001201 La Seine [partielle] à Troyes [Tauxelles] (La Seine, 8.7 km)"
     ],
-    "points": 31
+    "points": 32
    }
   },
   {
    "site": "annonay",
-   "recentDays": 425,
+   "recentDays": 424,
    "precipAccumulated": false,
-   "normalYears": 30,
    "gauge": {
     "candidates": [
      "V350401201 La Cance à Annonay [Galléliaure] (La Cance, 5.9 km)",
@@ -72,32 +67,28 @@
      "V344000101 Le Rhône à Saint-Rambert-d'Albon - CNR (Le Rhône, 8.8 km)",
      "V344000102 Le Rhône à Saint-Rambert-d'Albon - DREAL Auvergne-Rhône-Alpes (Le Rhône, 8.9 km)"
     ],
-    "points": 31
+    "points": 32
    }
   },
   {
    "site": "lucca-capannori",
-   "recentDays": 425,
-   "precipAccumulated": false,
-   "normalYears": 30
+   "recentDays": 424,
+   "precipAccumulated": false
   },
   {
    "site": "lucca-porcari",
-   "recentDays": 425,
-   "precipAccumulated": false,
-   "normalYears": 30
+   "recentDays": 424,
+   "precipAccumulated": false
   },
   {
    "site": "cassino",
-   "recentDays": 425,
-   "precipAccumulated": false,
-   "normalYears": 30
+   "recentDays": 424,
+   "precipAccumulated": false
   },
   {
    "site": "swalmen",
-   "recentDays": 425,
+   "recentDays": 424,
    "precipAccumulated": false,
-   "normalYears": 30,
    "gauge": {
     "candidates": [
      "roermond Roermond",
@@ -111,20 +102,18 @@
      "roermond.recreatiestrandcampinghatenboer Roermond, Recreatiestrand Camping Hatenboer",
      "roermond.resortmarinaoolderhuuske.recreatiestrand Roermond, Resort Marina Oolderhuuske, recreatiestrand"
     ],
-    "points": 31
+    "points": 32
    }
   },
   {
    "site": "bridgend",
-   "recentDays": 425,
-   "precipAccumulated": false,
-   "normalYears": 30
+   "recentDays": 424,
+   "precipAccumulated": false
   },
   {
    "site": "blackburn",
-   "recentDays": 425,
+   "recentDays": 424,
    "precipAccumulated": false,
-   "normalYears": 30,
    "gauge": {
     "candidates": [
      "713119_TEMP Harrison Street (None, 0.7 km)",
@@ -134,7 +123,7 @@
      "713120 Ewood (River Darwen, 1.9 km)",
      "713207 Ewood Ashville Terrace North (Ewood Mill Race, 2.5 km)"
     ],
-    "points": 29
+    "points": 30
    }
   }
  ]
