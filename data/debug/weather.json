@@ -1,5 +1,5 @@
 {
- "at": "2026-11-11T06:30:46",
+ "at": "2026-11-12T06:32:02",
  "failed": [],
  "details": [
   {
@@ -17,35 +17,35 @@
    "station": 7330,
    "name": "Arnsberg-Neheim",
    "km": 6.7,
-   "last": "2026-11-09"
+   "last": "2026-11-10"
   },
   {
    "site": "giershagen",
    "station": 6264,
    "name": "Brilon-Thülen",
    "km": 6.0,
-   "last": "2026-11-09"
+   "last": "2026-11-10"
   },
   {
    "site": "kriebstein",
    "station": 131,
    "name": "Geringswalde-Altgeringswalde",
    "km": 7.1,
-   "last": "2026-11-09"
+   "last": "2026-11-10"
   },
   {
    "site": "mainz",
    "station": 3137,
    "name": "Mainz-Lerchenberg (ZDF)",
    "km": 6.1,
-   "last": "2026-11-09"
+   "last": "2026-11-10"
   },
   {
    "site": "leuna",
    "station": 2878,
    "name": "Lauchstädt, Bad",
    "km": 12.5,
-   "last": "2026-11-09"
+   "last": "2026-11-10"
   }
  ]
 }

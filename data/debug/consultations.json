@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-11T06:16:51+00:00",
+ "fetched": "2026-11-12T06:19:35+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,9 +12,9 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
+     "last",
      "totalPages",
      "totalElements",
-     "last",
      "sort",
      "numberOfElements",
      "size",
@@ -27,18 +27,140 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": 16733.0,
+    "id": 19295.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2026)1255657",
-    "foreseenActType": "REG_DEL",
-    "shortTitle": "Exclusion of duty-free imports to the outermost regions of the Union from reference quantity for some tariff rate quotas",
+    "reference": "Ares(2026)8740131",
+    "foreseenActType": "REG_IMPL",
+    "shortTitle": "Revision of olive oil conformity checks",
     "currentStatuses": [
      {
       "frontEndStage": "ISC_WORKFLOW",
       "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/06 12:17:52",
-      "feedbackEndDate": "2026/12/04 23:59:59",
+      "feedbackStartDate": "2026/11/11 16:51:00",
+      "feedbackEndDate": "2026/12/09 23:59:59",
       "isCurrent": true
+     }
+    ],
+    "initiativeTranslations": [
+     {
+      "value": "Проверки за съответствие на маслиновото масло — преразглеждане",
+      "language": "BG",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Kontroly souladu olivového oleje s normou – revize",
+      "language": "CS",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Overensstemmelseskontrol for olivenolie – revision",
+      "language": "DA",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Konformitätskontrollen für Olivenöl – Überarbeitung",
+      "language": "DE",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Έλεγχοι συμμόρφωσης για το ελαιόλαδο — αναθεώρηση",
+      "language": "EL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Olive oil conformity checks – revision",
+      "language": "EN",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Controles de conformidad del aceite de oliva: revisión",
+      "language": "ES",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Oliiviõli vastavuskontroll – läbivaatamine",
+      "language": "ET",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Contrôles de conformité de l’huile d’olive – révision",
+      "language": "FR",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Seiceálacha comhréireachta maidir le hola olóige – athbhreithniú",
+      "language": "GA",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Revizija provjera sukladnosti maslinova ulja",
+      "language": "HR",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Controlli di conformità dell'olio d'oliva - revisione",
+      "language": "IT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Oliiviöljyn vaatimustenmukaisuus – tarkistus",
+      "language": "FI",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Olívaolaj-megfelelőségi ellenőrzések – felülvizsgálat",
+      "language": "HU",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Alyvuogių aliejaus atitikties patikrų peržiūra",
+      "language": "LT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Olīveļļas atbilstības pārbaudes: pārskatīšana",
+      "language": "LV",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Kontrolli tal-konformità taż-żejt taż-żebbuġa – reviżjoni",
+      "language": "MT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Normcontroles van olijfolie – herziening",
+      "language": "NL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Oliwa z oliwek – zmiany w kontrolach zgodności",
+      "language": "PL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Controlos de conformidade do azeite — revisão",
+      "language": "PT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Controalele de conformitate pentru uleiul de măsline – Revizuire",
+      "language": "RO",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Kontroly zhody olivového oleja s normami – revízia",
+      "language": "SK",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Preverjanje skladnosti oljčnega olja – revizija",
+      "language": "SL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Kontroller av överensstämmelse för olivolja – översyn",
+      "language": "SV",
+      "field": "SHORT_TITLE"
      }
     ],
     "topics": [
@@ -46,131 +168,9 @@
       "code": "AGRI",
       "label": "Agriculture and rural development"
      }
-    ],
-    "initiativeTranslations": [
-     {
-      "value": "Тарифни квоти за внос — изчисляване на референтните количества",
-      "language": "BG",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Dovozní celní kvóty – výpočet referenčních množství",
-      "language": "CS",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Importtoldkontingenter – beregning af referencemængder",
-      "language": "DA",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Einfuhrzollkontingente – Berechnung der Referenzmengen",
-      "language": "DE",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Δασμολογικές ποσοστώσεις εισαγωγής — υπολογισμός ποσοτήτων αναφοράς",
-      "language": "EL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Import tariff quotas – calculation of reference quantities",
-      "language": "EN",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Contingentes arancelarios de importación – cálculo de las cantidades de referencia",
-      "language": "ES",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Tariifikvoodid – võrdluskoguste arvutamine",
-      "language": "ET",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Contingents tarifaires d’importation — calcul des quantités de référence",
-      "language": "FR",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Taraifchuótaí ar allmhairí – cainníochtaí tagartha a ríomh",
-      "language": "GA",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Uvozne carinske kvote – izračun referentnih količina",
-      "language": "HR",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Contingenti tariffari di importazione – calcolo dei quantitativi di riferimento",
-      "language": "IT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Tuontitariffikiintiöt – viitemäärien laskenta",
-      "language": "FI",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Behozatali vámkontingensek – a referenciamennyiségek számítása",
-      "language": "HU",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Importo tarifinės kvotos. Referencinių kiekių apskaičiavimas",
-      "language": "LT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Importa tarifa kvotas — references daudzumu aprēķināšana",
-      "language": "LV",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Kwoti tariffarji tal-importazzjoni – kalkolu tal-kwantitajiet ta’ referenza",
-      "language": "MT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Invoertariefcontingenten – berekening van referentiehoeveelheden",
-      "language": "NL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Przywozowe kontyngenty taryfowe – obliczanie ilości referencyjnych",
-      "language": "PL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Contingentes pautais de importação — cálculo das quantidades de referência",
-      "language": "PT",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Contingente tarifare de import – calcularea cantităților de referință",
-      "language": "RO",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Dovozné colné kvóty – výpočet referenčných množstiev",
-      "language": "SK",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Uvozne tarifne kvote – izračun referenčnih količin",
-      "language": "SL",
-      "field": "SHORT_TITLE"
-     },
-     {
-      "value": "Tullkvoter – beräkning av referenskvantiteter",
-      "language": "SV",
-      "field": "SHORT_TITLE"
-     }
     ]
    },
-   "openFound": 49,
+   "openFound": 48,
    "read": 300
   }
  ]

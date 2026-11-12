@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T06:44:14",
+ "updated": "2026-11-12T06:41:20",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -227,16 +227,6 @@
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Configurable-Data-Retention-in-Microsoft-Fabric-Warehouse/ba-p/5181211"
   },
   {
-   "id": "512eea0a-39bf-f011-bbd3-00224808fcf0",
-   "name": "Connection Behavior When Connecting to Fabric Warehouse",
-   "product": "Data Warehouse",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "We are updating the TDS (Tabular Data Stream) connection behavior in Fabric Warehouse to ensure consistent and predictable connections based on the specified Initial Catalog value.Previously, connections with an empty or invalid database na",
-   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Connection-string-changes-in-Fabric-Warehouse-What-to-expect-for/ba-p/5185022"
-  },
-  {
    "id": "5cd4b9a0-1322-f011-998a-0022480939f0",
    "name": "Data Clustering",
    "product": "Data Warehouse",
@@ -247,14 +237,34 @@
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/announcing-data-clustering-in-fabric-data-warehouse-preview/5172452"
   },
   {
+   "id": "5f6edaa0-1140-f111-88b5-000d3a376137",
+   "name": "Data Grid Improvements in Data Warehouse & SQL Endpoint - Milestone 2",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "The Data Grid feature for data warehouses and SQL analytics endpoints includes:* Data Handling: Supports large datasets with virtualization for performance.* Column & Row Features: Reorder, hide/show, group, pin, define dynamic columns, sor",
+   "url": "https://www.fabric-gps.com/release/5f6edaa0-1140-f111-88b5-000d3a376137"
+  },
+  {
    "id": "b5227d15-874d-f111-bec7-002248085b3f",
-   "name": "Deployment Configurations Support - Fabric Warehouse & SQL Analytics Endpoint",
+   "name": "Deployment Configurations Support - Fabric Warehouse",
    "product": "Data Warehouse",
    "tool": "fabric",
    "type": "Preview",
    "quarter": "Q4 2026",
    "desc": "* *support of deployment configurations -- giving teams granular control over what gets deployed, what gets skipped, and how data is handled at deployment time. Configurations are stored in Git alongside your warehouse schema, making them v",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/cicd-with-warehouses-in-microsoft-fabric/5173132"
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/The-next-chapter-for-CI-CD-in-Fabric-Warehouse-Preview/ba-p/5401222"
+  },
+  {
+   "id": "e943c699-fca0-f111-b8db-000d3a3ad657",
+   "name": "Faster Metadata & Schema Discovery for Large Warehouses",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Accelerate metadata queries and schema exploration for warehouses and sql analytics endpoints, improving object browsing, tooling responsiveness, and developer productivity across Fabric and SQL tools.",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/5172472"
   },
   {
    "id": "b7e155c6-94bf-f011-bbd3-000d3a5b0efa",
@@ -277,28 +287,8 @@
    "url": "https://www.fabric-gps.com/release/f151890c-74ed-f011-8544-000d3a33bffb"
   },
   {
-   "id": "c5a0b4cb-322e-f111-88b4-000d3a376137",
-   "name": "Git & Deployment Pipelines Support for SQL Analytics Endpoint",
-   "product": "Data Warehouse",
-   "tool": "fabric",
-   "type": "Preview",
-   "quarter": "Q4 2026",
-   "desc": "SQL Analytics Endpoint supports Git integration and deployment pipelines in Fabric. Teams can version control endpoint changes and promote them across environments as part of their existing CI/CD workflows.**Git Integration for SQL Analytic",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/data-factory-adds-cicd-to-fabric-data-pipelines/5173239"
-  },
-  {
-   "id": "bfd72f56-e13c-f111-88b5-6045bd0a886d",
-   "name": "Optimized Truncate or DELETE all data in a table",
-   "product": "Data Warehouse",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "This feature will improve the performance of deleting all data from Fabric Data Warehouse tables through TRUNCATE or DELETE.Feature is awaiting WW deployment.",
-   "url": "https://www.fabric-gps.com/release/bfd72f56-e13c-f111-88b5-6045bd0a886d"
-  },
-  {
    "id": "a037d13b-a84d-f111-bec6-000d3a376c0f",
-   "name": "Reliable Warehouse Connectivity via TDS Redirect",
+   "name": "Reliable Warehouse Connectivity via Direct Mode",
    "product": "Data Warehouse",
    "tool": "fabric",
    "type": "Preview",
@@ -315,16 +305,6 @@
    "quarter": "Q4 2026",
    "desc": "We're expanding scalar user-defined functions with new capabilities, including INLINE = AUTO, improved error messaging, support for special built-in functions, and CONTINUE/BREAK statements in **computation**-based UDFs.",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/inline-scalar-user-defined-functions-udfs-in-microsoft-fabric-warehouse-preview/5172706"
-  },
-  {
-   "id": "9185ea8e-342e-f111-88b4-000d3a376137",
-   "name": "Transaction Support for Git Integration & Deployment Pipelines",
-   "product": "Data Warehouse",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "Fabric Warehouse deployments via Git integration and deployment pipelines execute under a transaction. If any step in a deployment fails, all changes are automatically rolled back -- leaving your warehouse in its exact pre-deployment state ",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/cicd-with-warehouses-in-microsoft-fabric/5173132"
   },
   {
    "id": "49ca9d78-7cd1-f111-a059-0022480a4051",
@@ -767,6 +747,26 @@
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/microsoft-fabric-extension-for-vs-code-generally-available/5172598"
   },
   {
+   "id": "512eea0a-39bf-f011-bbd3-00224808fcf0",
+   "name": "Connection Behavior When Connecting to Fabric Warehouse",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "We are updating the TDS (Tabular Data Stream) connection behavior in Fabric Warehouse to ensure consistent and predictable connections based on the specified Initial Catalog value.Previously, connections with an empty or invalid database na",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Connection-string-changes-in-Fabric-Warehouse-What-to-expect-for/ba-p/5185022"
+  },
+  {
+   "id": "c5a0b4cb-322e-f111-88b4-000d3a376137",
+   "name": "Git & Deployment Pipelines Support for SQL Analytics Endpoint",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "SQL Analytics Endpoint supports Git integration and deployment pipelines in Fabric. Teams can version control endpoint changes and promote them across environments as part of their existing CI/CD workflows.**Git Integration for SQL Analytic",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/data-factory-adds-cicd-to-fabric-data-pipelines/5173239"
+  },
+  {
    "id": "ce7f2f21-9421-f011-9989-000d3a302e4a",
    "name": "Shortcuts in Fabric Data Warehouse",
    "product": "Data Warehouse",
@@ -775,6 +775,16 @@
    "quarter": "Q1 2027",
    "desc": "Shortcuts in Fabric DW allow users to directly access and query data that is present in internal and external data sources, without loading them into Fabric DW. Users will have the capability to create Table Shortcuts via TSQL, UX and API",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/analyze-dataverse-tables-from-microsoft-fabric/5173251"
+  },
+  {
+   "id": "9185ea8e-342e-f111-88b4-000d3a376137",
+   "name": "Transaction Support for Git Integration & Deployment Pipelines",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Fabric Warehouse deployments via Git integration and deployment pipelines execute under a transaction. If any step in a deployment fails, all changes are automatically rolled back -- leaving your warehouse in its exact pre-deployment state ",
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/The-next-chapter-for-CI-CD-in-Fabric-Warehouse-Preview/ba-p/5401222"
   },
   {
    "id": "e240d768-fc21-f011-998a-0022480939f0",

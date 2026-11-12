@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-11T06:18:17",
+ "checked": "2026-11-12T06:20:52",
  "credentials": true,
  "indicators": {
   "de_rcp_102": {
@@ -423,10 +423,7 @@
    ]
   },
   "cpi_toilet_de": {
-   "table": "61111-0004",
-   "tried": {
-    "61111-0006": "GENESIS: {\"Code\": 7000, \"Content\": \"Für die Teiltabelle mit der Metadatenkombination:\\nVerbraucherpreisindex für Deutschland (61111)\\nVerbraucherpreisindex (PREIS1)\\nDeutschland insgesamt ("
-   },
+   "table": "61111-0006",
    "varSearch": [
     "CC13A2 Verwendungszwecke des Individualkonsums, 2-Steller",
     "CC13A3 Verwendungszwecke des Individualkonsums, 3-Steller",
@@ -458,7 +455,10 @@
     "keys": [
      "CC13-1213221100"
     ]
-   }
+   },
+   "matched": [
+    "Deutschland · Toilettenpapier | Verbraucherpreisindex"
+   ]
   },
   "prof_energy_total": {
    "table": "43531-0001",
@@ -786,6 +786,7 @@
   "de_imp_tissue": "10 series (sum)",
   "de_exp_tissue": "10 series (sum)",
   "de_imp_pulp": "2 series (sum)",
+  "cpi_toilet_de": "Deutschland · Toilettenpapier | Verbraucherpreisindex",
   "prof_energy_total": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Insgesamt",
   "prof_energy_gas": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
   "prof_energy_power": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
@@ -1192,32 +1193,6 @@
    {
     "code": "CC13A2",
     "content": "Verwendungszwecke des Individualkonsums, 2-Steller"
-   }
-  ],
-  "61111-0004": [
-   {
-    "code": "61111",
-    "content": "Verbraucherpreisindex für Deutschland"
-   },
-   {
-    "code": "DINSG",
-    "content": "Deutschland insgesamt"
-   },
-   {
-    "code": "PREIS1",
-    "content": "Verbraucherpreisindex"
-   },
-   {
-    "code": "JAHR",
-    "content": "Jahr"
-   },
-   {
-    "code": "MONAT",
-    "content": "Monate"
-   },
-   {
-    "code": "CC13A5",
-    "content": "Verwendungszwecke des Individualkonsums, 5-Steller"
    }
   ],
   "43531-0001": [
@@ -2619,56 +2594,105 @@
   ]
  },
  "61111-0006 · CC13-1213221100": {
-  "answer": {
-   "Status": {
-    "Code": 7000,
-    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nVerbraucherpreisindex für Deutschland (61111)\nVerbraucherpreisindex (PREIS1)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nVerwendungszwecke des Individualkonsums,10-Steller (CC13Z1)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
-    "Type": "Information"
-   },
-   "Ident": {
-    "Service": "data",
-    "Method": "tablefile"
-   }
-  },
-  "byYear": {
-   "emptyYears": [
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024,
-    2025,
-    2026
+  "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n61111;Verbraucherpreisindex für Deutschland;JAHR;Jahr;2026;MONAT;Monate;MONAT12;Dezember;DINSG;Deutschland insgesamt;DG;Deutschland;CC13Z1;Verwendungszwecke des Individualkonsums,10-Steller;CC13-1213221100;Toilettenpapier;...",
+  "columns": [
+   "statistics_code",
+   "statistics_label",
+   "time_code",
+   "time_label",
+   "time",
+   "1_variable_code",
+   "1_variable_label",
+   "1_variable_attribute_code",
+   "1_variable_attribute_label",
+   "2_variable_code",
+   "2_variable_label",
+   "2_variable_attribute_code",
+   "2_variable_attribute_label",
+   "3_variable_code",
+   "3_variable_label",
+   "3_variable_attribute_code",
+   "3_variable_attribute_label",
+   "value",
+   "value_unit",
+   "value_variable_code",
+   "value_variable_label"
+  ],
+  "sample": [
+   [
+    "61111",
+    "Verbraucherpreisindex für Deutschland",
+    "JAHR",
+    "Jahr",
+    "2026",
+    "MONAT",
+    "Monate",
+    "MONAT12",
+    "Dezember",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "CC13Z1",
+    "Verwendungszwecke des Individualkonsums,10-Steller",
+    "CC13-1213221100",
+    "Toilettenpapier",
+    "...",
+    "2020=100",
+    "PREIS1",
+    "Verbraucherpreisindex"
    ],
-   "rows": 0
-  }
- },
- "61111-0004 · CC13-1213221100": {
-  "answer": {
-   "Status": {
-    "Code": 7000,
-    "Content": "Für die Teiltabelle mit der Metadatenkombination:\nVerbraucherpreisindex für Deutschland (61111)\nVerbraucherpreisindex (PREIS1)\nDeutschland insgesamt (DINSG)\nMonate (MONAT)\nVerwendungszwecke des Individualkonsums, 5-Steller (CC13A5)\nJahr (JAHR)\nwurde kein Datenquader gefunden!\n(Keine Datenquader oder Zeitscheibe nach PTable)",
-    "Type": "Information"
-   },
-   "Ident": {
-    "Service": "data",
-    "Method": "tablefile"
-   }
-  },
-  "byYear": {
-   "emptyYears": [
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024,
-    2025,
-    2026
+   [
+    "61111",
+    "Verbraucherpreisindex für Deutschland",
+    "JAHR",
+    "Jahr",
+    "2022",
+    "MONAT",
+    "Monate",
+    "MONAT08",
+    "August",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "CC13Z1",
+    "Verwendungszwecke des Individualkonsums,10-Steller",
+    "CC13-1213221100",
+    "Toilettenpapier",
+    "126,6",
+    "2020=100",
+    "PREIS1",
+    "Verbraucherpreisindex"
    ],
-   "rows": 0
-  }
+   [
+    "61111",
+    "Verbraucherpreisindex für Deutschland",
+    "JAHR",
+    "Jahr",
+    "2020",
+    "MONAT",
+    "Monate",
+    "MONAT05",
+    "Mai",
+    "DINSG",
+    "Deutschland insgesamt",
+    "DG",
+    "Deutschland",
+    "CC13Z1",
+    "Verwendungszwecke des Individualkonsums,10-Steller",
+    "CC13-1213221100",
+    "Toilettenpapier",
+    "102,7",
+    "2020=100",
+    "PREIS1",
+    "Verbraucherpreisindex"
+   ]
+  ],
+  "periodColumn": "1_variable_attribute_code",
+  "series": [
+   "Deutschland · Toilettenpapier | Verbraucherpreisindex [2020=100]"
+  ]
  },
  "43531-0001 · WZ08-17": {
   "raw": "statistics_code;statistics_label;time_code;time_label;time;1_variable_code;1_variable_label;1_variable_attribute_code;1_variable_attribute_label;2_variable_code;2_variable_label;2_variable_attribute_code;2_variable_attribute_label;3_variable_code;3_variable_label;3_variable_attribute_code;3_variable_attribute_label;4_variable_code;4_variable_label;4_variable_attribute_code;4_variable_attribute_label;value;value_unit;value_variable_code;value_variable_label\n43531;Energieverwendung der Betriebe im Verarb. Gewerbe;JAHR;Jahr;2021;DINSG;Deutschland insgesamt;DG;Deutschland;ENRNZ1;Nutzung des Energi",

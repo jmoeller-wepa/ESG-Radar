@@ -1,5 +1,5 @@
 {
- "at": "2026-11-11T06:30:40",
+ "at": "2026-11-12T06:31:57",
  "log": [
   "kaub: ok",
   "mainz: ok",
@@ -62,7 +62,7 @@
     "MW": 275.0,
     "MHW": 342.0
    },
-   "points": 2977,
+   "points": 2966,
    "fallbackKm": 5.6,
    "wanted": "LEUNA-KREYPAU"
   },
@@ -117,7 +117,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 313
+   "points": 314
   },
   {
    "site": "giershagen",
@@ -157,7 +157,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 313
+   "points": 314
   },
   {
    "site": "kriebstein",
@@ -197,7 +197,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 313
+   "points": 314
   },
   {
    "site": "mainz",
@@ -237,7 +237,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 313
+   "points": 314
   },
   {
    "site": "leuna",
@@ -277,7 +277,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 313
+   "points": 314
   }
  ]
 }

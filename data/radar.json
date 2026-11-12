@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-11T06:16:39",
+    "lastFeedRun": "2026-11-12T06:19:23",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -9418,6 +9418,900 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPQVNXWTI4X3pfLTRUOTFCeHZjdmNOM1BNWnNlMkZKWU1xVWYteTg1bG9ZU1FFZ2NkTS15cTlIOWE3bE0tbTdVRFdydDROcTNqbmxUVkpsZEY2M0dsU2dRSVo1VWFNbWJOVHZsS2F1Mks2a2hhNnREU3BkYkc4SXhERHVwdXJ2N0JBX0loYmNuVWtwM3pJb1paeFRnbw?oc=5",
       "origin": "feed",
       "added": "2026-11-11"
+    },
+    {
+      "id": "feed-9d75db3e38",
+      "date": "2026-11-11",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "GIT"
+      ],
+      "title": "The next chapter for CI/CD in Fabric Warehouse (Preview)",
+      "summary": "Building and operating a data warehouse is increasingly a software engineering discipline. Teams want to develop warehouse changes in isolation, version them in Git, review them through pull requests, promote them safely across environments, and automate the entire process using their existing CI/CD systems. Over the past several releases, we've been evolving CI/CD in Fabric Warehouse around that lifecycle: DacFx…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/The-next-chapter-for-CI-CD-in-Fabric-Warehouse-Preview/ba-p/5401222",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-9faf764273",
+      "date": "2026-11-11",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Generally Available",
+        "Onelake"
+      ],
+      "title": "Use OneLake as native storage for Azure Databricks (Preview)",
+      "summary": "Organizations increasingly use Microsoft Fabric and Azure Databricks together so teams can choose the tools that best fit their data engineering, analytics, and AI workloads while working from a common data foundation. OneLake external-location support for Azure Databricks Unity Catalog is now generally available in Microsoft Fabric, with OneLake Security enabled by default for Azure Databricks Storage items. On…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Use-OneLake-as-native-storage-for-Azure-Databricks-Preview/ba-p/5377939",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-80b38ea7da",
+      "date": "2026-11-11",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt"
+      ],
+      "title": "ChatGPT Plus for veterans and servicemembers",
+      "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/chatgpt-plus-for-veterans",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-9a8de86a17",
+      "date": "2026-11-11",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Talk it through with Gemini, now on Apple CarPlay - blog.google",
+      "summary": "Talk it through with Gemini, now on Apple CarPlay blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQYXRXYXFrSTNsUnNkbUtwV09hNmI2bFVPcHluaGMwTGM0UlBPbXJKUndlSVdJMDBud2pNVWFtVjR5VTROZUI2N2RXSnpGTVlQUlpvOHlBcUstaFdaYVhacnZRejJVQ2I4b2loeC0wMnQ3MjVwVERYVVVxT3ZIeVF1cEJYNl92XzN1QWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-3986e4b6fc",
+      "date": "2026-11-11",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Gemini Decisions API: Fast, calibrated multimodal decisions - blog.google",
+      "summary": "Gemini Decisions API: Fast, calibrated multimodal decisions blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPTGVFa0w0cmk4aTZOc0dVWnc5bm5lSzRZOE9aQldlcTZZUGc4MGNNWGlTbDFJYUlibHJoQ2xpOEdrUFpPODBQOGluNUhVQWxvY2ZuWE84TVN3NVJza04xVXlBcW1kVkl1WjZMM2RxREktM2Z3bVVqbTBkUnJuTy0tRl9KSkxuT2pzY0Zib1dKV24?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-fea7204153",
+      "date": "2026-11-10",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Google Cloud launches Gemini for healthcare. - blog.google",
+      "summary": "Google Cloud launches Gemini for healthcare. blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNM2JmdktkU3I5SjBrYk4yaEVyZHkwM0YybmR3Yldzd1BqdzEyWVlSR2xuNVhUUkE2MjdDQUdxWlgzeTVoanF0U2tfY0p4TGYyWFgwQ0l1UEVPeVBMNHpOODNyLVNKQ0N3Z3JROVlMNUZKNWgzQjFFaDdwZlUyamZ6cDRhTDRZYnVwMl9LS1AySUdJelFYeEZtUFhmV25PTkk?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-d5d2fe8373",
+      "date": "2026-11-10",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU approves Belgium's €2.04 billion state aid to wind power industry - Devdiscourse",
+      "summary": "EU approves Belgium's €2.04 billion state aid to wind power industry Devdiscourse",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORXQ3S2ZXT09CbjVmSDdVU3RJQ1pGZFJCbjhPdTRES1lNLU51ZDlrU1NESnMwdjdpUEx1Yk9BdXVNbUJ2eTM0ckRZQVVUWnpBRXVmdXpidHpZYUNFcFlVQTlDZEhFaGs4OS1zNXVPd3poUDVCR29oWVRPUE9PNlV6NXNGYmN2c3JnWmhZbHZ5RkEtRlhWOEZmZjdBVFJva0pLZ3B0cGM1TG9ra3p5YnFYYmZwOWhFSG93SWdYUWVYUDNHQdIBxwFBVV95cUxQMndYQzlVVXVKRF9QUlNnVFFYRzhZVDg3RmlJTDEwZWRac04tX3YybDNSWDE3Z2V2RWFOODNLRmgtNmZvNlNJR2ZzLUZON2xpYWNDYnBQd2lkNXFVZW5oTW81bjlpLWRwYWlWZVFDWEhpVW9XQUc0ZzNVbFdaSFhyWWRhQXVzOHRIcXZEUmdmVU5WMW5SZDdaZ1pOVkJtNjBCR0pqSlNCTkp4dUJMckNpcGVoYjIzNzR2UEFELXlOdXV5MXpNU0Mw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-12a7fee967",
+      "date": "2026-11-10",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU approves EUR-2bn Belgian aid for 735-MW offshore wind project - Renewables Now",
+      "summary": "EU approves EUR-2bn Belgian aid for 735-MW offshore wind project Renewables Now",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcjh3NW9mZ05XOVFwSTlLakk5UU9wQnZvcWlGZTVkRmZUbS1UUTNXSDFTMkNOMmdnU2tKRFpFLV9RNklyM2t2dlp1TENRcUdxSVZOMVlwOGd4U2diMVJhNy1HdXhSdFM4OW8xUHUtdVBNdGl2Qlp4VmcyRlJDRTBDVFlYbUJBT1ZTRGpEWDRhVVV1OVJLRXhad2twXzZJMW5ITUtEYldsTQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-31afe8c0a3",
+      "date": "2026-11-11",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU clears €2.04bn support scheme for Belgian OWP - Ocean Energy Resources",
+      "summary": "EU clears €2.04bn support scheme for Belgian OWP Ocean Energy Resources",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSkVMSmp3QWxWWmg1ZjN2QVVYdkw1LS03a2NncjFGakdxOWFhX2ZpMlRBa0M4RnNHbV9BY3l2ZUM2bjhFaDYtYWlEbkZjcWlTdWlCdl9TYUYyN0ZrWjVDMWU3YkRjVlVoQWtPY2QyU3ZRcnladmU1dTVpdFZMR3RJNkdkalQyR2pRS3pEb2JPZkFRd2VpTDdGbFZ3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-b731394553",
+      "date": "2026-11-11",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU Approves €2 Billion Belgian Offshore Wind Scheme as Europe Reassesses Energy Security - EU Today",
+      "summary": "EU Approves €2 Billion Belgian Offshore Wind Scheme as Europe Reassesses Energy Security EU Today",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdU1CeXA3VnI1ZURQbHBxSVM4ZkpIT01GMS1rOEtsU0RoY211ckExZ0g1TndVNFVFREs3d1pJeGFyV2NCcGlacVR3czZ0bUp1ZzdTcXh4eHZVZ1VST1dYcXJGQlgtcnp5ZmZQVVlGNF90SW5NS0Z0ajFOTHVuRFlFQ3V6cS04cUU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-461963f21e",
+      "date": "2026-11-11",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Commission approves state aid to support Belgian offshore windfarms - Riviera Maritime Media",
+      "summary": "Commission approves state aid to support Belgian offshore windfarms Riviera Maritime Media",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQd283eE04OGhuSlVfdkFxZUJsRWFJekdwRHVFTU5vMWJqWXktYU5hRnd6UWRyZmUwVklUMi10UXlWekIxZGNMX01CUG9rcmphZzN4LW1fa2RvMXlGYWVkSmNabmF2clVmRXlyZjhoWDdhZktka2s0eWFZRTZxaWNlVUVlUW9KVTd5U3RQcklSNHJ1d3F0anFKS3NONWZFd1ViSEwwMDR4aWl2cllMU0R5Y0k3VjVzLURpRlNxczljWi1VLXhBd1YxVVkySm5vTk5HWm1LaW9R?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-99d73345d8",
+      "date": "2026-11-11",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Belgium to Relaunch First Princess Elisabeth Offshore Wind Farm Tender as EU Commission Approves EUR 2.04 Billion CfD Scheme - Offshore Wind",
+      "summary": "Belgium to Relaunch First Princess Elisabeth Offshore Wind Farm Tender as EU Commission Approves EUR 2.04 Billion CfD Scheme Offshore Wind",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQX0xwYTZsQ0ItOW40Y3ZpZmVpUjRuNThseGllbVo4OGExRnFwbzBtMXJFOWszTGxRdlA4ZTdRdDRHbTduYWJmTGtOTDE1UkVlSnJpbGZPVGJyak1lZWtfLV91RUUzQkFucnIxMGpWaHhBVU5CaFhLWWZrUTJDX0E4TGRyQVhJV2M5QkVpZTBxMXRVbW1rc1JhclVKTzB5LVRNbWE4SGMwRUlyZWNpYnNPYmpfbGItaFBHd3NZVjlHN1dSSkZhY0JyZlBJMmw4cnJZWmcyWHhmdnAzcGtnOXQxdFFxLXVmdjdZenI0Zm9hZDJkV0ZtOVE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-f84c3ea985",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "TfS, China’s Energy & Chemical Alliance Agree on Carbon Accounting - CHEManager",
+      "summary": "TfS, China’s Energy & Chemical Alliance Agree on Carbon Accounting CHEManager",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNENjR3Mxa1MtSm5vUldpMGtqenRqREo4cXhKOTFJZGIxVTl6b0p5eUxuTWR4SW9zMTdZT21iN3VDRElrQjhjMVRyYmdOdlV3Y3pEQ1RfM2tFeUFEa1hRTmdKdWFYa3pta19kQndOMTJsWm1HUm1EWXRsRENhdE00aDJsVnhsWDhKb2Zqblg1cEpYRmhobVMzZmxlZlpGQVh3RUE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-227aa6d688",
+      "date": "2026-11-09",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "How Blue Angels pilot Scott Laux’s ouster was discovered by eagle-eyed onlookers - New York Post",
+      "summary": "How Blue Angels pilot Scott Laux’s ouster was discovered by eagle-eyed onlookers New York Post",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbXppOTVqUUZWSzV4c2VLUk5rRHMwZV9tZ09QMHJ6THpKcENVN2ZPSlQ3YldwOWh3azdha2NrbkFKUmszRmd6LWFpY3hEUGI1RFFxdWxJNWRONXNIc3BNZXNMSWtfelZvYXRQZGZXOXBpamp2b0xNLVY5Wno1dG1uWEdLX051MDRNWENZRmtob28wUVoySDhWZFlJX3BKdDJwQl9aclJpblBienhHanJ2ZjJrbFBGVHVvVWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-0fb4332c83",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "green lie - 白鲸出海",
+      "summary": "green lie 白鲸出海",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IRks2WXJaZDVIX0VtM2M3T3ROd1NWR0dnSjNLMjNqYlpqSFFPeFpwWE1sXzlKQ0lOV0lmbGg2VGFJSUR5X05ZWUZGZDVlYkV1aTRwbGpXdXAwd00?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-b1f15808f5",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kokett-Toilettenpapier von Aldi: Diese Hersteller produzieren die Eigenmarke des Discounters - Giga",
+      "summary": "Kokett-Toilettenpapier von Aldi: Diese Hersteller produzieren die Eigenmarke des Discounters Giga",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Blauer Engel & Ecolabel – deutsch (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTTVNdmZnOUxKR240a0cwNUtQSUVFNFpyU3Y1U0hnSmJqdzhvZ2dzTVFyNG9sRENKNERmcnF3elgzZTBseXBtUDhGT2N4S3F1dVNkVTdWV1duMFVUX3Byc3ljajJjcXh6V1NJM0xna1BsdWhmczhvTG1jTVJEbWJCbGl6RUxJdnlvQ2tpeGRQMTREa29MWXhGYzhfbFNxNHhkWl9wV3VMOS1xVUFEbHI1V0JGVF9JQjBXWkdXSzNoZVRaazlHbThUZ3BSZTI2VVpTVUF4ZGFENEVNZHlx?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-03c1c2fff4",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi Süd fördert Milchbauern – warum der Verband zweifelt - WirtschaftsWoche",
+      "summary": "Aldi Süd fördert Milchbauern – warum der Verband zweifelt WirtschaftsWoche",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNa243LWVsTmtYcld1bktYd011R0VVZVI2VnV1aWJad3JwSVp5VkE1T0ZDbUtFRmVJQ0FOUnIwXzhqRzdnZkZoeEN6aDBQRVU0QW9pRGRtVGtRenlXaENhSEdSdW9HVUhTQURtOV90V3FaUXBUbDQyMFotZ0c1d19uNVJjSWVrOHl4TjFCeGhuSzV5UjRxVjFxbk4tZ1B1dVFBMzd3X0NpRDRMOUtGeDFhTQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-8481ef23d2",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi, Lidl & Co.: Diese bekannten Marken produzieren die Eigenmarken der Discounter - Freundin",
+      "summary": "Aldi, Lidl & Co.: Diese bekannten Marken produzieren die Eigenmarken der Discounter Freundin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPc1BleGctX2hEVmFuZDIwOFlIc3VVSEVOSmxyRkdmTVV0bUhybXYyOVFwQVdmVUxGSXRINWlfbWc4bkh2RFVoQ0R1OW1FOHBJcjcyVm5nc2FycFJrZ1hiM013aFQxU0w4eXF2SXRFVWFLU3l1eVI3dl9LWjlhQTY2engzLVRaNnVoX25nb3RVYjUtZUdfaXNySHB1aHdmOXRuRGlzUlZnQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-f63fec4174",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi-Fruchtgummis: Dieser bekannte Hersteller produziert sie - Watson.de",
+      "summary": "Aldi-Fruchtgummis: Dieser bekannte Hersteller produziert sie Watson.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOakR5S1Y0SHFNd3lUMGV5WWUtZ25mNkNTQTVkRDZyOFRSN3dvMFZ5Qjc1TEx1QkFub0hhWWRQYVNPOUtSRzE4d0tDVzRTVFhJRkRNcmkxRENsZG1RZWNVMk1XbDNtT2xVelY1RDRxSXl2ekxBMDZKMVpzZEdYZ1VvenZsMWJIa0lnc1VramsxVG1IbDlMeUtXWGx1VGpLVk8yTi05WXZKcjZEc0xX?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-7967037119",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Neue Kooperation - Aldi Süd und Friesland Campina fördern nachhaltige Milchproduktion - Lebensmittelpraxis.de",
+      "summary": "Neue Kooperation - Aldi Süd und Friesland Campina fördern nachhaltige Milchproduktion Lebensmittelpraxis.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPOXBoNmdGMzBsUHJ6MUk3TjBZeWI4eWNUUVp4b05kTkIwUi1fR3dreWhQNm51S0ZBc1dJNUlMNjd6RjZmelZSMTB5bWFTYkhrcHQzc2Fsb0phMndOR1JqS1hTQmd1U1NPemF6NUczZkxldGZURFhlVVZXUUI1eHdmZERTd2tPWXFaTGtyS3dvYTV0N3ZTc3dyZmhtNlRPRHczUnIxajZmbUljQnRIblVBNDJ2a2Z3QkNneWpiRWIteDZFQWVwa3Y3T1h6R00xT3g5V3NLY1ZwMUx1elVNdUExbkNIUjg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-7de6bf0763",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tandil gegen Persil: Schlägt das Aldi-Waschmittel die Teuer-Marke? - DerWesten",
+      "summary": "Tandil gegen Persil: Schlägt das Aldi-Waschmittel die Teuer-Marke? DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZkNhaVZ3dF9xQlA1MnJzUndUMGVaeTM0ZFllQkdBU3pJNHNyRWpEQUJfTFFGWlZXR2FwYmJvdjVmdnFVU1RWb1MtRHZsZ2pXaE1TTjltZmxSQW0yUkJ4bHcwcEJaU0xRb1EzWXh4ZDNBRGhKRmtpYlBwTGdBMjg5aWZQSUhoUUl6TENNMHNwOUc5ZnJSQld0Z0pCODdnR1N5Q1A1UlNWRE8tR19LX0k2VVQ2X2lhWnFrVlJSZWJiV3gyUHh4R0lWa3JGVTNVNWhj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-ddd8c3d154",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "„Gut & Günstig“-Produkt schmeckt wie das Original: ZDF-Test überrascht - RUHR24",
+      "summary": "„Gut & Günstig“-Produkt schmeckt wie das Original: ZDF-Test überrascht RUHR24",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMmNYZXYzY3J0VmtiV1JiWlVVV244MGluaTBFNUdVOFQtejJqQlBySFo3WVVJQVVmbGFxWkNYSnpNWW1GVGdDa2hDVjFGeDBkTWpGYmdyenpRLWhTcEd2WUxOVkRLU3R5eGNSWjBiSy0xRWlXT28tUXpuS19qTGlDWk1WbGVuTGtNSDF6YVhNekhKY05wR0F3eTRGQlNHc0tmckJ3aHVQeTZNT2dBd0FDb0dBaHRoMEtVcHJ1UmFxS2JhYXMyLU1XVTZ6c3AxOTFnMFExMFktR0pteGtnc3Rn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-7f89f3f183",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Billig, Bio oder Luxus: Warum REWE gleich mehrere eigene Marken braucht - DerWesten",
+      "summary": "Billig, Bio oder Luxus: Warum REWE gleich mehrere eigene Marken braucht DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNWxvUHlrdnM4aUVfcFU3dUtpclhxZFAzMzFQVE15WWp0akdud25INVNYT0p3Y0xrSXp6bmZRdHI5WXRhS2VhMjdXRXhuM2RrXzFmYXJJcW9rNHBGWUk3UkRiY1c5UEdCNEJoczcwTkQ5bDgxOHcyQXBrZHJRWXM5ZVRkeFhlVVdHMkc4Smx1eWZFWXNKeXM5aFBlWkI0Ym5aelhMTFdDNzZSOHpTQnpLag?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-4c154512cb",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Cordon-bleu : ne mangez pas ces produits vendus chez E.Leclerc, ils font l'objet d'un rappel national - Corse Matin",
+      "summary": "Cordon-bleu : ne mangez pas ces produits vendus chez E.Leclerc, ils font l'objet d'un rappel national Corse Matin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOcWdhdHhQeThNTlp2akpZN3ZnVmdhMktGamJrX2xUd21zeVFETmY4WjFnSlVVVE92X0Z4WmMzc21kUnJDTVRCT19tT2ZyekdySU56UnJRNkpVNkNrVVBXUHl5NkhSem00c2VJbllBSnpZR1liY05LMlhjWXJUM25VNlM3UXp6a0dYYUU0UUYyWE5XMHlLSXBNb3h1Y2ZNa3VnMFNKVmZjVXN6Z25OeDRvNGN3aFhoT3hQUF9vNVR6cVVILTdCQ1ZuWDlsMDlKMW9COW1lQTd1OHZSZ3pESVZ3MDE5eG1rQUh3NFI4Vm14OA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-c4bb4b7fec",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Nuggets, grignottes… : un même paquet peut masquer des recettes de qualité différente - 60 Millions de Consommateurs",
+      "summary": "Nuggets, grignottes… : un même paquet peut masquer des recettes de qualité différente 60 Millions de Consommateurs",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNS0VZTjQwbUx5VWY2TjZwZ251WlczbGZZSVRBbktQaFBXcDJMc0s0VlNnYWJqaWF4SVlzLWxUeU1HVXJsRXdPLV9VVXBDOGsyaWFmSFM2NTJfbS1ueHBvWlVTMEh4TlZ0bXlVRU13S2JMU3dSaHZYUVVIMHZEeTk3RmllUUgtSGhyWlJ6NzlCenlQckgtcG5aTWpkUHh4UVZlclphQUNTc1g5dWsyY3UwdEptVDUtMDNXRlNsSmFnaGc4M1FyWE0tNllkbWlzYlJ2dzRqZjIzbnVyMGJSeHF2MHNR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-9c18b73aed",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "PepsiCo, Tesco and Siemens headline Packaging Innovations & Empack 2027 conference programme - Sustainable Packaging News",
+      "summary": "PepsiCo, Tesco and Siemens headline Packaging Innovations & Empack 2027 conference programme Sustainable Packaging News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9VUGNxNGt4ZDUyWkZ4dnBnRlB2cE51ckJ6eG5HZElJQ3cxdElsLXZOOXJGTVVwZWl6cExKeXdfWmlsRDdlSUhEdnBkcmEzbmV5NEJLc05DQkbSAWNBVV95cUxNTC0ycTBvTUZYdWJMU2ZhWVpDSTVIRnNiWFhDb3VRZU5ESVdjaWl3Y2dOanZCSHpMdHdDTWZPRjQ4aVMtcnQ1d1h3TkZrdmJadkVOenMzTkJHcFpqQ243LUU0QTg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-b5eb3a73ac",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons expands its retail media proposition across 1,700 convenience stores - Convenience Store",
+      "summary": "Morrisons expands its retail media proposition across 1,700 convenience stores Convenience Store",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOT1VmMzZOb2FRMmE3NzZ0NTRQLU9jV0s2YmNYdWJueFF6WVQ3UUVYQUJvMFhqTmliX3dyeVM1cDZyS0NDN2ZVdW55VlVyRDVtSG9SOWJHOTJucURSZk9WMVYtSXlhNnF6cUZUTUYtMG1WTlRaVjFVTWt5dVktOGRXRDdaQTF0MW84bTBkZWF0LXBSdFRoam82M2JUYm4xVmduQmZGYUFLcTViOG9ubEdTNDVYUGhTZTdRSkVwcE80bU40Tlg1Q2lheTZDRWY?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-d3e49e692a",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Asda exceeds target to halve operational carbon emissions within a decade - BusinessGreen",
+      "summary": "Asda exceeds target to halve operational carbon emissions within a decade BusinessGreen",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOHdOSzZ4VG9VVVVNbzFlYURLZGhjWUxkbFF0R2kzQ3ZLaE0yRTNXVDVidlZGT1dlNVlHNGdVbzFwcG5fV0FRN1Axck9Ob1EyenVqLUpEUWR3eUxDdkM3R25fUkt3RmxvWGJyX3VaNWtHUlVLNGdQWERVNHd6U0NVRVE2bU1NaGU0RElXMWdOdkVtSjJZRTdLS2xYVHlCZGtOLW8zX3piWQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-4cc163b5c7",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons Media Group expands retail media proposition across Morrisons Daily stores - Talking Retail",
+      "summary": "Morrisons Media Group expands retail media proposition across Morrisons Daily stores Talking Retail",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPWWVYRnE1X196SXFuZVJLSU9fcjB6SW84MnVjbVJmckRLaXFGUl9uSnQ5OVk0azN3RTNsS0NQbUwyazhrQllRa1RyaTF1Z2lZNGluNGVQRWxEQVVBRGlzOUFNRXROLWY0bjdSZVNnRjZwRG9oYXA1bEx3Z2RBX0VfTjF3TEZUcjF2d1VndkFGWlJPSTBZY19saENUakMwanFRZUZISGF0bVZtVUNjb2hxZmNHM1VISWYweURzWjZ4aHNwYm9wRWE1QlRpTQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-559995bce8",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons reveals major new change at 1,700 stores - starts now - AOL.co.uk",
+      "summary": "Morrisons reveals major new change at 1,700 stores - starts now AOL.co.uk",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTlg2RVBmeW5GRjVhVnNsdElXekEzcTZjUDFhTGxSeVBkUUJSYXZXYzU1UXVWT3RzQlZCeVFTZ0QxTFFvcUJNLTZBTUs3R05mOHJKNjdLcnE4M1VPTzJvblhBeks4SnRyUFdzUnlVU3U4djE3VG9ZWnluZUxoMGRhOWk2ZEU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-8b1a3ec5a9",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "UK supermarkets share cereal update after Kellogg's 'disgusting' Rice Krispies change - Metro.co.uk",
+      "summary": "UK supermarkets share cereal update after Kellogg's 'disgusting' Rice Krispies change Metro.co.uk",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUjhMN2UwWWxfeTlBUWFlTmJIYm13UFBXZWVEbjUzVEc2TVdnYXNnYV9hcHBiN3RHdmpNT1VwS3kzdzQtdHFjQ2sxQ3NiWnMxbC1CYm5iTG01a0ozcWloZUlWZUZ4R0VPLXBad2VXdDFyOE0yVlpLbHE5TDZzRGRKaTRINXg4cFcxYm0zSFBqM1d1dktIYkMyWDFCZy1kcDQzX0s5WURCdERsRDdITDNiWTlBQ2hiMzJp0gG-AUFVX3lxTFBHMmw2UXhRX2NjT1VlNzNaRlVMelZqMU9PMjBXSlBTTXhoRk1FUTBNaGVId3ViOURDbzR3UDI1azFIYWdpMDFmd2FVQm9pcURPQTE0MVQ2TkUzLTQteEljcFpfWmFRSEljbWp0SUN2MFV6WGJ4eXZuMzdqYVRraXhvbnVER2RGd3Ixd0VIdVI3Q2RGSElaT2x5MTg1T3QzUG54aFQ2cTY4d3l1MTlkMVBMRGRjUnc0REtfcGE3Mnc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-ad66cf68ff",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Innovation designed to tackle crop losses wins Tesco Ag-Tech Challenge - Farmers Guardian",
+      "summary": "Innovation designed to tackle crop losses wins Tesco Ag-Tech Challenge Farmers Guardian",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdnVzemhfV0xvcW5oajNOSWlSbjVZMG5uVkoxNWxGXzNxOW1LYWl2UzV5YlJsOWc3SXhuS3V2WVpTVjFyZ2N3NW5kM1E1YzFPc0dHN0duaEpiWmR0bmtreHZRYzdEQnJ1T19GTDJOdGtWTEIyUDVsV1BRUWJEc2xhQmxfcjVDVFZrRlQ2RHhWNlJlMllhMFdUOElvRVVERktqZGhrU3Y1MkFXSXBRbEZCUnN3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-af178399cf",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons Expands Retail Media Offering Across 1,700 Convenience Stores - KamCity",
+      "summary": "Morrisons Expands Retail Media Offering Across 1,700 Convenience Stores KamCity",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTGtpeF9RVVhsUXJyV2VaN0JPV2lNNG8wU0EzWDB4bGNLRlBqYTJ5THF6SW54SWY0QU91Q0pPdUctd250M0NvYzZyWFlFVnhCb1g5Y2MxMndrQ1lvZnd1Nlh1VUlWLVI1Yy03U3VSaHNlWTdLVXdfQlB5OTh6Um54WGhEdmxTemFselF4UWdERndLV1FuZ0tITVBxSHZMN1FPRkVHdlBIenVpZHlqRFliNmhXbVRFMXhDclFRb04xZG1JSWhaejlHUGtn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-bc0c4a100e",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Asda exceeds carbon reduction target and surpasses £100m Tickled Pink milestone in latest ESG report - Grocery Trader",
+      "summary": "Asda exceeds carbon reduction target and surpasses £100m Tickled Pink milestone in latest ESG report Grocery Trader",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOcVFGWjdJYndxZWt1dGlkZXYwUEd3QU9qaUNQaXd0Nk5WcGNUV2xwMTNmcFJtbkxfN1lzQV85REhwYy0zYllXTWVOZmZaYWdnaEh3X2hHbXFRN2RzUlZTbzlSZnZZQTZTTUhSeDRZa1hYOUdwM2o5emZmcHotZlFtdEk4bU55aDJfaFNaZFp2X01IOG9HelBQT1Bvb0tlc0pnenRGT2syR0dsYzFMblp5b1RpMTJDOUkyd3FuZzdPM1gzYmlZckFj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-8063eefb00",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons Retail Media Expands to 1,700 Stores - Grocery Trade News",
+      "summary": "Morrisons Retail Media Expands to 1,700 Stores Grocery Trade News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQaTA1MEUxak1ueXJrTmIyTXk1ZV96UjA3aTBsR3VoSmpXVTkwTEtCN1hKNVo5bVRpSFlPQlcydkluZGdXQ2c1d1ZobXAwa21Tdk5ObjRvWkxmUmVvU0JENHY4emhFOW5OTEdUZmctcHJZN0UxVnRVc3lpZU5IYnpqRjZ5SmpUR00?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-7c3f63dfcb",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Delhaize raises Belgian wine packaging output with DS Smith - Packaging Gateway",
+      "summary": "Delhaize raises Belgian wine packaging output with DS Smith Packaging Gateway",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9FUEFGaUZzaTRLWjFXRDY3ekVMdDMxcnRmYngwcWNLZXRiX3Fnam1ic2hobExHMU5QTmRocFZ0OVdKOFpOMENIeGhRaEZUb3VXYUUtSmdhMUZ3WFZPSWdhVVRYdk1obFFEUWd2cWI5NjJqSXZVU3pRTnA5cmQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-f7dff8f05a",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Decarbonizing the Value Chain - Nokia",
+      "summary": "Decarbonizing the Value Chain Nokia",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYl9kekVJOTY2U0Z0MlRvVm5LZnEzOGlLZDhUR3E5LU5OTlY1TGlpQktZQjRmeC14TFRnZ3E0SFk0Qm9zUk1ocTl3b08yTTJUMVQxT1VLVDM0bXB0ZkFyUEVUalEtRW41c250bGxmM3NLVS1MYlRkS08xc0dDZ3hRYVVVRHNUT2tPQTd4WXdEbWxVRi1S?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
+    },
+    {
+      "id": "feed-529d7d556b",
+      "date": "2026-11-11",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "PPCB frames water audit mechanism to scrutinise industrial water use, wastewater management - The Times of India",
+      "summary": "PPCB frames water audit mechanism to scrutinise industrial water use, wastewater management The Times of India",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNOThnYlM5X0xfSm1rUHRVRzlQYjlmdG5qNml1OW5rZDFZbDc4LUI4R29qaHpvbmpveU0yckNpNHJZOWVJRmRxVjR5UkE5eTduNkN5ekpoclpiS0tqaHg1YU84SjlHdm9uTW9oUmpxUlpkeDJKbVRjSTNJNndRa0F2dzg1X1BrVG5HTkdhZWV1XzJJS2Nzb1owdTZwaHRWSE4xYU9LRC1yR0RwVzRwVS1Jbmd6Ynd4SEdwTFBDTHBlS1pEaHh2U0Iyazg3YjJFRnRiVjdiei1WcW5VcXNfMXBtdlBJN1BXNloxUVQyZ3p0S3JLVEhrM0VSSnhmX0HSAYICQVVfeXFMT1VjRk9LTk1jekZFQ3o2TE1WVEJQMW5HVW1zYXMzdHdKVXNlcXhOZTBnZk81enR2WXZrN2o2ckNaOHhaX0RiVTV5TzV1c3ZUT2tmOWpIVXFUT3FWNVRrMXlBME9kaGFLV3ROYjZlVjh0TXVWbnM5SUwtNVVmaWdYMFRoWUI5dVFBOGR1RkxDeXhFNFN4TWJEdXlHU3ZLOU51WldmSU5DUDhBd0xRQXl3c20yMER5RlpXc0xsbHBxX1dFN1hjc0VQVGY0aVlrN0h0V1h5bGdabEhKakZrUFVMTmFKb0FSZ0JRMEV3T1pkNm9WZVlOckRwQ2JDUF9INXc5dVF3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-12"
     }
   ]
 }
