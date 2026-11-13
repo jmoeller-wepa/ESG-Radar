@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T06:19:35",
+ "updated": "2026-11-13T06:17:40",
  "consultations": [
   {
    "id": "19220.0",
@@ -125,6 +125,23 @@
    ]
   },
   {
+   "id": "16414.0",
+   "title": "Certification methodologies for carbon storage in long-lasting products",
+   "summary": "",
+   "type": "Isc workflow",
+   "dg": null,
+   "start": "2026-11-12",
+   "end": "2026-12-10",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/16414.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [],
+   "keywords": [
+    "carbon"
+   ]
+  },
+  {
    "id": "18352.0",
    "title": "Amendment of the European maritime, fisheries and aquaculture fund for simplification and transposition of WTO agreement",
    "summary": "",
@@ -148,7 +165,7 @@
    "type": "Adoption workflow",
    "dg": null,
    "start": "2026-11-04",
-   "end": "2027-01-07",
+   "end": "2027-01-08",
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14770.0_en",
    "areas": [
     "climate"
@@ -176,6 +193,25 @@
    "keywords": [
     "packaging",
     "plastic"
+   ]
+  },
+  {
+   "id": "19393.0",
+   "title": "Limited assurance standards for sustainability reporting",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-11-12",
+   "end": "2027-01-18",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19393.0_en",
+   "areas": [
+    "reporting"
+   ],
+   "topics": [
+    "csrd"
+   ],
+   "keywords": [
+    "sustainability reporting"
    ]
   },
   {
@@ -956,5 +992,5 @@
    "changed": null
   }
  },
- "consultationsFetched": "2026-11-12T06:19:35"
+ "consultationsFetched": "2026-11-13T06:17:40"
 }

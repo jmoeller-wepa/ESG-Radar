@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T06:41:19",
+ "updated": "2026-11-13T06:45:38",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -30,10 +30,10 @@
   ],
   "essity": [
    {
-    "title": "Essity stock balances sales growth against margin pressure",
+    "title": "Essity stock weighs margin pressure against Brazil growth move",
     "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNZ0JSSkJ0QTBWS25ZNm1uX3JXTjZ6bDcwWTlycmFfdERNcGxmc3ZocmRVaEpYbVkzQTQ1bzRpUWNjVEVFMFNpaU1uNm5sSGlyNFdRVFh3aS15eHZvMWVSSjlNTkdURVNRRzFZMDBwLWJzdUNobk91OVRxM21na3NRRllySWR4TDhNcDZveEp3bVdqdHZtQlFrNVp2b0VGRFpjOFczbmROSlJCeWtjYk1BaDFsczdBaE5OQlhuT0hB?oc=5",
-    "date": "2026-11-11"
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdFZLSzhvV2JCWkEzWmt0MzBmRGpWeEdsR1I2OExLWC1XN1JMRkpxOUhkY1E3SVZ5ZnRhRmtaM2M2d3FBYURyeVpiZWN0QVJoN1ZxUVFnNTF4NWFmRk8tZ2FXeXRTNFo5QjlLNFBDSHNDXzZUNUlac3ZQbzJtV3BzNzNtSWpwazE3YVBHb1ZKRC1qODEyUGVOMFBFdVlydWFxU2IwOEdBZEptUzZuWi02Rkg5NThKV2RZRmNiQ3AzZ2dGX2M?oc=5",
+    "date": "2026-11-12"
    },
    {
     "title": "Essity (OM:ESSITY B) Stock Still Trades At A Discount Despite A 25% Run",
@@ -96,12 +96,6 @@
     "date": "2026-10-14"
    },
    {
-    "title": "Lucart invests in new Toscotec PM15 tissue line at Laval-sur-Vologne, France",
-    "source": "Papnews",
-    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUjRSQzBMV1VwaTA2MWktWXc4clJKR2VhYnNIZkU0bDBtUDU1ZXg4dk9SSkFIMzR1VE1qNkt5eEtuT1RQaFNxNG9kYkVaSURLODFfUS1DVEZHR1Q1c1Jqekkycm9DeEliYWVKS0VWeHdsc3pnc1lOWEZnczJyNFJCdw?oc=5",
-    "date": "2026-10-01"
-   },
-   {
     "title": "Lucart to install new tissue machine in France",
     "source": "EUWID Pulp and Paper",
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYkNHU1lvUXBrS25GNXV3WUpzVlQ4ZEtLaUNETG5SVUJpWUUwQVg0a19MUjVydVppay1aNlZlYkR2M2c3Rzc4WHdFVTkxSFY5T0dMLXVNYzNQSUVZdXR4NVdhUHQ0cU54cy1qN2hpWTBHT29UbHhwSDJsajZFdXFhOEJRZ213NklMQk14TFJZQk13M3hVSXhYRTBVUE9aZw?oc=5",
@@ -116,12 +110,6 @@
   ],
   "kimberly-clark": [
    {
-    "title": "Kimberly-Clark Could Exceed Kenvue Deal Cost Synergy Target Amid Productivity Focus, RBC Says",
-    "source": "marketscreener.com",
-    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPczNoenNxVGNWaGhDNmZ0Y3BJZlk3ai1PT0JWZWFSZG4wZWk1UWtOZXZLTkUwdjF3QWVuaWRzLTdYcEZlelhvZTJoX1pvQm84X09tSUF5NHBFY19tZmFhZnktUEhxeTVBZ2tNUnItVGJSSzdwbjhrbXVrbWRIX2VnU1JQMHROc1hwYUVqdjlWb2liNC1ELUpmT1BxZldkT29XaXhJdzVBOW1MWWRNRlJGNV9pRlY4QkZtSnZ6ZDZ0d1U2cW1HYi0wenYzMDJ4YTdYS0FkanhxS0NDNThCZEE?oc=5",
-    "date": "2026-11-11"
-   },
-   {
     "title": "Kimberly-Clark Mexico stock stays in focus in euro trading",
     "source": "ad-hoc-news.de",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMl9qcE9Ua25GcGFhaGxnMXN1eUR5V2lNR0tudDIzS1lXUkRTdWx2OFE1dmZOZzhFM1pyZWlyaUdYNmRTTXZTTXVSQzQ1ZFR0aHNwZ3U5a3FfWXpUOEN1ZldqVTJnYk55N1FSMGFmc1IyTk0tdjAzNHJ5MGw0LUJlSTVpV0ZyMGNtVnRHUmNEUnRhV2VxY2ZVY3lSVWhrUVh0MVdhVGxvVzQ3eTFoaTAzOERXRE9lZm9oZ3A3QXRn?oc=5",
@@ -134,6 +122,12 @@
     "date": "2026-11-10"
    },
    {
+    "title": "Barclays Adjusts Price Target on Kimberly-Clark to $112 From $106",
+    "source": "marketscreener.com",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWEJTVWdSUzIwUGNmeE9nNmgwZ2s3Tzc4Z1BDSm8yZFpjcXAzbDVRdGRfQmlsVW8yMTd4eEdkVlVfLU1IMVRtWmNzMFpucTlOSS1WNzQ4djM3d0Z2aUptTmRvS2dNMm1xNjhfdVc0dl9wUzRjbWJMeTJpMlpzMVlfenBDMnJ6Nzl4bVktb0lldzc2TjhWSFppZjJ3OXlYUnFCc0w1YkhnaU04d0ZaV0VaaVB1TlNCcG8?oc=5",
+    "date": "2026-11-06"
+   },
+   {
     "title": "Kimberly-Clark Third-Quarter Earnings Top Street Views Despite Macro Volatility",
     "source": "marketscreener.com",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQUEV0Q2F6UXFyQXBYN3daTHUzTi1kRmdrejlhMzN0ZTU4T0pzcTQweEVsQ2NkTTFUU0R3ZzFQbVlEODJwNU5wLVJGS0FyOVBZVTZsRjlsMEdzaHlfRDYzTll2d2lzVHBCQTRKX3NhUmZRbkM5ZHRpb3JDOERxY19yTHZEMTRqaHJROVNNcWRpc1RCbGlxdnlpMHlyVmV4OGRTU0VwZ21VeEV4Mk13THctZnBLVDNuYmVPcFVsblBKVkt2eXBoclY2TjRTQlk?oc=5",
@@ -142,28 +136,28 @@
   ],
   "pg": [
    {
-    "title": "Bahl & Gaynor LLC Sells 1,018,656 Shares of Procter & Gamble Company (The) $PG",
+    "title": "Insider Selling: Procter & Gamble (NYSE:PG) CEO Sells $379,057.50 in Stock",
     "source": "MarketBeat",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQam92V19PVEdLVXp6YWN5djM1eFo4UmJ4aVhVWks0UFBGTG5LRC1hWVNlWlhoRk1oaGh4WWZwWF8xUFZBZ0RPR3BzSWQ1TW15R1BpOTEwS00wMm8tRjA1LXA1WFpaRjR6M1Z5RUVGMnBXLVdKWHhhdU1iT1FLeGUwX3pING1sdHN4V085cU9EaTVzTFE2M2pXOExjM2N1MVJUTmtCbkdMV1Y2c29jY1J3VXpJckk2WWZrNWxZUGlfdjFsS0R0TFdRZEN3?oc=5",
-    "date": "2026-11-11"
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNU085WjkyRGROZ3dQSGUyWDBPMXd5WFpMTFFSRHlHU1MyWFRKejlmQ0dNZFBYZDE2bnIzaWtZSFVZcFZrZnZQYXpoYXhLbldNMlZHb2M1QnpMQmUxNUEtaENnbTV1U1dLdkJWakVqdFZxcTV3YVQwV0xPdzNvSTAyRi0tTXZMdzRybDZiRGoxNTJLUno1TUdwS0hVWkY0WXJEYWZaVVpaX2U4M3BOLW5TZFdPcHpUSXRQSFNuWnRWcFRLdmRYZVJB?oc=5",
+    "date": "2026-11-13"
    },
    {
-    "title": "Reinvesting Dividends Turned $1,000 in Procter & Gamble Into $4,656 Over 20 Years, and Most People Never Notice",
-    "source": "24/7 Wall St.",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQM1VscjNuY3BKd0tTVWk4bzJDeXlTeG12S0QxeUU0UHM4NlM3UGQtbXZBY2dHbkRHckppc21xQ3EzOTBraDFWSG41SEg4aVZfUFI3cFEwOTBEanJvZ2ctS3Q5VnhZOTEwVEtGc1pHSHZVNVo3S3N5WnZnaFpsZEFOOVhfREtBZllTNXJ6S3JMVEVMdW1EWWREVTR2WnUyakxpWFl5TWdMMlJtRHBBLTRPLU0yM0dXY1g5cFc0UDZfOVNnVjh5M292ZFJoZVFxV1dwQ25FLWhmRWtKZnJpZVRWLTVR?oc=5",
-    "date": "2026-11-08"
+    "title": "Laundry & Home Products Market Forecast to 2035: Demand to Accelerate on Premiumization and Sustainability",
+    "source": "IndexBox",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPeU1FdW16TXhoSW5DYmFVSWlEcms5X2JwUUpUSDZzcmVGZDFZZW4zQUw0VHhNckpIaFJ0d0E1ODA3YS05RGxtczBWUkxTMjdQb0xCbjBYQTNUY2ZkVDVLZFBMbTk4SWRfd200RmVYQkdFUnZaM0dTS1NsUWc3OW1IeFBmOTVDVGcwcjhXT2F0MWhMblY4a005cFhIWHpPbGltSGFydGYxYzR4OENOX2hvNUNjaXEwTFphN3dCMVNpSGtHVGNId0ZOcXZfbTduUQ?oc=5",
+    "date": "2026-11-12"
    },
    {
-    "title": "Procter & Gamble (NYSE:PG) Stock Forecast & Analyst Predictions",
-    "source": "Simply Wall St",
-    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBPMVJlcjRCN2RCWjBKRHBLd0IxbHEzVFJoT3IzTWJzUGZobFIzMkNXVGNyaTQ1bHIzSGV5VXNLTkhxcXd0dEN4MFdxVTdkczVmZzVHb29hSVcwTnZsNlhnY0RPQjZsZTVhRVpJVG5oZHUyXzJjclZmTW90SQ?oc=5",
-    "date": "2026-11-05"
+    "title": "Procter & Gamble (PG) Has Raised Its Dividend for 70 Straight Years. Here's Why I'd Buy Before 2027.",
+    "source": "The Globe and Mail",
+    "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQbTVEX09LbG5XMk9EUzBnRjl2N2Y2TjVUekFmRE5OQjV4c0hNQW55anVJRFFMaHFLQUpCVzRFTG1pMnREWF9QUWM1TlBnc1gxSFFhZ09kY1FfUEFjcGlPNGxJRjEyQUlGdzlHaXVfblFsMTRSOGJlQnVuQlkzTG8tZmdIUTFpd3pNMFg5MElUbjE5QV9oY1RYZGMtS29sVFRyc1hyV3J1OFRhWHVHMmM3THV0NTBwMXQ0bTBJYnhfU1pfc1ZOXzBxY2o1MngtczNNS09MV181WHYtVmVvOUg2ajY5U3ByeXlQOTFYbmtzNGhSNHNHazdyQWZhRHUtanNSRmV5M0kwOU9WbUJxbVE?oc=5",
+    "date": "2026-11-12"
    },
    {
-    "title": "Procter & Gamble Rosy with Thorne",
-    "source": "The Daily Upside",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQNEp3OHZwdUFuTF9vbmpTZ2x0RGxaMnZ6TzlycDI2RFNxQVFIMlpzaUpxejd4WENuZ0czejhJem5GS3o1TWxENUEyMlB3LWpnYzJvZ2p2NzF1NFhLbUVaaHNuT0h1d2UzdTZBb1BlZnd5R3c3czJzb2tqLXBWQUhOXzliWUloTnlIMUhr?oc=5",
-    "date": "2026-10-23"
+    "title": "P&G Health Q2 PAT falls 7% to ₹196 crore; sales flat",
+    "source": "scanx.trade",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZXVlMkNVbDZzaGUtVkpqc2NHUTQ5QU4zdE9fRnR5Z0JSVDhCUFdtcnVaZDk3WENQUFpDd0ZOOUNCSHlrYmxyV2hXakQ3YVRtc2I5OC1QSllnVXVkYkxqSGs0M0lGY0UxTmJHUUg0NHdoWmVmM0NDQUxPUWwxeWxjUWkxa0xiQllBOS0wTFBKMENYbFpfdVlHbWVBcWRFdUhjNnlBRjBFOVFXbmpKUFFDWGpxUlJ3QXNQNFQ5R3Y1N1M?oc=5",
+    "date": "2026-11-12"
    }
   ],
   "georgia-pacific": [
@@ -194,6 +188,12 @@
   ],
   "app": [
    {
+    "title": "ABB completes major modernization of drive system for Gold East Paper",
+    "source": "PULPAPERnews.com",
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxORFJ0cGNIU3VYYVg3NGxBcE9mRmdhdW1OeS1DT0NtS1BYcjVEWmJaM1drQ1pmVG9TU0d6ajlPU1JzNmZveGVfZmpZQkVTdVYyRC0zWm1Xd1drZVBfRVU1UjlfRFpsRFlmNjBCQzlSUVJXajNvcDU2M21sTUZpWmlZYlRrbDROb2E0MV8yYnNUaG1nak1qc0JYcE1iLV90VnNyd0J0R3hSblpDZw?oc=5",
+    "date": "2026-11-11"
+   },
+   {
     "title": "APP Group to take steps toward landscape-scale conservation in Sumatra",
     "source": "PULPAPERnews.com",
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZjVLQjJKdXVPTGtyOVRreFpKdHZxMGZFbVBMWGVsenZHSDc5QU1GZmVEcnJ0c1dxaFlNZkRxeHZ6QUQ5V0Fzenpwa0FYNm9uTjN5QnFNUFJsOGtaczRhdlRnWHllbjI0RmtMdHV2cW1UZU1yWjAycTRab3VnWnlpVVV3Mk5NYW9qQ0FkRGVkaEc0UzlmT1k2MEhyLUIwWVhabWUwZW5mdmF2Uktk?oc=5",
@@ -210,12 +210,6 @@
     "source": "The Straits Times",
     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQTjNseEJNM0ljcFhIcUhBUndfUXE5X2hQcmRIYmxLeWp0Zjlka0hkZXJReUQ1Yzl2TXZ5TS1UMDl2YW9JQ3hmbHRmQXBMeXFEbFZyOEwtRUtSa2c2dmUzWkJDNjYxZFhMSG5STGFNbkpTd0RsQTlCVDU1RFU4THZYbmVBN2lvaFE3U09EZWpoNFVjS0pxVHdCYkE3b0R0OHlhMGp1TG9ZMXl1Vl91Nk5BRUZ3RXlQaEI1TU9GRlYxd2gtTmI2OWhFXzh3OE5EeTh6NFFxMFJaaXoyc2NwdUlMTzln?oc=5",
     "date": "2026-10-23"
-   },
-   {
-    "title": "'Deliberate use of fire has no commercial rationale': Asia Pulp & Paper, linked to Indonesian forest fires, says Indonesian law bans burning",
-    "source": "Mothership",
-    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE01ZlN4c1B6TjFOaXJHa3BULWctZjZlN1dDNWg3MW12M2hCSlRTaGpFdzZTeHQwODN0YVZtTlJqeFhpcnRHR05aQzdORGxLcm85YTdWblpfZlc0cDZsNm1ZVDZ4SHQ?oc=5",
-    "date": "2026-10-22"
    }
   ],
   "hengan": [
@@ -246,9 +240,9 @@
     "date": "2026-11-12"
    },
    {
-    "title": "Empresas CMPC SA (XSGO:CMPC) (Q3 2026) Earnings Call Highlights:",
-    "source": "GuruFocus",
-    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPa2hSa3laRHlMbWY4NGpEMDRYNWFUY3daZXplX1J3V18zcTV5ak5HWEh5czFMSjVhWFdPLU5nXzJIb3M2MjFTOGFQUk5SUHJWQlMxczVrZlJXdUY2ckw3VkhUZng3QzZrVG9HdzJHblNZOGhTSGVGajM0TFZ4OVFpdC1mSWV0RTJGdUlTOW5YWUpOcjVRSVBuWlo2WGxLcDNhVW9vQlVRX0RjTkxHVXlPUzR2akcxWnpHMnZCc19ncXVfNG52TEZVaDJwR3RPMjN6ckR1dUhCcmFTT19yLXFPZDlfU25mWTduejFCaDBGc0NUeFk?oc=5",
+    "title": "Empresas CMPC SA (XSGO:CMPC) (Q3 2026) Earnings Call Highlights: $785 Million Divestiture Plan ...",
+    "source": "Yahoo Finance",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYmxvbXdhRGY4Y0ZxSzBTU01jSnVWM09IaXQyZVAteDd2UzZ4ejRWZFhKTnJNc2JlcWttUWQ4SUdZLWM0ZFZhbXNmT1otVTZUVTRsNU80S05OQkxrc2wwR29FaV9zaEc2YWdRYnRFS2NMeWsxTDA0LWJ1MTc2OXotUEZ4NmFTX1lhWGlXazRKMGl4dEw5Rmc?oc=5",
     "date": "2026-11-11"
    },
    {
@@ -266,6 +260,18 @@
   ],
   "kruger": [
    {
+    "title": "Kruger Products Delays Planned US TAD Facility Beyond 2028",
+    "source": "METissue",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQNTlxT0RtTFkxdGF4NEpndnB4OExTQXBDNVFubzEyOVpxOUN2bl96U1lkMjVrZ2FfTEVwRW4tRXktUGhDakZKSllOckNianRzak8xVDhxVjdRRnN4ZGg1cXc3U1pBOV84N045OHlTSThaeTJjb1k3U0pyNGVTZmN1R21kNHlKOU8tQ2FJaVpzQkxXUQ?oc=5",
+    "date": "2026-11-12"
+   },
+   {
+    "title": "Kruger Products Reports Higher Q3 Revenue as Net Income Nearly Doubles",
+    "source": "METissue",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOUs1WXIzVDFmc0VaWU9wRGk0MEt1aHJGMHBEWUZxaG90R0d2Z3ZpeGJqN3B5UGxmQW5GNFFkcFpJZlpSZWV6eGZoS2haTHdFNFl5V0d3WUtUbFl5M0VDbU42SkNXeUNOSXlmYkRwNG9FMW5BdENrRWFkckJFUWE1cWFGeVVGOWxxN1l5dVE4WlpkdEk3aGxzWjBhZDdFdw?oc=5",
+    "date": "2026-11-12"
+   },
+   {
     "title": "Earnings call transcript: Kruger Products posts q3 2026 revenue beat By Investing.com",
     "source": "Investing.com Nigeria",
     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOYXRaSEFrSkNCYzZZTC1iTEQwX3NfbGlZT0UydllSaUU1X2w3T2xmZTNhUEExbnppaUFRUUs1ODJNeE15RmZaOWxfajFZV1FUenJYRjBOT3FoamY3SDNxRDRxeWViM20tald3NzlDUjhRNWFqLUZjcHd2SGMtMnZMZUNlVFphdXRiVkhXdE5EQnZXWF9HTDZXYUxGbUp3WldLdTBnd2lTcjNxNUgtYmdTemJ0cGRrcTk5WVhVZHJLNzhiWXdlakgw?oc=5",
@@ -275,18 +281,6 @@
     "title": "KP Tissue Releases Third Quarter 2026 Financial Results",
     "source": "TradingView",
     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNbmNONHJSWThXR3RuaVRkMlh2cGhyWENTeVdXTUhHbl9RbTFxd19Fd2Y5dm0xREwyQmRubDB6RGdzNXVaWkhhRnVyQ0t6ZDE4VUpRQzFEMW1BRDNQaFJkSW80TE1sYThfTW9HM2NjRlpmRnlDckRMSl9GN0R0QzcyUFdKQ21GQ0RJdXpXM1Q1OVptN0YyY19DVmNuSV9VM0tiWWl5Q2VTQ19WZ3huN2lLWkh3bEtlY1dueXc?oc=5",
-    "date": "2026-11-11"
-   },
-   {
-    "title": "KP Tissue Declares a Quarterly Dividend of $0.21 per Common Share",
-    "source": "TradingView",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNYWxfRG1GRGo2eGQyc3EwajA0bmZDYThrYjRLcVJSb3VUZjV3YzdwSnhGaWhLQ29QdHZqOUlWX2dCNDlrbk1FNHN2RWl5UkVNYm1NSkg3ZUFTcjZnSXcyQUtxSUdWUzM5WExNbzVINFJEbkhxZE5PYzR3M1BkeEd1ckUzWTNGQTJZLU9JMFU4SGRSYUpzUm9CMkRDc3ZSSFNTMzRDZnNpMmx1UkUteDJ0UVJfUGFKWk85ejdoeVBSakV4THVpQlE?oc=5",
-    "date": "2026-11-11"
-   },
-   {
-    "title": "KP Tissue Reports Q3 2026 Results as Kruger Products Posts 9.1% Adjusted EBITDA Growth",
-    "source": "kalkine.ca",
-    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTVJzOUVxQnk5YjZWaWNQZUtoU2JKbFMtOHpIS0lnb2xWY1BrLUl4MEdkYTN3dlU1aXRzcFRGa0Jyc0dxRXp6dW8wc0FfdDRzc21xdENYWFJpSVJzeHdNV0ZUS1ZyX2lUREpQWFpuT0ZTNjMxSFp5bDBaVmN6eFpHdGdTbENSR2FXaWdqRGZRODFobnFpVEhCemp6RXI0NDZYbDRheVgtN2lKeVJESHF6aWxBVHVfNXZ1bzRDdG5iUQ?oc=5",
     "date": "2026-11-11"
    }
   ]

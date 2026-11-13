@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-12T06:19:35+00:00",
+ "fetched": "2026-11-13T06:17:40+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -27,150 +27,150 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": 19295.0,
+    "id": 16414.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2026)8740131",
-    "foreseenActType": "REG_IMPL",
-    "shortTitle": "Revision of olive oil conformity checks",
+    "reference": "Ares(2026)433232",
+    "foreseenActType": "REG_DEL",
+    "shortTitle": "Certification methodologies for carbon storage in long-lasting products",
     "currentStatuses": [
      {
       "frontEndStage": "ISC_WORKFLOW",
       "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/11 16:51:00",
-      "feedbackEndDate": "2026/12/09 23:59:59",
+      "feedbackStartDate": "2026/11/12 17:34:31",
+      "feedbackEndDate": "2026/12/10 23:59:59",
       "isCurrent": true
      }
     ],
     "initiativeTranslations": [
      {
-      "value": "Проверки за съответствие на маслиновото масло — преразглеждане",
+      "value": "Сертификационни методики за съхранението на въглерод в дълготрайни продукти",
       "language": "BG",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Kontroly souladu olivového oleje s normou – revize",
+      "value": "Metodiky certifikace pro ukládání uhlíku do produktů s dlouhou životností",
       "language": "CS",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Overensstemmelseskontrol for olivenolie – revision",
+      "value": "Metoder til certificering af kulstoflagring i langtidsholdbare produkter",
       "language": "DA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Konformitätskontrollen für Olivenöl – Überarbeitung",
+      "value": "Zertifizierungsmethoden für die CO2-Speicherung in langlebigen Produkten",
       "language": "DE",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Έλεγχοι συμμόρφωσης για το ελαιόλαδο — αναθεώρηση",
+      "value": "Μεθοδολογίες πιστοποίησης για την αποθήκευση άνθρακα σε προϊόντα μακράς διάρκειας",
       "language": "EL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Olive oil conformity checks – revision",
+      "value": "Certification methodologies for carbon storage in long-lasting products",
       "language": "EN",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Controles de conformidad del aceite de oliva: revisión",
+      "value": "Metodologías de certificación para el almacenamiento de carbono en productos duraderos",
       "language": "ES",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Oliiviõli vastavuskontroll – läbivaatamine",
+      "value": "Kauakestvates toodetes süsiniku säilitamise sertifitseerimise metoodika",
       "language": "ET",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Contrôles de conformité de l’huile d’olive – révision",
+      "value": "Méthodes de certification pour le stockage de carbone dans des produits de longue durée",
       "language": "FR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Seiceálacha comhréireachta maidir le hola olóige – athbhreithniú",
+      "value": "Modheolaíochtaí deimhniúcháin le haghaidh stóráil carbóin i dtáirgí fadmharthanacha",
       "language": "GA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Revizija provjera sukladnosti maslinova ulja",
+      "value": "Metodologije certificiranja za skladištenje ugljika u dugotrajnim proizvodima",
       "language": "HR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Controlli di conformità dell'olio d'oliva - revisione",
+      "value": "Metodologie di certificazione per lo stoccaggio di lunga durata dell'anidride carbonica",
       "language": "IT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Oliiviöljyn vaatimustenmukaisuus – tarkistus",
+      "value": "Hiilen varastointia pitkäkestoisiin tuotteisiin koskevat sertifiointimenetelmät",
       "language": "FI",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Olívaolaj-megfelelőségi ellenőrzések – felülvizsgálat",
+      "value": "A hosszú élettartamú termékekben történő szén-dioxid-tárolás tanúsítási módszerei",
       "language": "HU",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Alyvuogių aliejaus atitikties patikrų peržiūra",
+      "value": "Anglies dioksido saugojimo ilgaamžiuose produktuose sertifikavimo metodikos",
       "language": "LT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Olīveļļas atbilstības pārbaudes: pārskatīšana",
+      "value": "Sertifikācijas metodikas oglekļa uzglabāšanai ilgmūžīgos produktos",
       "language": "LV",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Kontrolli tal-konformità taż-żejt taż-żebbuġa – reviżjoni",
+      "value": "Metodoloġiji taċ-ċertifikazzjoni għall-ħżin tal-karbonju fi prodotti li jservu fit-tul",
       "language": "MT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Normcontroles van olijfolie – herziening",
+      "value": "Certificeringsmethoden voor koolstofopslag in duurzame producten",
       "language": "NL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Oliwa z oliwek – zmiany w kontrolach zgodności",
+      "value": "Metodyki certyfikacji w zakresie składowania dwutlenku węgla w trwałych produktach",
       "language": "PL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Controlos de conformidade do azeite — revisão",
+      "value": "Metodologias de certificação para o armazenamento de carbono em produtos duradouros",
       "language": "PT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Controalele de conformitate pentru uleiul de măsline – Revizuire",
+      "value": "Metodologii de certificare pentru stocarea carbonului în produse durabile",
       "language": "RO",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Kontroly zhody olivového oleja s normami – revízia",
+      "value": "Metodiky certifikácie ukladania uhlíka v produktoch s dlhou životnosťou",
       "language": "SK",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Preverjanje skladnosti oljčnega olja – revizija",
+      "value": "Certifikacijska metodologija za shranjevanje ogljika v izdelkih z dolgo življenjsko dobo",
       "language": "SL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Kontroller av överensstämmelse för olivolja – översyn",
+      "value": "Certifieringsmetoder för koldioxidlagring i produkter med lång livslängd",
       "language": "SV",
       "field": "SHORT_TITLE"
      }
     ],
     "topics": [
      {
-      "code": "AGRI",
-      "label": "Agriculture and rural development"
+      "code": "CLIMA",
+      "label": "Climate action"
      }
     ]
    },
-   "openFound": 48,
+   "openFound": 50,
    "read": 300
   }
  ]

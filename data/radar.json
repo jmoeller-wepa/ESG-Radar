@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-12T06:19:23",
+    "lastFeedRun": "2026-11-13T06:17:28",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -10312,6 +10312,1345 @@
       "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNOThnYlM5X0xfSm1rUHRVRzlQYjlmdG5qNml1OW5rZDFZbDc4LUI4R29qaHpvbmpveU0yckNpNHJZOWVJRmRxVjR5UkE5eTduNkN5ekpoclpiS0tqaHg1YU84SjlHdm9uTW9oUmpxUlpkeDJKbVRjSTNJNndRa0F2dzg1X1BrVG5HTkdhZWV1XzJJS2Nzb1owdTZwaHRWSE4xYU9LRC1yR0RwVzRwVS1Jbmd6Ynd4SEdwTFBDTHBlS1pEaHh2U0Iyazg3YjJFRnRiVjdiei1WcW5VcXNfMXBtdlBJN1BXNloxUVQyZ3p0S3JLVEhrM0VSSnhmX0HSAYICQVVfeXFMT1VjRk9LTk1jekZFQ3o2TE1WVEJQMW5HVW1zYXMzdHdKVXNlcXhOZTBnZk81enR2WXZrN2o2ckNaOHhaX0RiVTV5TzV1c3ZUT2tmOWpIVXFUT3FWNVRrMXlBME9kaGFLV3ROYjZlVjh0TXVWbnM5SUwtNVVmaWdYMFRoWUI5dVFBOGR1RkxDeXhFNFN4TWJEdXlHU3ZLOU51WldmSU5DUDhBd0xRQXl3c20yMER5RlpXc0xsbHBxX1dFN1hjc0VQVGY0aVlrN0h0V1h5bGdabEhKakZrUFVMTmFKb0FSZ0JRMEV3T1pkNm9WZVlOckRwQ2JDUF9INXc5dVF3?oc=5",
       "origin": "feed",
       "added": "2026-11-12"
+    },
+    {
+      "id": "feed-05f1e3cef6",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Using Claude Opus 5.5 as your daily driver for knowledge work",
+      "summary": "Opus 5.5 is the default model in Claude on Pro, Max, Ultra, and Team plans. Here's how it compares with our other models, and how to get the most from it for knowledge work.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/using-claude-opus-5-5-as-your-daily-driver-for-knowledge-work",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-5b59c75a11",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Operate Claude Managed Agents inside your security perimeter",
+      "summary": "Introducing self-hosted Claude Managed Agents. Now you can run agents in your own environment, whether that’s in your own cloud or on-premise. You host the agents, credentials, and session history, and choose where requests to Claude are sent.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/self-hosted-claude-managed-agents",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-103f6398ed",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "J. Crew brings its signature approach to styling to life with Claude",
+      "summary": "J.Crew's new Style Advisor uses Claude to offer a more personalized way to shop online, with complete looks instead of individual products.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/j-crew-style-advisor-with-claude",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-e89c62d750",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "The Claude Tag guide for startups",
+      "summary": "How leading startups use Claude Tag to ship faster and scale operations",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/claude-tag-guide-for-startups",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-21ab7432db",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Introducing Claude Meetings",
+      "summary": "Add Claude to your video call and get the work started while you talk",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/claude-meetings",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-6b5db77df3",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Introducing Claude for Manufacturing",
+      "summary": "A new plugin with 17 skills and four connectors helps manufacturers draft quotes, quality reports, and supplier requests from the systems they already run.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/claude-for-manufacturing",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-372847c949",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agent",
+        "Agents"
+      ],
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/amplitude",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-5b0f73df89",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agent",
+        "Agents"
+      ],
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-90d7922370",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt",
+        "Codex"
+      ],
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/gondola",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-0990939c7d",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Codex"
+      ],
+      "title": "Holiday Extras is rethinking what it can build with Codex",
+      "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-f1ce83f7db",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agent",
+        "Agents",
+        "Codex"
+      ],
+      "title": "Securing persistent agents like OpenClaw at OpenAI",
+      "summary": "How OpenAI combines trusted control-plane services, Codex sandboxing, auto-review, agent identity, and observability to run persistent agents.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://developers.openai.com/blog/securing-persistent-agents-like-openclaw-at-openai",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-744c543925",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Introducing Gemini 4 Hydrogen for Agentic Workflows - blog.google",
+      "summary": "Introducing Gemini 4 Hydrogen for Agentic Workflows blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbnlqelBIT1ZXblFBa25zdHlXalhPR2Z2b2xLZ2lmeEtFbUFXS3Mya3FtU0tyeGJrOXpHVEJOdFpDVUZSUTVOUHA0WjRiakw2a2hIRzc3ZHBfM3pDT3dKTDdfMExNQ2FnU1NWSHI3UGpXX2lVSEUxeVYwb2FfNE5vRGJnMjhWSzU5WkFrdmtOdW5Fb0lja1dFN3JUMkQ5R01JRXhNUA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-c88533b238",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen - blog.google",
+      "summary": "Google Search gets a major upgrade with Gemini 4 Hydrogen blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcEx3ZWpIeklDNURpS0RHX3B0RWZ5andjREM4R2FqVUdUSGNQTTNXUkhwb1haZmlreVA0bE9IX1pMQldlUVQ2Y3JPckYwaFIwSEFHcTNjS2hMNzFvNV9lWTdoQ2c4c1UzZUVnLTY1WWFwcjR5bUEwWWdtdTBuZ2t1bGxyQzJMeGpiaF9IbjRlVXJtVmtHTXJZ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-7970e04735",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Gemini 4 Hydrogen: everyday coding and agentic workflows for developers - blog.google",
+      "summary": "Gemini 4 Hydrogen: everyday coding and agentic workflows for developers blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNWJnSDNidWM0SVJfeVVCbDJXelYxX0pRejVJakk1dEVTSzAzd1BoODdSU3FkeG5tZ2xhVnE2M2ZOMmVGUzFEMFIzNzNJOW15WWRfNXBDM3pUZGxXQmo5SmQwcW5OVG91eDZNSjBTNlY2QVdpOXE1MDl6TldJSVFJSGpxc1ZtZzJZaHpreS1xeVVsN0FrZklFS1JOOA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-7cdb75cf20",
+      "date": "2026-11-12",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Get quick answers from Gemini on any website. - blog.google",
+      "summary": "Get quick answers from Gemini on any website. blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQV2NXY2V1TlhCOTdiQnMyWFJWU0VZVmlHNHRFUVZpRFBKYXNmMHhqWlJRa2pzVmxmekNGajBERkdrMkpmU2h2Vjd0OE1qN0k3U0VKYXNETlNiNnlvX0ZhVFZjTmxlVVpOVU5nanI3OVFmdUEwVUo5eDRxWllmT1hSeU5MR1B6XzlsR3hfVFg0bjJOaGM?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-5b3334a24c",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "forests",
+        "people"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Deforestation"
+      ],
+      "title": "UK Proposes Mandatory Supply Chain Deforestation Due Diligence Rules",
+      "summary": "The UK Government announced the launch of a consultation into proposed new due diligence regulations […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/uk-proposes-mandatory-supply-chain-deforestation-due-diligence-rules/?utm_source=rss&utm_medium=rss&utm_campaign=uk-proposes-mandatory-supply-chain-deforestation-due-diligence-rules",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-011872ae76",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [
+        "Scope 2",
+        "Scope 3"
+      ],
+      "title": "What’s next for California’s climate laws following an appeals court split decision",
+      "summary": "The Ninth Circuit Court of Appeals allowed scope 1 and scope 2 emissions reporting under SB 253 to move forward while halting the enforcement of scope 3 reporting and SB 261.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/whats-next-for-california-climate-laws-sb253-sb261-following-appeals-court-split-decision/874578/",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-3e03c2169b",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Energieeffizienzgesetz-Novelle: Der Effizienz-Kompromiss für den Standort Deutschland - Tagesspiegel Background",
+      "summary": "Energieeffizienzgesetz-Novelle: Der Effizienz-Kompromiss für den Standort Deutschland Tagesspiegel Background",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPanduT3RQajZ2MXh0dmhsdFdJLUVtRnNEb0hIZ1JkWkh3SE52c0d6MHIteXV1aDdNQWVYdEUzc0liLXlNQlZRN2p0T2JRdlIyMzlBSjZjaGwtT2xpRmNqWjJPaWgyNFNzLTB2elU2bVJhVHZkNEtuYnYwSnVwdkxSZTVXM285NEFTSHhHMGRrTzQ4cjdnWldPOTQ2c2JyRGIyS3hnN0RSYTZuTnZPcEpXV1JpVjA4Y0k?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-6b3719c8d4",
+      "date": "2026-11-11",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Commission approves €2 billion Belgian State aid to support offshore wind energy - The European Sting",
+      "summary": "Commission approves €2 billion Belgian State aid to support offshore wind energy The European Sting",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVXZGaEE1QmxfdnNYcm1CbkQ0ZzBuNkFNY252dngxejF5YUM1c0ttSGZtWVBYT1pBSFlvR0szYTZ3NlA5aDZsSXRKZFNtQm5CbXV4NlVoYlBjTGFfMURwNnpCakl5Yi1QdnpLRUZwSk5YclgyeGtqaGFzYlRRYTg1NG8yejkxdndJWTNlQTBfRm1SQ1cxR3oyR3hJMHRYM0dOdld1R1huQ1RqVm1lQ2R5MG5Yc29ya3NXdEE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-60ff8dc194",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU-backed €52m electricity relief targets energy-intensive firms in Luxembourg - Howl.Link",
+      "summary": "EU-backed €52m electricity relief targets energy-intensive firms in Luxembourg Howl.Link",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE13RmtSVUNpMFVtSE5samhNUC1KWnp5MHNlVzJpWlBaUnNzeGZYR0FJMEhUaTVxdE01dG1z?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-574c41286f",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU clears €2.04bn support scheme for Belgian OWP - Azərtac",
+      "summary": "EU clears €2.04bn support scheme for Belgian OWP Azərtac",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNMmdYaDBpT3ZMVDRmbTBQeWl5ZzFheFhzdG1OY2xwZTd6US1qaDBITVhza0p1RE53UXB0OFdlbExGZkVzbFVfNks3QWN0aGpZbXMtRmV5UGFzQml5elFHMGVrOEhZQ0VRNXpwWTUxS255d3ZfMkkxRWstc0dRUEhjOVVJOXRkUEZwWFE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-3500f0c45e",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "The debate on GHG Protocol’s electricity accounting revisions is far from over - Trellis Group",
+      "summary": "The debate on GHG Protocol’s electricity accounting revisions is far from over Trellis Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNY250SzE3RHJWQlhhcG9CNllmR0huXzQ4Zk9STkFmOGxIX1ppWGZ3OUMxbXM0dTh2MG5XUkdkSkVqSWNtWEQ5dWJEMk9IR3Itc0tWaE1nM2NyVXUtSEJsbnN6NjB4ODFxVF9BYldEZmpKZzdzUjFQcmpKR2M5UGlNR0IwTFVKWmUyYlVUV092R3JIZUtwVDRmUlhrT1MtSWw0OUp0cTFqNUY5QQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-7550d93cc1",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "SAP Puts Product-Level Cloud Emissions and Energy Data in Customers’ Hands - SAP News Center",
+      "summary": "SAP Puts Product-Level Cloud Emissions and Energy Data in Customers’ Hands SAP News Center",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUWFZWkRUTzlBN1Rka0R3UkxVZEVJNkE2ejRkRkw4bUdDa0lDeWpVQnM1eXdfbUZpd2hxVk9zLTdQbXJ5QzVnSUNTOHBIdWwzTWpWVWUxQU1POTBLZVk0bTlMZkREM3hzR2JrMFNiUG9EMHZpbFZOSnREVnpHVFZRZWJWVFVFY2ttd1A4TktB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-6eed36b7c7",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Global Electronics Association, Catena-X Partner to Advance Data Exchange Across the Electronics Industry - I-Connect007",
+      "summary": "Global Electronics Association, Catena-X Partner to Advance Data Exchange Across the Electronics Industry I-Connect007",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPblg0RHpqNkJKUGVKQnNhRHBmZVdDeTdIaVNhQ3ZuZWVteW1fZEFMMzJSalhfQ2NRWWtlQlJPb0tWMS10WDB1VkYzbEE0ZW1fV3NNRTM5dEFxYWp6ekkyV3dCdWtCN0tWc1ZWaXU0d1YyM2k5UHlzWEZvX0Vtd0J1d294cnZpN1ZfNnZkaXRFQ203TFVlczNUeWRxNzg1M1BZOWVhTkNZaXdHMFJUM0NSd21tYTRiWEs4UVdNZVFOSkRCLWtuMmhodG9yZkF1Wl9TcGRtWi1ZRUthTGIwUF9CaFM5VzFDUHpa?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-c6bfbc4565",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Technical Notebook: Sustainability of silicone elastomers – Lowering carbon footprint and enabling circular content - Rubber News",
+      "summary": "Technical Notebook: Sustainability of silicone elastomers – Lowering carbon footprint and enabling circular content Rubber News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPenBIUzJqU3BWQlRYU3Z3dkV0YndFMGdWTk5vaU1ZZWQ3Q3hkVWJ0bGRGRG1ZLTdkODRNcS1UQWNpMktSdnBEOTdlZEw0YWI4U09ZQzBTdTNVZzF1R0liRlhOSTl5TGZucjJEVzR6d1FNWG91WjBYRURhVmp1eHRDdUFoM1ltUHhLOGYxOHdfNEJMV1RWUzVjb3pfeVd1eXUzUUd1a3BGVElBWHdIRVBiRw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-fece95aa28",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "datamodel",
+        "customers",
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Kraiburg TPE has PCF calculation methodology verified by Dekra - Plastech",
+      "summary": "Kraiburg TPE has PCF calculation methodology verified by Dekra Plastech",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Product carbon footprint – PACT, ISO 14067 (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOQUIwR0RhU2I3cW1qSW8yVF8xNWNWYnJzNXdwTHFiYXBUNFJiRmtPc0xqYWJsX0ZrWV92V3l6QmlrbHZjdUlINkZ4c3dOeUEwX2JmUFdYdTNPN0V2T2NjUG9IZUV3ZzdocGJCTUNIY0loSW1KMVdQaHBRMzFyV2VaNUtOX25VNC1KZWo1ZlhfbllMd3VtdWZ1amF3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-1ed643d4e0",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Global Menstrual Policy Review Urges Integrating Mental Health Across Legislative Frameworks - Bioengineer.org",
+      "summary": "Global Menstrual Policy Review Urges Integrating Mental Health Across Legislative Frameworks Bioengineer.org",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNc1JwRlE2REZnN0xBdXlQT3FrbmJHS0RZbXMzUEp1NUh6V3U0bnRDcmMtdlRDSEdPeGRwVkpjMHJmRW0xbnl0QlBaOWJRelcybmJmM1dlSUh1dzVwN2JXcTY2VUllSnQycEJFRnJrUjJZdkNvWVptMFZNMzRyc2N2U1htWXVQeHR3NVBHUTdMQVRuOUM2emR3anVxSDkzbDcxeGNJYWRRY2FyUTBUU2p5TjNlWFJROU1P?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-fde1a4e78b",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "Public consultation: Revision of the FSC Ecosystem Services Procedure guided by Motion 53/2021 - Forest Stewardship Council (FSC)",
+      "summary": "Public consultation: Revision of the FSC Ecosystem Services Procedure guided by Motion 53/2021 Forest Stewardship Council (FSC)",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNajhnOTRUcmVpcVlQMzB3ZEdCRm1SSUlMdndoMUQ1R2JmazZQeXF0RHNvejFxQ0VZbTltUzkwN21adVlnS3lFeGRTSU1jSjhKeW1tdnRFYXl4UEdZREdsX3czWWlXWlg0WW5zTVo5MGhRdlhTbzZjcDZ2Vmh3N3lTWVlTWE1SdHRXMldxNGxKTzlUZ3pnaVZRTXRFM0NTcDB5VHc2MXl6RTlNbjhtOFpkMlkzbWhhNTFkNlE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-124b5714c5",
+      "date": "2026-11-13",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "Europe's PEFC Groups Show a Way In for NZ's Small Forest Owners - Wood Central",
+      "summary": "Europe's PEFC Groups Show a Way In for NZ's Small Forest Owners Wood Central",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBjeDZsWG5JTEpfVm9yZGlRcGoxYTBjSVY4c3pIdndDWmdUdlg4T29EWU85Zi1XemotTlhZcXpCNnlQMWxVai1oaUxIbmVNbHdoSzJSemo2emdtNC0tb1BTWVZwZmNiN2xocTFV?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-131670c780",
+      "date": "2026-11-10",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Klage gegen Lidl-App abgewiesen: Verbraucherschützer bemängeln, wie Daten weitergegeben werden - SWR",
+      "summary": "Klage gegen Lidl-App abgewiesen: Verbraucherschützer bemängeln, wie Daten weitergegeben werden SWR",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQ05yc01yblFxSVhKc0syQ3RWNE80TkRTTWxZWWlIV1BaRWJVOVF1TTlDeVZkSVZjOGVmZTVvWTlOLUpzXzJIUDRsbTlVcTlmbFZhSHM3SGc1UkFodHNfZFEtRExSM0dTRzJlLV9vM21makstdXJ4a1JTZVd4V3YtTHlObEpHRWVvSERHM2swMVA0UmUtVDJaXzE0cld5bHpib3BN?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-c69d0bc8a4",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kommentar zur Partnerschaft FrieslandCampind und Aldi: \"Nachhaltig sind vor allem faire Preise\" - top agrar",
+      "summary": "Kommentar zur Partnerschaft FrieslandCampind und Aldi: \"Nachhaltig sind vor allem faire Preise\" top agrar",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOdlhmbFFVWG1PMVFEN1BmdEluWGFGSmdGaTQ2QnBZM1NpSDU3U3ZCMWdfWTdjWFlmdFc4Nk1WLUtaVHFJMnRSamJISWNsNTN5VjdWWVJfWDRfaUpyMU1xTVROU0gyZDdCM2IxYktzZXJBVVFUa2t4RzNsSEhMOEhrVVA0b0pmSDM1S3lMVmFPWnI?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-3b04d417ea",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl hat seine eigene Cola – dieser Name steht auf der Flasche - DerWesten",
+      "summary": "Lidl hat seine eigene Cola – dieser Name steht auf der Flasche DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdHdPZDEzdjhwVWpQb3B3NlQxWUp1SVlMYlN2WW1sblgzUEQ3NjdVX1YyS1I1bUFBdU5pY1dwZ3B6YmhLeHZuOUs2aHRLakxVd2ZETWhwYW1kTjBmMW9INlVrYXZQeGNLTmhWMkhjWlNkRDc1LW13SGdBMzRtSDdJMlQtWllDek9WNGl6LXFoYlVJMzA4Uy02ZWtWR2Jod0xaemc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-bdf0ab7457",
+      "date": "2026-11-13",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Riecht wie Rituals – kostet nur 3 Euro: Diese günstige ALDI-Marke verspricht Luxus pur - wmn.de",
+      "summary": "Riecht wie Rituals – kostet nur 3 Euro: Diese günstige ALDI-Marke verspricht Luxus pur wmn.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQb3NJblpzT3Z1UVFvWG5SZDBCcURBN3ZvM1FYcW9KRzJqV2hpVG9YM2xnekctamx4V2h3d054UVIyNENjSS1vOVJWbnRwZWVzRlF3TC1nbXlCYWwyV3BnZUxRTHpmcWZielFhM0JOWlh0MkctY3l6RG51RnJldjJQYlNUTWJNOE5vZVdtQTJBSlJuRThMMklFSkVIWmgzZGVvX3UzbGVHNkFrVjg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-f827b3e34b",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Bundesweiter Rückruf bei Rossmann: Produkt kann fortpflanzungsgefährdend sein - Merkur",
+      "summary": "Bundesweiter Rückruf bei Rossmann: Produkt kann fortpflanzungsgefährdend sein Merkur",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOc00tRU9qck9xMFRyZW1vWTVpT2tUTzg5YTVyTHNkLWpuWGxOZ0RxaXBFNFgzM04tMEFGbXRCNnVfU293ZllJajBNZnplWmpDT0xVdjVsTFA4cnVCR3plNkh3T3ZadFdCY3A2RHRmMzZTa0ctbWVSZmt6OWJONXlMZW5TODV1VW1RRHh0U0Q3U21fVzY0RkcxWU0wTC0zLWNNdXZfQU9pYlNnLWFud05LN3lvVG1hRGEwbEJfZTVrcFdtSDdqUU9Qeg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-41888ae9f6",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rückruf bei Rossmann: Gefährliche Löffel für Babys - Was Kunden beachten sollten - Main-Post",
+      "summary": "Rückruf bei Rossmann: Gefährliche Löffel für Babys - Was Kunden beachten sollten Main-Post",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZTRtRHB5UFFxYkpFMVhHRzY1OGFZOVM1bkk0dG00eUdVRnQ2bjhLSjN4eDNpM2xWSlRoNmNGQUpuTWx4ODZkVjBMYUt1NXoxNGJqVFRRZ0IxblFtYWE1OUtsdjNKVEV0cG5QUTRXYzlhaTI3aWlJTVZiSzhUU1A4VV9QNm54XzNtcnNqT2dJSl9NaTNTTTZfaFFfMVptY29aUlpiU0FjWVEtUS1scnBaR3YyU3dmYWQ5WVd5QXM2RnFMQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-270cbab736",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Gesichtscreme im Test: Diese Drogerie-Marke macht Luxus-Creme Konkurrenz - IMTEST",
+      "summary": "Gesichtscreme im Test: Diese Drogerie-Marke macht Luxus-Creme Konkurrenz IMTEST",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNMUtZTXpVN0x3OGpPMzkydURhd3hFSVZVVUIzUVl1YWVObnRGQWdLUHhWaHlnM3FMSjJVdkNaelZrWWVzNUFlUldqWnVDQ01NZXhzOFktS2Jhd0czcTBIY1RPZEc2cGRMdU9scHJjR1FMRGV5ZzRCNWNERC1TWXdqZ1ZQX3ZwQWNVS2ZpM2syYWRVbGxtd2hWQ3Jn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-3941651f49",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann ruft Nuby-Babylöffel wegen Bisphenol AF zurück - ad-hoc-news.de",
+      "summary": "Rossmann ruft Nuby-Babylöffel wegen Bisphenol AF zurück ad-hoc-news.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZnZuc08tU1RhaEYwRVFpZnVIN1VmOG50dEFzUk9HY0xiRWpzLUQ0aXRxcDd3eTgxNmtYMTFaLWlhR1A1VzVoVXpCSE9NMkkyenJNQ3ZqUTRSeUtIRzhNTk5ucFJuVHZMYWxWeG1vaF9saGpSNWNUZ2t0OWJuOFFlekZoVEhOZ1VwRi1mWWp0bTB0OVBuaWNBQ2VLeUlLMVdDXzJOU3NrVUZ4T195elBYODVraw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-092431a23b",
+      "date": "2026-11-13",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "\"Plusieurs pratiques susceptibles de porter une atteinte sensible à la concurrence\": le gendarme antitrust notifie son rapport sur l'alliance d'Intermarché, Auchan et Casino - BFM",
+      "summary": "\"Plusieurs pratiques susceptibles de porter une atteinte sensible à la concurrence\": le gendarme antitrust notifie son rapport sur l'alliance d'Intermarché, Auchan et Casino BFM",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPdU1GdTRQQ1NOdHg2RFM0MlZybFNrOS1VX0JRbGtMRnlZemRWcldKX2c0RHE5X3g2NGdZOXZqaFJKejRURHVqUFJFeGZwZXozWkttTDdCMmNHRVhTa2ZjRzVhV3VKY3ZXT3lhLU5oWllrMkZsYnZNRTBEQU8ySTkwbGhNaWxjSkVJVlZ2UUl5NFIyVFJsSmR1Y2h2WTAwZHRJRFlhN0NyOXFaOHJIZGZfRHNiaGg5eTUzaXk3eGF6RHBfSm82OFVxa0VJVHRBeXJ5NWduV0VWYTNTUDYxMWJRZW5kSVdacXJxcmVhNHpPWHdCdnVjVFZRS3k1dzlZNVY5ZkhBMm5GUzNGY0FrT2VMRnlWcWRNb2U0Q253WjRwZXRldFlEMVlaQk55NzZNdWU5dHRjTnNaSXJMbElSbzVkRkhHNA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-6192481f73",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Carrefour : la méthode Bompard - L'Essentiel de l'Éco",
+      "summary": "Carrefour : la méthode Bompard L'Essentiel de l'Éco",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1zYmtqVWhJQUcxYkt4bENyNnpsNU9VdGFIZHdya3VpTEg0Y2dxZ2szYkp1S3J5U09lQm1lbjFIYXNPeHFWdnVxZmF4V2ZuTURMTkkyZHlzZFhCeWdZLTdHWjBsTGFxMVR3Tk9TX2VfNA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-d2acd1de66",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Goût piquant et opercule gonflé, des yaourts rappelés chez Leclerc, Carrefour, Auchan et Intermarché - Yahoo Actualités",
+      "summary": "Goût piquant et opercule gonflé, des yaourts rappelés chez Leclerc, Carrefour, Auchan et Intermarché Yahoo Actualités",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcEhNb3prUUd6SjdaV1lmX3M1OEJ4MlBzaXVQV3RiUnpRQnc0TDEzOU1RY3lCdWsyUjVwdHlna3V1MXgwbGJUR2dtaVlGQ0wwSDAwZ1VFZU5NSGR1elkwbHZYcmM5b2dGSnRRZVk5SWVWTXc0RUJQUm5rS09tR3E4V3NYbFBsRnFEYXY2Vkxyd3pNaDlacDY0Qg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-74c3388da2",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Cordons bleus de dinde Côté Croc : le lot 26303P02 de 1 kg est rappelé chez E.Leclerc - Stéphane Larue News",
+      "summary": "Cordons bleus de dinde Côté Croc : le lot 26303P02 de 1 kg est rappelé chez E.Leclerc Stéphane Larue News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOM0J4cXJnX0lfQTd4OGhHZks5YmdidTE1MjZjMnMyalFhSGFlQ0RVTkFEa3hvWHV2aHE4VW5yMTU3MXk1MFFIdHNJem5sN01oZ3VhWTJ2LUZrWF8xU1hLWkRpZy1NNkxOS0YyUVlzb3JmQUpHSk9BSE1iWFNpaW5rdVVZSXJ3UGFGaUhLdTBPYUp3VkgtYlFoZ21NTUMzNlJ5UmhwMFpTQTdjc0J6TW9n?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-2672581926",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Alerte sur le yaourt Panier de Yoplait 0% Fruits jaunes : il ne faut surtout pas consommer certains lots - Ohmymag",
+      "summary": "Alerte sur le yaourt Panier de Yoplait 0% Fruits jaunes : il ne faut surtout pas consommer certains lots Ohmymag",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNT2s4aWdvUWxuSm1DOThOcGx5dy1NcVk5bFBaeVBuR1RUSTVDSnI3eUdtTkZUTm1HMFpTODhfZlVySkRHUGZpUU1VUkJjNzkxaUNpMi03VkxfeWdldTBFRm1wYlJLenh2UzJmY0xOX3lZZXEwVTduM2FNSnZjSFptdy15T2VaZ1RkVHRPVWlvek9ZSFgteU1fWG5sdmZYTXVyUVU5a1lwWkZCYU9TU1k3aHZsTUJyY2c1LXAwRkktbk5vTThPY1k3NTFzMERHRS1jejFv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-3b670e0daa",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Asda exceeds carbon reduction target and surpasses £100m Tickled Pink milestone in latest ESG report - Asda",
+      "summary": "Asda exceeds carbon reduction target and surpasses £100m Tickled Pink milestone in latest ESG report Asda",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GS3lFVFB4RS1ndVEyR1VNcXdSRjRqb05uUkVjR1llQlcwcFhVU0NYT1U5R1FWR3E1SEs1NlBRVXFsX0ZOTGlCc21zdnZlaENGbmFMeEZJeloyTVVnbnNJcDB2LXBhbHJfVDF4OEpzeU0xbG9aZ0FYT01jTXpFUWs?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-416c5512b5",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Asda exceeds carbon reduction target - Energy Live News",
+      "summary": "Asda exceeds carbon reduction target Energy Live News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQT1lUV3FkUlRJSTg2MTJqLV80VURWcVhWSTR4bnF6d1dzVW1Ya2JheDNBQlMzYi1HMmNacWVtTTYzUXJwS1o2RW40d0VNTFV1SGpQSjliSm9MNFRXc0d5d24tdW9meF9JNzl2bmt2SkhiQ3dIZUpvMEJjVllUWDd0WEFyZ0c5UQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-6b3a648713",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons Media Group expands retail media network into convenience stores - InternetRetailing",
+      "summary": "Morrisons Media Group expands retail media network into convenience stores InternetRetailing",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaE4wdl9nVlNpRWIxb2hHeGxUU1FNbGZNOXVOR05aanNpVDhJdUtzNFF0RWl6NmhCZkFOeFF0dlAxcHdaN0hRQzdWby1SWWlfUTluSnFpTVVacVBZX1A0Y1l1MjZxUmRwNVBHUm5PYkVBaWQzRkdhTVduYVIxQzUzVWNlRU5rVkc1TGg3N2dEWUxmcGx1Mlhvc1pBdlRhNXdSTHRsV0hLNzY?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-250f043c0f",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "PepsiCo, Tesco headline Packaging Innovations & Empack 2027 conference programme - PULPAPERnews.com",
+      "summary": "PepsiCo, Tesco headline Packaging Innovations & Empack 2027 conference programme PULPAPERnews.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbUh0eFNmZ3RLaDRsTVMwNmhBM0kxNzdzTjZFM28zVnY0WmVsT2xWSjY4YVYyNUpNdXlCZzVkZ21zSmdjUnlFRVVhNzJ2ZnR1Q05Tb0Utdm95M2phRnJYTVdwM2ZjektGQ1BiN2k4SVhzNkw5UXRxY1BGcDBfeTZ3alVFOTlYSVB3RE9MOEVCQlkxdDFMNDhHX0JSR3NzQ0prN0F3MU9ES0JGM3gtUXpMOEEzNGpCaGRzeWY3SFhn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-e4b031a022",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tesco aims to accelerate supplier decarbonisation across UK and Ireland with OpenClimat partnership - Tesco PLC",
+      "summary": "Tesco aims to accelerate supplier decarbonisation across UK and Ireland with OpenClimat partnership Tesco PLC",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQNFdRQURyMU9vSjFraDktb1ItYnAweXBXZVBJZTZUdkJkdkJBMmV0NTBMWFI3R2wyTHpwUkRHV1Raa1RhdVpWbDBHeEdWQkMwUE1Ec19UeGpWczN4Sm0tT0RrckJ4Y3VJUTA5WWRZbS10QlNPcHJ3SFNOWjRLTl9jNW9TcFZndGd6aU1WSmpGNmNsSldxZnU3Uk13eEFmdWkxaGQxd3pITkM3cEJ0NU9yUjlMblB3Ym91Tm1hUDlpRnMxdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-43a3d0c362",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons extends retail media into 1,700 convenience stores - Mobility Plaza",
+      "summary": "Morrisons extends retail media into 1,700 convenience stores Mobility Plaza",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcF9zR3Z4R3o0dFAtQU5fa1dReE5QZi02S3U2OXRabjRkU0x4cTAzTmlfdGJsTUtyMGprLS0xeTBiUV8xR1VTc1BWNHlyVWlKTnRreWExY3kzZWJDTnljRDVTamQwYzRYY3gwQlBSMUllQkg2OFhHOWZjeFRnVjlRMWJ1UF9YUDNzOHpLZ3h0NThUd2ZCcjVxSVNvbw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-5337c188ed",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Milk Price Tracker: Every co-op boosts price for first time in 2026 - Agriland",
+      "summary": "Milk Price Tracker: Every co-op boosts price for first time in 2026 Agriland",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMlhlSlhNWTFHbEhvTWZDbmlqWU4tV3g3OHBaN29FMTk0LVZNZnFTdjJQYXNTSDRHUmlhRW4xT1kwLVIzTlZuUFcxc3ZSZjZLdkFpR1hVR3VjTll6VWgwWVlSU2U0UzV6djk3WDNMTk5EVS00cDcycjVQWXVmWjZ6YnNnMGxISjY4VEN4ODdkVzJEVGxnNzdfaGthSllpcHRxUk90TmRuYw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-1fc18b80af",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons reveals major new change at 1,700 stores - starts now - Daily Express",
+      "summary": "Morrisons reveals major new change at 1,700 stores - starts now Daily Express",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9QemRSVkg0Y1NvTXplZ2hLVVkwMGJ0Z2owaEZFaGduaVktRjl4Vno4WThRaXljUFpYc2w0M0o5em1adDZVYzdhQ1NKc3pBMGVLamh3WmZOTlVhSjFJaTVRb015czE2cUs0MGNrTEI4cUtzLVM1Q2lHZmpTdllfUdIBgwFBVV95cUxPbFd3OGd1YklrQTNCQllLOTN1ejNGZ1F6RVN0NVUtbF91T2NlaGNVU0lGR3ViWmRpWGhWUWFZbVUzLWxPVDNiN0k0RFREZjNSOE1GRlBraHptZ3RCLXdQTFNjc3o1eFJnamtHRGVLTzdkMTR4QmFYYTR6dWo3WlpleDlfRQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-ba08d16620",
+      "date": "2026-11-11",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "What's the healthiest own-brand cereal? - Daily Mail",
+      "summary": "What's the healthiest own-brand cereal? Daily Mail",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaWxPUlM1UWluM3U5V0ZRNmVlajJCZjdQcG9xRUdvS1NyNjZJUDFtQkFISzZJcEFGWVFDXzlYbDZPTTlyMGxNdEhOVmlxOWxTN2N1Rk9oUHRTVmNNdHVFSkpxb3gtQVFEdUF3bUtCLWJvbXJ3VDRrQ3RMU3doc3NVa1VUcEQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-400501e548",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "DS Smith increases Delhaize wine packaging productivity by 27% - Papnews",
+      "summary": "DS Smith increases Delhaize wine packaging productivity by 27% Papnews",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNT3gxbkR1RXRwaEVQRkJvakl5TkRzbkVTNTJHUkxoV19odHM2Tnk2OGdEVFYzVm5uelk2bVgzazN0c3VZSmt4VVJDdVo5V2QxOHRLZDc1TlhtTkVnVDNxeEQ0ek1vNzhPSkJkX0Q1YlhEQ3hmQnVVZ2w1VlBfVjZEMlFtakRzcWFK?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-331b5c1ba0",
+      "date": "2026-11-13",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Coop Italia Expands Footprint, Redesigns Italian Pasta Line - ESM Magazine",
+      "summary": "Coop Italia Expands Footprint, Redesigns Italian Pasta Line ESM Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRXhJRkF6b0VyOVR1N0paNS1MbWJPZVowNzlhMjRfeDNkSTFaRGk5eU5yS21pUEEtNmlyTFMtR2VDdFlMem5pd2NERTNtTHJsVWZweDFraHFuVFFNcUFFbEs4ZFFtUDJ4TEVteGg1S0lWSUpUb1BmeE1rc1F4Qm0za2cxcmN5WTJxOTZyZTQzbWRDWTFhZncxUHJNRWtKOEU1WmpB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-5d49be087e",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Ceramic Membranes Market to 2035: Water Scarcity and Industrial Compliance Drive Forward Growth - IndexBox",
+      "summary": "Ceramic Membranes Market to 2035: Water Scarcity and Industrial Compliance Drive Forward Growth IndexBox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOY2JDaVdoQTZZTFg1RnIyclNEQnhVV0Vnb1BOdm1WV3VKZjFOX01tUGwteTdCNWVYbjdUZGZPMVhvR3NUR0VlNmRlSHVGbnNzTldFVUZmZXh0R01xa0NzVE1zanpPZTYzODhuMU9fSFUxYVJ5VHF1Y2xoV2FieWRMbHVNXy1hTmxrdm8tZDVQZWFUZGgzZno5YTZTcXJUQnZXdDJidnJzazk1c01YTWx3YkRBZTd2LVpnakpGYTJESlVjQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-52075bd2b8",
+      "date": "2026-11-12",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Government to invest US$1bn in textile and garment industry – Ato Forson - MyJoyOnline",
+      "summary": "Government to invest US$1bn in textile and garment industry – Ato Forson MyJoyOnline",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOOHl1c2tCRkhlMXVkdE5FT0Y1S2FPUGJxb1Q4QWZYb3FpOFg1RW1pZkZxRjRYNE9ieHBoT3hIY01BNXFsSE5lcGoxZE1MWnE4MFhWejc0UEQxSHoyRjNzTjBEaDRseU1vT19HRHBaSDVqNy1BT09mM1Z2dFBFR1dLSVdkNGs4ZDF2UmRrOEhGRl9ORHRfRUFWaVpwWHNudnc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
+    },
+    {
+      "id": "feed-305d24faac",
+      "date": "2026-11-12",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Dürre in Indonesien hat wohl Folgen für die Elektromobilität - Elektroauto-News",
+      "summary": "Dürre in Indonesien hat wohl Folgen für die Elektromobilität Elektroauto-News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOX1BHQmYta0hqZmgzWmZCNmp5eWZQR3dZb01BNFNHWVc0Y19Ca0ljcXBMc0x3bUlFRlNzZjVzdGdPaWRib1pEQTVtUXZkdnk4ekZIUmRMU2NYN0RxYmR4T1pFYnBod2dGYkNfYkgwWV9jdDdZczN3QkZUY19HM21oUVBobG04ZWlmYnJ1Rg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-13"
     }
   ]
 }

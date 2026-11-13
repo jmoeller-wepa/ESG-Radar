@@ -3,104 +3,104 @@
   "feeds": {
    "label": "News feeds",
    "status": "ok",
-   "detail": "39 of 39 feeds · 38 new",
-   "at": "2026-11-12T06:19:35",
+   "detail": "39 of 39 feeds · 56 new",
+   "at": "2026-11-13T06:17:40",
    "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "ok",
-   "detail": "11 open and relevant",
-   "at": "2026-11-12T06:20:22",
+   "detail": "13 open and relevant",
+   "at": "2026-11-13T06:18:30",
    "order": 20
   },
   "procedures": {
    "label": "Regulation status",
    "status": "ok",
    "detail": "8 of 8 procedures",
-   "at": "2026-11-12T06:20:52",
+   "at": "2026-11-13T06:19:25",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
-   "status": "ok",
-   "detail": "64 of 64 indicators",
-   "at": "2026-11-12T06:31:39",
-   "order": 30
+   "status": "warn",
+   "detail": "39 of 64 indicators · failed: de_rcp_102, de_rcp_104, de_rcp_403, de_rcp_111 +21 more",
+   "at": "2026-11-13T06:34:53",
+   "order": 30,
+   "failingSince": "2026-11-13T06:34:53"
   },
   "ets": {
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
    "detail": "Already processed this file with the same mapping – nothing to do.",
-   "at": "2026-11-12T06:41:12",
+   "at": "2026-11-13T06:45:32",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
    "detail": "8 peers found · no changes",
-   "at": "2026-11-12T06:41:16",
+   "at": "2026-11-13T06:45:35",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
-   "detail": "113 planned features",
-   "at": "2026-11-12T06:41:20",
+   "detail": "117 planned features",
+   "at": "2026-11-13T06:45:39",
    "order": 50
   },
   "peernews": {
    "label": "Peer news",
    "status": "ok",
-   "detail": "44 headlines for 12 companies",
-   "at": "2026-11-12T06:41:19",
+   "detail": "43 headlines for 12 companies",
+   "at": "2026-11-13T06:45:38",
    "order": 46
   },
   "industry": {
    "label": "Industry statistics",
    "status": "ok",
    "detail": "Jan – Sep 2026: hygiene paper 990 kt (-1.9 %)",
-   "at": "2026-11-12T06:31:46",
+   "at": "2026-11-13T06:35:03",
    "order": 36
   },
   "water": {
    "label": "River levels & soil moisture",
    "status": "ok",
    "detail": "3 gauges · 5 sites",
-   "at": "2026-11-12T06:31:57",
+   "at": "2026-11-13T06:35:19",
    "order": 38
   },
   "weather": {
    "label": "Heat & rain at the mills (DWD)",
    "status": "ok",
    "detail": "5 sites",
-   "at": "2026-11-12T06:32:02",
+   "at": "2026-11-13T06:35:27",
    "order": 39
   },
   "gas": {
    "label": "Gas storage (AGSI+)",
-   "status": "warn",
-   "detail": "2 areas · failed: de: empty answer",
-   "at": "2026-11-12T06:32:33",
-   "order": 37,
-   "failingSince": "2026-11-12T06:32:33"
+   "status": "ok",
+   "detail": "2 areas",
+   "at": "2026-11-13T06:35:29",
+   "order": 37
   },
   "pulp_origin": {
    "label": "Pulp imports by origin (Comext)",
    "status": "ok",
    "detail": "3 products",
-   "at": "2026-11-12T06:32:36",
+   "at": "2026-11-13T06:35:35",
    "order": 36
   },
   "sites_intl": {
    "label": "Weather & rivers at mills abroad",
    "status": "ok",
    "detail": "11 sites with weather · 7 river gauges",
-   "at": "2026-11-12T06:41:11",
+   "at": "2026-11-13T06:45:30",
    "order": 40
   }
  },
- "lastRun": "2026-11-12T06:41:20",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/43167300591",
+ "lastRun": "2026-11-13T06:45:39",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/43377643887",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }

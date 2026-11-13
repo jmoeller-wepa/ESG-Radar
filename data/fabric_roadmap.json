@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T06:41:20",
+ "updated": "2026-11-13T06:45:39",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -697,6 +697,16 @@
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Dataflow-Gen2-and-Power-Query-innovations-at-Microsoft-Build-Low/ba-p/5189028"
   },
   {
+   "id": "6c5877d9-d6de-f111-84e8-00224809fcb6",
+   "name": "Extended Capability new source - Salesforce Mirroring",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/extended-capabilities-in-mirroring-in-microsoft-fabric-optional-enhancements-to-/5172214"
+  },
+  {
    "id": "a5261925-3edd-f111-84e8-00224809fcb6",
    "name": "Mirroring - Google Big Query security role replication",
    "product": "Data Factory",
@@ -705,6 +715,36 @@
    "quarter": "Q1 2027",
    "desc": "",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/mirroring-for-google-bigquery-in-microsoft-fabric-preview/5172584"
+  },
+  {
+   "id": "e4bba09b-d6de-f111-84e8-00224809fcb6",
+   "name": "Mirroring - Replication Views from Google Big Query",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q1 2027",
+   "desc": "",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/mirroring-for-google-bigquery-in-microsoft-fabric-preview/5172584"
+  },
+  {
+   "id": "658230d9-d7de-f111-84e8-00224809fcb6",
+   "name": "Mirroring - Takeover ownership feature",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "",
+   "url": "https://www.fabric-gps.com/release/658230d9-d7de-f111-84e8-00224809fcb6"
+  },
+  {
+   "id": "5c93448a-d7de-f111-84e8-00224809fcb6",
+   "name": "Mirroring for MySQL",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "",
+   "url": "https://www.fabric-gps.com/release/5c93448a-d7de-f111-84e8-00224809fcb6"
   },
   {
    "id": "89223235-516f-f111-ab0d-6045bd006301",
