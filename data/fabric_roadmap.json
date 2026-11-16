@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T06:45:39",
+ "updated": "2026-11-16T07:15:17",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -75,16 +75,6 @@
    "quarter": "Q4 2026",
    "desc": "The primary goal is to enable creators to understand how consumers interact with their data agents and bridge the gap between the data agent creators and the consumers. This comprehensive monitoring system will enable creators to have acces",
    "url": "https://www.fabric-gps.com/release/5db8bce1-2b43-f111-88b5-6045bd00fc61"
-  },
-  {
-   "id": "bd904fac-c7b2-f111-aaab-70a8a59cb78c",
-   "name": "Microsoft Copilot in Power BI - Fabric",
-   "product": "Conversational Analytics",
-   "tool": "copilot",
-   "type": "Preview",
-   "quarter": "Q4 2026",
-   "desc": "# Microsoft Copilot Integrated into Power BI and Microsoft FabricCopilot experiences have emerged across the applications people use every day, bringing AI closer to the work happening in each product. But this can also feel fragmented, wit",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/extracting-deeper-insights-with-fabric-data-agents-in-copilot-in-power-bi/5172750"
   },
   {
    "id": "04b9f8e4-acac-f111-aaab-7ced8d70ff57",
@@ -515,6 +505,16 @@
    "quarter": "Q4 2026",
    "desc": "Private Link enables secure, private connectivity between your virtual network and Microsoft Fabric, eliminating exposure to the public internet. With Eventstream's integration with Workspace Private Link, you gain granular access control a",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Strengthening-data-security-with-workspace-level-private/ba-p/5377347"
+  },
+  {
+   "id": "7ae96023-9ddf-f111-84e8-00224809f154",
+   "name": "Create SQL Databases in Fabric from SSMS",
+   "product": "SQL database",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q4 2026",
+   "desc": "Create new SQL Databases in Fabric using the new Create Fabric SQL Database dialog in SQL Server Management Studio (SSMS). [Learn more](https://aka.ms/ssms-release-notes)",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/how-to-create-a-sql-database-in-fabric-using-fabric-cli/5172725"
   },
   {
    "id": "009295f2-84b6-f111-aaab-7ced8d70bb60",

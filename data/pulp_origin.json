@@ -6,115 +6,115 @@
  },
  "products": {
   "total": {
-   "from": "2025-08",
-   "to": "2026-07",
-   "totalKt": 15644,
-   "prevTotalKt": 16454,
+   "from": "2025-09",
+   "to": "2026-08",
+   "totalKt": 15586,
+   "prevTotalKt": 16371,
    "rows": [
     {
      "code": "BR",
      "name": "Brazil",
-     "share": 27.7,
-     "kt": 4328.3,
+     "share": 27.8,
+     "kt": 4335.2,
      "change": 2.5
     },
     {
      "code": "SE",
      "name": "Sweden",
-     "share": 14.0,
-     "kt": 2192.4,
-     "change": -0.8
+     "share": 13.9,
+     "kt": 2169.2,
+     "change": -0.6
     },
     {
      "code": "FI",
      "name": "Finland",
-     "share": 9.5,
-     "kt": 1484.1,
-     "change": -0.1
+     "share": 9.3,
+     "kt": 1454.2,
+     "change": -0.4
     },
     {
      "code": "UY",
      "name": "Uruguay",
-     "share": 9.1,
-     "kt": 1427.4,
-     "change": 0.3
+     "share": 9.0,
+     "kt": 1407.7,
+     "change": 0.1
     },
     {
      "code": "NL",
      "name": "Netherlands",
-     "share": 7.0,
-     "kt": 1101.7,
-     "change": -0.8
+     "share": 7.1,
+     "kt": 1102.2,
+     "change": -0.7
     },
     {
      "code": "PT",
      "name": "Portugal",
-     "share": 5.2,
-     "kt": 811.6,
-     "change": -0.3
+     "share": 5.3,
+     "kt": 828.1,
+     "change": -0.1
     },
     {
      "code": "US",
      "name": "USA",
      "share": 5.2,
-     "kt": 806.0,
+     "kt": 805.9,
      "change": -0.5
     },
     {
      "code": "ES",
      "name": "Spain",
-     "share": 4.8,
-     "kt": 752.5,
-     "change": 0.3
+     "share": 4.9,
+     "kt": 767.0,
+     "change": 0.4
     },
     {
      "code": "AT",
      "name": "Austria",
      "share": 4.3,
-     "kt": 678.6,
-     "change": 0.3
+     "kt": 673.3,
+     "change": 0.2
     },
     {
      "code": "CL",
      "name": "Chile",
      "share": 3.2,
-     "kt": 497.8,
+     "kt": 505.1,
      "change": 0.3
     },
     {
      "code": "BE",
      "name": "Belgium",
      "share": 3.0,
-     "kt": 464.7,
+     "kt": 471.3,
      "change": 0.3
     },
     {
      "code": "DE",
      "name": "Germany",
      "share": 3.0,
-     "kt": 464.6,
+     "kt": 461.1,
      "change": -0.3
     },
     {
      "code": "IT",
      "name": "Italy",
      "share": 1.4,
-     "kt": 225.0,
-     "change": 0.1
+     "kt": 216.9,
+     "change": -0.0
     },
     {
      "code": "FR",
      "name": "France",
      "share": 1.0,
-     "kt": 161.0,
+     "kt": 149.0,
      "change": -0.4
     },
     {
      "code": "PL",
      "name": "Poland",
      "share": 0.6,
-     "kt": 92.7,
-     "change": -0.0
+     "kt": 87.6,
+     "change": -0.1
     },
     {
      "code": "EE",
@@ -127,29 +127,29 @@
      "code": "CA",
      "name": "Canada",
      "share": 0.2,
-     "kt": 27.0,
+     "kt": 24.8,
      "change": 0.0
     },
     {
      "code": "SK",
      "name": "Slovakia",
      "share": 0.2,
-     "kt": 33.3,
-     "change": 0.1
+     "kt": 33.6,
+     "change": 0.0
     },
     {
      "code": "CY",
      "name": "CY",
      "share": 0.1,
-     "kt": 12.0,
+     "kt": 13.4,
      "change": 0.0
     },
     {
      "code": "CZ",
      "name": "Czechia",
      "share": 0.1,
-     "kt": 17.3,
-     "change": -0.2
+     "kt": 18.5,
+     "change": -0.1
     },
     {
      "code": "AE",
@@ -176,7 +176,7 @@
      "code": "BG",
      "name": "Bulgaria",
      "share": 0.0,
-     "kt": 4.8,
+     "kt": 3.1,
      "change": -0.1
     },
     {
@@ -190,21 +190,21 @@
      "code": "CN",
      "name": "China",
      "share": 0.0,
-     "kt": 0.9,
+     "kt": 1.9,
      "change": 0.0
     },
     {
      "code": "DK",
      "name": "Denmark",
      "share": 0.0,
-     "kt": 0.2,
+     "kt": 0.4,
      "change": 0.0
     },
     {
      "code": "GB",
      "name": "United Kingdom",
      "share": 0.0,
-     "kt": 0.6,
+     "kt": 0.7,
      "change": -0.0
     },
     {
@@ -218,7 +218,7 @@
      "code": "GR",
      "name": "Greece",
      "share": 0.0,
-     "kt": 0.6,
+     "kt": 0.5,
      "change": -0.0
     },
     {
@@ -239,7 +239,7 @@
      "code": "ID",
      "name": "Indonesia",
      "share": 0.0,
-     "kt": 4.6,
+     "kt": 0.9,
      "change": -0.1
     },
     {
@@ -260,15 +260,8 @@
      "code": "JP",
      "name": "Japan",
      "share": 0.0,
-     "kt": 0.1,
-     "change": -0.0
-    },
-    {
-     "code": "KR",
-     "name": "KR",
-     "share": 0.0,
      "kt": 0.0,
-     "change": 0.0
+     "change": -0.0
     },
     {
      "code": "KW",
@@ -295,8 +288,15 @@
      "code": "LV",
      "name": "Latvia",
      "share": 0.0,
-     "kt": 1.4,
+     "kt": 1.5,
      "change": -0.1
+    },
+    {
+     "code": "MR",
+     "name": "MR",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
     },
     {
      "code": "MT",
@@ -380,7 +380,7 @@
      "name": "TN",
      "share": 0.0,
      "kt": 0.7,
-     "change": 0.0
+     "change": -0.0
     },
     {
      "code": "TR",
@@ -388,6 +388,13 @@
      "share": 0.0,
      "kt": 0.1,
      "change": 0.0
+    },
+    {
+     "code": "TW",
+     "name": "TW",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": -0.0
     },
     {
      "code": "XS",
@@ -408,129 +415,129 @@
    "reporter": "EU27_2020"
   },
   "nbsk": {
-   "from": "2025-08",
-   "to": "2026-07",
-   "totalKt": 5105,
-   "prevTotalKt": 5693,
+   "from": "2025-09",
+   "to": "2026-08",
+   "totalKt": 5060,
+   "prevTotalKt": 5581,
    "rows": [
     {
      "code": "SE",
      "name": "Sweden",
-     "share": 37.5,
-     "kt": 1913.3,
-     "change": 0.3
+     "share": 37.3,
+     "kt": 1888.1,
+     "change": 0.6
     },
     {
      "code": "FI",
      "name": "Finland",
-     "share": 18.3,
-     "kt": 932.0,
-     "change": -0.7
+     "share": 18.0,
+     "kt": 908.9,
+     "change": -1.6
     },
     {
      "code": "US",
      "name": "USA",
-     "share": 15.2,
-     "kt": 778.4,
+     "share": 15.4,
+     "kt": 780.0,
      "change": 0.2
     },
     {
      "code": "DE",
      "name": "Germany",
      "share": 7.9,
-     "kt": 401.6,
-     "change": -0.3
+     "kt": 398.3,
+     "change": -0.4
     },
     {
      "code": "AT",
      "name": "Austria",
      "share": 4.7,
-     "kt": 240.0,
-     "change": 1.2
+     "kt": 237.3,
+     "change": 1.1
     },
     {
      "code": "NL",
      "name": "Netherlands",
      "share": 3.2,
-     "kt": 161.5,
-     "change": -0.9
+     "kt": 163.4,
+     "change": -0.3
     },
     {
      "code": "BE",
      "name": "Belgium",
-     "share": 2.6,
-     "kt": 132.7,
+     "share": 2.7,
+     "kt": 134.2,
      "change": 0.2
     },
     {
      "code": "CL",
      "name": "Chile",
-     "share": 2.1,
-     "kt": 106.9,
+     "share": 2.2,
+     "kt": 110.0,
      "change": 0.2
     },
     {
      "code": "IT",
      "name": "Italy",
      "share": 2.1,
-     "kt": 106.6,
-     "change": 0.3
+     "kt": 107.7,
+     "change": 0.2
     },
     {
      "code": "BR",
      "name": "Brazil",
      "share": 1.6,
-     "kt": 80.2,
+     "kt": 82.1,
      "change": 0.5
     },
     {
      "code": "PT",
      "name": "Portugal",
      "share": 1.1,
-     "kt": 55.3,
+     "kt": 57.1,
      "change": 0.2
     },
     {
      "code": "FR",
      "name": "France",
      "share": 1.0,
-     "kt": 52.6,
+     "kt": 49.1,
      "change": -0.8
     },
     {
      "code": "PL",
      "name": "Poland",
      "share": 0.9,
-     "kt": 48.3,
+     "kt": 46.2,
      "change": 0.1
     },
     {
      "code": "ES",
      "name": "Spain",
      "share": 0.8,
-     "kt": 39.8,
+     "kt": 41.3,
      "change": 0.2
     },
     {
      "code": "CA",
      "name": "Canada",
      "share": 0.4,
-     "kt": 22.5,
+     "kt": 22.8,
      "change": 0.1
     },
     {
      "code": "CZ",
      "name": "Czechia",
      "share": 0.3,
-     "kt": 13.0,
-     "change": -0.5
+     "kt": 14.3,
+     "change": -0.4
     },
     {
      "code": "EE",
      "name": "Estonia",
      "share": 0.2,
-     "kt": 11.5,
-     "change": -0.0
+     "kt": 9.9,
+     "change": -0.1
     },
     {
      "code": "SI",
@@ -571,7 +578,7 @@
      "code": "CN",
      "name": "China",
      "share": 0.0,
-     "kt": 0.4,
+     "kt": 1.6,
      "change": 0.0
     },
     {
@@ -593,7 +600,7 @@
      "name": "United Kingdom",
      "share": 0.0,
      "kt": 0.1,
-     "change": 0.0
+     "change": -0.0
     },
     {
      "code": "GR",
@@ -655,7 +662,7 @@
      "code": "LV",
      "name": "Latvia",
      "share": 0.0,
-     "kt": 1.0,
+     "kt": 0.9,
      "change": -0.1
     },
     {
@@ -678,13 +685,6 @@
      "share": 0.0,
      "kt": 0.0,
      "change": -0.0
-    },
-    {
-     "code": "NZ",
-     "name": "New Zealand",
-     "share": 0.0,
-     "kt": 0.0,
-     "change": 0.0
     },
     {
      "code": "QW",
@@ -740,135 +740,135 @@
    "reporter": "EU27_2020"
   },
   "bhkp": {
-   "from": "2025-08",
-   "to": "2026-07",
-   "totalKt": 10230,
-   "prevTotalKt": 10396,
+   "from": "2025-09",
+   "to": "2026-08",
+   "totalKt": 10218,
+   "prevTotalKt": 10430,
    "rows": [
     {
      "code": "BR",
      "name": "Brazil",
-     "share": 41.4,
-     "kt": 4236.6,
-     "change": 2.2
+     "share": 41.5,
+     "kt": 4241.1,
+     "change": 2.4
     },
     {
      "code": "UY",
      "name": "Uruguay",
-     "share": 14.0,
-     "kt": 1427.4,
-     "change": 0.0
+     "share": 13.8,
+     "kt": 1407.7,
+     "change": -0.3
     },
     {
      "code": "NL",
      "name": "Netherlands",
      "share": 9.1,
-     "kt": 932.4,
+     "kt": 930.8,
      "change": -1.0
     },
     {
      "code": "PT",
      "name": "Portugal",
-     "share": 7.3,
-     "kt": 750.6,
-     "change": -0.8
+     "share": 7.5,
+     "kt": 765.3,
+     "change": -0.5
     },
     {
      "code": "ES",
      "name": "Spain",
-     "share": 6.9,
-     "kt": 707.1,
-     "change": 0.2
+     "share": 7.0,
+     "kt": 720.3,
+     "change": 0.4
     },
     {
      "code": "FI",
      "name": "Finland",
-     "share": 4.6,
-     "kt": 468.2,
-     "change": 1.1
+     "share": 4.5,
+     "kt": 461.2,
+     "change": 1.0
     },
     {
      "code": "AT",
      "name": "Austria",
      "share": 4.0,
-     "kt": 408.1,
-     "change": -0.2
+     "kt": 407.6,
+     "change": -0.3
     },
     {
      "code": "CL",
      "name": "Chile",
-     "share": 3.7,
-     "kt": 383.1,
-     "change": 0.2
+     "share": 3.8,
+     "kt": 387.5,
+     "change": 0.3
     },
     {
      "code": "BE",
      "name": "Belgium",
-     "share": 3.1,
-     "kt": 320.9,
-     "change": 0.3
+     "share": 3.2,
+     "kt": 326.1,
+     "change": 0.2
     },
     {
      "code": "SE",
      "name": "Sweden",
      "share": 1.7,
-     "kt": 178.6,
+     "kt": 178.7,
      "change": -0.4
     },
     {
      "code": "IT",
      "name": "Italy",
      "share": 1.1,
-     "kt": 116.9,
-     "change": 0.1
+     "kt": 107.6,
+     "change": -0.1
     },
     {
      "code": "FR",
      "name": "France",
-     "share": 0.9,
-     "kt": 91.1,
+     "share": 0.8,
+     "kt": 85.2,
      "change": -0.1
     },
     {
      "code": "DE",
      "name": "Germany",
      "share": 0.6,
-     "kt": 57.6,
+     "kt": 58.1,
      "change": -0.1
     },
     {
      "code": "PL",
      "name": "Poland",
      "share": 0.4,
-     "kt": 43.8,
-     "change": -0.1
-    },
-    {
-     "code": "EE",
-     "name": "Estonia",
-     "share": 0.3,
-     "kt": 25.8,
+     "kt": 40.8,
      "change": -0.1
     },
     {
      "code": "SK",
      "name": "Slovakia",
      "share": 0.3,
-     "kt": 32.6,
+     "kt": 32.9,
      "change": 0.1
+    },
+    {
+     "code": "EE",
+     "name": "Estonia",
+     "share": 0.2,
+     "kt": 24.8,
+     "change": -0.1
     },
     {
      "code": "US",
      "name": "USA",
      "share": 0.2,
-     "kt": 23.6,
+     "kt": 21.8,
      "change": -0.5
     },
     {
      "code": "CY",
      "name": "CY",
      "share": 0.1,
-     "kt": 7.8,
+     "kt": 9.2,
      "change": 0.1
     },
     {
@@ -882,56 +882,56 @@
      "code": "BG",
      "name": "Bulgaria",
      "share": 0.0,
-     "kt": 4.8,
+     "kt": 3.1,
      "change": -0.2
     },
     {
      "code": "CA",
      "name": "Canada",
      "share": 0.0,
-     "kt": 0.6,
+     "kt": 0.5,
      "change": -0.0
     },
     {
      "code": "CH",
      "name": "Switzerland",
      "share": 0.0,
-     "kt": 0.1,
+     "kt": 0.0,
      "change": 0.0
     },
     {
      "code": "CN",
      "name": "China",
      "share": 0.0,
-     "kt": 0.5,
+     "kt": 0.3,
      "change": 0.0
     },
     {
      "code": "CZ",
      "name": "Czechia",
      "share": 0.0,
-     "kt": 4.3,
+     "kt": 4.2,
      "change": 0.0
     },
     {
      "code": "DK",
      "name": "Denmark",
      "share": 0.0,
-     "kt": 0.2,
+     "kt": 0.4,
      "change": 0.0
     },
     {
      "code": "GB",
      "name": "United Kingdom",
      "share": 0.0,
-     "kt": 0.5,
-     "change": -0.0
+     "kt": 0.6,
+     "change": 0.0
     },
     {
      "code": "GR",
      "name": "Greece",
      "share": 0.0,
-     "kt": 0.4,
+     "kt": 0.3,
      "change": -0.0
     },
     {
@@ -952,7 +952,7 @@
      "code": "ID",
      "name": "Indonesia",
      "share": 0.0,
-     "kt": 4.6,
+     "kt": 0.9,
      "change": -0.1
     },
     {
@@ -973,7 +973,7 @@
      "code": "JP",
      "name": "Japan",
      "share": 0.0,
-     "kt": 0.1,
+     "kt": 0.0,
      "change": -0.0
     },
     {
@@ -994,8 +994,15 @@
      "code": "LV",
      "name": "Latvia",
      "share": 0.0,
-     "kt": 0.4,
+     "kt": 0.6,
      "change": -0.1
+    },
+    {
+     "code": "MR",
+     "name": "MR",
+     "share": 0.0,
+     "kt": 0.0,
+     "change": 0.0
     },
     {
      "code": "MT",
@@ -1079,5 +1086,5 @@
    "reporter": "EU27_2020"
   }
  },
- "updated": "2026-11-13T06:35:35"
+ "updated": "2026-11-16T07:07:03"
 }

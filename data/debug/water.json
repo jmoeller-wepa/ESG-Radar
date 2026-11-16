@@ -1,5 +1,5 @@
 {
- "at": "2026-11-13T06:35:19",
+ "at": "2026-11-16T07:06:12",
  "log": [
   "kaub: ok",
   "mainz: ok",
@@ -117,7 +117,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 315
+   "points": 318
   },
   {
    "site": "giershagen",
@@ -157,7 +157,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 315
+   "points": 318
   },
   {
    "site": "kriebstein",
@@ -197,7 +197,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 315
+   "points": 318
   },
   {
    "site": "mainz",
@@ -237,7 +237,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 315
+   "points": 318
   },
   {
    "site": "leuna",
@@ -277,7 +277,7 @@
     "vrws_ag",
     "vrwl_ag"
    ],
-   "points": 315
+   "points": 318
   }
  ]
 }

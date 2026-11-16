@@ -1,25 +1,25 @@
 {
- "at": "2026-11-13T06:45:30",
+ "at": "2026-11-16T07:15:07",
  "failed": [],
  "details": [
   {
    "site": "piechowice",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false,
    "gauge": {
     "picked": {
      "id_stacji": "150150050",
      "stacja": "Piechowice",
      "rzeka": "Kamienna",
-     "stan_wody": "81",
-     "stan_wody_data_pomiaru": "2026-11-13 05:50:00"
+     "stan_wody": "64",
+     "stan_wody_data_pomiaru": "2026-11-16 06:20:00"
     },
-    "points": 4
+    "points": 5
    }
   },
   {
    "site": "lille",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false,
    "gauge": {
     "candidates": [
@@ -27,12 +27,12 @@
      "E381126601 La Lys [Lys] en Belgique [Menen - Menin] - Ropswalle (La Lys, 2.3 km)",
      "E367125002 La Lys à Armentières - Station partenaire VNF (La Lys, 15.7 km)"
     ],
-    "points": 34
+    "points": 37
    }
   },
   {
    "site": "chateau-thierry",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false,
    "gauge": {
     "candidates": [
@@ -40,23 +40,23 @@
      "F620000301 La Marne à Azy-sur-Marne - Barrage (amont) [VNF] (La Marne, 5.3 km)",
      "F620000302 La Marne à Azy-sur-Marne - Barrage (aval) [VNF] (La Marne, 5.4 km)"
     ],
-    "points": 34
+    "points": 37
    }
   },
   {
    "site": "troyes",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false,
    "gauge": {
     "candidates": [
      "H080001201 La Seine [partielle] à Troyes [Tauxelles] (La Seine, 8.7 km)"
     ],
-    "points": 34
+    "points": 37
    }
   },
   {
    "site": "annonay",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false,
    "gauge": {
     "candidates": [
@@ -67,27 +67,27 @@
      "V344000101 Le Rhône à Saint-Rambert-d'Albon - CNR (Le Rhône, 8.8 km)",
      "V344000102 Le Rhône à Saint-Rambert-d'Albon - DREAL Auvergne-Rhône-Alpes (Le Rhône, 8.9 km)"
     ],
-    "points": 34
+    "points": 37
    }
   },
   {
    "site": "lucca-capannori",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false
   },
   {
    "site": "lucca-porcari",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false
   },
   {
    "site": "cassino",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false
   },
   {
    "site": "swalmen",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false,
    "gauge": {
     "candidates": [
@@ -102,17 +102,17 @@
      "roermond.recreatiestrandcampinghatenboer Roermond, Recreatiestrand Camping Hatenboer",
      "roermond.resortmarinaoolderhuuske.recreatiestrand Roermond, Resort Marina Oolderhuuske, recreatiestrand"
     ],
-    "points": 34
+    "points": 37
    }
   },
   {
    "site": "bridgend",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false
   },
   {
    "site": "blackburn",
-   "recentDays": 422,
+   "recentDays": 423,
    "precipAccumulated": false,
    "gauge": {
     "candidates": [
@@ -123,7 +123,7 @@
      "713120 Ewood (River Darwen, 1.9 km)",
      "713207 Ewood Ashville Terrace North (Ewood Mill Race, 2.5 km)"
     ],
-    "points": 32
+    "points": 35
    }
   }
  ]
