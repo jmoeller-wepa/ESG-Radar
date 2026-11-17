@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-16T06:52:44+00:00",
+ "fetched": "2026-11-17T06:19:08+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -34,9 +34,9 @@
     "shortTitle": "Targeted revision of EU passenger rights for persons with disabilities and reduced mobility",
     "currentStatuses": "[{'frontEndStage': 'PLANNING_WORKFLOW', 'receivingFeedbackStatus': 'OPEN', 'feedbackStartDate': '2026/11/13 12:17:31', 'feedbackEndDate': '2027/01/08 23:59:59', 'isCurrent': True}]",
     "topics": "[{'code': 'TRANSPORT', 'label': 'Transport'}]",
-    "initiativeTranslations": "[{'value': 'Права на пътниците — целенасочено преразглеждане на правилата с цел да се отговори по-добре на потребностите на хората с увреждания и с намалена подвижност', 'language': 'BG', 'field': 'SHORT_TITLE'}, {'value': 'Práva cestujících – cílená revize pravidel s cílem lépe řešit potřeby osob s"
+    "initiativeTranslations": "[{'value': 'Права на пътниците — целенасочено преразглеждане на правилата с цел да се отговори по-добре на потребностите на хората с увреждания и с намалена подвижност', 'language': 'BG', 'field': 'SHORT_TITLE'}, {'value': 'Práva cestujících – cílená revize pravidel, která bude lépe řešit potřeby os"
    },
-   "openFound": 49,
+   "openFound": 46,
    "read": 300
   }
  ]

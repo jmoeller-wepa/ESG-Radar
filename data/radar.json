@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-16T06:52:32",
+    "lastFeedRun": "2026-11-17T06:18:55",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -13174,6 +13174,925 @@
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWwtbXEycmV0SEFsb2hKdUdhb3dNOGNnUDBzUFhETWhQOWJQUk1IdHVHQmhhSjVzY2Nxeng1eW14aE9EN1lxeUZvUjB3NkM5a0hZOTkwdFlFSVM1OG5QTVRCX21fT3ZzV2dNTG1MMjBCdlptWlRxNklaRVZ2OUM0ZElCdTE0ZGhwaUlqbGc4Zw?oc=5",
       "origin": "feed",
       "added": "2026-11-16"
+    },
+    {
+      "id": "feed-f26f2a4dfd",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt"
+      ],
+      "title": "Broadening access to AI for scientists",
+      "summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-f891bd93f3",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt"
+      ],
+      "title": "Science at the Frontier: How scientists use ChatGPT",
+      "summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/science-at-the-frontier",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-91e58e2ea9",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt"
+      ],
+      "title": "LVMH’s Media Division announces strategic partnership with OpenAI",
+      "summary": "LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/lvmh-media-division-partnership",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-cfcc7acb02",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agents",
+        "Chatgpt",
+        "Introducing"
+      ],
+      "title": "More ways to move care forward with ChatGPT for Healthcare",
+      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-b0ded74e06",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agents"
+      ],
+      "title": "Advancing computer-use agents for healthcare teams",
+      "summary": "Advancing computer-use agents for healthcare teams",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-e3915f7e4c",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Launch"
+      ],
+      "title": "The King’s Trust and OpenAI launch £1m partnership",
+      "summary": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/the-kings-trust-and-openai",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-627343c0fd",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Regional voices are rolling out in the Gemini app. - blog.google",
+      "summary": "Regional voices are rolling out in the Gemini app. blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40RXBfMFZfcGhiY0xNeDdLTWh3ZHE1c3NOQTRsMVhwWUsyZm5QdGlnR3N6LU5rTzZ0TC1oQWltdVlfc29LZDJjREhndjg5eUxNMVhnVTRLSmJmVGxNekJ1aTV4N0xheWRLYjc0SDBQd216c3RBTWNQSjFqSFljU2M?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-32249858ad",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Transform notes, research, and sources into interactive sites with Gemini Notebook. - blog.google",
+      "summary": "Transform notes, research, and sources into interactive sites with Gemini Notebook. blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNR2ZHZ1dFQXBCd3QxdDVvZGFMaWh5ZGxDbmhlQUlpY1hfVDRhTGhJVGNZNlpZTEN6Mzk5VktpUkdNTnMxX1VIN0dMcl9xbkU0eHhEMjZ3ZnJFSk54NEhzcWRORXY3M2FjU3dtY3l2RWRuaDhPUHVHUVNkQzJTR0NZQllxU3hHUENm?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-b2818ef2b5",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "We’re updating controls in the Gemini app. - blog.google",
+      "summary": "We’re updating controls in the Gemini app. blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdXY4TUVKUW5yWFpXcnpjOHdpczdkdE0zaS1ISUstaWxZUzItMjZpYlNVYVRWdWtuakc1TzV6YWtCWFNIX0YyZXJSMWpIRmk5R2tfbE9XbDZ4QzRtVEk4d3Y3V1A0ay1vck0zcDJacUNwdENrM0pmNTZLQVlyVTBVLQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-d636ed372c",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [
+        "Scope 3"
+      ],
+      "title": "DitchCarbon Launches New Solution to Identify, Address High-Emissions Electricity in Supply Chains",
+      "summary": "Scope 3 emissions-focused platform DitchCarbon announced the launch of its Electricity module, a new feature […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/ditchcarbon-launches-new-solution-to-identify-address-high-emissions-electricity-in-supply-chains/?utm_source=rss&utm_medium=rss&utm_campaign=ditchcarbon-launches-new-solution-to-identify-address-high-emissions-electricity-in-supply-chains",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-066efd4337",
+      "date": "2026-11-15",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Regulation (Eu) 2023/956"
+      ],
+      "title": "CELEX:32026R2498: Commission Implementing Regulation (EU) 2026/2498 of 5 November 2026 laying down rules for the application of Regulation (EU) 2023/956 of the European Parliament and of the Council…",
+      "summary": "",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EUR-Lex · Official Journal",
+      "url": "https://eur-lex.europa.eu/./legal-content/AUTO/?uri=CELEX:32026R2498",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-d8c37cf3ea",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG SR TEG Online Meeting 17 November 2026 - EFRAG",
+      "summary": "EFRAG SR TEG Online Meeting 17 November 2026 EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPdUxUWnhhS3g1Z21IbW1kZmYwSjVPMzNmaC02aXAxSXcxTFJwVmc5M1RvM3NITG9NWHdIbXFldkVScjlIQVRqaVI1YmdYWmxOR0VJZnNvR3lmLVlBdmFhS2V6Zk9ULXhtemx6QkNlTU5fS3NoR2QyOGo1Y1BLSmt0UnNiQXZxbnJtWTRBYUVsZTRLVjE0UEZZ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-414ddcdd94",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG's Final Comment Letter calls for adequate EU representation, stable board sizes in IFRS Foundation Constitution review - EFRAG",
+      "summary": "EFRAG's Final Comment Letter calls for adequate EU representation, stable board sizes in IFRS Foundation Constitution review EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQdlJZb2w2SklnLXlPbG0zZlZhc1l2X0RhbjNlR0ltekJtU1gtdVdMRjdackhSYVlQMGF4eTIxUnpUVThWUkNxQjJIcVR1Q2ZZZHQ3X3B1U19CZHBwaTQyMnMyUXZxQkRwNWRhbEg0cGpMVG9lcUhMV0w4QWRjYTF5MUxIVFRjVGdyOHdKSHpkYnk0UkY0UWNPR1I2bGVHUkVPOGljRjhPM1VwRlpKOXRiQXJUSzJTNVVwTWI1c0N5Z1ozU09UajRwaVFEYU1iM3FoM1ZrUUxR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-6ab1ba9745",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG Releases Draft Comment Letter on the IASB’s Request for Information on the Post-implementation Review of IFRS 9—Hedge Accounting - EFRAG",
+      "summary": "EFRAG Releases Draft Comment Letter on the IASB’s Request for Information on the Post-implementation Review of IFRS 9—Hedge Accounting EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNdTBoSGtfbkhscjBfT3ZpclJlQ1dUa05hTUdUM1VRLXhLdGFEYk83YkJFSjV5R0NNZlNtSE9lS2hkRUEtc1pMNG11WkpZeW1JdHozdUg5cU14WGZ0OHNqOWxaRkVwYVp5WHA3WEVwTUJuZ0x0NVJVQUhVVmRoY0RWcDJqU1RDc0YweWsyRWF3Ry1VaGNYbzF1LXludUhpSG1JMlB0cFJFbU5Zd2Jkc2xzSC1CVlBrRXpDa1VrY19GS21PSWwybFU0VmszOUxmSFZnVmFSWGlTYk9aQi1TTmIw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-5d413a225e",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Branchentreffen in Salzgitter: Reiche bei Stahlgipfel – „Haben Industriestrompreis gegen Widerstand erkämpft“ - RP Online",
+      "summary": "Branchentreffen in Salzgitter: Reiche bei Stahlgipfel – „Haben Industriestrompreis gegen Widerstand erkämpft“ RP Online",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQaEs5Sm9WVFRaMzFvNXZOWFVnTHV4a21FYjU4YV83cGVWck1rYWZqVVRFQ19RWU84Q2VuWHgyZks2UURBWVVCLUZlWVpaZlFjdnZiQS1pWmp6b0NZU1o0VWNENWlhZXlVazhzWFlrYmMyRU9zNmY0X1dzRkVSZjNqcThNOUNORGVCeGdMNlJiM0Nma3g3NmVFb0s3QXdZa0xodlJfeHY5VmlsTHF6Zkd5ZnJsY19zN2FwSk0wR0Z3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-e899d6e7df",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Stahl soll Zukunft bleiben - Aber wie? - SAT.1 Regional",
+      "summary": "Stahl soll Zukunft bleiben - Aber wie? SAT.1 Regional",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNU05NSDZyTjhpZmE4cFVtTkZ2YnhhTEZVVzFYRmd5SFVZaTJFc0x6SFJiamhKdWJvT29OX3BFZUtnNmpFLWltMEQzQ2F3bW9wQ0JaSUE3TUNsT3B6ZzQ4cWlyT0s5enpDeHdpMHdYa1BYMlVKNExaYzk4V3JCT2ZyQ3VKbnNqeEZUaUdhMkRqdWFjZnFmQkVzYi1tMA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-191b1dc29f",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Reiche: Haben Industriestrompreis gegen Widerstand erkämpft Von dpa-AFX - Investing.com Deutsch",
+      "summary": "Reiche: Haben Industriestrompreis gegen Widerstand erkämpft Von dpa-AFX Investing.com Deutsch",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOY1gwQWEyLUR5QThKLWxfSkxkN2dGU1lXT19aZURLeDJOUGFzbEtITUVzeXlNZVVwdmZ2ZDFCbGpUM01XTWJZaGZqakJwTWktSndOSG01ck8xZHc1N0ZaOXVIM24wUXV0UWhFWDE1bDkxY3EwVmRfNjdEZTBGQTMxWkxHY0ZFdDNiWFVVN1dEZHBVdnZjZVBZLTF2cTc5RnFaOWNWUTRIWkRkbzdnemc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-f844e26b35",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Reiche verteidigt Industriestrompreis und zeigt auf Widerstand in Brüssel - upday News",
+      "summary": "Reiche verteidigt Industriestrompreis und zeigt auf Widerstand in Brüssel upday News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTTNqQ01HRDVrOWFneTBJdlZFdHRHTG0tQm03UEtFeGhkWE5uT3VYdVpDOW5UYlF5U2NNRU0xMTJwNXp4UEQ4QThhY1pVbFZvc25FN1RVNFVYTmhGRGktNGlrNVBkanhyNXZpb2xWSkoyTGVlbjJxV2pUd2t2c3plLUkwTkhDQW5ZYnhfZzVUb1hyMTJNOHdzUmpkXzkzZ3N4OUJXV2VYLTRReTJXT21neA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-a692e7d6bb",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Stahlgipfel in Salzgitter: Reiche verteidigt Industriestrompreis - ad-hoc-news.de",
+      "summary": "Stahlgipfel in Salzgitter: Reiche verteidigt Industriestrompreis ad-hoc-news.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaE5zSldGeWtrbTdXVFUydW5McE50bFVRVjZxMWNNZG5XOTNTaW5tQUV0a2ozTWRNdDFZTUg2NktmeE90VnBKVktpVFlJT3RWb2o3VDc5X1p5NFdET290M3JQUFlJbFFjbUVfa0dCOEdNU1FITnBGR2ZveXpaekZqeWpEdmtDbWtzSnAtdjVBVEM2V1ZKQnpKYUdsTi16eEFVSVBpUVBTeW1ZVmFsVV9v?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-0c3b5593e1",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Stahlgipfel in Salzgitter fordert planbaren Industriestrompreis - ad-hoc-news.de",
+      "summary": "Stahlgipfel in Salzgitter fordert planbaren Industriestrompreis ad-hoc-news.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPN1d6bnIzYjhZVUJpbGlmd2c0c0tXZGhvVXM3NzJNZVgtcENfQXpHX1NuUGZiQ2pFcTNlaEROc3NkRjJTeFBWR1ZzY3RabFpzSEs4dkozbFhfNlRKMkhtNTg3MDVTbk5jRUtVUTg4RWJtV0VQanJvMDR3ZTBKdHM1OHNKN0dMY0xhakRQREtMWlZWQ2Q1UkJydnJ1cUE2b0lvSzhJZ3pULVEtLUNHV1pn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-be29ae12e6",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Johnston, Urbandale, West Des Moines schools face cuts, want more aid - The Des Moines Register",
+      "summary": "Johnston, Urbandale, West Des Moines schools face cuts, want more aid The Des Moines Register",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQelgzVlZfWGVUcHBBbWl1elYzTFdyaS1xbzhlaG13QWxLcURKS0lBMVJUNWhCdGR2Qk9QbHFUWDdmdXVtUWVSQ1Btak80RkRGbnpTMUVGSWVRNlJDdU4wUGhvOWhJdVJnS0w1cTBFaFBzUnBQOTNRaTVsTnRrdE5MbTdNWnlzZmgwN3hQcFRPTjVNVGRKYm5KekVnalQ0cnNzdlZicHAxc0g0andZcUxIRkZJcllDalNIcURwVFRwN1hleE1ubWNSblRublVTVFY1eFlxNWZySlM?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-fa0c25c3ec",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers",
+        "costs"
+      ],
+      "tags": [],
+      "title": "Semiconductor supply chain: EU Commission authorises €57.6m in German state aid - INSIGHT EU MONITORING",
+      "summary": "Semiconductor supply chain: EU Commission authorises €57.6m in German state aid INSIGHT EU MONITORING",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNcmtQZEJCdHV6eFQ5OVdzRkxhQTNxR1dIWld1SnlDM293UklqMjhCZjJ2YnhXVmNFZGE1T0p4M1dvRmNyZ3pTc1RrMHRlSXFtZU1sdExfWVNVd2Y4Y1djRW9zYkNfVm1US2gybnFJSnRkUEs3M2JTVDFmcG14bktSUV9ma0xvS3lqb2oxRUNkZ3NPU2pMSDg3SmtodEEwRXJMd20xaHJRMmFqSktSVnczUEJMZ19DazhDWnJweWZvTU1LVnlBNjJBY00wQmZOclBsbGswcUJ0TW9QZ0E1T2c?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-0296e5fe1e",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Hillsborough Schools Ask Residents To Sign Petition Citing State Aid Cuts, Property Tax Strain - Patch",
+      "summary": "Hillsborough Schools Ask Residents To Sign Petition Citing State Aid Cuts, Property Tax Strain Patch",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZHlqNUtYbmtuUGRKX3dJMXRNbFBPVDZPSUthMjB1NFVYZ2dxVk9NdlVnQ0xkSm1senNVWlNfZlBPampldjB6U2tNM2VWRHNlS09ZczFuTDJ3MEhWaGhxSmVEbWpWSUNZN0oyRlFWWGRjR1JrcWRmeHljV3JwbkNKSkI1U3NTMEQ2eUVNSUF5QlYzMW52cDdFSHpyb3pRSk9NNXB3eG5NNlgwUWRUakIyUEV30gHiAUFVX3lxTE9vUGE0QXY1QnhXeWxHbXhaX1B3cHV4UWlZRlBGZVF0VTg5ZHRPeXBZWlMwQVhnZTU3R1RKdWw3NnExVmlhaWJxOFdxZy1MZl9oR2tFbmlmV3dSaW9OMmZUSXRrbDVFZE12M2ZnY0NEdTZXWU5DVXNJTS1ZWWl6M08zOE5CbHdCTVg1M19WZXR0UkpaVnF3MWNSNEFnSEdDZ3h5VEVpTHFNaERzZkVIVlVrbndLZzVVMjJXZi04N2gyQ29LTzUtbjdmM3h2NlF4eHNRVEJCd0JVekJyTTVIdDZ2TGc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-a474a3f727",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Edeka: Fencheltee ist Mogelpackung des Monats – ein Drittel weniger Inhalt - RND.de",
+      "summary": "Edeka: Fencheltee ist Mogelpackung des Monats – ein Drittel weniger Inhalt RND.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRjNmOXEwSW04R04xTWFuc0d2Q1ZoM1JLaFVzZUhCR1Rjb3Fmb1ZNenZHYTV6dzhhZzVaemtRdlZxYlRGX1FOZzhabXJlbkx0QXctTmx0dEhQUjktV09pbnVsZWxOV3B4Rkd4Rlpmdy03SGFTMUJYeVNxVldxYlRySTRJYkU1aERncVdCamlHaFhsa0NnMXpUX05mYUlNa1R3UGhCX0pnajF4Zw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-1bc1ccfe1b",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Weniger Inhalt, gleicher Preis: Edeka-Produkt ist Mogelpackung des Monats - CHIP",
+      "summary": "Weniger Inhalt, gleicher Preis: Edeka-Produkt ist Mogelpackung des Monats CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQbWhzRkVJTkRMLXotVXVyRlpRMEZ4dTZpNFBSOVRXaG43RjVMSURxQ3RrSDZGZHhzdEllR0RmMDBMcGxEdy1SeDFmNWV5cmJCTTJicjVfVkhnbDVBcU9NM1ZJMXIyRWZEV2F0WFhRUGp0STlRVjQ2SmNDV3BIUjhXbndrZUJBVDdFMWJOOWtHeUEtdWVRcmRaVkl0MTI3c1NySC1HVUFkdEpVb3R3TEVzZG8tUHJGQVhfUkR0NHpMU1VyVXZHMUViUnQ5T3hCYnU5d3QtU3VPemVfdlJlbUlveVhTZHBibE9iaEgtR19qZmpCOGcwaGhv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-239c7a0e33",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Ärger um Edeka-Fencheltee: Die Packung wächst, aber der Inhalt schrumpft um ein Drittel - Joyn",
+      "summary": "Ärger um Edeka-Fencheltee: Die Packung wächst, aber der Inhalt schrumpft um ein Drittel Joyn",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPX1BYd2VxaDRXSHRCb0tKR0p5R05rTzhJMDg4bjBTdFNGWDFTTzQ3Q0I4MFA2ajJJNURfQ09kR1BmUXExWnRGcWlSaTVyMFE4cmxVYnBlTG5hbXRtSWxUSUs1Tkdmc2IwdU5Xanhja0xvcXE3Qmdsd3NpcXZIUW51WTVrU3FXbHBURUtOQldSOVcyVlFZcEZR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-954c95f4d9",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Dann geh doch zu Netto: Hafermilch-Eigenmarke schlägt Oatly um Längen - Giga",
+      "summary": "Dann geh doch zu Netto: Hafermilch-Eigenmarke schlägt Oatly um Längen Giga",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQclluRUEtSTdoMTdhR01YdUQ1czh3RDMyalBpdTMzOFN3d05GTWttcW5JZFJaeGltY1JGakxOcklSMTRsOHNrWEtUYWQzazFTa184b2ZPYW5Ud1pZS1BzUTlFdUx1SHpaWVE4UUY3ZHlMWUk4OGF3anZoYjBzWllNYjdPQVFqWUpJbU5VbEpzLXdoZXpYZC12Y0QwNlhYWGljYU9udWlucUJKdURrRThNdU5hY2lteGVFZkFVRE5VU3c?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-98ff1707f6",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "50 Prozent teurer! Bei diesem Edeka-Produkt werden Kunden gleich doppelt getäuscht - inFranken.de",
+      "summary": "50 Prozent teurer! Bei diesem Edeka-Produkt werden Kunden gleich doppelt getäuscht inFranken.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRDBDU0dPOTNBSDhIc1JKV3RRRVdWalFSemFmLTZ6VjBsak83NHdwSEZ5R3JQNFJJUmpKM0FDazFBYnNXMWtHVVVXTEhhbEtDak9yNFVhWENGNElXcmpwWC16anRTRG85OUVqNEFuczUxM2ZrcDgyNW1aOXUtTDRmVDVSQkVJaG5QM1JaM3Rab0hoMTFYU3QwbVhTdVFlNzFvNXZING5HZVVmeVZvU3ItQU41OFc1azJh?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-6fafcfc2a6",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "50 Prozent Preiserhöhung: Das ist die Mogelpackung des Monats - n-tv.de",
+      "summary": "50 Prozent Preiserhöhung: Das ist die Mogelpackung des Monats n-tv.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOU0NrSDNENmUyTUpNVlU0Zk5VX2I4NC1ZVDhDeFFSS0ZzRXJPXzhVUW1lajd2NktGZ2FZOWhUdFBYNlFsMTNhNUFlSXdST3gwWXlOZnNsOExHbUxpTmlkbGx5SnM3emljdFFpYkdfUG4yQTcxaHlyWXZJeVA4SVZKLU1nZnB6M0E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-a882d61720",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Verbraucherzentrale kürt Edeka-Produkt zur \"Mogelpackung des Monats\" - WEB.DE",
+      "summary": "Verbraucherzentrale kürt Edeka-Produkt zur \"Mogelpackung des Monats\" WEB.DE",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQTlIxaHFUbkZrUXdHU2lNUTFxd0ZFS2gzcmVvRDhyYWZjenRrVzdnV091V0M4TEdqckJ3S2pJcFYyZ21mVHZ1cnczRTFNX25kRTBzeGZtcGRpUG9mdHFkUXJLd1BOSmoyTW1YV1docHVBck1kVVludWdQX002THRzaXVYVzk4ZFFGNUZrdXVXZGNyaGF3dVkxSmItS1ZLRU9pNHAyOFdXZzY3UkFQZkdja283akNva0JsVk9kalZkOA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-19fb1efdcf",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Edeka reduziert Fencheltee und vergrößert die Verpackung - SuaraGarut.ID",
+      "summary": "Edeka reduziert Fencheltee und vergrößert die Verpackung SuaraGarut.ID",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9YRi0yWDhHNHcyX0tENlRhbFZUN01kMjFQdXc3UHVHaXNjbXVQY3hySHF5ck0zdUpsd3FSX0EwT2hfaGlYeGNjT1hudDF2dnNOUkhveHlxR1Nfcy1iV0g0aTkydjRrSHdLaUkydlFXNEs?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-ef2186bce0",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Bundesweiter Rückruf bei Rossmann: Diese Kondome können reißen oder undicht sein - Ruhr Nachrichten",
+      "summary": "Bundesweiter Rückruf bei Rossmann: Diese Kondome können reißen oder undicht sein Ruhr Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQckI1aWpIRmZhcW9ZZDE5d1BYMU1zak9Zdk0zS09JN25id21TV29ZSGhCa2R0enBicTlVVVZuTXZiX1hUdVpfY2lQQXZwa0c1MnptVDlFU0plank2THkwbFV1M19tM3cwdHdfTWtZNk5kVE8wUVBnWTVDU1pzTEIydFBWcnhVbS1aNjdLZ252ZjgwWEtMSkpVaFN4ZEJNSU1FVnNJbGZ0SEQ0XzdXY0NDanJFbmpEekF1T29WQVVLVXJHVGl6TGZvMEt3N29IZWwxbG1CbWFxUTYxa3o3YU5z?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-5170c22f92",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Discounter statt teure Markenware: Den Batterien-Testsieger gibt es im Drogeriegeschäft - CHIP",
+      "summary": "Discounter statt teure Markenware: Den Batterien-Testsieger gibt es im Drogeriegeschäft CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOZVZKNlZlellQQWY0Z1B1LVh5NXFhOXVvTkxsX1BCMXpjSGVJZVBFcHNOV0hrdzJuVGhCa0d2ajVwelhMTUh4eWJtR0RjQXFfQm9uT2taRkh5S05CNU10RGxLUXI1cnEwMERjVHBMY0hzQ0pDTVVGTFJLNWNsS3habW4tMVBCUWJIUTVhbHpvUy1yaVFkX2pOaENJV3Z6ODQzaHppdVhTT1cxX1Znd2JLQ2p2NnRuczZ2QmZ0WFZpdk00c0stR1FkaGRaRE9GcGRiRmlzeWNjR2VBeElOUllubG14d3czeE1xdVE3MXEzS1lLS08tdjQ4T3lRMmJOVTA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-de25004cba",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann ruft Kondome zurück: Wer nicht reagiert, zahlt bis zu 190.000 Euro - desired.de",
+      "summary": "Rossmann ruft Kondome zurück: Wer nicht reagiert, zahlt bis zu 190.000 Euro desired.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPbnV4d1J2a2JWU29La1ZSTDhWTS1vLThjdTdQMlg0TnJTY3Jxa2JVdENxWTVvSGRocWNCeWJ1SV9JT0lKMEJXVE9zeEFHSENXR0xKTm56TkFKc0xWdVZVNGpzdFRnUVpEb05FZzZqdzY5UnhkQ1I2ZWJnQ29mRUdqNWd1QW9aaVhGNEh1ZnR6bDhBT0dDN2hvR1IwVGgtZDdMQzRRMnh6eGl6bGRPMV9XMjY0YWNmYVpNVFJtMnFvWm5nTEhYaVk1S0FINA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-f03aa69fa9",
+      "date": "2026-11-14",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Ivan Hristov: The fine for Kaufland could drive up prices ᐉ News from Fakti.bg - Bulgaria - Fakti.bg",
+      "summary": "Ivan Hristov: The fine for Kaufland could drive up prices ᐉ News from Fakti.bg - Bulgaria Fakti.bg",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRXZ0b2Q0NzdIQXYxY3ZjMGRQRUlaRGxIblkxQ28zX3RLUE1pdERJQmdLXzRKUlFIa3RnVDZiYkVOSEc2TklmcnY2R2VKM013UjVvUkJSeF9UeTBPMUF1WUNVR1BBN214YnNMMkllbzVEWFUyZm5TRVlLOUlVd0JDakZtYkVRM0ZQaXdrMU5wbHVOME8zclRKX1RnR0Qxdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-1cc1c89119",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Lage der Industrie im Fokus: Wüst besucht WEPA in Müschede - SauerlandKurier",
+      "summary": "Lage der Industrie im Fokus: Wüst besucht WEPA in Müschede SauerlandKurier",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQaVRsd1Fuem43NmRvUmVEemtpcEFCRUVpdEJvMFFIYnNNN3ZvMEpVYndTaXNqNUF5cFpUdUNmMEVvTDZGeUtJN1RtTEN2Z0pxZXh0dnRSdlNDeDlVYzhzTlpoZHdSWHc4SmFKVGFneUt3Snp1NTY2S21iT0N3aVEzLWh0SmtFTjJqZGpmQlk4Y2ttOFNscjV4LTgwZ3JzdXpYM09RN19sWHZIeFZHT0hKQnBWU3VreW1YT0VfcFlKV1lEQzVPdEpiQWlTWkw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-9ab12e9170",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Hohe Energiepreise, klare Worte: Hendrik Wüst bekommt Einblick bei Wepa - WP | Westfalenpost",
+      "summary": "Hohe Energiepreise, klare Worte: Hendrik Wüst bekommt Einblick bei Wepa WP | Westfalenpost",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRXBaSjFxMF9IempZaWY2aXN0M29ILVVGX0NzZ1E4dlRXNmRpbjhOUjR5eVozVnZnZXdraU82M2puX01VV0V4LWhuZjMtU0xuajg2dzFfSnNOQ3BVMEJTWkFnZFlDWjdHc1BWclcyaDNkVEh4WFhTNC1WYWx3anVPTk92MndZcjRKRFhkNHRMeDhSalFqeUgzLVdNemItQkd5R0tEclJ5M3hOM1dVTE1hSmoxNi1hLXI5bGxUQTlHUmV6X2tUWkE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
+    },
+    {
+      "id": "feed-033eb0e815",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Fotostrecke: Einblicke zum Wüst-Besuch beim Wepa-Firmenrundgang - WP | Westfalenpost",
+      "summary": "Fotostrecke: Einblicke zum Wüst-Besuch beim Wepa-Firmenrundgang WP | Westfalenpost",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPREwxbzY4MkFmbFNZbGZNMTMxVXZWLUdaYUpNZmJnYkFTbXF6X2pmdWpZT0d1MTZqcHNQVzJlOU9aelE5NEJoUXlZdFU0aWxmZTc2SmVuNjhPNmxUREk1TUlrWmEwMVE2bzNTYlZ6OE9ybmNQRHBvajBvb043dUdVaDFfU3oySkZ0cWtHUldrSUY1NERaRUFjcDhyR0tRWEVjQTY5U0xRaEhPMTd4RGVrS1lEaWY2Mm9JM05Icm9SWE1zZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-17"
     }
   ]
 }
