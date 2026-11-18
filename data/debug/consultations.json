@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-17T06:19:08+00:00",
+ "fetched": "2026-11-18T06:21:45+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,9 +12,9 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
+     "last",
      "totalPages",
      "totalElements",
-     "last",
      "sort",
      "numberOfElements",
      "size",
@@ -27,16 +27,150 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": "18953.0",
+    "id": 13535.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2026)7463403",
+    "reference": "Ares(2022)5375434",
     "foreseenActType": "PROP_REG",
-    "shortTitle": "Targeted revision of EU passenger rights for persons with disabilities and reduced mobility",
-    "currentStatuses": "[{'frontEndStage': 'PLANNING_WORKFLOW', 'receivingFeedbackStatus': 'OPEN', 'feedbackStartDate': '2026/11/13 12:17:31', 'feedbackEndDate': '2027/01/08 23:59:59', 'isCurrent': True}]",
-    "topics": "[{'code': 'TRANSPORT', 'label': 'Transport'}]",
-    "initiativeTranslations": "[{'value': 'Права на пътниците — целенасочено преразглеждане на правилата с цел да се отговори по-добре на потребностите на хората с увреждания и с намалена подвижност', 'language': 'BG', 'field': 'SHORT_TITLE'}, {'value': 'Práva cestujících – cílená revize pravidel, která bude lépe řešit potřeby os"
+    "shortTitle": "Reinforced consumer protection cooperation ",
+    "currentStatuses": [
+     {
+      "frontEndStage": "ADOPTION_WORKFLOW",
+      "receivingFeedbackStatus": "OPEN",
+      "feedbackStartDate": "2026/11/17 22:20:33",
+      "feedbackEndDate": "2027/01/13 23:59:59",
+      "isCurrent": true
+     }
+    ],
+    "topics": [
+     {
+      "code": "CONSUM",
+      "label": "Consumers"
+     }
+    ],
+    "initiativeTranslations": [
+     {
+      "value": "Защита на потребителите — засилено сътрудничество в областта на правоприлагането",
+      "language": "BG",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Ochrana spotřebitele – posílená spolupráci v oblasti prosazování práva",
+      "language": "CS",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Forbrugerbeskyttelse: styrket samarbejde om håndhævelse",
+      "language": "DA",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Verbraucherschutz – verstärkte Zusammenarbeit bei der Durchsetzung",
+      "language": "DE",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Προστασία των καταναλωτών — ενισχυμένη συνεργασία για την επιβολή της νομοθεσίας",
+      "language": "EL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Consumer protection – strengthened enforcement cooperation",
+      "language": "EN",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Protección de los consumidores: refuerzo de la cooperación en materia de aplicación",
+      "language": "ES",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Tarbijakaitse – tugevdatud koostöö õigusnormide täitmise tagamiseks",
+      "language": "ET",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Protection des consommateurs — renforcement de la coopération en matière d’application de la législation",
+      "language": "FR",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Tomhaltóirí a chosaint— comhar neartaithe forfheidhmiúcháin",
+      "language": "GA",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Zaštita potrošača – pojačana suradnja u provedbi",
+      "language": "HR",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Tutela dei consumatori – Rafforzamento della cooperazione ai fini dell'applicazione delle norme",
+      "language": "IT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Kuluttajansuoja – lisää yhteistyötä täytäntöönpanon tehostamiseksi",
+      "language": "FI",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Fogyasztóvédelem – megerősített végrehajtási együttműködés",
+      "language": "HU",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Vartotojų apsauga. Glaudesnis bendradarbiavimas vykdymo užtikrinimo srityje",
+      "language": "LT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Patērētāju tiesību aizsardzība — pastiprināta sadarbība tiesībaizsardzības jomā",
+      "language": "LV",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Protezzjoni tal-konsumatur - kooperazzjoni msaħħa fl-infurzar",
+      "language": "MT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Consumentenbescherming – versterkte samenwerking op het gebied van handhaving",
+      "language": "NL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Ochrona konsumentów – wzmocniona współpraca w zakresie egzekwowania prawa",
+      "language": "PL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Defesa do consumidor — reforço da cooperação em matéria de aplicação da legislação",
+      "language": "PT",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Protecția consumatorilor: consolidarea cooperării privind asigurarea respectării legislației",
+      "language": "RO",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Ochrana spotrebiteľa – posilnená spolupráca v oblasti presadzovania práva",
+      "language": "SK",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Varstvo potrošnikov – okrepljeno sodelovanje pri izvrševanju",
+      "language": "SL",
+      "field": "SHORT_TITLE"
+     },
+     {
+      "value": "Konsumentskydd – stärkt tillsynssamarbete",
+      "language": "SV",
+      "field": "SHORT_TITLE"
+     }
+    ]
    },
-   "openFound": 46,
+   "openFound": 48,
    "read": 300
   }
  ]

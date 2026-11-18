@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-17T06:18:55",
+    "lastFeedRun": "2026-11-18T06:21:31",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -14093,6 +14093,1817 @@
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPREwxbzY4MkFmbFNZbGZNMTMxVXZWLUdaYUpNZmJnYkFTbXF6X2pmdWpZT0d1MTZqcHNQVzJlOU9aelE5NEJoUXlZdFU0aWxmZTc2SmVuNjhPNmxUREk1TUlrWmEwMVE2bzNTYlZ6OE9ybmNQRHBvajBvb043dUdVaDFfU3oySkZ0cWtHUldrSUY1NERaRUFjcDhyR0tRWEVjQTY5U0xRaEhPMTd4RGVrS1lEaWY2Mm9JM05Icm9SWE1zZw?oc=5",
       "origin": "feed",
       "added": "2026-11-17"
+    },
+    {
+      "id": "feed-feb579d43b",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Monthly update",
+        "Fabric"
+      ],
+      "title": "Power BI November 2026 Feature Summary",
+      "summary": "If you haven’t already, read Arun Ulag’s Ignite blog post to learn how Microsoft is bringing together databases, analytics, and intelligent applications across Azure and Microsoft Fabric. ________________________________ Welcome to the November 2026 Power BI feature summary! We're sharing this month's updates ahead of the Power BI Desktop release, which will follow the week of November 23, 2026. This month’s…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": true,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Power BI Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-November-2026-Feature-Summary/ba-p/5414287",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-9466752242",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "AI",
+        "Fabric"
+      ],
+      "title": "Power BI at Ignite: Building on the momentum",
+      "summary": "If you haven't already, read Bogdan Crivat's Microsoft Fabric Ignite blog post for a complete look at our Ignite announcements across Microsoft Fabric. Coming out of FabCon/SQLCon in Barcelona and the Power Platform Community Conference, I'm more excited than ever about what's ahead for Power BI. It's been inspiring to see the community explore new AI-powered experiences and rethink how we interact with data,…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Power BI Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Power-BI-at-Ignite-Building-on-the-momentum/ba-p/5422974",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-cf5b81cc06",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Monthly update"
+      ],
+      "title": "Fabric November 2026 Feature Summary",
+      "summary": "If you haven’t already, read Arun Ulag’s Ignite blog post to learn how Microsoft is bringing together databases, analytics, and intelligent applications across Azure and Microsoft Fabric. ________________________ Welcome to the November 2026 Microsoft Fabric feature summary! This month’s updates bring new ways to build intelligent applications, prepare and connect to data, work with data agents, and manage…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": true,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Fabric-November-2026-Feature-Summary/ba-p/5414311",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-54c0b3160f",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric Apps",
+        "Generally Available"
+      ],
+      "title": "Build governed data apps with Microsoft Fabric Apps (Generally Available)",
+      "summary": "If you haven’t already, read Arun Ulag’s Ignite blog post to learn how Microsoft is bringing together databases, analytics, and intelligent applications across Azure and Microsoft Fabric. AI has made it much faster to create an initial version of an app. Ask a coding agent to turn the spreadsheet your team uses to track supplier issues into an app, and it can be running in hours rather than days. Putting that app…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Build-governed-data-apps-with-Microsoft-Fabric-Apps-Generally/ba-p/5423011",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-9f74702ac7",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Governance",
+        "Onelake"
+      ],
+      "title": "OneLake: The unified foundation for data, context, governance, and AI",
+      "summary": "If you haven’t already, read Arun Ulag’s Ignite blog post to learn how Microsoft is bringing together databases, analytics, and intelligent applications across Azure and Microsoft Fabric. Most organizations' data is scattered across dozens of applications, clouds and services. Now that agents need to work across the entire business, organizations need to bring that data together in one place: one copy, open to…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/OneLake-The-unified-foundation-for-data-context-governance-and/ba-p/5423035",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-3c6506d1a8",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric Iq"
+      ],
+      "title": "Bringing trusted Fabric IQ context to wherever people and agents work",
+      "summary": "If you haven’t already, read Arun Ulag’s Ignite blog post to learn how Microsoft is bringing together databases, analytics, and intelligent applications across Azure and Microsoft Fabric. Over the past year, AI has moved from answering questions to doing the work. As the 2026 Microsoft Work Trend Index shows, people are now handing entire tasks to agents and directing several at once. Those agents plan, decide, and…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Bringing-trusted-Fabric-IQ-context-to-wherever-people-and-agents/ba-p/5423049",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-c727e5202c",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Semantic Model"
+      ],
+      "title": "Introducing full-text search for DAX",
+      "summary": "This article describes how to enable full-text indexing in a Power BI semantic model and how to search text with the TEXTCONTAINS and TEXTSIMILARITY functions. Searching text in a Power BI report usually means looking for a string inside the…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "SQLBI",
+      "url": "https://www.sqlbi.com/articles/introducing-full-text-search-for-dax/",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-3574711074",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Linked billing on the Claude Platform",
+      "summary": "Linked billing on the Claude Platform",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/linked-billing-on-claude-platform",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-549a77347d",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt",
+        "Codex",
+        "GPT"
+      ],
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-c6c361c53b",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt",
+        "Introducing"
+      ],
+      "title": "Introducing ChatGPT for Sales",
+      "summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-58da9c66b1",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Introducing"
+      ],
+      "title": "Introducing OpenAI for Chile",
+      "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/introducing-openai-for-chile",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-0604bc2b50",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt",
+        "Enterprise",
+        "Launch"
+      ],
+      "title": "Astra for Law leads in legal intelligence",
+      "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/astra-law-6-2",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-f054a54f82",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Codex"
+      ],
+      "title": "How Revolut raises ambition without lowering the bar",
+      "summary": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/revolut",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-3899b6e8ee",
+      "date": "2026-11-16",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Launch"
+      ],
+      "title": "At Holiday Extras, dots get to work before anyone asks",
+      "summary": "Dots deliver launch reports unprompted, flag issues people might miss, and talk through upcoming meetings on the commute to work.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/holiday-extras-dots",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-fa18c0b6aa",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Put Gemini to work for you - blog.google",
+      "summary": "Put Gemini to work for you blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWF2N1A4NTZkR3ZDemlDLUIyYlUwNVY2bmRKeEdCaEluLVg5MUJXWU1BY2VZNjhZdWRSRUZ4ZDNnb0xwWVRabXVuby1CNmJUdFJzNmJnd3RyeGZJUk9EVVFGeFUxb2FxVG42XzhpOGtsYkxnVEpmaFZiYThJaktNMW5SM0ppaFE3MlFIazFacXd1b3ZySHJV?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-a6a2a64bd3",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "See what 5 builders are making with Gemini 4 Carbon - blog.google",
+      "summary": "See what 5 builders are making with Gemini 4 Carbon blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQV0pxdWdBNEtoTlB0aTBobENLS1NqV2EzMlJkUjd5SEtnVXdSYmRHOEVqbTNrcGQybzBTcE5kU2VqU1BxRW02bG5mUEd2Rk1uUEdzYjlraHV3TWwtUnNQbHo2U3ROSnVrVEd0NkRuUmIyMjF0YkV4U0Y2ek9zNlV5YmZsYmM3OHNZcGgtNA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-875a4ec30d",
+      "date": "2026-11-17",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "How Gemini’s defense-in-depth approach works - blog.google",
+      "summary": "How Gemini’s defense-in-depth approach works blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9ad0M2VUYzOFFJMy03MFpydXhwVTZvS1VVckRVQUQxMy1SVHpnTENqY25jS1BCdmlEWm1JWkFxamRtbWdKai1USXh5c2lpWGlPXzZQb19JcWtISGdEZzVxeUpHMjZqLTU2b05LQVRIdHZzNTZuX0stY0xMNmpGdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-05acbb8504",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Circular Economy"
+      ],
+      "title": "Audi Launches Circular Economy Business to Tap New Markets, Secure Raw Materials",
+      "summary": "Automotive manufacturer Audi announced the establishment of Audi Circular Solutions GmbH, a new division focused […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/audi-launches-circular-economy-business-to-tap-new-markets-secure-raw-materials/?utm_source=rss&utm_medium=rss&utm_campaign=audi-launches-circular-economy-business-to-tap-new-markets-secure-raw-materials",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-a302825e59",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Supply Chain"
+      ],
+      "title": "Levi’s appoints new CSO to help decarbonize operations, supply chain",
+      "summary": "The denim giant has tapped industry vet Jeannie Renné-Malone to oversee its global sustainability strategy in her new dual role as chief sustainability officer and vice president, effective Dec.1.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/levis-appoints-new-cso-jeannie-renne-malone-to-decarbonize-operations/874929/",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-bd9230097d",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG SRB & SR TEG Joint Online Meeting 23 November 2026 - EFRAG",
+      "summary": "EFRAG SRB & SR TEG Joint Online Meeting 23 November 2026 EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOM0NpSkJleFNhcEl6dmdvN1RRcGFiMHhkTmNwczZzanBTY19WZEpiYmo3QmZ2MFpLUUk2ak9JM1N1VC1DVGhiWUJLZGhqNEhpWHJHOVM3cGlzUXZ5UXFVYVNsMDk4bGtWaUVLWFZDR2NzdnNOZFZWNF9SOXdsbk1YeF9vTWpaY0FHaWNHcHA1eGo1N2l0OGVrU2xUaWhSYUhNSzYyTzNCSDh3VVVCZUNlQUZ4SUNsUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-9b1a1365f5",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Kazakhstan and Uzbekistan strengthen cooperation on green technologies and sustainable industry - Qazinform",
+      "summary": "Kazakhstan and Uzbekistan strengthen cooperation on green technologies and sustainable industry Qazinform",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOV3J2cmNWdkdoVWFRWHladE5DWVpBeEJDNmotdUtpMzQ5RlZ0MlZqTjdyQ2ZoS1BLRS0yenlITUhzUVF0eW0zRUJLcE55c2pnS0tnQ1k1Z2hfM0x0WVQ2OXI4MnhoZE5BN0tLNmZEbkwyNVNxbGNMSEVLUkFxdzhaXzNJMXlZLW9LZFJ0djBTb2tKZHRXNlItQ2NSWnpoaFJuZXhlYWVha1Vtd2t6bzdUU0t5X3kxeGMyS1ByNExxZllmMFRjQlpnTNIByAFBVV95cUxOV3J2cmNWdkdoVWFRWHladE5DWVpBeEJDNmotdUtpMzQ5RlZ0MlZqTjdyQ2ZoS1BLRS0yenlITUhzUVF0eW0zRUJLcE55c2pnS0tnQ1k1Z2hfM0x0WVQ2OXI4MnhoZE5BN0tLNmZEbkwyNVNxbGNMSEVLUkFxdzhaXzNJMXlZLW9LZFJ0djBTb2tKZHRXNlItQ2NSWnpoaFJuZXhlYWVha1Vtd2t6bzdUU0t5X3kxeGMyS1ByNExxZllmMFRjQlpnTA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-afcec20a74",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Environment Agency: Issues EPR/PP3130UY/V005 Environmental Permit for True Hill Farm - Wansom AI",
+      "summary": "Environment Agency: Issues EPR/PP3130UY/V005 Environmental Permit for True Hill Farm Wansom AI",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZmNnX2Noel9fR3g1RVp1VS1fRlZQM0J5MERHYjZISU5KTUxkLWVROWUtMmJuT1Z3aUZMOGlIZG5oNWJRTjdtRW5CLUg5VkdBRWlqMFE2NlYxWHlFNndXNS1hM0RRcEFOWlE2S184M3pKcDBmLWk1ZVk3MjRfX3hDRm9LWUhOVkZ2bjNnR1dlSDhudGFrTHAxZXdheXlfV3k5WnBVTF9hM1UxWU52NEdhTTN3ekd2bnFTSnY1TXBGSmJrOWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-7dca8d6151",
+      "date": "2026-11-16",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "COP31: Uzbekistan and Kazakhstan agree to cooperate on introducing environmentally friendly technologies in industry - UZA.uz",
+      "summary": "COP31: Uzbekistan and Kazakhstan agree to cooperate on introducing environmentally friendly technologies in industry UZA.uz",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQM3gtcWY5U3A2R0FJOV9JbTV3NnJMdld6SXRiazVzN3AwVGJncmVTTVNaVk9GRW9IWURFcGVZS3NXSV9ZR1FnQW5jTi1WbUR0ZkdTM21kVURrb09KWEpwVWUybVpMTm5TdG5KQnhaOWJxT0xGYWh4R3hpY0ZRNkhQblpCTGhnaVk1SEVNMndqeEROR044N21MSmxWVXgyUGZwTDVDYVlLeUp4STdmMVdNcmZGeFA3cno2MXZ0ZjlKM1V2dnRHcFdnVGF2UVhhTkFPMVNUSnN0ekVqUlUxV1Y4?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-dc1187c3f3",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Weitere Strompreisentlastung für Industrie kommt - energate messenger",
+      "summary": "Weitere Strompreisentlastung für Industrie kommt energate messenger",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZDRUdHFMckU2ZDFaYUt6LXY1eEZOanNHTHhjVU44Um10Szlya29TNjhwOFdrODFNU09Bb0xRdHV0bWZmbDllRnFNRWpUdmtUeDlUTExtVzk4UFFQX2VpSm80SVZLZmVqSDZTOWNLLXYyejdjS0RNWGV4RzlJZ1hDSlgwZXV4dmVTUTVkRDRJZXpyWHg2YXJMYU51dw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-9584a78409",
+      "date": "2026-11-18",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Industriestrompreis: EU-Kommission lässt erstmals Doppelförderung zu - Table.Briefings",
+      "summary": "Industriestrompreis: EU-Kommission lässt erstmals Doppelförderung zu Table.Briefings",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNMklONHMyaXFnNkJpU1VaVGdaWXEwQ0ZjNGozUHlCdUJjNTlHeldUMnY2NWQwM3V5T0s1VWI2cktBSVRUa3FIZ3huclFFOEgyVEw3c0dNOUtnc3ZLVmsybE9GbzYwcE5SeEhFODUzV18ybnNPTEZPdFlpU3pLbGVsYnVlc05RLXZmaURuNktLdnR2WEdPcllnNVdsUUxYZGMyZkw0?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-3affb0904d",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Industriestrompreis und Strompreiskompensation – Kulmination eine gute Nachricht - Hildesheimer Presse",
+      "summary": "Industriestrompreis und Strompreiskompensation – Kulmination eine gute Nachricht Hildesheimer Presse",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNODZRd3IzQ21EOURTM09ya0J5aXZqZTVxTW5TR0tkNUd0MWVSaW14cTV2TmNmWWYydmgtRnp3SGU5cWZzLVY5NXgxb1hKMXM2NnNRUjlobDc1eWI0aGRTM19vZG15RUhYU0EwMzVaemtYTFFuMm45VUFtRmVJY1hiemQzODJ1dHZUek04VkxRakZyWjdhSzQtTjJhRHJHNzhDbXo3Ync1MzR1MG5kNWxXTS1zeW14c2FrM1YxeXZB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-15cf9b8378",
+      "date": "2026-11-18",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Europäische Kommission genehmigt Strompreiskompensation bis 2030 - Recyclingportal",
+      "summary": "Europäische Kommission genehmigt Strompreiskompensation bis 2030 Recyclingportal",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HSlBvcV9tZFVMdFhObHpzSkJfSzhzbmdUcmtUSjA1ajAzUW5CeFBxaTNlY2YtNDV5RmJWMldxWXBzTVFKMzh4ZGJ5NDlfY2VhMmc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-97c2c2669d",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU erlaubt zusätzliche Energie-Entlastungen für Industrie - Börsen-Zeitung",
+      "summary": "EU erlaubt zusätzliche Energie-Entlastungen für Industrie Börsen-Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQT2tUY1B6ekszRGZ5LVNHMnZoWGdxUm1lazhKMDNsdE1DVEtLYktGa0RDbVdTSHUyakVHMUFDSXNmYklCcDAxYUpnazlyYXp3SUd0TERGQ3k3bG1way1YNmNwd3pSN0V4Y0RLRnFhdklJbWMzUnZpYWI0dDQybE10T1d2QnNrcmlhbVZqVy1kcEFuV3hFeTVRZ3huMWhKSXJKTGdWbHFNRGlFT3otbllJZlFYaw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-c28f229b07",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Grünes Licht für weitere Strompreissubvention für energieintensive Industrie - Yahoo Finanzen Deutschland",
+      "summary": "Grünes Licht für weitere Strompreissubvention für energieintensive Industrie Yahoo Finanzen Deutschland",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY3lVUEdnblZxSnFvcVZMNHBFWDdUTEtYSE9DbTlZRDRrXzRQRndTeThISklxZko1QVlnTEQ4WkFBekU3VEJONFFQN1VjMHc3Ml85M3ZKUHN1aXp0NS1nYmNuUU9QNDZJOVFqTVpfbUoydFdvMVU1NDFMeThfNFRiVnFmMV9EcFVjOXhBQjFGakJmc2ZjWjE5eWluQUV5cVc1YjdIQTIzaG1WMmh1QTB5dTFB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-fb549931de",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Strompreis-Knall: Großkonzerne bekommen frische Milliarden-Hilfe – Bürger und Handwerker gehen leer aus - Merkur",
+      "summary": "Strompreis-Knall: Großkonzerne bekommen frische Milliarden-Hilfe – Bürger und Handwerker gehen leer aus Merkur",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPNzhTYkFyOWdmMlliMmJJeVRQNkRXcDg0SkJVay1CaTVlVkZSejZTRW1Hdk9oMnpOVFdxSVM0VG9Wa3ZXcS0tTTdOblVoSC1MNmJIZXFfM0hncnd5NExRZnA1cFRlRHIyYzVrVEtZbC1wU2ZuS29KWmtZdUJJOFA0QkYxLU50enBsODRLYVZjZXcwSGVsOUFUc0hzTmxRX0R5dHF2RlVoZzhaSlR1YUx4SWFmN3FGQTNlQi1hZ2c0LWJYcDdwRjdz?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-a1d200f817",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU erlaubt Deutschland mehr Industriestrom-Förderung - Montel News",
+      "summary": "EU erlaubt Deutschland mehr Industriestrom-Förderung Montel News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQXQtXzJMMjBkMDNCU04yc2lzR1hmOTdIZTZwRU9zejFWUlhOeE9UMWROdGI0c1hEaUE3Zm1Jd0F1YUZtX3c4WEJZWENaWFNiTXN4Sm1rTGVEWXFhY0QzcVBLRFhscHZrQ0dvOEgxUXBjY3VaaWtVaXRSY055MEJtY3ZmakhWR2F0U1Y3akFzMDRwOGZINC1SQkVKTUlfVTVSNFhvYW1oN1hNdkxxQjV0aDhpaS1HVHJSNk1iVG1R?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-e75ad53efd",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU Commission backs expanded German state aid for energy-intensive industries - INSIGHT EU MONITORING",
+      "summary": "EU Commission backs expanded German state aid for energy-intensive industries INSIGHT EU MONITORING",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZ0lOZlZ0YWM3ZmpwQlZtQk9hSFFFajAwTlZkeHNEWlpBV2pwSnR0cmM2M1lLMm5qaGo3MndjdmhCS2lXbUxLeGRXdTZTNFNURzNRNm00ZFJ0b0hoTElsN0FXTWI4QzRvNmloLS1UZ0pjSnV1bHR1VjFoZlVpSXFwSndtOWRCLUlnWFJwQlNCeFVmLWtFbzlEWkpyT0JyYjB0anRNR3hQTmNtd2MzdERERzMxYVV0c0pVdERTM2poUWRGeUdFR1p5VlR3RnhUb2wtUS04RkFTRXU4a2Ro?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-9c460b6e19",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers",
+        "costs"
+      ],
+      "tags": [],
+      "title": "Semiconductor supply chain: EU Commission authorises €57.6m in German state aid - INSIGHT EU MONITORING",
+      "summary": "Semiconductor supply chain: EU Commission authorises €57.6m in German state aid INSIGHT EU MONITORING",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNZ0lobjQyZzJyV0dScjBicGRUYkxyWnRCQThXM3VrN19fWXhZNl9hNTA1OEJvM05LUWpTdlFTZW9zVjc1MWF0RHVXUXVzcGZteW96Q3ktMjVDTl9IY2lBcnpmTlY1LWMtQ0hxNG9ISm03ZUhud2o5WFNTUFFJZURhTUM1djkxaWk3MFhmSnZjMExDQVhTV0lUOEhiOW1qd1BpX1BKZ01FX1Atc01TMGNhRGJXSWVJbEtWbVA1TnVrS1RQWWI2WFNxc1hUX05JOFhfazZVOE80ODB4emFLVTVz?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-dc954b1eec",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU approves Germany’s €3.3b energy aid boost amid growing industry costs - The Brussels Times",
+      "summary": "EU approves Germany’s €3.3b energy aid boost amid growing industry costs The Brussels Times",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNN2kyLTBUdTBhMnM3bUI4YUdwTlRhbmdfa3ZaVlRFMElhelFOVzgycWxTTzY5S2VIZHN1TkNfYTFRN0VVRHFNdFU2eEFidWx0dERxVzlQWGJMNXdMZDBXWVBmWEp0QThEU2dGcEtqLV9XVGhiWmNNYkhIOWl4NFM0OGx1QjVzNWVtckYwbHpURExNdFdyUG4xQ2Z0d1Y2V3ZPS2JiTlpYY2tyUUMwRjVTVUQySzJSbU5RdTlKWg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-01a89fbba2",
+      "date": "2026-11-18",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU Commission greenlights €9.5 billion Dutch State aid for offshore wind farms - INSIGHT EU MONITORING",
+      "summary": "EU Commission greenlights €9.5 billion Dutch State aid for offshore wind farms INSIGHT EU MONITORING",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNNV9TOWtkbkFod3U1Y0NuZ3NOZ3ZlZHg0amp3cmRiUzk5cm14NzBQa0g0dHRIWW9VZWE3dnYyaXlSalRYbDdYdzBuVEcybkM2OEVvamtOWWhYdXlIWXlySG1hWW9ONzRsYzRoa1pvdEp6Q0lSNTk1elcxYWNyZ0ZUcFplWXUxbkhOSkNTVUlkTWpWTm8xVXNEZ0NLUXlWOUxpb0l4SlJaYThlR3JFajIwT1FhWEY0dGpzOGF3UEZYNTkzTFFkbnVtMUxrYkJUR0N3bnJHWUhZb0N3QWZoNXc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-0501a88fed",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl startet Black Week Aktion: Ninja, Parkside & Co. deutlich günstiger - inside digital",
+      "summary": "Lidl startet Black Week Aktion: Ninja, Parkside & Co. deutlich günstiger inside digital",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSE1NUnJzX2hsczgySUtoUE5wZTZFMFJuMWJPZDA0aDFKTmNocDRYTlhuYVVLUGVVeFFzaG5XYWdHLUVZVE80aVdSVkM1alhXbjdUWS1peEZtQ0phclF5MlA2MWVWcUxpZGVnb1AwZWhwX0FobjVwRFZBYjNHVmpDUFRyU3VabGpaRmpDWlh0SXpXbXdPcmYzczhhZVhYLVo3ZWtVYi1KUdIBrAFBVV95cUxOT25oc21VWDRSMnYzeEdPNkVhV0ppanlNNzdjSTJiSWs1ZTFuS1M4VEhCRldrM2FwTE53dVBxSzdLd1ZpZTNSR0ZwSC00Y2htS0hEZEs5VTNOQWswUkN5SmVZbFlRdXRjeFdBLXp5YjJNWW9ncHlmOENrSmZ6cUd5WWlFTWdZMHJ2dzhkY3BVT3J4X1V6YndlQm1RV3VvSkpncFdFWWEycnp4cG9P?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-6e13925af7",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl-Nudeln für 34 Cent: Kunden meckern – doch ein Test überrascht - Merkur",
+      "summary": "Lidl-Nudeln für 34 Cent: Kunden meckern – doch ein Test überrascht Merkur",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNalJJT1d2U3ZtSVQ4Qm9mMmVacUktQURWN2FuVG1vMjcxbDU5eG00dGY4WG1DUHNfYUFoUnpIWEY5a2RFX2FiU2tSTGI0bGNTR05IenNlOWdNOXBOSWFncnVaWl9kckU2djhfS2xVTUFHRm54VTRVUEt6QVhOME5ZUTl4UmFKdVVuS3cxMUQ0NGFTWTE1anZ0MXM3THpweDR6TFl1VnN5aVVUN1BybjhyNkcwd2o5cVE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-c1d5478090",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl ruft Thunfisch-Salat zurück: Dieser Hinweis auf der Packung ist falsch - inFranken.de",
+      "summary": "Lidl ruft Thunfisch-Salat zurück: Dieser Hinweis auf der Packung ist falsch inFranken.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNT1U5R1QtTmRFVDRKV1NjTGlQVS0xZ0pCVmdmMHhYaWg2VFpLdDFpZ1FwWkZWS3ZNdlFpRWRibjl0eDV0akVJa1VoNFJKd1Y3dTNNdXdzNk9zRk1IZVFvY0ZsU0hnWlVzaTRQNEZxTDl2bm8xMHlGM3doTE9IZ09EQmJqVjFib2ZKcjdHOFRpejBzNF9QcTJEVmxpX1poUTdiUE9TaV9NUmJteHl5VmxzY2Fheld4dGdRSFZVWXZn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-fb92aa6680",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi kickt Biomilch-Eigenmarke aus dem Sortiment - Der Schweizer Bauer",
+      "summary": "Aldi kickt Biomilch-Eigenmarke aus dem Sortiment Der Schweizer Bauer",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMExmdGtERGE1V01NWHVnRlBQTkkzTS1RMlNHYkFTUTBsSHFlUzdnaFFLZ3M4cG9KQ0drZnczc2hlLWpua25wTDZReHJDOW1qS2VXMndzZGJOT2tBS1JKVzZ0SExtR1NRNUd0VDhldHFKZVlvU1JxNlJYaU9iRVViY19EUkRRVE9UanZiYm8wbGNZOHFiYUw1ZG1FRXZqNktLS3M0NUdZZjJ1ekpydWVCSWliYWRNQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-eddecd3c3c",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Schokolade von der Aldi-Eigenmarke – darum solltest du immer aufs Preisschild schauen - DerWesten",
+      "summary": "Schokolade von der Aldi-Eigenmarke – darum solltest du immer aufs Preisschild schauen DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQR1p0RExLVXNaczJhQnJWd3hGNHNpVXpsOXdwWERWR05qUHJWX2YtUG9KLVIxTUlraVRYdm0yVkdCWVBQTDNDRlR5RVp4ZnF5RzAzWTBmeFFFVzU2dGVqeG1zZ1I0NUM5RTdSSUhxZWJQUXQ0SGU1NF9oQy1UaW55cV9XelBidFgweFVyZnN6YWkzN0IzNk5tQkZVUmNUT2tYblFNVHowODcyVUNTT1pIeC0yM2w?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-70678fcef2",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl-Duftzwillinge jetzt günstiger – Discounter verrät, ob Preissturz von Dauer ist - Echo24.de",
+      "summary": "Lidl-Duftzwillinge jetzt günstiger – Discounter verrät, ob Preissturz von Dauer ist Echo24.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQckhtX1YxVHU3VmdtN2oyX0tYRVZfZ0J0UVFGVmdqVFNuNnNCVVBwMUlLRVA2amttQ0ZuZzV2RmlKMG9aS04xTmdnTUZzdXpwODhzLUw4TVZQRjh5eEF1ekVEclJCdVF1S0JkZ2RUeFFxUElRbnhwaGlfRFVEMnNYcTFqcS1pRi1RVzlSWldtMWpPeDdHS2p6MHRhQ19UaVp6M2Y0a0NuVjh1cmJ2WVVoMjU1Z1J0Njg5SzBiMjZFOXdDc3ZuaUNicGhwWVozNFAtV3Jvdjc4d1ZHMUNxOWlxQlhsSEpndw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-8ce8a0314e",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Von Deluxe bis Gourmet: So viel Luxus steckt in den Premium-Marken von Lidl, Aldi und Co. - DerWesten",
+      "summary": "Von Deluxe bis Gourmet: So viel Luxus steckt in den Premium-Marken von Lidl, Aldi und Co. DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUElNM09TNzEwZHhTNTJXTndweXpsSTdPUERsajNJN0xFUjdnNWk4YWFRRHg5YU1OUWV3WktZaWFneE9rejJHQzBGUW9kRzRZdHZQSFFJUElDZWxZR21LREk0bkh4dTZyV2FqOFpyTTZ2VEJoWTRwc3RQdUVYZlQzMEpaR0ZXWWY5ZHNOZlpFZS1jSGEy?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-8bfb33bd3f",
+      "date": "2026-11-18",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "NRW: US-Amerikaner testet Produkte bei Kaufland – sein Urteil ist eindeutig - DerWesten",
+      "summary": "NRW: US-Amerikaner testet Produkte bei Kaufland – sein Urteil ist eindeutig DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSGJheDFPeGFSdGxjYldiWTRPLUZwQ25CRGJOdEpFbHNnNmNVazAyWmZSYmM4UVRRU1BWeXFnT3lySVNPXy1IN0xXMU42b0JfMDJ0b1AwR0lNdXRqRGVwbkszQUxPYjVSTF9tQWtOVldKTE53LW5rcGtNb3BhT1lWMi1sb3ZYYXNFak1vNzg1bVQ0cXpiZ0kzd1E0SE1rZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-998215fe7d",
+      "date": "2026-11-18",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Wer steckt eigentlich hinter Milbona, dem Milchprodukt-Giganten von Lidl? - DerWesten",
+      "summary": "Wer steckt eigentlich hinter Milbona, dem Milchprodukt-Giganten von Lidl? DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPTlFmenNjc25OUzFEcDcydnY2b0lpTmlDWXhkTFNnTnZwV1Nma2VMeEk4ZlZiRHZGUXpDRDNsdC1naDBJcmU2aVlvMjBMTkVRdWNKMTFGRXRTVUZndFRJeGFyTlBKWFBvdHdRS0puU2E1VF9JSkNmS1NvV01sSjFVbzVGcGdxT2t4VjdZYURMRGswR0JoLTl0aUFYdkx4TXNDQUVoc0hYZDVReU9BRURCeHlzVzctMndwdTRDLTVoX2I4UQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-db2b2976d7",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Weniger Inhalt, größere Packung: Edeka-Produkt ist Mogelpackung des Monats - CHIP",
+      "summary": "Weniger Inhalt, größere Packung: Edeka-Produkt ist Mogelpackung des Monats CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNNzc4N3pVYmxIOE00UFR4TkJHU3hpcWM1MmNCY2YtYUN6M0FxS1BqdUJ2MTZlcFRkcm5rLU95Q1hCdUdIcktRTlM3VEhRMURlNkxVSXJLdmFFMndMTlBUQTh0WTh6amViQjV4WldrR2ItQ2dlaFFuT2NTWjhWeFlpSmZqTG56b25MMDVmeThWTUxlNEhBcnQxbXRPeVRXMW5CTkFDWndsNHJ6UUs0eEtnWHZfWl96SEZ4VExSZW81cUE2VUxFekNOUHdfTFROeGJtcW55WDdvS0daSkxUbTZwMnpaV3UwUjR5bWk3UjlVVDVIa3o5bkFWa18tZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-e9b0713d10",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Das ist die Mogelpackung des Monats - n-tv.de",
+      "summary": "Das ist die Mogelpackung des Monats n-tv.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxONFkxT1o3SHZYQW9aT3FCWEtRRFAyN1dGVXRDQjNKY3BXanBOdHEtbm1xdUNZU2huVjA3QW5fTGEtam40eGtya0k2VUM3UWtQSFdRTXRxTzZtTkRpY0FxNVFHNFlON1ZFOGxvejd6VkhCWU5ZNHhiMFpuUFROZ29OQlF2d1YwZDgxbjF6dm9qOHFPWjVOcm9CanlkWDZ1cGJPdFlnMjVES0Z1TERpeHB5VS04d2dHbWZObUl6RldnSE42TFRYd0E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-f7219c3516",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Edeka-Fencheltee: Weniger Inhalt bei größerer Verpackung - Joyn",
+      "summary": "Edeka-Fencheltee: Weniger Inhalt bei größerer Verpackung Joyn",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPQ3Q3QzUzYWtSNndvdFlIZjZCblJxeS1HVFhpN0RTV1hudTdFNmlYQ2tvdnVKRzktYVU3Qk9EUWJiXzdLZE53b0lfQmxCeElMMExZSW1TQ0habjB5bzQ2d1hVSUVVTkFCS2ZYZV9ZR3hvN01KWWtiRXRDOW5OS2c5S1RuM21iZ1hTTFBNMXNhb2lrcHdFYXBuR1Zn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-9fcbd1b66a",
+      "date": "2026-11-18",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Edeka-Fencheltee ist \"Mogelpackung des Monats\": Größere Verpackung, weniger Inhalt - oekotest.de",
+      "summary": "Edeka-Fencheltee ist \"Mogelpackung des Monats\": Größere Verpackung, weniger Inhalt oekotest.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNTVBSYVp6bjZ5X2NWcGtkWC1JWWxvalB1Z2NSLVkxenNXX0pYMEVmcTgza3Z6OVFETUZ0QXZmMW1VR01FNDNoVkFucnU3S25wS01EVGFMR1B1cFFhY1VIeXNOMk1QVmszRDRHMXVSQm1JV0N1RXQ2OTkzOVBDN2Ixc1d4Zy03Mm1fa3p5OEhpNGk4NXV1NkN2NUVuQUQzNXlUSWxLN01rTlpyd0lWX25UOHl1WXA5QVlWc1BsSDVDUWNCcWtxMzUtaDBjOGVtaFhmdnhfSg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-bd677fd801",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "CO2-negative Baustoffe bis 2035: Netto-Null-Vorgaben treiben das Wachstum - Nachrichten und Statistiken - IndexBox",
+      "summary": "CO2-negative Baustoffe bis 2035: Netto-Null-Vorgaben treiben das Wachstum - Nachrichten und Statistiken IndexBox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcFZHZUNyUjNIdmlrdjVHcVZSemQtV3pNS0hsZEd6S3M2TTVKZlZZcVdqV3Z2NUlEeFM0Rmh5WkMzeHFBckNmNlZBZU5hbHpVOFh6LWlXdWFZVDdfeDBSeDVJQ0xXNjljbWYzN0VvbGVKWUxJQk9WaF9NdHZ5YjZIT2lScXRZLVBFY29jdzNIeGxOaUFnR21zOXpKV3NrT2VfdUhGbENyN0kxZ2hSVkVKMHNHV2lVWHZYSXhYb1R0b1IwS1NKTlp1T09ZZ08?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-d3ce1acdba",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "50 Prozent teurer! Bei diesem Edeka-Produkt werden Kunden gleich doppelt getäuscht - inFranken.de",
+      "summary": "50 Prozent teurer! Bei diesem Edeka-Produkt werden Kunden gleich doppelt getäuscht inFranken.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPcHFkdFRwQ1JWM3BuYmxFb1FJSDNSQmRHNHZMTThoVElZaElpOTFRcks0YVV5RnhQUGZNTGRXLXllM3E5eGk4RXBmYnJuaEZ6UEk1ZVFOOUJNLURmallmOTUwemhGVGRGVHhVR0ZUOTVIT25yTUJqelNOaEVsWUZMUE01elZUb3dEWmpTYll6ZkhsZlloNkNhV2d5b21rSVFTT3IzZTl2MFM5aS1CMnpNUW9nRi1ZY3VqWlNoaHNLUzRaSS11dE0zQzVMR0k4Uy1uNXMzekptM2JHMlA1R2p6OFpFSzM1ZmRkNktxVHJETkdRQXVzcEpBSUVqMFN5N0NnVTREY3owNGF3bk9VbGZ2NTc4WHRRbExIVldVMnM0NmE2bEdB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-630c74a668",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Zoff um Tee: Die \"Mogelpackung des Monats\" gibt es bei Edeka - Watson.de",
+      "summary": "Zoff um Tee: Die \"Mogelpackung des Monats\" gibt es bei Edeka Watson.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVlVDQ040Ml9RNjgwOFoyOEhSOTA1NnlSUzF5cjBaLXdKXzVjUjFMWHJXRTFXS0dQYzNFQlh0MnpfVnI2VlhzbmFzUlVKaFJzQjJBZkxBSXJZZFJnUnFuWTZEcG5WMXA2OU81eUp4LVJmdXdJVEViZkhxaXlLVkFNbEZrS0FRVkFjejZNVWs3UFNPWW5BNm03SHdiTUFDU0pSdTQtN3dlMGZOaFN5ZGprV2RPRQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-e639d9b912",
+      "date": "2026-11-18",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Edeka-Produkt ist \"Mogelpackung des Monats\" - WEB.DE",
+      "summary": "Edeka-Produkt ist \"Mogelpackung des Monats\" WEB.DE",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWDAzeXBLeTRZNVNXV1JlakplUWZxbjEwMDhFcHFaMWh2OXl3Q2xBd00xUWU1NXVOYnpSQ1lzNVA5MUU3NnF6VF9LeXA5WEFZRC1naVdSMnd0M0xyYmowMGdra3ZqTGRLdTBUSDhPVFI1SzE2eDdaZFk2dzJENFBZSzV5ZlZCV2habldtQVVmd0R5c0tEZGZ0Y1Blb28?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-c1e3a2d246",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Mogelpackung Edeka: Kleinere Füllmengen und der Markenwert - BÖRSE am Sonntag",
+      "summary": "Mogelpackung Edeka: Kleinere Füllmengen und der Markenwert BÖRSE am Sonntag",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbkEtRjlKMzh2ZDV3akZMWkFDUm9rMDNUcXNpQy1pNjNhbWEtOFpTRUduX09SdE9CcGQ1eG11eUtsUy15Vy1lZGtEbFh4NVI2SW5zdGdqcU1icTMyb0xQSHFxTFd4VGdXS2xUVTB6VWZ2UVJkZ3pGUWFEYTY3UWVncHN1UUhyMl8ydGdxaUU3U0lGMjA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-4c678e224c",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Schokolade im Öko-Test: Ausgerechnet diese beliebte Marke fällt durch - desired.de",
+      "summary": "Schokolade im Öko-Test: Ausgerechnet diese beliebte Marke fällt durch desired.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOYzJRd044Vmp1NnRkSTF1aGNmR2VDQW11MlVSRDFxYUdsQ2VDNWdGMEs0Qm9nSXk3Q0tYblp4UHJEVHFjUTFfZkZJVFh1WWJ5dGJtWXVuSVN0VjlBdzVWMGcyc1JYVk95OUgyM1ljNGl4UUV4N2FJcXhnMlZwb2JHNEQwOV9RWnJWOWZ4LTg1akR0RE50ZnNLUHBqanBKajd0WUdqYTV5MlpCc09FbkJzM0pINVY5ellPeV9oS3lic0JxRkFfV1c5VDZwQkFvb056cWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-dd214236c3",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann ruft Kondome zurück: Wer nicht aktiv wird, zahlt bis zu 190.000 Euro - desired.de",
+      "summary": "Rossmann ruft Kondome zurück: Wer nicht aktiv wird, zahlt bis zu 190.000 Euro desired.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOEk0OUlQWHVVbzlGakhpR0pLOHZXYm8zcEhRTkZnSDktRnZua0wyR0xLTzExd2xXa3ZmYjRSY0JOUUZ3Q1NxN01TdWxNVkNhUXF2Q1RoeVJFNk5Qcmx4M3NJSXBZeFpjYlEwWUhvMXFSWlVXOFhrQVZYekplMmsySzY4Y0JhT0ZaTk5sYndTTEJIVThCMkdKWXBCUDhxT3Bna3JVZUdEVWtQSmpKWkgyOGpNZUtZanZWeTF5XzVncXh2eHF4c2ZoWmJheXpmUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-aee534c449",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kondome aus der Drogerie zurückgerufen – Gefahr ungewollter Schwangerschaft - Berliner Kurier",
+      "summary": "Kondome aus der Drogerie zurückgerufen – Gefahr ungewollter Schwangerschaft Berliner Kurier",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRlZ3bnA2aUhkdlNraHgzN0M0eV9yNWNZWTVITTY4a1pybzkzLXZ5R2xGcVFFQWw5dEFjWDltVDAxSEcwcWNYalNpRmh2U2k2Wk5helhRODFOQl9VM0V2REpyVWNsQnpFN010Q2NQR1l0b0RxOHpiZjdlLXhvczM1dnBlOGcwV2FwRGNOX1F6R2VVNHc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-7a75cb7deb",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Carrefour mutualise ses flux pour optimiser le transport - www.republikgroup.com",
+      "summary": "Carrefour mutualise ses flux pour optimiser le transport www.republikgroup.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNNEdhbXQweEZLamhiZ0JvOTdXd2phclVvRDE2d0IyUXMwdHo1MExJR2ZUR2RlaTYzeDF5a1pCYlk4YmRIeEZya2tYM25yWmxIZFBlSHUtM3kzM0VRcFp1d3lucGdidnFIUng0eGsyLWZVNTlzbUlpUGxVNnpvM05EVXhzU1BXZTJYbUt1SjhSSGJwNDl3WGRIeWhBWTNTakRrSEhkRF9oY0t2d0cwNDF6aE5qSFdaekRHN2V4bHljWW9Cd2JZSmlLWmwzdUg5X05nbnJhUmg1VGpHZzBkQkVjdnBmQnFES0ZnXzg0Z1dFcw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-53721fa8f5",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Carrefour ajoutera 600 produits de marque propre en 2026 et atteindra les 8.500 références - Demócrata",
+      "summary": "Carrefour ajoutera 600 produits de marque propre en 2026 et atteindra les 8.500 références Demócrata",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPclBTSFFkLXVxal93T1VfUVZQWkZpZERkUmxzcVI1akhKQ05VeU9ZaHNCZHh1Z29NMWJLTnlabGRiZWlTdUNxalliSkhWNHhlMmZnVy16dTFlTnlUM0hXWG1FY0NEM1ZaY1ZWM1c4TzVEVWRoT0NZdWllV1RlOGJia3o1Z0RtYWUwRTR3Y2l4d0xyOW1wVnZhenBfSjh1RWRGSllLdGFJR2F1X0R1U1hNX2w4ZjNyU3NrSm9LRXoyYi1WZkxDS010QXlGcWVSaWZOdHpSTUNoUV91TG550gHiAUFVX3lxTE1aeDdwQVVpSEZtcUIyMlhzZ29fT3hXOEFCNk5UR1FSMXFfRmJsSXhaOEtPVWE4SzFoRHNmbmNUdEtQRFE5dDYxbGJCdEpoM0hsM3duMTVNS25mVk1uaU1aWXkxbXhMZDFseXpqblJzSWFONDhNYWp2QWFXMHpLODk3LS1fanAwcjBYdV9kamVYVVdKdFNLdjF3WUtwWFNQT0FjSXZxMlNJY1BELTlxMnRNZHVnUU45aTF6VXlGWG9naUhSLUlmdTE2NkF5RGU0NHduaHA0amVqUzlKRW1WNG81NXc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-b0495251e8",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Leclerc, Hyper U, Intermarché... Les supermarchés les moins chers pour vos courses en novembre - MoneyVox",
+      "summary": "Leclerc, Hyper U, Intermarché... Les supermarchés les moins chers pour vos courses en novembre MoneyVox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPX2NsS3BkdzhUV0V0MFFTY1RqNkcwUEwteEJlRDhrdFhFZ1M5WXRPS2tTOGM1djU4aU51ajEwaVhaU2VNbFVLWDRLbmpVUTFoVW9qSlBqcXNTQ1BVTXoyRS1SMzI5bXdPdjVJXzZvQUdHb1ZvY2pxSmo4a2FlMzRLWjhjanZuS1dQUVZjeDQ1ZG5nQk94TzhEbmRzZnY4UFdxT2V1eWdvY1U1MXV2d0VmWTVvYmdUbi1CZVZocDlicVRkUTdCclVxb2MxYl9LczZFaGJIaEFkMndmYVBs?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-bad3d7969f",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Supermarchés les moins chers en novembre 2026 : l’écart de prix choc entre E.Leclerc et Auchan dévoilé - NextPlz",
+      "summary": "Supermarchés les moins chers en novembre 2026 : l’écart de prix choc entre E.Leclerc et Auchan dévoilé NextPlz",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQTdqRmNoM2t3Vi1ob0s4a1hEc1p5VVRHSEtyVm9sa0lQbGhVQmFtNWd5WmY2OW5XbFlnNC1MaENRa1d3c05SWWJNMzU4UjhRbElBbkpCZm1pZERFbkxtMXllSzN0NEZyTTlSYU5jSElPLUhkTnhzcE9qNERnMW90VFhpX0s2c1p4QjZEakFiNGxHekZkR1l3c2Q4TEJyUmpCOEJJMUNEcWJCRUJtWTNoRVdwd0tvdWtXb0NWRWRKc2NXMHppWVZ5eW5tWjZRM3lTRXZBdnJB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-05853ec3a7",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tesco invites 400 key suppliers to join Scope 3 reporting programme - BusinessGreen",
+      "summary": "Tesco invites 400 key suppliers to join Scope 3 reporting programme BusinessGreen",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPMzJ3aV9Wc29Iemk3c21DV044enhncm9zOVZSZnFNeGRpWGJ3UDM4THhrN1V4UVloeEhFOFltcFBTLUVRakdUVEVpd1NoWW1KQzlJa01zSHdqQ2JvUXRIUTJDSFJqMTMyd1JrQjh6UkJDY2NwS3JWM3M5Mkt0d1EzXzVzZjNKU0tsQ1VHX0ZEbmdkei1pNlF6bnBHV3ZMM0VqZlZUVTZteVc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-1525a07e1b",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "Packaging Innovations 2027 | PepsiCo, Tesco & Siemens join speaker line-up - Packaging News",
+      "summary": "Packaging Innovations 2027 | PepsiCo, Tesco & Siemens join speaker line-up Packaging News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPU2QycXc5Q3FiemxBa3BfY18wREVuS1pObnE2a0NWRzIwNGRlQW40azVTRlJKekdLcHJyN29qekVhb2JLQ0JBMXpZd213czlwZVlBcmpqbkZrR2RVSUNfQmhLbDVsSXJ6V1ZpT0hBYUNBelF5Qlhhcm1VckhTRDgtY1Z6OHRJRDJQb1EwZnlTYVVQMUQ5a0RsWm1jMUlnd0xKbTliS2E1ZUFpY0pGTHJYTUFBVFBraVROTTJRb1NTSkUzNDdhMW4wbGxrbVFsSnI2Wm5aZjItcXVKa1k2aTFkanpJQm5xZXBu?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-c18424f3b2",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Sainsbury’s launches three for two on own brand party food with Nectar Prices - Retail Times",
+      "summary": "Sainsbury’s launches three for two on own brand party food with Nectar Prices Retail Times",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOZVBWT29ucC1qZUFpNTN0V1MyclhBWXJCY1Zyek5pVWNsa25qeTZ4eVlvSmtKX2l3RHVMQnpSNUxNcURnTk1FLThjMWhfcUdta0xkVGZwZHhkcmRqNmRCQVF1RXUtVGxiamZwV2c2Y0w2RDBsOFY3c3BsdWNISHo2cjZ5YUhZR1V6U0dEQXlrN0J6X1A1clQydzNvNnVFcGFFQnMzWi1n?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-3d63df3311",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Sainsbury’s launches 3 for 2 on own brand party food with Nectar Prices - J Sainsbury plc",
+      "summary": "Sainsbury’s launches 3 for 2 on own brand party food with Nectar Prices J Sainsbury plc",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQ255b09VQVNtNzNGY1lxREM5UFpsUVNCeC1OQTYyTjVPc0FXMXc1LTVVZGdHY1o3QzNqVmp4ZjBqRmJiWmVEVV9HUUxfSUY0aUZycEdHNHVWWXVsdk1SZnhkOGk0aEUzOUJiOGN2RWtxR1RYY0hNdFVwVmlVb3ZSd1pWRnh0S2FUUFFqTC1SVG11X3BJZDVMdE5hZXpxUkJFT3Q0WEN0VHRwaTBEakxMMjRsRFlVSUV1c3RoRjQtN0EwR2wzRmc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-5b856f324f",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "UK supermarket’s own-brand range named best — with gold medals for salmon and steak - Wales Online",
+      "summary": "UK supermarket’s own-brand range named best — with gold medals for salmon and steak Wales Online",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMl9rdkplSmRfb0FSR2diNk5LLTYxRVJPRmRkWHUyVmFsdkphREtIQ0EwbjdhclBCNDNyVzRodnZsQk1NSTF4cG5qS2lyY1hjZ1owaElDTlQxbGc1c05WQ0NQbWpGbWVpQXRYcHFwcWNaVXBnUVkzanJlbHYtak05R1ktY2FjWEXSAYwBQVVfeXFMTmFyQXJ2alJRNDZQX0RrZjJZVmdXT3pIODgwRVJxcTFKaGREbE0xNDhkUlV3MjBqM3pFNEdjVE96MnZlRlI4cHNCaFpSQmNiSWd1UDNaWFo3eEFmMTM5d0xVNnhmSjRieTZRTVJUbko3N3o0QkJUWVFDd2ZMWkwwOXNMbER2dTVqMUJYTTY?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-ec41d6db8f",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "2 Tesco pie products recalled as shoppers warned 'do not eat' them - Bournemouth Echo",
+      "summary": "2 Tesco pie products recalled as shoppers warned 'do not eat' them Bournemouth Echo",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNeVJxazFjY0VzcjhQbEtVcjEtYjhtSzRiZnBkZVNVRGJCWGtvQmxLQTlCS19XY1ZWYWxpZjlvendwaEdKOGIzSHdlTzk1SjZFTEVJdUxOSEg0SGcteXRNc0lJMkdJdENfem55MEk2TFhMQWtaNTF6QVNkRzlncGlfbmFvRkI2Nkdid3N3R0NrN3ZBdHkzb2U5T1l3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-bafc84a4cc",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Supermarket own-brand cheese crowned best in the UK — better than Cathedral City - Metro.co.uk",
+      "summary": "Supermarket own-brand cheese crowned best in the UK — better than Cathedral City Metro.co.uk",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVDlaMFhlc3ozaThtWWFIc21uUW5wYWMxZ1VycV9qdTktUmpFaUFvb1NsZW9xWkZvZWs5LTRPS19nQVc5MDhPODVBT1U3YU1heEJucktDaE9rYTZJcmFNSkpuNFJROFJLa0FtZWZhOTJiU0hTd0ZaLVFVbmVteVc5aEE5M2pkY1hRRVJZZWJDMnJFZUp4NUw0YS1MeGFuaWdqM1JkajFvVDZKSG9uUVHSAbMBQVVfeXFMT2RET0pUQ0lCMjlvS3c1TE00SGVITWd0VGFtcHk3X1BwcENTaEdPUS01UXZ6ZmhHTkZHMl9mb29BS3VydXpQUldURnNGTnY5c0I4WDZRUmhzdGhLYlZtNlRQQk5GZm5sckxFYzNldjI3NWlhSXRCbFEzajRnMVdKVks4enBzUjZsbG5lLTJkeVVPbnk0UjBpZDFVcVVxYUhKNmo5dUVVODkzdzNJSnExYkVaSjQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-ea85fb6874",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Supermarket with the best own-brand food range named — it beats Sainsbury’s and M&S - Daily Express",
+      "summary": "Supermarket with the best own-brand food range named — it beats Sainsbury’s and M&S Daily Express",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQR1RUY3Z5Rk5laVJnT2poa2xkSnBLSWVyRzlJaU1NbEpIUWZ2ckwwakZZNlNQaTFhNGkzWmpodzVBYzlmNXFoTDZ4OGFZeE56ZXg2ZHlseWE4S0R5U2VRNzNtcURnejNneWFCUkxVVzlTQnh3NnpTc1A5SG5vOXBpUkxoMkRXOVY1cGY1btIBkgFBVV95cUxPTGlTQnNBSXVla1VSbzFnR2lXQVQtbVpldC1HNUhPeGRHTUQtSFJ3N3Y4RmRCRWEyX3h4Nm1GbjFFQ2xMTWFzTHdiYjl3ZlhSeXI3UEFWZ210c19RTXIwZ1NDS3dIV0FpMGJWQ0REWm84aVpwZkpRa3Ixb2dUa3FGSWxhdk85VnpUNW1ydlhYaWc0QQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-2031d03e10",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Supermarket's own-brand range beats M&S, Sainsbury's and Waitrose - Manchester Evening News",
+      "summary": "Supermarket's own-brand range beats M&S, Sainsbury's and Waitrose Manchester Evening News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRno4WkNFYWswYlpDYUhnZWtxbGVLM01KSHBUaU5rTEFwQXJFaEZ0RXF0cEdWaDdxWUtFalliWUtBd1B6SEZNRC03SU84di1wTDUyNjY4ZHBseVRpb1NQYmcyckJVRDZ0VUt4RzRVLUc5T2ZheGVYdUwtVHNPQVhDdjVPR1JKNVBkZVh5SzBfZVJjOEVmWU5ESVdfd0N0eVgyNkHSAacBQVVfeXFMTmZjZ0hDeTh1amI5bVVWT0piMmptZjBQMGVWRWpkOWRyWTEyM3ZKMVJNVXMzUU1oYk1oWExuMm9GQXJjLUJJR3k5RzVfSnVpWUg3MTNLcVFWb1hVVUR5TjB3UHROQ3hPWjc0eTZ4QkppanBhRmdGeER4dU5iSElqTXgtN09ZRnBlTkZHR25HdmppdjFCOHJUOGplZlFPVnZ0NWZ3TGpVYkk?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-a3b7e5c1da",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Supermarket with best own-brand food named — beating Sainsbury’s and M&S - Glasgow Live",
+      "summary": "Supermarket with best own-brand food named — beating Sainsbury’s and M&S Glasgow Live",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMVBSN2pQbW1BNXkxYXRqT1NpNUhVZ0lzSEp0ZlRGTHhxbm44S09ic0FhRGx5V193WW1ueEo2UHpGQzR1bDU2eTJ2WVRVT3huMFVNWFd2S3BBX1JfQlBTQ0lXcGZOYm5tTzQ3TVE0bDJSUjdZOG1lSDhHSUptOS1MUFlYRWdzVWJk0gGOAUFVX3lxTFBvMjdDa0lkZkxyNklDZi05R1M3TFVaLXVqVTctRDlEejZjVVYxSlUzYTZ2MG5NaWJwWVRESDlNNWNHUGpoRC1Ca0RwVHZwRjd5QTBpbXpWck9vZ1doZGRhZ25DZTVWdVIyZ0V5TzNVeW1fU25UWFZiQkhoZ0ZTUE9mT2k4VDBKVFl0RElmdkE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-267c9624ad",
+      "date": "2026-11-17",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "products",
+        "customers"
+      ],
+      "tags": [],
+      "title": "DS Smith and Delhaize integrate packaging and machinery to boost production - Packaging Insights",
+      "summary": "DS Smith and Delhaize integrate packaging and machinery to boost production Packaging Insights",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQS3VmNmFYWmVNeTFqaktfMXRWamVlRDZKRWFFVFg0Y2xfRWlzYS10MlJwT2dhcFZMeXJwZ3lIb190S0Fsck9jYUZRWG5YX0ZyWnBIYmFLZlFWbDhSVk8yLW93RFprUTJScDlwZFJOSUh0ZVMxUWxTV0tWdm01OVhQcG1tN2gtY2FLQzBr?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-ca5c143fd1",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU hydrogen expansion unlikely to strain most water supplies - Hydrogen Central",
+      "summary": "EU hydrogen expansion unlikely to strain most water supplies Hydrogen Central",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQR1dqU1c0SG5PWXNJSnNkWHNZbkZ3UnBEQzBGazQtNlc4cXVheC04VEZoblFfYVZHdnBfRG5fUXhRMVlvdkgwY0h6RlRpSlM4cGltbXk3ZGwzRkFjWG5PZnA4VXRRTFVGLXRNOTZZcU1FVlBIRU8zQV9xX3lIVWdVWlF1NU5uVVNBaHF2cXA0ei1ydktJ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-8053909df3",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Cyprus minister at COP31 urges Mediterranean cooperation on water scarcity and wildfires - Cyprus Inform",
+      "summary": "Cyprus minister at COP31 urges Mediterranean cooperation on water scarcity and wildfires Cyprus Inform",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPSjlycGc4MWl2RVR0dzhNV0VOV0VsV2hmZmsxQVRDNmV3OFJzU1hERGUxM0x6SjNEWGx0WElkRmIyeUdHWFMtMFVBbkNyc1hobUthNlU2RHRRX2NDeHIzMzhhdGRyX0RHdEY5M0hkSGFJMWYzNEhPXzBhejVTM0szazctMUNwWGFOSzF6U2taUUhaRjQxdXhQdWFZS2hnS25fSHZhaEJlMVQ2Ukd0ZHVLYlNUelR2M0xOOTlJdW5JeExjZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-dca04988f0",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Cyprus transport minister visits London for infrastructure and investment talks - Cyprus Inform",
+      "summary": "Cyprus transport minister visits London for infrastructure and investment talks Cyprus Inform",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWlBzZ3dyanhMYlFMWnRlVWhvMEtTSjhuZk1lQkVzRk8wT0l0SlFmUnR4MzVIdV9FcjB2cnlnMFAzZHAxeTV6cjJ1NzEyWnc2bEx5MmYwalFlWXZVbHZDS2RXdEJHRng0MU9RNmRlQ1RiZW9pZ1lvSXY0eGZZRzBpNWJMQmFNNzVTVFcya3BRRzNLSFpPb204TGpPOG41VWpvemduRGlHeDJZd3dkalFLMkMzRXNrUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-afead32bc7",
+      "date": "2026-11-17",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "FutureCrops CEO Ayoub Marouani Calls for Stronger Local Agricultural Industry in Morocco - Morocco World News",
+      "summary": "FutureCrops CEO Ayoub Marouani Calls for Stronger Local Agricultural Industry in Morocco Morocco World News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRFFBY2lJQTdtRkdOOElnX0MzMVNVZmtwUXg2XzVoSE9XOERCSTZYOFg0TG93aF9ZbERaZl81QjdVVDRCSmdna3NRTE5JR1BIRV9SbHdXVXpzMEpPRkJ4eWZvUWxhSTNRc244OWN0V2tIZnEyU1hqTHlweHJNb0U4OHFJUFZfTy1kMWFKX3hvNE9JWDl3d2ZoU3c5VzgwQmdYV2RKNExlMWZoR2JDS19xWFZxT0lWbkV3RG1tTmpOejd0dFZLQmRLekgzMGsyMUlsZ2Rz?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
+    },
+    {
+      "id": "feed-53b5630fda",
+      "date": "2026-11-16",
+      "type": "practice",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "sites"
+      ],
+      "tags": [
+        "WEPA"
+      ],
+      "title": "Hendrik Wüst besucht WEPA: Hohe Energiepreise belasten Unternehmen - WAZ",
+      "summary": "Hendrik Wüst besucht WEPA: Hohe Energiepreise belasten Unternehmen WAZ",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "WEPA sites · Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNc3dBZkk3MXdhc05zaDZ1TlN2VC1RYUs2bkp6RGdlQW1MOFh6d2FRbWpRYzMyVXZGUDdRQnFGcmtDSGxxOWpJNUo5d2JhVDV0S3djdW93ODlnQXZHYTl4NlR3OUtaSXp2eWJCNFlPNVJudlhLMWZUTVQ3RnZQZ05VOUxTemtfXzRoVFV0WW52M0k3Q3N6R3RIVmkzcGVsc3lmV3FQWjJYYTlob0NIVXpsSS1SYw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-18"
     }
   ]
 }
