@@ -1,12 +1,18 @@
 {
- "updated": "2026-11-18T06:44:43",
+ "updated": "2026-11-19T06:44:45",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
    {
-    "title": "Fotostrecke: Einblicke zum Wüst-Besuch beim Wepa-Firmenrundgang",
+    "title": "Aldi-Toilettenpapier von Kokett: Diese Hersteller stecken hinter der Eigenmarke",
+    "source": "Giga",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxORmc0LWV2cDloajVyTERZZ0FPaWczekRtWTRiT1hSY2dYZVF1YmRHY2VPdWVHckRKMmo5UEhib2JHNHRtS2UzMFgxZ3Y5YTZNRTBOVmU4MnJUb3lIUWhXS1E5dGFfQkNIRUNGcl9lV2VoMzBQS0Rycnh4NHlRNDFoa2Rvbm1TMlphZzVGT2YtVWdrS2lZUzc3VHdsN1doazNJZzBZSFFLc0l4Zzc5V19ULUFlMzVJOXU0YUZ2cjNKYmlRRWNyMkdlbGVkdw?oc=5",
+    "date": "2026-11-18"
+   },
+   {
+    "title": "Hohe Energiepreise, klare Worte: Hendrik Wüst bekommt Einblick bei Wepa",
     "source": "WP | Westfalenpost",
-    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPREwxbzY4MkFmbFNZbGZNMTMxVXZWLUdaYUpNZmJnYkFTbXF6X2pmdWpZT0d1MTZqcHNQVzJlOU9aelE5NEJoUXlZdFU0aWxmZTc2SmVuNjhPNmxUREk1TUlrWmEwMVE2bzNTYlZ6OE9ybmNQRHBvajBvb043dUdVaDFfU3oySkZ0cWtHUldrSUY1NERaRUFjcDhyR0tRWEVjQTY5U0xRaEhPMTd4RGVrS1lEaWY2Mm9JM05Icm9SWE1zZw?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRXBaSjFxMF9IempZaWY2aXN0M29ILVVGX0NzZ1E4dlRXNmRpbjhOUjR5eVozVnZnZXdraU82M2puX01VV0V4LWhuZjMtU0xuajg2dzFfSnNOQ3BVMEJTWkFnZFlDWjdHc1BWclcyaDNkVEh4WFhTNC1WYWx3anVPTk92MndZcjRKRFhkNHRMeDhSalFqeUgzLVdNemItQkd5R0tEclJ5M3hOM1dVTE1hSmoxNi1hLXI5bGxUQTlHUmV6X2tUWkE?oc=5",
     "date": "2026-11-16"
    },
    {
@@ -16,30 +22,24 @@
     "date": "2026-11-16"
    },
    {
-    "title": "Hohe Energiepreise, klare Worte: Hendrik Wüst bekommt Einblick bei Wepa",
+    "title": "Fotostrecke: Einblicke zum Wüst-Besuch beim Wepa-Firmenrundgang",
     "source": "WP | Westfalenpost",
-    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRXBaSjFxMF9IempZaWY2aXN0M29ILVVGX0NzZ1E4dlRXNmRpbjhOUjR5eVozVnZnZXdraU82M2puX01VV0V4LWhuZjMtU0xuajg2dzFfSnNOQ3BVMEJTWkFnZFlDWjdHc1BWclcyaDNkVEh4WFhTNC1WYWx3anVPTk92MndZcjRKRFhkNHRMeDhSalFqeUgzLVdNemItQkd5R0tEclJ5M3hOM1dVTE1hSmoxNi1hLXI5bGxUQTlHUmV6X2tUWkE?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPREwxbzY4MkFmbFNZbGZNMTMxVXZWLUdaYUpNZmJnYkFTbXF6X2pmdWpZT0d1MTZqcHNQVzJlOU9aelE5NEJoUXlZdFU0aWxmZTc2SmVuNjhPNmxUREk1TUlrWmEwMVE2bzNTYlZ6OE9ybmNQRHBvajBvb043dUdVaDFfU3oySkZ0cWtHUldrSUY1NERaRUFjcDhyR0tRWEVjQTY5U0xRaEhPMTd4RGVrS1lEaWY2Mm9JM05Icm9SWE1zZw?oc=5",
     "date": "2026-11-16"
-   },
-   {
-    "title": "Kokett-Toilettenpapier von Aldi: Diese Hersteller produzieren die Eigenmarke des Discounters",
-    "source": "Giga",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTTVNdmZnOUxKR240a0cwNUtQSUVFNFpyU3Y1U0hnSmJqdzhvZ2dzTVFyNG9sRENKNERmcnF3elgzZTBseXBtUDhGT2N4S3F1dVNkVTdWV1duMFVUX3Byc3ljajJjcXh6V1NJM0xna1BsdWhmczhvTG1jTVJEbWJCbGl6RUxJdnlvQ2tpeGRQMTREa29MWXhGYzhfbFNxNHhkWl9wV3VMOS1xVUFEbHI1V0JGVF9JQjBXWkdXSzNoZVRaazlHbThUZ3BSZTI2VVpTVUF4ZGFENEVNZHlx?oc=5",
-    "date": "2026-11-11"
    }
   ],
   "essity": [
    {
-    "title": "TENA Men launches \"Start Your Comeback\"",
-    "source": "StreetInsider",
-    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUVlZbEg1WllSb0s0U19sUnl2NkJlYlJhb2xaOXFlOUoyeTZZQVF4bFROM1hBZlUxS1R0MEtZYTI0cmQtZVROZkpzVzJpaVYtZG53RjRtdV9TQ3NhN3hJTnprT1ZDZHRhS3dsYXBkckxLSm1aZEhXakxLTjcza3duMHNBMFY4Zl9fN0w4LTNBbVBSMlVpaGc1RUxtSHpqc1EtNURENm1ibU42cjNFbG12czR3?oc=5",
-    "date": "2026-11-17"
+    "title": "Essity stock: Danske Bank lifts price target to SEK 320",
+    "source": "ad-hoc-news.de",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbG9kRlNPV2htaUtlZ1dfcHJHa0syV2FIOVBfVjRKSGlVV0pSdnVJck9TOVR2SW80WExaUDF0RG56ZXJjVjRMcmQyYWZGOFpHbDlZUjRiNkRONkpNeW1ESFJJbnlxU2VLUVNqN0xWTFRqekRiRTZ2RlIzMmg5UlNOdnVzQ3pUUUhzU2l2LXpQcWkwZTdmSXVUS0Q2ZGYxd3h3MHRTTHFBWTVuX05IVk1QWnZiZG9KYThO?oc=5",
+    "date": "2026-11-18"
    },
    {
-    "title": "Essity stock faces Health & Medical growth gap at Jefferies",
-    "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONU5GWlFyQVNVeDVWaEZROFNDclRaQ044dTVRVWJfbndQUmlzb2pYdm9uYnA3M3J5ZUJkdWpjYjBkWHNSVG5tWG9pY0x4X0szd2ZhTlVmSU1hQm01QW5ZOVcyLVdPaEVob1VfMnY3OHp3el9hMlZpOUsxaDNCaFN1aVNSMTJqcnd4RzN5NmlSYUl0bkpzekFvRFRhZVZGZDkzZDk1OWU0ckFPeFZNei1raGR3MG5DWTN3S0pQcQ?oc=5",
-    "date": "2026-11-17"
+    "title": "Essity invests SEK 850 million in new tissue machine at Swedish facility",
+    "source": "Tissue Online North America",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORjdIdGJVTUNsWUFVYUFFVHNLOTVYc08zVUxWVWJEd3VhUGRwQlU5amFDYlk2X1oxSVJfZ1BvdHE1Sm5fSHJkbHppbzNrYkg1aHh5MGJ6c29SQ3FoMXBwMFhNaktmV3pLSHBqMTJGazE3ZTZmVHVnUkZrMWh5NFdGVkRLMm9OeXlSY3BOVko3RllTaHVtb3BJcTc3bE1NUVpSNWk0Wk94Q0tIUk5DU0FN?oc=5",
+    "date": "2026-11-16"
    },
    {
     "title": "Essity at Jefferies Global Healthcare Conference: growth push meets pressure",
@@ -56,10 +56,10 @@
   ],
   "sofidel": [
    {
-    "title": "Sofidel Integrated Report 2025: Social Information",
+    "title": "Sofidel Integrated Report 2025: Sustainability Statement and Stakeholder Engagement",
     "source": "CSRwire",
-    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTmoxRnZZTTl3VzZnM1NLNkpmdWlzVUJSUnRkU2laTUxvazdKZGt6cVM2cXVtdGloYVg2UGIwUnN1VlNsYnZZOWN0cFVxOGlmcXJRNmhuY09mdTRRcmVmVWlrUFlDaVg4TEpCNU55VHNpOTE0ckFoaDJVNERlVEVHS29WN2FLd3kxa2hUOQ?oc=5",
-    "date": "2026-11-13"
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOXB0UFc0N1AyVGJZdkVQaXZHYkY4MzREZDhvMFVYby1DX1lfVndXNWxRZFNTb3pYYmFOUEN5V1pVMmRhVHVPdEJaOFNLLVUzeHoyVWtMRm1qSUlmY2NOUHNGQ3Z2UnNHbEM2ZFp4aVlRYzYxa0dldkgzanlDVVJUWmE0OXdTTExmeE1paF91T21LMFg5ekNxN3NWSG5sbE1ISXpEWC1OU2w1MEdrZFQxV29FY1ZnS0Rj?oc=5",
+    "date": "2026-11-18"
    },
    {
     "title": "A New Photovoltaic System for Sofidel America in Circleville, Ohio",
@@ -68,16 +68,16 @@
     "date": "2026-11-13"
    },
    {
+    "title": "Sofidel Integrated Report 2025: Social Information",
+    "source": "Morningstar",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNHcyTjdoSjQwRDVwVmVMU1NvWHdoYVZvS2h6VDZrMkVqb3pOcFNOTTEtaFdaSjNKX0xmSzQ2am5EUEdiMzR6UUVJYjg3WnM2cDNWWHYtV1J2eWtycUk1Nm1fYUFCWVVwU0dQWERPNVN2VjZmV0JkQVp4OWNDa0NscEtHd1lUV1NhY1JpMGJTTVhkWlJwUnh6MHFzMUpEMVJMc0xXamRVZw?oc=5",
+    "date": "2026-11-13"
+   },
+   {
     "title": "Sofidel Launches Supersoft Premium Bathroom Tissue at ISSA 2026",
     "source": "Buildings",
     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPR2pHa0ZhSUllSjVLcm9DV3cxV0dCNmtQZkNWa2FVQUVtNnVsWHdyZzNLbm40TmhvbjJ6a2tZNTJaU1BLOEZ5YUk2SjF0WEZxRDRjbk1vQ3djTTRfWnBvNzdtTzRHcDAyVDhvbl9qTWhSX3J3WGlwLWw4SkZGVF81TGVpQWNPT1VRRG1QM1VBc0xhUzJKd3FjNy1NV1F2T3VXb3Vpc3loTXJ6dzZkVVR4cE1aaTZkdWdSUHNaVEQ3MUdLaXlEd2FsY2ROU3Roakt3cGp6SGNOd2p1cGFfRGNwWU1B?oc=5",
     "date": "2026-11-11"
-   },
-   {
-    "title": "Sofidel to launch Supersoft® premium bathroom tissue at ISSA Show North America",
-    "source": "Tissue Online North America",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeDgyLUlQQzcxWE1GX3E3X19OWEt0U1NhU2NGZXlZR2g0dVIyZHNVRG5nbF9nV3lSVjdZMkRwN2o5Z3RlNlpzR2tDaG01dUhkc3MwcWtfUV9jTEtwMmc1ZFA2U2lRcjY5WDQtUEFEOFJqUFFVS3NPQ0ZjX0pDRHlDRjN4V01menVrT0NqUnlWeGZnaU40UzFEMEcyU2NFSHlfWmNlcDRha3FXQXliNVJ0Uy13dkVCeGM?oc=5",
-    "date": "2026-11-10"
    }
   ],
   "metsa-tissue": [
@@ -126,13 +126,19 @@
     "date": "2026-10-02"
    },
    {
-    "title": "Lucart to install new tissue machine in France",
-    "source": "EUWID Pulp and Paper",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYkNHU1lvUXBrS25GNXV3WUpzVlQ4ZEtLaUNETG5SVUJpWUUwQVg0a19MUjVydVppay1aNlZlYkR2M2c3Rzc4WHdFVTkxSFY5T0dMLXVNYzNQSUVZdXR4NVdhUHQ0cU54cy1qN2hpWTBHT29UbHhwSDJsajZFdXFhOEJRZ213NklMQk14TFJZQk13M3hVSXhYRTBVUE9aZw?oc=5",
+    "title": "Toscotec to supply new PM15 tissue line to Lucart",
+    "source": "PULPAPERnews.com",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcDN0SHdMYkpZTkJNcklNaUpDaEw0aGYwM05EbEVEM2RVYlBUVU1CVV9ueVR5YkY3bGJFTmc1UTF5dkhjYlBMS1VWTDZiNU1LUWd5dVl2OThSUlNKbnk2a0lLV1JvT3k3cklGcUh6am9vcmRBWFhnTkxDOWxzblBPR1E4bFZXWC16R0pqbjE4NHk?oc=5",
     "date": "2026-10-01"
    }
   ],
   "kimberly-clark": [
+   {
+    "title": "How Will the Kenvue Deal Reshape Kimberly-Clark (NYSE:KMB) Business?",
+    "source": "Kalkine Media",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNT2UySkMzYzFIRU5WY0VISVJjNnNTSHlNcE00bjc5Z1RZLWFBU1puVFZxaC00b3FwUFl6LTcyRTNZQXBRUGFpMlFPMTVNWHMxNmhDTUJSMm5vS1k3WFNmamlhRnRQVVNrVWZOSkFoQlpMRlhwSUdxSmRYVGZLRU4wckliMzFieXlKR21Gcmk3S3RfblNqazRjWFFRbXQyQzR4TklnSy1fRVpfeHBB?oc=5",
+    "date": "2026-11-19"
+   },
    {
     "title": "Kimberly-Clark Corporation (KMB) Stock Price, News, Quote & History",
     "source": "Yahoo! Finance Canada",
@@ -140,25 +146,25 @@
     "date": "2026-11-17"
    },
    {
-    "title": "Kimberly-Clark Corporation (KMB) stock price, news, quote and history",
-    "source": "Yahoo Finance Australia",
-    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1DT2tTa3I0MmZ4M1c3WXFMcUpRbVpWMDE1dm8xV1pYZDRuMGZqWmpxcWNoTk5RQXNBZUFkTWZ6VUFlVm8xcWI1dDJIWjdxZElj?oc=5",
-    "date": "2026-11-17"
-   },
-   {
-    "title": "How Does Kimberly-Clark (NYSE:KMB) Sustain Its Dividend Legacy?",
-    "source": "Kalkine Media",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNREdqdzk1OERmczR1LW84am04VUpqUEdWYnc3V2F5d2lMQktHTzlCREdjNHpraWVPODIzLXgyQ2FTVnRvZjE0MzZvODAzTm9DbVl2WkhjTVp0RzRUYW1iUUtqYWFoT2FmSDM0ZFZIcHFNc040MGM2RUZQWmJLaDByVzRIY0szazJvRExRQURqZzZTMnhNdXdBNTZaRk1BNTBUVERqMHBR?oc=5",
-    "date": "2026-11-17"
-   },
-   {
     "title": "10 Best High Dividend Stocks For The Next 10 Years",
     "source": "Sure Dividend",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xazZDREZWeXd2Y0ZGRTdKWkV3N2NWT3RFZnJZcjdnQzRqOTZWZTNsMWl4X0gxY0tiS1JWdVlxYk5DRkVqdDU5dlpDNU03VzAtamMxam1nd3lIMWJ5eW0yeTY5V1d3amRFeWtJS3BvVlpKMFc1Z3RsSg?oc=5",
     "date": "2026-11-12"
+   },
+   {
+    "title": "Kimberly-Clark Keeps Quarterly Dividend at $1.28 a Share, Payable Jan. 5, 2027, to Holders of Record Dec. 4",
+    "source": "marketscreener.com",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQb0R6Zmxxc2JSbVlwdkNKVWJwRG0waFVxcnVuU3l0UGdpaXNaZEVCZkR1Wm8xQ2gxenJiMy15SUduWGYxZEl2UUhBb3ZPYlRrR0cwS2NwVzdsYlNVenRqZllxVERRVnNIRnB3ZTBtUmcwcjN6OF93UHhTbGhqZ1hFTGxFMXVBaHo0TVBLOFhZbTRrdWZ5aC1hbEZ6Y3RjWXMzdmJnOUdqYkx1YzFtY294YVZxUnRJc2t6bG02aVBBNnJENVpUNy1LZTdvWUZPVFpqQ1Q2aERzRVJBR0Vzc3BmdTZR?oc=5",
+    "date": "2026-11-11"
    }
   ],
   "pg": [
+   {
+    "title": "Wells Fargo & Company Issues Positive Forecast for Procter & Gamble (NYSE:PG) Stock Price",
+    "source": "MarketBeat",
+    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPYTVnamNyS19TUE5xLVNTVHpsUnM1QUNYc29iVUVPcE1zYUxibTQ4dnpyRl9FcmtaU0FILWxvUTJIZm5JOVJodU1uQjNVaWE1NWZyanhNdzVlQVN6Ql9QVXZyWS1Eb2hfNGZud2hnSlV5QW94YUVna0tFaFhFcFk4UVIyaVotTUtYbncwTG5udXFTOVlpbmNvemlNNUtEeWx2d19wNm5HTDdBUmhxdUVNLTA5dXdnaHY2YkszNmV6cWltS1AyckVKcFFkU3FZZ2NwTi1XSnNuREs0UzgtMVE?oc=5",
+    "date": "2026-11-18"
+   },
    {
     "title": "PureCycle Technologies Participates in PepsiCo Sustainability Innovation Hub to Showcase PP Recycling Technology",
     "source": "Quiver Quantitative",
@@ -166,36 +172,30 @@
     "date": "2026-11-17"
    },
    {
-    "title": "Procter & Gamble Company (The) $PG Stock: Bessemer Group Inc. Reduces Holdings",
-    "source": "MarketBeat",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOYlZiQ09GWlIxNkg0R3VIeVJHT0R6RjB3ZTMyMEdTU0RXbTZWeEVGUXVnQXRiZUZYVHBWdDJJT0VEVkVrQXdneExZREVOcFlIZW5zUzBGa2xtQXNMMktiUEExNFZrU0V4TDdYRTZDTGRndDhMMWwwRWxBUGJMbkc5aHREN0dLbGVpcWN3Q0RsWEZHdW5EM0tVM2J1MlVTNHQtVTREYUNkS25IRU0xQ3pZeHhxSXU5b3VMbnlxTU9uQWQ0RUJGLWYwOXhRTVA?oc=5",
-    "date": "2026-11-17"
+    "title": "Procter & Gamble Has Raised Its Dividend for 70 Straight Years. Where's the Price Target Now?",
+    "source": "24/7 Wall St.",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPYzNMQ0lEcDdTNjFleVVaN3FzcVg1NVZuMzA1VEpUMmlrajI2TWhhallyTFdMRk1DRXBVeEgyZ0liSjR3YTdaeGVENFdMcUllZWtycjJycmhpYUZkZks3bnk3S3dFOXdMTk1uemVfUVVsMVpXZWlmN3FGNjViNUlkUUYtOTdMcm1DSk1lN1ZRUXpWY05ZY29GUWJCWVFUZTJPeGJtQmpLT2tkRTNEaThybDhBb0E3d0k3RGNDLV82QUtFb0lYR2ZXRVMtMEk?oc=5",
+    "date": "2026-11-13"
    },
    {
-    "title": "Procter & Gamble Company (The) $PG Shares Sold by Mawer Investment Management Ltd.",
+    "title": "Procter & Gamble (NYSE:PG) Hits New 52-Week High - Time to Buy?",
     "source": "MarketBeat",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQazdvVGNna3NBM0ZHd1pOQm9tcEJRVnVBSGNzWWUxZUlGLW02NTJyTDdTVnZWdHdBRnc3RUZqdFlGOW9xOFhNOUlTdGZVbXhkLTJvUDJvNzZzYmNCdnFDTnlwc2NVeS1oaXUwdEdhdDdzb281Z2JEakp1WkNRSGh0b0xJblh1VEw0RTJZVzVmTnBZSTBFbGxvX1JuUkRFUGhad2oxZ0NXZ0dlWUhWSFdEckdLcXFzclBuZjlUQ05WQ25KeWlDWlMzcTVnWkVucFVYSWY4?oc=5",
-    "date": "2026-11-15"
-   },
-   {
-    "title": "Procter & Gamble (PG) Stock Price, News & Analysis $PG",
-    "source": "MarketBeat",
-    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9EMzNKNC0tUlBXRzZWNTdIVlpZb0IzZVZvaXFyZUxfNmN0UW9VQ1RlMThHVGRZdHBaa0l6djJOQ3cySnd4R3RCd3ZMT2FBdWFxUUE1eA?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPYVY1NF9GOFpNTXprdzBFS01TelBwLWwzTnY4Mm1KQVlTUXNWNUdTdmk0UWtnYXBvdFN5dFdGenU2cE80SWJZX2dBeWt1Vldjazduek1wY1Bjak1kNTdIRzJua1lQN183eEJJOFlYU0ppY0JDQlpXWHA3Q3RmMTVqZG1vMldESm5UNWMyU1hSckZPWTVKMWNjS1BDdEVYVHhTcHp3ZEJjNXpqVkQ2Y3IydG9BbE1Kb2M?oc=5",
     "date": "2026-11-13"
    }
   ],
   "georgia-pacific": [
    {
+    "title": "Structures at Taylor County Foley Mill set for controlled implosion Saturday",
+    "source": "WCTV",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQa21RZE5kcndiRExTOWZpNk1KYlFFaXR6amdzMC1SNVgwVHRGa093amZOZzlsVDRiSktsbm92X1hqd29IOVgtMlZaT011a1VvV3BpTzQ5ODlRZjRyZFBkVVdIRktycDRxRXlKMy1OaGk5d29IYnVCSGJPU0VwTWZ4OFRCMG1fZnpCWExIdmRqR0dURnlJRUp2aGZEaElCNFpieUY00gG3AUFVX3lxTE5Fejk1dnJiSHQ3RnVlMFUyVXBCS2l6SmFQV1BEN2Y4THhLV3h0bDZad3Rib3lVYWJkMVFXZTNRcnhiTm1rc3NxY0lXaDNmUHNjQjJPdE9ib3U4U1VncEFDUzJrendqTnZqa3NLeTF4VkNxV21aaGoxSHVQSkIyY0FSSE1IQnlhNTlTZENGMVdtZmI1bEhEZElJWnhRTG5fUFhsbzc5LWhxREdjeDBoSHcxYndaM2hlQQ?oc=5",
+    "date": "2026-11-18"
+   },
+   {
     "title": "Veterans at Palatka mill treated to breakfast, gifts",
     "source": "Palatka Daily News",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTTRKb0F5dG0wZ0JtTmhhamE5WG50YjJsT3c3a1h1VkdOS0FLNDEtTzNucUkybWhxbWpLSFppTGFMN0hvR04tdjRfeWpnM3ZqMTRmSXdjUUtYckoxM1NQVDloRGdzck45TC1QX21WTFV0UF85WFp3TVpsSkkyeGdOZWFDN3dIcS02Y0hCaWQ3Z2QySzRUZEh5N2xhRGNYUnlLM0JObnp1ajJaS2pycmtz?oc=5",
     "date": "2026-11-13"
-   },
-   {
-    "title": "Georgia-Pacific Investing Approximately $150 Million in Palatka, Florida, to Modernize Angel Soft® Bath Tissue Production",
-    "source": "Red Book Lumber Data",
-    "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNamVzOUpEY19tNjdDRnZSZ0hkUjM3TVBEcXZZcXV3dFNfYlIzc3pXT3FNcS1TQkhHaHZZRW1BTVhlaGU0S1A1UENMb2pfZm5fZ0QyMzU0cEdqdEJPdzNUZG9BTlB6VlFESks4NjRZUlJwRVItUmdXMVNXUkladHl6TV9WSEFQNEhnZ0lqNWY2LU45YlZzQUd5YWhIT0FZblRmVHh0cEdoS0JMNzRGMXJkV2pFcTgzQnFrNklvbWxkNGNkQWlSYVNvOW1VUmFYWXIzNUFleEdfU0c0U1k5cktPWUpWOXF4UEM3eXVSSmVUaUhoT1RGSlE?oc=5",
-    "date": "2026-11-02"
    },
    {
     "title": "Georgia-Pacific Invests $150 Million to Modernize Angel Soft Tissue Production in Florida",
@@ -204,10 +204,10 @@
     "date": "2026-10-30"
    },
    {
-    "title": "Georgia-Pacific invests $150M in Florida tissue mill as Fibre Excellence faces liquidation in France",
-    "source": "Tree Frog creative",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQU3JOalhVTDVOS3ZYRmhFSElROFFKNWd3c21TMUJycDk0WFRJWExOaFdvYlUtTWU4X1NmOUU1ek9qcFZEZkdQYjVUZ1o0T2hFUUZRS3ZybmRCSWRiZ2hrQlN2UlJLdE5aSTZVbTg0RE14ZXBqZ19JejU0MDdmZDgzYUxLR3RocDM5ZFlyUXpPbW02RlZRQ1RwSVVoelpVZEZhMzFndlRWd2IyVHEyMEpha1dHa3ZvSTBqUEg1YUJiLXZBTnFPTkJn?oc=5",
-    "date": "2026-10-30"
+    "title": "Georgia-Pacific to invest US$ 150 million in paper machine replacement at Florida mill",
+    "source": "Tissue Online North America",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOYWlaZ01iaERSdXFseW1JSm55ZXFQTUtDTUR1N250Y1VBRnhrQnVTdm5ibmtHb25YdF9NS3BFd3A4eG1FTkI5eHRPXzktaGlBWnpyUE5tbUtnQTFYMjlNQXRIUlV2Q0F1aHZZREFQTTV1cUdIRVdqY3g0SjJSX1duLTc4cHQ2c2tnV1J3MVJjY20tVm5NY2Q5bktJLXQ2RmVwYVd1bGZxSmJ0bFB5YXljTmc1N1NCLTlEaU1JVkY5bEY?oc=5",
+    "date": "2026-10-29"
    }
   ],
   "app": [
@@ -218,10 +218,10 @@
     "date": "2026-11-11"
    },
    {
-    "title": "APP Group Works with Consortium to Take Early Steps Toward Landscape-Scale Conservation in Sumatra Through PROTECT30",
-    "source": "markets.businessinsider.com",
-    "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPWERRNk8zU1Z3bU5yeW5LcmFZYXpWZ3d2TWZJSnRBdEc3Wi1KTGlxQWx3YkZrdDVET1Vpd0ZfNXE0V2h3cjlIZUJfLUtvZ21uLTEwWmxYU3dqTmZFZEY2UXFiOHRDQUtzVlFiUlVaQmVTbllMZnJyVG9Na084Zm0xVkxLX0taMTRrVWJiWnZmMFFCdG9lVzQ4dmxFWERUY0pQOWMwMTNzRU5RT241Yi1sVktaejkwcmI0cHVESU9BS2E1WC15OXl4WmFVTWxZa3dVT2EzVTBUOWE4T0pEangtcG45OWNfX1hXM2tLRC1kZjQ2c29wV3IySkgtMk92S2ZIY0R2REpR?oc=5",
-    "date": "2026-10-28"
+    "title": "APP Group to take steps toward landscape-scale conservation in Sumatra",
+    "source": "PULPAPERnews.com",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZjVLQjJKdXVPTGtyOVRreFpKdHZxMGZFbVBMWGVsenZHSDc5QU1GZmVEcnJ0c1dxaFlNZkRxeHZ6QUQ5V0Fzenpwa0FYNm9uTjN5QnFNUFJsOGtaczRhdlRnWHllbjI0RmtMdHV2cW1UZU1yWjAycTRab3VnWnlpVVV3Mk5NYW9qQ0FkRGVkaEc0UzlmT1k2MEhyLUIwWVhabWUwZW5mdmF2Uktk?oc=5",
+    "date": "2026-11-09"
    },
    {
     "title": "After 11 years, Asia Pulp & Paper has been named again over links to haze fires. What is it & what's the S'pore connection?",
@@ -278,6 +278,12 @@
   ],
   "kruger": [
    {
+    "title": "How Is Kruger Products Lifting KP Tissue Inc. (TSX:KPT) as Dividends Continue?",
+    "source": "Kalkine Media",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOaHdQNlJGc2g5UDY5T2Fjc3JvVUJNbG9ieHlPTVRkdUpqOXVVSS1vLWcwNUtwbUdQUmNuTG54TGlzNzZFa25rZURnZFFBS3B6VlFwTWtwVFFhM0NBVEFZaW1abXgtTXdFTEFYaEx2Yl9YVmhWTHZZN2Ytck9QS0lWVEY2VERnVmEyOW9lbjBLM0lIYXpRQ1BwdDE2V1FfcGh3MVNfVUtHMFRIUXYzOHduWUJxdGhScmlE?oc=5",
+    "date": "2026-11-18"
+   },
+   {
     "title": "KP Tissue, Inc.: Can Kruger Products' Margin Gains Keep the Dividend Secure as Input Costs Climb?",
     "source": "kalkine.ca",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQd20yM0J2ZFFhOXN3bjU1WmpJUFNQand4MVhqWnFHSnJLZ3hmc0Q4UmNXQ0dLeWc4Zy1GRHQyVXo3WVh3NVNGbU9FYmpHQjVaZDVBMWx2QU41V3kyQ01jU3JfMWxZWndTRDJZRUhKbk5odTVSWlVSSjFCLUtXWHVKODkxaWl6Wk02SGkzM0E2YTloNi15ODdNZWhBbDlGekhEVTdTV1lzclJoNXVfZC1pWmtZTldFYjJyeUNBQjFVZjE4eTAxbTRqbVpjREQ?oc=5",
@@ -293,12 +299,6 @@
     "title": "Kruger Products grows Q3 earnings and postpones new TAD plant startup",
     "source": "Papnews",
     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1VVGw2V0ZQMTd0YkpUUHpIYUc3VWxWMjBvdUZnUGJ3VFVHYnEydEo0WUVERkh4OHlGX0RhUUJjUGVBRnZDbU5VX2R5RVRpcEtGZ0ItN2FGMTZwUl8xQ05MUnFkN0dMWEhXRGVJRngwU18yUE5hZ0xHcW52ZVc?oc=5",
-    "date": "2026-11-16"
-   },
-   {
-    "title": "Susan Irving on Kruger’s evolving media strategy and athlete partnerships",
-    "source": "Media in Canada",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYlNsR2d4dHRQNm15dEJUUGNUVzJRVlpQT0g0N3dKTnQ2d1BJR2NfVGRJZVFNQy1XT25RSWp5SVpDcU5YU1l4ZXp5M2Q4TGkzZ2N6SlFIdlNIbUJ1amthemM4elBkY0NEY0RvblJNYkxybGstUTdGTURXa3BfdXJ6bTNFUUl1MHJEU1Rya1E2aEdBU3BybHFqTXhvUW4xUmxNTmMwa1JDT28teXBOWU9v?oc=5",
     "date": "2026-11-16"
    }
   ]

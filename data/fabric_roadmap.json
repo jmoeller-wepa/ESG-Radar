@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T06:44:43",
+ "updated": "2026-11-19T06:44:46",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -257,16 +257,6 @@
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/5172472"
   },
   {
-   "id": "b7e155c6-94bf-f011-bbd3-000d3a5b0efa",
-   "name": "File-Level write-write conflict detection (Generally Available)",
-   "product": "Data Warehouse",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "Improve write concurrency in Microsoft Fabric Warehouse with file-level conflict detection. Concurrent updates and deletes that affect different data files within the same table can commit without unnecessary write conflicts, reducing trans",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/resolving-write-conflicts-in-microsoft-fabric-data-warehouse/5172544"
-  },
-  {
    "id": "f151890c-74ed-f011-8544-000d3a33bffb",
    "name": "Get Warehouse Schema Rest API",
    "product": "Data Warehouse",
@@ -427,16 +417,6 @@
    "url": "https://www.fabric-gps.com/release/c6846700-9e3e-f111-88b5-6045bd0066ad"
   },
   {
-   "id": "ee5af75d-3f4a-f111-bec7-002248085b3f",
-   "name": "Bring your own Eventhub to Fabric Eventstream",
-   "product": "Real-Time Intelligence",
-   "tool": "fabric",
-   "type": "Preview",
-   "quarter": "Q4 2026",
-   "desc": "You can now shortcut an existing Azure Event Hub as a fully featured Eventstream, bringing your own hub into Fabric without rebuilding pipelines. The shortcut stream behaves like a native Eventstream, including processing and routing.With t",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/stream-azure-iot-hub-data-into-fabric-eventstream-for-email-alerting/5172174"
-  },
-  {
    "id": "766d62fa-d63d-f111-88b5-6045bd0a8ec1",
    "name": "Business events selector when publishing events from Notebook",
    "product": "Real-Time Intelligence",
@@ -505,16 +485,6 @@
    "quarter": "Q4 2026",
    "desc": "Private Link enables secure, private connectivity between your virtual network and Microsoft Fabric, eliminating exposure to the public internet. With Eventstream's integration with Workspace Private Link, you gain granular access control a",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Strengthening-data-security-with-workspace-level-private/ba-p/5377347"
-  },
-  {
-   "id": "7ae96023-9ddf-f111-84e8-00224809f154",
-   "name": "Create SQL Databases in Fabric from SSMS",
-   "product": "SQL database",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "Create new SQL Databases in Fabric using the new Create Fabric SQL Database dialog in SQL Server Management Studio (SSMS). [Learn more](https://aka.ms/ssms-release-notes)",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/how-to-create-a-sql-database-in-fabric-using-fabric-cli/5172725"
   },
   {
    "id": "009295f2-84b6-f111-aaab-7ced8d70bb60",
@@ -795,6 +765,16 @@
    "quarter": "Q1 2027",
    "desc": "We are updating the TDS (Tabular Data Stream) connection behavior in Fabric Warehouse to ensure consistent and predictable connections based on the specified Initial Catalog value.Previously, connections with an empty or invalid database na",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Connection-string-changes-in-Fabric-Warehouse-What-to-expect-for/ba-p/5185022"
+  },
+  {
+   "id": "b7e155c6-94bf-f011-bbd3-000d3a5b0efa",
+   "name": "File-Level write-write conflict detection (Generally Available)",
+   "product": "Data Warehouse",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Improve write concurrency in Microsoft Fabric Warehouse with file-level conflict detection. Concurrent updates and deletes that affect different data files within the same table can commit without unnecessary write conflicts, reducing trans",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/resolving-write-conflicts-in-microsoft-fabric-data-warehouse/5172544"
   },
   {
    "id": "c5a0b4cb-322e-f111-88b4-000d3a376137",

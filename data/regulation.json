@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T06:21:45",
+ "updated": "2026-11-19T06:19:57",
  "consultations": [
   {
    "id": "19220.0",
@@ -159,23 +159,6 @@
    ]
   },
   {
-   "id": "14770.0",
-   "title": "European climate resilience and risk management law",
-   "summary": "",
-   "type": "Adoption workflow",
-   "dg": null,
-   "start": "2026-11-04",
-   "end": "2027-01-13",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14770.0_en",
-   "areas": [
-    "climate"
-   ],
-   "topics": [],
-   "keywords": [
-    "climate"
-   ]
-  },
-  {
    "id": "19498.0",
    "title": "EU rules on biobased feedstock in plastic packaging",
    "summary": "",
@@ -193,6 +176,23 @@
    "keywords": [
     "packaging",
     "plastic"
+   ]
+  },
+  {
+   "id": "14770.0",
+   "title": "European climate resilience and risk management law",
+   "summary": "",
+   "type": "Adoption workflow",
+   "dg": null,
+   "start": "2026-11-04",
+   "end": "2027-01-14",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14770.0_en",
+   "areas": [
+    "climate"
+   ],
+   "topics": [],
+   "keywords": [
+    "climate"
    ]
   },
   {
@@ -992,5 +992,5 @@
    "changed": null
   }
  },
- "consultationsFetched": "2026-11-18T06:21:45"
+ "consultationsFetched": "2026-11-19T06:19:57"
 }
