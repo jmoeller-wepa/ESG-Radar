@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T06:44:45",
+ "updated": "2026-11-20T07:40:10",
  "source": "Google News search (headlines link to the original outlet)",
  "companies": {
   "wepa": [
@@ -82,12 +82,6 @@
   ],
   "metsa-tissue": [
    {
-    "title": "Metsä Tissue abandons planned 240,000-tonne Goole tissue mill",
-    "source": "Papnews",
-    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBRbExNSmtybTFLZUpSaFdfTFZqR1MyRHhHTDFrTzBlVjUxbGwyS1BOY2Q3UjNFOEtlRk0wWVdFTTVLeFR0ZV85OXBhRnNIMmNvLVIxUnJaQzhwMHdyeUFHYnlBRVQ5TUE2NjFaY3BXVFRuVkNqSG5QRjF2aWZwVzg?oc=5",
-    "date": "2026-11-17"
-   },
-   {
     "title": "Goole developer seeks new occupiers after Metsä withdrawal",
     "source": "PULPAPERnews.com",
     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNkEyaloyeWVlVHQyWWMtY2x6XzFTeVgwSFh2dG1hblJKTmFaQUtqVEZ1V1loWGIxX1J5Wmp1S1c1Vmd5RmxhbkdKLTFwTTJnX3VCX2E3V2Mwd0k5NnJRbUQ2VUhYUF9ucU0xekZhNUxZdkJPdkJoa2JHdEtCaWViaGoxQk9wb1gxQTVxTC0tdVN4UEQyc3kweFZqWHdyNWZmM2N3UQ?oc=5",
@@ -104,15 +98,15 @@
     "source": "METissue",
     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZDJsTjN0UU81dmVKV2hOZmVUMDc5d2RFaU5wMkoyY1FYVGxOQVJSXzBKMExpRWxwY1VpNjBCeEFnNjNMemtCNkNxWDhZakRNSllmcmhQMTFnWklsYXhpT0tVMEpHaE1iOW5fRVJSbTczQkNRZVpuOFZIUXNiQmpXT2kwS3pEdFlUTFdSVnAxYmFJOEh4OGc?oc=5",
     "date": "2026-11-14"
+   },
+   {
+    "title": "Metsä Tissue abandons plans for new tissue mill in Goole",
+    "source": "EUWID Pulp and Paper",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNGZVcUNfcUhqdjNOYzhKcmEwSlZlcy1vWDJydm1SYXNpWVdPbk1LbVdHaVRVeEs2Z21PT3JMcW9HdWZRUVBHak9XWjk1SWduMC0wM0FxVXJSOE1CVzlBcFNKSUFzZzhfWnYyUEFaQzJKQWxEV0V5MHhGM1JYcE5wNElPN0EwUzhFZHQ5eG9kbE5lQ2pfdExfTWFUWVNOZTBfTnNB?oc=5",
+    "date": "2026-11-13"
    }
   ],
   "lucart": [
-   {
-    "title": "In a Word / Printing Industry Talent: A Look at the Latest Appointments",
-    "source": "PrintIndustry.news",
-    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQTC00Z3NZcTRiVmhGYkpRX2tHS3dlaldYaU1RTkJJOUQ5OF90NVFtZVJ0ZTJUUmtXcHpwYmtldVd6Ykx0Ti01amJRVHY4ODlDZFVja3NSQk5YQUw5SU94Xy1sSUJqUElsSHA2YzVVUDVMVHpHOFVlczYyRW9aWkF5TDhKaWV0eDkyQmhCd1lGZmdZbng1RkxPanhtblhadU1sM2pZ?oc=5",
-    "date": "2026-10-29"
-   },
    {
     "title": "Lucart earns fifth consecutive EcoVadis Platinum rating with 93/100",
     "source": "Papnews",
@@ -130,9 +124,21 @@
     "source": "PULPAPERnews.com",
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOcDN0SHdMYkpZTkJNcklNaUpDaEw0aGYwM05EbEVEM2RVYlBUVU1CVV9ueVR5YkY3bGJFTmc1UTF5dkhjYlBMS1VWTDZiNU1LUWd5dVl2OThSUlNKbnk2a0lLV1JvT3k3cklGcUh6am9vcmRBWFhnTkxDOWxzblBPR1E4bFZXWC16R0pqbjE4NHk?oc=5",
     "date": "2026-10-01"
+   },
+   {
+    "title": "Lucart to install new tissue machine in France",
+    "source": "EUWID Pulp and Paper",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYkNHU1lvUXBrS25GNXV3WUpzVlQ4ZEtLaUNETG5SVUJpWUUwQVg0a19MUjVydVppay1aNlZlYkR2M2c3Rzc4WHdFVTkxSFY5T0dMLXVNYzNQSUVZdXR4NVdhUHQ0cU54cy1qN2hpWTBHT29UbHhwSDJsajZFdXFhOEJRZ213NklMQk14TFJZQk13M3hVSXhYRTBVUE9aZw?oc=5",
+    "date": "2026-10-01"
    }
   ],
   "kimberly-clark": [
+   {
+    "title": "Kimberly-Clark Announces Executive Leadership Appointments to Drive Growth",
+    "source": "www.marketscreener.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZ3RScFFiMkRnQXkzTnNFZHNTTm92WVdXY0tYWHVTbW1OYnZSajhfazB1TllNSjFKa0VZM21aYjNnWFhWMk9maW5lV2NtenpVMWdvYzg0bDRwNTBGV1RGYUdVblRNblFWc0xwU0FiU01XblcwZVN1ejNZMENuTmpiMk1ZNkw4Y2tVckJucVNqSkxseWJoTHVQN2RnZUxxSzJoTXZaMTFpajFfYzYxS1BkRDBKaEllLWpqUlZFOXV5dWtxNm15OHc?oc=5",
+    "date": "2026-11-19"
+   },
    {
     "title": "How Will the Kenvue Deal Reshape Kimberly-Clark (NYSE:KMB) Business?",
     "source": "Kalkine Media",
@@ -140,48 +146,42 @@
     "date": "2026-11-19"
    },
    {
-    "title": "Kimberly-Clark Corporation (KMB) Stock Price, News, Quote & History",
-    "source": "Yahoo! Finance Canada",
-    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBzTngwV3E0MFU5VjBUcUlkMDd6ejl3LXA3c1BTVXJVaXlaMGgxamgzMDBOZTUzUUo3TVBBMXZYejRKXy1tNlVrOWhBeG80cVFE?oc=5",
+    "title": "Kimberly-Clark Corporation (KMB) stock price, news, quote and history",
+    "source": "Yahoo Finance Australia",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1DT2tTa3I0MmZ4M1c3WXFMcUpRbVpWMDE1dm8xV1pYZDRuMGZqWmpxcWNoTk5RQXNBZUFkTWZ6VUFlVm8xcWI1dDJIWjdxZElj?oc=5",
+    "date": "2026-11-18"
+   },
+   {
+    "title": "How Does Kimberly-Clark (NYSE:KMB) Sustain Its Dividend Legacy?",
+    "source": "Kalkine Media",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNREdqdzk1OERmczR1LW84am04VUpqUEdWYnc3V2F5d2lMQktHTzlCREdjNHpraWVPODIzLXgyQ2FTVnRvZjE0MzZvODAzTm9DbVl2WkhjTVp0RzRUYW1iUUtqYWFoT2FmSDM0ZFZIcHFNc040MGM2RUZQWmJLaDByVzRIY0szazJvRExRQURqZzZTMnhNdXdBNTZaRk1BNTBUVERqMHBR?oc=5",
     "date": "2026-11-17"
-   },
-   {
-    "title": "10 Best High Dividend Stocks For The Next 10 Years",
-    "source": "Sure Dividend",
-    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1xazZDREZWeXd2Y0ZGRTdKWkV3N2NWT3RFZnJZcjdnQzRqOTZWZTNsMWl4X0gxY0tiS1JWdVlxYk5DRkVqdDU5dlpDNU03VzAtamMxam1nd3lIMWJ5eW0yeTY5V1d3amRFeWtJS3BvVlpKMFc1Z3RsSg?oc=5",
-    "date": "2026-11-12"
-   },
-   {
-    "title": "Kimberly-Clark Keeps Quarterly Dividend at $1.28 a Share, Payable Jan. 5, 2027, to Holders of Record Dec. 4",
-    "source": "marketscreener.com",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQb0R6Zmxxc2JSbVlwdkNKVWJwRG0waFVxcnVuU3l0UGdpaXNaZEVCZkR1Wm8xQ2gxenJiMy15SUduWGYxZEl2UUhBb3ZPYlRrR0cwS2NwVzdsYlNVenRqZllxVERRVnNIRnB3ZTBtUmcwcjN6OF93UHhTbGhqZ1hFTGxFMXVBaHo0TVBLOFhZbTRrdWZ5aC1hbEZ6Y3RjWXMzdmJnOUdqYkx1YzFtY294YVZxUnRJc2t6bG02aVBBNnJENVpUNy1LZTdvWUZPVFpqQ1Q2aERzRVJBR0Vzc3BmdTZR?oc=5",
-    "date": "2026-11-11"
    }
   ],
   "pg": [
+   {
+    "title": "P&G to Cut Up to 30% of Product-Supply Workers Amid Automation Push",
+    "source": "WSJ",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOWNEUUhHMUFTQjdHbDF1dVlhWmwxbjkyNzBXM2JBRXdqVFRlcjMwTG9lWWRWRTV2bXlzQkdUX2lyUE1zT2pUSzVmTDF2akJKVjNtWFhfRVhQSXhwdEpZb3FOSWcwYnFiSTlCYWNwLWNfVXdweC1XVzg5Y1hRaE56M2diNWV1OTRiMzhZUV9KUm1ZYjZnQXlEN3phejJaMkJPaUVQQWxRNA?oc=5",
+    "date": "2026-11-19"
+   },
+   {
+    "title": "156,170 Procter & Gamble Company (The) $PG Shares Bought by Private Advisor Group LLC",
+    "source": "MarketBeat",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcDNIaVRNZ0g2LUZoUWR1R0V1YWFtbVFrUUMtb2xKcUFlVVcydU9zQzRzN2NEdWpZLWxnMkUxRjJwamNVaU9EZ3FudGRSRXhKbmV1OUMzeWIzOFBycW1raUVWY0RjajJrM3oySWNzeTVYS2ZIN3RiUnZrd1c3MjVTNy1JWTF4aGlBV0NZS1BKLXRUbUdiVXA5eTlNYS1IWjEtZ3dJMHQwVXA4a1A1NER2Q1Z3a2NzQU13YjR6Mm5YTGxpeElyRWRfQ0xMS2EteHN5T3JVdWNMMA?oc=5",
+    "date": "2026-11-19"
+   },
+   {
+    "title": "153,538 Procter & Gamble Company (The) $PG Shares Bought by Ieq Capital LLC",
+    "source": "MarketBeat",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWnhFWjFYUmVSQlRqUmV4ZUJqMjkyeFBQaWpZNmcxRnlMazZ3N3NHUy1XeFRXaTBrOHI5Y0NXSGFHN19JdzljTlhjTm9pV2hPRldVVmNrT1B0d0VvY3JrSTduR3F5TG9YaTRCdHdYYWhrREFFZzVJMWNmYktLUlp1UWZFcmhCRHJ5MWlMQlYxanZJbENZeE9BMWp4YXNJaHRVaGEwRllGUmN2TmxydG44MnNHaVFfcjMzRVRWVHNBcEs5NWNxXy02ckFn?oc=5",
+    "date": "2026-11-19"
+   },
    {
     "title": "Wells Fargo & Company Issues Positive Forecast for Procter & Gamble (NYSE:PG) Stock Price",
     "source": "MarketBeat",
     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPYTVnamNyS19TUE5xLVNTVHpsUnM1QUNYc29iVUVPcE1zYUxibTQ4dnpyRl9FcmtaU0FILWxvUTJIZm5JOVJodU1uQjNVaWE1NWZyanhNdzVlQVN6Ql9QVXZyWS1Eb2hfNGZud2hnSlV5QW94YUVna0tFaFhFcFk4UVIyaVotTUtYbncwTG5udXFTOVlpbmNvemlNNUtEeWx2d19wNm5HTDdBUmhxdUVNLTA5dXdnaHY2YkszNmV6cWltS1AyckVKcFFkU3FZZ2NwTi1XSnNuREs0UzgtMVE?oc=5",
     "date": "2026-11-18"
-   },
-   {
-    "title": "PureCycle Technologies Participates in PepsiCo Sustainability Innovation Hub to Showcase PP Recycling Technology",
-    "source": "Quiver Quantitative",
-    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPTnJCQ2ZlMXNlOFBRUW5meF9VQllZMVBCSzhjVndiaThvREJBV3MyZ3VhM1J0U2lUR1IxZGZ2dXNBd01uNGxMMy0yT29LbTlpc1dGLUI1Z2ZVZ1prOExudE1iTDNKa3BMOUdKcElkb1prWGYxRjJEWU9KbS1oXzl3Z0tnZG0xY2VnYjBtLUZPekhUNGxGMS1GOVEyV3pDdEI2LWdYVjlFMEJFYzNNdV9za0hRQ3NoMTBFeUlGc3d2MkNYekI4S2MwOGgySXFEbmpDcXFVWmMwZDBZUC1ZMkE?oc=5",
-    "date": "2026-11-17"
-   },
-   {
-    "title": "Procter & Gamble Has Raised Its Dividend for 70 Straight Years. Where's the Price Target Now?",
-    "source": "24/7 Wall St.",
-    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPYzNMQ0lEcDdTNjFleVVaN3FzcVg1NVZuMzA1VEpUMmlrajI2TWhhallyTFdMRk1DRXBVeEgyZ0liSjR3YTdaeGVENFdMcUllZWtycjJycmhpYUZkZks3bnk3S3dFOXdMTk1uemVfUVVsMVpXZWlmN3FGNjViNUlkUUYtOTdMcm1DSk1lN1ZRUXpWY05ZY29GUWJCWVFUZTJPeGJtQmpLT2tkRTNEaThybDhBb0E3d0k3RGNDLV82QUtFb0lYR2ZXRVMtMEk?oc=5",
-    "date": "2026-11-13"
-   },
-   {
-    "title": "Procter & Gamble (NYSE:PG) Hits New 52-Week High - Time to Buy?",
-    "source": "MarketBeat",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPYVY1NF9GOFpNTXprdzBFS01TelBwLWwzTnY4Mm1KQVlTUXNWNUdTdmk0UWtnYXBvdFN5dFdGenU2cE80SWJZX2dBeWt1Vldjazduek1wY1Bjak1kNTdIRzJua1lQN183eEJJOFlYU0ppY0JDQlpXWHA3Q3RmMTVqZG1vMldESm5UNWMyU1hSckZPWTVKMWNjS1BDdEVYVHhTcHp3ZEJjNXpqVkQ2Y3IydG9BbE1Kb2M?oc=5",
-    "date": "2026-11-13"
    }
   ],
   "georgia-pacific": [
@@ -212,12 +212,6 @@
   ],
   "app": [
    {
-    "title": "ABB completes major modernization of drive system for Gold East Paper",
-    "source": "PULPAPERnews.com",
-    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxORFJ0cGNIU3VYYVg3NGxBcE9mRmdhdW1OeS1DT0NtS1BYcjVEWmJaM1drQ1pmVG9TU0d6ajlPU1JzNmZveGVfZmpZQkVTdVYyRC0zWm1Xd1drZVBfRVU1UjlfRFpsRFlmNjBCQzlSUVJXajNvcDU2M21sTUZpWmlZYlRrbDROb2E0MV8yYnNUaG1nak1qc0JYcE1iLV90VnNyd0J0R3hSblpDZw?oc=5",
-    "date": "2026-11-11"
-   },
-   {
     "title": "APP Group to take steps toward landscape-scale conservation in Sumatra",
     "source": "PULPAPERnews.com",
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZjVLQjJKdXVPTGtyOVRreFpKdHZxMGZFbVBMWGVsenZHSDc5QU1GZmVEcnJ0c1dxaFlNZkRxeHZ6QUQ5V0Fzenpwa0FYNm9uTjN5QnFNUFJsOGtaczRhdlRnWHllbjI0RmtMdHV2cW1UZU1yWjAycTRab3VnWnlpVVV3Mk5NYW9qQ0FkRGVkaEc0UzlmT1k2MEhyLUIwWVhabWUwZW5mdmF2Uktk?oc=5",
@@ -234,6 +228,12 @@
     "source": "The Straits Times",
     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQTjNseEJNM0ljcFhIcUhBUndfUXE5X2hQcmRIYmxLeWp0Zjlka0hkZXJReUQ1Yzl2TXZ5TS1UMDl2YW9JQ3hmbHRmQXBMeXFEbFZyOEwtRUtSa2c2dmUzWkJDNjYxZFhMSG5STGFNbkpTd0RsQTlCVDU1RFU4THZYbmVBN2lvaFE3U09EZWpoNFVjS0pxVHdCYkE3b0R0OHlhMGp1TG9ZMXl1Vl91Nk5BRUZ3RXlQaEI1TU9GRlYxd2gtTmI2OWhFXzh3OE5EeTh6NFFxMFJaaXoyc2NwdUlMTzln?oc=5",
     "date": "2026-10-23"
+   },
+   {
+    "title": "'Deliberate use of fire has no commercial rationale': Asia Pulp & Paper, linked to Indonesian forest fires, says Indonesian law bans burning",
+    "source": "Mothership",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE01ZlN4c1B6TjFOaXJHa3BULWctZjZlN1dDNWg3MW12M2hCSlRTaGpFdzZTeHQwODN0YVZtTlJqeFhpcnRHR05aQzdORGxLcm85YTdWblpfZlc0cDZsNm1ZVDZ4SHQ?oc=5",
+    "date": "2026-10-22"
    }
   ],
   "hengan": [
@@ -252,6 +252,12 @@
   ],
   "softys": [
    {
+    "title": "Empresas CMPC rises 3.06% in Thursday's session",
+    "source": "Global Banking & Finance Review",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPRnJkZWprVl8zV3pBcnNHaF90eDVVdi1sNUljWmc0eUpXdFdWRV9MTzhhc2ZSWHVxRVMzWmphR1hFa3VxZ2lScmNsb0tlVUJoY0xPcEtQV0ozNTdhVUxRSGJXVFA5OEd3RlJvU2xzQS1ETm5HUndlSWM5WWplUWlPajJtVS1uQQ?oc=5",
+    "date": "2026-11-19"
+   },
+   {
     "title": "CMPC agrees to sell Argentina forestry unit for $170 million",
     "source": "Lesprom Network",
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOGlBNGt5bmFpM3RBcmc4WEloRUlsTzRsMHd3OFgzUkhZN1RnVkF4cjFURjQ4ZEpNR21nOWNvZnd2LWxfTVpwQUlNQ21USmZHM0JFQjh6WDBmcE5oNlFzNWd6V1R3UFBIbFc2UERBWXc0dnJfajNuTks0NkhYMGh4REpMZ08zeE9LeWx3RnF1ZEdxR1h6MHpN?oc=5",
@@ -262,12 +268,6 @@
     "source": "Simply Wall St",
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQR2Z3VDJFZTF6REFWa1RzcV9ZTktkWElaRDJpWUVpdmhlUWtkTXFGZ3FlaUhZaGMtYWloQTY5cTJyQk5uUGkwWFNPeXcxcUUxSUtNR2g4a29OeFk1VS1HdkxEUVZ1Ulp4c2o1ZWtsTVF4bmh0ZUdIYS1BZ2tvX0pfUTlLSjJRSVlNWlZBUXNFamVzSG1xRWRDMHUzek1JZk9mZWFiejlFTVRybDg0WVFWMXdlS1dMbnNpWTlVLVBFNW1kbmswaW9TbnQwb1l0ejBjOTVoSnN4d9IB3AFBVV95cUxQZENSSXZSN3JfOThvTkRxMWR1VVlMejBUN1ZBYjFIeVBUQlBQc2xmUEI0T08tTGdybTNoQlVEX1RWZ2FlTm5yLXlLUGVzZDlnUXpVVW56akotN2VQQUhIbW02d205Sk00aG5KUVc1bUVDd2ZBa285QlZ1cUFLTVhVMHpGOXc2SDNCNExrY0h4cDhON1dxU2pJZmZSdjRoUmxjenZyYjItVHlLeDVnYU5ILVVEalhuTUFVcUhzbkNJbXpKaXFmSFo0a0JBTUZSTms5dUFFbzlyQURYVHky?oc=5",
     "date": "2026-11-13"
-   },
-   {
-    "title": "Empresas CMPC stock in focus after 84% profit drop through September",
-    "source": "ad-hoc-news.de",
-    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxON2pHWEZzWWdCY1NRSGwtQ1pxMGdfUWZ1Z0p1X3EtbkV5TTl6NEc0V28xc0Ywb0F5Y2JpVUxpVEdzNUFjQUl6QTlvU0FsWVdiZTU0WDJuU1VVcXBZU3c5RDJ0YnJiZEFFNnUtV1dHeVFZVG4xS0Z1NkJabmV6alZzVU5ubl9tWl9rX1hxdnllZ2hNS096YV9ZQWRrZWYzdTVTcTA5M3JHMUYwUE5LTzBJbU4tUVhnbTNtQTBndFRSa1pxalox?oc=5",
-    "date": "2026-11-12"
    },
    {
     "title": "The Empresas CMPC S.A. (SNSE:CMPC) Third-Quarter Results Are Out And Analysts Have Published New Forecasts",

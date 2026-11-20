@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T06:44:46",
+ "updated": "2026-11-20T07:40:11",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -185,6 +185,16 @@
    "quarter": "Q4 2026",
    "desc": "Mapping Data Flows transformations will become generally available in Dataflow Gen2, bringing the proven, low-code, Spark-based transformation capabilities of Azure Data Factory and Azure Synapse directly into Microsoft Fabric.With this rel",
    "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Dataflow-Gen2-and-Power-Query-innovations-at-Microsoft-Build-Low/ba-p/5189028"
+  },
+  {
+   "id": "e7abebd0-9aa5-f111-b8dd-6045bd0194ef",
+   "name": "Outbound Access Protection for dbt job",
+   "product": "Data Factory",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Outbound access protection is supported by dbt job items. When OAP is enabled on a workspace, dbt jobs run under the workspace's outbound access policy -- outbound network calls from the dbt job are blocked unless explicitly allowed.Preview",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/outbound-access-protection-for-data-factory-generally-available/5172006"
   },
   {
    "id": "9f3c0884-71c2-f111-aaad-70a8a5b194d8",

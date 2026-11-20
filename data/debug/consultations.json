@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-19T06:19:57+00:00",
+ "fetched": "2026-11-20T06:22:08+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -27,150 +27,154 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": 13535.0,
+    "id": 16932.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2022)5375434",
-    "foreseenActType": "PROP_REG",
-    "shortTitle": "Reinforced consumer protection cooperation ",
+    "reference": "Ares(2026)1634728",
+    "foreseenActType": "REG_IMPL",
+    "shortTitle": "CBAM declarations",
     "currentStatuses": [
      {
-      "frontEndStage": "ADOPTION_WORKFLOW",
+      "frontEndStage": "ISC_WORKFLOW",
       "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/17 22:20:33",
-      "feedbackEndDate": "2027/01/14 23:59:59",
+      "feedbackStartDate": "2026/11/19 16:34:00",
+      "feedbackEndDate": "2026/12/17 23:59:59",
       "isCurrent": true
      }
     ],
     "topics": [
      {
-      "code": "CONSUM",
-      "label": "Consumers"
+      "code": "CUSTOMS",
+      "label": "Customs"
+     },
+     {
+      "code": "TAX",
+      "label": "Taxation"
      }
     ],
     "initiativeTranslations": [
      {
-      "value": "Защита на потребителите — засилено сътрудничество в областта на правоприлагането",
+      "value": "Декларации по МКВЕГ — правила, информация и процедури за целите на прилагането на МКВЕГ",
       "language": "BG",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Ochrana spotřebitele – posílená spolupráci v oblasti prosazování práva",
+      "value": "Prohlášení CBAM – pravidla, informace a postupy pro účely uplatňování CBAM",
       "language": "CS",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Forbrugerbeskyttelse: styrket samarbejde om håndhævelse",
+      "value": "CBAM-angivelser – regler, oplysninger og procedurer med henblik på anvendelsen af CBAM",
       "language": "DA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Verbraucherschutz – verstärkte Zusammenarbeit bei der Durchsetzung",
+      "value": "CBAM-Erklärungen – Vorschriften, Informationen und Verfahren für Anwendung des CBAM",
       "language": "DE",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Προστασία των καταναλωτών — ενισχυμένη συνεργασία για την επιβολή της νομοθεσίας",
+      "value": "Δηλώσεις ΜΣΠΑ — κανόνες, πληροφορίες και διαδικασίες για τους σκοπούς της εφαρμογής του ΜΣΠΑ",
       "language": "EL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Consumer protection – strengthened enforcement cooperation",
+      "value": "CBAM declarations – rules, information and procedures for the purpose of applying CBAM",
       "language": "EN",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Protección de los consumidores: refuerzo de la cooperación en materia de aplicación",
+      "value": "Declaraciones MAFC: normas, información y procedimientos a efectos de la aplicación del MAFC",
       "language": "ES",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Tarbijakaitse – tugevdatud koostöö õigusnormide täitmise tagamiseks",
+      "value": "SPIMi deklaratsioonid – SPIMi kohaldamise eeskirjad, teave ja menetlused",
       "language": "ET",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Protection des consommateurs — renforcement de la coopération en matière d’application de la législation",
+      "value": "Déclarations MACF – règles, informations et procédures aux fins de l’application du MACF",
       "language": "FR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Tomhaltóirí a chosaint— comhar neartaithe forfheidhmiúcháin",
+      "value": "Dearbhuithe SCCT – rialacha, faisnéis agus nósanna imeachta chun SCCT a chur i bhfeidhm",
       "language": "GA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Zaštita potrošača – pojačana suradnja u provedbi",
+      "value": "CBAM deklaracije – pravila, informacije i postupci za primjenu CBAM-a",
       "language": "HR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Tutela dei consumatori – Rafforzamento della cooperazione ai fini dell'applicazione delle norme",
+      "value": "Dichiarazioni CBAM - norme, informazioni e procedure ai fini dell'applicazione del meccanismo CBAM",
       "language": "IT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Kuluttajansuoja – lisää yhteistyötä täytäntöönpanon tehostamiseksi",
+      "value": "CBAM-ilmoitukset – säännöt, tiedot ja menettelyt CBAM:n soveltamista varten",
       "language": "FI",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Fogyasztóvédelem – megerősített végrehajtási együttműködés",
+      "value": "CBAM-nyilatkozatok – szabályok, információk és eljárások a CBAM alkalmazásához",
       "language": "HU",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Vartotojų apsauga. Glaudesnis bendradarbiavimas vykdymo užtikrinimo srityje",
+      "value": "PADKM deklaracijos. PADKM taikymo taisyklės, informacija ir procedūros",
       "language": "LT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Patērētāju tiesību aizsardzība — pastiprināta sadarbība tiesībaizsardzības jomā",
+      "value": "OIM deklarācijas – noteikumi, informācija un procedūras OIM piemērošanai",
       "language": "LV",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Protezzjoni tal-konsumatur - kooperazzjoni msaħħa fl-infurzar",
+      "value": "Id-dikjarazzjonijiet tas-CBAM – regoli, informazzjoni u proċeduri għall-fini tal-applikazzjoni tas-CBAM",
       "language": "MT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Consumentenbescherming – versterkte samenwerking op het gebied van handhaving",
+      "value": "CBAM-aangiften – regels, informatie en procedures voor de toepassing van het CBAM",
       "language": "NL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Ochrona konsumentów – wzmocniona współpraca w zakresie egzekwowania prawa",
+      "value": "Deklaracje CBAM – zasady, informacje i procedury do celów stosowania CBAM",
       "language": "PL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Defesa do consumidor — reforço da cooperação em matéria de aplicação da legislação",
+      "value": "Declarações CBAM — regras, informações e procedimentos para efeitos da aplicação do CBAM",
       "language": "PT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Protecția consumatorilor: consolidarea cooperării privind asigurarea respectării legislației",
+      "value": "Declarațiile CBAM – norme, informații și proceduri pentru aplicarea CBAM",
       "language": "RO",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Ochrana spotrebiteľa – posilnená spolupráca v oblasti presadzovania práva",
+      "value": "Vyhlásenia CBAM – pravidlá, informácie a postupy na účely uplatňovania CBAM",
       "language": "SK",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Varstvo potrošnikov – okrepljeno sodelovanje pri izvrševanju",
+      "value": "Deklaracije CBAM – pravila, informacije in postopki za uporabo CBAM",
       "language": "SL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Konsumentskydd – stärkt tillsynssamarbete",
+      "value": "CBAM-deklarationer – regler, information och förfaranden",
       "language": "SV",
       "field": "SHORT_TITLE"
      }
     ]
    },
-   "openFound": 47,
+   "openFound": 49,
    "read": 300
   }
  ]

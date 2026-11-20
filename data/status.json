@@ -2,106 +2,108 @@
  "sources": {
   "feeds": {
    "label": "News feeds",
-   "status": "warn",
-   "detail": "38 of 39 feeds · 49 new · 1 failed",
-   "at": "2026-11-19T06:19:57",
-   "order": 10,
-   "failingSince": "2026-11-19T06:19:57"
+   "status": "ok",
+   "detail": "39 of 39 feeds · 48 new",
+   "at": "2026-11-20T06:22:08",
+   "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "ok",
-   "detail": "13 open and relevant",
-   "at": "2026-11-19T06:20:45",
+   "detail": "14 open and relevant",
+   "at": "2026-11-20T06:22:58",
    "order": 20
   },
   "procedures": {
    "label": "Regulation status",
    "status": "ok",
    "detail": "8 of 8 procedures",
-   "at": "2026-11-19T06:21:23",
+   "at": "2026-11-20T06:23:26",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
-   "status": "ok",
-   "detail": "64 of 64 indicators",
-   "at": "2026-11-19T06:32:43",
-   "order": 30
+   "status": "warn",
+   "detail": "47 of 64 indicators · failed: de_ppi_pulp, de_ppi_tissue, de_ppi_gas, de_ppi_power +13 more",
+   "at": "2026-11-20T06:38:48",
+   "order": 30,
+   "failingSince": "2026-11-20T06:38:48"
   },
   "ets": {
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
    "detail": "Already processed this file with the same mapping – nothing to do.",
-   "at": "2026-11-19T06:44:38",
+   "at": "2026-11-20T07:40:03",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
    "detail": "8 peers found · no changes",
-   "at": "2026-11-19T06:44:42",
+   "at": "2026-11-20T07:40:06",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
-   "detail": "115 planned features",
-   "at": "2026-11-19T06:44:46",
+   "detail": "116 planned features",
+   "at": "2026-11-20T07:40:11",
    "order": 50
   },
   "peernews": {
    "label": "Peer news",
-   "status": "ok",
-   "detail": "46 headlines for 12 companies",
-   "at": "2026-11-19T06:44:45",
-   "order": 46
+   "status": "warn",
+   "detail": "38 headlines for 12 companies · failed: essity (<unknown>:2:252: not well-formed (invalid token)), georgia-pacific (<unknown>:2:252: not well-formed (invalid token))",
+   "at": "2026-11-20T07:40:10",
+   "order": 46,
+   "failingSince": "2026-11-20T07:40:10"
   },
   "industry": {
    "label": "Industry statistics",
-   "status": "ok",
-   "detail": "Jan – Sep 2026: hygiene paper 990 kt (-1.9 %)",
-   "at": "2026-11-19T06:32:51",
-   "order": 36
+   "status": "warn",
+   "detail": "monthly update failed: no Statistische Kurzinformation found – showing the previous figures",
+   "at": "2026-11-20T07:26:54",
+   "order": 36,
+   "failingSince": "2026-11-20T07:26:54"
   },
   "water": {
    "label": "River levels & soil moisture",
    "status": "ok",
    "detail": "3 gauges · 5 sites",
-   "at": "2026-11-19T06:33:02",
+   "at": "2026-11-20T07:27:09",
    "order": 38
   },
   "weather": {
    "label": "Heat & rain at the mills (DWD)",
    "status": "ok",
    "detail": "5 sites",
-   "at": "2026-11-19T06:33:09",
+   "at": "2026-11-20T07:27:18",
    "order": 39
   },
   "gas": {
    "label": "Gas storage (AGSI+)",
    "status": "ok",
    "detail": "2 areas",
-   "at": "2026-11-19T06:33:37",
+   "at": "2026-11-20T07:27:27",
    "order": 37
   },
   "pulp_origin": {
    "label": "Pulp imports by origin (Comext)",
    "status": "ok",
    "detail": "3 products",
-   "at": "2026-11-19T06:33:41",
+   "at": "2026-11-20T07:27:32",
    "order": 36
   },
   "sites_intl": {
    "label": "Weather & rivers at mills abroad",
    "status": "warn",
-   "detail": "11 sites with weather · 7 river gauges · failed: lille river: Expecting value: line 1 column 1 (char 0); chateau-thierry river: Expecting value: line 1 column 1 (char 0)",
-   "at": "2026-11-19T06:44:37",
+   "detail": "11 sites with weather · 7 river gauges · failed: chateau-thierry river: The read operation timed out",
+   "at": "2026-11-20T07:40:02",
    "order": 40,
    "failingSince": "2026-11-19T06:44:37"
   }
  },
- "lastRun": "2026-11-19T06:44:46",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/44471332874",
+ "lastRun": "2026-11-20T07:40:11",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/44687245064",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }
