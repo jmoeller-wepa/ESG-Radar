@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T07:40:11",
+ "updated": "2026-11-23T06:53:25",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -115,16 +115,6 @@
    "quarter": "Q4 2026",
    "desc": "To enhance security, we aim to prevent the sharing of Microsoft account credentials across collaborators. The new connection-sharing model will encourage each collaborator to sign in with their own Microsoft account.",
    "url": "https://www.fabric-gps.com/release/f3579085-8c20-f011-998a-0022480939f0"
-  },
-  {
-   "id": "98a73759-e13c-f111-88b5-6045bd00fc61",
-   "name": "Dataflows - Dataflow Gen1 - Gen2 Migration Wizard",
-   "product": "Data Factory",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "The Dataflow Gen1 - Gen2 Migration Wizard will become Generally Available and production-ready, providing a guided, end-to-end experience to help customers confidently upgrade existing Power BI Dataflows (Gen1) to Dataflow Gen2 in Microsoft",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/unlocking-the-next-generation-of-data-transformations-with-dataflow-gen2---fabco/5172569"
   },
   {
    "id": "1f2fe2c0-3535-f111-88b3-000d3a376c0f",
@@ -325,6 +315,16 @@
    "quarter": "Q4 2026",
    "desc": "Microsoft Fabric items and their schedules today implicitly execute under user identities (owner or creator), which makes production workloads fragile: pipelines, schedules, copy jobs, and shortcuts break when owners leave the organization ",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/associated-identities-for-items-preview/5172039"
+  },
+  {
+   "id": "4b58794a-1de5-f111-84e8-6045bd0187f7",
+   "name": "Outbound access protection for Ontology",
+   "product": "IQ",
+   "tool": "fabric",
+   "type": "Preview",
+   "quarter": "Q4 2026",
+   "desc": "Outbound access protection for Ontology and Ontology Agent",
+   "url": "https://www.fabric-gps.com/release/4b58794a-1de5-f111-84e8-6045bd0187f7"
   },
   {
    "id": "894a1ab7-bbcf-f111-a059-0022480a4ef9",
@@ -1121,7 +1121,7 @@
    "name": "Ontology Health",
    "product": "IQ",
    "tool": "fabric",
-   "type": "GA",
+   "type": "Preview",
    "quarter": "Q2 2027",
    "desc": "We are introducing Ontology Health in Microsoft Fabric to help modelers quickly assess whether an ontology is ready for real-world use. With this capability, ontology quality is continuously evaluated across three core areas--foundation, va",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-iq-the-semantic-foundation-for-enterprise-ai/5172473"

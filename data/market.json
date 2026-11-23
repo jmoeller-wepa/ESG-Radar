@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T06:23:26",
+ "updated": "2026-11-23T06:30:39",
  "groups": {
   "fibre": "Fibre & products",
   "recovered": "Recovered paper",
@@ -402,7 +402,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -577,7 +577,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -976,7 +976,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -1373,7 +1373,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRD",
@@ -1777,7 +1777,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "us_wood_pulp",
@@ -2172,7 +2172,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "pulp_nbsk_eu",
@@ -2564,7 +2564,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -2960,7 +2960,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -3355,7 +3355,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -3750,7 +3750,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4145,7 +4145,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4540,7 +4540,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -4935,7 +4935,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "EXT_EU27_2020"
@@ -5326,7 +5326,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "INT_EU27_2020"
@@ -5717,7 +5717,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "reporter": "EU27_2020",
     "partner": "INT_EU27_2020"
@@ -6116,7 +6116,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · Gemischtes Altpapier",
     "table": "61281-0006"
@@ -6515,7 +6515,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · Verpackungen aus Papier und Karton",
     "table": "61281-0006"
@@ -6914,7 +6914,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · Gebrauchte Kraftwellpappe 2",
     "table": "61281-0006"
@@ -7313,7 +7313,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · Zeitungen und Illustrierte, Deinkingware",
     "table": "61281-0006"
@@ -7708,7 +7708,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "geo": "EU27_2020",
     "indic_bt": "PRC_PRR_DOM",
@@ -8111,7 +8111,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "us_corrugated_boxes",
@@ -8506,7 +8506,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "gas_ttf",
@@ -8897,7 +8897,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "elec_de",
@@ -8976,7 +8976,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "MWH2000-19999",
@@ -9380,7 +9380,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "gas_de",
@@ -9459,7 +9459,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "geo": "DE",
     "nrg_cons": "GJ10000-99999",
@@ -9863,7 +9863,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_eu",
@@ -10258,7 +10258,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_de",
@@ -10653,7 +10653,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_fr",
@@ -11048,7 +11048,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_it",
@@ -11443,7 +11443,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_pl",
@@ -11838,7 +11838,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_nl",
@@ -12233,7 +12233,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_be",
@@ -12628,7 +12628,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "grid_gb",
@@ -13023,7 +13023,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "eua",
@@ -13053,7 +13053,7 @@
     ]
    ],
    "status": "manual",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "eurusd",
@@ -13448,7 +13448,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "de_ppi_pulp",
@@ -13836,11 +13836,18 @@
     [
      "2026-09",
      129.9
+    ],
+    [
+     "2026-10",
+     129.8
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "no value of GP19M2 in 61241-0004 matches ['Halbstoff.*Sulfat.*gebl|Sulfat.*Halbstoff.*gebl', 'Halbstoff.*(Natron|Sulfat)', 'Halbstoff.*Holz|Holz.*Halbstoff', 'Zellstoff(?!watte)'] – see data/debug/des"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Chemische Halbstoffe aus Holz | Erzeugerpreisindex gewerblicher Produkte",
+    "table": "61241-0006"
+   }
   },
   {
    "id": "de_ppi_tissue",
@@ -14228,11 +14235,18 @@
     [
      "2026-09",
      137.5
+    ],
+    [
+     "2026-10",
+     134.1
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "no value of GP19M2 in 61241-0004 matches ['Toilettenpapier', 'Taschent.*Handt|Haushalts.*Hygiene.*Papier|Hygiene.*a(us|\\\\.) ?Papier', 'Toilett.*Papier|Papier.*Toilett'] – see data/debug/destatis.json"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Toilettenpapier, Taschen-, Abschmink-, Handtücher | Erzeugerpreisindex gewerblicher Produkte",
+    "table": "61241-0006"
+   }
   },
   {
    "id": "de_ppi_gas",
@@ -14620,11 +14634,18 @@
     [
      "2026-09",
      195.5
+    ],
+    [
+     "2026-10",
+     203.7
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "no value of GP19M2 in 61241-0004 matches ['Erdgas,? bei Abgabe an (die )?Industrie', 'Erdgas.*Industrie'] – see data/debug/destatis.json"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Erdgas, bei Abgabe an die Industrie | Erzeugerpreisindex gewerblicher Produkte",
+    "table": "61241-0006"
+   }
   },
   {
    "id": "de_ppi_power",
@@ -15012,11 +15033,18 @@
     [
      "2026-09",
      120.8
+    ],
+    [
+     "2026-10",
+     129.6
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "no value of GP19M2 in 61241-0004 matches ['Strom.*Sondervertr.*Mittel', 'Strom.*Sondervertr.*Hoch', 'Strom.*Sondervertr', 'Strom.*Industrie'] – see data/debug/destatis.json"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Elekt.Strom, b.Abgabe a.Sondervertragsk., Hochsp. | Erzeugerpreisindex gewerblicher Produkte",
+    "table": "61241-0006"
+   }
   },
   {
    "id": "de_ppi_diesel",
@@ -15404,11 +15432,18 @@
     [
      "2026-09",
      191.3
+    ],
+    [
+     "2026-10",
+     182.6
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "no value of GP19M2 in 61241-0004 matches ['^Gasöl$', 'Dieselkraftst', '^Gasöl'] – see data/debug/destatis.json"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Gasöl | Erzeugerpreisindex gewerblicher Produkte",
+    "table": "61241-0006"
+   }
   },
   {
    "id": "de_labour_paper",
@@ -15547,7 +15582,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · Verarbeitendes Gewerbe · X13 JDemetra+  kalender- und saisonbereinigt | Index der Arbeitskosten je geleistete Stunde",
     "table": "62421-0001"
@@ -15942,7 +15977,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · X13 JDemetra+  kalenderbereinigt · Herstellung von Papier, Pappe und Waren daraus | Produktionsindex",
     "table": "42153-0002"
@@ -16337,7 +16372,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. kosmet. Erzeugnissen und Körperpflegemitteln | Umsatzindex",
     "table": "45212-0005"
@@ -16732,7 +16767,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26",
+   "fetched": "2026-11-23T06:30:39",
    "usedParams": {
     "series": "Deutschland · in jeweiligen Preisen · Originalwerte · Eh.m. Waren versch. Art, Hauptr. Nahrungsm. usw | Umsatzindex",
     "table": "45212-0005"
@@ -17091,40 +17126,47 @@
     ],
     [
      "2026-01",
-     65.19
+     66.48
     ],
     [
      "2026-02",
-     61.92
+     63.3
     ],
     [
      "2026-03",
-     63.59
+     65.05
     ],
     [
      "2026-04",
-     63.29
+     64.69
     ],
     [
      "2026-05",
-     62.89
+     64.34
     ],
     [
      "2026-06",
-     62.26
+     63.66
     ],
     [
      "2026-07",
-     67.43
+     69.31
     ],
     [
      "2026-08",
-     53.66
+     54.86
+    ],
+    [
+     "2026-09",
+     63.93
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "GENESIS: {\"Code\": 7000, \"Content\": \"Für die Teiltabelle mit der Metadatenkombination:\\nAußenhandel (51000)\\nEinfuhr: Wert (US-Dollar) (WERTES)\\nDeutschland insgesamt (DINSG)\\nMonate (MONAT)"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "10 series",
+    "table": "51000-0014"
+   }
   },
   {
    "id": "de_exp_tissue",
@@ -17483,36 +17525,43 @@
     ],
     [
      "2026-02",
-     47.43
+     47.05
     ],
     [
      "2026-03",
-     51.0
+     50.7
     ],
     [
      "2026-04",
-     47.87
+     48.02
     ],
     [
      "2026-05",
-     45.81
+     45.9
     ],
     [
      "2026-06",
-     51.47
+     51.57
     ],
     [
      "2026-07",
-     50.98
+     50.99
     ],
     [
      "2026-08",
-     43.27
+     43.28
+    ],
+    [
+     "2026-09",
+     52.04
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "10 series",
+    "table": "51000-0014"
+   }
   },
   {
    "id": "de_imp_pulp",
@@ -17871,36 +17920,43 @@
     ],
     [
      "2026-02",
-     252.78
+     253.86
     ],
     [
      "2026-03",
-     276.67
+     277.69
     ],
     [
      "2026-04",
-     243.23
+     243.47
     ],
     [
      "2026-05",
-     255.14
+     255.69
     ],
     [
      "2026-06",
-     275.49
+     276.44
     ],
     [
      "2026-07",
-     252.34
+     252.71
     ],
     [
      "2026-08",
-     233.77
+     233.98
+    ],
+    [
+     "2026-09",
+     263.51
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "2 series",
+    "table": "51000-0014"
+   }
   },
   {
    "id": "cpi_toilet_de",
@@ -18246,9 +18302,12 @@
      139.3
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Toilettenpapier | Verbraucherpreisindex",
+    "table": "61111-0006"
+   }
   },
   {
    "id": "mix_wind",
@@ -18643,7 +18702,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "mix_solar",
@@ -19038,7 +19097,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "mix_biomass",
@@ -19433,7 +19492,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "mix_hydro",
@@ -19828,7 +19887,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "mix_gas",
@@ -20223,7 +20282,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "mix_coal",
@@ -20618,7 +20677,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "mix_other",
@@ -21013,7 +21072,7 @@
     ]
    ],
    "status": "ok",
-   "fetched": "2026-11-20T06:23:26"
+   "fetched": "2026-11-23T06:30:39"
   },
   {
    "id": "prof_energy_total",
@@ -21059,9 +21118,12 @@
      219004.4
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Insgesamt",
+    "table": "43531-0001"
+   }
   },
   {
    "id": "prof_energy_gas",
@@ -21107,9 +21169,12 @@
      79188.49
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Erdgas, Erdölgas",
+    "table": "43531-0001"
+   }
   },
   {
    "id": "prof_energy_power",
@@ -21155,9 +21220,12 @@
      53171.43
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Insgesamt · Herstellung von Papier, Pappe und Waren daraus · Stromverbrauch",
+    "table": "43531-0001"
+   }
   },
   {
    "id": "prof_energy_coal",
@@ -21203,9 +21271,12 @@
      3956.5
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "3 series",
+    "table": "43531-0001"
+   }
   },
   {
    "id": "prof_energy_oil",
@@ -21251,9 +21322,12 @@
      801.29
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "2 series",
+    "table": "43531-0001"
+   }
   },
   {
    "id": "prof_energy_renew",
@@ -21299,9 +21373,12 @@
      38367.15
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "4 series",
+    "table": "43531-0001"
+   }
   },
   {
    "id": "prof_waste",
@@ -21323,9 +21400,12 @@
      5713.5
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "Deutschland · Papier- und Druckgewerbe | Erzeugte Abfallmenge",
+    "table": "32161-0003"
+   }
   },
   {
    "id": "prof_envinv",
@@ -21359,9 +21439,12 @@
      269.11
     ]
    ],
-   "status": "stale",
-   "fetched": "2026-11-19T06:21:23",
-   "error": "time budget for Destatis used up in this run – tried again next run"
+   "status": "ok",
+   "fetched": "2026-11-23T06:30:39",
+   "usedParams": {
+    "series": "3 series",
+    "table": "32511-0003"
+   }
   }
  ]
 }

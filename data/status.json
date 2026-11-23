@@ -3,107 +3,103 @@
   "feeds": {
    "label": "News feeds",
    "status": "ok",
-   "detail": "39 of 39 feeds · 48 new",
-   "at": "2026-11-20T06:22:08",
+   "detail": "39 of 39 feeds · 57 new",
+   "at": "2026-11-23T06:27:58",
    "order": 10
   },
   "consultations": {
    "label": "EU consultations",
    "status": "ok",
    "detail": "14 open and relevant",
-   "at": "2026-11-20T06:22:58",
+   "at": "2026-11-23T06:28:45",
    "order": 20
   },
   "procedures": {
    "label": "Regulation status",
    "status": "ok",
    "detail": "8 of 8 procedures",
-   "at": "2026-11-20T06:23:26",
+   "at": "2026-11-23T06:30:39",
    "order": 21
   },
   "market": {
    "label": "Market indicators",
-   "status": "warn",
-   "detail": "47 of 64 indicators · failed: de_ppi_pulp, de_ppi_tissue, de_ppi_gas, de_ppi_power +13 more",
-   "at": "2026-11-20T06:38:48",
-   "order": 30,
-   "failingSince": "2026-11-20T06:38:48"
+   "status": "ok",
+   "detail": "64 of 64 indicators",
+   "at": "2026-11-23T06:40:58",
+   "order": 30
   },
   "ets": {
    "label": "Peer emissions (EU ETS)",
    "status": "ok",
    "detail": "Already processed this file with the same mapping – nothing to do.",
-   "at": "2026-11-20T07:40:03",
+   "at": "2026-11-23T06:53:16",
    "order": 40
   },
   "sbti": {
    "label": "SBTi targets",
    "status": "ok",
    "detail": "8 peers found · no changes",
-   "at": "2026-11-20T07:40:06",
+   "at": "2026-11-23T06:53:20",
    "order": 45
   },
   "fabric": {
    "label": "Fabric roadmap",
    "status": "ok",
    "detail": "116 planned features",
-   "at": "2026-11-20T07:40:11",
+   "at": "2026-11-23T06:53:25",
    "order": 50
   },
   "peernews": {
    "label": "Peer news",
-   "status": "warn",
-   "detail": "38 headlines for 12 companies · failed: essity (<unknown>:2:252: not well-formed (invalid token)), georgia-pacific (<unknown>:2:252: not well-formed (invalid token))",
-   "at": "2026-11-20T07:40:10",
-   "order": 46,
-   "failingSince": "2026-11-20T07:40:10"
+   "status": "ok",
+   "detail": "45 headlines for 12 companies",
+   "at": "2026-11-23T06:53:23",
+   "order": 46
   },
   "industry": {
    "label": "Industry statistics",
-   "status": "warn",
-   "detail": "monthly update failed: no Statistische Kurzinformation found – showing the previous figures",
-   "at": "2026-11-20T07:26:54",
-   "order": 36,
-   "failingSince": "2026-11-20T07:26:54"
+   "status": "ok",
+   "detail": "Jan – Sep 2026: hygiene paper 990 kt (-1.9 %)",
+   "at": "2026-11-23T06:41:06",
+   "order": 36
   },
   "water": {
    "label": "River levels & soil moisture",
    "status": "ok",
    "detail": "3 gauges · 5 sites",
-   "at": "2026-11-20T07:27:09",
+   "at": "2026-11-23T06:41:19",
    "order": 38
   },
   "weather": {
    "label": "Heat & rain at the mills (DWD)",
    "status": "ok",
    "detail": "5 sites",
-   "at": "2026-11-20T07:27:18",
+   "at": "2026-11-23T06:41:25",
    "order": 39
   },
   "gas": {
    "label": "Gas storage (AGSI+)",
    "status": "ok",
    "detail": "2 areas",
-   "at": "2026-11-20T07:27:27",
+   "at": "2026-11-23T06:41:35",
    "order": 37
   },
   "pulp_origin": {
    "label": "Pulp imports by origin (Comext)",
    "status": "ok",
    "detail": "3 products",
-   "at": "2026-11-20T07:27:32",
+   "at": "2026-11-23T06:41:40",
    "order": 36
   },
   "sites_intl": {
    "label": "Weather & rivers at mills abroad",
-   "status": "warn",
-   "detail": "11 sites with weather · 7 river gauges · failed: chateau-thierry river: The read operation timed out",
-   "at": "2026-11-20T07:40:02",
-   "order": 40,
-   "failingSince": "2026-11-19T06:44:37"
+   "status": "ok",
+   "detail": "11 sites with weather · 7 river gauges",
+   "at": "2026-11-23T06:53:16",
+   "order": 40
   }
  },
- "lastRun": "2026-11-20T07:40:11",
- "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/44687245064",
+ "lastRun": "2026-11-23T06:53:25",
+ "runUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions/runs/45124234263",
  "actionsUrl": "https://github.com/jmoeller-wepa/ESG-Radar/actions"
 }
