@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-23T06:27:46",
+    "lastFeedRun": "2026-11-24T15:58:10",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -19555,6 +19555,997 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOTmVnZERDYkJJXzVDZ3VqdjMwaUtYWTJuQUJ6QjBKUk9mLWUwNUh6NWpfNDI4SlpfTTFLRWxLc2JfMWtVWTNzZEhibUdqajlvN0lSR2t5R3NwOEFubEFfMmViSi1kc2NOcVFTTWdlc0JzbTFnZXI0WDNkQ3JOTDEtVGpGaGE?oc=5",
       "origin": "feed",
       "added": "2026-11-23"
+    },
+    {
+      "id": "feed-f47446a0e3",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Generally Available"
+      ],
+      "title": "Scalar User-defined functions (UDFs) in Microsoft Fabric Data Warehouse (Generally Available)",
+      "summary": "T-SQL scalar user-defined functions (UDFs) are now generally available in Microsoft Fabric Data Warehouse and the SQL analytics endpoint. During preview, scalar UDFs gained support for procedural T-SQL and additional query shapes through Expression Block inlining, a technology built to run procedural logic at warehouse scale. A subsequent preview update expanded loop control, large-value data type support, and the…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Microsoft Fabric Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Scalar-User-defined-functions-UDFs-in-Microsoft-Fabric-Data/ba-p/5399753",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-7f47a49321",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+      "summary": "Zero data retention with Enterprise Frontier Safeguards is now in beta",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-ac09a7197c",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "KPMG's Todd Lohr on AI when your data is also your clients' data",
+      "summary": "Todd Lohr, KPMG US Vice Chair and Head of Client Technology & Innovation, on adopting frontier AI and building safeguards at the same time, and what that means for a firm that holds its clients' most sensitive data.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/kpmg-todd-lohr-on-ai-when-your-data-is-also-your-clients-data",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-e277391e1a",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Introducing Claude Ship",
+      "summary": "Open a pull request and get back to building. Claude can now review pull requests, fix them, and approve the ones that a team's policy allows.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-89fabf4c99",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "The enterprise guide to securing coding agents",
+      "summary": "How security and technical leaders can understand and bound risk as they scale Claude Code",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-49fc03a1ae",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt"
+      ],
+      "title": "What makes a great ChatGPT app",
+      "summary": "How to build capabilities that make conversations better.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://developers.openai.com/blog/what-makes-a-great-chatgpt-app",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-680b35173b",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agents",
+        "GPT"
+      ],
+      "title": "Richpanel helps companies automate 50% of support in 30 days",
+      "summary": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna for their conversations.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-8abb20898e",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Codex"
+      ],
+      "title": "Building security review into your SDLC with Codex Security",
+      "summary": "Four principles for integrating security reviews into development with Codex Security and the CLI.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://developers.openai.com/blog/building-security-review-into-your-sdlc-with-codex-security",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-f5d14c6820",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Introducing file slicing controls in the Gemini API - blog.google",
+      "summary": "Introducing file slicing controls in the Gemini API blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOYmRGbmJqX0VpT0hPa1NPLVUwNnV5VWw4el9SMDcyTXpPTkpWNlN0dnE3MnZJSFRxSThDSGNteFFmeFU0VVlwQ0dfY3U0aHJ6SUdXc0ZtSERheWVPY1h3NGNwTjlDNWp4am04MGs3TXlWMk41UVJqYzF1emYtQlR4cExnZjNJV1IxUkMyb05pYWFadw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-07aa261648",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Here are 4 things you didn’t know you could do with Gemini Canvas. - blog.google",
+      "summary": "Here are 4 things you didn’t know you could do with Gemini Canvas. blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPcXB1SVIta1ppS3kzX3o2b3VCSkhGTF9XYXlfZEl6dU1sR2tQbVZNV2V3cXMyZllDZXotSjRIYlBRODJzeHJaYWJ3QWRuWkduUTl2Wnl5S0JnUUctZzNYdlVidVRBZ3lpbmIzdXB0d243YUFSQXVPUEx2c2VVY0Vvd3dIRXo?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-0e604a8707",
+      "date": "2026-11-23",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "See what 6 builders are making with Gemini 4 Hydrogen - blog.google",
+      "summary": "See what 6 builders are making with Gemini 4 Hydrogen blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOFMzU1NOanNrRW1LV3JoRjdpMlU2UHVFNkhaNHVHWGJZeWFrd2RoX0VvSXlJWGpsb0thOHg4dTlUblk4X0pESGxQVmQ0Y002ekZIRkRBZVhyUnRObGpTcEZkdjQxeFhmWmlib1pBX1hCMi1NRVo3Rjg0bVh2N2p0eTMxakdlTkpMZ0Jqa1lsZ3h6ODdLMWpQdkNpVzNfMnV1?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-750d78bb57",
+      "date": "2026-11-23",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [
+        "Emissions Trading"
+      ],
+      "title": "EU, UK Agree to Link Carbon Markets from 2028",
+      "summary": "The European Commission and UK government announced an agreement to link their Emissions Trading Systems […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/eu-uk-agree-to-link-carbon-markets-from-2028/?utm_source=rss&utm_medium=rss&utm_campaign=eu-uk-agree-to-link-carbon-markets-from-2028",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-5b9b31ac51",
+      "date": "2026-11-23",
+      "type": "regulation",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Human Rights"
+      ],
+      "title": "How Brooks Running is using supplier data to address human rights risks",
+      "summary": "The brand conducts an annual mock detention exercise with suppliers to improve visibility over a broader range of materials and downstream compliance.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/how-brooks-running-is-using-supplier-data-to-address-human-rights-risks/875326/",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-fa0b41e77e",
+      "date": "2026-11-23",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG SRB & SR TEG Joint Online Meeting 24 November 2026 - EFRAG",
+      "summary": "EFRAG SRB & SR TEG Joint Online Meeting 24 November 2026 EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQzAyMjVjenlKMWliRW5TcXNJZF93U3lkeUZlT21yNHJMNXdyMGNjaTdSd3dqZUpkZDFBbGtrMWhBZ2IzSEU0VmFiU0ZMTW5sT2YzUVRlYllzUXE3WGdkOUs5U0tBOHYxMW0zMXlVOFFEV0NsUWNpM2dvbGxscUhaSlBBdDlNdUhmalRjZVhsUTZYWk5ia0FFNWRyZEZiM3hZQW9EcA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-49e924cbb1",
+      "date": "2026-11-24",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Commission approves €1 billion Slovenian State aid to support closure of Premogovnik Velenje coal mine - The European Sting",
+      "summary": "Commission approves €1 billion Slovenian State aid to support closure of Premogovnik Velenje coal mine The European Sting",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaVBtRndpNVQwYTdwVlJQTVBXZ3RuMm5iX2JrMXNJQ3BlNlB1N2hyN2xlaWJkVzJmQXExVHV3SWo5MW1Kd05JM1VzazBEdFp6NGg2OXM4VmwyVkJ1QXpiRGdVcjBuS3dJNDFTMmRwYjJldFptN2ZjVldpRU5nbHJacHkxdGxLakVYQkEtX1BPSzJ6em14akVQTS1pcmdKUnl4alJrSEIxTVpDelp0MVhfcnQ0WXZ6UXVsR1JaejdONDdrRXB6SjZRWWdaeUp5clpaNjdoNms4aw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-bd9046f315",
+      "date": "2026-11-24",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Oliver winery reaches milestone in ongoing carbon-neutral commitment - Castanet",
+      "summary": "Oliver winery reaches milestone in ongoing carbon-neutral commitment Castanet",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcHFOVGkwRTFXVHRwUXlqc2s1ejd3Zmd5N3ZRZmpXRmRMc3ZEODVOZ2ZrRURWQTRYbGM5U205OEthOFFkYmdvZzlKRlBUcUl4Q0t4YlZWWWswTFlscThtMTZYNVNJMklkYnhfX0JxWjZqMzZwMTBjUFdIM3NxMUZabGVnUDBZTkF1NVlsa3N4MUNGTGpoaXZ4Q19tdWFlc1FyaWo2M1YxUWpFZG9admVHYTlCX0JpQVk4UXdVZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-e2cab377e2",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [
+        "circularity"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "A brighter approach to sustainability - OPI - Office Products International",
+      "summary": "A brighter approach to sustainability OPI - Office Products International",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Ecolabels for tissue (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQWGJmM0loaWVaVl84Z3k1cmZXU2NlYTBncmVhNlB5enE1TnlNREtsUFBhdlNweGZmcVpaaTJhUW5qRkduQnhNR2stNUdUNWpDd1ZzMkZUUURkX0ZVcmtCVFk2NF9OVWt5ZUJWUkhRaFlkVXMwdjJtQXhYOU1nWUVHRC1RNXFCb0st?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-cef4319590",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "NZ’s Largest Mechanical Pulp Mill Brings 36,000 Hectares Into PEFC - Wood Central",
+      "summary": "NZ’s Largest Mechanical Pulp Mill Brings 36,000 Hectares Into PEFC Wood Central",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBtN3YxQXZhNHVmQ1hfaHpSY1AzalBLcGZzUzNwZUczTTg4MTg1SEk5YUhsNXRiY242SjdyOUtQdk5LUlZ2QWhRV2huYTV3SWtBRlZlNzdkZWh6VGFGSVFsWGRCMmU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-1022d29911",
+      "date": "2026-11-22",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Ab Montag bei Aldi: Lichtlösungen für unter 5 Euro - Teltarif",
+      "summary": "Ab Montag bei Aldi: Lichtlösungen für unter 5 Euro Teltarif",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9QaDhNbmtTcTFQR2lNTTlOSzZCNXpsTzJnWUdXbVRZTTYwQVpZLVpqZDVadlRMMVZZYllxSHF6SjNHWTMtZ2pKSDZCY3M5NHI2LU9QdkFOTVUzQXFHRDRBNUs0ZGJhcm5KdmlJeEprWWVHWEYtS0c1cVFn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-5a077fd0e8",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Spaghetti-Verpackung nur auf Hebräisch – ist das erlaubt? - SRF",
+      "summary": "Spaghetti-Verpackung nur auf Hebräisch – ist das erlaubt? SRF",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNdGE1aUhaYk9UejI0QjVsVnJZMWV0enQxY2hFbHlPdWY4TTZlRkczdnZuSzFRSHItQmVKbDlZT0dvRnpjTVAxVG9FQjBfb0o3azJMX3ZGcDdDYmkwV2NJMTRpdWM1dkswUFZFbTdsS3RUN09FQXR0MDJpSGhlZVY3M0dWTTNHVE5yNUtpVFVaUktiZWdTeHU3dXNCeWhzbDUxWU5NM2c2VzdkRkNMLTNhbkc2Y1VkaDl4WXEyNlFvUnhMUFFJemVhbXRVSk93NkZnMkR3VHc2bXpzZmViSGc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-8a3469c2d0",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Glätten ohne Steckdose: Dieser Akku-Haarglätter von Lidl hält bis zu 30 Minuten - desired.de",
+      "summary": "Glätten ohne Steckdose: Dieser Akku-Haarglätter von Lidl hält bis zu 30 Minuten desired.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOel9SVEhMQ3ZCSDhIemYxZ2h1UFZZQmJHcVVlMnQxQktLbmZrTlJWeDdnR2lGN1RySzNERTZIcG5saTFWWlFhYmRPT0NRdldkdGxUMkZKbndmQTUxWExWWDV1bU4tLURRSFdJZ3ZQcnFNQzBZaVRLTGpOUkNXWWlfSGtXWE53YWpOU3ZqMndkbEdONGdZbVVWUDg4blNqdWRWa2JLdGhHMGpyTkpzSjRPc0UyX2Rjc2ptb1hBZGlYVmhHRWlDUE9rcmpidmswZTlOMHpfT3ItVFNMWHh5MGo4Wg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-f007942718",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tandil Eco: Aldi-Waschmittel kommt von einem bekannten Öko-Hersteller - DerWesten",
+      "summary": "Tandil Eco: Aldi-Waschmittel kommt von einem bekannten Öko-Hersteller DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdmJBTUw4akNlcFhqaG5nVmQ2Z0JUMzhtcVNHQ21sajcxUVRfQVJRWGw3RE9EV21vdXBGWlAwZVdVeW54ZUY0S3pNU2lELXF6MjYyR2NVN0pWNzBuTEJleEVCWFZEWE54bDlMVGhKQm5BaUE2WERhSDhjeGNUTXlDWHVQem9oNjY5T3FBQTN6cXBETUp4enpGVVN1U21VUXNJNGtCVDFNUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-909d6b5916",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kurzwaschmittel von Aldi und Rewe: Warum Tandil, Coral und Co. mehr versprechen, als sie halten - DerWesten",
+      "summary": "Kurzwaschmittel von Aldi und Rewe: Warum Tandil, Coral und Co. mehr versprechen, als sie halten DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOY2p1WUUtWU95X3d6VEczWm02NURMWGxNU1VZWGxXV1pXRElMc29yYVVQTWxCRVZzV0JXem1yNm9rRUhtRG90TzBPUnJzOHVIcE1PZlNrbDhDY2p2NC1Sb1dFZ1JGUkNCbVNaUkhfSFB5TkhtQ1pZYS1qaER1TnBrZ1NWakpWUktDNzNqSWFMdkhXN3hQSktCbXRWMGNTUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-041d6090dd",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kaufland ruft Kartoffeln bundesweit zurück - Blaulicht-Report",
+      "summary": "Kaufland ruft Kartoffeln bundesweit zurück Blaulicht-Report",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5fUHNmZmhLRnNWYmFpVTR1R2xXTnM3NHhMRlUxQ0ZFRlNkTnRCMW9HRjVTalFXUWFIcjdmcWtqdGpDU2JvOUt1T25iVGdTRlZPdktnUjRUODRkVUxqd2h1Z2tELUVnNXJ1M1pjci1QRGxPUkNWYTVR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-c67165035d",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Meta prüft Klimaziel 2030 wegen des KI-Ausbaus - NeoTeo",
+      "summary": "Meta prüft Klimaziel 2030 wegen des KI-Ausbaus NeoTeo",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTUJ5bURqYjZhd2ktNlRfcjJGWk9aOEpJbjNfZkktMkM3SFhGMXItcXppZl9lMHhIaHFDOWVPNVM5ZXJScklMV29rT056cUlERkQ3Vk1XTm1maXliMld5NnZnTDlVRDRsWGVRSERqX0RZSmJoMVUwSEJESjBmOW4wbzhic0hTcTlrUDNj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-69651f2c47",
+      "date": "2026-11-22",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Schoko-Adventskalender von Lidl und Co. im Check – hier gibt’s am meisten fürs Geld - Echo24.de",
+      "summary": "Schoko-Adventskalender von Lidl und Co. im Check – hier gibt’s am meisten fürs Geld Echo24.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUNIT000RHRfTC1nMHZvTnBES0RLbnA4dDQ3bkJSa1F1SDFxTEhwS2lIT3hFd3BWSV9pVTZvSThrTXJsNDBmT3VCY0l0Y1llZDlZeHNJM1l0eEtrQ01OTFpvd1pmeXJhMUlMMTNBT3JMZm5LR0ZGbWtGUFlaNUIzZ3RtWklYMk0wRU9oY0FHeGVsZzNMQkpUQ0lzRzU4OHNyMFotR1pWY1BKWVBKcWVMMThrYzVXYjV2eWFiZnFaUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-8932f89053",
+      "date": "2026-11-21",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Diese 3 Rossmann-Produkte kauft unsere Beauty-Redakteurin immer wieder nach! - ELLE",
+      "summary": "Diese 3 Rossmann-Produkte kauft unsere Beauty-Redakteurin immer wieder nach! ELLE",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOb1p2WkF3VXBKTkk4dWlzbEhxMjR5RWFaa3c3RW1TVGMwYld3S1p2U2VqaFg5cTVEVkQ3MEEtd0pDVUxjMmdqWFNyTzJqQkc2Z2cyOGZIWHVnTzRHNzdxRHluN2c3aWIxb3BFel9VZFF6LVVFWVdEOXpSV3ZDejVFZWhHLTlVQWg5NWFyeTNfOHhOYVlsREJCYThsUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-8bbe860ad0",
+      "date": "2026-11-21",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann warnt vor Benutzung dieser Kondome: „Qualitätsmangel“ - Schutz nicht garantiert - Ruhr Nachrichten",
+      "summary": "Rossmann warnt vor Benutzung dieser Kondome: „Qualitätsmangel“ - Schutz nicht garantiert Ruhr Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVnhfYXhBd0ZCcERGSVZEODV0SVNjVDI5ckJUZ2VlSFc5ejBubGc5WTNYYmdCWkh5YW4zZnc5RGZLTzlJNW9UaEZLMUQ0MGxsNVktTlVzTWZxYXNpYWQ3aml3ekFnWjhUaU42eWoyWG1XUEtyWmMzOW9Ea292ZHBLaE9fVGVkY09xUlFoZElHV3NYRWY2bW5vVWRpUHJkMDB3MktRWVBoVldUc2VVYzZfWVRXNDB3NnNMQWdZall3NFExWGZneDZLMm9JMDlYazhTSnlsVzc2RnZOU0VpNEkw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-fbd25628d7",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann-Adventskalender im Test: Ein Schnäppchen mit Schönheitsfehlern - IMTEST",
+      "summary": "Rossmann-Adventskalender im Test: Ein Schnäppchen mit Schönheitsfehlern IMTEST",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZmlUR3Foc0diSEF3M1hIeHVBNjMxOC0tamZuSWFiaEE5VExnRkYwZnVnS3Y4cWxkV1J6OWxmc2ZnV29Dd3ROSGwyRDlvYTVmbFRxazVhME9xQUFTdXQxQmRWWkFkMEtfNzc4RE9UbTc4ZXI4Yk9udG5zX21JNXpSYzBJNFhfTGlqX2dPUEF4X252VVE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-0d9c5ced22",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Norma und Rossmann bringen Geräte ohne feste Steckdose - SuaraGarut.ID",
+      "summary": "Norma und Rossmann bringen Geräte ohne feste Steckdose SuaraGarut.ID",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5JTWt0clBfR1ZoQjBNRy1aVkhWeW5tWTRURGt1aERqajVEcVlYZUtQY1d5QVI0X0RWUFBRMEhnS04xQ0hMMWxjQ050S0VNX0hXSnFjQW1OWml5WnRRZkRXT0dyUWoxa3hPajRoTWRqYUZ1c2tSdnNZ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-4369210669",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "L’association L214 dépose plainte pour « sévices graves et mauvais traitements » contre un élevage porcin de Poullaouen et les centres E.Leclerc - Le Télégramme",
+      "summary": "L’association L214 dépose plainte pour « sévices graves et mauvais traitements » contre un élevage porcin de Poullaouen et les centres E.Leclerc Le Télégramme",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxNa2hIUGY2WExoLW5pbGg0alFZel9IQU9MMjVQQW1YNDdmWU5UeXRvbVYza0dUcGRwUENkQnNhMUVBaW1Rd2N5cndBRmtvVlhHQnVtU3VZcEg0ejFDbWdYUWxvdUhVaFE0bklITV9aWGZFcFowQ21wQ1dZdDNYdUpLekUtbzlSVzBGaUVuV3k0WVNwTmVMNVlwRlQzdlV2eTNYWUZJUDI0SVdGUnZoUnp3U0xOUDJZVFlHWFNreWhhblZsbVVjN1hKWFZKUDRSbGpTVEJrMlpYVDBZazlKZ3FUcU1lcWhhR1JuQnhLcWV6Ty00Qy0tV2NRcTMwZElieEh4bEMtZFkxMVhBWXdtX1Awem5kNEREN3JFMFdWSlVhZklyQjZ2N0dHZmNVSVR2Z08wR0E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-f09769836d",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rappel de pommes de terre : les lots Leclerc et Lidl - Libnanews",
+      "summary": "Rappel de pommes de terre : les lots Leclerc et Lidl Libnanews",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5QQ3RLWDc2VWc5cTRTZWszb05aVVNPUmdHaGVPTDJITzRMTTNBbjkxLTJkUk53ZWNUNXY5OUNUYUxpVElNZUZ1M3hUTnhvNlVtSXhHdEF5TXQxT0tWT2w0UGNPRWpJbV96cjZCSF9pb3BiblhuSjZFa1hNXzQ2Zw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-308e528416",
+      "date": "2026-11-22",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Leclerc percute (encore) Hamilton, Ferrari en colère - L'essentiel",
+      "summary": "Leclerc percute (encore) Hamilton, Ferrari en colère L'essentiel",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYnJCMlM3SXl5YWhxeWJGSlpEVDA0TDFTS2lENThXUVFUTHd2NVNwa1B5dTJqT2dlazlUTFJTb05qWXBSMUlpaTc1c1A0Q0F5NFptNGRkOHFWaFBlQlFnZkQ3Z1Raemd2Wkd6N0dDMHlWVllwWk9YYVhZMDVLMk9UN2VkaDNKSmxFRFNTb1ZfaHBTbEhta2ZGa2thRnV4cTZDcGFEekhmMA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-3df9622ed7",
+      "date": "2026-11-22",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Leclerc révèle que Vasseur a jugé sa collision avec Hamilton « inacceptable » - Motorcycle Sports",
+      "summary": "Leclerc révèle que Vasseur a jugé sa collision avec Hamilton « inacceptable » Motorcycle Sports",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNRHBQM09LUEpVVU9ZcnlVLU1OVHFjSXdZbFhmckRjTnVLYUVEV01xcmpsTWVCYXRCVWotM1MwaFdrRW5nd3VXaDRVVy01aVhoZW1GNk9HODRGb3ZwQ1N6cDE3NU5BNHFSU2NYX1ZCSTZ4N0R5czJHck1TRnpYcXFkQlFkaUtLQkhlOGtPX2M3UmJmbm5tV2dsQkhMSzFiUUZtSG5Sdy1VUGd1dw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-27cff74a7e",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Pommes de terre rouges E.Leclerc rappelées : les trois codes à vérifier - Economie Matin",
+      "summary": "Pommes de terre rouges E.Leclerc rappelées : les trois codes à vérifier Economie Matin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSlBadHNMcUdUWnNLbW4wb1pxZnBGa0JMdVB5NzliR25JQm1nekZsQV8wN3dWUlZaRDJOT0I5UVFQdFlpUFN2YW1FV1BiM2drc042VEZLTlBrN3NJMlNPQTk4Vm5aTkV1XzF0SGs3Y1VpNmVfVzJQRC1KUjhyRmJSTk5EVm02WXo1X1dxd1l0dVlYMjVxU1YyNlRYUnpDbDg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-1439816c71",
+      "date": "2026-11-22",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons launches new £1 bakery item in 400 stores available until December 27 - North Wales Chronicle",
+      "summary": "Morrisons launches new £1 bakery item in 400 stores available until December 27 North Wales Chronicle",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMGJVQV9JVlJjS3hYSVdNVEc4ellESFZCS2l3Qkk0X2dCNFpMY2dZdTIzQlZjUEVrRjZZTm9oM1hJNjV0cGZMSVdWLW1pZXZJbXJYYUJXdVFJZEpNek0zTW9fOHMyeVZYZUl0cXAzRFlBcWVqRDZQNFpEdkVmOTNPUXZTYXZMdGE5czRrS0ZFNUZaa2hnTzFFdUdYOFVRRUF5MlE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-2e608718be",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Fonterra Sets Share Sell-Down Rules for Ceased Suppliers - Rural News Group",
+      "summary": "Fonterra Sets Share Sell-Down Rules for Ceased Suppliers Rural News Group",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVTdUcjdlaDJDX3I4aUpLaV9vRENHamVnMlkxeWd3Ui1oN2VkaFJtWVMxbVozRThjNmJMOVA1d3JiaFkwOUhWY09ob2ZtalZPQlZFX2h5UXFtLWVpa1NMUEJiVUdaSWhkN0x5dXJTcFdJQ1ZZdUpVRVpyLXFiXzNmM05kSWxzQjg4WmMzWnN3eDRqdktRQTFFeHJvbHFhM2VqVFEyZUN2akJGS0RHTEJ2NGVFZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-507786421c",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "CDP: Businesses Need Consistency, Clarity and Confidence - Sustainability Magazine",
+      "summary": "CDP: Businesses Need Consistency, Clarity and Confidence Sustainability Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRnF1b21Ha3Z0ZG5PRktReWNhXzdnUDlEa1AwZnNUcWZvaXZZLUY5WlFrcVgyekpIS3VnOHFwQ0ZRXzN3NEJ2SGwzQXFMeFNtMkdFdGgxU0ppMmx1U014andURFVPWG90MFNEdzIzdm4tOEd3STFEOHNxWi1OR3FyR2FIMXZVQVRGZDFLWEh6UldRZHc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-c2586f9cd4",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "COSMAX Lands Spot on TIME's Top Sustainable Growth List - Businesskorea",
+      "summary": "COSMAX Lands Spot on TIME's Top Sustainable Growth List Businesskorea",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9sdC1JNG1ubm9iWndJVUE3UUIwYmdLQmpQS1ZidHcxNmlGSzlxVE9WZTdRNzdLeTBOTmxOeG1CaThfei0wbDFCUFJadkNnVTlfX2RKeFB6bDVmWFZybEJqM3VGZ0dmWWJsMVVaNDJoNUtvRTlI?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-8fe91b1c4c",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Cosmax Named to TIME's \"World's Best Companies in Sustainable Growth\" List for Second Consecutive Year - 아시아경제",
+      "summary": "Cosmax Named to TIME's \"World's Best Companies in Sustainable Growth\" List for Second Consecutive Year 아시아경제",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5wZ3lyalQwYnFkWnZBZTNPOXk5aGdiVmZVNTNPRkRYSzRSSzdMNHI2YkcxSDdudmNDc1RSb2RZUUw3MVhuZkdnZ1BpeFFFZ3VsUTBIMFFTeHNKMXU3dEdnWWlwTnM?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-7cb4a2cb87",
+      "date": "2026-11-24",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "LAT Water Technologies launches free compliance calculator for the EU's new wastewater rules - EIN News",
+      "summary": "LAT Water Technologies launches free compliance calculator for the EU's new wastewater rules EIN News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPaHU3YTRkc3ZiM1d4UzViM0dGLWtWOTFyMnZ0Y3Z2RjN3TjRYcmpXV2Rpd212Nm1uU00xeXF4b1ZwSDlXZVBteHpCS2tsYlNaOGFocy1BTzFGV0RGZUxMTVAwc2xHVExoVGlqbENxN203ZjRiS0x4bEVqWnlqOFRwOWNwUktKZFE4SllNN2wxaFlBM2kySDJnRUQ3bFJ0V21SNTFfalItVTZITGIxcUF0UU5jUjBjQ21Udl95MHBvSFZuTHZOa19acndybUh3VHM?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
+    },
+    {
+      "id": "feed-4bfcaa5e7a",
+      "date": "2026-11-24",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Industrial Water Treatment Market to Reach USD 84.6 Billion - openPR.com",
+      "summary": "Industrial Water Treatment Market to Reach USD 84.6 Billion openPR.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLWdONm5KOVlJb2FNVmtHZzRrbjFBbnN0b1pHSEhlWWUyMWtaa2FyMUphMGExTWVWOUNyRE5fRy03RV9Ca19iTnFHNlpoR3VUWVBPT3RRT09mc1dkaVAzczNTZk1xd3RUS0l5QjdYTTJ1OWhVUkJTbTl2bVZ3WEdOZ1c0OHlicm8wWkVuQng3QTZ0VHJUbWVRSEZKUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-24"
     }
   ]
 }

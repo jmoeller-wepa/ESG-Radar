@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-23T06:27:58+00:00",
+ "fetched": "2026-11-24T15:58:26+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -27,150 +27,146 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": 16932.0,
+    "id": 14622.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2026)1634728",
-    "foreseenActType": "REG_IMPL",
-    "shortTitle": "CBAM declarations",
-    "currentStatuses": [
-     {
-      "frontEndStage": "ISC_WORKFLOW",
-      "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/19 16:34:00",
-      "feedbackEndDate": "2026/12/17 23:59:59",
-      "isCurrent": true
-     }
-    ],
+    "reference": "Ares(2025)2746797",
+    "foreseenActType": "PROP_DIR",
+    "shortTitle": "Digital Fairness Act",
     "topics": [
      {
-      "code": "CUSTOMS",
-      "label": "Customs"
-     },
-     {
-      "code": "TAX",
-      "label": "Taxation"
+      "code": "CONSUM",
+      "label": "Consumers"
      }
     ],
     "initiativeTranslations": [
      {
-      "value": "Декларации по МКВЕГ — правила, информация и процедури за целите на прилагането на МКВЕГ",
+      "value": "Акт за справедливост в областта на цифровите технологии",
       "language": "BG",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Prohlášení CBAM – pravidla, informace a postupy pro účely uplatňování CBAM",
+      "value": "Akt o digitální spravedlnosti",
       "language": "CS",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM-angivelser – regler, oplysninger og procedurer med henblik på anvendelsen af CBAM",
+      "value": "Retsakt om digital retfærdighed",
       "language": "DA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM-Erklärungen – Vorschriften, Informationen und Verfahren für Anwendung des CBAM",
+      "value": "Rechtsakt über digitale Fairness",
       "language": "DE",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Δηλώσεις ΜΣΠΑ — κανόνες, πληροφορίες και διαδικασίες για τους σκοπούς της εφαρμογής του ΜΣΠΑ",
+      "value": "Πράξη για την ψηφιακή δικαιοσύνη",
       "language": "EL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM declarations – rules, information and procedures for the purpose of applying CBAM",
+      "value": "Digital Fairness Act",
       "language": "EN",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Declaraciones MAFC: normas, información y procedimientos a efectos de la aplicación del MAFC",
+      "value": "Ley de Equidad Digital",
       "language": "ES",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "SPIMi deklaratsioonid – SPIMi kohaldamise eeskirjad, teave ja menetlused",
+      "value": "Digitaalse õigluse akt",
       "language": "ET",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Déclarations MACF – règles, informations et procédures aux fins de l’application du MACF",
+      "value": "Législation sur l’équité numérique",
       "language": "FR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Dearbhuithe SCCT – rialacha, faisnéis agus nósanna imeachta chun SCCT a chur i bhfeidhm",
+      "value": "An Gníomh um Chothroime Dhigiteach",
       "language": "GA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM deklaracije – pravila, informacije i postupci za primjenu CBAM-a",
+      "value": "Akt o digitalnoj pravednosti",
       "language": "HR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Dichiarazioni CBAM - norme, informazioni e procedure ai fini dell'applicazione del meccanismo CBAM",
+      "value": "Atto legislativo sull'equità digitale",
       "language": "IT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM-ilmoitukset – säännöt, tiedot ja menettelyt CBAM:n soveltamista varten",
+      "value": "Digitaalista oikeudenmukaisuutta koskeva säädös",
       "language": "FI",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM-nyilatkozatok – szabályok, információk és eljárások a CBAM alkalmazásához",
+      "value": "Jogszabály a digitális méltányosságról",
       "language": "HU",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "PADKM deklaracijos. PADKM taikymo taisyklės, informacija ir procedūros",
+      "value": "Skaitmeninio sąžiningumo aktas",
       "language": "LT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "OIM deklarācijas – noteikumi, informācija un procedūras OIM piemērošanai",
+      "value": "Digitālā taisnīguma akts",
       "language": "LV",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Id-dikjarazzjonijiet tas-CBAM – regoli, informazzjoni u proċeduri għall-fini tal-applikazzjoni tas-CBAM",
+      "value": "Att dwar l-Ekwità Diġitali",
       "language": "MT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM-aangiften – regels, informatie en procedures voor de toepassing van het CBAM",
+      "value": "Rechtshandeling inzake digitale rechtvaardigheid",
       "language": "NL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Deklaracje CBAM – zasady, informacje i procedury do celów stosowania CBAM",
+      "value": "Akt o sprawiedliwości cyfrowej",
       "language": "PL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Declarações CBAM — regras, informações e procedimentos para efeitos da aplicação do CBAM",
+      "value": "Ato legislativo relativo à equidade digital",
       "language": "PT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Declarațiile CBAM – norme, informații și proceduri pentru aplicarea CBAM",
+      "value": "Actul legislativ privind echitatea digitală",
       "language": "RO",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Vyhlásenia CBAM – pravidlá, informácie a postupy na účely uplatňovania CBAM",
+      "value": "Akt o digitálnej spravodlivosti",
       "language": "SK",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Deklaracije CBAM – pravila, informacije in postopki za uporabo CBAM",
+      "value": "Akt o digitalni pravičnosti",
       "language": "SL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "CBAM-deklarationer – regler, information och förfaranden",
+      "value": "Rättsakt om digital rättvisa",
       "language": "SV",
       "field": "SHORT_TITLE"
+     }
+    ],
+    "currentStatuses": [
+     {
+      "frontEndStage": "ADOPTION_WORKFLOW",
+      "receivingFeedbackStatus": "OPEN",
+      "feedbackStartDate": "2026/11/17 22:08:30",
+      "feedbackEndDate": "2027/01/15 23:59:59",
+      "isCurrent": true
      }
     ]
    },

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T06:53:25",
+ "updated": "2026-11-24T16:29:16",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -277,16 +277,6 @@
    "url": "https://www.fabric-gps.com/release/a037d13b-a84d-f111-bec6-000d3a376c0f"
   },
   {
-   "id": "edb33b5b-7f5d-f011-bec2-0022480939f0",
-   "name": "Scalar User-defined functions (UDFs)",
-   "product": "Data Warehouse",
-   "tool": "fabric",
-   "type": "GA",
-   "quarter": "Q4 2026",
-   "desc": "We're expanding scalar user-defined functions with new capabilities, including INLINE = AUTO, improved error messaging, support for special built-in functions, and CONTINUE/BREAK statements in **computation**-based UDFs.",
-   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/inline-scalar-user-defined-functions-udfs-in-microsoft-fabric-warehouse-preview/5172706"
-  },
-  {
    "id": "49ca9d78-7cd1-f111-a059-0022480a4051",
    "name": "Vnode utilization in Query Insights SQL pool insights",
    "product": "Data Warehouse",
@@ -424,7 +414,7 @@
    "type": "Preview",
    "quarter": "Q4 2026",
    "desc": "Azure blob storage events enablement with Tenant Private Links",
-   "url": "https://www.fabric-gps.com/release/c6846700-9e3e-f111-88b5-6045bd0066ad"
+   "url": "https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Enable-Azure-Blob-Storage-Events-Without-Compromising-Your/ba-p/5408564"
   },
   {
    "id": "766d62fa-d63d-f111-88b5-6045bd0a8ec1",
@@ -835,6 +825,26 @@
    "quarter": "Q1 2027",
    "desc": "We're improving Fabric's multitasking experience by giving users control over how context behaves when they open Fabric in another browser tab. Today, open items, tab order, pinned items, and tab groups automatically carry over to additiona",
    "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/supercharge-your-workflow-new-multitasking-features-coming-to-fabric-preview/5172571"
+  },
+  {
+   "id": "97387551-49e6-f111-84e7-e4fade55d2a0",
+   "name": "Git Integration - Branch workspace admin profile",
+   "product": "Fabric Developer Experiences",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Branch workspace admin profile (aka. admin delegation) lets developers use the branch-out experience without needing create-workspace or assign-capacity permissions. Workspace admins keep full control through pre-configured guardrails while",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/introducing-new-branching-capabilities-in-fabric-git-integration/5173161"
+  },
+  {
+   "id": "9696e3bc-49e6-f111-84e7-e4fade55d2a0",
+   "name": "Git Integration - File level commit",
+   "product": "Fabric Developer Experiences",
+   "tool": "fabric",
+   "type": "GA",
+   "quarter": "Q1 2027",
+   "desc": "Commit individual files within a supported Fabric item to Git, rather than committing the entire item at once. File-level commits give developers granular change history, support partial commits of in-progress work, and produce smaller, eas",
+   "url": "https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/introducing-new-git-developer-experiences-in-microsoft-fabric-preview/5172181"
   },
   {
    "id": "dd026247-931f-f011-998a-0022480939f0",
