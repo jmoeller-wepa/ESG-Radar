@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T16:29:16",
+ "updated": "2026-11-25T16:14:42",
  "source": {
   "label": "Fabric GPS – community mirror of Microsoft's Fabric roadmap",
   "url": "https://www.fabric-gps.com",
@@ -1098,7 +1098,7 @@
   },
   {
    "id": "61e4ab87-eeb1-f111-aaab-70a8a59cbac4",
-   "name": "Outbound Access Protection for Fabric SQL DB",
+   "name": "Outbound Access Protection for Fabric SQL DB (Preview)",
    "product": "SQL database",
    "tool": "fabric",
    "type": "Preview",

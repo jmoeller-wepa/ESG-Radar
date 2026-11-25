@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-24T15:58:10",
+    "lastFeedRun": "2026-11-25T15:44:28",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -20546,6 +20546,1024 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNLWdONm5KOVlJb2FNVmtHZzRrbjFBbnN0b1pHSEhlWWUyMWtaa2FyMUphMGExTWVWOUNyRE5fRy03RV9Ca19iTnFHNlpoR3VUWVBPT3RRT09mc1dkaVAzczNTZk1xd3RUS0l5QjdYTTJ1OWhVUkJTbTl2bVZ3WEdOZ1c0OHlicm8wWkVuQng3QTZ0VHJUbWVRSEZKUQ?oc=5",
       "origin": "feed",
       "added": "2026-11-24"
+    },
+    {
+      "id": "feed-d2bf5900cc",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric",
+        "Paginated"
+      ],
+      "title": "Paginated reports in Power BI support outbound access protection (Preview)",
+      "summary": "Paginated reports can combine data from Power BI semantic models and other data sources with external resources such as maps and images. Workspace admins can control which destinations the Power BI service can reach when it renders these reports. Paginated reports now support workspace outbound access protection (OAP). When a workspace admin enables OAP for a Fabric workspace, outbound connections from paginated…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Power BI Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Paginated-reports-in-Power-BI-support-outbound-access-protection/ba-p/5435045",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-3d06b5adf6",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "datamodel"
+      ],
+      "tags": [
+        "Fabric"
+      ],
+      "title": "Workspace outbound access protection for Power BI semantic models and interactive reports (Generally Available)",
+      "summary": "Workspace outbound access protection (OAP) is generally available for Power BI semantic models and interactive Power BI reports in Microsoft Fabric workspaces. With OAP, workspace admins can limit which data sources semantic models reach. They can also limit which semantic models in other workspaces interactive reports can query. These rules help reduce unintended outbound access and mitigate data exfiltration…",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Power BI Blog",
+      "url": "https://community.fabric.microsoft.com/t5/Power-BI-Updates-Blog/Workspace-outbound-access-protection-for-Power-BI-semantic/ba-p/5435053",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-44f76c8bfa",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+      "summary": "MCP servers can now ship skills, run tasks, and more with Claude",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-38f3d822d5",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Turn artifacts into Mac and Windows apps",
+      "summary": "Open the artifacts you use every day like any other app, and let them do more on your computer",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Claude Blog (Anthropic)",
+      "url": "https://claude.com/resources/articles/install-as-app",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-3c6728c1bf",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "GPT"
+      ],
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-f3aa9260f1",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Codex"
+      ],
+      "title": "Searching for distant planets with Astra",
+      "summary": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-71996d9786",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agents"
+      ],
+      "title": "How iFood scales coding agents across 15,000 repositories",
+      "summary": "How iFood scales coding agents across 15,000 repositories",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/index/ifood",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-7a6462e387",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Agents"
+      ],
+      "title": "How iFood scales coding agents across 15,000 repositories",
+      "summary": "How iFood scales coding agents across 15,000 repositories",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/ifood",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-99b93f3e10",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Chatgpt",
+        "Codex",
+        "GPT"
+      ],
+      "title": "Clay helps sales teams win with Codex and ChatGPT",
+      "summary": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-8b8e0b99ec",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Codex"
+      ],
+      "title": "Production monitoring with Codex",
+      "summary": "Investigate production failures with Codex using telemetry, deployment history, and code.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "OpenAI News",
+      "url": "https://developers.openai.com/blog/production-monitoring-with-codex",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-5e0884f060",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "See what 5 builders are making with Gemini 4 Neon - blog.google",
+      "summary": "See what 5 builders are making with Gemini 4 Neon blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTkViODd2SnZMN05iTFpjM0hDbDhWal9IRDRMWFc2dm5vdTluRVNCSHJUQlVxUW9QREo3ZWhfc0hrRGZVQUFBT0JBYkYxZVdxUkVNUk5RNzBJLVVSOFVzVUtuaXlkRjZzQWY1dHVKcHloM1J3T0lsenlJMnZJM0JVTW1QXzNrY2Q2bm5OZzJENWxVM0Z1Ymw4NnRYZw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-354771a01b",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "How Gemini is changing the game for Golden State's organization and fans. - blog.google",
+      "summary": "How Gemini is changing the game for Golden State's organization and fans. blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNS1dHdlZpMHEtYjU0TXg3UUVJZVRYOFhTZ1hQMTdZQmxxd0htS3Q4enJFMDc0WmVBQ0xtdUNrUG1iMFhCX3lVSWRnZmhkWXlXZ2lwanBfUGVvV19MSjBhR2tsVVVvMl9zSWsyWDZ2NDFqQ0tqRHZKY25tUnVaMHd5eEI5TUZDdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-508a7fcf87",
+      "date": "2026-11-24",
+      "type": "tool",
+      "areas": [
+        "data"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [
+        "Gemini"
+      ],
+      "title": "Telstra’s Santa Hotline Gets a Gemini Upgrade - blog.google",
+      "summary": "Telstra’s Santa Hotline Gets a Gemini Upgrade blog.google",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Google Gemini (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPenBuMS1Zd3Z1VDlkRzc1aklEdHlYa3pDUWlmaC1kcUZlNnQtbUxkWHczRzEtOUdzVXZiUjhzRThEeHdfUTVSSTYyX0loX2NHZzZXUlVkWFc0OHVZMnNmdVVhTjFsU3RjTzBZb19XUkJVa0hhdXdPN3hPMWljN0I1ZGxzd3JPcm50?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-5dd1fffb31",
+      "date": "2026-11-24",
+      "type": "regulation",
+      "areas": [
+        "people"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [
+        "Supply Chain"
+      ],
+      "title": "PETA, PepsiCo shareholders call out animal abuse across its supply chain",
+      "summary": "The activist group is urging PepsiCo to be more transparent about the treatment of animals across its supply chain, especially in India, and honor its animal welfare policies.",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Dive",
+      "url": "https://www.esgdive.com/news/pepsico-shareholders-peta-call-out-animal-abuse-across-beverage-makers-supply-chain/875649/",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-31d2296455",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "TA Luft: Bundesrat stimmt zehn neuen Anleitungen für Industrieanlagen zu - ad-hoc-news.de",
+      "summary": "TA Luft: Bundesrat stimmt zehn neuen Anleitungen für Industrieanlagen zu ad-hoc-news.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrieemissionen & BVT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNY2U3dWZ6bGJOVzY1R2sweEdZNEpfc3paa09jZ2xvU056bXF6aGdNTlgtV2FnX0JZRmJxcnlZNEFlOHFMdlZYaWxLNmxwQW1zaUJUZ24xZjRVUDFpRmoyRmtMMUd5Y3JMWlNTQ2VaV0E2MWtveWlIZTVwVzFEcHZTc0hsYl9uVE85cFJJSzl1bnI3Zlg0S25SVVc4SDhmU0hTTm1LSkltSlpoSEhYYjM3LVZmNjFQT2Rac3Vv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-cb5f46ac56",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU Extends Middle East Crisis State Aid Framework to 2027 - Mirage News",
+      "summary": "EU Extends Middle East Crisis State Aid Framework to 2027 Mirage News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeVhIYmpWamZSSVNfbXlEQ0R6MEpSczc0UHBSdkRmYXNpT3dKUkpBd0UtOUhCUjRZdkRyUDBvejhRRkdoYnlyamFMLW1sbndwM2pxVmxQdEJzckpLdDF5cGpKYnhtOVlhOXNkeUt1LTNkV1Bma3NacE9vdEJpNW4xOQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-452a671d09",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU Allows More State Aid for Farmers and Industry - blue News",
+      "summary": "EU Allows More State Aid for Farmers and Industry blue News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPcWJPYThVWUFFZVM3OC1KX1U4eDZuR3FrU0YtXzdaMXlsMWdUOXU1SnlOQ1Nza0JHNFNSUEVSWUFFYWdtWjRBSDJ0OFJ2elhHQWlNWWtLbkVWWE9rZlA1RTlmdkNwamRVS25FOURueEttMWE3Z2FaanJ6SHVRQWtuaGpsX3JQNWV6TW9UNmN0WUtEV3dfSUNmczZ6YjlNckFnMTNEeERIUS0?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-d367d15776",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "The European Commission extends the state aid to the sectors affected by the crisis in the Middle East until June 2027 - Demócrata",
+      "summary": "The European Commission extends the state aid to the sectors affected by the crisis in the Middle East until June 2027 Demócrata",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNdWFKME9Na0NlLWVSRm5jNHJVWC0tRW1kLW0ybjdYWV9DcVlRaWgzcGFVdDY4clhrbmh0TWN3SWRjeEZHLWZ6WkRYZEFjZ0ZEWmZ0a1EyZHQwMS1yTS1FaVI3RXcyMkdZd2JTcHFIYUs2UWJ4VHBqY0R4Z2pfSUhDNm5sVUo2Q0RpYlkyaWJuUDM3UXJ2Nzl1Yk9wMS1FQ3NqSUFEcDR5NUlsbEsyNTNaWXVDWjlEald2a1U5YVNrN2plcGtNbEU5WGpZVDdBRTMwVXZ3eDJXYS1QT0paWDdCc0k1QkRuNzJZbGfSAe8BQVVfeXFMTXU2QTduZEhJbE4wcXg0d01HSkNRSXVEbGNxUUlRNGJ4djgyTzREQXE1WDBRU002SzFkVk5hR3RtRGJ3eTdBMHo1dTE0bnRxY19TUXl0WHdZMDcxVjg0QW5LaVBIQVlUMVl3d1RJX0lETDNBd0s3dzNwbU5IS0hNaV9YcVV4dTgxNGoyaFVSZTByNkZCdURJVEZpU2tKSjVrdUVENzFaN1hYdGNQUHdScmZWVFJRNmhncEQ1NUtUUnZua2FmZXRmR3pqcUs0VXdUWUJtbV9TY09XbVNkUFBEcEp6RGh4RzBzS1RnT2ZYcGs?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-edb051d486",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "PM Niculescu: Over one third of Romania's exports come from automotive industry; contribution to GDP - 14% - Agerpres",
+      "summary": "PM Niculescu: Over one third of Romania's exports come from automotive industry; contribution to GDP - 14% Agerpres",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNc3BaZ21GSklsd3pTWlNGazhrZGpmQ1lVRXJqRi1nOUhVb0V4RTFQc1Y5MV9XNjA1SXRVdVl3NF9zdHhISDBIWkptLXpFcHZFc0p4R1JQUFQwQUVxN2pwMENJWjVjWmFESkF0NTBBQ09ESVp6b0FDNl83X0xqNDVQOWltaURyd3EybTFsUnhmSlpRQzBjci1wa3duRWxNTFhkTHd4Qk1JMG9zZDNYQ0dOSktGUmRKYi1fX1hJeEo4NDI0RkdwMXdEMERGQzNDRDZKWXdmamI2MXYwZ0JZUXhzM1V3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-93bab0e2e0",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "GHG Protocol clarifies position on biomethane certificates - Bioenergy Insight Magazine",
+      "summary": "GHG Protocol clarifies position on biomethane certificates Bioenergy Insight Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxONlYyT2VJcFA2WVlNMmcweG1xN3lxZ0xvLWNIVDdGVXFsYWotZnNzUWI5Njkwb1N4WWNHLUJ3ZHhwQ1NKMUlDSG9fZ0ptQmFNNzRrR0RCUWNLXzFoUlJHQ3R2UHA0RmxOVndLLXo2MGFxdEtBQllRUktOeWpLb0wweWp2RHJpR3dWUTdpM0V1TFBWVlBieDBUZkR3bw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-37a5bd1df2",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "suppliers"
+      ],
+      "tags": [],
+      "title": "Layered Conditionality in the Global Timber Trade: Regulatory Interoperability and the EUDR–FLEGT Interface in Indonesia and Ghana - Universitas Airlangga",
+      "summary": "Layered Conditionality in the Global Timber Trade: Regulatory Interoperability and the EUDR–FLEGT Interface in Indonesia and Ghana Universitas Airlangga",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPNHdqSnJubEpJdGRCSUhWTEVCQzZ0OEtXM0J4MGZkZWItT2hFdWltNE5OOG0taWczSGlvekFuYmFtZlpqUDNZMjMzamU5cDdXYU5vWVB5SmU4MnFlUEV5bElfM0JYcnhVRUdCbkVJUzdEeFBzZ2ZaZ1hUd3dKUzVqbGd6MHBmZFZLNmxiZVdDZTNWWE9RNWRuSkJ1UlRTZ1JwYy12Y3AwOXY2VG84WWgtUWFOT3V1eXp3YldMMGNHalhXYlZiQXFmVXRzODJwa0lhcUt4cjVtVnhVdUpnbk9sS1V3dUhnTVlP?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-748991e571",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "products"
+      ],
+      "tags": [],
+      "title": "Brunori (Pefc): \"A certified forest has 9 times fewer fires than an abandoned one\" - jiji press",
+      "summary": "Brunori (Pefc): \"A certified forest has 9 times fewer fires than an abandoned one\" jiji press",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSmZKRzRtbGhCWS1tckI1OUJrWWdkc3Nhb0FVWmhXZmxqUV9RclVuWU9UbVVOOW5XaG90Y1l1b3QxaDZRTEJidkpxMi1vRGZNODVyMUVKVFhQR09hU2E0enZRM0RnS2pDTzd6S05Helg1ZmhkaG5BNHFEWE55SXJVMkRJQ21YVnljeENDMW55R29EZHFXNlk3Z2VndGUtYlV1?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-2ff04adfc5",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl und Aldi mit Preiskampf zur Adventszeit: Butter für unter einem Euro empört Bauern - SWR",
+      "summary": "Lidl und Aldi mit Preiskampf zur Adventszeit: Butter für unter einem Euro empört Bauern SWR",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPTFRRVm9nUWFNcFlhNTdUbTVGMzFqMjJyV04tY0Q3SEpMUFgzZXpaN3FCZFRTUWtjZnMtaURuc0lweTN6SHprVTlaZG8wS2FhNmZpVGg0R3pYemRGZGtjaTVXaDVfNWtNY2NWVmhjRUpyS19teG9sRHlWV0lpalV1UWpuVmJFV0FwMnRjN1UzSE9DZ3ViYVdOMHZLS1dwMDd4RWtrV0xfdVZpcXJHdGJ5emFNMTFwWlNUYjZMTnZxSEFZZ3VwUlhLQXgtLURHUmF2YklB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-be5b440c8f",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Ist Pasta-Verpackung nur auf Hebräisch erlaubt? Das sagt das Gesetz (und Aldi) - Watson",
+      "summary": "Ist Pasta-Verpackung nur auf Hebräisch erlaubt? Das sagt das Gesetz (und Aldi) Watson",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMGdBSEd6dkV6VTZhdHBvM0djVnJaSFQ4RV80b3NXVTB4NUphbnZZcGFXVDI5SEFDNlhQemc2SXVHUjdRRGJReEI3TUxCdzJDNGl2M1dGV3B2V1B4Tkd1OVk5bVIwaVlZWk1vcC1xaXJGUE5OWHlvUnJsU2RHYzN3ZXFzX2dWQ2l5WEpSSW1ZNGw4OFZ1UHhBRmY2a0dTWHNZLTliWnZlVl9UNS1wNFE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-a63cc297cb",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rewe präsentiert die wohl ironischste Weihnachtskampagne des Jahres - Horizont",
+      "summary": "Rewe präsentiert die wohl ironischste Weihnachtskampagne des Jahres Horizont",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZnpYbWxKZmVtc2o2OHZlVi1FdXh0emVGb2ZSSGlfa3R3bmJTTy1tVjZ4U29Hdk83YWl6X2dkZFZaN196OHBvSjVvaGdmNE92dnRhbjNFY19pQkxkUDdJNUdfMFczdVU1SjVqbjAzQjRUckhRanRkWVRHZHQ5OFVJYVN2cVJhS1lib09SNTYxZFZOWTRqdnhRVlJVLWwxTENlMnJNdjAtaFNHenZZcV9DMnFvR2c0X1NwOWY1bm1qb21MeDJ5?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-35c1c17bd3",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rossmann: Der Pionier unter den Discountern - Wie aus einer kleinen Drogerie ein Imperium wurde - NDR.de",
+      "summary": "Rossmann: Der Pionier unter den Discountern - Wie aus einer kleinen Drogerie ein Imperium wurde NDR.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQRDVyRGFFMzNXUHRhVVVVQmZTMlBqRER4eW1GMm5zVTl4ZkZ2N2duMDhicUtoMGl1T0hQOFdkN2p4N2Y2YkVVMVNEM2dJZWFZZzVVbUcyUGlKb0t3aDRsQ09WZFRGSUZmejItLWM0S3hCeDQwSndHTkZwTXl3R0NrVGFjTld5TExuOGk1d3pGa3E2czM3U3ZRTktma0MxVGpFbXZQMnJTYWltNXd4QmYxempQRQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-4af380874a",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Bei Rossmann: Alle wollen diesen süßen Rentier-Lipgloss – nur 2,99 Euro - wmn.de",
+      "summary": "Bei Rossmann: Alle wollen diesen süßen Rentier-Lipgloss – nur 2,99 Euro wmn.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQM3pSZTdIT0MzaUx3anZwNTdOLVgyVVo4bWFsN3hwdDJwcXY3ZUwtOXZKb3lWeElyZHpwVm1HQ2d1Nk1lcXZfN01BYzRMdGpOOUVYRnl0aldGNE9LWURmT09zVnJ0VHBPMk5WMXNpdlZZT3kyNlpmOThxWWE1Z0J1VFVkaXVad20yVG1aUGFLNjdkSGRtcHVmTS16RlBMLXNJM0VPZjQ1RmlWR09JQWdNSw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-4969397c80",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Coutances. Un cercle de silence porté par des chrétiens pour le climat - lamanchelibre.fr",
+      "summary": "Coutances. Un cercle de silence porté par des chrétiens pour le climat lamanchelibre.fr",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMG95djdMMEh5TVBab2JfR0N3bkZaajF3VGhwS2VsUHJBNEllYUEzY3hZR0ZfaXZjQ0NGM1Z1Q2s4ZXBrTkpuSGRPc0dBckxUZ242MmRzRnREVjRzQ1JRd1JRamZkdngxdVJ2NUJZNXBpSXMtdUNOSF9UUThqMExTRXdVeFcwWl9Cdmd4dWRSQ1BvR0RFZ1gtZEYwWkp3UFZqSVhVNGd2SGZPeUlta2tWVDJ0VVVYUUU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-26bea95e53",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Decathlon : le gel énergétique à emballage comestible qui buzze chez les traileurs - MCE TV",
+      "summary": "Decathlon : le gel énergétique à emballage comestible qui buzze chez les traileurs MCE TV",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNM2laYjFzTjRQcEFBU0t5anRlX05QYmw1UEFjeXZJWWZGN2plblgtc2R4cHl2c0lzdDdPMlhxcUoxdHYyZkthWUNOUGhLSGJWNEJ0VjhqOC1BVEJhMjhoVU1YeU42T2ViVmw2RlhDX2xoV3MwQnJGTUkzLUY1cWp6aG5tX05Zem8?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-906ee968c1",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Morrisons rejection charges: suppliers attack GSCOP ‘loophole’ - The Grocer",
+      "summary": "Morrisons rejection charges: suppliers attack GSCOP ‘loophole’ The Grocer",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbXNhVElXWWNPeTVfekJVNm5YNG1VMWNxeUhhVGNMSzkyQlN2aENiQ1JyV0lVSm5BV21fRVJzN09GUGR6MFpVTElGX3F5VVZ0NVlCQ1oxb2lsMlFLV253RWEwdkljWXoxVXI0VHdUYUFWUDAtMC1WMFNGTTA2RTFKNm5hQk5qblFHSDlYbTVvVTJlYVBITnBDNnB0eFZxaUZYUkFwT1pUWG5FblU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-48768d4610",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Sainsbury’s brings Meta AI to online grocery shopping - Grocery Trade News",
+      "summary": "Sainsbury’s brings Meta AI to online grocery shopping Grocery Trade News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9RbGZ6blJGVHpfNlZ4STZVbVdhQWdlZXpmeGpxVHppcjFPLUVPMkNkT2RTaDUwSEFZTjMtN3c5LUtmSGdxYmtQLXB0VzY0OWpmLWE2ZklWYW1Fa0hKeFVDZnlkS3BvUEZlX0l0RjRXSWFtdFZkWnNYT1hNOUtJSFU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-0a63e49230",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Nebula Bags Environmental Edge With EcoVadis Elevation - IT Channel Oxygen",
+      "summary": "Nebula Bags Environmental Edge With EcoVadis Elevation IT Channel Oxygen",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "CDP & EcoVadis (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPWUFyS09XRnBtSEczSmo2Nks5M0lfVFZyRmVIVWJDeUtpR1hUckdYOF9fMUstR25RcW1rZFdMcU5vTUx3ZmNzX2VjRGM4eFdXYVhZMHlYVjlkdEk3bjdiT1RBY0w5WjdQd3ZhMzJZLTBGcXZKMmRrM0RBMEcyQm9rd0kzRTlIblNGQjYw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-75558fc896",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Water scarcity Europe’s new power price threat – Enel CEO - Montel News",
+      "summary": "Water scarcity Europe’s new power price threat – Enel CEO Montel News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbS1waXJEcDBQYjJOZWRSSDYyemEteC1NR04yZWU3TVA5c25Gd1RXcDZJQmxTNDVZMmJ4M0dVb3dJN1VCNjZ3dk85MkNlX2ZsU0U3Ym1XS3pqZzV4eUVaRTdBSElrZ0VSTS1JZ2VjZ2V1RTZMT2d0WFdhTFlMX1FXV3RKenQ5ZmVlRVl6VjFtemgtSnFNYXloek5leWZOY1hoU1Y5cEl4ejdkTFU0akFjd1RJN0tId2lRam5n?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-9ff8c9cb89",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Laguna leads provincial economies with P1.14-T GDP in 2025 - Daily Tribune",
+      "summary": "Laguna leads provincial economies with P1.14-T GDP in 2025 Daily Tribune",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQem15cHhjUXFiYmF1U2JCVFVqZXEzWTd0alhoTnlHS3BXR0Z5RXpwRm82bWQyV2thcnBVc00xNHFvMUdmd0o0SkNMQmlha0V6bUVOVWxPSmxzSkt0aTJlSWdWbWx6SzV3QUxzWGJJbWRFLVpvbzJOYnFyMEo0dnBOdFlNNF9WcldTRGtPczN4bG9TalNfejBFYUI2YnJsMDRzRU1vOXVSN2pSdFVIQTNv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-e5a4f79ff2",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "‘Planning system not a proxy regulator for water industry’, Pennycook declares - Planning Resource",
+      "summary": "‘Planning system not a proxy regulator for water industry’, Pennycook declares Planning Resource",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNdUNuQS01aWVjSnRYcXZYc1VHYlphNEZnTU1NSC03bnJES04yZXdXWUpuT2RQY1BFZ0dxcXRsZFp5NHdxM0tDZEN5THo2WGp5SDdPTHAzaG8wdjNRcDV2OXRXWjF2b3RWUWlheGtOTkxGeHBzVnQ3by1tekhzUWpfQnBpcHhPck9OVnM0TmRQM3Q1Qkw3TEdjTGtCTFlMaFpIUTF5aTUwZlNEZTJUaGdsX0h4SGZBS0lFeVVmSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-cbd8326525",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Konjunkturerholung in Deutschland 2026: BIP wächst im dritten Quartal trotz Krisen und Niedrigwasser - Produktion Online",
+      "summary": "Konjunkturerholung in Deutschland 2026: BIP wächst im dritten Quartal trotz Krisen und Niedrigwasser Produktion Online",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNM0Q2S1lmeGtGc05razljVXExWGNRQjlVRjNlOW5XQnlYOEcyT1ZtRE1WUk4yV1RrX1o2QnVNcS0xZUtHZGFFOHJtWk0zX3lrTHIyRW0xYTVWRGtFUGRNV3hVUWVlTWFOcTZqcjZHNjNJVWFURXZJTzJNSzktV2dPTUZnSDFTbjM0b09LME9jeTZZd3hiX215T3lxRHo2R3VHQWwzenFUUTVkN1JwMVZZSkhnUjBnVnktaDBUUENFYlVUUkZETzBhbTRXNkVBMjljUVVIRG1pMmhEcUQ4ckE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-e3b5812fd4",
+      "date": "2026-11-23",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Niedrigwasser am Rhein - traurige Rekorde und keine guten Aussichten - SWR",
+      "summary": "Niedrigwasser am Rhein - traurige Rekorde und keine guten Aussichten SWR",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOLU5SbVU1YUVsNFE3bm1QRWlpV3JEM0txYTU2SUlCbW8wUTRuMk5xcFR3aWxnaXVjTTBYeElyNTA2MXloOWtIcks4ZWh1NnhKTEYyNVBwd3B4VVdPSlFyUkctbEVGZGNZemZLWXVOeTJNT0x0VXBYcERYTzFOdWlndTZnSlZLc1V3SEZ0eVJlbWpVTlU5M2t0YlFIWnVuTnNDN2s3bl91WXJ6NVQ2dzBXVVE1b0VDTWNNNkpldmlYTQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-ddfd65f0ce",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Deutsche Wirtschaft: Warum Konsum und Exporte die Konjunktur bremsen - top agrar",
+      "summary": "Deutsche Wirtschaft: Warum Konsum und Exporte die Konjunktur bremsen top agrar",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUGZDejBoODFCWEFjM1NtM0R0Q05weEtCTW9scURBeTlmY0NYYzhSemY3OExZZTB4cDBjY2licWJzM3dCQXRpQmNkUDNZeWhSRUVTdWNsR0FsbVBLNjNiZHdDRThiUnpNdlhfTlNnNFJiMEpVaGU5aEpZWVE5bk9sTWhEQkxkY1hfYXowVHY4LU1lSGQ2WHhiZC1LcURRZEtFVWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-09336f55d1",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Flaute bei Konsum und Export: Wirtschaft wächst nur minimal - Aachener Zeitung",
+      "summary": "Flaute bei Konsum und Export: Wirtschaft wächst nur minimal Aachener Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLTdsRHpKTzEwQnRvdjlNZHRQQV90cFNNY3dBNm1rOEJOZVRmZERxZ0ZKV2hPem5rSW10YVpuVWtrR2g1U3pWRGxGOXM4bm1mWm5fbUR5QnVKNFBIWEM2MFVjUzRKbmtDYVFhUGpVV3ZnbVNXTzVEb3FfZ19KcFBzQVNYLXdndEgycEhITkNuVVFZdWlva2dhVWRTczJyaUJyeVdLTHpjNU94cm1LTTNONDNpYm54TVF1NklNZg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-4a7bca413c",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Deutsche Wirtschaft wächst im dritten Quartal nur um 0,1 Prozent - ad-hoc-news.de",
+      "summary": "Deutsche Wirtschaft wächst im dritten Quartal nur um 0,1 Prozent ad-hoc-news.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNE4wcG5wellwZ3FHeE9PM1FMN0VCbU9Uc0p0ODFXdEhJZnNJU3hod0RYbEpkT0g5ZEk1b3ktMkRzUDZ6M3lkRzczUGpDNDNvT0dsa0ZhU05rZV9jTnRCbHBudHNZd0ZjRmI1dkJvTjdJaFJwRGIyS2lkUzFxRUotbnNiZ0lNRmpjTzBFS3JlREF5RGJKR19XbVV2cU5uRHFFdVlyeGR1RVhHXzZZZ2c?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-16fa76c552",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Deutsche Wirtschaft wächst im dritten Quartal nur um 0,1 Prozent - ad-hoc-news.de",
+      "summary": "Deutsche Wirtschaft wächst im dritten Quartal nur um 0,1 Prozent ad-hoc-news.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVGVfT291VHhIbHI2anZEX0FxQ083OGJhbWEzVnBtYldaemFQRHZWamNhd2h6dUFCSmFqSUJGSGNBUFhpdmhqVTRDdjhiV3ctZWktWEJTM1E1SWxvNngzZW5pVXMzbHZJMEIyTTJyQVFuOWZGU24xaVhIempEQlpXcFo0c0FVWTZNcU4wVEN1OTlhZVdLZTZfeHA5TUNydGRaT0tVdTZfd0ItTzNWOVE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
+    },
+    {
+      "id": "feed-b65ec617c6",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Deutsche Wirtschaft wächst etwas weniger als erwartet - Nau",
+      "summary": "Deutsche Wirtschaft wächst etwas weniger als erwartet Nau",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Niedrigwasser & Wasserentnahme (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQREI3b3ctczVnbGJOdlBVcXFMbFU0VEExc3lLb3NDWlU3NThiNGM1VkZLbmhHVzUwU0xGOGl5S0trUzdJUk9PZmtGbXNyNlRGQnFjQmFjdDdQSllacjVhcmNYeWJCMDFFUVBEQ1dMRWg2Z2FlRU1OeTkzNEVTdVZfRUxYRWVIbFB5MUREM0lJaUFpMEdFQm9ZN0kzekpfQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-25"
     }
   ]
 }

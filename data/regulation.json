@@ -1,112 +1,6 @@
 {
- "updated": "2026-11-24T15:58:26",
+ "updated": "2026-11-25T15:44:42",
  "consultations": [
-  {
-   "id": "19220.0",
-   "title": "Road transport smart enforcement and simplification",
-   "summary": "",
-   "type": "Planning workflow",
-   "dg": null,
-   "start": "2026-10-27",
-   "end": "2026-11-24",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19220.0_en",
-   "areas": [
-    "reporting"
-   ],
-   "topics": [],
-   "keywords": [
-    "simplification"
-   ]
-  },
-  {
-   "id": "19495.0",
-   "title": "Introduction of over-the-air updates of tachograph software for smart enforcement and simplification purposes.",
-   "summary": "",
-   "type": "Planning workflow",
-   "dg": null,
-   "start": "2026-10-27",
-   "end": "2026-11-24",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19495.0_en",
-   "areas": [
-    "reporting"
-   ],
-   "topics": [],
-   "keywords": [
-    "simplification"
-   ]
-  },
-  {
-   "id": "19496.0",
-   "title": "Simplification of reporting requirements under Regulation (EC) No 1370/2007 on public transport by rail and by road",
-   "summary": "",
-   "type": "Planning workflow",
-   "dg": null,
-   "start": "2026-10-27",
-   "end": "2026-11-24",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19496.0_en",
-   "areas": [
-    "reporting"
-   ],
-   "topics": [],
-   "keywords": [
-    "simplification"
-   ]
-  },
-  {
-   "id": "19613.0",
-   "title": "Smart enforcement and simplification in road transport - omnibus (Regulation)",
-   "summary": "",
-   "type": "Planning workflow",
-   "dg": null,
-   "start": "2026-10-27",
-   "end": "2026-11-24",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19613.0_en",
-   "areas": [
-    "reporting"
-   ],
-   "topics": [],
-   "keywords": [
-    "omnibus",
-    "simplification"
-   ]
-  },
-  {
-   "id": "19612.0",
-   "title": "Smart enforcement and simplification in road transport - omnibus (Directive)",
-   "summary": "",
-   "type": "Planning workflow",
-   "dg": null,
-   "start": "2026-10-27",
-   "end": "2026-11-24",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/19612.0_en",
-   "areas": [
-    "reporting"
-   ],
-   "topics": [],
-   "keywords": [
-    "omnibus",
-    "simplification"
-   ]
-  },
-  {
-   "id": "17632.0",
-   "title": "Classification, labelling and packaging of substances and mixtures (CLP Regulation)",
-   "summary": "",
-   "type": "Isc workflow",
-   "dg": null,
-   "start": "2026-10-27",
-   "end": "2026-11-24",
-   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/17632.0_en",
-   "areas": [
-    "circularity"
-   ],
-   "topics": [
-    "ppwr"
-   ],
-   "keywords": [
-    "packaging"
-   ]
-  },
   {
    "id": "16240.0",
    "title": "States considered to be applying CORSIA in 2026 for ETS purposes",
@@ -178,6 +72,25 @@
    ]
   },
   {
+   "id": "17993.0",
+   "title": "Exemption from the extended producer responsibility concerning urban wastewater treatment",
+   "summary": "",
+   "type": "Planning workflow",
+   "dg": null,
+   "start": "2026-11-25",
+   "end": "2027-01-06",
+   "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/17993.0_en",
+   "areas": [
+    "water"
+   ],
+   "topics": [
+    "water"
+   ],
+   "keywords": [
+    "waste"
+   ]
+  },
+  {
    "id": "19498.0",
    "title": "EU rules on biobased feedstock in plastic packaging",
    "summary": "",
@@ -223,7 +136,7 @@
    "type": "Adoption workflow",
    "dg": null,
    "start": "2026-11-04",
-   "end": "2027-01-19",
+   "end": "2027-01-20",
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/14770.0_en",
    "areas": [
     "climate"
@@ -240,7 +153,7 @@
    "type": "Planning workflow",
    "dg": null,
    "start": "2026-11-03",
-   "end": "2027-02-09",
+   "end": "2027-02-28",
    "url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/17873.0_en",
    "areas": [
     "circularity"
@@ -1011,5 +924,5 @@
    "changed": null
   }
  },
- "consultationsFetched": "2026-11-24T15:58:26"
+ "consultationsFetched": "2026-11-25T15:44:42"
 }
