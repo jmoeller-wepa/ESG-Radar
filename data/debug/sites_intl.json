@@ -1,5 +1,5 @@
 {
- "at": "2026-11-25T16:14:34",
+ "at": "2026-11-26T15:49:36",
  "failed": [],
  "details": [
   {
@@ -11,10 +11,10 @@
      "id_stacji": "150150050",
      "stacja": "Piechowice",
      "rzeka": "Kamienna",
-     "stan_wody": "72",
-     "stan_wody_data_pomiaru": "2026-11-25 15:20:00"
+     "stan_wody": "70",
+     "stan_wody_data_pomiaru": "2026-11-26 15:20:00"
     },
-    "points": 12
+    "points": 13
    }
   },
   {
@@ -27,7 +27,7 @@
      "E381126601 La Lys [Lys] en Belgique [Menen - Menin] - Ropswalle (La Lys, 2.3 km)",
      "E367125002 La Lys à Armentières - Station partenaire VNF (La Lys, 15.7 km)"
     ],
-    "points": 46
+    "points": 47
    }
   },
   {
@@ -40,7 +40,7 @@
      "F620000301 La Marne à Azy-sur-Marne - Barrage (amont) [VNF] (La Marne, 5.3 km)",
      "F620000302 La Marne à Azy-sur-Marne - Barrage (aval) [VNF] (La Marne, 5.4 km)"
     ],
-    "points": 46
+    "points": 47
    }
   },
   {
@@ -51,7 +51,7 @@
     "candidates": [
      "H080001201 La Seine [partielle] à Troyes [Tauxelles] (La Seine, 8.7 km)"
     ],
-    "points": 46
+    "points": 47
    }
   },
   {
@@ -67,7 +67,7 @@
      "V344000101 Le Rhône à Saint-Rambert-d'Albon - CNR (Le Rhône, 8.8 km)",
      "V344000102 Le Rhône à Saint-Rambert-d'Albon - DREAL Auvergne-Rhône-Alpes (Le Rhône, 8.9 km)"
     ],
-    "points": 46
+    "points": 47
    }
   },
   {
@@ -102,7 +102,7 @@
      "roermond.recreatiestrandcampinghatenboer Roermond, Recreatiestrand Camping Hatenboer",
      "roermond.resortmarinaoolderhuuske.recreatiestrand Roermond, Resort Marina Oolderhuuske, recreatiestrand"
     ],
-    "points": 46
+    "points": 47
    }
   },
   {
@@ -123,7 +123,7 @@
      "713120 Ewood (River Darwen, 1.9 km)",
      "713207 Ewood Ashville Terrace North (Ewood Mill Race, 2.5 km)"
     ],
-    "points": 44
+    "points": 45
    }
   }
  ]

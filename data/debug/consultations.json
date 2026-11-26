@@ -1,5 +1,5 @@
 {
- "fetched": "2026-11-25T15:44:42+00:00",
+ "fetched": "2026-11-26T15:26:21+00:00",
  "attempts": [
   {
    "url": "https://ec.europa.eu/info/law/better-regulation/brpapi/searchInitiatives?feedbackOpen=true&language=EN&page=0&size=50",
@@ -12,13 +12,13 @@
     "initiativeResultDtoPage": [
      "content",
      "pageable",
-     "last",
      "totalPages",
      "totalElements",
-     "sort",
+     "last",
      "numberOfElements",
      "size",
      "number",
+     "sort",
      "first",
      "empty"
     ]
@@ -27,150 +27,154 @@
    "page": null,
    "items": 50,
    "firstItem": {
-    "id": 17993.0,
+    "id": 14387.0,
     "initiativeStatus": "ACTIVE",
-    "reference": "Ares(2026)4363933",
-    "foreseenActType": "DEC_IMPL",
-    "shortTitle": "Exemption from the extended producer responsibility concerning urban wastewater treatment",
-    "currentStatuses": [
+    "reference": "Ares(2024)6117106",
+    "foreseenActType": "REG_IMPL",
+    "shortTitle": "Uniform rules on good manufacturing practice for inactivated autogenous veterinary vaccines ",
+    "topics": [
      {
-      "frontEndStage": "PLANNING_WORKFLOW",
-      "receivingFeedbackStatus": "OPEN",
-      "feedbackStartDate": "2026/11/25 11:17:20",
-      "feedbackEndDate": "2027/01/06 23:59:59",
-      "isCurrent": true
+      "code": "FOOD",
+      "label": "Food safety"
+     },
+     {
+      "code": "HEALTH",
+      "label": "Public health"
      }
     ],
     "initiativeTranslations": [
      {
-      "value": "Освобождаване от разширената отговорност на производителя по отношение на пречистването на градски отпадъчни води",
+      "value": "Единни правила за добра производствена практика за инактивирани автогенни ветеринарни ваксини",
       "language": "BG",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Výjimka z rozšířené odpovědnosti výrobce týkající se čištění městských odpadních vod",
+      "value": "Jednotná pravidla správné výrobní praxe pro inaktivované autogenní veterinární očkovací látky",
       "language": "CS",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Undtagelse fra udvidet producentansvar vedrørende rensning af byspildevand",
+      "value": "Ensartede regler for god fremstillingspraksis for inaktiverede autogene veterinærvacciner",
       "language": "DA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Ausnahme von der erweiterten Herstellerverantwortung in Bezug auf die Behandlung von kommunalem Abwasser",
+      "value": "Einheitliche Regeln für die gute Herstellungspraxis für inaktivierte autogene Veterinärimpfstoffe",
       "language": "DE",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Εξαίρεση από τη διευρυμένη ευθύνη του παραγωγού όσον αφορά την επεξεργασία αστικών λυμάτων",
+      "value": "Ενιαίοι κανόνες ορθής παρασκευαστικής πρακτικής για αδρανοποιημένα αυτογενή κτηνιατρικά εμβόλια",
       "language": "EL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Exemption from extended producer responsibility concerning urban wastewater treatment",
+      "value": "Uniform rules on good manufacturing practice for inactivated autogenous veterinary vaccines",
       "language": "EN",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Exención de la responsabilidad ampliada del productor en relación con el tratamiento de las aguas residuales urbanas",
+      "value": "Normas uniformes sobre buenas prácticas de fabricación de autovacunas veterinarias inactivadas",
       "language": "ES",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Erand laiendatud tootjavastutusest seoses asulareovee puhastamisega",
+      "value": "Inaktiveeritud autogeensete veterinaarvaktsiinide head tootmistava käsitlevad ühtsed eeskirjad",
       "language": "ET",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Exonération de la responsabilité élargie des producteurs en ce qui concerne le traitement des eaux urbaines résiduaires",
+      "value": "Règles uniformes en matière de bonnes pratiques de fabrication des vaccins vétérinaires autogènes inactivés",
       "language": "FR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Díolúine ó fhreagracht leathnaithe táirgeora maidir le cóireáil fuíolluisce uirbigh",
+      "value": "Rialacha aonfhoirmeacha maidir le dea-chleachtas monaraíochta le haghaidh vacsaíní tréidliachta uathghineacha díghníomhaithe",
       "language": "GA",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Izuzeće od proširene odgovornosti proizvođača u vezi s pročišćavanjem komunalnih otpadnih voda",
+      "value": "Jedinstvena pravila o dobroj proizvođačkoj praksi za inaktivirana autogena veterinarska cjepiva",
       "language": "HR",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Esenzione dalla responsabilità estesa del produttore per quanto riguarda il trattamento delle acque reflue urbane",
+      "value": "Norme uniformi sulle buone pratiche di fabbricazione per i vaccini veterinari autogeni inattivati",
       "language": "IT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Vapautus laajennetusta tuottajavastuusta yhdyskuntajätevesien käsittelyn osalta",
+      "value": "Inaktivoitujen autogeenisten eläinrokotteiden hyviä tuotantotapoja koskevat yhdenmukaiset säännöt",
       "language": "FI",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "A települési szennyvíztisztításra vonatkozó kiterjesztett gyártói felelősség alóli mentesség",
+      "value": "Az inaktivált autogén állatgyógyászati vakcinák helyes gyártási gyakorlatára vonatkozó egységes szabályok",
       "language": "HU",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Didesnės gamintojo atsakomybės, susijusios su komunalinių nuotekų valymu, netaikymas",
+      "value": "Vienodos inaktyvintų autogeninių veterinarinių vakcinų gerosios gamybos praktikos taisyklės",
       "language": "LT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Atbrīvojums no paplašinātas ražotāja atbildības attiecībā uz komunālo notekūdeņu attīrīšanu",
+      "value": "Vienoti noteikumi par labu ražošanas praksi inaktivētām autogēnām veterinārajām vakcīnām",
       "language": "LV",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Eżenzjoni mir-responsabbiltà estiża tal-produttur fejn jidħol it-trattament tal-ilma urban mormi",
+      "value": "Regoli uniformi dwar prattika tajba tal-manifattura tal-vaċċini veterinarji awtoġeniċi inattivati",
       "language": "MT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Vrijstelling van uitgebreide producentenverantwoordelijkheid inzake de behandeling van stedelijk afvalwater",
+      "value": "Uniforme voorschriften inzake goede praktijken voor de vervaardiging van geïnactiveerde autogene veterinaire vaccins",
       "language": "NL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Zwolnienie z rozszerzonej odpowiedzialności producenta w odniesieniu do oczyszczania ścieków komunalnych",
+      "value": "Jednolite zasady dobrej praktyki wytwarzania inaktywowanych autogenicznych szczepionek weterynaryjnych",
       "language": "PL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Isenção da responsabilidade alargada do produtor no que respeita ao tratamento de águas residuais urbanas",
+      "value": "Regras uniformes em matéria de boas práticas de fabrico de vacinas autógenas inativadas de uso veterinário",
       "language": "PT",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Scutirea de la răspunderea extinsă a producătorilor în ceea ce privește epurarea apelor uzate urbane",
+      "value": "Norme uniforme privind bunele practici de fabricare a vaccinurilor veterinare autogene inactivate",
       "language": "RO",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Výnimka z rozšírenej zodpovednosti výrobcu v súvislosti s čistením komunálnych odpadových vôd",
+      "value": "Jednotné pravidlá správnej výrobnej praxe pre inaktivované autogénne veterinárne vakcíny",
       "language": "SK",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Izvzetje iz razširjene odgovornosti proizvajalca v zvezi s čiščenjem komunalnih odpadnih voda",
+      "value": "Enotna pravila o dobri proizvodni praksi za inaktivirana avtogena veterinarska cepiva",
       "language": "SL",
       "field": "SHORT_TITLE"
      },
      {
-      "value": "Undantag från utökat producentansvar i fråga om rening av avloppsvatten från tätbebyggelse",
+      "value": "EU-regler för god tillverkningssed för inaktiverade autogena vaccin för djur",
       "language": "SV",
       "field": "SHORT_TITLE"
      }
     ],
-    "topics": [
+    "currentStatuses": [
      {
-      "code": "ENV",
-      "label": "Environment"
+      "frontEndStage": "ISC_WORKFLOW",
+      "receivingFeedbackStatus": "OPEN",
+      "feedbackStartDate": "2026/11/26 15:17:00",
+      "feedbackEndDate": "2026/12/24 23:59:59",
+      "isCurrent": true
      }
     ]
    },
-   "openFound": 41,
+   "openFound": 44,
    "read": 300
   }
  ]

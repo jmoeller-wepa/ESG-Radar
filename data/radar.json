@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-25T15:44:28",
+    "lastFeedRun": "2026-11-26T15:26:06",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -21564,6 +21564,949 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQREI3b3ctczVnbGJOdlBVcXFMbFU0VEExc3lLb3NDWlU3NThiNGM1VkZLbmhHVzUwU0xGOGl5S0trUzdJUk9PZmtGbXNyNlRGQnFjQmFjdDdQSllacjVhcmNYeWJCMDFFUVBEQ1dMRWg2Z2FlRU1OeTkzNEVTdVZfRUxYRWVIbFB5MUREM0lJaUFpMEdFQm9ZN0kzekpfQQ?oc=5",
       "origin": "feed",
       "added": "2026-11-25"
+    },
+    {
+      "id": "feed-4ea6392f1e",
+      "date": "2026-11-24",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Save the Date: Webinar \"Join EFRAG to Discuss Its Sustainability Reporting Priorities for 2027–2029\" 7 December 2027 - EFRAG",
+      "summary": "Save the Date: Webinar \"Join EFRAG to Discuss Its Sustainability Reporting Priorities for 2027–2029\" 7 December 2027 EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZmlQWUt0YlY3Tk5vMnNaME16RE13NUpnclh6LXZLMEF6VnVudTQ1cWt0ajZzQ25zTHhpRTRWUXgzUXNPTkZVNklFNmNyMEJrR3V6ejlJS1NocnJNU3R1T0VzN3RqaVdnc2E4emRsTXJKU2pRemVCdlNNUHlmcEphWVk1TVpvUXBIU05uZEtnamNLcUhYU2Q1eFRqRzRQS3lDTUV1S0ZWM3h6T2xzMGJkVUNZZkU5NlJmU05ZWmRXN055YW5ZdVYxZnFhVWR5ZWRxVFZpUFlUNTRNQk03S1lv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-d39012ad03",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Ministry of Economy begins developing BAT for non-ferrous metallurgy enterprises - ЭкоПолитика",
+      "summary": "Ministry of Economy begins developing BAT for non-ferrous metallurgy enterprises ЭкоПолитика",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrial emissions & BAT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQS1drYUxadEQ2OU44TjJXRnFOSDR0MU5DbjNsNGRWSFVhbS1Edmh6RVR6Wms4YUVOSXcyRlBibHlvdU1CZlFVZXFWZS1RcGJ3S0tEZE1QaktyZjNteHFiN0xfQTJVb0p4V3ZmeXI0VEkybjNEY0tjQjNBeGYzTWNGYWlqbWx3NjAyNlZhQnFWZDRsQVVNNVNqSHNsZzdKclZOZnBDeEFaOW4yazcxeGpacDN5U04wUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-3d97386ced",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Industrieemissionen (IED) / Beste verfügbare Techniken (BVT) - wko.at",
+      "summary": "Industrieemissionen (IED) / Beste verfügbare Techniken (BVT) wko.at",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Industrieemissionen & BVT (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5LV2FmbG5EOTctSWpzbTg3QWhmMy1CS3VjaDRjSklpS0t6ZDZ0YnlJRjh1U0pmVWVFT1pvQVNGUGJiY3Q4a0pxNGJJbHZJTWVXbFNCYXdSaXRNQktLQ3c?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-a8c7111919",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Strompreiskompensation 2026 - 2030: Was die neue SPK-Richtlinie für Ihr Unternehmen ändert - RÖDL",
+      "summary": "Strompreiskompensation 2026 - 2030: Was die neue SPK-Richtlinie für Ihr Unternehmen ändert RÖDL",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQVg2b2xJWV85UkxtQ3UtZ0E5V2R2RGxicHM3MGl2Ml91bjRtbTd3bEJHLUVBTUlNZVhLci1fY3AyVXVyNVNqTFIzblo2Znd0a3dhXzVIZS1YdlRPSzhiVmNhMGk2RzVXY0U3SmdFd1BJa0UwaUxTbF9lYnFxUE80VUk4Tjk0NGRhdkFLZA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-2dc1cbe573",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "News, Regional, Sachsen: Sachsen verlangt schnellen Industriestrompreis für Stahl und Chemie - tixio - Nachrichten",
+      "summary": "News, Regional, Sachsen: Sachsen verlangt schnellen Industriestrompreis für Stahl und Chemie tixio - Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMUpjb1htbWpiZ01XWGg4RTRGNFdiOFRoMlZIYXRYOTZRS09fdmJUR21sUGEzd0FYeFc3bG01a1FXUGFSVFBpTnR0cGp3NGVqNmFSZ0s3LUNUNW9Sb0oyeUE0c0NnSUo1a1BGaV9rVFcwODhuUjBlXzQ5ZkdCVm03VWFSeGltaDQ4aEFzU0JCeHdjUnZqZWNrVThYZGNvYmV6RklvSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-83c56ef985",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU erlaubt mehr Staatshilfen für Landwirte und Industrie - Wetterauer Zeitung",
+      "summary": "EU erlaubt mehr Staatshilfen für Landwirte und Industrie Wetterauer Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSkxhWXptSlZOT3ZqSzlPTEduTk1SeDBQbEF4UElUX0duZU51cTJMdHgtTE9OWjN2eTI4WDB0eHZNb052Y0NtTEVkcFQwaDgxdkVTMGhwRERyX09fMkZPaV9PRXpTeWcySmRJSkVOanphRE1lcDhybnBrTUZuNGxMc1hpeWRCakczZVJwQVFxWHdVcGpqdXV1dFp3eHJIRTkwcV9NcVFMTi04MzktOExzTExSSVNONFVsNGtF?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-9f22c98b67",
+      "date": "2026-11-24",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Stahlbeschäftigte fordern Strompreis von fünf Cent - Dosya Haber",
+      "summary": "Stahlbeschäftigte fordern Strompreis von fünf Cent Dosya Haber",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNTzhfbUZhY3NoN19rZDdCNTBrSTZMVzhhRGtOa3NhYWpvQkJ1U0xjQ1NEeWR6bWx1V0RiQlplZFRhRDB2MWlmZmdFT2NLNkJRSHRpT0luWDZkQkJ0cmYwaEowQTV0bW9OTTBCcUdfbU1Mb0lqQnkySGxyZm13OXFNM0JuRGtubmktVUNhb3F0VzhHM3BMOW44aXlPQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-76990c335d",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "European Commission extends relaxed state aid rules until June 2027 — Tagesschau - UA.NEWS",
+      "summary": "European Commission extends relaxed state aid rules until June 2027 — Tagesschau UA.NEWS",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOHUwOGlZOW52SUFxOVRiREVsSW9SQ19MRGMybjJmem9JWjFFckpoUFRwRllGM1MzdG84eW9yZHBTVU50eEtIaWJVQXVrdHlLd2VkTW9qN0ZGVi1zbzJCWUM3bDFDNnI2bnNYc2hmWDQtcy14QkxzOXlkcGw2YThsVjBLWnNkS3BoN0xPcFB6T2hFYmc4MTZoUUxQOXRhMzNHcExSMTFXazNCemdmcFhnaDlHb0xZU0hHTWc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-0c90f3ea47",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU Commission extends Middle East crisis State aid framework until June 2027 - INSIGHT EU MONITORING",
+      "summary": "EU Commission extends Middle East crisis State aid framework until June 2027 INSIGHT EU MONITORING",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTlBLZ3JYU1NRb3RCS3hKZ3dvOGJ0U1VFeE9wRmRTVFhmTEQzVGRwNm5Zck5jd2Ffalc2UHdLZTlrcnExZlp5ci00WHg4WEFVSGhXcWVHNWVVUFAwanFYeDFZLWlMaFQzbi1yR3JETnBsY3dpMGJ2NURvYTk1UG5fZGpCTHUyRDFBdnFFT2VpZzJwbV9HUkd5ZnlIangxdjNUWmRhcm94cXBWWVQ0c2ZFYzR5aExxRmFiYksyNWZ1dFJqdDB5c3FlZnI1N05ZTlZyNzRXVTFwN1JOOUk?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-c8384418c2",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Luca Niculescu approves state aid of over 314 million lei for farmers - Informat.ro",
+      "summary": "Luca Niculescu approves state aid of over 314 million lei for farmers Informat.ro",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPRnpwa19DaERiVFJfRjRLaWpCbXVRWU1UOWlQclBOOWcyRVhVUmdKTDY1WFJ4RTJUV1lBZmdXX1M0LTh2RXhHQTFCRk9lRmlLanctS0c1alNPRC1UX0JmOXdkM05MWnpSSTVlS1RIWUFoSlpmRWFCR3JXZDZYRC1tbFU5RzlsRWpERUlmTmxyUTF2VS02RW1CbVpWTHE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-4818124236",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Ohio Counties Seek $21 Million as Salt Shortage Looms - Wisevoter",
+      "summary": "Ohio Counties Seek $21 Million as Salt Shortage Looms Wisevoter",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQc0l3aGtXZVVqb1hhdVpVSEV0UFNDbDhvWHJUNHlKR0FPM3phblg5UFFQZlVnVlEyb1g2eTJ3R1dFQktKY28wc0RfNnM2X0xEU01TYkUxMC1SSndQT3RMaTBSRWhmeXd0djJwenU0UURZU3M1NTBlZVlfRUYwbjVndWhteFlqTm9tSmN1Smhn?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-c4fba1408a",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EU Extends Energy Crisis Aid to June 2027 - Wisevoter",
+      "summary": "EU Extends Energy Crisis Aid to June 2027 Wisevoter",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8xUmE1ZjRnNGpwTWVMTGw3Z2dXZzh3Y2dCUGlEbkdRM053T0Qtd2VXUmRkU0xhS3BfZUN3VmxZc1pMM3N3ZkhDUnFHamZGU2RhLTI3QUF1aTlQVVRpZ2hqM1FRM01FZEhDNWVkT1NNREVvTERzVVJKSFU0QTM?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-8454c81a9b",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "suppliers",
+        "products"
+      ],
+      "tags": [],
+      "title": "PEFC Austria launches digital forest owner database to simplify EU deforestation filings - Lesprom Network",
+      "summary": "PEFC Austria launches digital forest owner database to simplify EU deforestation filings Lesprom Network",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbFo2MTcxVUJGOFJHN1RmdnhWODlWd3NFbUhwem5HaWJjcDEtbV9IMjhmN2R1Wm1hT2FaaFR6THhMcEZ1UnJFeHNpZ2QyUERhS3oyZGEwRGg1U0paTFRfMVdxWUx3bGhGVE96ZXE5ZVprZFdJTXY1VERNeDU0Q2x4bXE0T3hQUGdraW9jbzVIcHhZUkhqSzFQbHhNQlFPZjk2eWx0SkJsbm1QcVFUMHYxUElXSHZkSHZYM243MmllNHREUnJfOV9v?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-8d8cc2558d",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [
+        "forests"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Cork and sustainable grazing: Alà dei Sardi achieves a European record. - L'Unione Sarda",
+      "summary": "Cork and sustainable grazing: Alà dei Sardi achieves a European record. L'Unione Sarda",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "FSC & PEFC (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNjlRRzMtVlk5Mnpzc2hwaElkM0Z5T2lVaW5uR281bzdvMy1iUEVEVXpVUHE1TGphNzlVNDFsU3I1OE54anJuTE84VDdBeEdFMWxzTF9VcWlVR2NtaGU1MGFFaVlXYUxEMmtsbHB2Tm5TeUExWVEwcTU3OFlranR2bmUzX2szbmZZRUU2Q0MweGxiMFZpM2gwYkNwbWUzeGVCZngzcDZKeWo0UkRxSm1mWjVWcTVrM1lm0gHAAUFVX3lxTE8zOERlbzJrMjNMTlV4QzFoa0pKUU9lcW1nZ1NDQ2xEVWtWbldFTHdNVjhjS2lUdURpOW0zQlNDZVhidk5hM0NrWnA1YUNvbEJseFBXUTVhcEtCMXBWUldWUVVHeHF1Y21DU1JyWlB4WnQ4WVdJd096eVQwbkg2WnN1VGptc0pyNUlZZ1BmZFNna3FQbktRUkZXNnJMZGMxcEVvRjl1QnU0T3ZfLUJMZnN1THZWN2cxY0l0NU1EeTRVLQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-7cb1957fe9",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Wiedereröffnung in Dörverden: Aldi setzt auf Nachhaltigkeit - Weser Kurier",
+      "summary": "Wiedereröffnung in Dörverden: Aldi setzt auf Nachhaltigkeit Weser Kurier",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNZkJYNVJicm5wcG83N2dYRWdVeTRUaWtTbUxOZ2x1RjhjdlUxVlZldXlQQlg4RGtHekxGbHhNcmRoXzVNUDFTZ2VNRWpGR0lZRXZiSGJtQmNFcDJtVDJ1YTZPcGp3anpJdEpzYlV6ZEhCOVRyVzMxSU5BdDl1ckpud0NCeUxuWTZ3dGtwQkNXNzBiTGEzMUFpOXpDeTU2TmVBVWJLTE1UalBGeFhzZkliS1dyTzNQN3oyNS1KNkRWRDRsZW9FcnBfWW4wdmFsM3NzNmhLUWowWGJDLVFRNWo2dExR?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-2b968b57ca",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tierwohl: Aldi Süd verbucht Erfolg mit höheren Haltungsformen - Lebensmittel Zeitung",
+      "summary": "Tierwohl: Aldi Süd verbucht Erfolg mit höheren Haltungsformen Lebensmittel Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVWFyX3laUnNSWWlaYzM5Q0IySmNfRkdCb3Fwc0dobmhpRlllczAtZFEwV3F6TGhfZkZpNmVvVTBoMjBmWnFuMVFHV0h1bHJwdzJScE9GSEJvZktEaG1xX2d5c09sMkZZelQ4QzNEMFJha1pDNjl0TjhzUGlwTWlkVXF5a3Z2YU01bGU1VTdodlQ0c3BQWmVlbmQwMGt6WVJpcGJwbkU2aHRVcXk3eFdGc0xBckdPWDNEdmw3UFV3dE55QQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-f93ee2e0e4",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Ab heute neu: Aldi überrascht mit koreanisch inspirierter Hautpflege - Freundin",
+      "summary": "Ab heute neu: Aldi überrascht mit koreanisch inspirierter Hautpflege Freundin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPU2kwblpXbHk1WVpDN2szeEJKMjFkQWNmY3RaSmI5eDM3bEtsTkU5R2FRT1VCRnZvTVVoQ2t3N2x3YWtDVEFxQXZNQldkblNpN0N6dVI0NHctWXMwRXg4VGVzNDk3VEZ6NFlzTV9ieFBCUWVKT19WX3VzWGJidk1oOEJkeXMyWnZBZGpzcVZiYV80cFRkUmwwN2doQkNScG5XdjNfYzRLMlczQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-83f66962cd",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Monsieur Cuisine smart günstig bei Lidl – was taugt die Thermomix-Alternative? - techbook",
+      "summary": "Monsieur Cuisine smart günstig bei Lidl – was taugt die Thermomix-Alternative? techbook",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcWtFdFN5TklVTVVMYnBXX2N0eEs4Z3BtYy1qR0hOT0VhdnBQUGNWRlFnYnhEQ0VMMzIzY0M2di1uTDNzbXFsYlNsUDdtaXJfOVgybm0yXzFjQUNjQVJjcHRGUXZPWFNtY1FNMWlPd2otR3dPUGh1Q1FXYnRSMktxTzhLWEtlMEhtOTdUa2xPSTlGa3p4VFBrRmNFVUtjT0dJ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-71d5f41f8c",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl verkauft nächste Woche (30.11.) ein Gerät, das im Dezember fast jeder braucht - inside digital",
+      "summary": "Lidl verkauft nächste Woche (30.11.) ein Gerät, das im Dezember fast jeder braucht inside digital",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWWNSWnpFUjJWVVRLd2hscmwzZWtTQWQtaTJFaGlHODN6eEdvT0xpaXdCSE9QTm1OdFprMi14MWtzS05tX2V3NDJOTEhoa050VXY4eS1La1hvb1FKLS1RdmpQTnRsZzZwWm1ycjhKbVU0bjlUUHV4SW9DRE5LQWNBMXVZOFAyb2IyOHBxS1Q4TlYxTnF5cFdYTEdBaTU3UEpHYm9xTlpJT0lMaTF2azBETGk2blB0U3BGb0pBX0Z5QmZMSmxUb20tQmVn0gHPAUFVX3lxTFBsakdNUktqZHRTcWxMelBZS3R3WmZUelBkUEJpVzJGVjJPRTRmbUNLYnc3eXczSUIxaXlRand4dmQxN0hyYmlTd1dSeWVuaGZTMkFxLXkyZ0JfQ3FPQkN4aVFjcXJFLUR1STM1NnlBaGU1YnBLZVBFaWVRdTZKV0drUFpiYzVDTmtGa1V5SzZDaGVPOS1Jemd6YmE3RzFQSTRncHBybjF1M0kwTUx2ajJISkdnUk1YNi0xOEI2RURjZnBTenlIOC10SFJCMGFmSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-22906a51d4",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi Suisse kippt Bio-Eigenmarke «retour aux sources» - foodaktuell.ch",
+      "summary": "Aldi Suisse kippt Bio-Eigenmarke «retour aux sources» foodaktuell.ch",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE05Z29ZUEdFUnhqZDlLUVJhZ2hSb0tRNXZXTGZZMFN5ZDZWM0RKMzFJNjl2ak1NbEp3Qk1KclhGcnFocFBfajIyQmdkU0U4VnMySkg3RFkzdEtxU2pJT2hBSXlfeDBFalFLQ2U1RjZBc3FITGJIOEx4cE9R?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-5a2c9d61e0",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Action gegen Aldi und Lidl: Wo der Discounter-Neuling die Platzhirsche alt aussehen lässt – und wo nicht - DerWesten",
+      "summary": "Action gegen Aldi und Lidl: Wo der Discounter-Neuling die Platzhirsche alt aussehen lässt – und wo nicht DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOMGNNclBfd2x4VlBEbnhBNnp3NVY0MzRZV21nQTFZUTRDanJjNU5vU3NtTzZiOEttbDJUR3R5ZkM5SzhzdnI0a2t0d3ZpVXNKdElPa0lxODVSVlVwM29FREZSY3hqQnE4aWxULXJGd2tuQlJuNS1WM1pPVkRWcUI5a2I1enJGc0RQWlJTeDc3aVZ0ZWpudG82cGxPVURfR0pWQ3pmcFhfc0dHdkMzbk5qUTh5TzhFd1ZlOGpLU2dna3VxSDk3RVJV?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-ab0bb59099",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Wer steckt eigentlich hinter Milbona, dem Milchprodukt-Giganten von Lidl? - DerWesten",
+      "summary": "Wer steckt eigentlich hinter Milbona, dem Milchprodukt-Giganten von Lidl? DerWesten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVWlET3piNjVxLWIwMzdSYnVJeTZOalV1WXY2RENIV3R5Zkh4V0puV0c0UlNSUW5rRWRBcWhTVXZnWFVSSVgtX2tSTUZsZ2RqTjZnMk9uWTRtTFZ4T0lFTFFJYm1YaThVOHFNZjlYMDFPUVhJcE55ZFFhb0tNdXc2WWdVSUxfY3BZTTVUbVNmSnAxc2t3MUdrTjA2cDNSU3B3aG13V1BvTThnWWtKSDhSellRWG5uZ2VQZG5JcnRfdFc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-5749da6627",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lidl-Duftzwillinge jetzt günstiger – Discounter verrät, ob Preissturz von Dauer ist - Echo24.de",
+      "summary": "Lidl-Duftzwillinge jetzt günstiger – Discounter verrät, ob Preissturz von Dauer ist Echo24.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOdzkxVjBRVmthRFRGRllUbFg5TGxVM3d2QmNDNm0tQ1BwRDVPZS1ZV2haR2wwTDRrZGF4czBKN3hVbW9FUU1tWTlaZkZvT21xWXNaNDYwYm85N1JRZEdGUEc0RUQ2dDN3bzBJRXdWd3NoN1Q3MUUyYzQ4aVJoeE4yNzBXa0JuNHJsTXBaazFmcU1iOGs4WkZsRDlXR0FxcV9oWUdLdGVZYUg1UmJic2xTYnJPN0VVb1dpNGVGSU5tVnFlOEZjSmpVelhGN1h0aVNQbHF6N1RfaXZENTQtZGxjQnRkSXU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-8d50c38f21",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Radeberger, Hochwald, Frosta: Diese bekannten Marken stecken hinter Netto-Produkten - SOL.DE",
+      "summary": "Radeberger, Hochwald, Frosta: Diese bekannten Marken stecken hinter Netto-Produkten SOL.DE",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMXhEa0tlQ2ZQLTI5Q0tsWnREN01OYXl3UjBiUmJYT2FneDhUQkI3VU9TMFE0ZVNmYl9jYVlHM0RXMllVU19OV2YtNWhiV3h3c3FVRHZDclNMalRkOE1raHJlOURmZTFBSzVHV2JLT0VpV1JXRDJfQUE5bEpFZ1BRMUxkUkwyajh3MW94TW1GY0tJdTNDUUdwYVA0SlRjVDF5X1R3R0QwcDJxTUZVX3REWFpzcXJpVllQSHloUkZHVjBuajNybENJWVF6M3lvbkRQcWpB?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-a6b6053617",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kartoffel-Rückruf erneut ausgeweitet – jetzt auch Edeka betroffen: Diese Sorten nicht essen - Ruhr Nachrichten",
+      "summary": "Kartoffel-Rückruf erneut ausgeweitet – jetzt auch Edeka betroffen: Diese Sorten nicht essen Ruhr Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxORFZvLWJDLWxQb2Rfb1hXa2lXRjZkU05rV3hreVNra05ZTXVGRmxyNlBWNWJpNUNJSFhMUnJ4bHlHbURSSzNxbnJQQnhJVk4yZlNkNUZiVy1TR0dhc1pUUXZVNVFHWnh5enYyQUN4dUtsWmxnWjhsakVzNEdsSHpMZzBTdzRvRFgwbEFjU0dhOVpENGpsVEdrcm5zelVLX3NHRWpKa1lCZXRDQk1ZVEplTU9vVHdWQ2hHa1N0dlFOUnZrbnUwZUE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-b58024afb2",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Auch Edeka ruft Kartoffeln zurück: Erhöhte Glykoalkaloidwerte festgestellt - RND.de",
+      "summary": "Auch Edeka ruft Kartoffeln zurück: Erhöhte Glykoalkaloidwerte festgestellt RND.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQXd6ZEtsYXk0VXFyUDV1TUI1WmtRSmhUVXNJZmtqVVNtWkUzang3SU9XQTlMMzNRV2FyRTdsVXgtdUU0S3hTbmNTTUdsS3ZodVp6dHp6alpkemFfY04tWmRZYW9LdUp6RExaa0RQNEZiV2NMNDZRR2ZxbVRwRnNrN1JmWklRRkhWaWhIeXJkLVdWMElyaWJlTGEySV9HNDdJZHFjdzViQU5oV2wxbk1PQVdCRktqUFNkS2V0NWZtUWZLSU16dlFKMWYzR00tWHNVRnJfX25CNjA5a2kxMzdjaklxQThjQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-968f03e1f4",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Parmentine ruft Edeka Kartoffeln am 26 November zurück - SuaraGarut.ID",
+      "summary": "Parmentine ruft Edeka Kartoffeln am 26 November zurück SuaraGarut.ID",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1WN0k4Tkpua3ZMN2ZZcERPWlFYUEhiX1RwdV9MTmdFT1Z5TW9EVzFfeFk3NkNSNzdzeno0WUNUTW45aHgtUnNfQnRxUUEzX3ZwWWtGS3I4bUdtV2x2RTRPaDFieXhDQVhMNHZkb25fTVZKbXc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-fdb6afa078",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "« Nausées, maux de ventre, vomissements, diarrhées » : attention, ne consommez pas ces pommes de terre - La Voix du Nord",
+      "summary": "« Nausées, maux de ventre, vomissements, diarrhées » : attention, ne consommez pas ces pommes de terre La Voix du Nord",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPWFRLQXJYTGlnbE4zU1BCV194bzdiazFtSGpDbTNObnhwRVdHanFFX2VQTzVSbFZKUUVFNnVOcnpWVDRMNTNLU29za3drejY0Zm1mNkpLZDBBdlFPbldqN3VRUlJMdm8xSWpYUElCVHVCVEQ1RlJqQUpmRG91U0gySjdlV3BCZ09fbm1lX0RPZk9WQ05RSll2S2hxdnJqdWpJdnFZRmJZR1I5NENfckZLdjZ3T2JzMndoclI1X3ZKVUh0dFYxOFd6VExpUFdhdw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-2f353208a0",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rappel conso : ces pommes de terre rouges vendues chez Auchan, E.Leclerc et Lidl en France peuvent vous intoxiquer - Doctissimo",
+      "summary": "Rappel conso : ces pommes de terre rouges vendues chez Auchan, E.Leclerc et Lidl en France peuvent vous intoxiquer Doctissimo",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOcEk1RDFlUHBpcWw3ZFVOZFY0T2tuQ3IzMVBpUm1NNWdsQllNSnF1RDRNZjRXZTFMYnhqUU9GR0ZHX3VveXhBWE1RdUtzMmZ5Y2s5WVVmeVFOajBDZjRtbk01WC1yc0dRWFZYVFloa0JTZWpVbm91Z1JrYUgyWTVfclZ3dE5mMkp2S2hPQ3QtNktVWHppVnZPVDdxNHA0QXZsMVpmLXhuSVd6U21MM2VZVzZkSi1scUl1cVdCczF1djJpQ0tUN1pnWGNTY2ppelIzb0F4ekVxcFJscHhPdDhRY29aak9RQzRWbjRTcnIwRXdXWlBqbDljUlZRMG9Ia3V1eURVNUxUR1FCQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-36a8b5690e",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Intermarché rappelle de l’emmental râpé Top Budget pour risque de verre - MCE TV",
+      "summary": "Intermarché rappelle de l’emmental râpé Top Budget pour risque de verre MCE TV",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUTBWQUg3c1NBbFhaTGlYNXhCajdMWkFXYUh4RmtpalJlVG5mYkRIVXVLbTlqWTVrY3dKb3c5ZFFiQXg0YUxXeWh6S1FoOUNPVm0wWjVlektfNXlqNnlTaUZzRFJTS2c2cUpYQmdhamo0VlNub1BJLThWUFBtSXdZb3YyYm81OXBtWDBqc1F3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-4f0d52a89a",
+      "date": "2026-11-24",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tesco Doubles Sunswap Electric Refrigeration Fleet to Ten Units - Refindustry",
+      "summary": "Tesco Doubles Sunswap Electric Refrigeration Fleet to Ten Units Refindustry",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcm9EUGJjZWQzZG0wZ0tYeHZHMW9SUU1aNmNqbV9aNTdnZVhJTkswQmNURFFCSGtSa0hNZjFfbXd2RXlXSGtEZVlsMjlmTmgwNlVlX1JrV0FmRi00Zi1Fby1zZkNQel9oYnpraU9VTEhzVjQydTd2UWdCbmRfSl94TVBmbE9fRkk2VjEtSGxTNjYzS0RFY25KbA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-7da173e6df",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Supplier discontent continues in North Cork - Irish Farmers Journal",
+      "summary": "Supplier discontent continues in North Cork Irish Farmers Journal",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOS2k5RjVjc1g2b1BtbFZ2WlllamxoVVlIS2g5dzBfeUI2eEhZNXk2eGZlbDdHRTdYUTdELVlDU3FzalVsdG16eEdoMVgyNmRZTnM1U3A4TS14UjVjVUFieXBRM2Iwb0lkNEltU2kwalRJMGJ5c3FmSHY2aWNMN2dpSmpyMkVoSnZCdTYyQlo2bG9FWEtW?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-38130bf806",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Weavers Way Co-op warns customers about possibly spoiled turkeys from two Lancaster County suppliers - Inquirer.com",
+      "summary": "Weavers Way Co-op warns customers about possibly spoiled turkeys from two Lancaster County suppliers Inquirer.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSExrd3Y2RGF1YlprWWhPNHE5UVA5TDRrdGtGaTQxajdlVFJ4MkJJd0pLbzdFOGhRV05NdFhHbnYySXdOSmpQRG9NaVczZFp0aDVnMkhFR0FtbEd5d2Q4MTRiS0I5emRpSGxjdWFxLUFvaGNuUV9LZElkbTZCMDZHTFl5YnJhZTlfa1puUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-209b2b7f14",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Partnership provides utility relief for Missoula housing co-op - NBC Montana",
+      "summary": "Partnership provides utility relief for Missoula housing co-op NBC Montana",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMTFtUzVEZTdSS2hEdndyem9OVFVOTjJhbUo4VlNtRFJudkhlWE5BV0F3RzlzbFBWU2o5MWlqZkJJd1A1OUd1NmJEWWJYQ3hSM1BtX0haTXRhMjNkLUwtSDBlcTI4clRhSXppZFowUVJZUXhZY3ZWSHRibVBTZEdFQlJxNnR0SThEMEtTaXhScm1uUDNVRVdQcFZQdVU?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-3222272994",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "After Poland and Portugal, Jerónimo Martins renews its trust in GreenYellow to support its energy transition in Colombia - AFP.com",
+      "summary": "After Poland and Portugal, Jerónimo Martins renews its trust in GreenYellow to support its energy transition in Colombia AFP.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcnlWTUEzekZiVFlZU0Z5UkN6SUVYRGtNWFdkTW5wMWVjbm1HbnJRZGhpdXhWTXVZNGEyblBoU19ESWxDTkFJMUNxYkNURXNXV1AtZk11aVNYa1JyVGRxSUJHRjNKY0NiSkJUeXFVN1dlOU9DTVNNS09KWE1XMEVlbnBqS1had2o3U1pDU1Y1bTdUTWV6T1l0TFpvVFRiVC1DNTB1dXp4dmptVWZMSkRKaTJ0anE5dWUyQnc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-55139c8b82",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Poultry industry faces growing pressure as water scarcity spreads - All about feed",
+      "summary": "Poultry industry faces growing pressure as water scarcity spreads All about feed",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcFdSWFJObl9vVDFKdXdRTU5sdlJ2SWFiXzBIdlhJSk9sTHFXQVFreWRPbzlSemJQQlg3LUJ1RUlseWlYbTExLWpmcXh4dndQQnM5OGRaLVdfNUFoWEtNZUd0Qm11bncwYkZROFBOSjBvb09OSGpvbnk3LTdueWloLW1BNllmTktSTEtQZ0xhRWtaXzdFVHMtQ1NWcmphdWZD?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-5ff971c65d",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Membrane Coagulants Market To 2035: Water Reuse Mandates and Desalination Pretreatment Support Forward Growth - News and Statistics - IndexBox",
+      "summary": "Membrane Coagulants Market To 2035: Water Reuse Mandates and Desalination Pretreatment Support Forward Growth - News and Statistics IndexBox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNWmhUR0ZhRDQzNnB2eFB3RUtCR09GUmtBWnJUNWpmSEUxR0JkbmpYWWpDQ3VaLTVFanNRQzc4WXRZME9ZY0NmSWZldk5SUE1jQ2RoZXBnNHdWeDFmUmxCcmJOd0JHcW5UNW1NUWQ4bDBfRUNmQ2Q5T2dPMElXU2hYaS1udTZBYUNFa2xDNXItUktCNkNUdHFyWlhDUlo3dk95MTlFa3BMZXN1NXlQWldBcjBSUXluMW8xdDhFYXY5ZW02NkJDRUVyX2JaVjdNaFlmaXNDZUFYWDVaeFE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-eab6e1043e",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Drip Irrigation Kit Market To 2035: Water Scarcity and Home Food Cultivation Drive Growth - News and Statistics - IndexBox",
+      "summary": "Drip Irrigation Kit Market To 2035: Water Scarcity and Home Food Cultivation Drive Growth - News and Statistics IndexBox",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPeFhzb1RETTBuUFJ3U21acGdjd09fb2NjSUpWb3Q3Y1dZTWUwYm5wcFRnX3hKeHVBb1l2V2Raa3Y5SFpsaWlwOWM5VTJXVGV0VTl2ZTd5NElNc3lxM0hLVVpkQmE1UHJjaEZQcHhjNk1obDlhekh6M3lCYXQwcUZpbmxvT2VIeFZTLWdMZVhPb2xvcUlJdE1acmlHTjhQelJRZzlQeW5hNWFHUTdQdnczNEhleERMY3Bwa1lkODg0VlhUbThDZFE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-d51777d706",
+      "date": "2026-11-23",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Water: European aquifers under pressure from pollution and excessive abstraction - Il Sole 24 ORE",
+      "summary": "Water: European aquifers under pressure from pollution and excessive abstraction Il Sole 24 ORE",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWkMzck1TbUJDa2ZVTm80dldaOVVwRGJrdW5CUDI5TkhtLVE0TkJhemxLMk91ekRGNHZRVkE2VHg4eHRzWnNwNWRYUVZaRUY1NVdiVHA3SHFSYTNTTzRueS1TRTVOM0RaNlNDMUt4RWJQMFJEMFBXdjBGOExJWGRXbGlzTWRZTTFoVWtET2dwaVpLZTlKVzdiZXdRVUJYbGVIZ2JuODA4MmxZYmxLeGtfSXBaT0owN2s?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-2382bc9d5e",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Dalli disappointed by COP31 outcome, hits out at oil industry lobbying - Times of Malta",
+      "summary": "Dalli disappointed by COP31 outcome, hits out at oil industry lobbying Times of Malta",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNZDgxSnlMaDB6NnpLU1R4U0t6MWg5TE56RURiUVAzVDJwYk1EclhmMTNmOWJhSDlNeVJ1VnJZRk14WmxVN2VkbV92aFg1amI4MVV0X1FnSUk0RlJuZG5KbjNxQmpsa2Y4bFVLeFFCQ2tSOWx3Mndic0tPSmFTUlM5cXlMZGt0NVVkeTdLcjFTTkd5YlBYQjNSUTc5QldWYzhOMXc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
+    },
+    {
+      "id": "feed-c04585e38f",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "‘Planning system not a proxy regulator for water industry,' Pennycook declares - Planning Resource",
+      "summary": "‘Planning system not a proxy regulator for water industry,' Pennycook declares Planning Resource",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNVF80WjkzaTY2WkZDeGdPNWk5TWt6WVRLci1veVNMOWZQUDNZSVNXeHJzbFA5dVFOejFnS2xRRmJTSHBXSGdaWjVmcEl6akdOcGF1dG00M2ppanF2QkpQVlZqV3BtdmhxZldCYmxVYkVwOWdyb1VDM2dBazRPZVU1NUhUcDRMNEV3ajJzUUh6Q2MwUkNLYUZpTjVZM214UUlTM1VzYUxFbjNQQ1ZFbGdqOUcxMmFBSnU1YXNDN2VialdWQkl2cEVuSmN3MmdDeWNTYmJqVzF2eGRfUWJGU0k0aE5VRDFmZ1Rqbk5WNg?oc=5",
+      "origin": "feed",
+      "added": "2026-11-26"
     }
   ]
 }
