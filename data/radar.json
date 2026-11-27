@@ -2,7 +2,7 @@
   "meta": {
     "title": "ESG Data & Tech Radar",
     "lastCuratedUpdate": "2026-11-02",
-    "lastFeedRun": "2026-11-26T15:26:06",
+    "lastFeedRun": "2026-11-27T15:13:58",
     "feedsSeen": [
       "Anthropic News",
       "Blauer Engel & Ecolabel – deutsch (via Google News)",
@@ -22507,6 +22507,811 @@
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNVF80WjkzaTY2WkZDeGdPNWk5TWt6WVRLci1veVNMOWZQUDNZSVNXeHJzbFA5dVFOejFnS2xRRmJTSHBXSGdaWjVmcEl6akdOcGF1dG00M2ppanF2QkpQVlZqV3BtdmhxZldCYmxVYkVwOWdyb1VDM2dBazRPZVU1NUhUcDRMNEV3ajJzUUh6Q2MwUkNLYUZpTjVZM214UUlTM1VzYUxFbjNQQ1ZFbGdqOUcxMmFBSnU1YXNDN2VialdWQkl2cEVuSmN3MmdDeWNTYmJqVzF2eGRfUWJGU0k0aE5VRDFmZ1Rqbk5WNg?oc=5",
       "origin": "feed",
       "added": "2026-11-26"
+    },
+    {
+      "id": "feed-e3f868a0e2",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [
+        "Taxonomy"
+      ],
+      "title": "EU Commission Simplifies EU Taxonomy Criteria to Classify Sustainable Activities",
+      "summary": "The European Commission announced the adoption of two new delegated acts aimed at simplifying requirements […]",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "ESG Today",
+      "url": "https://www.esgtoday.com/eu-commission-simplifies-eu-taxonomy-criteria-to-classify-sustainable-activities/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-simplifies-eu-taxonomy-criteria-to-classify-sustainable-activities",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-3466a5ccb9",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "reporting"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EFRAG publishes Final Comment Letter on the IASB’s Exposure Draft on Risk Mitigation Accounting - EFRAG",
+      "summary": "EFRAG publishes Final Comment Letter on the IASB’s Exposure Draft on Risk Mitigation Accounting EFRAG",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EFRAG (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPcXlSekRMYjdwS3h6cWc0Q2lPOTZqYTVqT3BrazRjd0t6V3pYa2MxbTJScS1aQVRzaTA5NDlyNnNvZHJ4bHQzWVhZUkFVX0Z6OFZPamF0eU9mZkdpdlB1a0lUUy1samE0SFlDNnU5NXBBdTBKMU8wQ0lRb215bks0VzlMakRDOUhHZl9XM3VyRkY0cHpoWjRBVldrbzRXQVNZVmttbDc0UEZfRVBaQ0RjTjRjX05vSHVpb3pCOEFUcGxQeC1HV3cxeFAwdUk0ZHNZV0h0dG1kbWZqUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-432908f632",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Industriestrompreis: Kumulierbarkeit mit Strompreiskompensation ist wichtiges Signal für die Industrie - verbaende.com",
+      "summary": "Industriestrompreis: Kumulierbarkeit mit Strompreiskompensation ist wichtiges Signal für die Industrie verbaende.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Energy relief Germany (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNQWhvdVBock9ESHZwaUNPd3NjNTdwOFU3ZDN3M2FKcUJjQVBlMHF4dzBNVUVfSTgxMFI1VTlNMzFFQkF4VnhjUS13UnNwX3FLQWVqVlphWkhpUm85RkY2NDFDNm9kekZGYU1wa3JOMDVBZWdZZFB2Ym9hODBLTlRVa1RSbHZHRDRMUUw3RzhMZ3doOW0wdWVVLS01UElKTll4bW0tcGozWTY2dmhfRGg3SHltR0ptdC13Rzk3bFl3V3YzWGZPYmNvcHhlRWF2Y0x3M0ZmdV9vYi1GWmNhaGIzUm1VRERreVNVY2tzSnhQSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-c32e903420",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Rondout Valley schools secure $20K state aid from Assemblyman Maher - Mid Hudson News",
+      "summary": "Rondout Valley schools secure $20K state aid from Assemblyman Maher Mid Hudson News",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQa01kajFLWHQ3RHEyelBCNGtDbGtKcHdOSnNGYVE5ZlJvV0xGZkh5RlZBcHJtejNub0tXZDJ4LTlpVjZqWjRMbVNkc3AtVTNsMjEteUk2U003UVB3Y3hQWnlwc3lyN0FSQzZSSXd2SlZnalljckNHZkFoTnZaS29jQVVIdTR6WWo1VmoyZXJUYm44UVFHVE8tQ3NRR05qYVZiZjdyR2tRSQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-c44b938525",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "The European Commission extends the state aid to the sectors affected by the crisis in the Middle East until June 2027 - Demócrata",
+      "summary": "The European Commission extends the state aid to the sectors affected by the crisis in the Middle East until June 2027 Demócrata",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdTZBN25kSElsTjBxeDR3TUdKQ1FJdURsY3FRSVE0Ynh2ODJPNERBcTVYMFFTTTZLMWRWTmFHdG1EYnd5N0EwejV1MTRudHFjX1NReXRYd1kwNzFWODRBbktpUEhBWVQxWXd3VElfSURMM0F3Szd3M3BtTkhLSE1pX1hxVXh1ODE0ajJoVVJlMHI2RkJ1RElURmlTa0pKNWt1RUQ3MVo3WFh0Y1BQd1JyZlZUUlE2aGdwRDU1S1RSdm5rYWZldGZHempxSzRVd1RZQm1tX1NjT1dtU2RQUERwSnpEaHhHMHNLVGdPZlhwa9IB7wFBVV95cUxNdTZBN25kSElsTjBxeDR3TUdKQ1FJdURsY3FRSVE0Ynh2ODJPNERBcTVYMFFTTTZLMWRWTmFHdG1EYnd5N0EwejV1MTRudHFjX1NReXRYd1kwNzFWODRBbktpUEhBWVQxWXd3VElfSURMM0F3Szd3M3BtTkhLSE1pX1hxVXh1ODE0ajJoVVJlMHI2RkJ1RElURmlTa0pKNWt1RUQ3MVo3WFh0Y1BQd1JyZlZUUlE2aGdwRDU1S1RSdm5rYWZldGZHempxSzRVd1RZQm1tX1NjT1dtU2RQUERwSnpEaHhHMHNLVGdPZlhwaw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-0da404c8f0",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "EU eases state aid rules until 2027 as fuel costs squeeze key sectors - The Brussels Times",
+      "summary": "EU eases state aid rules until 2027 as fuel costs squeeze key sectors The Brussels Times",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPM0dRZ294UXVpM3BVYjY3b21Jc09iSGxkc1luZUN4Y05oa2ZmUWkwMGtnTU1Kc0k0VzloVHZvaDhyd1pJdTZIWk84aW43XzZVenRqeVFYSEFpTG5EdGZFZC00dERPME5uYVEwZGtLdVpJallPaUFJTzhtTnN3UHZNaThPMzhyMHZRV3RLM0I1SVdaX3gwdWpyeW1CMVRLSzA1SVZJUWRrY0E0ZVhRZGh2Rk5iZldveE5xZFE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-582c9754c9",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "costs"
+      ],
+      "tags": [],
+      "title": "Germany approved state aid for companies affected by rising energy prices - oEnergetice.cz",
+      "summary": "Germany approved state aid for companies affected by rising energy prices oEnergetice.cz",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "EU energy & state aid for industry (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNanI0UVk5aFExc1pISG5IZ3FuYVY2bTA0SkhOLUZXRjd2RUFXUnE0MzVzNWJtSExwWng3VlI3aFh0MFNxTk83TDNRcmNXRy1jUU50OE85WWVpRDNhQUtPWHVfeksyOFBORGhhaGxwVHFueVA0N0hlVzNHVlpFeGo4RDRDX2NGWURPeUp4ay0yUm1fcmFBc2Z6b2dLbE1ncFFyRjcyN3Itel90ODA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-d59f737f0e",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting"
+      ],
+      "tags": [],
+      "title": "Scope 3 Emissions Explained: The 15 Categories, the Mandates, and the Supplier Data Problem - Environment+Energy Leader",
+      "summary": "Scope 3 Emissions Explained: The 15 Categories, the Mandates, and the Supplier Data Problem Environment+Energy Leader",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPd0RFWFlSTWRJNl93TFE5RHg0MHU1TzFvT3JxQjRSTTNmTDNCQVk1UXllY2ozSVBvN0pWMEl2OGlKWDAycEFFNF9lYmxxMDUyMEZvdkthQjVhMlBYSHdsZEZvN3RUcl9lcFFPZW9KU2VYWktZb01mRVNrTnBiUENzTXQ4VU5jSWIyd3c?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-33983bb085",
+      "date": "2026-11-25",
+      "type": "regulation",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "reporting",
+        "datamodel"
+      ],
+      "tags": [],
+      "title": "GHG Protocol move opens door to biomethane certificates - gasworld",
+      "summary": "GHG Protocol move opens door to biomethane certificates gasworld",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "medium",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "GHG Protocol (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRmVXWjFvajB4dE02T0hWSWYybkZIQWRwZDVTQWxzQTRKM1BrYWFXU1g3NjlGVmY3T183Y25DSUtRU3QzVEhiRnBaeGxfYmFiYWE1alAxZnQ1YkFPcWlXLUlzU195SW5VeWFtMmVXNHMwN1c1MjB3bUt6Y2F6NV9OeTdBWUJlbnNLMV92U0FDSFczUGhFYmxPN1FDaXF2emxxaWpoVnd3?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-418d46a439",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Rückruf bei Lidl: Bakterien-Doppelpack in Gänsebrust - SWR",
+      "summary": "Rückruf bei Lidl: Bakterien-Doppelpack in Gänsebrust SWR",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNT3JwYWJjQ0RHdTd1TXN4OUJXd1VrTGhsYWZWUGdTcWVSTVIyRTdyYk1BWmNkZk9MZ0ZucUh6S2JWWEpPemRhME5Vc2VuazJPNHN0X3dvNEQ1YUt2WXZzRzNEbk5iZWNBRXJhY0xRSmJiVVFmaTVPNTJkZjZ1SVMwT1RORE1UdDNPamdJb3J6ZjFueXdVZGoxYjI3RzJ1WWxHSFFnaVZhSkdMcGw1RmxxR001UlI2NnFxcGR3LThic0stS0w0SFU0akpoY3k?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-775d07bf41",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Lebkuchen, Spekulatius & Stollen: Wer steckt hinter den Eigenmarken von Aldi, Lidl und Co.? - CHIP",
+      "summary": "Lebkuchen, Spekulatius & Stollen: Wer steckt hinter den Eigenmarken von Aldi, Lidl und Co.? CHIP",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPS29ZdEJmWFgzOVljaHZ0WHhYNGhMV0drdWVhOU95cXdNdm1mX3k5bFJ2S1JIbWQ0NmFaYUY5bXpDZlV3ZExwMUdvRkI2Mnh2MWRuNHc1YXZJSGVMbTNYZ25KWmNCOWVQNzI3YVdOVEotNm9yWkVOR2dZWlRfT3JTNUw0OUh2YXh0NDBFS2E5SmVkRTFqZGRJRGFhQjQ1V0J6OXBEMWFQZ2tNemlwYW9HamM1ME94N21zRGV0MTg1UU96b3EzMUtfb0xjVTJsR3ROaTZzelpydWFYVS13U1VxUGVVQmloendhLUxPTGk3TndIMzQ4Qm9PRVJENHNla3p0aUZXSml3UGE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-db1c4a7af5",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Verbandsware: Lidl baut Bioland-Sortiment aus - Lebensmittel Zeitung",
+      "summary": "Verbandsware: Lidl baut Bioland-Sortiment aus Lebensmittel Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQYTcwSXowWTlFQ2hHY1JOTkRRSmtIWWxVRktxZmVtTHZiS29tZmdpWEU3Ny16aEdqaVp0T0c2T2xHWFFIV3hocnBCZk9oQlZDdjJPWGk0bEx2SFFTQ2piWkFYVHo2SU1rdEI1NnBhaDRFTWpXQjF4bWU2QlhnaHl3Qmt3bUpQSlQxYXkzLWRrbXlETnpIMlVKMmI0LVdPX2p4aEZpUVdqR0Q2Zw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-57797fdc0c",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Aldi und Lidl senken die Butterpreise - STERN.de",
+      "summary": "Aldi und Lidl senken die Butterpreise STERN.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNV29EenlfQmNabUFlclpnOHp3M29wZ1BLS1U3dWxMSVZrWWlMQWtSUGtiejBqX1RuajVXeDd6YmxBYnlabEVqNmp3Z1VUUG9zdU1DUVJaNUlQZ25LUEhmVFp5cXVqWDAtRXRtMmZJSWp4Qm1qY1BhMEozQzAzTmxQMkMwRQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-7599b4022b",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Butterpreise zu Weihnachten sinken - ein Problem für Landwirte - SWR",
+      "summary": "Butterpreise zu Weihnachten sinken - ein Problem für Landwirte SWR",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNNU1XRTNtc0JoRlkwMmpaQjhETF9LVjN3eHNwVHRSUUU2WGVQNkpxV01mVEZaM2VFT3FDT2h5NHVvcklTdzJabURTbTlyNF9IRHpHYk4xV19teW9VZVdGOFRHM2RBS1NfYTNORlJob0kwSHluNEppSzhCRkxtc0xpRncxdUs3cjZOUmo5YXdLQWZCME45TkhyaktUNUJFNkxNSDJvdi03UHNlZzZEMzFWakdXZXkzQTlHbFlQYXRvVnRxNkE0OUE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-f360e07362",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Kaffee bei Aldi, Lidl & Co.: Diese bekannten Hersteller stecken hinter den Eigenmarken bei den Discountern - Giga",
+      "summary": "Kaffee bei Aldi, Lidl & Co.: Diese bekannten Hersteller stecken hinter den Eigenmarken bei den Discountern Giga",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOOThKSHVwd1J2Mnh3MHJibzEzckhtZjhQUzJFUG9aWl9ZM3QwS0hNLVRtSUl3TW1Za1IwTFJPbUVwOGQySUo1akNuSmFkSk1sQ3pHMHVIOXRoUDZ3QXoyTktBU0JYOVhCVUpPTk13VUY4NFdja1NBYTVKSEd3ZFBIVjZrNkRYdVlaSjhyMktWSk9ibDd1eHRPWUdXVnZMei03STFsb0tPM3hwdHlaTjRoYTFaTkV5MWxjNGlmSEc4TXV4SDdmcm9QWmNKRnFDZlJ5clJsVXFKcFJ6eHpORVlsZ1ROOEdSZnV0UUE?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-fa15f1b729",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Fleisch-Rückruf bei Lidl & Penny Gefährliche Keime entdeckt - es drohen Erbrechen und Durchfall - Ruhr Nachrichten",
+      "summary": "Fleisch-Rückruf bei Lidl & Penny Gefährliche Keime entdeckt - es drohen Erbrechen und Durchfall Ruhr Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPcUVOYW1hMzk3NGhLVFBjbUJ0c2FpYjFpdUJob3REemIwZmNyaWJfX1QyWWVUN3ZnbmptczhkM0hDSVFHRjBNRlRVaGVqb2NfdkRFYmpRNXhRaGxnNDhHTkdDZFJKSUlnMXR2Z0wyWHB1X1V6RVVQTFBESlMzLTg0aHNUd211VFo1V0VnMkEzYkd4ajRUSjdzYVNRTURxOExhTVM1alNhZE9POWdJQ2dWMC1iM2w1SFpqcEttYUJEQUVFVGRlemhTRDJ0bnpnSzlQU0Z6SXI1Z3EtYnVVendYb2NPQ2hfQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-a13cbdf931",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Fleischkongress in Mainz: Aldi bleibt Haltungswechsel - Lebensmittel Zeitung",
+      "summary": "Fleischkongress in Mainz: Aldi bleibt Haltungswechsel Lebensmittel Zeitung",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZDR6V2dPR3pHYUh4X1VLTXg5RGd6aUg2ejBUbmQxLXp2akRvRHJXN2FpcjVXTnNXQThmTnBrSW5PSGoyOUxROUFKbllfcS03TjNwcHZmdGhSUF8zWC1DNXMtV2xPcnJtZ2FJVGJsYktEN0h6M1BNb2FTYTU1NFFGZjhiVU05eFJ4TUs3aHZ6ME5BZGllSU9pNzB5X1hwTUJiQ1pPVzB2QU40eC03LUlRRV9n?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-59dd5e57b8",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Fleisch-Rückruf bei Lidl: Gleich zwei gefährliche Keime entdeckt – nicht verzehren! - Ruhr Nachrichten",
+      "summary": "Fleisch-Rückruf bei Lidl: Gleich zwei gefährliche Keime entdeckt – nicht verzehren! Ruhr Nachrichten",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQN29USmtrNDAzaWhvWEY1NkYyV2NFWXliUHlXZXNzaW1YZHFHMUtHOVFpcGsxYjlPYjlrWFpBc0NqME1HczVnYXU4RlVjMkdlLWRCNnVWOGJCS1piSVFiX1lDZVpGeVdTMGRaSnlpdTJOQ0JoUTlUaDJsTUJTakVTU2l3QnZ0ekZMVHJnZU9nc1B5eGFqcEFSaGZFTG94QmRkV0RhOEFlR05MSkwybVcxLXJEWWVJQ2VEd3dOWlI2S1JNXzRTdEE1VHNCbVY?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-4ac3cac7c6",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Eigenmarken von Rewe, Edeka, Aldi und Lidl: Besser im Test als Nutella und Nespresso – und oft viel günstiger - Schwarzwälder Bote",
+      "summary": "Eigenmarken von Rewe, Edeka, Aldi und Lidl: Besser im Test als Nutella und Nespresso – und oft viel günstiger Schwarzwälder Bote",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Lidl, Kaufland, Aldi (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPYVI1MUplWmVRWUhhSnZOY3pRTFJ0Z2p2SmRjUjlTVTVNcXBYd2RxMUE1WkZJR2ljWEs5NW44a3RlRlBheUJYdDJfY0l2N2VtbGNqcVh5T0xlWlFzT3MwaE52eTBSNkpLc2w0MV9zaGRpNW9pZzZkLWJvdWJDUmhURjBLRDgwQlRwQ3hhVnBBb2x4cUxnUGxmWHVlWmFodEZRMzBSRHl4ZHJNMWJjVmJLTDFid2VqOWdrVVZTS1lPbnlRbzBFZHpoaG9xdUk5S205QTYxSEYwcGlySUMydjlEX2ZRcFlJd0dmZXhWT0Z4WlA4WHA2aFZ4WQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-6652844822",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Eigenmarken von Rewe, Edeka, Aldi und Lidl: Besser im Test als Nutella und Nespresso – und oft viel günstiger - swp.de",
+      "summary": "Eigenmarken von Rewe, Edeka, Aldi und Lidl: Besser im Test als Nutella und Nespresso – und oft viel günstiger swp.de",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: Rewe, Edeka, Netto, Penny (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNY01WTzB6VXQ2a18yVTNuT2hfWlFWLS1qTHVfU2MxbElEMzA5dlJhZV9ISzFTSkVydW9WTEJHVXRDYzFURVVoQ0w3VGNuX1JnU1g2MDViTVJUaElYejdUT0hFelZjclhvcVBPUVA5Um1sd1ZINmpSR1ZVd3FRaW5zQ0ZoMkdkVGtMX21xek9LYnkyR013MHdHcU1hZmpEUDR1dVh2OE45QnhSY01sNG5YUU83cTVFajJHeXhSblljbVp4MnBLdGdFM1JpSWtKaTI5TXY5LV96NmtOQl95MllsSEpmQQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-de187e16eb",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "DM und Rossmann greifen Supermärkte an – ausgerechnet diese Produkte treiben das Wachstum - Business Insider Deutschland",
+      "summary": "DM und Rossmann greifen Supermärkte an – ausgerechnet diese Produkte treiben das Wachstum Business Insider Deutschland",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers DE: dm, Rossmann (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbW9YdndiVlpHd0sxWW5GeThFUEdKVG9vM1VoYk03eURLMUVBYnhrVERXOGllWXJicFdTMWNvb0hReDFVM2dyTnpaVW8tTjhXS2QxakxGS04yVWtxV01GTHpQd2V6ZVdNS1E0VUJWb2NlUER6WUlSby0zSjBkc21FRDg0bWlQSVd0QmlSeGNabGlqNGh6VWpTTnVUNlZRa19pTjJhMTBxcXJxeUNMTlpOSkNFVnIzVWhKOWVHcEkzS19ONC1h?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-5d5be62e03",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Prix de la grande distribution : Supermarchés et fournisseurs lancent des négociations sous haute tension - Yahoo Actualités",
+      "summary": "Prix de la grande distribution : Supermarchés et fournisseurs lancent des négociations sous haute tension Yahoo Actualités",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYzZpdGtXWVlxbEJiZmxvSmowWVJnRDhwNDVENVROWHBUMVd4QUpJLUZwNEZvNjFBVEZfSS1XSU1wN18tWG9OVm9fVVYxTGJoVElSRUlSX0RNd0pPUmhOUG9OZWw2MThJTWt4N0xxVEdqQzRfR3pqQ3lqdjA1b24tQ0dnaWYwZ2dNNmJLSDdsVEJya2h1VmkzZTdES28?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-3feb3f9af4",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Prix alimentaires : Leclerc anticipe une hausse de 4 % face aux industriels - MCE TV",
+      "summary": "Prix alimentaires : Leclerc anticipe une hausse de 4 % face aux industriels MCE TV",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNQmlBSThSZDZaRm1OUEwwRXFMd080M093WUFPaFQ3QUh1LVdqTkdORFRQSEJkeldXWDlqOEMyTFNWb2RyMVd0QTVxWnhrd3V4bVZqU1V1b2c3dW9rM1lGSWFMMXdQZEtYbXhfN3N0Z2NwRHFUN3FDWllKSmhzTDRFaGZVV0ZrNGdZMTVsam80aFhBbWxNYXc?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-bd0eef0166",
+      "date": "2026-11-27",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Inflation alimentaire en 2027, Serge Papin juge possible une hausse autour de 4 % - Economie Matin",
+      "summary": "Inflation alimentaire en 2027, Serge Papin juge possible une hausse autour de 4 % Economie Matin",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers FR: Carrefour, Leclerc, Intermarché, Auchan (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWGxVRDBFQTNZU242QlVOUlducFpLMzVZb0VIWFQyX1ZwM0JNVUdyNnJkOTIxMjVUaU9fYVpBVkc2YUstZTc0VXplZ1Z1bE1rMDF1cUh0MHpzbkpEU2RoZFF5ZzRNTVZpMEF0Rnd6NHoxRWVmZmd4X2xsZ3NCckxOZXlPTHY2SnRWaXlZNQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-619d1eb519",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Sophie Harris rates Marks and Spencer highest in Supermarket Chicken Gravy Taste Test - شبكة تواصل الإخبارية",
+      "summary": "Sophie Harris rates Marks and Spencer highest in Supermarket Chicken Gravy Taste Test شبكة تواصل الإخبارية",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1WaVVDNWRyUmV2ajdBYVB6dG1qdjB2QnA2VUx0ckJhYjEtN3Q2MDBaN2RWUW80M3NIQkFkR0VrV09HZ2UwenVUd2xibUFzUXVuSWI4?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-7f74dbbf86",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Tesco opens new Express location in Ballincollig - Cork Independent",
+      "summary": "Tesco opens new Express location in Ballincollig Cork Independent",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQnVOQXJ6RWxTaF9oT2pNRldvUGRSQWFETC1WTjNRMHFQYURqa3MxR1RwOV9KQlhxV3VRR09OWnhnOHRFODlVUWs3bnRSVjJnX2NIRmUtMzhMSWtGRTZ0dTNBclpGeTJVZnVqLWVrUjVjS29Uak1vLWh6Q3phY0otaEpCUm5hVEp2OGRzVzVpRjl6QTg3TnFv?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-1289dd43de",
+      "date": "2026-11-25",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Channel Islands Co-op Publishes 2026 Sustainability Update - Wisevoter",
+      "summary": "Channel Islands Co-op Publishes 2026 Sustainability Update Wisevoter",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers UK: Tesco, Sainsbury's, Asda, Morrisons (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQ1E1MXJSWEM4ZXVzWmJ6UUtiNTR0bmU0UjZfXzFxbXRtRkotYWlsZVkzRm82Y1JGOXN1MXljb2FYaThRLUd3VXc2SGR0ZlBOY0IxMFEwNjlJR25pY3lGelBrdEpJQV9fV0Z5MDRob3RKOWJFaTl1eGh4d0daTG1PMGRqQ3NnUXdNVG5aaVpUa0E?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-daf33c93c0",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Colruyt Professionals reaches milestone of ten stores with opening in Hoboken - press.colruytgroup.com",
+      "summary": "Colruyt Professionals reaches milestone of ten stores with opening in Hoboken press.colruytgroup.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers Benelux: Ahold Delhaize, Albert Heijn, Jumbo, Colruyt (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPcWNkc1ZuMWIzRmpWUXg4d2tFYTgxZW1FSGNLV1pFeHpiQmgxNXY4VnVZWnRJN09Xc0diTklKS2FINlZOWERBR24xRi05eDg1cUtvM21uTlotNW04XzAtYnhxZ1p2eHZULTV1OEJDdGFEWmRVV3ViTmhiTk11clhFMU5jQzNFMjR2WDZ5LUlYUk5xUC1XMnJwR3F1WkllX2pmeElKT0FUWV83MzRK?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-aa1ec0b42a",
+      "date": "2026-11-26",
+      "type": "practice",
+      "areas": [
+        "climate"
+      ],
+      "impacts": [
+        "customers"
+      ],
+      "tags": [],
+      "title": "Jerónimo Martins extends its 5.7 MWp solar partnership with GreenYellow to Colombia - energynews.pro",
+      "summary": "Jerónimo Martins extends its 5.7 MWp solar partnership with GreenYellow to Colombia energynews.pro",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Customers IT & PL: Conad, Coop, Esselunga, Biedronka (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNDRzRUJ2d0R2Zzc5cWt1eFJZOWJRRFVVdy1Cc08wYnVHSG5zdVVLZUt2UVdnTVFEYUVkOVljbmhXWkFlXzlwOGd3SFZnWWgwa29RS3VIZDEwWWRtNTdVQWQzdXV2WU1HNUxrNGtvRHdQSlBpd1VoUGtYNVFWT1hNU04xRUhDeHBrQnBoMUE0OGpqeDZZY2JuY29HUTFZQWRnSEI4RTJHakh3aVFj?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-900af46386",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "27% of EU groundwater area fails to achieve good status, according to the EEA - Smart Water Magazine",
+      "summary": "27% of EU groundwater area fails to achieve good status, according to the EEA Smart Water Magazine",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZ3B4ek9uUUxxQ0ZaQzB2Z29YVVRXdUh5Vm40OVhJSGxsby1WM0Vwb0dPRWFRSE1Oc0ZMcE55dG5kMmNKWFVWb2tzYU9jYlh4dHVGN1NQZGdJXzJfRzZGOUlCX1ZGS21WelktLUhXQkxFWEo5OGJFN3lwbktPMmJWMG1qcDNTS0ludzZ0cGJEdlpDcnhCdVhhU1J5bnNObXE4WGJ0ZUgxQ3J1Q3dIMlp5bWNIdGZYUTlVWFZ3VWFncXR0LTZiOFdIX2RYbmQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-20078d8abd",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Europe's rivers, lakes still low on water after summer heat - DW.com",
+      "summary": "Europe's rivers, lakes still low on water after summer heat DW.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWFNsUFNaV3owUHZoNVJZTEIyUVIwZE1RbmZTQ0twNUlTX2tkNldXd2l4aExaN0pONGhoeW5ieGh0WkR6WExFT2dfWnFvaGdvTG5EeW9JaUltOEI1S0NJQk1BdERLLWp4d2thNU1qa1FqWWdJX0F3R2VxNU9QYjJrN0d1Y1VfWlhJeXlJS1ZLQkNqNk5NcTBKV2JZYjlSUQ?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-3297c5ee54",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "EESC AT UN Water Conference 2026 - EESC",
+      "summary": "EESC AT UN Water Conference 2026 EESC",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONkhPcU1COGdacUxPSS1CRW9tOVptNjFaamJXUW9OS1g2c2tPQ1lDTHdrQWZlQUtBSG5fUkl6N2lyUjY5RkpMNmNoSEl4blc1YUNISDV6VklQV2lmdnpZbVRiV0VJOWFoTkJtR2hlY0dteUVydFVsUnJJdUV2dTRHb1pYc2M0UUlJV0hKbA?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-5cc0c88995",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Gov’t commits US$1bn to revamp textile and garment industry - Business & Financial Times",
+      "summary": "Gov’t commits US$1bn to revamp textile and garment industry Business & Financial Times",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "high",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQ1lTYnBpamtQU19CWGZ4NFMtTzFNYmluSHpyM1ZYZHhYR09oVlVYUTVzalg2Zl9OaVkzMjJod0g1MTVoMDBvbVM3REhvUmFuQXBiQ3lRckk2XzhSdjAtRlBEZHdFdF9ieDRDanZDd1pUNWxET21NS1BkeW4wS1B2eWxEdXpCTlhWN0hVQ2Q2NmcxekJJOVdr?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-3908b508bf",
+      "date": "2026-11-27",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Reverse Osmosis (RO) Membrane Market: Global Water Scarcity, - openPR.com",
+      "summary": "Reverse Osmosis (RO) Membrane Market: Global Water Scarcity, openPR.com",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQclVVSzNRVHNLVzZ5WmtLTEN3TnVSbVBaTlhzUkZTRVp4SVUycmRkQ3BCazhOdldIY3E3bXZTU2dMelFVb2JOWWhpZ3hjSkp2cDJNeGJGRGtLczN1NjkyZ0ZrUkpDRW5wRFQxczNtZWdVQ1c1bVZrZzZHdzVESUpsXzBMbF96OWpjd0tnVGNpZTJjUlBaeHkw?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
+    },
+    {
+      "id": "feed-771287ddd5",
+      "date": "2026-11-26",
+      "type": "regulation",
+      "areas": [
+        "water"
+      ],
+      "impacts": [
+        "watch"
+      ],
+      "tags": [],
+      "title": "Water scarcity may force out 200 Latur hostel students | Mumbai news - Hindustan Times",
+      "summary": "Water scarcity may force out 200 Latur hostel students | Mumbai news Hindustan Times",
+      "whyItMatters": null,
+      "status": null,
+      "relevance": "low",
+      "monthlySummary": false,
+      "nextDate": null,
+      "nextDateLabel": null,
+      "source": "Water policy & wastewater (via Google News)",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNjFoU0UtN1pJbUE2SlhHOEZkcDNQcFhRQWxuVWdYaWExbEJtZVBPMHg1V1Y5VzJ5WG5US2c3RG5CdHpjSGVvUjY4Z2FSRGpNWGoyeURnSUFjaWEzZG1jNVJlYk5EblRrRTdqeEd5SVN3X1pHRnk0ZzZpR0t0MmliTVVmblkyTG1SMjBGdmZ2Q2kyVEkyVDRyMWgwdURGZWpBUGR5am02c0NrNThGWnFITGFiV0lIa1FtdXJTZFk5MkotdVHSAcgBQVVfeXFMTXViVEVvaE1JMWJGNktxRXpseTNLRk5nZ3lWQUtnbjI0NkpqZzdnUTE0Y3pybXJxZkVZVTlJSXl6dUdPcEZ4V210R0hWOFFIYVJoQzZxN3BUeXNMcEZIeUw4T095d3o1VWlRV3kzaGNkQjZyaTlFZWpYSmloWElxQjc5Ymk1SWNBWXEtX0x3aTJSWGwzTW53Z2xQalpOWjlTbkdFdEhVM0lnWFc2OGthSGFpb2Y1SVgzS0Y1WVhqRjJEazJtc1dxQmo?oc=5",
+      "origin": "feed",
+      "added": "2026-11-27"
     }
   ]
 }
